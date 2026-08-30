@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — TrackExpenses</title>
+<meta name="color-scheme" content="light dark">
+<style>
+:root {
+  --ink: #ffffff; --surface: #f4f6f7; --line: #e3e7ea;
+  --text: #10161c; --muted: #5c6875; --accent: #0b7f5c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #0d1117; --surface: #161c24; --line: #2a333d;
+    --text: #f2f5f7; --muted: #9aa6b2; --accent: #27bf8b;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 1.25rem 5rem;
+  background: var(--ink); color: var(--text);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 42rem; margin: 0 auto; }
+header { padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--line); margin-bottom: 2.5rem; }
+.brand { font-size: 1.05rem; font-weight: 600; letter-spacing: .01em; text-decoration: none; color: var(--text); }
+.brand span { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -.01em; }
+h2 { font-size: 1.15rem; margin: 2.5rem 0 .75rem; letter-spacing: -.005em; }
+p, li { color: var(--muted); }
+p { margin: 0 0 1rem; }
+strong { color: var(--text); font-weight: 600; }
+ul { padding-left: 1.15rem; margin: 0 0 1rem; }
+li { margin-bottom: .5rem; }
+a { color: var(--accent); }
+.updated { color: var(--muted); font-size: .9rem; margin-bottom: 2rem; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem 1.4rem; margin: 0 0 1rem; }
+.card h2 { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+.mail { font-size: 1.1rem; font-weight: 600; }
+nav { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: .95rem; }
+nav a { margin-right: 1.25rem; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="index.html">TrackExpenses<span>.</span></a></header>
+
+<h1>Support</h1>
+<p class="updated">TrackExpenses is a one-person app. Mail goes to a real person and gets a real answer.</p>
+
+<div class="card">
+  <h2>Get in touch</h2>
+  <p class="mail"><a href="mailto:atabany.apps@gmail.com">atabany.apps@gmail.com</a></p>
+  <p>Bugs, questions, refunds, or a request to delete data. Please say which iPhone and which
+     iOS version you're on — it usually saves a round trip.</p>
+</div>
+
+<h2>I paid and Pro didn't unlock</h2>
+<p>Open TrackExpenses, open the Pro screen, and tap <strong>Restore purchase</strong>. That
+   re-checks your Apple Account and is the fix in almost every case, including after
+   reinstalling or moving to a new phone — as long as you use the same Apple Account you
+   bought with.</p>
+<p>If it still doesn't unlock, email us. Include the receipt Apple sent you and we'll sort it
+   out. You will not be asked to pay twice.</p>
+
+<h2>How do I cancel?</h2>
+<p>Subscriptions are managed by Apple, not by us:
+   <a href="https://apps.apple.com/account/subscriptions">Settings → your name → Subscriptions
+   → TrackExpenses</a>. Cancelling there stops the renewal, and Pro stays on until the period
+   you already paid for runs out.</p>
+<p>Lifetime is a single payment. There is nothing to cancel, and nothing renews.</p>
+
+<h2>What do I actually get for free?</h2>
+<p><strong>The whole ledger.</strong> Unlimited transactions, all five transaction views,
+   budgets, search, stats and export are free, and stay free. Pro adds more than three
+   accounts, more than three recurring rules, and voice entry. A money app that holds your own
+   numbers hostage doesn't deserve your trust, so this one doesn't.</p>
+
+<h2>My month doesn't start on the 1st</h2>
+<p>Neither does most people's. <strong>More → Period &amp; Entry</strong> sets the day your
+   month starts — if you're paid on the 25th, set 25 and every list, chart, budget and total
+   in the app moves with it.</p>
+
+<h2>How do I set up SMS auto-import?</h2>
+<p><strong>More → SMS Auto-Import</strong> walks you through it. It is a Shortcuts automation
+   you create yourself, not access to your Messages — iOS never gives an app your inbox, and
+   this one doesn't ask. Shortcuts hands the app one bank alert as it arrives; the app reads
+   the amount, merchant and date, and never stores the message.</p>
+
+<h2>How do I get my data out?</h2>
+<p><strong>More → Backup &amp; Export</strong> writes a CSV for spreadsheets and a
+   full-fidelity JSON backup of everything the app holds. You choose where either goes.
+   Nothing is uploaded.</p>
+
+<h2>How do I delete my data?</h2>
+<p>Delete the app — that removes everything on the device. If iCloud sync was on, the synced
+   copy lives in <em>your</em> Apple Account: remove it from your iOS settings under your
+   name → iCloud → Manage Account Storage. For the purchase record Apple and RevenueCat hold,
+   email us and we'll request its deletion on your behalf.</p>
+
+<h2>Does it work offline?</h2>
+<p>Yes. Everything except buying or restoring Pro works with no signal at all. The app makes
+   no network requests of its own.</p>
+
+<h2>Terms</h2>
+<p>TrackExpenses is licensed under
+   <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's Standard End User Licence Agreement</a>.</p>
+
+<nav><a href="index.html">TrackExpenses</a> <a href="privacy.html">Privacy</a> <strong>Support</strong></nav>
+<footer>TrackExpenses is made by Mohamed Elatabany. This site sets no cookies and runs no analytics.</footer>
+</div>
+</body>
+</html>
