@@ -49,7 +49,7 @@ footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
 <div class="wrap">
 <header><a class="brand" href="index.html">TrackExpenses<span>.</span></a></header>
 <h1>Privacy Policy</h1>
-<p><strong>TrackExpenses: Money Manager</strong> — last updated 30 August 2026.</p>
+<p><strong>TrackExpenses: Money Manager</strong> — last updated 3 September 2026.</p>
 <h2>The short version</h2>
 <p>TrackExpenses has no account, no login, and no server of ours. Your ledger lives on your iPhone, and — if you leave iCloud on — in your own private iCloud database. We cannot see it, and neither can anyone else.</p>
 <h2>What TrackExpenses stores</h2>
@@ -69,8 +69,8 @@ footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
 <h2>TrackExpenses never connects to your bank</h2>
 <p>There is no bank login, no account aggregator, and no place to type a banking credential. TrackExpenses knows your balances because you told it, and for no other reason. It cannot move money, and it cannot see an account you have not entered yourself.</p>
 <h2>SMS auto-import is not access to your messages</h2>
-<p>iOS never hands an app your Messages inbox, and TrackExpenses does not ask for it. The optional SMS auto-import is a <strong>Shortcuts automation that you set up and control</strong>: when a bank alert arrives, Shortcuts passes that one message&#x27;s text to the app.</p>
-<p>It is read on your device. Only the amount, the merchant and the date reach your ledger, as a transaction you can edit or delete like any other. The message text itself is <strong>never saved</strong>. A short numeric fingerprint of it is kept for up to 24 hours, purely so that a retried automation cannot enter the same purchase twice. Nothing about the message leaves your device, and deleting the automation in Shortcuts ends the whole arrangement.</p>
+<p>iOS never hands an app your Messages inbox, and TrackExpenses does not ask for it. The optional SMS auto-import is a <strong>Shortcuts automation that you set up and control</strong>: when a bank alert arrives, Shortcuts passes that one message&#x27;s text to the app. The optional Apple Pay import works the same way through a Shortcuts Transaction automation, which hands the app the amount, the merchant and the card&#x27;s name, and nothing else.</p>
+<p>It is read on your device. Only the amount, the merchant, the date and the last digits of the card the message names reach your ledger — as a transaction you can edit or delete like any other, marked as imported until you have looked at it. The message text itself is <strong>never saved</strong>. Two small records are kept on the device so you can see the automation working: a short numeric fingerprint of each message for up to 24 hours, purely so that a retried automation cannot enter the same purchase twice, and an activity log of what each run did — the time, the outcome, and the amount and payee that reached your ledger, never the message. If you turn on import notifications, the app posts them locally. Nothing about the message leaves your device, and deleting the automation in Shortcuts ends the whole arrangement.</p>
 <p>You can also paste a bank message in yourself, on the new-transaction screen. It is read on the same terms: on your device, into a draft you check before saving, with the message text <strong>never stored</strong>. On an iPhone with Apple Intelligence, a message the app&#x27;s own rules cannot read is passed to Apple&#x27;s on-device model so that banks and languages the app was never taught can still be understood — that model runs on your iPhone, and the message does not leave it.</p>
 <h2>Voice entry runs on your device</h2>
 <p>Speech is recognised on your iPhone by Apple&#x27;s on-device speech and Apple Intelligence models. Audio is streamed straight to the recogniser as you speak — it is <strong>never written to a file</strong>, never stored, and never uploaded — and it is discarded as soon as the draft transaction appears. What voice entry produces is a draft you confirm, not an entry made behind your back.</p>
@@ -86,6 +86,7 @@ footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
 <h2>Your data, your control</h2>
 <ul>
 <li><strong>Export.</strong> More → Backup &amp; Export writes a CSV for spreadsheets and a full-fidelity JSON backup of everything the app holds. You choose where either one goes; nothing is uploaded. This is free, and stays free.</li>
+<li><strong>Import.</strong> More → Backup &amp; Export also reads a CSV file you pick — from a spreadsheet, another money app, or a bank. The file is read entirely on your device, you see exactly what it would add before anything is written, and nothing about it is uploaded. TrackExpenses only ever sees the one file you hand it.</li>
 <li><strong>Delete.</strong> Deleting the app removes its data from that device. To remove the synced copy, delete the app&#x27;s iCloud data from your iOS settings under your Apple Account. For the purchase record Apple and RevenueCat hold, email us and we will request its deletion on your behalf.</li>
 </ul>
 <h2>Children</h2>
