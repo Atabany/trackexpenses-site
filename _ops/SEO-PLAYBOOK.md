@@ -58,12 +58,15 @@ Primary references checked 5 October 2026:
 
 ## Domain and consoles
 
-Audit found no custom domain. trackexpenses.com is registered and uses Atom nameservers.
-gettrackexpenses.com is the preferred .com matching the app's established TrackExpenses alias;
-WHOIS reported no match, public NS lookup was empty and Wayback CDX returned no 200 snapshots
-on 5 October 2026. These checks do not guarantee trademark clearance or future availability.
-TrackExpenses wording also appears in an unrelated Android app; use the full App Store title
-and explicit author identity on the site. Owner payment is required before any domain connection.
+Audit found no custom domain. Owner rejects get/use prefixes. After comparing 18 alternatives,
+trackexpenses.app is the selected domain: established alias, clear purpose, broad product fit.
+Cloudflare confirmed $8.20 first year and $14.20/year renewal. Registry RDAP returned 404 and
+public NS lookup empty. Wayback snapshots from September 2024 and January 2025 showed a simple
+expense-entry web form; prior use is disclosed, no full history or trademark clearance is asserted.
+Full App Store title and explicit author identity remain on the site. Private docs/DOMAIN_RESEARCH.md
+records candidate tradeoffs and evidence. Domain words/TLD alone do not establish rankings or
+traffic; measure qualified visits, campaign installs and mature purchase outcomes. Owner payment
+is required before any domain connection.
 
 Until a domain is purchased, keep the existing GitHub Pages canonical. On a project site the
 crawler's host-level /robots.txt is outside this repository; do not claim host-level rules work

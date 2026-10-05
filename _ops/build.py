@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Build crawlable HTML from reviewed content. No network access at build time."""
 import html, json, re, sys
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlencode
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT/'_ops/config.json').read_text())
 BASE = CONFIG['base_url'].rstrip('/')+'/'
 FACTS = json.loads((ROOT/'_ops/facts.json').read_text())
+UPDATED_LABEL = datetime.strptime(CONFIG['updated'], '%Y-%m-%d').strftime('%B %Y')
 APP = '6806614497'
 STORE = f'https://apps.apple.com/app/id{APP}'
 FACT_BLOCK = ('Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. '
@@ -56,7 +58,7 @@ def campaign(path):
  return f'https://apps.apple.com/app/apple-store/id{APP}?'+urlencode({'pt':'127826363','ct':tag,'mt':'8'})
 
 def cta(path,prefix,compact=False):
- return f'<div class="store-cta"><img class="app-icon" src="{prefix}assets/icon.png" width="48" height="48" alt="TrackExpenses app icon"><a href="{esc(campaign(path))}" aria-label="Download Expense Tracker: SMS &amp; Voice on the App Store"><img class="badge" src="{prefix}assets/app-store.svg" width="120" height="40" alt="Download on the App Store"></a></div>'
+ return f'<a class="store-cta" href="{esc(campaign(path))}" aria-label="Download Expense Tracker: SMS &amp; Voice on the App Store"><img class="app-icon" src="{prefix}assets/icon.png" width="48" height="48" alt=""><img class="badge" src="{prefix}assets/app-store.svg" width="120" height="40" alt=""></a>'
 
 PAGES={}
 def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False):
@@ -77,7 +79,7 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False):
 <link rel="canonical" href="{canonical}"><meta name="apple-itunes-app" content="app-id={APP}">
 <meta property="og:type" content="{'article' if kind=='Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="TrackExpenses: SMS, voice and payday budgeting">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}assets/og.png">
-{'<meta name="robots" content="noindex">' if noindex else ''}<link rel="icon" href="{prefix}assets/icon.png"><link rel="stylesheet" href="{prefix}style.css?v=1">
+{'<meta name="robots" content="noindex">' if noindex else ''}<link rel="icon" href="{prefix}assets/icon.png"><link rel="stylesheet" href="{prefix}style.css?v=2">
 <script type="application/ld+json">{ld}</script></head><body>
 <a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="{prefix}index.html">TrackExpenses<span>SMS · Voice · Payday</span></a><nav aria-label="Main"><a href="{prefix}guides/index.html">Guides</a><a href="{prefix}tools/daily-budget.html">Calculator</a></nav>{cta(path,prefix,True)}</header>
 <main id="main" class="{'home' if path=='index.html' else 'article'}">{body}
@@ -93,7 +95,7 @@ def guide(sl,meta):
  heads=re.findall(r'^## (.+)$',md,re.M)
  body=markdown(md); at=body.find('</h1>')+5
  toc='<nav class="toc" aria-label="In this guide"><strong>In this guide</strong><ul>'+''.join(f'<li><a href="#{slug(h)}">{esc(h)}</a></li>' for h in heads)+'</ul></nav>'
- byline='<p class="byline">By <a href="../about.html">Mohamed Elatabany</a> · Updated October 2026 · <a href="../support.html">Suggest a correction</a></p>'
+ byline=f'<p class="byline">By <a href="../about.html">Mohamed Elatabany</a> · Updated {UPDATED_LABEL} · <a href="../support.html">Suggest a correction</a></p>'
  body=body[:at]+byline+toc+body[at:]
  faqpart=md.split('## Frequently asked questions\n',1)[-1].split('\nSource',1)[0]
  faq=[]

@@ -7,31 +7,31 @@ No ratings yet in the US App Store. US storefront; checked 2026-10-05.
 App Store: https://apps.apple.com/app/id6806614497
 
 ## Official pages
-- [Expense Tracker: SMS & Voice | TrackExpenses](https://atabany.github.io/trackexpenses-site/): Track spending with optional bank SMS imports, on-device voice drafts and payday budgets. A private money manager for iPhone and iPad.
-- [Bank SMS Expense Tracking on iPhone | TrackExpenses](https://atabany.github.io/trackexpenses-site/guides/bank-sms-iphone.html): Set up a Shortcuts Message automation for supported bank alerts. Connect Shortcut Input, check entries and understand the free SMS allowance.
-- [Start Your Budget Month on Payday | TrackExpenses](https://atabany.github.io/trackexpenses-site/guides/payday-budget.html): Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.
-- [Voice Expense Tracking on iPhone | TrackExpenses](https://atabany.github.io/trackexpenses-site/guides/voice-expenses-iphone.html): Say one or several purchases, review the drafts and save. Learn TrackExpenses voice entry, device support and on-device privacy.
-- [Fix Bank SMS Automation on iPhone | TrackExpenses](https://atabany.github.io/trackexpenses-site/guides/sms-automation-not-working.html): Troubleshoot Message filters, Shortcut Input, activity logs and waiting SMS entries in TrackExpenses without duplicating purchases.
-- [Export iPhone Expenses to CSV | TrackExpenses](https://atabany.github.io/trackexpenses-site/guides/export-expenses-csv.html): Export your selected month for free. Check dates and currencies in Numbers, and understand CSV versus a full TrackExpenses backup.
-- [Track Apple Pay Purchases on iPhone | TrackExpenses](https://atabany.github.io/trackexpenses-site/guides/apple-pay-expenses.html): Set up a supported Shortcuts Transaction automation, map card inputs and review Wallet purchase entries for duplicates.
-- [Expense Tracking Guides | TrackExpenses](https://atabany.github.io/trackexpenses-site/guides/index.html): Practical iPhone guides for bank SMS imports, voice entry, payday budgeting, Apple Pay and CSV exports.
-- [About Mohamed Elatabany | TrackExpenses](https://atabany.github.io/trackexpenses-site/about.html): Meet the developer of Expense Tracker: SMS & Voice and learn how the site checks its product facts.
-- [Privacy Policy | TrackExpenses](https://atabany.github.io/trackexpenses-site/privacy.html): How TrackExpenses stores your ledger, processes SMS and voice locally, uses private iCloud and handles purchases.
-- [Support and Free / Pro Limits | TrackExpenses](https://atabany.github.io/trackexpenses-site/support.html): Get TrackExpenses help, review free and Pro limits, restore purchases, fix imports and export your records.
-- [Terms of Use | TrackExpenses](https://atabany.github.io/trackexpenses-site/terms.html): TrackExpenses uses Apple’s Standard EULA. Read purchase terms and the limits of spending calculations.
-- [Daily Budget Until Payday Calculator | TrackExpenses](https://atabany.github.io/trackexpenses-site/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
-- [Best iPhone Expense Trackers: How to Choose](https://atabany.github.io/trackexpenses-site/compare/best-expense-trackers.html): Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.
-- [Monefy Alternative with SMS and Voice | TrackExpenses](https://atabany.github.io/trackexpenses-site/compare/monefy-alternative.html): Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.
+- [Expense Tracker: SMS & Voice | TrackExpenses](https://trackexpenses.app/): Track spending with optional bank SMS imports, on-device voice drafts and payday budgets. A private money manager for iPhone and iPad.
+- [Bank SMS Expense Tracking on iPhone | TrackExpenses](https://trackexpenses.app/guides/bank-sms-iphone.html): Set up a Shortcuts Message automation for supported bank alerts. Connect Shortcut Input, check entries and understand the free SMS allowance.
+- [Start Your Budget Month on Payday | TrackExpenses](https://trackexpenses.app/guides/payday-budget.html): Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.
+- [Voice Expense Tracking on iPhone | TrackExpenses](https://trackexpenses.app/guides/voice-expenses-iphone.html): Say one or several purchases, review the drafts and save. Learn TrackExpenses voice entry, device support and on-device privacy.
+- [Fix Bank SMS Automation on iPhone | TrackExpenses](https://trackexpenses.app/guides/sms-automation-not-working.html): Troubleshoot Message filters, Shortcut Input, activity logs and waiting SMS entries in TrackExpenses without duplicating purchases.
+- [Export iPhone Expenses to CSV | TrackExpenses](https://trackexpenses.app/guides/export-expenses-csv.html): Export your selected month for free. Check dates and currencies in Numbers, and understand CSV versus a full TrackExpenses backup.
+- [Track Apple Pay Purchases on iPhone | TrackExpenses](https://trackexpenses.app/guides/apple-pay-expenses.html): Set up a supported Shortcuts Transaction automation, map card inputs and review Wallet purchase entries for duplicates.
+- [Expense Tracking Guides | TrackExpenses](https://trackexpenses.app/guides/index.html): Practical iPhone guides for bank SMS imports, voice entry, payday budgeting, Apple Pay and CSV exports.
+- [About Mohamed Elatabany | TrackExpenses](https://trackexpenses.app/about.html): Meet the developer of Expense Tracker: SMS & Voice and learn how the site checks its product facts.
+- [Privacy Policy | TrackExpenses](https://trackexpenses.app/privacy.html): How TrackExpenses stores your ledger, processes SMS and voice locally, uses private iCloud and handles purchases.
+- [Support and Free / Pro Limits | TrackExpenses](https://trackexpenses.app/support.html): Get TrackExpenses help, review free and Pro limits, restore purchases, fix imports and export your records.
+- [Terms of Use | TrackExpenses](https://trackexpenses.app/terms.html): TrackExpenses uses Apple’s Standard EULA. Read purchase terms and the limits of spending calculations.
+- [Daily Budget Until Payday Calculator | TrackExpenses](https://trackexpenses.app/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
+- [Best iPhone Expense Trackers: How to Choose](https://trackexpenses.app/compare/best-expense-trackers.html): Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.
+- [Monefy Alternative with SMS and Voice | TrackExpenses](https://trackexpenses.app/compare/monefy-alternative.html): Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.
 
 
 ## Expense Tracker: SMS & Voice | TrackExpenses
-https://atabany.github.io/trackexpenses-site/
-   Expense Tracker: SMS & Voice  Less typing. More clarity.  Your payday.   Bank texts become entries. Spoken purchases become drafts. Your budget month starts when your salary does.  No bank login. No app account. A ledger you control.        iPhone & iPad · iOS 17+ · English interface       Play animation  How your ledger comes together · illustrative figures   
+https://trackexpenses.app/
+   Expense Tracker: SMS & Voice  Less typing. More clarity.  Your payday.   Bank texts become entries. Spoken purchases become drafts. Your budget month starts when your salary does.  No bank login. No app account. A ledger you control.      iPhone & iPad · iOS 17+ · English interface       Play animation  How your ledger comes together · illustrative figures   
    01 / LESS ADMIN  A bank text, already filed.  Set up your own Shortcuts automation for supported alerts. Check the imported amount, account and category. Your Messages inbox stays private.  Set up SMS imports →    02 / SAY IT  Coffee, taxi, groceries.  Say several purchases with Pro. Review the on-device drafts before saving. Device and language support apply.  See how voice works →    03 / YOUR MONTH  Payday is day one.  Choose a fixed monthly start day. Your transactions, budgets and charts follow the same period, with budget pacing visible at a glance.  Budget from payday →   
    THE LEDGER STAYS FREE  Keep the whole picture.  Unlimited manual transactions, budgets, historical stats, search, monthly CSV export and private iCloud sync. Start with three accounts, three recurring rules and 20 successful automatic SMS imports per calendar month per device.  Pro adds voice, unlimited SMS imports, forecasts and daily guidance, unlimited accounts and recurring rules, flexible import/export, full backup, themes and icons.  Understand free and Pro →    TRY THE ARITHMETIC  What is left per day?  Subtract recorded spending and upcoming commitments, then divide by the days left. Try a private, local calculator with clear examples.  Open daily-budget calculator →   
 
 ## Bank SMS Expense Tracking on iPhone | TrackExpenses
-https://atabany.github.io/trackexpenses-site/guides/bank-sms-iphone.html
+https://trackexpenses.app/guides/bank-sms-iphone.html
  Automatically track bank SMS expenses on iPhone  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    Start with the built-in iPhone options    Connect the Message trigger to TrackExpenses    Check one message before relying on automation    Review the entries that arrive    Understand the free allowance    Privacy and the limits of the workflow    Frequently asked questions    
  You can turn supported bank SMS alerts into expense entries on iPhone by creating a Message automation in Shortcuts and passing its input to TrackExpenses. Setup is required: TrackExpenses cannot browse your Messages inbox, and a successful import still needs a quick review of the amount, account and category. 
  Start with the built-in iPhone options 
@@ -60,7 +60,7 @@ https://atabany.github.io/trackexpenses-site/guides/bank-sms-iphone.html
  Sources:  Apple's Message event triggers , the app's SMS setup guide and the  privacy policy .   Related reading    Start Your Budget Month on Payday    Voice Expense Tracking on iPhone    Fix Bank SMS Automation on iPhone    Export iPhone Expenses to CSV    Track Apple Pay Purchases on iPhone    
 
 ## Start Your Budget Month on Payday | TrackExpenses
-https://atabany.github.io/trackexpenses-site/guides/payday-budget.html
+https://trackexpenses.app/guides/payday-budget.html
  Start your budgeting month on payday  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    Use a manual method first    Choose the period that matches your pay    Set the start day in TrackExpenses    Separate the spending budget from account balance    Read budget pacing as well as totals    Do not count transfers as fresh spending    Keep a simple end-of-period review    Frequently asked questions    
  If you are paid on a fixed day each month, start your budgeting month on that day so income and the expenses it funds share one period. In TrackExpenses, More → Period & Entry changes the monthly start day for your ledger, budgets and charts together. 
  Use a manual method first 
@@ -92,7 +92,7 @@ https://atabany.github.io/trackexpenses-site/guides/payday-budget.html
  Source: TrackExpenses' fiscal-period engine and Period & Entry screen. Figures above are examples, not financial advice.   Related reading    Bank SMS Expense Tracking on iPhone    Voice Expense Tracking on iPhone    Fix Bank SMS Automation on iPhone    Export iPhone Expenses to CSV    Track Apple Pay Purchases on iPhone    
 
 ## Voice Expense Tracking on iPhone | TrackExpenses
-https://atabany.github.io/trackexpenses-site/guides/voice-expenses-iphone.html
+https://trackexpenses.app/guides/voice-expenses-iphone.html
  Track expenses by voice on iPhone  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    Try built-in dictation for a small manual log    Say the amount and what it was for    Log several purchases in one sentence    Check five fields before saving    Understand device and language support    Privacy and other quick-entry choices    Frequently asked questions    
  With TrackExpenses Pro, you can say an expense or several purchases and review the resulting drafts before saving. Voice processing runs on your device, with availability depending on your iPhone or iPad, supported speech models and language. 
  Try built-in dictation for a small manual log 
@@ -123,7 +123,7 @@ https://atabany.github.io/trackexpenses-site/guides/voice-expenses-iphone.html
  Source: TrackExpenses' live App Store listing, voice-entry service and  privacy policy . See also the  SMS guide  for another way to reduce typing.   Related reading    Bank SMS Expense Tracking on iPhone    Start Your Budget Month on Payday    Fix Bank SMS Automation on iPhone    Export iPhone Expenses to CSV    Track Apple Pay Purchases on iPhone    
 
 ## Fix Bank SMS Automation on iPhone | TrackExpenses
-https://atabany.github.io/trackexpenses-site/guides/sms-automation-not-working.html
+https://trackexpenses.app/guides/sms-automation-not-working.html
  Fix an iPhone bank SMS automation that is not importing  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    Find out which step failed    Check the built-in Message conditions    Inspect the action's Message field    Read the app's activity evidence    Test whether the format is understood    Check the allowance and duplicates    Ask for focused support    Frequently asked questions    
  If a bank SMS is not reaching TrackExpenses, check the Shortcuts trigger and its Shortcut Input connection before assuming the app cannot read the format. Then use More → SMS Auto-Import to inspect the activity log, message check and free monthly allowance. 
  Find out which step failed 
@@ -157,7 +157,7 @@ https://atabany.github.io/trackexpenses-site/guides/sms-automation-not-working.h
  Sources:  Apple's Message event conditions  and the app's SMS setup guide. For a complete setup, see  automatic SMS tracking .   Related reading    Bank SMS Expense Tracking on iPhone    Start Your Budget Month on Payday    Voice Expense Tracking on iPhone    Export iPhone Expenses to CSV    Track Apple Pay Purchases on iPhone    
 
 ## Export iPhone Expenses to CSV | TrackExpenses
-https://atabany.github.io/trackexpenses-site/guides/export-expenses-csv.html
+https://trackexpenses.app/guides/export-expenses-csv.html
  Export iPhone expenses to CSV  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    Use a spreadsheet when that is enough    Choose the period before exporting    Save the file somewhere you control    Open and check the CSV in Numbers    Calculate spending without counting transfers twice    Know what CSV cannot restore    Importing an older CSV is a separate task    Frequently asked questions    
  TrackExpenses exports the month you are viewing as CSV for free, so you can review your own records in Numbers or another spreadsheet. Pro adds exports for a chosen date range, CSV import and full JSON backup and restore through More → Backup & Export. 
  Use a spreadsheet when that is enough 
@@ -191,7 +191,7 @@ https://atabany.github.io/trackexpenses-site/guides/export-expenses-csv.html
  Source: TrackExpenses' export/import services, free-tier rules and  privacy policy . See  payday periods  if the selected month has unexpected boundaries.   Related reading    Bank SMS Expense Tracking on iPhone    Start Your Budget Month on Payday    Voice Expense Tracking on iPhone    Fix Bank SMS Automation on iPhone    Track Apple Pay Purchases on iPhone    
 
 ## Track Apple Pay Purchases on iPhone | TrackExpenses
-https://atabany.github.io/trackexpenses-site/guides/apple-pay-expenses.html
+https://trackexpenses.app/guides/apple-pay-expenses.html
  Track Apple Pay purchases with an iPhone automation  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    Start with Wallet's own record    Decide whether automation helps your ledger    Create the Transaction automation    Check the account mapping    Review amount, date and category    Handle duplicate routes carefully    Keep expectations and privacy clear    Frequently asked questions    
  A supported Shortcuts Transaction automation can pass an Apple Pay purchase's amount, merchant and card name to TrackExpenses. Configure it yourself, verify the inputs and review the resulting entry; it is a separate route from bank SMS and does not connect the app to your bank. 
  Start with Wallet's own record 
@@ -224,15 +224,15 @@ https://atabany.github.io/trackexpenses-site/guides/apple-pay-expenses.html
  Sources:  Apple's Transaction event trigger  and TrackExpenses' automation guide. See  SMS setup  for bank texts and  exporting records  for a spreadsheet review.   Related reading    Bank SMS Expense Tracking on iPhone    Start Your Budget Month on Payday    Voice Expense Tracking on iPhone    Fix Bank SMS Automation on iPhone    Export iPhone Expenses to CSV    
 
 ## Expense Tracking Guides | TrackExpenses
-https://atabany.github.io/trackexpenses-site/guides/index.html
+https://trackexpenses.app/guides/index.html
  Make your ledger easier to keep.  Start with the task you need to solve. Each guide explains the workflow and its limits.     Bank SMS Expense Tracking on iPhone   Set up a Shortcuts Message automation for supported bank alerts. Connect Shortcut Input, check entries and understand the free SMS allowance.     Start Your Budget Month on Payday   Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.     Voice Expense Tracking on iPhone   Say one or several purchases, review the drafts and save. Learn TrackExpenses voice entry, device support and on-device privacy.     Fix Bank SMS Automation on iPhone   Troubleshoot Message filters, Shortcut Input, activity logs and waiting SMS entries in TrackExpenses without duplicating purchases.     Export iPhone Expenses to CSV   Export your selected month for free. Check dates and currencies in Numbers, and understand CSV versus a full TrackExpenses backup.     Track Apple Pay Purchases on iPhone   Set up a supported Shortcuts Transaction automation, map card inputs and review Wallet purchase entries for duplicates.   
 
 ## About Mohamed Elatabany | TrackExpenses
-https://atabany.github.io/trackexpenses-site/about.html
+https://trackexpenses.app/about.html
  Made by Mohamed Elatabany.  I build TrackExpenses, listed on the App Store as Expense Tracker: SMS & Voice. This is its official website.  Why this app  A ledger should be easier to maintain and follow the month you actually budget in. TrackExpenses brings manual, SMS and voice entry into a private ledger with a fixed monthly payday period.  How these guides are checked  Product claims are checked against the app's code and live listing. Guide steps use the app's current screens and Apple's Shortcuts documentation. Examples are illustrative. Competitor comparisons link their own documentation, show what was verified and leave uncertain features unclaimed.  Guides are reviewed in October 2026. If a menu changes or an explanation is unclear,  send a correction .  Author and contact   Mohamed Elatabany on the App Store  ·  GitHub profile  ·  atabany.apps@gmail.com  
 
 ## Privacy Policy | TrackExpenses
-https://atabany.github.io/trackexpenses-site/privacy.html
+https://trackexpenses.app/privacy.html
  Privacy Policy 
   Expense Tracker: SMS & Voice (TrackExpenses)  — last updated 5 October 2026. 
  The short version 
@@ -284,15 +284,15 @@ https://atabany.github.io/trackexpenses-site/privacy.html
  Questions about privacy, or a deletion request:  atabany.apps@gmail.com  
 
 ## Support and Free / Pro Limits | TrackExpenses
-https://atabany.github.io/trackexpenses-site/support.html
+https://trackexpenses.app/support.html
  Support, from the developer.  Questions, bugs or corrections:  atabany.apps@gmail.com . Include your app version, device and iOS version. Redact identifying details in samples.  What stays free?  Unlimited manual transactions, budgets, historical stats, search, monthly CSV export and private iCloud sync; up to 3 accounts and 3 recurring rules. Includes 20 successful automatic bank SMS imports per calendar month on each device.  After that allowance, SMS entries wait outside your totals. Review and save them individually for free, or use Pro for continued automatic imports.  What does Pro add?  Unlimited SMS imports, accounts and recurring rules; voice entry on compatible devices/languages; spending forecasts, daily guidance and what-if planning; CSV import, range CSV export, full JSON backup/restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Check current purchase details in the app.  Restore or cancel  Open the Pro screen and tap Restore purchase using the same Apple Account that bought Pro. If it remains locked, email the developer. Manage auto-renewing plans in  Apple's subscription settings . Lifetime does not renew.  Your month and your records  More → Period & Entry changes your fixed monthly start day. Export the selected month from Transactions for free. Pro's More → Backup & Export offers range exports, CSV import and JSON backup/restore.  SMS and voice help  See  SMS setup ,  automation troubleshooting  and  voice requirements . SMS automation does not read your inbox. Voice produces drafts, and supported languages/devices vary.  Privacy and deletion  Your ledger is on your device with optional private iCloud sync. See the  complete policy  for storage, processing, purchase records and deletion. For purchase-data deletion requests, email the developer. 
 
 ## Terms of Use | TrackExpenses
-https://atabany.github.io/trackexpenses-site/terms.html
+https://trackexpenses.app/terms.html
  Terms of Use  TrackExpenses is licensed under  Apple's Standard End User Licence Agreement . This page links the governing agreement; it does not replace it.  Purchases  Monthly and annual Pro subscriptions renew automatically unless canceled at least 24 hours before the current period ends. Manage them through your Apple Account. Lifetime is a one-time purchase and does not renew. The app shows your current offer and any eligible trial before purchase.  Spending calculations  Budgets and forecasts calculate from the records you provide. They are not a guarantee about available cash and are not financial advice.   Privacy Policy  ·  Support  
 
 ## Daily Budget Until Payday Calculator | TrackExpenses
-https://atabany.github.io/trackexpenses-site/tools/daily-budget.html
+https://trackexpenses.app/tools/daily-budget.html
  What is left to spend per day? 
  Subtract spending and any extra commitments from your period budget, then divide by the days left, including today. This is budget arithmetic; an unrecorded bill or purchase can change the answer. 
   Daily budget until payday  All figures stay in this browser. They are not sent or saved. Use one currency for every amount. 
@@ -304,7 +304,7 @@ https://atabany.github.io/trackexpenses-site/tools/daily-budget.html
 
 
 ## Best iPhone Expense Trackers: How to Choose
-https://atabany.github.io/trackexpenses-site/compare/best-expense-trackers.html
+https://trackexpenses.app/compare/best-expense-trackers.html
  Choose an iPhone expense tracker by workflow. 
  The best expense tracker for you is the one whose entry method you will keep using. Compare how you add purchases, how periods work and where your data goes before choosing by a feature count.  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction  
  This is the developer's comparison on the TrackExpenses website. It is not an independent ranking. The table reports features checked in each product's own documentation; “—” means unverified here, not absent. 
@@ -313,7 +313,7 @@ https://atabany.github.io/trackexpenses-site/compare/best-expense-trackers.html
 
 
 ## Monefy Alternative with SMS and Voice | TrackExpenses
-https://atabany.github.io/trackexpenses-site/compare/monefy-alternative.html
+https://trackexpenses.app/compare/monefy-alternative.html
  A Monefy alternative for SMS and voice entry.  Consider TrackExpenses if you want optional bank SMS imports and on-device voice drafts alongside a fixed monthly payday budget. Monefy already documents a custom first day of month, so payday reporting alone is not a reason to switch.  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction   This page is written by TrackExpenses' developer. It compares documented workflows and does not claim to have tested every Monefy feature. 
   When to keep Monefy  ·  When to try TrackExpenses  ·  Check your data first  
  When to keep Monefy  If you are comfortable with manual entry and Monefy already gives you the records you need, there may be little value in moving. Its  official help  documents a first-day-of-month setting from 1 to 31, including aligning the month with payroll. A familiar entry habit is valuable.  When to try TrackExpenses  Try it when logging is the part you struggle to maintain. Optional Shortcuts automations pass supported bank alerts or Wallet purchases into the ledger. The app does not read your Messages inbox and does not need a bank login. With Pro, one spoken sentence can become several on-device drafts that you review before saving.  The free ledger includes budgets, historical stats, monthly CSV export and private iCloud sync, with 3 accounts, 3 recurring rules and 20 successful automatic bank SMS imports per calendar month per device. Pro adds forecasts/daily guidance, unlimited SMS imports/accounts/rules, voice and flexible import/export. Device and language support apply to voice.  Check your data before moving  Keep an original copy of your old records. Do not assume a CSV's columns have the same meanings in another app. TrackExpenses Pro previews CSV import and lets you map columns, but this page does not promise that every Monefy export is compatible. Test a small sample and check date, amount, currency, category and direction before confirming a larger import.  Account transfers are especially important to check: a move between your own accounts should not become a new purchase. A change of app should improve your workflow while preserving your understanding of the figures.  Compare a week of ordinary use  Try the same three or four real tasks: record a cash expense, review a bank alert, browse your payday month and export records. Keep the tool that makes those tasks easiest for you. No website comparison can measure that personal fit in advance.   Compare more documented workflows  ·  CSV export and import limits  ·  Payday setup  
