@@ -65,23 +65,23 @@ public NS lookup empty. Wayback snapshots from September 2024 and January 2025 s
 expense-entry web form; prior use is disclosed, no full history or trademark clearance is asserted.
 Full App Store title and explicit author identity remain on the site. Private docs/DOMAIN_RESEARCH.md
 records candidate tradeoffs and evidence. Domain words/TLD alone do not establish rankings or
-traffic; measure qualified visits, campaign installs and mature purchase outcomes. Owner payment
-is required before any domain connection.
+traffic; measure qualified visits, campaign installs and mature purchase outcomes.
 
-Until a domain is purchased, keep the existing GitHub Pages canonical. On a project site the
-crawler's host-level /robots.txt is outside this repository; do not claim host-level rules work
-until the custom domain serves this file at its root. Do not set CNAME for an unowned domain.
-
-After purchase: verify Pages ownership, DNS-only 4 A records 185.199.108–111.153 and 4 AAAA records
-2606:50c0:8000–8003::153, www CNAME atabany.github.io; set CNAME, switch base_url and regenerate.
-Confirm HTTPS certificate then enforce HTTPS. Verify path-preserving old Pages redirects,
-www and HTTP redirects. Use Google Domain property via DNS TXT and BingSiteAuth.xml;
-never grant cross-service OAuth. Submit sitemap, request indexing and verify statuses.
-Update canonical addresses in Legal.swift and App Store locale URL fields in an editable version.
+The owner purchased this domain on 5 October 2026. Pages ownership is verified; preserve DNS-only
+4 A records 185.199.108–111.153, 4 AAAA records 2606:50c0:8000–8003::153 and www CNAME atabany.github.io.
+CNAME/base_url use trackexpenses.app; HTTPS is enforced with an approved certificate. All 15 pages
+return HTTPS 200, HTTP/www/old Pages paths redirect, and root robots.txt and custom 404 work.
+Google Domain verification uses a permanent DNS TXT record; Bing uses BingSiteAuth.xml at root.
+Preserve both and the IndexNow key file. Both sitemaps are submitted; processing is still pending.
+Google live homepage test allows indexing and an indexing request was accepted. Initial sitemap
+fetch failed; recheck after DNS propagation rather than repeatedly submitting the homepage.
+IndexNow accepted 15 new-domain URLs (202); this is not proof of indexing.
+App legal URLs are migrated. Apple rejected all en-US/ar-SA live metadata URL updates (409 locked
+state); update them on the next normal editable release. Old listing links redirect meanwhile.
 
 ## Weekly content and growth review
 
-Run Mondays 09:00 Asia/Dubai. A Codex heartbeat continues the current chat; no separate Claude
+A Monday 09:00 Asia/Dubai Codex heartbeat exists but is currently paused pending owner activation; no separate Claude
 cloud job is provisioned by this repo. Read private docs/KB.md and docs/TASKS.md for current blockers
 and metrics before acting. Review real GSC queries/impressions/clicks/position, Bing discovery and
 available AI citation reports, ASC first-time downloads/web/app referrals/campaign tags and
