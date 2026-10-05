@@ -1,19 +1,14 @@
 # Research backlog
 
-Prioritized by product fit; no measured search volume is claimed.
+The live queue is `topics.json`, driven by `guide.py` (see `WEEKLY_GUIDE.md`). Prioritized by
+product fit and market (UAE, Saudi, India and other SMS-alert markets); no measured search
+volume is claimed. Reorder only on evidence (Search Console queries, support email, reviews).
 
 Published 5 October 2026: bank SMS on iPhone, payday budget month, voice expense entry,
-SMS automation troubleshooting, monthly CSV export, Apple Pay automation, local daily-budget tool,
-fair workflow comparison and Monefy alternative.
-
-Next queries to validate against real search/support evidence:
-1. How much can I spend per day until payday? Expand examples only if query data warrants it.
-2. Spendee alternative without a bank connection: acknowledge its own budget start and daily allowance.
-3. Credit card payment vs expense: avoiding duplicate spending from alerts and settlements.
-4. Arabic bank messages on iPhone: English UI, supported formats and device-language caveats.
-5. How to track cash expenses without forgetting: templates, voice and a short review habit.
-6. CSV import dates and currencies: genuine format examples with permission to publish.
-7. Budget pacing vs totals: reading today's marker and planned early bills.
-8. Missing SMS sender / currency filters: real support questions, no bank-wide compatibility claims.
+SMS automation troubleshooting, monthly CSV export, Apple Pay automation.
+Published 6 October 2026: credit card payment vs expense, cash expenses, Arabic bank SMS,
+subscriptions and recurring bills; eight feature pages and the features hub.
 
 Do not create near-duplicate bank/country doorway pages or claim guaranteed compatibility.
+Comparison/alternative pages (Spendee, Money Manager, Wallet) need researched competitor
+sources and live in `_content/` as HTML fragments, not in the guide queue.

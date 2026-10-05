@@ -5,10 +5,45 @@
   // Motion is opt-in: without JS or with Reduce Motion, every element is simply visible in its final state.
   if (!reduced.matches && canObserve) document.documentElement.classList.add('motion');
 
+  // Example amounts follow the visitor's own currency. The region comes from the browser's time
+  // zone or language — nothing is requested or stored. Base values are US-dollar sized and are
+  // scaled by a rough, rounded factor so a coffee never reads as ¥5. Illustrative, not live rates.
+  const localMoney = (() => {
+    const zones = {Dubai:'AE',Riyadh:'SA',Qatar:'QA',Kuwait:'KW',Bahrain:'BH',Muscat:'OM',Amman:'JO',Cairo:'EG',Casablanca:'MA',Algiers:'DZ',Tunis:'TN',Beirut:'LB',Baghdad:'IQ',Jerusalem:'IL',Istanbul:'TR',Kolkata:'IN',Calcutta:'IN',Karachi:'PK',Dhaka:'BD',Colombo:'LK',Kathmandu:'NP',Shanghai:'CN',Hong_Kong:'HK',Taipei:'TW',Tokyo:'JP',Seoul:'KR',Singapore:'SG',Kuala_Lumpur:'MY',Jakarta:'ID',Bangkok:'TH',Ho_Chi_Minh:'VN',Manila:'PH',Lagos:'NG',Nairobi:'KE',Accra:'GH',Johannesburg:'ZA',Dar_es_Salaam:'TZ',Kampala:'UG',Addis_Ababa:'ET',London:'GB',Dublin:'IE',Paris:'FR',Berlin:'DE',Madrid:'ES',Rome:'IT',Amsterdam:'NL',Brussels:'BE',Vienna:'AT',Lisbon:'PT',Helsinki:'FI',Athens:'GR',Zurich:'CH',Stockholm:'SE',Oslo:'NO',Copenhagen:'DK',Warsaw:'PL',Prague:'CZ',Budapest:'HU',Bucharest:'RO',Sofia:'BG',Moscow:'RU',Kyiv:'UA',Kiev:'UA',Toronto:'CA',Vancouver:'CA',Sydney:'AU',Melbourne:'AU',Auckland:'NZ',Mexico_City:'MX',Sao_Paulo:'BR',Buenos_Aires:'AR',Santiago:'CL',Bogota:'CO',Lima:'PE'};
+    const euro = 'IE FR DE ES IT NL BE AT PT FI GR SK SI EE LV LT LU MT CY HR'.split(' ');
+    const byRegion = {US:'USD',CA:'CAD',GB:'GBP',AU:'AUD',NZ:'NZD',CH:'CHF',SE:'SEK',NO:'NOK',DK:'DKK',PL:'PLN',CZ:'CZK',HU:'HUF',RO:'RON',BG:'BGN',TR:'TRY',RU:'RUB',UA:'UAH',AE:'AED',SA:'SAR',QA:'QAR',KW:'KWD',BH:'BHD',OM:'OMR',JO:'JOD',EG:'EGP',MA:'MAD',DZ:'DZD',TN:'TND',LB:'LBP',IQ:'IQD',IL:'ILS',IN:'INR',PK:'PKR',BD:'BDT',LK:'LKR',NP:'NPR',CN:'CNY',HK:'HKD',TW:'TWD',JP:'JPY',KR:'KRW',SG:'SGD',MY:'MYR',ID:'IDR',TH:'THB',VN:'VND',PH:'PHP',NG:'NGN',KE:'KES',GH:'GHS',ZA:'ZAR',TZ:'TZS',UG:'UGX',ET:'ETB',MX:'MXN',BR:'BRL',AR:'ARS',CL:'CLP',CO:'COP',PE:'PEN'};
+    const scale = {AED:4,SAR:4,QAR:4,OMR:.4,KWD:.3,BHD:.4,JOD:.7,EGP:50,MAD:10,DZD:130,TND:3,LBP:90000,IQD:1300,ILS:4,TRY:40,GBP:.8,CHF:.9,CAD:1.4,AUD:1.5,NZD:1.7,SEK:10,NOK:10,DKK:7,PLN:4,CZK:23,HUF:350,RON:4.5,BGN:1.8,RUB:90,UAH:41,INR:85,PKR:280,BDT:120,LKR:300,NPR:135,CNY:7,HKD:8,TWD:32,JPY:150,KRW:1400,SGD:1.3,MYR:4.5,IDR:16000,THB:35,VND:25000,PHP:57,NGN:1500,KES:130,GHS:15,ZAR:18,TZS:2600,UGX:3700,ETB:120,MXN:19,BRL:5.5,ARS:1000,CLP:950,COP:4000,PEN:3.8};
+    let region = 'US';
+    try {
+      const zone = (Intl.DateTimeFormat().resolvedOptions().timeZone || '').split('/').pop();
+      const lang = new Intl.Locale(navigator.language || 'en-US');
+      region = zones[zone] || lang.region || lang.maximize().region || 'US';
+    } catch {}
+    const code = euro.includes(region) ? 'EUR' : (byRegion[region] || 'USD');
+    const factor = scale[code] || 1;
+    const locale = 'en-' + region;
+    const make = opts => { try { return new Intl.NumberFormat(locale, {style: 'currency', currency: code, ...opts}); } catch { return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', ...opts}); } };
+    const symbol = make({currencyDisplay: 'narrowSymbol'}), plainCode = make({currencyDisplay: 'code'});
+    // Spoken numbers are whole and rounded like a person would say them.
+    const nice = v => { const x = v * factor; if (x < 10) return Math.round(x * 10) / 10; if (x < 100) return Math.round(x); const p = Math.pow(10, Math.floor(Math.log10(x)) - 1); return Math.round(x / p) * p; };
+    const exact = v => Math.round(v * factor * 100) / 100;
+    const grouped = n => n.toLocaleString('en-US');
+    const value = el => el.dataset.sum ? el.dataset.sum.split(',').reduce((t, v) => t + nice(+v), 0) : ('int' in el.dataset ? nice(+el.dataset.v) : exact(+el.dataset.v));
+    const format = (el, n) => ('code' in el.dataset ? plainCode : symbol).format(n);
+    document.querySelectorAll('.num[data-v]').forEach(el => { el.textContent = grouped(nice(+el.dataset.v)); });
+    document.querySelectorAll('[data-words]').forEach(el => { el.dataset.words = el.dataset.words.replace(/\{([\d.]+)\}/g, (_, v) => grouped(nice(+v))); });
+    document.querySelectorAll('.money').forEach(el => {
+      const n = value(el);
+      if (el.dataset.count) el.dataset.count = n;
+      el.textContent = format(el, n);
+    });
+    return {format};
+  })();
+
   // Scroll reveals and count-ups run once, when the element first enters the viewport.
   const countUp = el => {
     const target = Number(el.dataset.count), decimals = Number(el.dataset.decimals || 0);
-    const format = n => n.toLocaleString('en-US', {minimumFractionDigits: decimals, maximumFractionDigits: decimals});
+    const format = el.classList.contains('money') ? n => localMoney.format(el, n) : n => n.toLocaleString('en-US', {minimumFractionDigits: decimals, maximumFractionDigits: decimals});
     if (!target || reduced.matches) { el.textContent = format(target); return; }
     const t0 = performance.now(), duration = 1400;
     const frame = now => {

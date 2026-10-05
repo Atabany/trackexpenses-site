@@ -1,0 +1,92 @@
+[
+ {
+  "slug": "bank-sms-iphone",
+  "title": "Bank SMS Expense Tracking on iPhone | TrackExpenses",
+  "description": "Set up a Shortcuts Message automation for supported bank alerts. Connect Shortcut Input, check entries and understand the free SMS allowance.",
+  "status": "published",
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "feature": "sms-expense-tracker"
+ },
+ {
+  "slug": "payday-budget",
+  "title": "Start Your Budget Month on Payday | TrackExpenses",
+  "description": "Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.",
+  "status": "published",
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "feature": "budget-planner"
+ },
+ {
+  "slug": "voice-expenses-iphone",
+  "title": "Voice Expense Tracking on iPhone | TrackExpenses",
+  "description": "Say one or several purchases, review the drafts and save. Learn TrackExpenses voice entry, device support and on-device privacy.",
+  "status": "published",
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "feature": "voice-expense-tracker"
+ },
+ {
+  "slug": "sms-automation-not-working",
+  "title": "Fix Bank SMS Automation on iPhone | TrackExpenses",
+  "description": "Troubleshoot Message filters, Shortcut Input, activity logs and waiting SMS entries in TrackExpenses without duplicating purchases.",
+  "status": "published",
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "feature": "sms-expense-tracker"
+ },
+ {
+  "slug": "export-expenses-csv",
+  "title": "Export iPhone Expenses to CSV | TrackExpenses",
+  "description": "Export your selected month for free. Check dates and currencies in Numbers, and understand CSV versus a full TrackExpenses backup.",
+  "status": "published",
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "feature": "expense-reports"
+ },
+ {
+  "slug": "apple-pay-expenses",
+  "title": "Track Apple Pay Purchases on iPhone | TrackExpenses",
+  "description": "Set up a supported Shortcuts Transaction automation, map card inputs and review Wallet purchase entries for duplicates.",
+  "status": "published",
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "feature": "widgets-and-shortcuts"
+ },
+ {
+  "slug": "credit-card-payment-vs-expense",
+  "title": "Credit Card Payment vs Expense: Avoid Double Counting",
+  "description": "Is paying your credit card bill an expense? No: record purchases as expenses and the payment as a transfer. A simple method that never counts twice.",
+  "status": "published",
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "feature": "accounts-and-transfers"
+ },
+ {
+  "slug": "track-cash-expenses",
+  "title": "How to Track Cash Expenses on iPhone | TrackExpenses",
+  "description": "Track cash spending without forgetting it: a cash account, ATM transfers, three-second logging by voice or template, and a weekly wallet count.",
+  "status": "published",
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "feature": "voice-expense-tracker"
+ },
+ {
+  "slug": "arabic-bank-sms-expenses",
+  "title": "Arabic Bank SMS Expense Tracking on iPhone | TrackExpenses",
+  "description": "Turn Arabic bank SMS alerts from UAE, Saudi, Oman and Egypt banks into expenses on iPhone. How the reader handles Arabic, codes and salary credits.",
+  "status": "published",
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "feature": "sms-expense-tracker"
+ },
+ {
+  "slug": "track-subscriptions-recurring-bills",
+  "title": "Track Subscriptions and Recurring Bills on iPhone",
+  "description": "Find every subscription, add bills once as recurring rules, keep them inside your payday month and review the list quarterly to cancel what you skip.",
+  "status": "published",
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "feature": "accounts-and-transfers"
+ }
+]

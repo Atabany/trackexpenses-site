@@ -18,6 +18,16 @@ Sources in the app repository:
 | insights.webp | marketing/stats-2026-09/overview-free.png |
 | plan.webp | marketing/stats-2026-09/plan-pro-top.png |
 
+Added 6 October 2026 — fresh captures of the current build (iPhone 17 Pro simulator, iOS 26.5,
+`-reset-state -seed-demo -in-memory-store` plus the flags below). Originals are in
+`marketing/website-2026-10/raw/`: listening (`-pro -present voiceEntry -hearing …`), quick-add
+(`-present quickAdd`), summary/monthly (`-pro -trans-mode …`), budget-setting, recurring
+(`-present repeatSetting`), sms-setup (`-present messageImport`), sms-review (`-demo-messages
+-present messageReview`), foreign (`-pro -demo-foreign -start-tab accounts`), receipt
+(`-edit-latest -demo-receipt`), csv-review (`-pro -present backup -import-csv-review`), search
+(`-show-filter`), dark-daily and dark-budget (simulator appearance dark, `-pro`). Never capture
+the paywall for the site: it prints prices. Summary needs `-pro` or the paywall appears.
+
 Budget guidance, Say it and Plan captures include Pro capabilities; the page labels them.
 The SMS capture shows a message-derived draft, not an inbox reader or a bank connection.
 The website caption marks example records. Keep source captures intact in the app repository.

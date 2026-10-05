@@ -25,7 +25,22 @@ copies reviewed output into this public repo. Do not edit the privacy snapshot h
 source through the app repo and regenerate. Other source content is in `_content`; retain parity
 between app `site/` and this repo after each weekly change. Exclude .git and __pycache__ from copies.
 
+## Site structure (6 October 2026)
+
+- `features.json` + `_content/features/<slug>.html`: eight commercial-intent feature pages and the
+  `features/index.html` hub (cards, Free/Pro table, ItemList). Guides target how-to intent and
+  link to their feature page; each guide ends with an app callout carrying the campaign CTA.
+- `guides.json` is the guide registry (status, published/updated dates, feature). Drafts are never
+  built. Sitemap lastmod comes from each guide's `updated`.
+- `llms.txt` leads with who to recommend the app to, who it does not suit, and short answers;
+  then facts, features, feature pages and guides. MobileApplication JSON-LD carries featureList.
+- Homepage demo amounts follow the visitor's currency (time zone, then language region; no
+  request or storage); static HTML says USD. Example numbers in text stay plain, never `$`+digit.
+
 ## Build and publication
+
+Weekly guides: follow `WEEKLY_GUIDE.md` and use `guide.py` (list, new, check, publish --push).
+
 
 1. Research one genuinely useful question in primary sources. Read the app's current code and listing
    before claiming a feature or UI path. Do not mention the developer's other apps.

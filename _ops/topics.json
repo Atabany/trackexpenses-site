@@ -1,0 +1,122 @@
+[
+ {
+  "slug": "budget-pacing-explained",
+  "status": "queued",
+  "priority": 1,
+  "feature": "budget-planner",
+  "title": "Budget Pacing: Are You Spending Too Fast This Month?",
+  "description": "Read a budget bar with a today marker: what 60% spent means on day 10 vs day 25, planned early bills, and when to slow down. With a worked example.",
+  "intent": "how to tell if I'm overspending this month / budget pacing",
+  "angle": "Fraction spent vs fraction of period elapsed; early rent skews it; daily allowance = remaining / days left incl. today (Pro in app, free in the calculator). Link tools/daily-budget.html."
+ },
+ {
+  "slug": "track-expenses-uae",
+  "status": "queued",
+  "priority": 2,
+  "feature": "sms-expense-tracker",
+  "title": "How to Track Your Expenses in the UAE on iPhone",
+  "description": "A practical UAE setup: AED as main currency, payday on the 25th or 28th, bank SMS alerts in English and Arabic, cash, salary and card bills.",
+  "intent": "track expenses UAE / best expense tracker app UAE / budget app Dubai",
+  "angle": "Local reality: banks SMS every transaction, salary near month end, cash taxis, card bills via SMS. No claims about specific banks' compatibility; test with the setup screen check."
+ },
+ {
+  "slug": "upi-bank-sms-expenses-india",
+  "status": "queued",
+  "priority": 3,
+  "feature": "sms-expense-tracker",
+  "title": "Track UPI and Bank SMS Expenses on iPhone (India)",
+  "description": "Turn Indian bank and UPI debit SMS alerts into expenses on iPhone with a Shortcuts automation. Lakh amounts, Rs/INR, A/c masks and what is skipped.",
+  "intent": "UPI expense tracker iPhone / track bank SMS expenses India iPhone",
+  "angle": "Indian alert shapes (debited from A/c XX1234, UPI Ref, Avl Bal, lakh grouping 1,15,000, Rs. prefix). Bench evidence is mostly Indian alerts; still say 'supported alerts only'."
+ },
+ {
+  "slug": "travel-expenses-multiple-currencies",
+  "status": "queued",
+  "priority": 4,
+  "feature": "multi-currency-expense-tracker",
+  "title": "Track Travel Expenses in Multiple Currencies on iPhone",
+  "description": "Log trip spending in local currency with the rate your card actually charged, keep a cash account per trip and see the total at home. Step by step.",
+  "intent": "travel expense tracker multiple currencies iPhone",
+  "angle": "Card rate vs market rate, foreign fees as expenses, cash per trip, foreign SMS alerts parked until a rate is given. No live rates in the app."
+ },
+ {
+  "slug": "50-30-20-budget-iphone",
+  "status": "queued",
+  "priority": 5,
+  "feature": "budget-planner",
+  "title": "Set Up a 50/30/20 Budget on iPhone",
+  "description": "Split take-home pay into needs, wants and savings, map your categories to each bucket and track it payday to payday. A worked example with real numbers.",
+  "intent": "50/30/20 budget app / how to do 50 30 20 budget",
+  "angle": "Method first (spreadsheet), then categories + category budgets + savings transfers in the app. Not financial advice."
+ },
+ {
+  "slug": "log-expenses-lock-screen",
+  "status": "queued",
+  "priority": 6,
+  "feature": "widgets-and-shortcuts",
+  "title": "Log Expenses from the Lock Screen and Control Center",
+  "description": "Add expense widgets and Control Center buttons on iPhone so a purchase takes seconds: Quick Add, Say an Expense, Paste an Expense and Siri.",
+  "intent": "expense tracker widget iPhone / log expense lock screen",
+  "angle": "Exact iOS steps to add widgets/controls (iOS 17 widgets, iOS 18 controls). Siri phrases from the app's AppShortcuts."
+ },
+ {
+  "slug": "expense-tracker-without-bank-connection",
+  "status": "queued",
+  "priority": 7,
+  "feature": "private-expense-tracker",
+  "title": "Why Track Expenses Without Connecting Your Bank",
+  "description": "Bank-sync apps vs manual and SMS-based tracking: privacy, accuracy, cost and effort compared honestly, and how to keep a ledger with no bank login.",
+  "intent": "budget app without bank connection / no bank login expense tracker",
+  "angle": "Fair trade-offs, link compare/best-expense-trackers.html. No claims about competitors' security."
+ },
+ {
+  "slug": "monthly-money-review",
+  "status": "queued",
+  "priority": 8,
+  "feature": "expense-reports",
+  "title": "A 15-Minute Monthly Money Review",
+  "description": "A repeatable end-of-month review: compare with last month, find the categories that moved, check accounts and recurring bills, and set next month's budget.",
+  "intent": "monthly budget review checklist",
+  "angle": "Uses Stats overview (vs same point, category changes, days without spending), Monthly view, CSV export."
+ },
+ {
+  "slug": "receipt-photos-expenses",
+  "status": "queued",
+  "priority": 9,
+  "feature": "multi-currency-expense-tracker",
+  "title": "Keep Receipt Photos with Your Expenses on iPhone",
+  "description": "Attach a receipt photo to each expense for returns, warranties and work claims, and keep the ledger tidy. What to photograph and how long to keep it.",
+  "intent": "save receipts with expenses iPhone",
+  "angle": "Receipt field in the entry sheet (free). Check whether receipts are included in JSON backup before claiming."
+ },
+ {
+  "slug": "log-expenses-with-siri",
+  "status": "queued",
+  "priority": 10,
+  "feature": "widgets-and-shortcuts",
+  "title": "Log Expenses with Siri and Shortcuts on iPhone",
+  "description": "Use Siri phrases and Shortcuts actions to log an expense, record income or check what is left in your budget, hands-free. Exact phrases and setup.",
+  "intent": "log expenses with Siri",
+  "angle": "AppShortcuts phrases: 'Log an expense in TrackExpenses', 'What's left in TrackExpenses', 'Say an expense in TrackExpenses'."
+ },
+ {
+  "slug": "import-expenses-from-csv",
+  "status": "queued",
+  "priority": 11,
+  "feature": "expense-reports",
+  "title": "Import Your Expense History from a CSV File",
+  "description": "Move years of expenses into TrackExpenses from a spreadsheet: preparing columns, ambiguous dates, decimal commas, duplicates and undoing an import.",
+  "intent": "import expenses CSV iPhone app",
+  "angle": "Pro feature. Never claim Money Manager import compatibility until a real export is tested (CLAUDE.md)."
+ },
+ {
+  "slug": "no-spend-days",
+  "status": "queued",
+  "priority": 12,
+  "feature": "expense-reports",
+  "title": "No-Spend Days: Track Them and Make Them Count",
+  "description": "Count the days you spent nothing, see them in a calendar, and use them to cut discretionary spending without a strict budget. With realistic rules.",
+  "intent": "no spend days tracker",
+  "angle": "Stats shows days without logged spending; calendar view; must log every expense for it to be meaningful."
+ }
+]
