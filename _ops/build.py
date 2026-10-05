@@ -59,7 +59,7 @@ def markdown(md):
 
 def rating():
  n=FACTS['userRatingCount']; r=FACTS['averageUserRating']
- return f'{r:.1f} on the US App Store · rated by {n:,} users' if n else 'No ratings yet in the US App Store'
+ return f'{r:.1f} on the US App Store · rated by {n:,} users' if n else ''
 
 def campaign(path):
  tag='web-home' if path=='index.html' else ('web-'+path.removesuffix('.html').replace('/','-'))[:40]
@@ -93,7 +93,7 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
 <script type="application/ld+json">{ld}</script></head><body>
 <a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="{prefix}index.html">TrackExpenses<span>SMS · Voice · Payday</span></a><nav aria-label="Main"><a href="{prefix}features/index.html">Features</a><a href="{prefix}index.html#screenshots">Screenshots</a><a href="{prefix}guides/index.html">Guides</a><a href="{prefix}tools/daily-budget.html">Calculator</a></nav>{cta(path,prefix,True)}</header>
 <main id="main" class="{'home' if path=='index.html' else 'article'}">{body}
-<section class="download"><h2>Your money, easier to follow.</h2><p>Expense Tracker: SMS &amp; Voice for iPhone and iPad.</p>{cta(path,prefix)}<p class="small">{esc(rating())} · Checked {esc(FACTS['checked'])}</p></section>
+<section class="download"><h2>Your money, easier to follow.</h2><p>Expense Tracker: SMS &amp; Voice for iPhone and iPad.</p>{cta(path,prefix)}{f'<p class="small">{esc(rating())} · Checked {esc(FACTS["checked"])}</p>' if rating() else ''}</section>
 <details class="fact-block"><summary>App facts and free / Pro limits</summary><p>{esc(FACT_BLOCK)}</p></details></main>
 <footer><p>Made by <a href="{prefix}about.html">Mohamed Elatabany</a>. No cookies or analytics scripts on this site.</p><nav aria-label="Footer"><a href="{prefix}privacy.html">Privacy</a><a href="{prefix}support.html">Support &amp; corrections</a><a href="{prefix}terms.html">Terms</a><a href="{prefix}compare/best-expense-trackers.html">Compare apps</a><a href="{prefix}features/index.html">All features</a><a href="{prefix}guides/index.html">Guides</a></nav></footer>
 <script src="{prefix}site.js?v=5" defer></script></body></html>'''
@@ -184,7 +184,7 @@ LLMS_GUIDE = """
 - Does it connect to my bank? No.
 - Where is data stored? On the device, with optional private iCloud sync.
 """
-llms='# Expense Tracker: SMS & Voice (TrackExpenses)\n'+LLMS_GUIDE+'\n## Facts\n'+FACT_BLOCK+'\n\n'+rating()+'. US storefront; checked '+FACTS['checked']+'.\n\nApp Store: '+STORE+'\n\n## Features\n'+''.join(f'- {x}\n' for x in FEATURE_LIST)+'\n## Feature pages\n'+''.join(f'- [{f["label"]}]({BASE}features/{f["slug"]}.html): {f["summary"]}\n' for f in FEATURES)+'\n## Guides\n'+''.join(f'- [{g["title"].split(" | ")[0]}]({BASE}guides/{g["slug"]}.html): {g["description"]}\n' for g in GUIDE_META)+'\n## All official pages\n'+''.join(f'- [{v[0]}]({v[2]}): {v[1]}\n' for v in PAGES.values())
+llms='# Expense Tracker: SMS & Voice (TrackExpenses)\n'+LLMS_GUIDE+'\n## Facts\n'+FACT_BLOCK+'\n\n'+(rating()+'. US storefront; checked '+FACTS['checked']+'.\n\n' if rating() else '')+'App Store: '+STORE+'\n\n## Features\n'+''.join(f'- {x}\n' for x in FEATURE_LIST)+'\n## Feature pages\n'+''.join(f'- [{f["label"]}]({BASE}features/{f["slug"]}.html): {f["summary"]}\n' for f in FEATURES)+'\n## Guides\n'+''.join(f'- [{g["title"].split(" | ")[0]}]({BASE}guides/{g["slug"]}.html): {g["description"]}\n' for g in GUIDE_META)+'\n## All official pages\n'+''.join(f'- [{v[0]}]({v[2]}): {v[1]}\n' for v in PAGES.values())
 (ROOT/'llms.txt').write_text(llms)
 full_text = llms+'\n\n'+ '\n\n'.join('## '+v[0]+'\n'+v[2]+'\n'+html.unescape(re.sub(r'<[^>]+>',' ',v[3])) for v in PAGES.values())
 (ROOT/'llms-full.txt').write_text('\n'.join(line.rstrip() for line in full_text.splitlines())+'\n')

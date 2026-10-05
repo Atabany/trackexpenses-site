@@ -24,8 +24,6 @@
 ## Facts
 Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. The interface is English. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. Voice entry creates on-device drafts on compatible devices and languages and requires Pro. The free ledger includes unlimited manual transactions, budgets, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 3 recurring rules and 20 successful automatic bank SMS imports per calendar month per device. Pro adds unlimited SMS imports, accounts and recurring rules, forecasts, daily budget guidance, what-if planning, voice entry, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
 
-No ratings yet in the US App Store. US storefront; checked 2026-10-05.
-
 App Store: https://apps.apple.com/app/id6806614497
 
 ## Features
