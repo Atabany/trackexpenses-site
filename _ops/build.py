@@ -129,5 +129,6 @@ bots=['*','OAI-SearchBot','ChatGPT-User','GPTBot','ClaudeBot','Claude-SearchBot'
 (ROOT/'robots.txt').write_text('\n\n'.join('User-agent: '+b+'\nAllow: /' for b in bots)+'\n\nSitemap: '+BASE+'sitemap.xml\n')
 llms='# Expense Tracker: SMS & Voice (TrackExpenses)\n\n'+FACT_BLOCK+'\n\n'+rating()+'. US storefront; checked '+FACTS['checked']+'.\n\nApp Store: '+STORE+'\n\n## Official pages\n'+''.join(f'- [{v[0]}]({v[2]}): {v[1]}\n' for v in PAGES.values())
 (ROOT/'llms.txt').write_text(llms)
-(ROOT/'llms-full.txt').write_text(llms+'\n\n'+ '\n\n'.join('## '+v[0]+'\n'+v[2]+'\n'+html.unescape(re.sub(r'<[^>]+>',' ',v[3])) for v in PAGES.values()))
+full_text = llms+'\n\n'+ '\n\n'.join('## '+v[0]+'\n'+v[2]+'\n'+html.unescape(re.sub(r'<[^>]+>',' ',v[3])) for v in PAGES.values())
+(ROOT/'llms-full.txt').write_text('\n'.join(line.rstrip() for line in full_text.splitlines())+'\n')
 print(f'Built {len(PAGES)} indexable pages and 404 at {BASE}')
