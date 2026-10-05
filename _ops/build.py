@@ -79,14 +79,14 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False):
 <link rel="canonical" href="{canonical}"><meta name="apple-itunes-app" content="app-id={APP}">
 <meta property="og:type" content="{'article' if kind=='Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="TrackExpenses: SMS, voice and payday budgeting">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}assets/og.png">
-{'<meta name="robots" content="noindex">' if noindex else ''}<link rel="icon" href="{prefix}assets/icon.png"><link rel="stylesheet" href="{prefix}style.css?v=3">
+{'<meta name="robots" content="noindex">' if noindex else ''}<link rel="icon" href="{prefix}assets/icon.png"><link rel="stylesheet" href="{prefix}style.css?v=4">
 <script type="application/ld+json">{ld}</script></head><body>
 <a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="{prefix}index.html">TrackExpenses<span>SMS · Voice · Payday</span></a><nav aria-label="Main"><a href="{prefix}index.html#features">Features</a><a href="{prefix}index.html#screenshots">Screenshots</a><a href="{prefix}guides/index.html">Guides</a><a href="{prefix}tools/daily-budget.html">Calculator</a></nav>{cta(path,prefix,True)}</header>
 <main id="main" class="{'home' if path=='index.html' else 'article'}">{body}
 <section class="download"><h2>Your money, easier to follow.</h2><p>Expense Tracker: SMS &amp; Voice for iPhone and iPad.</p>{cta(path,prefix)}<p class="small">{esc(rating())} · Checked {esc(FACTS['checked'])}</p></section>
 <details class="fact-block"><summary>App facts and free / Pro limits</summary><p>{esc(FACT_BLOCK)}</p></details></main>
 <footer><p>Made by <a href="{prefix}about.html">Mohamed Elatabany</a>. No cookies or analytics scripts on this site.</p><nav aria-label="Footer"><a href="{prefix}privacy.html">Privacy</a><a href="{prefix}support.html">Support &amp; corrections</a><a href="{prefix}terms.html">Terms</a><a href="{prefix}compare/best-expense-trackers.html">Compare apps</a></nav></footer>
-<script src="{prefix}site.js?v=3" defer></script></body></html>'''
+<script src="{prefix}site.js?v=4" defer></script></body></html>'''
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text)
  if not noindex: PAGES[path]=(title,desc,canonical,body)
 

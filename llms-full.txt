@@ -40,6 +40,9 @@ https://trackexpenses.app/
 
 
 
+                            “coffee 15, taxi 40”
+            Bank alert  AED 42.18 at CARREFOUR   →  Groceries
+      Safe to spend today  AED 512.64
      Real app screens · example records · Pro guidance shown
 
 
@@ -47,44 +50,124 @@ https://trackexpenses.app/
   No bank login  No app account  Optional private iCloud sync  English interface
 
 
+     0   bank logins or app accounts needed
+     20   free automatic SMS imports every month
+    1–31  any day of the month can start your budget
+     116   currencies recognized in bank alerts
+
+
+
     LESS ADMIN. MORE CLARITY.  Three ways to make tracking feel effortless.  Keep the habit. Skip some of the typing.
-    01 / Say it  02 / Bank SMS  03 / Your payday
+        Say it     Bank SMS      Your payday
 
 
-      01 / SAY IT  PRO   A few words. A few purchases. All caught up.  “Coffee 15, taxi 40, and groceries 120 at Carrefour yesterday.”  Say one purchase or several. TrackExpenses turns your words into drafts on your device. Check the amounts, categories and dates, then save.   Multiple purchases in one phrase  Review and edit before saving  On-device speech processing   See how Say it works  →   Pro required. Compatible devices and supported languages only.
-         Your words, ready to review. Example purchases.
-
-
-
-      02 / BANK SMS  FREE ALLOWANCE   The alert arrives. Your ledger catches up.  Your bank already sends the details. A Shortcuts Message automation can bring supported transaction alerts into TrackExpenses, so you spend less time entering them again.   Amount, merchant, account and category  Review entries and correct the details  No bank connection or inbox access   Set up bank SMS imports  →   Setup required. Free includes 20 successful automatic imports per calendar month per device; Pro removes the limit. Supported alerts only.
-         A transaction draft read from a message. Example records.
+      01 / SAY IT  PRO   A few words. A few purchases. All caught up.  “Coffee 15, taxi 40, and groceries 120 at Carrefour yesterday.”  Say one purchase or several. TrackExpenses listens, shows what it understood while you speak, stops on its own when you pause, and turns your words into drafts on your device. Check the amounts, categories and dates, then save.   Multiple purchases in one phrase  Live chips show what was heard as you talk  Review and edit before saving  On-device speech processing   See how Say it works  →   Pro required. Compatible devices and supported languages only.
 
 
 
-      03 / YOUR PAYDAY  FREE   Your salary day. Your month. Your rules.  Paid on the 25th? Let your budget month run from the 25th to the 24th. Transactions, category budgets and charts follow the same fixed monthly period.   Choose your monthly start day  Follow spending day by day in the calendar  See category budgets and period progress   Build a budget around payday  →   Budget pacing is free. Daily spending guidance and forecasts require Pro.
-         A month that begins on payday. Example records.
+            ✕  Say it
+
+               LISTENING
+             I HEARD
+
+
+               AED 15 · 🍽️ Food
+               AED 40 · 🚌 Transport
+               AED 120 · 🛒 Groceries
+               📍 Carrefour
+               📅 Yesterday
 
 
 
 
-    THE WHOLE PICTURE  Beyond the next purchase.  Your spending, accounts and plans, together in one app.
 
-      INSIGHTS  FREE   See where it goes.  Spending, cash flow and category changes, without a spreadsheet.
-      ACCOUNTS  Keep balances in view.  Cash, bank and card accounts. Three for free; unlimited with Pro.
-      PLAN AHEAD  PRO   Explore the what-ifs.  See a spending forecast. Try a daily target or an extra purchase.
 
-   Real iPhone screenshots with example records. Swipe or scroll to explore on mobile. Forecasts depend on your logged transactions.
+
+             Pause to finish…
+             English · On-device & private
+
+
+             “coffee 15, taxi 40 and groceries 120 at Carrefour yesterday”
+              “coffee 15”  AED 15.00   Expense 🍽️ Food Cash · Today
+              “taxi 40”  AED 40.00   Expense 🚌 Transport Cash · Today
+              “groceries 120 at Carrefour yesterday”  AED 120.00   Expense 🛒 Groceries Carrefour · Yesterday
+              ↺ Retry  ✓ Save 3
+              ✓ 3 saved  · AED 175 spent · last: Carrefour
+
+
+
+       Pause
+       Illustrative animation of the Say it flow. Example purchases.
+
+
+
+
+      02 / BANK SMS  FREE ALLOWANCE   The alert arrives. Your ledger catches up.  Your bank already sends the details. A Shortcuts Message automation hands supported transaction alerts to TrackExpenses, which reads the amount, merchant, card and date — in English, Arabic and many other languages — and files them for you.   Amount, merchant, account and category  One-time codes and offers are skipped, not imported  Salary credits can arrive as income, flagged for review  No bank connection or inbox access   Set up bank SMS imports  →   Setup required. Free includes 20 successful automatic imports per calendar month per device; Pro removes the limit. Supported alerts only.
+
+
+
+            Thursday 11 September  9:41
+
+                     YOURBANK  now   Purchase of  AED 42.18  at  CARREFOUR  with card  *6878 . Avl bal AED 4,120.00
+                     YOURBANK  now   تم خصم  AED 18.50  من بطاقتك المنتهية بالرقم  6878  لدى  ENOC
+                     YOURBANK  now   Your one-time code is 482915. Never share it.   Skipped · code
+                     YOURBANK  now   Salary of  AED 12,500.00  credited to your account ending  4410
+
+             Shortcuts automation → TrackExpenses
+
+                TrackExpenses  Today
+              🛒   Carrefour  Groceries · Credit Card   −42.18
+              ⛽   ENOC  Fuel · Credit Card   −18.50
+              💼   Salary  Review   Income · Main Bank   +12,500.00
+
+
+
+       Pause
+       Illustrative animation of bank SMS import. Example messages; amounts in AED.
+
+
+
+
+      03 / YOUR PAYDAY  FREE   Your salary day. Your month. Your rules.  Paid on the 25th? Let your budget month run from the 25th to the 24th. Transactions, category budgets and charts follow the same fixed monthly period — and every budget bar shows where today falls, so 46% spent means something.   Choose your monthly start day  Budget pacing with a “today” marker on every bar  Follow spending day by day in the calendar   Build a budget around payday  →   Budget pacing is free. Daily spending guidance and forecasts require Pro.
+
+
+
+          25 Aug    24 Sep
+         Remaining this month
+         AED  7,177.00
+             Today
+          46% spent  58% of the month gone
+         ✓ On pace
+
+       A month that begins on payday, with budget pacing. Example records.
+
+
+
+
+
+    THE WHOLE PICTURE  Beyond the next purchase.  Your spending, accounts and plans, together in one app. These are the real screens.
+
+
+        SAY IT  PRO   Three drafts, one sentence.  Every purchase you said, ready to check and save together.
+        BANK SMS  Read from your message.  Amount, merchant, account and category, filled in for you.
+        INSIGHTS  FREE   See where it goes.  Spending, cash flow and category changes, without a spreadsheet.
+        ACCOUNTS  Keep balances in view.  Cash, bank and card accounts. Three for free; unlimited with Pro.
+        PLAN AHEAD  PRO   Explore the what-ifs.  See a spending forecast. Try a daily target or an extra purchase.
+
+      ←  →
+
+   Real iPhone screenshots with example records. Swipe or scroll to explore. Forecasts depend on your logged transactions.
 
 
 
     THE LITTLE DETAILS, TOO  A ledger you can make your own.
 
-      ↗  Income & transfers  Record money coming in, purchases going out and transfers between your accounts.  FREE
-      ↻  Recurring entries  Keep regular transactions on a schedule. Three recurring rules for free, unlimited with Pro.
-      ☁  Private iCloud sync  Optionally keep your ledger in sync across your own Apple devices through private iCloud storage.  FREE
-      ↓  Your data, portable  Export a month to CSV for free. Pro adds CSV import, date-range exports and JSON backup and restore.  Explore export options →
-      ◇  Themes & app icons  Give your ledger a different look with Pro themes and alternate app icons.  PRO
-      ＋  Apple Pay shortcuts  Use a supported Wallet transaction automation for purchases on selected cards. Setup and compatible iOS required.  See the setup guide →
+           Income & transfers  Record money coming in, purchases going out and transfers between your accounts.  FREE
+             Recurring entries  Keep regular transactions on a schedule. Three recurring rules for free, unlimited with Pro.
+           Private iCloud sync  Optionally keep your ledger in sync across your own Apple devices through private iCloud storage.  FREE
+           Your data, portable  Export a month to CSV for free. Pro adds CSV import, date-range exports and JSON backup and restore.  Explore export options →
+           Themes & app icons  Give your ledger a different look with Pro themes and alternate app icons.  PRO
+            Apple Pay shortcuts  Use a supported Wallet transaction automation for purchases on selected cards. Setup and compatible iOS required.  See the setup guide →
 
 
 

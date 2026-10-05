@@ -12,65 +12,148 @@
     <div class="showcase-orbit" aria-hidden="true"></div>
     <div class="phone phone-secondary"><img src="assets/screenshots/budget.webp" width="660" height="1434" alt="TrackExpenses category budgets, remaining budget and Pro daily spending guidance" decoding="async"></div>
     <div class="phone phone-primary"><img src="assets/screenshots/transactions.webp" width="660" height="1434" alt="Daily transaction list with a payday period and Say, Paste and Add buttons" fetchpriority="high" decoding="async"></div>
+    <div class="hero-chip chip-voice" aria-hidden="true"><span class="chip-mic"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><span class="mini-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="chip-text">“coffee 15, taxi 40”</span></div>
+    <div class="hero-chip chip-sms" aria-hidden="true"><span class="chip-app"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><span><b>Bank alert</b><small>AED 42.18 at CARREFOUR</small></span><span class="chip-arrow">→ <em>Groceries</em></span></div>
+    <div class="hero-chip chip-safe" aria-hidden="true"><small>Safe to spend today</small><b>AED 512.64</b><span class="chip-bar"><i></i></span></div>
     <figcaption>Real app screens · example records · Pro guidance shown</figcaption>
   </figure>
 </section>
 
 <div class="trust-strip" aria-label="Getting started"><span>No bank login</span><span>No app account</span><span>Optional private iCloud sync</span><span>English interface</span></div>
 
+<section class="fact-strip reveal" aria-label="TrackExpenses at a glance">
+  <div><b><span data-count="0">0</span></b><span>bank logins or app accounts needed</span></div>
+  <div><b><span data-count="20">20</span></b><span>free automatic SMS imports every month</span></div>
+  <div><b>1–31</b><span>any day of the month can start your budget</span></div>
+  <div><b><span data-count="116">116</span></b><span>currencies recognized in bank alerts</span></div>
+</section>
+
 <section id="features" class="section-block">
-  <div class="section-heading"><p class="eyebrow">LESS ADMIN. MORE CLARITY.</p><h2>Three ways to make<br>tracking feel effortless.</h2><p>Keep the habit. Skip some of the typing.</p></div>
-  <div class="feature-jump"><a href="#say">01 / Say it</a><a href="#sms">02 / Bank SMS</a><a href="#payday">03 / Your payday</a></div>
+  <div class="section-heading reveal"><p class="eyebrow">LESS ADMIN. MORE CLARITY.</p><h2>Three ways to make<br>tracking feel effortless.</h2><p>Keep the habit. Skip some of the typing.</p></div>
+  <nav class="feature-jump" aria-label="Feature stories"><a href="#say"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Say it</a><a href="#sms"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg>Bank SMS</a><a href="#payday"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Your payday</a></nav>
 
   <article id="say" class="spotlight voice-spotlight">
-    <div class="spotlight-copy"><span class="feature-label">01 / SAY IT <span class="tier">PRO</span></span><h3>A few words.<br>A few purchases.<br>All caught up.</h3><p>“Coffee 15, taxi 40, and groceries 120 at Carrefour yesterday.”</p><p>Say one purchase or several. TrackExpenses turns your words into drafts on your device. Check the amounts, categories and dates, then save.</p><ul class="benefits"><li>Multiple purchases in one phrase</li><li>Review and edit before saving</li><li>On-device speech processing</li></ul><a href="guides/voice-expenses-iphone.html">See how Say it works <span aria-hidden="true">→</span></a><p class="small">Pro required. Compatible devices and supported languages only.</p></div>
-    <figure class="screen-stage stage-dark"><div class="phone"><img src="assets/screenshots/say.webp" width="660" height="1434" alt="Say it screen reviewing three spoken purchases before saving" loading="lazy" decoding="async"></div><figcaption>Your words, ready to review. Example purchases.</figcaption></figure>
+    <div class="spotlight-copy reveal"><span class="feature-label">01 / SAY IT <span class="tier">PRO</span></span><h3>A few words.<br>A few purchases.<br>All caught up.</h3><p class="quote-line">“Coffee 15, taxi 40, and groceries 120 at Carrefour yesterday.”</p><p>Say one purchase or several. TrackExpenses listens, shows what it understood while you speak, stops on its own when you pause, and turns your words into drafts on your device. Check the amounts, categories and dates, then save.</p><ul class="benefits"><li>Multiple purchases in one phrase</li><li>Live chips show what was heard as you talk</li><li>Review and edit before saving</li><li>On-device speech processing</li></ul><a href="guides/voice-expenses-iphone.html">See how Say it works <span aria-hidden="true">→</span></a><p class="small">Pro required. Compatible devices and supported languages only.</p></div>
+    <figure class="screen-stage stage-dark demo-stage">
+      <div class="demo-phone say-demo" data-demo data-loop="13500" role="img" aria-label="Animation: a person says “coffee 15, taxi 40 and groceries 120 at Carrefour yesterday”. Say it listens with a live waveform, shows the amounts and categories it heard, then presents three drafts to review — 15 Food, 40 Transport and 120 Groceries at Carrefour dated yesterday — and saves all three.">
+        <div class="demo-screen" aria-hidden="true">
+          <div class="demo-bar"><span class="demo-x">✕</span><b>Say it</b><span class="demo-gap"></span></div>
+          <div class="say-listen" data-off="6700">
+            <p class="say-kicker"><span class="rec-dot"></span>LISTENING</p>
+            <p class="say-heard-label">I HEARD</p>
+            <p class="say-transcript" data-words="coffee 15, taxi 40 and groceries 120 at Carrefour yesterday" data-start="700" data-step="360"></p>
+            <div class="say-chips">
+              <span class="chip c-exp" data-at="1250">AED 15 · 🍽️ Food</span>
+              <span class="chip c-exp" data-at="2000">AED 40 · 🚌 Transport</span>
+              <span class="chip c-exp" data-at="3150">AED 120 · 🛒 Groceries</span>
+              <span class="chip" data-at="3900">📍 Carrefour</span>
+              <span class="chip" data-at="4250">📅 Yesterday</span>
+            </div>
+            <div class="say-mic">
+              <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+              <svg class="silence" viewBox="0 0 120 120" data-at="4700"><circle cx="60" cy="60" r="54"/></svg>
+              <span class="mic-btn"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+            </div>
+            <div class="say-wave" data-off="4600"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="say-pause" data-at="4700">Pause to finish…</p>
+            <p class="say-tier">English · On-device &amp; private</p>
+          </div>
+          <div class="say-review">
+            <p class="say-quote" data-at="6900">“coffee 15, taxi 40 and groceries 120 at Carrefour yesterday”</p>
+            <div class="draft" data-at="7200"><p class="d-said">“coffee 15”</p><p class="d-amt">AED 15.00</p><p class="d-meta"><span class="pill">Expense</span>🍽️ Food<span class="d-right">Cash · Today</span></p></div>
+            <div class="draft" data-at="7550"><p class="d-said">“taxi 40”</p><p class="d-amt">AED 40.00</p><p class="d-meta"><span class="pill">Expense</span>🚌 Transport<span class="d-right">Cash · Today</span></p></div>
+            <div class="draft" data-at="7900"><p class="d-said">“groceries 120 at Carrefour yesterday”</p><p class="d-amt">AED 120.00</p><p class="d-meta"><span class="pill">Expense</span>🛒 Groceries<span class="d-right">Carrefour · Yesterday</span></p></div>
+            <div class="say-actions" data-at="8500"><span class="btn-retry">↺ Retry</span><span class="btn-save" data-pulse="9600">✓ Save 3</span></div>
+            <p class="say-saved" data-at="10300"><b>✓ 3 saved</b> · AED 175 spent · last: Carrefour</p>
+          </div>
+        </div>
+      </div>
+      <button class="demo-toggle" type="button" hidden>Pause</button>
+      <figcaption>Illustrative animation of the Say it flow. Example purchases.</figcaption>
+    </figure>
   </article>
 
   <article id="sms" class="spotlight sms-spotlight">
-    <div class="spotlight-copy"><span class="feature-label">02 / BANK SMS <span class="tier">FREE ALLOWANCE</span></span><h3>The alert arrives.<br>Your ledger<br>catches up.</h3><p>Your bank already sends the details. A Shortcuts Message automation can bring supported transaction alerts into TrackExpenses, so you spend less time entering them again.</p><ul class="benefits"><li>Amount, merchant, account and category</li><li>Review entries and correct the details</li><li>No bank connection or inbox access</li></ul><a href="guides/bank-sms-iphone.html">Set up bank SMS imports <span aria-hidden="true">→</span></a><p class="small">Setup required. Free includes 20 successful automatic imports per calendar month per device; Pro removes the limit. Supported alerts only.</p></div>
-    <figure class="screen-stage stage-mint"><div class="phone"><img src="assets/screenshots/sms.webp" width="660" height="1434" alt="A bank-message expense draft showing the amount, merchant, account and category" loading="lazy" decoding="async"></div><figcaption>A transaction draft read from a message. Example records.</figcaption></figure>
+    <div class="spotlight-copy reveal"><span class="feature-label">02 / BANK SMS <span class="tier">FREE ALLOWANCE</span></span><h3>The alert arrives.<br>Your ledger<br>catches up.</h3><p>Your bank already sends the details. A Shortcuts Message automation hands supported transaction alerts to TrackExpenses, which reads the amount, merchant, card and date — in English, Arabic and many other languages — and files them for you.</p><ul class="benefits"><li>Amount, merchant, account and category</li><li>One-time codes and offers are skipped, not imported</li><li>Salary credits can arrive as income, flagged for review</li><li>No bank connection or inbox access</li></ul><a href="guides/bank-sms-iphone.html">Set up bank SMS imports <span aria-hidden="true">→</span></a><p class="small">Setup required. Free includes 20 successful automatic imports per calendar month per device; Pro removes the limit. Supported alerts only.</p></div>
+    <figure class="screen-stage stage-mint demo-stage">
+      <div class="demo-phone sms-demo" data-demo data-loop="15000" role="img" aria-label="Animation: bank text messages arrive on an iPhone lock screen. A card purchase of 42.18 at Carrefour and an Arabic alert for 18.50 at ENOC become expense rows; a one-time code is skipped; a salary credit becomes an income row flagged for review.">
+        <div class="demo-screen lock" aria-hidden="true">
+          <div class="lock-time"><span>Thursday 11 September</span><b>9:41</b></div>
+          <ol class="notes">
+            <li class="note" data-at="300"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>YOURBANK</b><span>now</span></p><p class="note-body">Purchase of <mark class="m-amt" data-at="1100">AED 42.18</mark> at <mark class="m-pay" data-at="1400">CARREFOUR</mark> with card <mark class="m-card" data-at="1700">*6878</mark>. Avl bal AED 4,120.00</p></div></li>
+            <li class="note" data-at="3600"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>YOURBANK</b><span>now</span></p><p class="note-body" dir="rtl" lang="ar">تم خصم <mark class="m-amt" data-at="4400">AED 18.50</mark> من بطاقتك المنتهية بالرقم <mark class="m-card" data-at="4700">6878</mark> لدى <mark class="m-pay" data-at="5000">ENOC</mark></p></div></li>
+            <li class="note note-otp" data-at="6900"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>YOURBANK</b><span>now</span></p><p class="note-body">Your one-time code is 482915. Never share it.</p></div><span class="skip-stamp" data-at="7700">Skipped · code</span></li>
+            <li class="note" data-at="9100"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>YOURBANK</b><span>now</span></p><p class="note-body">Salary of <mark class="m-inc" data-at="9900">AED 12,500.00</mark> credited to your account ending <mark class="m-card" data-at="10200">4410</mark></p></div></li>
+          </ol>
+          <div class="automation" data-pulse="2000,5400,10500"><span class="auto-dot"></span>Shortcuts automation → TrackExpenses</div>
+          <div class="ledger-card">
+            <p class="ledger-head"><span class="ledger-icon"></span><b>TrackExpenses</b><span>Today</span></p>
+            <div class="ledger-row" data-at="2300"><span class="row-emoji">🛒</span><span class="row-main"><b>Carrefour</b><small>Groceries · Credit Card</small></span><span class="row-amt exp">−42.18</span></div>
+            <div class="ledger-row" data-at="5700"><span class="row-emoji">⛽</span><span class="row-main"><b>ENOC</b><small>Fuel · Credit Card</small></span><span class="row-amt exp">−18.50</span></div>
+            <div class="ledger-row" data-at="10800"><span class="row-emoji">💼</span><span class="row-main"><b>Salary <em class="flag">Review</em></b><small>Income · Main Bank</small></span><span class="row-amt inc">+12,500.00</span></div>
+          </div>
+        </div>
+      </div>
+      <button class="demo-toggle" type="button" hidden>Pause</button>
+      <figcaption>Illustrative animation of bank SMS import. Example messages; amounts in AED.</figcaption>
+    </figure>
   </article>
 
   <article id="payday" class="spotlight payday-spotlight">
-    <div class="spotlight-copy"><span class="feature-label">03 / YOUR PAYDAY <span class="tier">FREE</span></span><h3>Your salary day.<br>Your month.<br>Your rules.</h3><p>Paid on the 25th? Let your budget month run from the 25th to the 24th. Transactions, category budgets and charts follow the same fixed monthly period.</p><ul class="benefits"><li>Choose your monthly start day</li><li>Follow spending day by day in the calendar</li><li>See category budgets and period progress</li></ul><a href="guides/payday-budget.html">Build a budget around payday <span aria-hidden="true">→</span></a><p class="small">Budget pacing is free. Daily spending guidance and forecasts require Pro.</p></div>
-    <figure class="screen-stage stage-sand"><div class="phone"><img src="assets/screenshots/calendar.webp" width="660" height="1434" alt="Spending calendar for a monthly payday period from August 25 to September 24" loading="lazy" decoding="async"></div><figcaption>A month that begins on payday. Example records.</figcaption></figure>
+    <div class="spotlight-copy reveal"><span class="feature-label">03 / YOUR PAYDAY <span class="tier">FREE</span></span><h3>Your salary day.<br>Your month.<br>Your rules.</h3><p>Paid on the 25th? Let your budget month run from the 25th to the 24th. Transactions, category budgets and charts follow the same fixed monthly period — and every budget bar shows where today falls, so 46% spent means something.</p><ul class="benefits"><li>Choose your monthly start day</li><li>Budget pacing with a “today” marker on every bar</li><li>Follow spending day by day in the calendar</li></ul><a href="guides/payday-budget.html">Build a budget around payday <span aria-hidden="true">→</span></a><p class="small">Budget pacing is free. Daily spending guidance and forecasts require Pro.</p></div>
+    <figure class="screen-stage stage-sand pace-stage">
+      <div class="phone"><img src="assets/screenshots/calendar.webp" width="660" height="1434" alt="Spending calendar for a monthly payday period from August 25 to September 24" loading="lazy" decoding="async"></div>
+      <div class="pace-card reveal" aria-hidden="true">
+        <p class="pace-period"><span>25 Aug</span><i></i><span>24 Sep</span></p>
+        <small>Remaining this month</small>
+        <b class="pace-amount">AED <span data-count="7177" data-decimals="2">7,177.00</span></b>
+        <span class="pace-bar"><span class="pace-fill"></span><span class="pace-today"><em>Today</em></span></span>
+        <span class="pace-foot"><span>46% spent</span><span>58% of the month gone</span></span>
+        <span class="pace-verdict">✓ On pace</span>
+      </div>
+      <figcaption>A month that begins on payday, with budget pacing. Example records.</figcaption>
+    </figure>
   </article>
 </section>
 
 <section id="screenshots" class="section-block">
-  <div class="section-heading"><p class="eyebrow">THE WHOLE PICTURE</p><h2>Beyond the next purchase.</h2><p>Your spending, accounts and plans, together in one app.</p></div>
-  <div class="screen-gallery" tabindex="0" role="region" aria-label="App screenshots; scroll horizontally on small screens">
-    <article class="gallery-card"><span class="feature-label">INSIGHTS <span class="tier">FREE</span></span><h3>See where it goes.</h3><p>Spending, cash flow and category changes, without a spreadsheet.</p><div class="phone"><img src="assets/screenshots/insights.webp" width="660" height="1435" alt="Stats Overview showing spending this period, transaction count and cash flow" loading="lazy" decoding="async"></div></article>
-    <article class="gallery-card"><span class="feature-label">ACCOUNTS</span><h3>Keep balances in view.</h3><p>Cash, bank and card accounts. Three for free; unlimited with Pro.</p><div class="phone"><img src="assets/screenshots/accounts.webp" width="660" height="1434" alt="Cash, bank and credit card accounts with assets, liabilities and total balance" loading="lazy" decoding="async"></div></article>
-    <article class="gallery-card"><span class="feature-label">PLAN AHEAD <span class="tier">PRO</span></span><h3>Explore the what-ifs.</h3><p>See a spending forecast. Try a daily target or an extra purchase.</p><div class="phone"><img src="assets/screenshots/plan.webp" width="660" height="1435" alt="Pro Plan showing a spending forecast and what-if daily target controls" loading="lazy" decoding="async"></div></article>
+  <div class="section-heading reveal"><p class="eyebrow">THE WHOLE PICTURE</p><h2>Beyond the next purchase.</h2><p>Your spending, accounts and plans, together in one app. These are the real screens.</p></div>
+  <div class="gallery-wrap">
+    <div class="screen-gallery" tabindex="0" role="region" aria-label="App screenshots; scroll horizontally">
+      <article class="gallery-card"><span class="feature-label">SAY IT <span class="tier">PRO</span></span><h3>Three drafts, one sentence.</h3><p>Every purchase you said, ready to check and save together.</p><div class="phone"><img src="assets/screenshots/say.webp" width="660" height="1434" alt="Say it screen reviewing three spoken purchases before saving" loading="lazy" decoding="async"></div></article>
+      <article class="gallery-card"><span class="feature-label">BANK SMS</span><h3>Read from your message.</h3><p>Amount, merchant, account and category, filled in for you.</p><div class="phone"><img src="assets/screenshots/sms.webp" width="660" height="1434" alt="A bank-message expense draft showing the amount, merchant, account and category" loading="lazy" decoding="async"></div></article>
+      <article class="gallery-card"><span class="feature-label">INSIGHTS <span class="tier">FREE</span></span><h3>See where it goes.</h3><p>Spending, cash flow and category changes, without a spreadsheet.</p><div class="phone"><img src="assets/screenshots/insights.webp" width="660" height="1435" alt="Stats Overview showing spending this period, transaction count and cash flow" loading="lazy" decoding="async"></div></article>
+      <article class="gallery-card"><span class="feature-label">ACCOUNTS</span><h3>Keep balances in view.</h3><p>Cash, bank and card accounts. Three for free; unlimited with Pro.</p><div class="phone"><img src="assets/screenshots/accounts.webp" width="660" height="1434" alt="Cash, bank and credit card accounts with assets, liabilities and total balance" loading="lazy" decoding="async"></div></article>
+      <article class="gallery-card"><span class="feature-label">PLAN AHEAD <span class="tier">PRO</span></span><h3>Explore the what-ifs.</h3><p>See a spending forecast. Try a daily target or an extra purchase.</p><div class="phone"><img src="assets/screenshots/plan.webp" width="660" height="1435" alt="Pro Plan showing a spending forecast and what-if daily target controls" loading="lazy" decoding="async"></div></article>
+    </div>
+    <div class="gallery-controls" hidden><button type="button" class="g-prev" aria-label="Previous screenshots">←</button><button type="button" class="g-next" aria-label="Next screenshots">→</button></div>
   </div>
-  <p class="gallery-note small">Real iPhone screenshots with example records. Swipe or scroll to explore on mobile. Forecasts depend on your logged transactions.</p>
+  <p class="gallery-note small">Real iPhone screenshots with example records. Swipe or scroll to explore. Forecasts depend on your logged transactions.</p>
 </section>
 
 <section class="section-block extras-section">
-  <div class="section-heading"><p class="eyebrow">THE LITTLE DETAILS, TOO</p><h2>A ledger you can make your own.</h2></div>
+  <div class="section-heading reveal"><p class="eyebrow">THE LITTLE DETAILS, TOO</p><h2>A ledger you can make your own.</h2></div>
   <div class="extras-grid">
-    <article><span class="detail-mark" aria-hidden="true">↗</span><h3>Income &amp; transfers</h3><p>Record money coming in, purchases going out and transfers between your accounts.</p><span class="tier">FREE</span></article>
-    <article><span class="detail-mark" aria-hidden="true">↻</span><h3>Recurring entries</h3><p>Keep regular transactions on a schedule. Three recurring rules for free, unlimited with Pro.</p></article>
-    <article><span class="detail-mark" aria-hidden="true">☁</span><h3>Private iCloud sync</h3><p>Optionally keep your ledger in sync across your own Apple devices through private iCloud storage.</p><span class="tier">FREE</span></article>
-    <article><span class="detail-mark" aria-hidden="true">↓</span><h3>Your data, portable</h3><p>Export a month to CSV for free. Pro adds CSV import, date-range exports and JSON backup and restore.</p><a href="guides/export-expenses-csv.html">Explore export options →</a></article>
-    <article><span class="detail-mark" aria-hidden="true">◇</span><h3>Themes &amp; app icons</h3><p>Give your ledger a different look with Pro themes and alternate app icons.</p><span class="tier">PRO</span></article>
-    <article><span class="detail-mark" aria-hidden="true">＋</span><h3>Apple Pay shortcuts</h3><p>Use a supported Wallet transaction automation for purchases on selected cards. Setup and compatible iOS required.</p><a href="guides/apple-pay-expenses.html">See the setup guide →</a></article>
+    <article class="reveal"><span class="detail-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h13l-4-4M17 17H4l4 4"/></svg></span><h3>Income &amp; transfers</h3><p>Record money coming in, purchases going out and transfers between your accounts.</p><span class="tier">FREE</span></article>
+    <article class="reveal"><span class="detail-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></svg></span><h3>Recurring entries</h3><p>Keep regular transactions on a schedule. Three recurring rules for free, unlimited with Pro.</p></article>
+    <article class="reveal"><span class="detail-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.6-7.96A6 6 0 0 1 17.9 9.1 4.5 4.5 0 0 1 17.5 18z"/></svg></span><h3>Private iCloud sync</h3><p>Optionally keep your ledger in sync across your own Apple devices through private iCloud storage.</p><span class="tier">FREE</span></article>
+    <article class="reveal"><span class="detail-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg></span><h3>Your data, portable</h3><p>Export a month to CSV for free. Pro adds CSV import, date-range exports and JSON backup and restore.</p><a href="guides/export-expenses-csv.html">Explore export options →</a></article>
+    <article class="reveal"><span class="detail-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span><h3>Themes &amp; app icons</h3><p>Give your ledger a different look with Pro themes and alternate app icons.</p><span class="tier">PRO</span></article>
+    <article class="reveal"><span class="detail-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span><h3>Apple Pay shortcuts</h3><p>Use a supported Wallet transaction automation for purchases on selected cards. Setup and compatible iOS required.</p><a href="guides/apple-pay-expenses.html">See the setup guide →</a></article>
   </div>
 </section>
 
 <section class="section-block plans-section" id="free-and-pro">
   <div class="section-heading"><p class="eyebrow">START SIMPLE. GROW FROM THERE.</p><h2>A useful free ledger.<br>More possibilities with Pro.</h2></div>
   <div class="plans-grid">
-    <article class="plan-card"><p class="eyebrow">FREE</p><h3>Build your daily habit.</h3><p>The essentials for keeping your money in view.</p><ul class="benefits"><li>Unlimited manual transactions</li><li>Budgets, payday periods and calendar</li><li>Historical stats and search</li><li>Monthly CSV export and private iCloud sync</li><li>3 accounts and 3 recurring rules</li><li>20 successful automatic SMS imports per calendar month per device</li></ul>{{APP_STORE_CTA}}</article>
-    <article class="plan-card pro-card"><p class="eyebrow">PRO</p><h3>Spend less time on admin.</h3><p>Everything in Free, with more ways to enter and plan.</p><ul class="benefits"><li>Say it: on-device voice drafts</li><li>Unlimited SMS imports, accounts and recurring rules</li><li>Forecasts and daily spending guidance</li><li>What-if spending plans</li><li>CSV import, range exports and full JSON backup</li><li>Themes and alternate app icons</li></ul>{{APP_STORE_CTA}}<p class="small">Download the app, then explore Pro. Monthly, annual and lifetime options in the app. Voice device and language support apply.</p><a href="support.html">Explore Pro and purchase options →</a></article>
+    <article class="plan-card reveal"><p class="eyebrow">FREE</p><h3>Build your daily habit.</h3><p>The essentials for keeping your money in view.</p><ul class="benefits"><li>Unlimited manual transactions</li><li>Budgets, payday periods and calendar</li><li>Historical stats and search</li><li>Monthly CSV export and private iCloud sync</li><li>3 accounts and 3 recurring rules</li><li>20 successful automatic SMS imports per calendar month per device</li></ul>{{APP_STORE_CTA}}</article>
+    <article class="plan-card pro-card reveal"><p class="eyebrow">PRO</p><h3>Spend less time on admin.</h3><p>Everything in Free, with more ways to enter and plan.</p><ul class="benefits"><li>Say it: on-device voice drafts</li><li>Unlimited SMS imports, accounts and recurring rules</li><li>Forecasts and daily spending guidance</li><li>What-if spending plans</li><li>CSV import, range exports and full JSON backup</li><li>Themes and alternate app icons</li></ul>{{APP_STORE_CTA}}<p class="small">Download the app, then explore Pro. Monthly, annual and lifetime options in the app. Voice device and language support apply.</p><a href="support.html">Explore Pro and purchase options →</a></article>
   </div>
 </section>
 
 <section class="section-block workflow-section">
-  <div class="workflow-copy"><p class="eyebrow">FROM ENTRY TO CLARITY</p><h2>A small habit.<br>A clearer month.</h2><ol class="workflow-steps"><li><strong>Capture the purchase.</strong><span>Add it manually, import a supported bank alert, or say it with Pro.</span></li><li><strong>Make it yours.</strong><span>Check the draft and choose the right account and category.</span></li><li><strong>Follow your month.</strong><span>See your transactions, budgets and spending patterns in your payday period.</span></li></ol><a href="tools/daily-budget.html">Try the daily-budget calculator →</a></div>
-  <figure class="film"><video id="hero-film" muted loop playsinline preload="none" poster="assets/hero-poster.png" width="720" height="720" aria-label="Illustration of SMS, voice entry and payday budgets. Example figures."><source data-src="assets/hero.mp4" type="video/mp4"></video><button id="film-toggle" hidden>Play animation</button><figcaption>How your ledger comes together · illustrative figures</figcaption></figure>
+  <div class="workflow-copy reveal"><p class="eyebrow">FROM ENTRY TO CLARITY</p><h2>A small habit.<br>A clearer month.</h2><ol class="workflow-steps"><li><strong>Capture the purchase.</strong><span>Add it manually, import a supported bank alert, or say it with Pro.</span></li><li><strong>Make it yours.</strong><span>Check the draft and choose the right account and category.</span></li><li><strong>Follow your month.</strong><span>See your transactions, budgets and spending patterns in your payday period.</span></li></ol><a href="tools/daily-budget.html">Try the daily-budget calculator →</a></div>
+  <figure class="film reveal"><video id="hero-film" muted loop playsinline preload="none" poster="assets/hero-poster.png" width="720" height="720" aria-label="Illustration of SMS, voice entry and payday budgets. Example figures."><source data-src="assets/hero.mp4" type="video/mp4"></video><button id="film-toggle" hidden>Play animation</button><figcaption>How your ledger comes together · illustrative figures</figcaption></figure>
 </section>
 
 <section class="section-block faq-section"><div class="section-heading"><p class="eyebrow">A FEW GOOD QUESTIONS</p><h2>Before you get started.</h2></div>
@@ -81,4 +164,4 @@
   <details><summary>Where is my ledger stored?</summary><p>Your ledger is stored on your device, with optional private iCloud sync across your own Apple devices. No app account is required. The Privacy Policy explains storage, voice processing and purchase-related data.</p><a href="privacy.html">Read the Privacy Policy →</a></details>
 </section>
 
-<section class="section-block reading-section"><div class="section-heading"><p class="eyebrow">A HELPFUL HEAD START</p><h2>Make your first week easier.</h2></div><div class="reading-grid"><a href="guides/bank-sms-iphone.html"><span class="eyebrow">SET UP</span><h3>Bank SMS expense tracking on iPhone</h3><span>Get the automation right →</span></a><a href="guides/payday-budget.html"><span class="eyebrow">BUDGET</span><h3>Start your budget month on payday</h3><span>Find your monthly rhythm →</span></a><a href="guides/voice-expenses-iphone.html"><span class="eyebrow">SAY IT</span><h3>Voice expense tracking on iPhone</h3><span>From spoken purchase to draft →</span></a></div></section>
+<section class="section-block reading-section"><div class="section-heading"><p class="eyebrow">A HELPFUL HEAD START</p><h2>Make your first week easier.</h2></div><div class="reading-grid reveal"><a href="guides/bank-sms-iphone.html"><span class="eyebrow">SET UP</span><h3>Bank SMS expense tracking on iPhone</h3><span>Get the automation right →</span></a><a href="guides/payday-budget.html"><span class="eyebrow">BUDGET</span><h3>Start your budget month on payday</h3><span>Find your monthly rhythm →</span></a><a href="guides/voice-expenses-iphone.html"><span class="eyebrow">SAY IT</span><h3>Voice expense tracking on iPhone</h3><span>From spoken purchase to draft →</span></a></div></section>

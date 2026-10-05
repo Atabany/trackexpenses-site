@@ -1,9 +1,107 @@
 /* No tracking, requests, storage or input persistence. */
 (() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const canObserve = 'IntersectionObserver' in window;
+  // Motion is opt-in: without JS or with Reduce Motion, every element is simply visible in its final state.
+  if (!reduced.matches && canObserve) document.documentElement.classList.add('motion');
+
+  // Scroll reveals and count-ups run once, when the element first enters the viewport.
+  const countUp = el => {
+    const target = Number(el.dataset.count), decimals = Number(el.dataset.decimals || 0);
+    const format = n => n.toLocaleString('en-US', {minimumFractionDigits: decimals, maximumFractionDigits: decimals});
+    if (!target || reduced.matches) { el.textContent = format(target); return; }
+    const t0 = performance.now(), duration = 1400;
+    const frame = now => {
+      const p = Math.min(1, (now - t0) / duration), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = format(target * eased);
+      if (p < 1) requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  };
+  if (canObserve) {
+    const reveal = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add('in');
+        entry.target.querySelectorAll('[data-count]').forEach(countUp);
+        reveal.unobserve(entry.target);
+      }
+    }, {threshold: 0.18, rootMargin: '0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(el => reveal.observe(el));
+  }
+
+  // Sticky feature tabs follow the story being read.
+  const tabs = [...document.querySelectorAll('.feature-jump a')];
+  if (tabs.length && canObserve) {
+    const spy = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        tabs.forEach(tab => tab.classList.toggle('active', tab.getAttribute('href') === '#' + entry.target.id));
+      }
+    }, {rootMargin: '-45% 0px -45% 0px'});
+    tabs.forEach(tab => { const target = document.querySelector(tab.getAttribute('href')); if (target) spy.observe(target); });
+  }
+
+  // Demo phones: a declarative timeline. data-at / data-off are milliseconds into the loop,
+  // data-pulse a list of moments for a brief .ping. Runs only while visible and not paused.
+  document.querySelectorAll('[data-demo]').forEach(demo => {
+    const screen = demo.querySelector('.demo-screen');
+    const words = demo.querySelector('[data-words]');
+    if (words) {
+      const start = Number(words.dataset.start), step = Number(words.dataset.step);
+      words.dataset.words.split(' ').forEach((word, i) => {
+        const span = document.createElement('span'); span.textContent = word; span.dataset.at = start + i * step; words.append(span);
+      });
+    }
+    const timed = [...demo.querySelectorAll('[data-at],[data-off],[data-pulse]')];
+    const loop = Number(demo.dataset.loop);
+    const toggle = demo.parentElement.querySelector('.demo-toggle');
+    let elapsed = 0, timer = null, visible = false, userPaused = false, resetting = false;
+    const render = () => {
+      for (const el of timed) {
+        if (el.dataset.at) el.classList.toggle('on', elapsed >= Number(el.dataset.at));
+        if (el.dataset.off) el.classList.toggle('off', elapsed >= Number(el.dataset.off));
+        if (el.dataset.pulse) el.classList.toggle('ping', el.dataset.pulse.split(',').some(t => elapsed >= +t && elapsed < +t + 700));
+      }
+    };
+    const tick = () => {
+      if (resetting) return;
+      elapsed += 100;
+      if (elapsed < loop) { render(); return; }
+      resetting = true; screen.classList.add('fade');
+      setTimeout(() => { elapsed = 0; render(); screen.classList.remove('fade'); resetting = false; }, 500);
+    };
+    const sync = () => {
+      const run = visible && !userPaused && !document.hidden;
+      demo.classList.toggle('paused', !run);
+      if (run && !timer) timer = setInterval(tick, 100);
+      if (!run && timer) { clearInterval(timer); timer = null; }
+      if (toggle) { toggle.textContent = userPaused ? 'Play' : 'Pause'; toggle.setAttribute('aria-label', (userPaused ? 'Play' : 'Pause') + ' animation'); }
+    };
+    // Reduced motion keeps the finished screen: drafts listed, messages read, rows filed.
+    if (reduced.matches || !canObserve) return;
+    demo.classList.add('animate'); render();
+    if (toggle) { toggle.hidden = false; toggle.addEventListener('click', () => { userPaused = !userPaused; sync(); }); }
+    new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }, {threshold: 0.35}).observe(demo);
+    document.addEventListener('visibilitychange', sync);
+    reduced.addEventListener('change', () => { if (reduced.matches) { userPaused = true; sync(); } });
+  });
+
+  // Screenshot rail: arrow buttons scroll by one card on wider screens.
+  const rail = document.querySelector('.screen-gallery'), controls = document.querySelector('.gallery-controls');
+  if (rail && controls) {
+    controls.hidden = false;
+    const [prev, next] = controls.querySelectorAll('button');
+    const card = () => (rail.querySelector('.gallery-card')?.getBoundingClientRect().width || 300) + 22;
+    const state = () => { prev.disabled = rail.scrollLeft < 8; next.disabled = rail.scrollLeft + rail.clientWidth > rail.scrollWidth - 8; };
+    prev.addEventListener('click', () => rail.scrollBy({left: -card()}));
+    next.addEventListener('click', () => rail.scrollBy({left: card()}));
+    rail.addEventListener('scroll', state, {passive: true}); addEventListener('resize', state); state();
+  }
+
   const film = document.querySelector('#hero-film');
   if (film) {
     const toggle = document.querySelector('#film-toggle');
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     const saveData = navigator.connection?.saveData;
     toggle.hidden = false;
     const label = () => { toggle.textContent = film.paused ? 'Play animation' : 'Pause animation'; };
