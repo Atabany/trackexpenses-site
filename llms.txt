@@ -7,7 +7,7 @@ No ratings yet in the US App Store. US storefront; checked 2026-10-05.
 App Store: https://apps.apple.com/app/id6806614497
 
 ## Official pages
-- [Expense Tracker: SMS & Voice | TrackExpenses](https://trackexpenses.app/): Track spending with optional bank SMS imports, on-device voice drafts and payday budgets. A private money manager for iPhone and iPad.
+- [Expense Tracker: SMS & Voice | TrackExpenses](https://trackexpenses.app/): Track expenses with Say it voice drafts, bank SMS imports and payday budgets. See real app screenshots, free features and Pro tools for iPhone and iPad.
 - [Bank SMS Expense Tracking on iPhone | TrackExpenses](https://trackexpenses.app/guides/bank-sms-iphone.html): Set up a Shortcuts Message automation for supported bank alerts. Connect Shortcut Input, check entries and understand the free SMS allowance.
 - [Start Your Budget Month on Payday | TrackExpenses](https://trackexpenses.app/guides/payday-budget.html): Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.
 - [Voice Expense Tracking on iPhone | TrackExpenses](https://trackexpenses.app/guides/voice-expenses-iphone.html): Say one or several purchases, review the drafts and save. Learn TrackExpenses voice entry, device support and on-device privacy.

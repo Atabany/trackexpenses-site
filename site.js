@@ -11,11 +11,24 @@
       if (!film.querySelector('source').src) { film.querySelector('source').src = film.querySelector('source').dataset.src; film.load(); }
       film.play().catch(label);
     };
-    toggle.addEventListener('click', () => film.paused ? start() : film.pause());
+    toggle.addEventListener('click', () => {
+      const shouldStart = film.paused;
+      film.dataset.userPaused = shouldStart ? '' : 'true';
+      shouldStart ? start() : film.pause();
+    });
     film.addEventListener('play', label); film.addEventListener('pause', label);
     reduced.addEventListener('change', () => { if (reduced.matches) film.pause(); });
     document.addEventListener('visibilitychange', () => { if (document.hidden) film.pause(); });
-    if (!reduced.matches && !saveData) start();
+    // The below-fold illustration loads only when it is actually in view.
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) film.pause();
+          else if (!reduced.matches && !saveData && !film.dataset.userPaused) start();
+        }
+      }, {threshold: 0.25});
+      observer.observe(film);
+    }
   }
   const form = document.querySelector('#budget-form');
   if (!form) return;
