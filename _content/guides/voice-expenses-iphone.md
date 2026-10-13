@@ -1,6 +1,6 @@
 # Track expenses by voice on iPhone
 
-With TrackExpenses Pro, you can say an expense or several purchases and review the resulting drafts before saving. Voice processing runs on your device, with availability depending on your iPhone or iPad, supported speech models and language.
+With TrackExpenses, you can say an expense or several purchases and review the resulting drafts before saving. Free includes 10 saved voice entries per calendar month; Pro makes voice unlimited. Voice processing runs on your device, with availability depending on your iPhone or iPad, supported speech models and language.
 
 ## Try built-in dictation for a small manual log
 
@@ -36,19 +36,21 @@ If you name a foreign currency, verify the conversion rate before saving. TrackE
 
 The interface is in English. Voice entry understands English and Arabic on compatible devices, while actual speech-model availability depends on hardware and language support. Some devices use newer on-device speech and Apple Intelligence capabilities; other supported systems use the app's rules for interpreting a transcript. These paths may differ in the detail they can infer.
 
-Do not choose Pro solely on the assumption that any sentence in any language will work on every device. Check the voice screen's availability and language information on your own phone. Initial speech-model preparation may need a download. For troubleshooting, note your device, iOS version and selected language when contacting support; do not send private audio or a full ledger.
+Use the free monthly entries to try voice on your own phone before choosing Pro; do not assume that any sentence in any language will work on every device. Check the voice screen's availability and language information. Initial speech-model preparation may need a download. For troubleshooting, note your device, iOS version and selected language when contacting support; do not send private audio or a full ledger.
 
 ## Privacy and other quick-entry choices
 
 TrackExpenses' voice workflow streams audio to Apple's on-device recognition and does not save an audio file or upload recordings to the developer. The ledger stores the confirmed transaction, not the recording. Purchases and optional private iCloud sync have their own data flows, described in the [privacy policy](../privacy.html).
 
-Voice is a Pro feature. Unlimited manual entries remain free, and you can paste a supported bank message to fill a draft without speaking. Optional SMS automation can help with card purchases, while voice helps with cash and the expenses that no alert describes. Neither path replaces the need to check unfamiliar or ambiguous entries.
+Free includes 10 saved voice entries per calendar month on each device, and Pro makes voice unlimited. Unlimited manual entries remain free, and you can paste a supported bank message to fill a draft without speaking. Optional SMS automation can help with card purchases, while voice helps with cash and the expenses that no alert describes. Neither path replaces the need to check unfamiliar or ambiguous entries.
 
 ## Frequently asked questions
 
 Does speaking immediately save a transaction? No. Voice produces drafts for you to review and confirm.
 
 Can I say more than one purchase? Yes. Include the amounts and check each resulting draft.
+
+Is voice entry free? Yes, up to 10 saved voice entries per calendar month on each device. Each saved purchase counts as one entry, so a sentence with three purchases uses three. Pro makes voice unlimited.
 
 Is the app interface Arabic? No. The current interface is English; supported voice and message reading can understand Arabic.
 

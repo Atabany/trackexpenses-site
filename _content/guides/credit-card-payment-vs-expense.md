@@ -29,7 +29,7 @@ When you add an entry, choose Expense for purchases and pick the card as the acc
 
 If your bank texts you for every purchase, the [bank SMS guide](bank-sms-iphone.html) explains the automation, and the [accounts feature page](../features/accounts-and-transfers.html) shows the screens.
 
-Voice entry follows the same rule. With Pro, saying "paid off the credit card 450 from main bank" is read as a transfer to the card rather than a purchase, because the money went to one of your own accounts.
+Voice entry follows the same rule. Saying "paid off the credit card 450 from main bank" is read as a transfer to the card rather than a purchase, because the money went to one of your own accounts.
 
 ## What bank SMS imports do with card payments
 

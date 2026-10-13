@@ -42,7 +42,7 @@ If the currency is foreign to your main ledger, supply the real conversion rate 
 
 ## Check the allowance and duplicates
 
-Free automatic bank SMS import allows 20 successful imports per calendar month on each device. The allowance does not follow your payday budget month. Once used, later SMS entries wait outside totals; review and save individually for free, or use Pro for automatic imports beyond that allowance.
+Free automatic bank SMS import allows 10 successful imports per calendar month on each device. The allowance does not follow your payday budget month. Once used, later SMS entries are kept but locked outside your totals: Pro adds them all automatically, or the next calendar month's allowance releases as many as it covers. A locked entry is not a failed run; nothing was dropped.
 
 A duplicate flag is a prompt to compare records. Banks may send both authorization and settlement messages, and SMS and Wallet automations can overlap for one purchase. Before removing or adding anything, check whether the original amount is already present under another date, account or payee. The ledger should describe one financial event once.
 

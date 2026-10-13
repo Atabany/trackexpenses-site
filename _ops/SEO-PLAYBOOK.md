@@ -14,9 +14,9 @@ show no stars or aggregateRating until real ratings exist. Never hard-code app p
 
 Free: unlimited manual transactions, budgets/pacing, historical stats, search, selected-month CSV,
 private iCloud sync; 3 accounts, 3 recurring rules, 20 successful SMS imports/calendar month/device.
-Pro: voice on compatible devices/languages, unlimited SMS/accounts/rules, forecasts/daily guidance,
+Pro: unlimited voice (10 free/month) on compatible devices/languages, unlimited SMS (10 free/month)/accounts/rules (2 free), forecasts/daily guidance,
 what-if planning, CSV import/range exports, JSON backup/restore, themes/icons. Excess SMS entries
-wait outside totals and may be saved individually free. No bank login or app account. A fixed
+are caught and kept locked outside totals until Pro or the next month's allowance. No bank login or app account. A fixed
 monthly start is not rolling biweekly budgeting. English UI; Arabic parsing is not Arabic UI.
 
 Privacy text remains authored only in app repo `docs/PRIVACY_POLICY.md`. The app wrapper

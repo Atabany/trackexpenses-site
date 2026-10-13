@@ -30,9 +30,9 @@ A possible duplicate needs special attention. Banks may send an authorization al
 
 ## Understand the free allowance
 
-The free ledger includes 20 successful automatic bank SMS imports per calendar month on each device. The calendar-month allowance is separate from the fiscal month you choose for budgets. Setting your budgeting month to start on the 25th does not move the allowance reset to the 25th.
+The free ledger includes 10 successful automatic bank SMS imports per calendar month on each device. The calendar-month allowance is separate from the fiscal month you choose for budgets. Setting your budgeting month to start on the 25th does not move the allowance reset to the 25th.
 
-After the allowance is used, waiting SMS entries stay outside your totals until saved. You can review and save them individually for free, or use Pro for unlimited automatic SMS imports. Manual ledger entries remain unlimited. A refused or unreadable message is not the same as a successfully saved import. Check the setup screen's activity log to understand what a particular run did.
+After the allowance is used, later alerts are still caught and kept — amount, merchant and date — but appear locked, outside your totals. Tapping one offers Pro, which adds them all to your ledger automatically and removes the limit. Otherwise, the next calendar month's allowance releases as many as it covers. Nothing is dropped, and entries already saved are never locked. Manual ledger entries remain unlimited. A refused or unreadable message is not the same as a successfully saved import. Check the setup screen's activity log to understand what a particular run did.
 
 ## Privacy and the limits of the workflow
 

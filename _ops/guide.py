@@ -104,7 +104,7 @@ def cmd_check(slug):
         if h not in heads: problems.append(f'missing "## {h}"')
     faq = md.split('## Frequently asked questions\n', 1)[-1].split('\nSource', 1)[0]
     if len([p for p in faq.strip().split('\n\n') if '? ' in p]) < 3: problems.append('FAQ needs 3+ "Question? Answer." paragraphs')
-    if not re.search(r'^Source: ', md, re.M): problems.append('missing closing "Source:" line')
+    if not re.search(r'^Sources?: ', md, re.M): problems.append('missing closing "Source:" or "Sources:" line')
     if 'TrackExpenses' not in md: problems.append('never mentions TrackExpenses')
     if not re.search(r'\]\((\.\./|[a-z0-9-]+\.html)', md): problems.append('no internal link to another page on the site')
     for pattern in BANNED:
@@ -139,7 +139,7 @@ def cmd_publish(slug, push):
     config = load(CONFIG); config['updated'] = today(); save(CONFIG, config)
     sh(sys.executable, 'tools/build_site.py', str(PUBLIC))
     title = g['title'].split(' | ')[0]
-    message = f"{'Publish' if first else 'Update'} guide: {title}\n\nCo-Authored-By: Claude <noreply@anthropic.com>"
+    message = f"{'Publish' if first else 'Update'} guide: {title}"
     sh('git', 'add', 'site'); sh('git', 'commit', '-m', message, check=False)
     sh('git', 'add', '-A', cwd=PUBLIC); sh('git', 'commit', '-m', message, cwd=PUBLIC, check=False)
     base = config['base_url'].rstrip('/') + '/'

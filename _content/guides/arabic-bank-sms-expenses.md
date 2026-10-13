@@ -48,7 +48,7 @@ A salary credit is the alert a ledger most wants. With "Import money coming in" 
 
 ## Limits
 
-Free includes 20 successful automatic imports per calendar month on each device. Further alerts wait outside your totals until you save them individually for free, the month resets, or you upgrade to Pro. Nothing is silently dropped. The app keeps what it read, never the message text. iOS shows a banner each time a message automation runs; an app cannot hide it.
+Free includes 10 successful automatic imports per calendar month on each device. Further alerts are kept but locked outside your totals until you upgrade to Pro, which adds them all, or the next calendar month's allowance releases as many as it covers. Nothing is silently dropped, and saved entries are never locked. The app keeps what it read, never the message text. iOS shows a banner each time a message automation runs; an app cannot hide it.
 
 ## Frequently asked questions
 

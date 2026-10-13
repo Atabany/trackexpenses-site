@@ -24,7 +24,7 @@ TrackExpenses calls these Recurring. Open More → Recurring and tap the plus bu
 
 When the date arrives, the transaction is added to your ledger automatically the next time you open the app. Each occurrence is created once, even if you use two devices with iCloud sync, so a rent rule never charges twice. The Repeat Setting screen groups income and expenses and shows their totals, so you can see at a glance how much of your month is already committed.
 
-Free includes three recurring rules, enough for salary, rent and one subscription. Pro makes rules unlimited.
+Free includes two recurring rules, enough for salary and rent. Pro makes rules unlimited, so every subscription can have its own.
 
 ## Bills that change every month
 
@@ -65,7 +65,7 @@ Yearly charges deserve their own rules, with the repeat set to every year. Some 
 
 How do I see all my subscriptions on iPhone? Open Settings, tap your name, then Subscriptions for anything billed through Apple. Subscriptions billed to your card directly appear only on your statements.
 
-Can TrackExpenses add bills automatically every month? Yes. Recurring rules add each occurrence on its date, every day, week, month or year, or every N of them. Three rules are free and Pro is unlimited.
+Can TrackExpenses add bills automatically every month? Yes. Recurring rules add each occurrence on its date, every day, week, month or year, or every N of them. Two rules are free and Pro is unlimited.
 
 What if the bill amount changes? Create the rule with a typical amount and edit the entry when the actual bill arrives, or log variable bills when they are charged.
 

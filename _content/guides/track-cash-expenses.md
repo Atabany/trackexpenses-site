@@ -21,7 +21,7 @@ The weekly count is what makes the method honest. It turns forgotten purchases f
 
 The method only works if each entry is fast enough to do at the counter or in the taxi. Some ways to get there on an iPhone:
 
-- **Say it.** With TrackExpenses Pro, tap Say and speak: "taxi 40 cash", or a whole morning at once: "coffee 15, newspaper 5 and parking 10 with cash". Each purchase becomes a draft with the Cash account already chosen; check and save. A recording stops by itself when you pause.
+- **Say it.** Tap Say and speak: "taxi 40 cash", or a whole morning at once: "coffee 15, newspaper 5 and parking 10 with cash". Each purchase becomes a draft with the Cash account already chosen; check and save. A recording stops by itself when you pause.
 - **Lock Screen and Control Center.** Add the Quick Add widget or, on iOS 18 and later, the Say an Expense control, so logging starts without finding the app.
 - **Templates.** For the same coffee every morning, turn on "Save as template" once. Afterwards it is one tap from Quick Add.
 - **The keypad.** The entry sheet's keypad does arithmetic, so "12 + 8" for two items is fine; the saved amount is always what the expression on screen adds up to.
@@ -57,10 +57,10 @@ Some people prefer the opposite approach: withdraw a fixed amount at the start o
 
 Should an ATM withdrawal be an expense? No. Record it as a transfer from your bank account to a cash account. The individual purchases you make with that cash are the expenses.
 
-What is the fastest way to log cash on iPhone? Speaking it, for example "taxi 40 cash" with Say it in TrackExpenses Pro, or a one-tap template for repeat purchases. Both start from the Lock Screen.
+What is the fastest way to log cash on iPhone? Speaking it, for example "taxi 40 cash" with Say it in TrackExpenses, or a one-tap template for repeat purchases. Both start from the Lock Screen.
 
 How do I find cash I forgot to record? Count your wallet weekly and compare it with the cash account balance. Record the difference as one entry and look at which days you skipped.
 
-Is tracking cash free in TrackExpenses? Yes. Cash accounts, transfers, templates, widgets and the daily reminder are free. Voice entry requires Pro.
+Is tracking cash free in TrackExpenses? Yes. Cash accounts, transfers, templates, widgets and the daily reminder are free. Voice entry includes 10 saved entries per calendar month for free; Pro makes it unlimited.
 
 Source: TrackExpenses accounts, transfers, templates, voice entry and reminder features, checked against the app in October 2026. Figures are examples, not financial advice.
