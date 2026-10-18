@@ -97,5 +97,14 @@
   "published": null,
   "updated": null,
   "feature": "budget-planner"
+ },
+ {
+  "slug": "expense-tracker-without-bank-connection",
+  "title": "Track Expenses Without Connecting Your Bank on iPhone",
+  "description": "Choose manual, voice or supported SMS entry, set up a bank-free ledger and reconcile spending without sharing a bank login.",
+  "status": "published",
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "feature": "private-expense-tracker"
  }
 ]

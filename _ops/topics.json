@@ -61,13 +61,14 @@
  },
  {
   "slug": "expense-tracker-without-bank-connection",
-  "status": "queued",
+  "status": "published",
   "priority": 7,
   "feature": "private-expense-tracker",
   "title": "Why Track Expenses Without Connecting Your Bank",
   "description": "Bank-sync apps vs manual and SMS-based tracking: privacy, accuracy, cost and effort compared honestly, and how to keep a ledger with no bank login.",
   "intent": "budget app without bank connection / no bank login expense tracker",
-  "angle": "Fair trade-offs, link compare/best-expense-trackers.html. No claims about competitors' security."
+  "angle": "Fair trade-offs, link compare/best-expense-trackers.html. No claims about competitors' security.",
+  "published": "2026-10-18"
  },
  {
   "slug": "monthly-money-review",

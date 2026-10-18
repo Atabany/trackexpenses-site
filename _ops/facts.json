@@ -2,7 +2,7 @@
   "trackName": "Expense Tracker: SMS & Voice",
   "trackId": 6806614497,
   "bundleId": "com.atabany.trackexpenses",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "minimumOsVersion": "17.0",
   "languageCodesISO2A": [
     "EN"
@@ -11,6 +11,6 @@
   "userRatingCount": 0,
   "artistName": "Mohamed Elatabany",
   "artistViewUrl": "https://apps.apple.com/us/developer/mohamed-elatabany/id1814429185?uo=4",
-  "checked": "2026-10-12",
+  "checked": "2026-10-18",
   "reviewCountReturned": 0
 }

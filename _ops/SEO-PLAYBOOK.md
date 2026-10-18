@@ -13,7 +13,7 @@ At launch audit there were no US ratings and the ASC customerReviews endpoint re
 show no stars or aggregateRating until real ratings exist. Never hard-code app prices.
 
 Free: unlimited manual transactions, budgets/pacing, historical stats, search, selected-month CSV,
-private iCloud sync; 3 accounts, 3 recurring rules, 20 successful SMS imports/calendar month/device.
+private iCloud sync; 3 accounts, 2 recurring rules, 10 successful SMS imports/calendar month/device.
 Pro: unlimited voice (10 free/month) on compatible devices/languages, unlimited SMS (10 free/month)/accounts/rules (2 free), forecasts/daily guidance,
 what-if planning, CSV import/range exports, JSON backup/restore, themes/icons. Excess SMS entries
 are caught and kept locked outside totals until Pro or the next month's allowance. No bank login or app account. A fixed
@@ -112,3 +112,7 @@ authorize OAuth, post/send outreach or promise rankings without the owner's spec
 
 Quarterly: review guide UI paths, competitors, privacy/fact drift and conversion by comparable
 windows. Preserve CNAME, verification files, IndexNow key and old URLs.
+
+## Growth batch — 18 October 2026
+
+Prepared the practical guide `guides/expense-tracker-without-bank-connection.html`: spreadsheet/manual entry first, optional voice/SMS, account setup, reconciliation and exports. Linked it from the private-tracker feature page and guide hub; updated the App Store snapshot to released 1.4.0. Do not equate a missing campaign row with zero installs. Existing TrackExpenses growth automation is ACTIVE as read from its local configuration today; older paused-state notes are historical.
