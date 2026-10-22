@@ -1,13 +1,14 @@
 [
  {
   "slug": "budget-pacing-explained",
-  "status": "drafting",
+  "status": "published",
   "priority": 1,
   "feature": "budget-planner",
   "title": "Budget Pacing: Are You Spending Too Fast This Month?",
   "description": "Read a budget bar with a today marker: what 60% spent means on day 10 vs day 25, planned early bills, and when to slow down. With a worked example.",
   "intent": "how to tell if I'm overspending this month / budget pacing",
-  "angle": "Fraction spent vs fraction of period elapsed; early rent skews it; daily allowance = remaining / days left incl. today (Pro in app, free in the calculator). Link tools/daily-budget.html."
+  "angle": "Fraction spent vs fraction of period elapsed; early rent skews it; daily allowance = remaining / days left incl. today (Pro in app, free in the calculator). Link tools/daily-budget.html.",
+  "published": "2026-10-22"
  },
  {
   "slug": "track-expenses-uae",

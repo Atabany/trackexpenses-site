@@ -4,7 +4,7 @@
   python3 site/_ops/guide.py list                 # queue and published guides
   python3 site/_ops/guide.py new [slug]           # scaffold the top queued topic (or slug) as a draft
   python3 site/_ops/guide.py check <slug>         # quality gate; must print OK before publishing
-  python3 site/_ops/guide.py publish <slug> [--push]
+  python3 site/_ops/guide.py publish <slug> [--push] [--no-app-commit]
         # mark published, build + validate, mirror into the public repo, commit both repos;
         # with --push also push, wait for the live page and ping IndexNow
   python3 site/_ops/guide.py add-topic <slug> "<title>" "<description>" <feature-slug> "<angle>"
@@ -38,8 +38,8 @@ def sh(*cmd, cwd=APP_ROOT, check=True):
 def cmd_list():
     guides = load(GUIDES)
     print('Published / draft guides:')
-    for g in sorted(guides, key=lambda g: g.get('published', '')):
-        print(f"  [{g['status']:9}] {g.get('published','-'):10}  {g['slug']}")
+    for g in sorted(guides, key=lambda g: g.get('published') or ''):
+        print(f"  [{g['status']:9}] {g.get('published') or '-':10}  {g['slug']}")
     print('\nTopic queue (highest priority first):')
     for t in sorted(load(TOPICS), key=lambda t: t['priority']):
         if t['status'] == 'queued':
@@ -125,7 +125,7 @@ def cmd_check(slug):
     print(f'OK — {slug}: {words} words, {len(heads)} sections. Read it once more on a phone-width preview before publishing.')
 
 
-def cmd_publish(slug, push):
+def cmd_publish(slug, push, app_commit=True):
     cmd_check(slug)
     guides = load(GUIDES); g = next(x for x in guides if x['slug'] == slug)
     first = g['status'] != 'published'
@@ -140,7 +140,10 @@ def cmd_publish(slug, push):
     sh(sys.executable, 'tools/build_site.py', str(PUBLIC))
     title = g['title'].split(' | ')[0]
     message = f"{'Publish' if first else 'Update'} guide: {title}"
-    sh('git', 'add', 'site'); sh('git', 'commit', '-m', message, check=False)
+    if app_commit:
+        sh('git', 'add', 'site'); sh('git', 'commit', '-m', message, check=False)
+    else:
+        print('App source mirrored; app commit skipped to preserve existing uncommitted work.')
     sh('git', 'add', '-A', cwd=PUBLIC); sh('git', 'commit', '-m', message, cwd=PUBLIC, check=False)
     base = config['base_url'].rstrip('/') + '/'
     url = f'{base}guides/{slug}.html'
@@ -174,6 +177,6 @@ if __name__ == '__main__':
     if not a or a[0] == 'list': cmd_list()
     elif a[0] == 'new': cmd_new(a[1] if len(a) > 1 else None)
     elif a[0] == 'check' and len(a) == 2: cmd_check(a[1])
-    elif a[0] == 'publish' and len(a) >= 2: cmd_publish(a[1], '--push' in a)
+    elif a[0] == 'publish' and len(a) >= 2: cmd_publish(a[1], '--push' in a, '--no-app-commit' not in a)
     elif a[0] == 'add-topic' and len(a) == 6: cmd_add_topic(*a[1:])
     else: sys.exit(__doc__)

@@ -116,3 +116,17 @@ windows. Preserve CNAME, verification files, IndexNow key and old URLs.
 ## Growth batch — 18 October 2026
 
 Prepared the practical guide `guides/expense-tracker-without-bank-connection.html`: spreadsheet/manual entry first, optional voice/SMS, account setup, reconciliation and exports. Linked it from the private-tracker feature page and guide hub; updated the App Store snapshot to released 1.4.0. Do not equate a missing campaign row with zero installs. Existing TrackExpenses growth automation is ACTIVE as read from its local configuration today; older paused-state notes are historical.
+
+## Weekly update — 22 October 2026
+
+Finished the queued `budget-pacing-explained` draft: distinguish time elapsed from spending,
+explain early fixed bills, reconcile a payday-period example and show the daily-budget calculator.
+The related credit-card guide handles transfer double counting; the new article links to it.
+Apple Calculator/Numbers documentation and current BudgetStatsView, FiscalPeriod, InsightsEngine
+and FreeTier were checked. Pacing is free; positive daily guidance and forecasts require Pro.
+The draft is distinct from the payday setup guide. Do not infer keyword volume or installs from it.
+
+Fixed `guide.py list` for draft records with null publication dates. Publication supports
+`--no-app-commit` so a weekly run can preserve pre-existing app changes while publishing the
+reviewed site. Current source already mirrored the published 18 October bank-free guide.
+Private growth evidence and report limitations are in docs/website-growth-2026-10-22 in the app repo.

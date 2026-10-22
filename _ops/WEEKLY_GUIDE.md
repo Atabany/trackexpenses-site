@@ -25,6 +25,9 @@ One excellent guide a week, published with `site/_ops/guide.py`. Run from the ap
 7. `python3 site/_ops/guide.py publish <slug> --push` marks it published, rebuilds and
    validates, mirrors into the public repo, commits both repos, pushes, waits for the live
    page and pings IndexNow (accepted ≠ indexed).
+   When the app checkout contains existing uncommitted work, add `--no-app-commit` to preserve
+   it. The app source is still updated and the clean public repository is committed and pushed.
+   Review the public checkout first; this option does not make unrelated public changes safe.
 8. Add one line to the playbook's growth record: date, slug, why this topic.
 
 ## Also weekly, only when something changed
