@@ -1,5 +1,7 @@
 # Automatically track bank SMS expenses on iPhone
 
+For the current iOS 27 flow and the older iOS 26 walkthrough, use the [complete SMS setup page with videos](sms-setup.html).
+
 You can turn supported bank SMS alerts into expense entries on iPhone by creating a Message automation in Shortcuts and passing its input to TrackExpenses. Setup is required: TrackExpenses cannot browse your Messages inbox, and a successful import still needs a quick review of the amount, account and category.
 
 ## Start with the built-in iPhone options

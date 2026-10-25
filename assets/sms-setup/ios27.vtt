@@ -1,0 +1,55 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.000
+Start in the Library. Open Shortcuts. Go back to Library, then choose Automation.
+
+00:00:06.000 --> 00:00:12.000
+Create a new shortcut. Tap the + at the bottom. In iOS 27, automations live inside shortcuts.
+
+00:00:12.000 --> 00:00:20.000
+Open the editor. If Describe a Shortcut opens, tap Editor or Edit. Then tap Automation in the actions panel.
+
+00:00:20.000 --> 00:00:26.000
+Choose Message. Under Communication, tap Message to add the incoming-message trigger.
+
+00:00:26.000 --> 00:00:33.000
+Change the filter field. Tap the first blue Sender field. This chooses what part of the message to match.
+
+00:00:33.000 --> 00:00:39.000
+Match the message text. Choose Message from the menu. The condition becomes Message contains Text.
+
+00:00:39.000 --> 00:00:47.000
+Use your bank’s wording. Tap Text and enter wording from your bank alerts. Purchase is only an example. Then tap the trigger’s blue arrow.
+
+00:00:47.000 --> 00:00:55.000
+Let it run automatically. Keep Automation on and Confirm Before Run off. These replace the older Run Immediately screen.
+
+00:00:55.000 --> 00:01:01.000
+Find the import action. Tap Search, type Import Bank Message, then select the TrackExpenses action.
+
+00:01:01.000 --> 00:01:07.000
+Connect the incoming text. Tap the blue Message placeholder inside Import transaction from Message.
+
+00:01:07.000 --> 00:01:14.000
+Open Select Variable. Tap Select Variable in the bottom bar. Do not type a message or use Ask Each Time.
+
+00:01:14.000 --> 00:01:22.000
+Choose the trigger’s Message. Tap Message directly below the trigger. In iOS 27 this is the incoming message output.
+
+00:01:22.000 --> 00:01:29.000
+Use the message body. Close the bottom bar with ×. Tap the inserted Message variable to see its properties.
+
+00:01:29.000 --> 00:01:37.000
+Choose Content. In the variable’s Get list, choose Content. Tap Return, then close the variable bar with ×.
+
+00:01:37.000 --> 00:01:45.000
+Keep imports quiet. Expand the import action’s blue arrow and turn Show When Run off. The connected variable should say Content.
+
+00:01:45.000 --> 00:01:51.000
+Check the shortcut’s privacy. Tap the ⓘ button in the editor toolbar, then open Privacy.
+
+00:01:51.000 --> 00:01:59.000
+Allow it while locked. Keep Allow Running When Locked enabled. Go back to Details, tap Done, then back to save the shortcut.
+
+00:01:59.000 --> 00:02:07.000
+Ready for your next bank alert. Confirm the automation is enabled. Check the next matching alert in TrackExpenses → More → SMS Auto-Import.

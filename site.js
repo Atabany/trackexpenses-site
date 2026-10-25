@@ -182,3 +182,10 @@
     result.textContent=raw<0 ? `Budget exceeded by ${money(-raw)} after extra commitments. Daily amount: 0.00 over ${days} day${days===1?'':'s'}, including today.` : `${money(remaining)} remaining ÷ ${days} day${days===1?'':'s'}, including today = ${money(remaining/days)} per day.`;
   });
 })();
+
+// Stop the previous silent tutorial when its iOS panel is hidden.
+document.querySelectorAll('input[name="sms-ios"]').forEach(input => {
+  input.addEventListener('change', () => {
+    document.querySelectorAll('.sms-videos video').forEach(video => video.pause());
+  });
+});

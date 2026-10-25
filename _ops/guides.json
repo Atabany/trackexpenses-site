@@ -106,5 +106,14 @@
   "published": "2026-10-18",
   "updated": "2026-10-18",
   "feature": "private-expense-tracker"
+ },
+ {
+  "slug": "sms-setup",
+  "title": "SMS Auto-Import Setup: iOS 27 and 26 | TrackExpenses",
+  "description": "Set up bank SMS imports with iOS 27 and iOS 26 videos, real screenshots, message variables, account matching, testing and troubleshooting.",
+  "status": "published",
+  "published": "2026-10-25",
+  "updated": "2026-10-25",
+  "feature": "sms-expense-tracker"
  }
 ]

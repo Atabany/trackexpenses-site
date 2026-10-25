@@ -130,3 +130,12 @@ Fixed `guide.py list` for draft records with null publication dates. Publication
 `--no-app-commit` so a weekly run can preserve pre-existing app changes while publishing the
 reviewed site. Current source already mirrored the published 18 October bank-free guide.
 Private growth evidence and report limitations are in docs/website-growth-2026-10-22 in the app repo.
+
+## SMS setup hub — 25 October 2026
+
+`guides/sms-setup.html` is the complete setup destination used by the app. Preserve its URL.
+iOS 27 is the default video; native radio buttons expose the retained iOS 26 tutorial without
+requiring JavaScript. Captions and written steps cover both. The optional site.js listener only
+pauses hidden videos when switching. Video controls never autoplay. New iOS 27 steps were checked
+against the actual Shortcuts simulator UI; the trigger’s Message output supplies Content, while
+the older flow uses Shortcut Input. Carrier SMS delivery requires a physical-device check.

@@ -1,5 +1,7 @@
 # Fix an iPhone bank SMS automation that is not importing
 
+For the current iOS 27 flow and the older iOS 26 walkthrough, use the [complete SMS setup page with videos](sms-setup.html).
+
 If a bank SMS is not reaching TrackExpenses, check the Shortcuts trigger and its Shortcut Input connection before assuming the app cannot read the format. Then use More → SMS Auto-Import to inspect the activity log, message check and free monthly allowance.
 
 ## Find out which step failed
