@@ -189,3 +189,27 @@ document.querySelectorAll('input[name="sms-ios"]').forEach(input => {
     document.querySelectorAll('.sms-videos video').forEach(video => video.pause());
   });
 });
+
+// Watch pages remain readable without JavaScript. Time links enhance the native player.
+(() => {
+  const video = document.querySelector('.watch-video');
+  if (!video) return;
+  const seek = seconds => {
+    if (!Number.isFinite(seconds) || seconds < 0) return;
+    const apply = () => { video.currentTime = Math.min(seconds, video.duration || seconds); };
+    if (video.readyState >= 1) apply();
+    else video.addEventListener('loadedmetadata', apply, {once:true});
+  };
+  const initial = new URLSearchParams(location.search).get('t');
+  if (initial !== null) seek(Number(initial));
+  document.querySelectorAll('[data-video-time]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const seconds = Number(link.dataset.videoTime);
+      seek(seconds);
+      history.replaceState(null, '', link.getAttribute('href'));
+      video.scrollIntoView({block:'center', behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+      video.focus();
+    });
+  });
+})();

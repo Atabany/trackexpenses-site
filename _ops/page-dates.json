@@ -1,0 +1,134 @@
+{
+  "about.html": {
+    "hash": "d9326cfc0f73ae8ec39dd709db9a88b6ed5c194e3dd361f6b989b6ac7213b351",
+    "updated": "2026-10-25"
+  },
+  "compare/best-expense-trackers.html": {
+    "hash": "95672b389c26c6a726854d8349b10b999b67db78ddfedf3e89cb29a2e21966cc",
+    "updated": "2026-10-25"
+  },
+  "compare/monefy-alternative.html": {
+    "hash": "04905527a0a1925aa8f3211dca73071058fe6bb47b3997f5f3b96ce0571397c5",
+    "updated": "2026-10-25"
+  },
+  "features/accounts-and-transfers.html": {
+    "hash": "cea99453a5e01e5479fe1165c9baac7304f9324c7b1338fa606fd72e8df99518",
+    "updated": "2026-10-26"
+  },
+  "features/budget-planner.html": {
+    "hash": "8c547a352aff60757eddd475a1e3364588130ea92eeab07d4532f058c2b88006",
+    "updated": "2026-10-26"
+  },
+  "features/expense-reports.html": {
+    "hash": "fc2b3abd1d95cb47028f98cde61fa533bd7ab714037fb9c8c7f2f8734fa5d6df",
+    "updated": "2026-10-26"
+  },
+  "features/index.html": {
+    "hash": "546948b640f0064338680211e344aef20cd517631db69e63eba9880512575a85",
+    "updated": "2026-10-26"
+  },
+  "features/multi-currency-expense-tracker.html": {
+    "hash": "99607a29d2a55bf5533531b2b6589d439bd8e3cdaf9e126219643b041ae05bc7",
+    "updated": "2026-10-26"
+  },
+  "features/private-expense-tracker.html": {
+    "hash": "9497baa8ad7b2592a533a94def9847acffa371bd4700348bc5cbe34594bd523d",
+    "updated": "2026-10-26"
+  },
+  "features/sms-expense-tracker.html": {
+    "hash": "30846fd7a9dbaf94848b367c7fcbd7cdf3a41b68f2c0879b3feeab42b3251d13",
+    "updated": "2026-10-26"
+  },
+  "features/voice-expense-tracker.html": {
+    "hash": "4fe384ebb892f57aa2773fcc9092a783f82ee6fddc5ccf4105f4604fe239bda3",
+    "updated": "2026-10-26"
+  },
+  "features/widgets-and-shortcuts.html": {
+    "hash": "7b68a4846cb5135de56b98cfaf444d18574c8f3a398f2f1926cecb109f531d7b",
+    "updated": "2026-10-26"
+  },
+  "guides/apple-pay-expenses.html": {
+    "hash": "2c63bb8478b9f574ba844334f9f9c398dd5885f99c9527ec1f2c4da089a85d2c",
+    "updated": "2026-10-05"
+  },
+  "guides/arabic-bank-sms-expenses.html": {
+    "hash": "7243941fe659fe6042f92d4daaf81c876102861f646b26163361ba8b2a574bed",
+    "updated": "2026-10-13"
+  },
+  "guides/bank-sms-iphone.html": {
+    "hash": "4e1300961a9e5986cfebc0d7b921361e65c3287bedf6571293c5b466b0cff768",
+    "updated": "2026-10-26"
+  },
+  "guides/budget-pacing-explained.html": {
+    "hash": "2c246dd21c739cdf5efd657192d06ce8d90ef3e1cdc441e13e8685989196307a",
+    "updated": "2026-10-22"
+  },
+  "guides/credit-card-payment-vs-expense.html": {
+    "hash": "08446196051983bf34783e8ad329af7d05de326ab66fb34ae8160c764074f6fb",
+    "updated": "2026-10-13"
+  },
+  "guides/expense-tracker-without-bank-connection.html": {
+    "hash": "49f6767aecfce95f5bfa63975ddcc1b6df031f1c82a52dea6cf4ab0340281896",
+    "updated": "2026-10-18"
+  },
+  "guides/export-expenses-csv.html": {
+    "hash": "a754ec100b13bf9e757651065125fd468633e1f732de4b2f98af9e9e69cbab13",
+    "updated": "2026-10-05"
+  },
+  "guides/index.html": {
+    "hash": "c727ac2cfbb561ef183b205759c24a72c903facfb7606ed43c03c209140cc6b0",
+    "updated": "2026-10-26"
+  },
+  "guides/payday-budget.html": {
+    "hash": "49d2c607b6b0ccd42c02e9c51a0e40cd4fc6394bd805be2a757f2cba88653046",
+    "updated": "2026-10-05"
+  },
+  "guides/sms-automation-not-working.html": {
+    "hash": "358a8325b6a877ce0c0bbfb673b2c56b209b9a0700ac3c3660c0716fd3ea7d5b",
+    "updated": "2026-10-26"
+  },
+  "guides/sms-setup.html": {
+    "hash": "b67557d0c8ba4cbd823ffee3a956ac9ccf00dde995455383c76013a20c121462",
+    "updated": "2026-10-25"
+  },
+  "guides/track-cash-expenses.html": {
+    "hash": "6b62ec6f9e89941e52a45f23be1dffa26588b991214f5f74e5b87dba5406d746",
+    "updated": "2026-10-13"
+  },
+  "guides/track-subscriptions-recurring-bills.html": {
+    "hash": "faf4d0cc2813716b76907520a49412c545046c3c4693bc161ae7af75b8749378",
+    "updated": "2026-10-13"
+  },
+  "guides/voice-expenses-iphone.html": {
+    "hash": "b52d36b21323d829f5ae4e4b8af80104b8d874b878a63ca36d9bf599443c2e92",
+    "updated": "2026-10-13"
+  },
+  "index.html": {
+    "hash": "8f0256dd240cff5aa126cc5848b0acf3c1c36a3fc96e20f20915031915a16f75",
+    "updated": "2026-10-26"
+  },
+  "privacy.html": {
+    "hash": "926fad449697ca87a53a6434bc546d583df5ccb7591425ad4085a87390c53a11",
+    "updated": "2026-10-25"
+  },
+  "support.html": {
+    "hash": "fc7d9c6040d20bd5c77f4812266f3b69dff9a8537fe64660be9cdb9d7c460890",
+    "updated": "2026-10-25"
+  },
+  "terms.html": {
+    "hash": "bf557891eeafeb9ed5d2fec32c1e830b9394e428320a108096ae0e96adc67ff6",
+    "updated": "2026-10-25"
+  },
+  "tools/daily-budget.html": {
+    "hash": "071edcf7d75e3f62b4a47cab48b2c6c314be66d3cd8d57e35eb2bb402e3f79ed",
+    "updated": "2026-10-25"
+  },
+  "videos/sms-setup-ios26.html": {
+    "hash": "ace144e89b4d3f97677d6853720b8d3a833dea40c23208e22395ebdf36ca6968",
+    "updated": "2026-10-26"
+  },
+  "videos/sms-setup-ios27.html": {
+    "hash": "108574d1954824834cfdc2c8b6fcba554179fdd1622ac1a494956594088c713d",
+    "updated": "2026-10-26"
+  }
+}

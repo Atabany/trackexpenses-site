@@ -2,10 +2,10 @@
  {
   "slug": "bank-sms-iphone",
   "title": "Bank SMS Expense Tracking on iPhone | TrackExpenses",
-  "description": "Set up a Shortcuts Message automation for supported bank alerts. Connect Shortcut Input, check entries and understand the free SMS allowance.",
+  "description": "Set up bank SMS expense tracking on iPhone with iOS 27 or iOS 26. Connect the incoming message, test your bank alerts and review imported entries.",
   "status": "published",
   "published": "2026-10-05",
-  "updated": "2026-10-13",
+  "updated": "2026-10-26",
   "feature": "sms-expense-tracker"
  },
  {
@@ -29,10 +29,10 @@
  {
   "slug": "sms-automation-not-working",
   "title": "Fix Bank SMS Automation on iPhone | TrackExpenses",
-  "description": "Troubleshoot Message filters, Shortcut Input, activity logs and waiting SMS entries in TrackExpenses without duplicating purchases.",
+  "description": "Fix iPhone bank SMS imports: iOS 27 Message Content, iOS 26 Shortcut Input, filters, activity logs, locked entries and duplicate checks.",
   "status": "published",
   "published": "2026-10-05",
-  "updated": "2026-10-13",
+  "updated": "2026-10-26",
   "feature": "sms-expense-tracker"
  },
  {

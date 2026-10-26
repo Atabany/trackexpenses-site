@@ -37,3 +37,7 @@ One excellent guide a week, published with `site/_ops/guide.py`. Run from the ap
 - Re-take a screenshot when its screen changed (see `site/_ops/screenshot-assets.md`).
 
 Stay quiet when nothing was published. Never buy, post, email or change App Store metadata.
+
+Video and date checks: preserve `_ops/videos.json`, watch pages, caption tracks and original
+upload dates; `build.py` updates content hashes in `_ops/page-dates.json`. Do not touch every
+sitemap date for freshness. Run the full validator, including video consistency and orphan checks.

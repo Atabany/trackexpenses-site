@@ -1,0 +1,204 @@
+[
+  {
+    "version": "27",
+    "path": "videos/sms-setup-ios27.html",
+    "title": "iOS 27 Bank SMS Setup Video | TrackExpenses",
+    "description": "Watch the iOS 27 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.",
+    "name": "Set up bank SMS imports on iOS 27",
+    "uploadDate": "2026-10-25T22:47:42+04:00",
+    "duration": 127,
+    "poster": "assets/sms-setup/ios27-poster.jpg",
+    "content": "assets/videos/sms-import-setup-ios27.mp4",
+    "captions": "assets/sms-setup/ios27.vtt",
+    "chapters": [
+      {
+        "start": 0.0,
+        "end": 6.0,
+        "title": "Start in the Library",
+        "text": "Open Shortcuts. Go back to Library, then choose Automation."
+      },
+      {
+        "start": 6.0,
+        "end": 12.0,
+        "title": "Create a new shortcut",
+        "text": "Tap the + at the bottom. In iOS 27, automations live inside shortcuts."
+      },
+      {
+        "start": 12.0,
+        "end": 20.0,
+        "title": "Open the editor",
+        "text": "If Describe a Shortcut opens, tap Editor or Edit. Then tap Automation in the actions panel."
+      },
+      {
+        "start": 20.0,
+        "end": 26.0,
+        "title": "Choose Message",
+        "text": "Under Communication, tap Message to add the incoming-message trigger."
+      },
+      {
+        "start": 26.0,
+        "end": 33.0,
+        "title": "Change the filter field",
+        "text": "Tap the first blue Sender field. This chooses what part of the message to match."
+      },
+      {
+        "start": 33.0,
+        "end": 39.0,
+        "title": "Match the message text",
+        "text": "Choose Message from the menu. The condition becomes Message contains Text."
+      },
+      {
+        "start": 39.0,
+        "end": 47.0,
+        "title": "Use your bank’s wording",
+        "text": "Tap Text and enter wording from your bank alerts. Purchase is only an example. Then tap the trigger’s blue arrow."
+      },
+      {
+        "start": 47.0,
+        "end": 55.0,
+        "title": "Let it run automatically",
+        "text": "Keep Automation on and Confirm Before Run off. These replace the older Run Immediately screen."
+      },
+      {
+        "start": 55.0,
+        "end": 61.0,
+        "title": "Find the import action",
+        "text": "Tap Search, type Import Bank Message, then select the TrackExpenses action."
+      },
+      {
+        "start": 61.0,
+        "end": 67.0,
+        "title": "Connect the incoming text",
+        "text": "Tap the blue Message placeholder inside Import transaction from Message."
+      },
+      {
+        "start": 67.0,
+        "end": 74.0,
+        "title": "Open Select Variable",
+        "text": "Tap Select Variable in the bottom bar. Do not type a message or use Ask Each Time."
+      },
+      {
+        "start": 74.0,
+        "end": 82.0,
+        "title": "Choose the trigger’s Message",
+        "text": "Tap Message directly below the trigger. In iOS 27 this is the incoming message output."
+      },
+      {
+        "start": 82.0,
+        "end": 89.0,
+        "title": "Use the message body",
+        "text": "Close the bottom bar with ×. Tap the inserted Message variable to see its properties."
+      },
+      {
+        "start": 89.0,
+        "end": 97.0,
+        "title": "Choose Content",
+        "text": "In the variable’s Get list, choose Content. Tap Return, then close the variable bar with ×."
+      },
+      {
+        "start": 97.0,
+        "end": 105.0,
+        "title": "Keep imports quiet",
+        "text": "Expand the import action’s blue arrow and turn Show When Run off. The connected variable should say Content."
+      },
+      {
+        "start": 105.0,
+        "end": 111.0,
+        "title": "Check the shortcut’s privacy",
+        "text": "Tap the ⓘ button in the editor toolbar, then open Privacy."
+      },
+      {
+        "start": 111.0,
+        "end": 119.0,
+        "title": "Allow it while locked",
+        "text": "Keep Allow Running When Locked enabled. Go back to Details, tap Done, then back to save the shortcut."
+      },
+      {
+        "start": 119.0,
+        "end": 127.0,
+        "title": "Ready for your next bank alert",
+        "text": "Confirm the automation is enabled. Check the next matching alert in TrackExpenses → More → SMS Auto-Import."
+      }
+    ]
+  },
+  {
+    "version": "26",
+    "path": "videos/sms-setup-ios26.html",
+    "title": "iOS 26 Bank SMS Setup Video | TrackExpenses",
+    "description": "Watch the iOS 26 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.",
+    "name": "Set up bank SMS imports on iOS 26",
+    "uploadDate": "2026-10-25T22:47:42+04:00",
+    "duration": 132,
+    "poster": "assets/sms-setup/ios26-poster.jpg",
+    "content": "assets/videos/sms-import-setup-ios26.mp4",
+    "captions": "assets/sms-setup/ios26.vtt",
+    "chapters": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "title": "Create a Message automation",
+        "text": "In Shortcuts, open Automation. Tap +, then choose Message."
+      },
+      {
+        "start": 10.0,
+        "end": 25.0,
+        "title": "Match your bank's wording",
+        "text": "We use “purchase” as an example. Enter a phrase or currency code that appears in YOUR bank alerts."
+      },
+      {
+        "start": 25.0,
+        "end": 35.0,
+        "title": "Run automatically",
+        "text": "Leave Sender as Any Sender. Choose Run Immediately, then tap Next."
+      },
+      {
+        "start": 35.0,
+        "end": 45.0,
+        "title": "Create a blank shortcut",
+        "text": "Tap Create New Shortcut under Get Started."
+      },
+      {
+        "start": 45.0,
+        "end": 57.0,
+        "title": "Add the bank import action",
+        "text": "Search for Import Bank Message. Tap the TrackExpenses action."
+      },
+      {
+        "start": 57.0,
+        "end": 72.0,
+        "title": "Tap the Message field",
+        "text": "Tap the blue Message placeholder inside the import action. A variable bar opens at the bottom."
+      },
+      {
+        "start": 72.0,
+        "end": 84.0,
+        "title": "Tap Select Variable",
+        "text": "At the bottom, tap Select Variable. If the keyboard is open, look just above it."
+      },
+      {
+        "start": 84.0,
+        "end": 101.0,
+        "title": "Choose Shortcut Input",
+        "text": "Tap the blue Shortcut Input beneath “Receive messages as input”. This passes the incoming SMS to the action."
+      },
+      {
+        "start": 101.0,
+        "end": 112.0,
+        "title": "Check the connection",
+        "text": "The action now says Shortcut Input. Do not type those words yourself. Tap × to close the variable bar."
+      },
+      {
+        "start": 112.0,
+        "end": 124.0,
+        "title": "Keep imports quiet",
+        "text": "Tap the arrow beside the action. Turn Show When Run off."
+      },
+      {
+        "start": 124.0,
+        "end": 132.0,
+        "title": "Save your automation",
+        "text": "Tap the blue checkmark. Matching bank alerts will now reach TrackExpenses."
+      }
+    ]
+  }
+]

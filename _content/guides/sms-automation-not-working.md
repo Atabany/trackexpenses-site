@@ -2,7 +2,10 @@
 
 For the current iOS 27 flow and the older iOS 26 walkthrough, use the [complete SMS setup page with videos](sms-setup.html).
 
-If a bank SMS is not reaching TrackExpenses, check the Shortcuts trigger and its Shortcut Input connection before assuming the app cannot read the format. Then use More → SMS Auto-Import to inspect the activity log, message check and free monthly allowance.
+If a bank SMS is not reaching TrackExpenses, check the Shortcuts trigger and its incoming message connection before assuming the app cannot read the format. Then use More → SMS Auto-Import to inspect the activity log, message check and free monthly allowance.
+
+
+On iOS 27, the Message trigger lives inside the shortcut editor: keep Automation on and Confirm Before Run off. The import parameter needs the trigger’s Message output with its Content property selected. On iOS 26, use Run Immediately and connect Shortcut Input. The full setup guide above shows both paths.
 
 ## Find out which step failed
 
@@ -20,9 +23,9 @@ Check whether the automation is enabled and whether it is set to Run Immediately
 
 ## Inspect the action's Message field
 
-Open the automation's action editor and find the TrackExpenses bank-message import action. Its Message field must contain Shortcut Input. An empty placeholder is not a connection, even if the action's name sounds like it should import the current message automatically.
+Open the automation's action editor and find the TrackExpenses bank-message import action. Its Message field must contain the incoming variable: the Message trigger’s Content property on iOS 27, or Shortcut Input on iOS 26. An empty placeholder is not a connection, even if the action's name sounds like it should import the current message automatically.
 
-Tap the field and select Shortcut Input. Also switch off Show When Run. If every bank alert brings up a text box asking for a message, you have strong evidence that the action is receiving no input or presenting its own interface. Fix that connection rather than typing the alert manually into a new dialog each time.
+Tap the field → Select Variable. On iOS 27, choose Message beneath the trigger, then tap that variable and select Content. On iOS 26, choose Shortcut Input beneath Receive messages as input. Also switch off Show When Run. If every bank alert brings up a text box asking for a message, you have strong evidence that the action is receiving no input or presenting its own interface. Fix that connection rather than typing the alert manually into a new dialog each time.
 
 A test run from the editor may not have the incoming Message trigger's input. That means pressing the editor's play control is not a complete test of the real route. Inspect the setup, then use a genuine future bank alert as the end-to-end check. You can test parsing separately by pasting a message inside TrackExpenses.
 
@@ -54,10 +57,10 @@ If the setup still fails, contact support with your device, iOS version, app ver
 
 ## Frequently asked questions
 
-Why is there an input dialog for every alert? Check that Message is connected to Shortcut Input and Show When Run is off.
+Why is there an input dialog for every alert? Connect the import field to Message → Content on iOS 27, or Shortcut Input on iOS 26. Turn Show When Run off.
 
 Why does paste work while automation refuses? Attended drafts and unattended imports use different safety checks.
 
 Can I record the purchase without fixing automation first? Yes. Manual entries remain unlimited and free.
 
-Sources: [Apple's Message event conditions](https://support.apple.com/guide/shortcuts/event-triggers-apd932ff833f/ios) and the app's SMS setup guide. For a complete setup, see [automatic SMS tracking](bank-sms-iphone.html).
+Sources: [Apple's Message event conditions](https://support.apple.com/guide/shortcuts/communication-triggers-apdd711f9dff/10.0/ios/27) and the app's SMS setup guide. For a complete setup, see [automatic SMS tracking](bank-sms-iphone.html).

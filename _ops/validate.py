@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Publication gate: links/assets/anchors, facts, structured data and discovery coverage."""
 import json, re, sys, xml.etree.ElementTree as ET
+from datetime import datetime
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote, parse_qs
@@ -10,10 +11,14 @@ FACTS=json.loads((ROOT/'_ops/facts.json').read_text())
 problems=[]
 class Parser(HTMLParser):
  def __init__(self):
-  super().__init__(); self.links=[]; self.images=[]; self.h1=0; self.title=''; self.in_title=False; self.desc=''; self.canon=''; self.ids=set(); self.ld=[]; self.buffer=''; self.in_ld=False; self.text=[]; self.noindex=False; self.banner=False
+  super().__init__(); self.links=[]; self.images=[]; self.h1=0; self.title=''; self.in_title=False; self.desc=''; self.canon=''; self.ids=set(); self.ld=[]; self.buffer=''; self.in_ld=False; self.text=[]; self.noindex=False; self.banner=False; self.media=[]; self.current_video=None
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
   if a.get('id'): self.ids.add(a['id'])
+  if tag=='video':
+   self.current_video={'poster':a.get('poster'),'sources':[],'tracks':[]}; self.media.append(self.current_video)
+  if tag=='source' and self.current_video is not None: self.current_video['sources'].append(a.get('src'))
+  if tag=='track' and self.current_video is not None: self.current_video['tracks'].append(a.get('src'))
   if tag=='h1': self.h1+=1
   if tag=='title': self.in_title=True
   if tag=='meta':
@@ -26,6 +31,7 @@ class Parser(HTMLParser):
   for key in ['href','src','poster','data-src']:
    if a.get(key): self.links.append(a[key])
  def handle_endtag(self,tag):
+  if tag=='video': self.current_video=None
   if tag=='title': self.in_title=False
   if tag=='script' and self.in_ld: self.ld.append(self.buffer); self.in_ld=False
  def handle_data(self,t):
@@ -72,8 +78,32 @@ for f,p in parsers.items():
   if s.get('@type')=='FAQPage':
    for q in s['mainEntity']:
     if q['name'] not in visible or q['acceptedAnswer']['text'] not in visible: fail('FAQ differs from visible text')
+  if s.get('@type')=='VideoObject':
+   for key in ['name','description','thumbnailUrl','uploadDate','duration','contentUrl','hasPart']:
+    if not s.get(key): fail('video missing '+key)
+   try: datetime.fromisoformat(s['uploadDate'].replace('Z','+00:00'))
+   except (ValueError,KeyError): fail('video uploadDate must be ISO 8601')
+   media=next((m for m in p.media if s.get('contentUrl') in [BASE+str((f.parent/x).resolve().relative_to(ROOT)) for x in m['sources'] if x]),None)
+   if not media: fail('VideoObject does not match visible video source')
+   else:
+    posters=s.get('thumbnailUrl',[]); posters=[posters] if isinstance(posters,str) else posters
+    if not media['poster'] or BASE+str((f.parent/media['poster']).resolve().relative_to(ROOT)) not in posters: fail('video thumbnail differs from player poster')
+    if not media['tracks']: fail('video has no caption track')
+   duration=re.fullmatch(r'PT(\d+)S',s.get('duration',''))
+   if not duration: fail('video duration missing or unsupported')
+   else:
+    end=0
+    for clip in s.get('hasPart',[]):
+     start=clip.get('startOffset',-1); stop=clip.get('endOffset',-1)
+     if not 0<=start<stop<=int(duration[1]) or start<end: fail('invalid or overlapping video chapter timing')
+     end=stop
+     if clip.get('name','') not in visible: fail('video chapter not in visible transcript')
+     if not clip.get('url','').startswith(p.canon+'?t='): fail('video chapter URL does not seek within watch page')
+   if 'data-video-time=' not in raw: fail('video has no working chapter links')
   if s.get('aggregateRating') and not FACTS['userRatingCount']: fail('rating fabricated at zero count')
  if not any(s.get('@type')=='BreadcrumbList' for s in schemas): fail('missing breadcrumbs')
+ if not p.noindex and 'max-image-preview:large' not in raw: fail('missing large image preview permission')
+ if rel!='index.html' and 'aria-label="Breadcrumb"' not in raw: fail('missing visible breadcrumb navigation')
  if p.title in seen_titles or p.desc in seen_desc: fail('duplicate metadata')
  seen_titles.add(p.title); seen_desc.add(p.desc)
  if len(p.title)>60 or not p.title: fail('title length '+str(len(p.title)))
@@ -90,9 +120,32 @@ for f,p in parsers.items():
   words=len(re.findall(r'\b[\w’]+\b',re.sub(r'https?://\S+','',source.read_text())))
   if not 800<=words<=1300: fail('authored guide word count '+str(words))
   if not any(s.get('@type')=='Article' for s in schemas): fail('missing Article')
+# Check discovery through real links, not only through a sitemap.
+incoming={url:0 for url in expected}
+for f,p in parsers.items():
+ for href in set(p.links):
+  u=urlsplit(href)
+  if u.scheme or u.netloc or not u.path: continue
+  target=(ROOT/u.path.lstrip('/')).resolve() if u.path.startswith('/') else (f.parent/unquote(u.path)).resolve()
+  if target.is_dir(): target=target/'index.html'
+  if target==f or target not in parsers: continue
+  rel=target.relative_to(ROOT).as_posix(); url=BASE+('' if rel=='index.html' else rel)
+  if url in incoming: incoming[url]+=1
+for url,count in incoming.items():
+ if not count and url!=BASE: problems.append('orphan page '+url)
+# Every video sitemap entry must point to the same media and thumbnail as its watch page.
+for entry in ET.parse(ROOT/'sitemap.xml').findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}url'):
+ loc=entry.findtext('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')
+ for video in entry.findall('{http://www.google.com/schemas/sitemap-video/1.1}video'):
+  vns='{http://www.google.com/schemas/sitemap-video/1.1}'
+  page_path=(ROOT/loc.removeprefix(BASE)).resolve(); parser=parsers.get(page_path)
+  if not parser or not parser.media: problems.append('video sitemap watch page missing '+str(loc)); continue
+  source=video.findtext(vns+'content_loc'); poster=video.findtext(vns+'thumbnail_loc')
+  if not any(source==BASE+str((page_path.parent/x).resolve().relative_to(ROOT)) for m in parser.media for x in m['sources'] if x): problems.append('video sitemap source mismatch '+loc)
+  if not any(m['poster'] and poster==BASE+str((page_path.parent/m['poster']).resolve().relative_to(ROOT)) for m in parser.media): problems.append('video sitemap poster mismatch '+loc)
 if expected!=sitemap: problems.append('sitemap has missing/extra pages')
 for bot in ['OAI-SearchBot','ChatGPT-User','GPTBot','ClaudeBot','Claude-SearchBot','Claude-User','PerplexityBot','Google-Extended','Applebot','Applebot-Extended','Bingbot']:
  if f'User-agent: {bot}\nAllow: /' not in (ROOT/'robots.txt').read_text(): problems.append('missing bot '+bot)
 if not (ROOT/'assets/og.png').exists(): problems.append('missing OG image')
 if problems: print('\n'.join(problems)); sys.exit(1)
-print(f'OK — {len(expected)} indexable pages; links, anchors, metadata, schema, campaigns and facts verified')
+print(f'OK — {len(expected)} indexable pages; links, anchors, metadata, schema, videos, discovery, campaigns and facts verified')

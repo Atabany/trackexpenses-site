@@ -12,9 +12,9 @@ Apple documents two Message conditions: Sender and Message Contains. If you set 
 
 ## Connect the Message trigger to TrackExpenses
 
-Open TrackExpenses and go to More → SMS Auto-Import. Follow its setup guide alongside Shortcuts. In Shortcuts, open Automation, create a new automation and choose Message. Set Message Contains to the relevant phrase from your bank's alerts, or choose the sender if it is stable. Choose Run Immediately when that option is available. Follow the action-building route and add the TrackExpenses bank-message import action.
+Open TrackExpenses → More → SMS Auto-Import and follow the version-specific guide alongside Shortcuts. On iOS 27, go to Shortcuts → Library → Automation → +, open Editor or Edit, and add Automation → Message. Change the first Sender field to Message and enter your filter text. Expand the trigger: Automation stays on and Confirm Before Run stays off. On iOS 26, use the Automation tab → + → Message, choose Run Immediately, then create a blank shortcut. Add Import Bank Message in either version.
 
-The action's Message field is the critical connection. Tap the field and choose Shortcut Input. A blank field does not mean that Shortcuts will somehow find the text on its own. It means the import action has nothing to read. Switch off Show When Run so the action does not open an input dialog for every bank alert. Check these two details even if you used the app's guide: an automation can exist and still have an unconnected parameter.
+The action's Message field is the critical connection. On iOS 27, tap the field → Select Variable → the Message output beneath the trigger, then choose its Content property. On iOS 26, tap the field → Select Variable → Shortcut Input. A blank field does not mean that Shortcuts will somehow find the text on its own. It means the import action has nothing to read. Switch off Show When Run so the action does not open an input dialog for every bank alert. Check these two details even if you used the app's guide: an automation can exist and still have an unconnected parameter.
 
 Keep the automation narrow and test it with the next genuine alert. Opening the app's paste reader is a useful format test, but it does not prove that an incoming-message automation is connected. The two paths receive messages differently, and automatic processing has stricter checks because you are not looking at a draft as it is read.
 
@@ -50,4 +50,4 @@ Does every bank alert work? No. Formats vary; test your own bank's message and r
 
 Is a bank login required? No. TrackExpenses does not connect to your bank or ask for banking credentials.
 
-Sources: [Apple's Message event triggers](https://support.apple.com/guide/shortcuts/event-triggers-apd932ff833f/ios), the app's SMS setup guide and the [privacy policy](../privacy.html).
+Sources: [Apple's Message event triggers](https://support.apple.com/guide/shortcuts/communication-triggers-apdd711f9dff/10.0/ios/27), the app's SMS setup guide and the [privacy policy](../privacy.html).

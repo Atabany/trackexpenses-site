@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build crawlable HTML from reviewed content. No network access at build time."""
-import html, json, re, sys
+import hashlib, html, json, re, sys
+import xml.etree.ElementTree as ET
+from video_pages import watch_page
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlencode
@@ -8,6 +10,10 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT/'_ops/config.json').read_text())
 BASE = CONFIG['base_url'].rstrip('/')+'/'
 FACTS = json.loads((ROOT/'_ops/facts.json').read_text())
+VIDEOS = json.loads((ROOT/'_ops/videos.json').read_text())
+PAGE_DATES_PATH = ROOT/'_ops/page-dates.json'
+PAGE_DATES = json.loads(PAGE_DATES_PATH.read_text()) if PAGE_DATES_PATH.exists() else {}
+NEXT_PAGE_DATES = {}
 UPDATED_LABEL = datetime.strptime(CONFIG['updated'], '%Y-%m-%d').strftime('%B %Y')
 APP = '6806614497'
 STORE = f'https://apps.apple.com/app/id{APP}'
@@ -67,39 +73,55 @@ def campaign(path):
  return f'https://apps.apple.com/app/apple-store/id{APP}?'+urlencode({'pt':'127826363','ct':tag,'mt':'8'})
 
 def cta(path,prefix,compact=False):
- return f'<a class="store-cta" href="{esc(campaign(path))}" aria-label="Download Expense Tracker: SMS &amp; Voice on the App Store"><img class="app-icon" src="{prefix}assets/icon.png" width="48" height="48" alt=""><img class="badge" src="{prefix}assets/app-store.svg" width="120" height="40" alt=""></a>'
+ return f'<a class="store-cta" href="{esc(campaign(path))}" aria-label="Download Expense Tracker: SMS &amp; Voice on the App Store"><img class="app-icon" src="{prefix}assets/icon-128.webp" width="48" height="48" alt=""><img class="badge" src="{prefix}assets/app-store.svg" width="120" height="40" alt=""></a>'
 
 PAGES={}
 def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None,extra_schema=None):
- updated=updated or CONFIG['updated']
+ content_hash=hashlib.sha256(json.dumps((title,desc,body),ensure_ascii=False).encode()).hexdigest()
+ previous=PAGE_DATES.get(path,{})
+ updated=updated or (previous.get('updated') if previous.get('hash')==content_hash else CONFIG['updated'])
  prefix='../'*path.count('/'); canonical=BASE+('' if path=='index.html' else path)
- name=re.sub('<[^>]*>','',re.search(r'<h1[^>]*>(.*?)</h1>',body,re.S).group(1))
- schema={'@context':'https://schema.org','@type':kind,'name':html.unescape(name),'url':canonical,'inLanguage':'en','description':desc}
- if kind=='Article': schema.update(headline=html.unescape(name),datePublished=(GUIDE_BY_SLUG.get(Path(path).stem) or {}).get('published','2026-10-05'),dateModified=updated,author={'@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'},publisher={'@type':'Person','name':'Mohamed Elatabany'})
- schemas=[schema,{'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'TrackExpenses','item':BASE}]+([] if path=='index.html' else [{'@type':'ListItem','position':2,'name':html.unescape(name),'item':canonical}])}]
+ name=' '.join(html.unescape(re.sub('<[^>]*>',' ',re.search(r'<h1[^>]*>(.*?)</h1>',body,re.S).group(1))).split())
+ schema={'@context':'https://schema.org','@type':kind,'@id':canonical+'#webpage','isPartOf':{'@id':BASE+'#website'},'name':html.unescape(name),'url':canonical,'inLanguage':'en','description':desc}
+ if kind=='Article': schema.update(image=[BASE+'assets/og.png'],headline=html.unescape(name),datePublished=(GUIDE_BY_SLUG.get(Path(path).stem) or {}).get('published','2026-10-05'),dateModified=updated,author={'@id':BASE+'#author','@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'},publisher={'@type':'Person','name':'Mohamed Elatabany'})
+ crumbs=[('TrackExpenses','index.html')]
+ if path.startswith('guides/') and path!='guides/index.html': crumbs.append(('Guides','guides/index.html'))
+ elif path.startswith('features/') and path!='features/index.html': crumbs.append(('Features','features/index.html'))
+ elif path.startswith('videos/'): crumbs.append(('SMS setup','guides/sms-setup.html'))
+ elif path.startswith('compare/') and path!='compare/best-expense-trackers.html': crumbs.append(('Compare apps','compare/best-expense-trackers.html'))
+ if path!='index.html': crumbs.append((html.unescape(name),path))
+ breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':n,'item':BASE+('' if u=='index.html' else u)} for i,(n,u) in enumerate(crumbs)]}
+ breadcrumb_html='' if path=='index.html' else '<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>'+''.join(f'<li>{esc(n) if i==len(crumbs)-1 else f"<a href={esc(prefix+u)}>{esc(n)}</a>"}</li>' for i,(n,u) in enumerate(crumbs))+'</ol></nav>'
+ schemas=[schema,breadcrumb]
+ if path=='index.html': schemas.append({'@context':'https://schema.org','@type':'WebSite','@id':BASE+'#website','url':BASE,'name':'TrackExpenses','alternateName':'Expense Tracker: SMS & Voice','inLanguage':'en','publisher':{'@id':BASE+'#author'}})
+ if path in ['index.html','about.html']: schemas.append({'@context':'https://schema.org','@type':'Person','@id':BASE+'#author','name':'Mohamed Elatabany','url':BASE+'about.html','sameAs':['https://github.com/Atabany',FACTS['artistViewUrl']]})
  if path=='index.html':
-  app={'@context':'https://schema.org','@type':'MobileApplication','name':FACTS['trackName'],'alternateName':'TrackExpenses','operatingSystem':'iOS 17+, iPadOS 17+','applicationCategory':'FinanceApplication','url':BASE,'downloadUrl':STORE,'author':{'@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'},'description':FACT_BLOCK,'softwareVersion':FACTS['version'],'featureList':FEATURE_LIST,'screenshot':[BASE+'assets/screenshots/'+x+'.webp' for x in ['transactions','say','sms','budget','calendar','insights']],'offers':{'@type':'Offer','price':0,'priceCurrency':'USD','description':'Free download with optional Pro subscription or lifetime purchase'}}
+  app={'@context':'https://schema.org','@type':'MobileApplication','@id':BASE+'#app','name':FACTS['trackName'],'alternateName':'TrackExpenses','operatingSystem':'iOS 17+, iPadOS 17+','applicationCategory':'FinanceApplication','url':BASE,'downloadUrl':STORE,'author':{'@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'},'description':FACT_BLOCK,'softwareVersion':FACTS['version'],'featureList':FEATURE_LIST,'screenshot':[BASE+'assets/screenshots/'+x+'.webp' for x in ['transactions','say','sms','budget','calendar','insights']],'offers':{'@type':'Offer','price':0,'priceCurrency':'USD','description':'Free download with optional Pro subscription or lifetime purchase'}}
   if FACTS['userRatingCount']: app['aggregateRating']={'@type':'AggregateRating','ratingValue':FACTS['averageUserRating'],'ratingCount':FACTS['userRatingCount'],'bestRating':5,'worstRating':1}
   schemas.append(app)
- if extra_schema: schemas.append(extra_schema)
+ if extra_schema:
+  schemas.append(extra_schema)
+  if extra_schema.get('@type')=='VideoObject': schema['mainEntity']={'@id':extra_schema['@id']}
  if faq: schemas.append({'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in faq]})
  ld=json.dumps(schemas,ensure_ascii=False).replace('</','<\\/')
  text=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><meta name="color-scheme" content="light dark">
+<title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><meta name="color-scheme" content="light dark"><meta property="og:site_name" content="TrackExpenses"><meta name="twitter:image:alt" content="TrackExpenses: bank SMS, voice entry and payday budgets">
 <link rel="canonical" href="{canonical}"><meta name="apple-itunes-app" content="app-id={APP}">
 <meta property="og:type" content="{'article' if kind=='Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="TrackExpenses: SMS, voice and payday budgeting">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}assets/og.png">
-{'<meta name="robots" content="noindex">' if noindex else ''}<link rel="icon" href="{prefix}assets/icon.png"><link rel="stylesheet" href="{prefix}style.css?v=6">
+{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=8">
 <script type="application/ld+json">{ld}</script></head><body>
 <a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="{prefix}index.html">TrackExpenses<span>SMS · Voice · Payday</span></a><nav aria-label="Main"><a href="{prefix}features/index.html">Features</a><a href="{prefix}index.html#screenshots">Screenshots</a><a href="{prefix}guides/index.html">Guides</a><a href="{prefix}tools/daily-budget.html">Calculator</a></nav>{cta(path,prefix,True)}</header>
-<main id="main" class="{'home' if path=='index.html' else 'article'}">{body}
+<main id="main" class="{'home' if path=='index.html' else 'article'}">{breadcrumb_html}{body}
 <section class="download"><h2>Your money, easier to follow.</h2><p>Expense Tracker: SMS &amp; Voice for iPhone and iPad.</p>{cta(path,prefix)}{f'<p class="small">{esc(rating())} · Checked {esc(FACTS["checked"])}</p>' if rating() else ''}</section>
 <details class="fact-block"><summary>App facts and free / Pro limits</summary><p>{esc(FACT_BLOCK)}</p></details></main>
 <footer><p>Made by <a href="{prefix}about.html">Mohamed Elatabany</a>. No cookies or analytics scripts on this site.</p><nav aria-label="Footer"><a href="{prefix}privacy.html">Privacy</a><a href="{prefix}support.html">Support &amp; corrections</a><a href="{prefix}terms.html">Terms</a><a href="{prefix}compare/best-expense-trackers.html">Compare apps</a><a href="{prefix}features/index.html">All features</a><a href="{prefix}guides/index.html">Guides</a></nav></footer>
-<script src="{prefix}site.js?v=6" defer></script></body></html>'''
+<script src="{prefix}site.js?v=8" defer></script></body></html>'''
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text)
- if not noindex: PAGES[path]=(title,desc,canonical,body,updated)
+ if not noindex:
+  PAGES[path]=(title,desc,canonical,body,updated)
+  NEXT_PAGE_DATES[path]={'hash':content_hash,'updated':updated}
 
 def label(d): return datetime.strptime(d,'%Y-%m-%d').strftime('%B %Y')
 
@@ -118,7 +140,7 @@ def guide(sl,meta):
   for version in ['27','26']:
    poster=' poster="../assets/sms-setup/ios27-poster.jpg"' if version=='27' else ''
    anchor='ios-27-setup' if version=='27' else 'ios-26-and-earlier-setup'
-   videos+=f'<section class="sms-panel sms-panel{version}"><h3>iOS {version}{" and earlier" if version=="26" else ""}</h3><video controls playsinline preload="none" width="720" height="1740"{poster} aria-label="iOS {version} SMS setup tutorial"><source src="../assets/videos/sms-import-setup-ios{version}.mp4" type="video/mp4"><track kind="captions" src="../assets/sms-setup/ios{version}.vtt" srclang="en" label="English">Your browser cannot play this video. Follow the written steps below.</video><p><a href="../assets/videos/sms-import-setup-ios{version}.mp4">Download the iOS {version} video</a> · <a href="#{anchor}">Read the steps</a></p></section>'
+   videos+=f'<section class="sms-panel sms-panel{version}"><h3>iOS {version}{" and earlier" if version=="26" else ""}</h3><video controls playsinline preload="none" width="720" height="1740"{poster} aria-label="iOS {version} SMS setup tutorial"><source src="../assets/videos/sms-import-setup-ios{version}.mp4" type="video/mp4"><track kind="captions" src="../assets/sms-setup/ios{version}.vtt" srclang="en" label="English">Your browser cannot play this video. Follow the written steps below.</video><p><a href="../assets/videos/sms-import-setup-ios{version}.mp4">Download the iOS {version} video</a> · <a href="../videos/sms-setup-ios{version}.html">Watch with chapters and transcript</a> · <a href="#{anchor}">Read the steps</a></p></section>'
   videos+='</fieldset>'
   shots=[('04-editor','Automation is in the editor’s actions panel.'),('09-run-settings','Automation on; Confirm Before Run off.'),('13-message-output','Select the Message output beneath the trigger.'),('20-message-content','Choose Content in the variable’s Get list.'),('23-final','Content connected; Show When Run off.'),('17-privacy','Allow Running When Locked in the shortcut’s Privacy settings.')]
   gallery='<div class="sms-shots">'+''.join(f'<figure><img src="../assets/sms-setup/{name}.webp" width="804" height="1748" alt="{esc(caption)}" loading="lazy" decoding="async"><figcaption>{esc(caption)}</figcaption></figure>' for name,caption in shots)+'</div>'
@@ -170,8 +192,21 @@ for path,title,desc in [
  ('compare/best-expense-trackers.html','Best iPhone Expense Trackers: How to Choose','Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.'),
  ('compare/monefy-alternative.html','Monefy Alternative with SMS and Voice | TrackExpenses','Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.')]:
  page(path,title,desc,(ROOT/'_content'/Path(path).name).read_text(),'WebPage')
+for video in VIDEOS:
+ body,video_schema=watch_page(video,BASE)
+ page(video['path'],video['title'],video['description'],body,extra_schema=video_schema)
 urls=[v[2] for v in PAGES.values()]
-(ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{v[2]}</loc><lastmod>{v[4]}</lastmod></url>' for v in PAGES.values())+'</urlset>\n')
+ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+ET.register_namespace('video', 'http://www.google.com/schemas/sitemap-video/1.1')
+ns='http://www.sitemaps.org/schemas/sitemap/0.9'; vn='http://www.google.com/schemas/sitemap-video/1.1'
+sitemap=ET.Element(f'{{{ns}}}urlset'); video_by_path={v['path']:v for v in VIDEOS}
+for path,v in PAGES.items():
+ node=ET.SubElement(sitemap,f'{{{ns}}}url'); ET.SubElement(node,f'{{{ns}}}loc').text=v[2]; ET.SubElement(node,f'{{{ns}}}lastmod').text=v[4]
+ if path in video_by_path:
+  video=video_by_path[path]; media=ET.SubElement(node,f'{{{vn}}}video')
+  for key,value in [('thumbnail_loc',BASE+video['poster']),('title',video['name']),('description',video['description']),('content_loc',BASE+video['content']),('duration',str(video['duration'])),('publication_date',video['uploadDate'])]: ET.SubElement(media,f'{{{vn}}}'+key).text=value
+(ROOT/'sitemap.xml').write_bytes(ET.tostring(sitemap,encoding='utf-8',xml_declaration=True)+b'\n')
+PAGE_DATES_PATH.write_text(json.dumps(NEXT_PAGE_DATES,indent=2,sort_keys=True)+'\n')
 bots=['*','OAI-SearchBot','ChatGPT-User','GPTBot','ClaudeBot','Claude-SearchBot','Claude-User','PerplexityBot','Google-Extended','Applebot','Applebot-Extended','Bingbot']
 (ROOT/'robots.txt').write_text('\n\n'.join('User-agent: '+b+'\nAllow: /' for b in bots)+'\n\nSitemap: '+BASE+'sitemap.xml\n')
 LLMS_GUIDE = """
