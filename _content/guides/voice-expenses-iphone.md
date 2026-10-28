@@ -34,7 +34,7 @@ If you name a foreign currency, verify the conversion rate before saving. TrackE
 
 ## Understand device and language support
 
-The interface is in English. Voice entry understands English and Arabic on compatible devices, while actual speech-model availability depends on hardware and language support. Some devices use newer on-device speech and Apple Intelligence capabilities; other supported systems use the app's rules for interpreting a transcript. These paths may differ in the detail they can infer.
+The app is available in English and Arabic. Voice entry understands both on compatible devices, while actual speech-model availability depends on hardware and language support. Some devices use newer on-device speech and Apple Intelligence capabilities; other supported systems use the app's rules for interpreting a transcript. These paths may differ in the detail they can infer.
 
 Use the free monthly entries to try voice on your own phone before choosing Pro; do not assume that any sentence in any language will work on every device. Check the voice screen's availability and language information. Initial speech-model preparation may need a download. For troubleshooting, note your device, iOS version and selected language when contacting support; do not send private audio or a full ledger.
 
@@ -52,6 +52,6 @@ Can I say more than one purchase? Yes. Include the amounts and check each result
 
 Is voice entry free? Yes, up to 10 saved voice entries per calendar month on each device. Each saved purchase counts as one entry, so a sentence with three purchases uses three. Pro makes voice unlimited.
 
-Is the app interface Arabic? No. The current interface is English; supported voice and message reading can understand Arabic.
+Is the app available in Arabic? Yes. Since version 1.6 the whole app is in Arabic, laid out right to left, and voice entry and bank-message reading understand Arabic as well.
 
 Source: TrackExpenses' live App Store listing, voice-entry service and [privacy policy](../privacy.html). See also the [SMS guide](bank-sms-iphone.html) for another way to reduce typing.
