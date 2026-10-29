@@ -24,7 +24,7 @@
     "updated": "2026-10-26"
   },
   "features/index.html": {
-    "hash": "546948b640f0064338680211e344aef20cd517631db69e63eba9880512575a85",
+    "hash": "da6e4738f0e60fde90cecee813d44e31daf6b05c6056009d008dfb0775dfc817",
     "updated": "2026-10-26"
   },
   "features/multi-currency-expense-tracker.html": {
@@ -40,7 +40,7 @@
     "updated": "2026-10-26"
   },
   "features/voice-expense-tracker.html": {
-    "hash": "4fe384ebb892f57aa2773fcc9092a783f82ee6fddc5ccf4105f4604fe239bda3",
+    "hash": "d5859df46cc82aebab899d1b96bf9b7594ee9f6019aaa569cda1ffc7db077362",
     "updated": "2026-10-26"
   },
   "features/widgets-and-shortcuts.html": {
@@ -52,8 +52,8 @@
     "updated": "2026-10-05"
   },
   "guides/arabic-bank-sms-expenses.html": {
-    "hash": "7243941fe659fe6042f92d4daaf81c876102861f646b26163361ba8b2a574bed",
-    "updated": "2026-10-13"
+    "hash": "fefa61d1bfd9ec72d310acb6e8457601b622f9b2ded076f1576d044b26671ea5",
+    "updated": "2026-10-29"
   },
   "guides/bank-sms-iphone.html": {
     "hash": "4e1300961a9e5986cfebc0d7b921361e65c3287bedf6571293c5b466b0cff768",
@@ -104,7 +104,7 @@
     "updated": "2026-10-13"
   },
   "index.html": {
-    "hash": "8f0256dd240cff5aa126cc5848b0acf3c1c36a3fc96e20f20915031915a16f75",
+    "hash": "01aa63e6896d78f604f5d7464f15cdff3864b09babbc404124f8df98c2fded35",
     "updated": "2026-10-26"
   },
   "privacy.html": {

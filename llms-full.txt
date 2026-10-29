@@ -131,7 +131,7 @@ https://trackexpenses.app/
 
 
 
-  No bank login  No app account  Optional private iCloud sync  English interface
+  No bank login  No app account  Optional private iCloud sync  English & Arabic
 
 
      0   bank logins or app accounts needed
@@ -562,39 +562,43 @@ https://trackexpenses.app/guides/track-cash-expenses.html
 
 ## Arabic Bank SMS Expense Tracking on iPhone | TrackExpenses
 https://trackexpenses.app/guides/arabic-bank-sms-expenses.html
- Track expenses from Arabic bank SMS alerts on iPhone  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    What Arabic bank alerts look like    How TrackExpenses reads them    Set up the automation    Test with a real alert before relying on it    Link your cards and accounts    Salary and incoming transfers    Limits    Frequently asked questions
- Banks in the UAE, Saudi Arabia, Oman, Egypt and the rest of the region often send every card purchase, transfer and salary credit as an Arabic text message. On an iPhone you can turn those alerts into ledger entries with a Shortcuts Message automation that passes each alert to TrackExpenses, which reads Arabic and English alerts by rule on your device. The app's interface is in English; the alerts themselves can be in Arabic.
+ Track expenses from Arabic bank SMS alerts on iPhone  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    Use the app in Arabic    What Arabic bank alerts look like    How TrackExpenses reads them    Set up the automation    Test with a real alert before relying on it    Link your cards and accounts    Salary and incoming transfers    Limits    Frequently asked questions
+ TrackExpenses can turn supported Arabic bank SMS alerts into ledger entries on iPhone through a Shortcuts Message automation. Version 1.6.0 also includes an Arabic interface with right-to-left layout, alongside English; message parsing happens on your device.
+ You can keep a ledger without an automation: read each alert and enter its amount, date and merchant in a spreadsheet or expense app. Check the transaction amount separately from the remaining balance, and reconcile against your bank statement. Automation saves repeated entry, but the same checks still matter.
+ Use the app in Arabic
+ Update TrackExpenses to version 1.6.0 or later. Open More → Language under Look & feel to open the app's page in iOS Settings, then choose Arabic in the language setting. The row shows the language currently in use. These menu names describe the English interface; translated labels depend on your current language.
+ If iOS does not offer a language choice, first add another preferred language in Settings → General → Language & Region → Add Language. You can keep English as your iPhone's primary language while choosing Arabic for TrackExpenses. The app's interface language and the wording of your bank alerts are separate: an English interface can still process supported Arabic messages.
  What Arabic bank alerts look like
- Gulf and Egyptian alerts follow a few recurring shapes. A card purchase might read "شراء بـSAR 140 لـ MERCHANT" or "تم خصم AED 18.50 من بطاقتك المنتهية بالرقم 6878 لدى ENOC". An incoming transfer says "حوالة واردة" with the amount after "المبلغ" or "مبلغ". A salary arrives as "تم إيداع الراتب". A card bill payment reads "لتسديد مستحقات بطاقتك الائتمانية". Many alerts are laid out as labelled lines — مبلغ، لدى، من، إلى، في — rather than as a sentence.
- Three things make these messages harder for software than English ones:
-
-  Glued prefixes.  Arabic attaches small words to the next word: "بـ" (with), "لـ" (for or to), "الـ" (the), so "الخصم" contains "خصم" without a space.
-  Mixed scripts and directions.  An Arabic sentence often carries a Latin merchant name, a Latin currency code and digits, and right-to-left layout moves commas and times around them. Digits may be Western or Arabic-Indic (٠١٢٣).
-  Codes that look like transfers.  Saudi one-time password messages often quote the amount and the purpose — "رمز: 5617 / لـ: تحويل داخلي / المبلغ: SAR 300.00" — so a careless reader would import a code as a transfer.
-
+ A purchase might read "شراء بـSAR 140 لـ MERCHANT" or "تم خصم AED 18.50 من بطاقتك المنتهية بالرقم 6878 لدى ENOC". Incoming transfers use حوالة واردة; salaries may say تم إيداع الراتب. Alerts often use labelled lines rather than sentences.
+ Arabic attaches prefixes such as بـ and لـ to words, mixes right-to-left sentences with Latin merchant names, and may use Arabic-Indic digits (٠١٢٣). One-time password messages can also contain an amount and transfer wording, so an amount alone does not prove money moved.
  How TrackExpenses reads them
  TrackExpenses reads alerts with a rule-based reader that knows Arabic banking vocabulary, not only English. It converts Arabic-Indic and Persian digits before reading amounts, recognises the glued forms of words such as خصم، شراء، الرصيد and the bi/li prefixes, and treats a balance phrase like "رصيدك الحالي" as a balance rather than the amount spent.
- Direction comes from the words: خصم and شراء are money out, حوالة واردة and تم إيداع الراتب are money in, and "تم استلام حوالة" is a received remittance. A card-bill message is recognised as paying your card rather than spending. The reader refuses one-time codes, including the Arabic code wordings (رمز التفعيل، رمز مؤقت، كلمة مرور لمرة واحدة), and failed operations such as "لم يتم تنفيذ العملية", so they never become transactions.
- Dates get special care. "02/09/2026" can mean 2 September or 9 February. An alert describes something that just happened, so when one reading is recent and the other is months away, the recent one wins.
+ Direction comes from the words: خصم and شراء are money out, حوالة واردة and تم إيداع الراتب are money in, and "تم استلام حوالة" is a received remittance. A card-bill message can be recognised as paying your card rather than spending. Rules skip recognised one-time codes, including رمز التفعيل، رمز مؤقت، كلمة مرور لمرة واحدة, and failed operations such as "لم يتم تنفيذ العملية". Test your own bank's wording; this is not a promise that every format is understood.
  Set up the automation
- 1. Install TrackExpenses and open More → SMS Auto-Import. The screen explains each step and shows your free monthly allowance. 2. In the Shortcuts app, open Automation and create a new personal automation with the Message trigger. 3. For "Message Contains", use the currency code your bank prints, such as AED, SAR, OMR or EGP. It appears in almost every transaction alert and almost never in personal texts. Leave Sender empty, because banks change sender names. 4. Choose Run Immediately, then add the TrackExpenses action "Import Bank Message". 5. Tap the action's Message field and choose Shortcut Input, so the alert itself is passed in. Turn off Show When Run.
- If your bank writes the currency as a word, such as ريال or درهم, without a code, use the word your alerts actually contain. Check a few recent messages first.
- The general  bank SMS setup guide  shows the same steps with screenshots of each screen, and the  troubleshooting guide  covers automations that do not run.
+
+  1.  Open TrackExpenses, create the receiving account, then open More → SMS Auto-Import. Check your iOS version in Settings → General → About.
+  2.  In Shortcuts, create a Message automation. On iOS 27, start in Library → Automation → +, open Editor if prompted, then add Automation → Message.
+  3.  Filter on wording present in real alerts, such as شراء or خصم. In the iOS 27 trigger, change the blue Sender field to Message, then enter the text to match. A currency code such as AED or SAR is another option if your bank uses it consistently.
+  4.  Add TrackExpenses' Import Bank Message action. On iOS 27, select the trigger's Message variable, then choose its Content property. Turn Confirm Before Run off in the trigger and Show When Run off in the action; check Allow Running When Locked under the editor's Privacy settings.
+  5.  On iOS 26, use Message Contains, choose Run Immediately, and connect the action's Message parameter to Shortcut Input instead. Save and confirm the automation is enabled.
+
+ If your bank writes ريال or درهم without a currency code, use wording the alerts actually contain. Check recent messages first. Avoid overlapping automations and remember that a currency filter can also match personal texts.
+ The  complete SMS setup guide  has separate iOS 27 and iOS 26 videos and screenshots. Use the  troubleshooting checklist  if no activity appears, and the  SMS feature page  for the overall workflow.
  Test with a real alert before relying on it
- The SMS Auto-Import screen has a box where you can paste one of your bank's messages and see exactly what would be imported: the amount, direction, merchant and card, or the reason it would be skipped. Do this with a purchase, a transfer and a salary alert from your own bank. Formats differ between banks and change over time, and no reader understands every one.
- You can also paste any alert by hand: copy it in Messages, open Quick Add in TrackExpenses and tap the paste button in "From a bank message". The draft opens in the entry sheet for you to confirm. Pasting is free and does not use the automatic import allowance.
+ The SMS Auto-Import screen lets you test a copied message and see the amount, direction, merchant and card, or the reason it would be skipped. Try a purchase, transfer and salary alert. For example, an alert with a purchase of AED 18.50 and a remaining balance of AED 2,000 should produce an expense of 18.50, not 2,000. Check the account and currency too.
+ You can also copy an alert in Messages, open Quick Add and paste it under "From a bank message". Review the resulting draft before saving. This manual route does not use the automatic import allowance. A successful paste test does not prove the automation is connected: wait for the next genuine matching alert, then check the setup screen's activity.
  Link your cards and accounts
  Arabic alerts usually print the last digits of the card or account: "المنتهية بالرقم 6878" or "**1000". Add those digits to the matching account in TrackExpenses (the account editor has a field for them), or use "File under…" on the review sheet once. After that, purchases on that card land in the right account automatically. When an alert describes an ATM withdrawal (سحب صراف آلي) or a transfer between your own accounts (حوالة بين حساباتك), it becomes a transfer only when both accounts can be matched; otherwise it is flagged for review instead of guessed.
  Salary and incoming transfers
  A salary credit is the alert a ledger most wants. With "Import money coming in" turned on in the SMS Auto-Import settings, credits such as تم إيداع الراتب and حوالة واردة are imported as income and flagged, so you confirm them on the review sheet. Leave it off if you prefer to record income yourself.
  Limits
- Free includes 10 successful automatic imports per calendar month on each device. Further alerts are kept but locked outside your totals until you upgrade to Pro, which adds them all, or the next calendar month's allowance releases as many as it covers. Nothing is silently dropped, and saved entries are never locked. The app keeps what it read, never the message text. iOS shows a banner each time a message automation runs; an app cannot hide it.
+ Free includes 10 successful automatic imports per calendar month on each device. Further alerts are kept but locked outside your totals until Pro releases them, or the next calendar month's allowance releases as many as it covers. Saved entries remain available. Raw message text is not saved in the ledger. Only alerts passed by your configured automation reach the reader; the app cannot read your inbox or backfill old texts. System notifications vary by iOS version and settings.
  Frequently asked questions
  Does TrackExpenses support Arabic bank SMS? Yes. It reads common Arabic purchase, transfer, salary and card-payment wordings by rule on your device, and refuses Arabic one-time codes. Test your own bank's alert in the setup screen.
- Is the app available in Arabic? No. The interface is English. Arabic is supported in bank messages and in spoken entries.
- Which phrase should the automation look for? Your bank's currency code, such as AED or SAR, because it appears in nearly every transaction alert. Use the Arabic currency word only if your bank never prints the code.
+ Is the app available in Arabic? Yes. Version 1.6.0 adds an Arabic interface with right-to-left layout. Supported Arabic bank messages and spoken entries can also be used.
+ Which phrase should the automation look for? Choose purchase wording or a currency code present in your bank's actual alerts. Test several messages and avoid filters that forward unrelated texts.
  Can it read the Arabic-Indic digits in my alerts? Yes. Arabic-Indic and Persian digits are converted before the amount is read.
- Source: TrackExpenses bank-message reader rules and real Gulf alert formats collected for its tests, checked in October 2026. Example alerts are illustrative.    TRACKEXPENSES FOR IPHONE & IPAD   Say it, import bank SMS, budget from payday.  Free to start, no bank login.  See Bank SMS import →          Related reading    Bank SMS Expense Tracking on iPhone    Fix Bank SMS Automation on iPhone    SMS Auto-Import Setup: iOS 27 and 26    Budget Pacing: Are You Spending Too Fast This Month?    Track Expenses Without Connecting Your Bank on iPhone    Credit Card Payment vs Expense: Avoid Double Counting
+ Sources: TrackExpenses 1.6.0 language settings, bank-message reader and FreeTier code, checked 29 October 2026;  Apple's language settings instructions . Version-specific Shortcuts steps follow the app's  recorded setup walkthroughs . Example alerts are illustrative, not bank compatibility guarantees.    TRACKEXPENSES FOR IPHONE & IPAD   Say it, import bank SMS, budget from payday.  Free to start, no bank login.  See Bank SMS import →          Related reading    Bank SMS Expense Tracking on iPhone    Fix Bank SMS Automation on iPhone    SMS Auto-Import Setup: iOS 27 and 26    Budget Pacing: Are You Spending Too Fast This Month?    Track Expenses Without Connecting Your Bank on iPhone    Credit Card Payment vs Expense: Avoid Double Counting
 
 ## Track Subscriptions and Recurring Bills on iPhone
 https://trackexpenses.app/guides/track-subscriptions-recurring-bills.html
@@ -778,7 +782,7 @@ https://trackexpenses.app/features/voice-expense-tracker.html
  Say it uses Apple's on-device speech recognition in your current language where the device supports it, falling back to English. On devices with Apple Intelligence it can use Apple's on-device model to read meaning; everywhere else, including Arabic, a built-in rule set reads the sentence. The listening screen tells you which one is in use. Audio is never uploaded by the app, and every result is a draft you confirm.
  Free or Pro
  Free includes 10 saved voice entries per calendar month on each device; each purchase you save counts as one, so a sentence with three purchases uses three. Pro makes Say it unlimited. Typing, templates and pasting a bank message stay free and unlimited.
-  Questions   Is the voice processed in the cloud?  No. TrackExpenses requires on-device speech recognition and does not upload your audio. Results are drafts you review before anything is saved.    Can I say several expenses in one sentence?  Yes. Separate them naturally with commas or “and”. Each purchase becomes its own draft, and a date or account said once can apply to the whole list.    Does it work in Arabic?  Arabic sentences are read by the built-in rules, including Arabic category words, accounts and day words such as yesterday. The app interface itself is in English.    What happens if a price is in another currency?  The draft shows the currency and a rate field prefilled from the last rate you used, so the entry converts correctly into your main currency.
+  Questions   Is the voice processed in the cloud?  No. TrackExpenses requires on-device speech recognition and does not upload your audio. Results are drafts you review before anything is saved.    Can I say several expenses in one sentence?  Yes. Separate them naturally with commas or “and”. Each purchase becomes its own draft, and a date or account said once can apply to the whole list.    Does it work in Arabic?  Arabic sentences are read by the built-in rules, including Arabic category words, accounts and day words such as yesterday. The app interface supports English and Arabic, including right-to-left layout.    What happens if a price is in another currency?  The draft shows the currency and a rate field prefilled from the last rate you used, so the entry converts correctly into your main currency.
   Step-by-step guides    Voice Expense Tracking on iPhone    How to Track Cash Expenses on iPhone      More features   Bank SMS import  Budgets, pacing & payday month  Reports, calendar & insights  Multi-currency  Accounts, cards & recurring  Widgets, Quick Add & Shortcuts  Private by design
 
 ## Bank SMS Expense Tracker for iPhone | TrackExpenses
@@ -939,7 +943,7 @@ https://trackexpenses.app/features/index.html
   Anyone who won't hand a budgeting app their bank password.  Nothing here connects to your bank.
   Travellers and expats  spending in more than one currency.
 
- It is not a bank-sync app, it doesn't pay bills, and the interface is in English. If you need automatic bank feeds, a different kind of app will suit you better; see the  fair comparison .
+ The interface supports English and Arabic, including right-to-left layout. It is not a bank-sync app and it doesn't pay bills. If you need automatic bank feeds, a different kind of app will suit you better; see the  fair comparison .
 
 
 ## Expense Tracking Guides | TrackExpenses

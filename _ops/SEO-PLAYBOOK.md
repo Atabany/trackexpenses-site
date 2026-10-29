@@ -17,7 +17,7 @@ private iCloud sync; 3 accounts, 2 recurring rules, 10 successful SMS imports/ca
 Pro: unlimited voice (10 free/month) on compatible devices/languages, unlimited SMS (10 free/month)/accounts/rules (2 free), forecasts/daily guidance,
 what-if planning, CSV import/range exports, JSON backup/restore, themes/icons. Excess SMS entries
 are caught and kept locked outside totals until Pro or the next month's allowance. No bank login or app account. A fixed
-monthly start is not rolling biweekly budgeting. English UI; Arabic parsing is not Arabic UI.
+monthly start is not rolling biweekly budgeting. Version 1.6.0 ships English and Arabic interfaces, including right-to-left Arabic layout. Supported Arabic bank-message and voice parsing are separate capabilities.
 
 Privacy text remains authored only in app repo `docs/PRIVACY_POLICY.md`. The app wrapper
 `tools/build_site.py` checks it, snapshots `_content/privacy.md`, builds and validates, then
@@ -161,3 +161,19 @@ the older flow uses Shortcut Input. Carrier SMS delivery requires a physical-dev
   Lighthouse 12.8.2 with this machine’s Chrome 155 failed to report LCP for the homepage in both
   the original and updated site; do not turn that missing performance score into a success claim.
   The app icon and film poster delivery variants total about 32 KB versus 272 KB previously.
+
+## 29 October 2026 — Arabic release correction
+
+Updated the existing `guides/arabic-bank-sms-expenses.html` rather than adding another guide.
+The US listing now reports 1.6.0, released 28 October at 21:13:25 UTC, with AR and EN.
+Corrected stale English-only claims on the homepage, feature hub and voice feature page; refreshed
+listing facts without displaying stars (zero US ratings). The Arabic guide now covers the language
+setting, iOS 27 Message → Content versus iOS 26 Shortcut Input, real-alert testing and safer filters.
+This resolves a product/support accuracy need; no new query demand or conversion lift is claimed.
+Current Google/Bing queries or citations, ASC acquisition/campaign downloads and RevenueCat
+purchases/conversion were unavailable in this run: only the in-app browser and MCP Apps browser
+surfaces were exposed, with no existing authenticated dashboard session. Missing data is not zero.
+Keep 26 October's Google observation explicitly dated; a new equal-window comparison is unavailable.
+The Arabic release is a new acquisition/ASO confounder. Existing Pages domain remains purchased and
+working. Google individual-watch-page submission's prior reCAPTCHA service failure remains
+unverified; no successful request or indexing is inferred. See private docs/website-growth-2026-10-29.
