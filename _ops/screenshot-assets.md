@@ -37,3 +37,8 @@ Homepage content is authored in `_content/home.html`, then rendered by `_ops/bui
 The below-fold images use native lazy loading. The illustration loads in view, honors
 reduced motion/data saving, and has a pause control. The screenshot gallery scrolls without
 JavaScript. Every download icon and badge share one accessible campaign link.
+
+Added 30 October 2026: `salary-plan.webp`, from `marketing/website-2026-10/raw/salary-plan.png`
+(iPhone 17 Pro simulator, iOS 26.5, appearance dark, `-reset-state -seed-demo -in-memory-store -pro
+-demo-plan -present salaryPlan`). The Actual view's capture, `salary-plan-actual.png`, is kept beside
+it for a later page. Pro capability; the page labels it.
