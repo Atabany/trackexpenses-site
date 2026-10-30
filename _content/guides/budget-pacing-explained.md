@@ -14,7 +14,7 @@ For a reusable worksheet, Numbers can calculate from table cells. Keep your budg
 
 ## Read the spending bar and today marker together
 
-In TrackExpenses, open Stats, choose Budget and check the period dates at the top. Tap Budget Setting to enter a Total budget and any category budgets. Use the matching Weekly, Monthly or Yearly period when setting the amounts.
+In TrackExpenses, open Stats, choose Budget and check the period dates at the top. Tap Budget Setting to enter a Total budget and any category budgets. The budget is kept in your period length (set under More → Period & Entry); other lengths are worked out from it.
 
 The filled bar represents expenses divided by the budget. The vertical marker represents where the current moment falls between the period's start and end. The app uses elapsed time, so its marker moves through the day; it need not match a calculation using only completed days exactly.
 

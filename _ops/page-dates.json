@@ -16,12 +16,12 @@
     "updated": "2026-10-26"
   },
   "features/budget-planner.html": {
-    "hash": "8c547a352aff60757eddd475a1e3364588130ea92eeab07d4532f058c2b88006",
-    "updated": "2026-10-26"
+    "hash": "b24e421151f1f28ff8b6c7bfc9badf05c4321863523e489d3a96094fcfeb03dc",
+    "updated": "2026-10-29"
   },
   "features/expense-reports.html": {
-    "hash": "fc2b3abd1d95cb47028f98cde61fa533bd7ab714037fb9c8c7f2f8734fa5d6df",
-    "updated": "2026-10-26"
+    "hash": "57974413b0021e79d3d72785262a36b6121b60c12b4122f78828f5d21c78fea0",
+    "updated": "2026-10-29"
   },
   "features/index.html": {
     "hash": "da6e4738f0e60fde90cecee813d44e31daf6b05c6056009d008dfb0775dfc817",
@@ -60,7 +60,7 @@
     "updated": "2026-10-26"
   },
   "guides/budget-pacing-explained.html": {
-    "hash": "2c246dd21c739cdf5efd657192d06ce8d90ef3e1cdc441e13e8685989196307a",
+    "hash": "f2b91ad17579576652153f4db8fdab71aca216f66587a9bc35c2fff5dc520105",
     "updated": "2026-10-22"
   },
   "guides/credit-card-payment-vs-expense.html": {
@@ -104,8 +104,8 @@
     "updated": "2026-10-13"
   },
   "index.html": {
-    "hash": "01aa63e6896d78f604f5d7464f15cdff3864b09babbc404124f8df98c2fded35",
-    "updated": "2026-10-26"
+    "hash": "e104fc20ec736b215960b090e8b6271dfb04dfde97f1dc3a530097842ee8e409",
+    "updated": "2026-10-29"
   },
   "privacy.html": {
     "hash": "926fad449697ca87a53a6434bc546d583df5ccb7591425ad4085a87390c53a11",

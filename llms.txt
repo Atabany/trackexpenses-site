@@ -31,9 +31,10 @@ App Store: https://apps.apple.com/app/id6806614497
 - Bank SMS import through a Shortcuts Message automation (10 free per month, unlimited with Pro)
 - Budget month that starts on any day, such as payday
 - Category budgets with a today pacing marker
-- Daily budget allowance, spending forecasts and what-if plans (Pro)
+- Daily budget with repeating bills taken out first, spending forecasts and what-if plans (Pro)
 - Daily, calendar, monthly, summary and description views
 - Cash flow, daily average and category changes
+- Know your money: fixed costs, small purchases, biggest spending day and income kept (budget runway is Pro)
 - Multiple currencies with your own exchange rate, converted to a main currency
 - Cash, bank, card, savings and loan accounts with transfers
 - Recurring transactions (2 free, unlimited with Pro)
@@ -89,7 +90,7 @@ App Store: https://apps.apple.com/app/id6806614497
 - [SMS Auto-Import Setup: iOS 27 and 26 | TrackExpenses](https://trackexpenses.app/guides/sms-setup.html): Set up bank SMS imports with iOS 27 and iOS 26 videos, real screenshots, message variables, account matching, testing and troubleshooting.
 - [Voice Expense Tracker for iPhone | TrackExpenses](https://trackexpenses.app/features/voice-expense-tracker.html): Say several purchases in one sentence and review the drafts before saving. On-device voice entry for iPhone and iPad; 10 free a month, unlimited with Pro.
 - [Bank SMS Expense Tracker for iPhone | TrackExpenses](https://trackexpenses.app/features/sms-expense-tracker.html): Turn supported bank SMS alerts into expenses with a Shortcuts automation. No bank login or inbox access; 10 free imports a month, unlimited with Pro.
-- [Budget Planner with Daily Allowance | TrackExpenses](https://trackexpenses.app/features/budget-planner.html): Category budgets with a today marker, a month that starts on payday, and Pro forecasts, daily budget allowance and what-if plans on iPhone.
+- [Budget Planner with Daily Allowance | TrackExpenses](https://trackexpenses.app/features/budget-planner.html): Category budgets with a today marker, a month that starts on payday, and Pro forecasts, a daily budget and what-if plans on iPhone.
 - [Expense Reports and Spending Insights | TrackExpenses](https://trackexpenses.app/features/expense-reports.html): Daily, calendar, monthly and summary views, cash flow, category changes and CSV export. See where your money went on iPhone, free.
 - [Multi-Currency Expense Tracker for iPhone | TrackExpenses](https://trackexpenses.app/features/multi-currency-expense-tracker.html): Log expenses in any currency with your own exchange rate. Balances and totals convert to one main currency. Built for travel and expat life.
 - [Accounts, Credit Cards and Recurring Bills | TrackExpenses](https://trackexpenses.app/features/accounts-and-transfers.html): Track cash, bank, card and savings accounts, transfers and card payments without double counting, plus recurring salary, rent and subscriptions.
