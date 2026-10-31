@@ -965,7 +965,7 @@ https://trackexpenses.app/about.html
 ## Privacy Policy | TrackExpenses
 https://trackexpenses.app/privacy.html
  Privacy Policy
-  Expense Tracker: SMS & Voice (TrackExpenses)  — last updated 5 October 2026.
+  Expense Tracker: SMS & Voice (TrackExpenses)  — last updated 1 November 2026.
  The short version
  TrackExpenses has no account, no login, and no server of ours. Your ledger lives on your iPhone, and — if you leave iCloud on — in your own private iCloud database. We cannot see it, and neither can anyone else.
  What TrackExpenses stores
@@ -979,9 +979,10 @@ https://trackexpenses.app/privacy.html
  On your device, in the app's own container. If iCloud is on for TrackExpenses, the same data syncs through  your private iCloud database  — that is Apple's infrastructure inside your Apple Account,  not a server of ours . We have no key to it, no console for it, and no way to read it. Turning iCloud off for TrackExpenses in your iOS settings keeps everything on the one device.
  Deleting the app removes the copy on that device. There is no copy on any server of ours, because there is no server of ours.
  What leaves your device
-  Purchases.  TrackExpenses uses RevenueCat to manage subscriptions and restore purchases. When you buy, restore, or open the paywall, RevenueCat receives purchase and receipt information, an anonymous app user ID it generates, a device identifier, and basic app and OS version details. This is used to work out whether you have an active subscription, and nothing else. It is not used for advertising, and it is not shared with data brokers. RevenueCat's own policy is at  https://www.revenuecat.com/privacy .
+  Purchases.  TrackExpenses uses RevenueCat to manage subscriptions and restore purchases. RevenueCat receives purchase and receipt information, an anonymous app user ID it generates, a device identifier, and basic app and OS version details. This is used to work out whether you have Pro access and to understand purchases, subscriptions and advertising performance. It is not shared with data brokers. RevenueCat's own policy is at  https://www.revenuecat.com/privacy .
+  Apple Ads measurement.  On app launch, RevenueCat can receive Apple's standard AdServices attribution token and use it to ask Apple whether an install came from an ad for TrackExpenses on the App Store. Apple may return the campaign, ad group, keyword, ad placement and country or region associated with that install. RevenueCat associates this attribution with the anonymous purchase record so we can measure which campaigns lead to purchases. Your ledger entries, balances, budgets, bank messages and voice recordings are never sent to RevenueCat or Apple Ads. This measurement does not request the advertising identifier (IDFA), use a custom account identifier, or send your subscription events back to Apple Ads.
   Apple.  Purchases are processed by Apple under Apple's own privacy policy, and iCloud sync is carried by Apple under your Apple Account. We never see your payment details.
- That is the complete list. The app makes no network requests of its own. There is no analytics SDK, no advertising SDK, no crash reporter, and no third-party tracking of any kind in it.
+ That is the complete list. Apart from Apple's services and RevenueCat's purchase and Apple Ads measurement described above, there is no separate analytics SDK, advertising network SDK or crash reporter in the app.
  TrackExpenses never connects to your bank
  There is no bank login, no account aggregator, and no place to type a banking credential. TrackExpenses knows your balances because you told it, and for no other reason. It cannot move money, and it cannot see an account you have not entered yourself.
  SMS auto-import is not access to your messages
@@ -998,7 +999,7 @@ https://trackexpenses.app/privacy.html
   The widget and the Siri shortcuts  read a small summary from a shared container on your device only.
 
  Tracking
- TrackExpenses  does not track you . It does not link your data with third-party data for advertising, and it does not share data with data brokers. It never requests the advertising identifier.
+ TrackExpenses  does not track you  across other companies' apps or websites and does not share data with data brokers. It never requests the advertising identifier. Apple's standard attribution described above is used only to measure ads for TrackExpenses; it does not use your ledger to target ads or build an advertising profile.
  Your data, your control
 
   Export.  The Transactions screen exports the month you are viewing as a CSV for spreadsheets. This is free, and stays free, so your records are never locked in. With TrackExpenses Pro, More → Backup & Export also exports any date range and writes a full-fidelity JSON backup of everything the app holds, which it can restore. You choose where each file goes; nothing is uploaded.
