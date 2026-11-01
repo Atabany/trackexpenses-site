@@ -371,3 +371,7 @@
 @media(prefers-reduced-motion:reduce) {
   .screen-gallery { scroll-behavior:auto; }
 }
+/* Let the first phone screen settle immediately; the feature demos keep their own controls. */
+@media(max-width:760px) {
+  .hero-copy>*,.hero-showcase .phone,.hero-chip,.showcase-orbit,.mini-wave i,.chip-bar i { animation:none; }
+}

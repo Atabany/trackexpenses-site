@@ -198,7 +198,7 @@ view, hides while editing form fields, and allows Safari's bottom safe area. Kee
 desktop and avoid covering a focused control. Footer space and scroll padding keep the last
 content reachable. Screenshot arrows remain usable on phones; overflow tables are keyboard
 focusable with a scroll hint. Existing static content and native SMS radio controls remain usable
-without JavaScript. CSS/JS are versioned v9.
+without JavaScript. CSS is versioned v10 and JS v9. The mobile hero uses static decorative screenshots and chips so the first screen settles immediately; feature demos retain their pause controls.
 
 QA covered all 33 pages at widths 320, 390, 430, 768, 844 (landscape), and 1280: no page-wide
 overflow, mobile navigation targets at least 44px, official badge at least 40px. Calculator
