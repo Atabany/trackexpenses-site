@@ -8,7 +8,7 @@ You need a spending budget, recorded expenses and the dates the budget covers. U
 
 First calculate spending as a percentage: expenses divided by budget, multiplied by 100. Then calculate the percentage of the period that has passed. For a simple check, use completed days divided by the total days in the period, multiplied by 100. Calculator on iPhone is enough for both calculations; you do not need a bank connection or a paid app.
 
-Spending ahead of time means purchases have arrived faster than an even daily spread. Spending behind time means they have arrived more slowly. Neither result explains why. Check the transactions before changing your plan, especially if rent, school fees or an annual renewal landed early.
+Spending ahead of time means purchases arrived faster than an even daily spread; spending behind time means they arrived more slowly. Check transactions before changing your plan, especially if rent or an annual renewal landed early.
 
 For a reusable worksheet, Numbers can calculate from table cells. Keep your budget and expenses in separate cells, then divide expenses by budget. Apple's [Numbers formula instructions](https://support.apple.com/guide/numbers-iphone/calculate-values-using-data-in-table-cells-tan727173a8/ios) explain opening the formula keyboard, selecting cells and using arithmetic operators. Label your period dates beside the calculation so the result remains understandable next week.
 
@@ -31,7 +31,7 @@ Imagine a budget of 3,000 for 25 September through 24 October, a 30-day period. 
 - An even spread at halfway would be 1,500.
 - Recorded spending is 300 ahead of that reference, with 1,200 left in the budget.
 
-The gap is ten percentage points, not ten percent of your bank balance. It is a prompt to examine purchases, not a separate charge or a prediction that you will necessarily overspend.
+The ten-percentage-point gap is a prompt to examine purchases, not a prediction that you will overspend.
 
 Suppose rent of 1,200 was paid near the beginning. That used 40% of the total immediately, even though the next rent payment falls outside this period. An early jump can be expected. Compare everyday categories separately and check whether upcoming bills are already recorded before drawing a conclusion from the total bar.
 
@@ -39,9 +39,17 @@ Suppose rent of 1,200 was paid near the beginning. That used 40% of the total im
 
 A daily reference answers a different question: how much of the remaining budget is available per remaining calendar day? In the example, 10–24 October contains 15 days, including today. Dividing 1,200 by 15 gives 80 per day.
 
-TrackExpenses Pro shows positive Daily budget allowance from remaining budget divided by remaining days, including today. If the budget is used up, the basic Budget used up message remains visible for free. Positive guidance, spending forecasts and what-if plans require Pro; historical stats and pacing bars do not.
+TrackExpenses Pro calculates the daily budget after accounting for repeating bills, paid or still due, and other spending before today. It shares the available amount across the days left, including today, and rounds down in your currency’s precision. Today’s spending counts against that allowance; it does not keep moving the starting figure. If the budget is used up, the basic Budget used up message stays free.
 
-You can do the same arithmetic with the [free daily-budget calculator](../tools/daily-budget.html). It also lets you subtract extra commitments before dividing. If an unrecorded bill of 300 is still due, the example becomes 900 divided by 15, or 60 per day. Do not subtract that bill again if it is already included in the spending figure. The app's basic daily allowance does not separately reserve unrecorded commitments for you.
+The Budget tab also shows a daily amount for each category budget with Pro, including Lifetime. Each category’s own repeating bills come out first; a bills-only category does not show a daily figure. Days left appear once in the header, and every budget labels spent and left amounts.
+
+Use the [free daily-budget calculator](../tools/daily-budget.html) to try remaining-budget arithmetic. It lets you subtract extra commitments before dividing. If a bill of 300 is still due, the example becomes 900 divided by 15, or 60 per day. Do not subtract a bill again if it is already included in your spending figure. The app accounts for repeating rules you have entered; it cannot know a commitment you have never recorded.
+
+## Move money when one category needs more
+
+If transport goes over while groceries has room, you can adjust this period without changing the overall budget. In Stats → Budget, tap ••• on a budget and choose Move money in or Move money out. Review the source, destination and amount before confirming. The move lasts for this budget period; change your standing amounts in Budget Setting or the salary plan if the change should repeat.
+
+An over-budget row offers Cover. Suggested moves leave repeating bills still due covered; a manually chosen amount that would use their reserved money gets a warning. Moves and Cover are free. The [budget planner page](../features/budget-planner.html#move-money) explains the steps and shows a before-and-after example.
 
 The daily figure is a budget reference, not a bank-balance check. It depends on complete records, and spending the reference amount every day is not a requirement.
 
@@ -53,7 +61,7 @@ Check missing entries too. A nearly empty bar can mean you are spending less, or
 
 Keep planned and recorded figures clear. A pacing bar summarizes recorded expenses in the selected period. It cannot know every unentered commitment. The Pro Plan view can help explore scenarios, but forecasts still depend on the records and assumptions supplied.
 
-Finally, compare like periods. Different month lengths, payday boundaries and unusually timed bills affect the picture. Review the large purchases, category patterns and remaining commitments together. A marker is useful context, not an instruction to spend or a guarantee about available cash.
+Compare like periods: month lengths, payday boundaries and unusually timed bills affect the picture. Review purchases and commitments together. A marker is useful context, not a guarantee about available cash.
 
 ## Frequently asked questions
 
@@ -65,4 +73,4 @@ Do I need Pro to see budget pacing? No. Budgets and pacing bars are free. Positi
 
 Why can the app's time marker differ from my day-count calculation? The marker uses elapsed time through the current moment. A worksheet using only completed calendar days gives a simpler approximation.
 
-Source: TrackExpenses BudgetStatsView, BudgetBar, FiscalPeriod, InsightsEngine and FreeTier checked in October 2026; [Apple's iPhone Calculator guide](https://support.apple.com/guide/iphone/use-the-basic-calculator-iph1ac0b5cc/ios) and the Numbers formula guide linked above. Figures are examples, not financial advice.
+Source: TrackExpenses BudgetStatsView, MoveBudgetSheet, BudgetMoves, BudgetBar, FiscalPeriod, InsightsEngine and FreeTier checked in November 2026; [Apple's iPhone Calculator guide](https://support.apple.com/guide/iphone/use-the-basic-calculator-iph1ac0b5cc/ios) and the Numbers formula guide linked above. Figures are examples, not financial advice.

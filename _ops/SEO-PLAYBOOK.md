@@ -177,3 +177,14 @@ Keep 26 October's Google observation explicitly dated; a new equal-window compar
 The Arabic release is a new acquisition/ASO confounder. Existing Pages domain remains purchased and
 working. Google individual-watch-page submission's prior reCAPTCHA service failure remains
 unverified; no successful request or indexing is inferred. See private docs/website-growth-2026-10-29.
+
+## 1 November 2026 — budget moves and daily amounts
+
+The homepage has a dedicated budget section; the budget planner page explains Move money,
+Cover, current-period-only changes, the unchanged total, bill-aware suggestions, per-budget
+daily amounts (Pro, including Lifetime), days left and Everything else. The feature comparison,
+support page, budget-pacing guide, shared facts, MobileApplication featureList and llms files
+carry the same free/Pro boundaries. Copy and paths were checked against BudgetStatsView,
+MoveBudgetSheet, BudgetMoves and FreeTier. Treat these as current product features per owner.
+The product edition in config.app_version is 1.9.0; facts.json remains a dated public Apple
+listing/ratings snapshot. Preserve that distinction when refreshing ratings. No ratings invented.
