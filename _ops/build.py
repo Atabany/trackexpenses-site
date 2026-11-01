@@ -84,6 +84,7 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
  previous=PAGE_DATES.get(path,{})
  updated=updated or (previous.get('updated') if previous.get('hash')==content_hash else CONFIG['updated'])
  prefix='../'*path.count('/'); canonical=BASE+('' if path=='index.html' else path)
+ body=body.replace('<div class="table-wrap">', '<div class="table-wrap" role="region" tabindex="0" aria-label="Table; scroll horizontally for more columns">')
  name=' '.join(html.unescape(re.sub('<[^>]*>',' ',re.search(r'<h1[^>]*>(.*?)</h1>',body,re.S).group(1))).split())
  schema={'@context':'https://schema.org','@type':kind,'@id':canonical+'#webpage','isPartOf':{'@id':BASE+'#website'},'name':html.unescape(name),'url':canonical,'inLanguage':'en','description':desc}
  if kind=='Article': schema.update(image=[BASE+'assets/og.png'],headline=html.unescape(name),datePublished=(GUIDE_BY_SLUG.get(Path(path).stem) or {}).get('published','2026-10-05'),dateModified=updated,author={'@id':BASE+'#author','@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'},publisher={'@type':'Person','name':'Mohamed Elatabany'})
@@ -113,14 +114,15 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
 <link rel="canonical" href="{canonical}"><meta name="apple-itunes-app" content="app-id={APP}">
 <meta property="og:type" content="{'article' if kind=='Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="TrackExpenses: SMS, voice and payday budgeting">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}assets/og.png">
-{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=8">
+{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=9">
 <script type="application/ld+json">{ld}</script></head><body>
 <a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="{prefix}index.html">TrackExpenses<span>SMS · Voice · Payday</span></a><nav aria-label="Main"><a href="{prefix}features/index.html">Features</a><a href="{prefix}index.html#screenshots">Screenshots</a><a href="{prefix}guides/index.html">Guides</a><a href="{prefix}tools/daily-budget.html">Calculator</a></nav>{cta(path,prefix,True)}</header>
 <main id="main" class="{'home' if path=='index.html' else 'article'}">{breadcrumb_html}{body}
 <section class="download"><h2>Your money, easier to follow.</h2><p>Expense Tracker: SMS &amp; Voice for iPhone and iPad.</p>{cta(path,prefix)}{f'<p class="small">{esc(rating())} · Checked {esc(FACTS["checked"])}</p>' if rating() else ''}</section>
 <details class="fact-block"><summary>App facts and free / Pro limits</summary><p>{esc(FACT_BLOCK)}</p></details></main>
 <footer><p>Made by <a href="{prefix}about.html">Mohamed Elatabany</a>. No cookies or analytics scripts on this site.</p><nav aria-label="Footer"><a href="{prefix}privacy.html">Privacy</a><a href="{prefix}support.html">Support &amp; corrections</a><a href="{prefix}terms.html">Terms</a><a href="{prefix}compare/best-expense-trackers.html">Compare apps</a><a href="{prefix}features/index.html">All features</a><a href="{prefix}guides/index.html">Guides</a></nav></footer>
-<script src="{prefix}site.js?v=8" defer></script></body></html>'''
+<aside class="mobile-download" aria-label="Get TrackExpenses" hidden><div class="mobile-download-copy"><strong>Free to start</strong><span>iPhone &amp; iPad</span></div>{cta(path,prefix)}</aside>
+<script src="{prefix}site.js?v=9" defer></script></body></html>'''
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text)
  if not noindex:
   PAGES[path]=(title,desc,canonical,body,updated)

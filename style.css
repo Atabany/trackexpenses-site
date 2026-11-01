@@ -309,3 +309,65 @@
 
 /* Keep the main message and install action visible on the first paint. */
 .hero-copy h1,.hero-copy .lead,.hero-copy .store-cta { animation:none; }
+
+/* Mobile reading and install flow. Keep controls usable without hiding the page. */
+.mobile-download { display:none; }
+.table-wrap:focus-visible { outline:3px solid #ecb841; outline-offset:4px; }
+@media(max-width:760px) {
+  html { scroll-padding-bottom:calc(92px + env(safe-area-inset-bottom, 0px)); }
+  body { padding-bottom:calc(92px + env(safe-area-inset-bottom, 0px)); }
+  .nav { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; padding:12px 16px 4px; }
+  .nav .brand { margin:0; min-width:0; }
+  .nav nav { grid-column:1 / -1; width:auto; gap:8px; justify-content:space-between; }
+  .nav nav a { display:flex; align-items:center; justify-content:center; min-height:44px; padding:8px 4px; font-size:13px; }
+  .store-cta { min-height:44px; width:max-content; max-width:100%; }
+  .store-cta img { flex-shrink:0; }
+  .hero-copy h1 { font-size:clamp(38px,10.5vw,54px); }
+  .hero-copy .lead { font-size:18px; line-height:1.6; }
+  .hero-copy .hero-note { font-size:15px; }
+  .feature-jump a { min-height:44px; display:flex; align-items:center; justify-content:center; }
+  .feature-jump { top:8px; }
+  .demo-toggle,.film button { min-height:44px; min-width:64px; padding:8px 14px; }
+  .gallery-controls { display:flex; }
+  .gallery-controls button { touch-action:manipulation; }
+  .feature-grid a,.section-cta a,.spotlight-copy>a,.extras-grid a,.workflow-copy>a,.pro-card>a,.explore-link {
+    display:inline-flex; align-items:center; min-height:44px; padding-block:8px;
+  }
+  .feature-more a { display:flex; align-items:center; min-height:44px; }
+  .toc a,.related a { display:block; min-height:44px; padding-block:9px; line-height:1.6; }
+  .breadcrumbs a { display:inline-flex; align-items:center; min-height:44px; }
+  footer nav { gap:0 20px; }
+  footer nav a { display:inline-flex; align-items:center; min-height:44px; }
+  .fact-block summary { display:list-item; min-height:44px; padding-block:8px; }
+  .faq-section summary { min-height:44px; }
+  .article { overflow-wrap:anywhere; }
+  .article .lead { font-size:18px; }
+  .article h1 { font-size:clamp(32px,8.7vw,40px); }
+  .article input { font-size:17px; min-height:48px; }
+  .table-wrap::before { content:'Swipe to see all columns →'; display:block; font-size:13px; color:var(--muted); margin-bottom:8px; }
+  .mobile-download:not([hidden]) {
+    position:fixed; inset:auto 0 0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+    border-top:1px solid var(--line); background:var(--paper); box-shadow:0 -6px 24px #00000012;
+  }
+  .mobile-download-copy { min-width:0; font-size:12px; line-height:1.45; color:var(--muted); }
+  .mobile-download-copy strong,.mobile-download-copy span { display:block; }
+  .mobile-download-copy strong { font-size:14px; }
+  .mobile-download .store-cta { flex:0 0 auto; gap:8px; margin:0; }
+  .mobile-download .app-icon { width:36px; height:36px; border-radius:9px; }
+  .mobile-download .badge { width:120px; height:40px; }
+}
+@media(max-width:360px) {
+  .nav { padding-inline:12px; column-gap:8px; }
+  .nav .brand { font-size:17px; }
+  .nav .brand span { font-size:8px; letter-spacing:.08em; }
+  .nav .app-icon { width:28px; height:28px; border-radius:7px; }
+  .nav .store-cta { gap:8px; }
+  .nav nav a { font-size:12px; }
+  .mobile-download { gap:8px; }
+  .mobile-download-copy strong { font-size:13px; }
+  .hero-showcase { height:410px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .screen-gallery { scroll-behavior:auto; }
+}

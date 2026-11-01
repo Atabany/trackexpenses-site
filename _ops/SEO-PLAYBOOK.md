@@ -188,3 +188,22 @@ carry the same free/Pro boundaries. Copy and paths were checked against BudgetSt
 MoveBudgetSheet, BudgetMoves and FreeTier. Treat these as current product features per owner.
 The product edition in config.app_version is 1.9.0; facts.json remains a dated public Apple
 listing/ratings snapshot. Preserve that distinction when refreshing ratings. No ratings invented.
+
+## 1 November 2026 — mobile usability pass
+
+Mobile navigation stays compact at 320px, with 44px navigation/control targets and readable
+headings. A mobile-only bottom download bar reuses the same official badge, app icon and
+page-specific campaign URL. It appears while reading when other download buttons are out of
+view, hides while editing form fields, and allows Safari's bottom safe area. Keep it hidden on
+desktop and avoid covering a focused control. Footer space and scroll padding keep the last
+content reachable. Screenshot arrows remain usable on phones; overflow tables are keyboard
+focusable with a scroll hint. Existing static content and native SMS radio controls remain usable
+without JavaScript. CSS/JS are versioned v9.
+
+QA covered all 33 pages at widths 320, 390, 430, 768, 844 (landscape), and 1280: no page-wide
+overflow, mobile navigation targets at least 44px, official badge at least 40px. Calculator
+arithmetic and edit state, gallery navigation, table keyboard scrolling and tutorial switching
+were exercised. Safari was also inspected on an iPhone 17 Pro / iOS 26.5 simulator.
+Use current Lighthouse 13.6.0 with Node 24 for mobile lab audits. Lighthouse 12.8.2 on Chrome 155
+returned NO_LCP even though the current tool measures LCP correctly; do not report that tooling
+failure as a site-performance score or compare localhost network timing with production.

@@ -5,6 +5,31 @@
   // Motion is opt-in: without JS or with Reduce Motion, every element is simply visible in its final state.
   if (!reduced.matches && canObserve) document.documentElement.classList.add('motion');
 
+  // A phone visitor can install while reading, without duplicating a visible download button.
+  const mobileDownload = document.querySelector('.mobile-download');
+  if (mobileDownload && canObserve) {
+    const phone = matchMedia('(max-width: 760px)');
+    const visibleDownloads = new Set();
+    const syncDownload = () => {
+      const editing = document.activeElement?.matches('input, textarea, select, [contenteditable="true"]');
+      if (mobileDownload.contains(document.activeElement)) return;
+      mobileDownload.hidden = !phone.matches || visibleDownloads.size > 0 || editing;
+    };
+    const downloads = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) visibleDownloads.add(entry.target);
+        else visibleDownloads.delete(entry.target);
+      }
+      syncDownload();
+    }, {threshold: [0, 0.5, 1]});
+    document.querySelectorAll('.store-cta').forEach(link => {
+      if (!mobileDownload.contains(link)) downloads.observe(link);
+    });
+    phone.addEventListener('change', syncDownload);
+    document.addEventListener('focusin', syncDownload);
+    document.addEventListener('focusout', () => requestAnimationFrame(syncDownload));
+  }
+
   // Example amounts follow the visitor's own currency. The region comes from the browser's time
   // zone or language — nothing is requested or stored. Base values are US-dollar sized and are
   // scaled by a rough, rounded factor so a coffee never reads as ¥5. Illustrative, not live rates.
