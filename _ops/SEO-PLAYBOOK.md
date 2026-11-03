@@ -227,8 +227,13 @@ rounding (`SalaryPlan.percentOfIncome`, half away from zero: 300/12,000 = 2.5% s
 3 free accounts). Payday-budget, budget-pacing and the budget-planner feature page now link to it.
 Origin cited to Warren & Warren Tyagi, All Your Worth (2005) via Open Library's record.
 
-Publication note: app `site/` carries AND-12.05 Google Play / Android privacy and terms changes that
-the owner has not approved for publication, so `guide.py publish` (which mirrors all of `site/`)
-was not used. The same source files were added in both repos and each repo built its own output;
-the guide, guides index, payday-budget and budget-planner HTML are byte-identical apart from the
-stylesheet version. When the Android wording is approved, the normal mirror resumes with no drift.
+Publication note: when this run started, app `site/` held AND-12.05 Google Play / Android privacy and
+terms changes marked "not published", so `guide.py publish` (which mirrors all of `site/`) was not
+used; the same source files went into both repos and each built its own output. Another session
+published those changes as public 595780d during the run. This run's first push (38325c2) overwrote
+that commit, because `--force-with-lease` was given the head fetched moments before the push, which
+protects nothing. Fixed about a minute later by rebuilding on 595780d (a1549e2); both overwritten-era
+Pages runs were cancelled, so the live site never lost the Android text. Lesson: when another
+session may publish, fetch, compare the head with the one the work was based on, and rebase if it
+moved; never lease against a head you have not reviewed. App `site/` and the public repo now match
+file for file, so the normal mirror flow can resume.
