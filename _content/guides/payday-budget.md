@@ -26,6 +26,8 @@ Next, look at your budget and Stats for the same period. A whole-ledger setting 
 
 A bank balance and a spending budget answer different questions. Your bank may contain money for rent, savings and a card bill as well as everyday spending. Decide which expenses belong inside the budget you are tracking, then log those expenses consistently. Do not treat the account's entire available balance as the amount you want to spend this month.
 
+To give each part of your pay a job before payday, the [50/30/20 budget guide](50-30-20-budget.html) splits take-home pay into needs, wants and savings, with a worked example.
+
 For an illustrative period budget of 1,200, spending of 480 leaves 720. That arithmetic does not guarantee that 720 is uncommitted cash: an unrecorded bill may still be due. TrackExpenses can show budget facts and, with Pro, planning calculations, but the quality of the result depends on the records and budget you provide.
 
 ## Read budget pacing as well as totals

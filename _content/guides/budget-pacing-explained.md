@@ -47,7 +47,7 @@ Use the [free daily-budget calculator](../tools/daily-budget.html) to try remain
 
 ## Move money when one category needs more
 
-If transport goes over while groceries has room, you can adjust this period without changing the overall budget. In Stats → Budget, tap ••• on a budget and choose Move money in or Move money out. Review the source, destination and amount before confirming. The move lasts for this budget period; change your standing amounts in Budget Setting or the salary plan if the change should repeat.
+If transport goes over while groceries has room, you can adjust this period without changing the overall budget. In Stats → Budget, tap ••• on a budget and choose Move money in or Move money out. Check the amount before confirming. The move lasts for this budget period; change your standing amounts in Budget Setting or the [salary plan](50-30-20-budget.html) if the change should repeat.
 
 An over-budget row offers Cover. Suggested moves leave repeating bills still due covered; a manually chosen amount that would use their reserved money gets a warning. Moves and Cover are free. The [budget planner page](../features/budget-planner.html#move-money) explains the steps and shows a before-and-after example.
 
@@ -57,7 +57,7 @@ The daily figure is a budget reference, not a bank-balance check. It depends on 
 
 Check transfers and credit-card payments. Moving money between your own accounts should not become a second purchase; otherwise spending and pacing are inflated. See [credit-card payment versus expense](credit-card-payment-vs-expense.html) for the distinction.
 
-Check missing entries too. A nearly empty bar can mean you are spending less, or simply that cash purchases and late bank alerts have not been entered yet. Correct duplicates and dates before interpreting the result.
+Check missing entries too. A nearly empty bar can mean you are spending less, or that cash purchases and late bank alerts have not been entered yet. Correct duplicates and dates before interpreting the result.
 
 Keep planned and recorded figures clear. A pacing bar summarizes recorded expenses in the selected period. It cannot know every unentered commitment. The Pro Plan view can help explore scenarios, but forecasts still depend on the records and assumptions supplied.
 

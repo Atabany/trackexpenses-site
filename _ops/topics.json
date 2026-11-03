@@ -41,14 +41,15 @@
   "angle": "Card rate vs market rate, foreign fees as expenses, cash per trip, foreign SMS alerts parked until a rate is given. No live rates in the app."
  },
  {
-  "slug": "50-30-20-budget-iphone",
-  "status": "queued",
+  "slug": "50-30-20-budget",
+  "status": "published",
   "priority": 5,
   "feature": "budget-planner",
-  "title": "Set Up a 50/30/20 Budget on iPhone",
-  "description": "Split take-home pay into needs, wants and savings, map your categories to each bucket and track it payday to payday. A worked example with real numbers.",
+  "title": "50/30/20 Budget: How to Split Your Take-Home Pay",
+  "description": "Split take-home pay into 50% needs, 30% wants and 20% savings, with a worked example, iPhone Calculator and Numbers steps, and a payday salary plan.",
   "intent": "50/30/20 budget app / how to do 50 30 20 budget",
-  "angle": "Method first (spreadsheet), then categories + category budgets + savings transfers in the app. Not financial advice."
+  "angle": "Method first (spreadsheet), then categories + category budgets + savings transfers in the app. Not financial advice. Published 2026-11-04 as guides/50-30-20-budget.html (short slug keeps the App Store ct tag at 26 chars); maps the split onto the Pro salary plan's per-line share of income.",
+  "published": "2026-11-04"
  },
  {
   "slug": "log-expenses-lock-screen",

@@ -16,8 +16,8 @@
     "updated": "2026-11-01"
   },
   "features/budget-planner.html": {
-    "hash": "099e06ce843d6bb0f0e752fb7605cf9fbb414c543ddf8e265a566e848ace1cde",
-    "updated": "2026-11-01"
+    "hash": "156c65df401ae55e4897cd3ed9025b4ca06b28f1ec318ae75d3dda5af7e49705",
+    "updated": "2026-11-04"
   },
   "features/expense-reports.html": {
     "hash": "43c1a6a87bd1487f8789b06a0ec6f3bca3309a13864cde3ba924bf8d7f6b3c20",
@@ -47,60 +47,64 @@
     "hash": "01ac78d0de2f4c064d1f8e50995d9f19148f5b83c4a683dfe920f83438776370",
     "updated": "2026-11-01"
   },
+  "guides/50-30-20-budget.html": {
+    "hash": "297603d406a49792a35ce970be141822354f69b994a86d4360af1837be121238",
+    "updated": "2026-11-04"
+  },
   "guides/apple-pay-expenses.html": {
-    "hash": "2c63bb8478b9f574ba844334f9f9c398dd5885f99c9527ec1f2c4da089a85d2c",
+    "hash": "9e198c63f549f45743ea6581e6ba3d9808aeb9452e20b98a0784b655c51dc627",
     "updated": "2026-10-05"
   },
   "guides/arabic-bank-sms-expenses.html": {
-    "hash": "fefa61d1bfd9ec72d310acb6e8457601b622f9b2ded076f1576d044b26671ea5",
+    "hash": "207f41170092b066a6f967cb438bd8611a924ccd113ec80899b6443dab2ff6a9",
     "updated": "2026-10-29"
   },
   "guides/bank-sms-iphone.html": {
-    "hash": "4e1300961a9e5986cfebc0d7b921361e65c3287bedf6571293c5b466b0cff768",
+    "hash": "619dbc5973c8d823c24a513df8c7c48a0e1730af717d6fea795e1c02b8a66d2a",
     "updated": "2026-10-26"
   },
   "guides/budget-pacing-explained.html": {
-    "hash": "f0883bc912b345c6af7bf521477f351ca067d6a13c83e981ac7a7310d86d0948",
-    "updated": "2026-11-01"
+    "hash": "9bac9a42c7cec084debfc12e19c546b4f47428e41696d2d9a6dc41548e8b3db6",
+    "updated": "2026-11-04"
   },
   "guides/credit-card-payment-vs-expense.html": {
-    "hash": "08446196051983bf34783e8ad329af7d05de326ab66fb34ae8160c764074f6fb",
+    "hash": "0dcdbd25878c60de4e92f2ca82a8f5ff92c06b0a5ca65ba6917bcb4a777544e9",
     "updated": "2026-10-13"
   },
   "guides/expense-tracker-without-bank-connection.html": {
-    "hash": "49f6767aecfce95f5bfa63975ddcc1b6df031f1c82a52dea6cf4ab0340281896",
+    "hash": "643e19d714cd082990d05cdfdf139e3c60731aadb84fc8de69b8a83f35f2dce7",
     "updated": "2026-10-18"
   },
   "guides/export-expenses-csv.html": {
-    "hash": "a754ec100b13bf9e757651065125fd468633e1f732de4b2f98af9e9e69cbab13",
+    "hash": "82915f91dc260a0904027408ceb5656d23a58114cf3bf557a5c73a29922f6f0b",
     "updated": "2026-10-05"
   },
   "guides/index.html": {
-    "hash": "2e93a192fb91b875780ce8c5158c233535050e8a6d7362eca76d4d6b801b97bf",
-    "updated": "2026-11-01"
+    "hash": "ff03ac49f6436906879d83a32fe1ecd046fd232eeaf1663d079e97a201a3dd86",
+    "updated": "2026-11-04"
   },
   "guides/payday-budget.html": {
-    "hash": "d3a196868b8ab98560949b4ee5b924377f1fa96aa5f3cd0a5565f6356f3ec582",
-    "updated": "2026-10-05"
+    "hash": "9566cf03ec5b8c7ab6d590aef316b0f7b785cd7697faf4841bf26572b397f2e1",
+    "updated": "2026-11-04"
   },
   "guides/sms-automation-not-working.html": {
-    "hash": "358a8325b6a877ce0c0bbfb673b2c56b209b9a0700ac3c3660c0716fd3ea7d5b",
+    "hash": "6e68903a5adc5bdab0b5478477a579fcad58056f7387d0e000a48537177ccbc7",
     "updated": "2026-10-26"
   },
   "guides/sms-setup.html": {
-    "hash": "b67557d0c8ba4cbd823ffee3a956ac9ccf00dde995455383c76013a20c121462",
+    "hash": "616a00f9d3415c4ebfdff104736edef4b2f4ac60e0c36c3fadecb47f38246e3a",
     "updated": "2026-10-25"
   },
   "guides/track-cash-expenses.html": {
-    "hash": "6b62ec6f9e89941e52a45f23be1dffa26588b991214f5f74e5b87dba5406d746",
+    "hash": "4fef25ce7e350ff2b862ae9ed387680ab8914b12b0092868a37449d601c83ccf",
     "updated": "2026-10-13"
   },
   "guides/track-subscriptions-recurring-bills.html": {
-    "hash": "faf4d0cc2813716b76907520a49412c545046c3c4693bc161ae7af75b8749378",
+    "hash": "ad8f076b899be0348bd7d534d0159e344a4a426ef5e590c6f1757cc95de21575",
     "updated": "2026-10-13"
   },
   "guides/voice-expenses-iphone.html": {
-    "hash": "108e55aa8dec2c793792ae55f07fdeef10b391ed59bad4f122135972bdcc6f88",
+    "hash": "a051b83674136365f5e4e97ea1db492e2c91331b65930a973616242e951c19f3",
     "updated": "2026-10-13"
   },
   "index.html": {

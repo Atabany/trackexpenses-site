@@ -207,3 +207,28 @@ were exercised. Safari was also inspected on an iPhone 17 Pro / iOS 26.5 simulat
 Use current Lighthouse 13.6.0 with Node 24 for mobile lab audits. Lighthouse 12.8.2 on Chrome 155
 returned NO_LCP even though the current tool measures LCP correctly; do not report that tooling
 failure as a site-performance score or compare localhost network timing with production.
+
+## 4 November 2026 — 50/30/20 budget guide
+
+Published `guides/50-30-20-budget.html` on the owner's explicit request of 4 November. The last
+new guide was sms-setup on 25 October (10 days earlier; the 29 October run updated an existing guide),
+so the weekly limit was not in question, and the owner's request would have overridden it anyway.
+Topic choice is editorial judgment: no Search Console query data was available in this run, and the
+recorded October query tables are too small to rank topics. Of the queued topics, UAE and India
+UPI are country variants of the existing bank-SMS and setup guides (near-duplicate risk), while
+"how to do a 50/30/20 budget" is a distinct, common how-to question that the 1.10.0 salary plan
+answers directly (each line's share of income, Spending/Saving & investing header percentages,
+Plan vs Actual, per-month amounts). No search volume is claimed. The topic slug was shortened
+from `50-30-20-budget-iphone` so the App Store campaign tag is `web-guides-50-30-20-budget`
+(26 chars). Method first (Calculator, Numbers formulas, verified against Apple's guides), worked
+example 12,000 → 6,000 / 3,600 / 2,400 with line shares computed with the app's whole-percent
+rounding (`SalaryPlan.percentOfIncome`, half away from zero: 300/12,000 = 2.5% shows 3%), limits
+(no needs/wants grouping, Saving & investing lists only Savings/Investment accounts, Pro gate,
+3 free accounts). Payday-budget, budget-pacing and the budget-planner feature page now link to it.
+Origin cited to Warren & Warren Tyagi, All Your Worth (2005) via Open Library's record.
+
+Publication note: app `site/` carries AND-12.05 Google Play / Android privacy and terms changes that
+the owner has not approved for publication, so `guide.py publish` (which mirrors all of `site/`)
+was not used. The same source files were added in both repos and each repo built its own output;
+the guide, guides index, payday-budget and budget-planner HTML are byte-identical apart from the
+stylesheet version. When the Android wording is approved, the normal mirror resumes with no drift.

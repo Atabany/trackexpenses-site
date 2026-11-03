@@ -14,7 +14,7 @@
   "description": "Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.",
   "status": "published",
   "published": "2026-10-05",
-  "updated": "2026-10-05",
+  "updated": "2026-11-04",
   "feature": "budget-planner"
  },
  {
@@ -95,7 +95,7 @@
   "description": "Read a budget bar with a today marker: what 60% spent means on day 10 vs day 25, planned early bills, and when to slow down. With a worked example.",
   "status": "published",
   "published": "2026-10-22",
-  "updated": "2026-11-01",
+  "updated": "2026-11-04",
   "feature": "budget-planner"
  },
  {
@@ -115,5 +115,14 @@
   "published": "2026-10-25",
   "updated": "2026-10-25",
   "feature": "sms-expense-tracker"
+ },
+ {
+  "slug": "50-30-20-budget",
+  "title": "50/30/20 Budget: How to Split Your Take-Home Pay",
+  "description": "Split take-home pay into 50% needs, 30% wants and 20% savings, with a worked example, iPhone Calculator and Numbers steps, and a payday salary plan.",
+  "status": "published",
+  "published": "2026-11-04",
+  "updated": "2026-11-04",
+  "feature": "budget-planner"
  }
 ]
