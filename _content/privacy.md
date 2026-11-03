@@ -1,10 +1,12 @@
 # Privacy Policy
 
-**Expense Tracker: SMS & Voice (TrackExpenses)** — last updated 1 November 2026.
+**Expense Tracker: SMS & Voice (TrackExpenses)** — last updated 4 November 2026.
 
 ## The short version
 
 TrackExpenses has no account, no login, and no server of ours. Your ledger lives on your iPhone, and — if you leave iCloud on — in your own private iCloud database. We cannot see it, and neither can anyone else.
+
+This policy covers the app on iPhone, iPad and Mac, and the app for Android. Where Android works differently, the section **TrackExpenses for Android** below says how; everything else applies to both.
 
 ## What TrackExpenses stores
 
@@ -27,7 +29,7 @@ Deleting the app removes the copy on that device. There is no copy on any server
 
 **Apple.** Purchases are processed by Apple under Apple's own privacy policy, and iCloud sync is carried by Apple under your Apple Account. We never see your payment details.
 
-That is the complete list. Apart from Apple's services and RevenueCat's purchase and Apple Ads measurement described above, there is no separate analytics SDK, advertising network SDK or crash reporter in the app.
+On iPhone, iPad and Mac, that is the complete list. Apart from Apple's services and RevenueCat's purchase and Apple Ads measurement described above, there is no separate analytics SDK, advertising network SDK or crash reporter in the app. The Android app's list is in **TrackExpenses for Android** below.
 
 ## TrackExpenses never connects to your bank
 
@@ -43,7 +45,20 @@ You can also paste a bank message in yourself, on the new-transaction screen. It
 
 ## Voice entry runs on your device
 
-Speech is recognised on your iPhone by Apple's on-device speech and Apple Intelligence models. Audio is streamed straight to the recogniser as you speak — it is **never written to a file**, never stored, and never uploaded — and it is discarded as soon as the draft transaction appears. What voice entry produces is a draft you confirm, not an entry made behind your back.
+On iPhone, iPad and Mac, speech is recognised on your device by Apple's on-device speech and Apple Intelligence models. Audio is streamed straight to the recogniser as you speak — it is **never written to a file**, never stored, and never uploaded — and it is discarded as soon as the draft transaction appears. What voice entry produces is a draft you confirm, not an entry made behind your back. On Android, voice entry runs on the phone whenever the phone can recognise your language; when it can't, see **TrackExpenses for Android** below.
+
+## TrackExpenses for Android
+
+The Android app keeps the same ledger and the same promises: no account, no login, no server of ours, and no connection to your bank. It differs from the iPhone app in these ways.
+
+- **Where your ledger is stored.** On your phone, in the app's private storage. There is no iCloud on Android, and the app does not sync between devices. If backup to your Google Account is on, Android includes the app's data **only when that backup is end-to-end encrypted** with your screen lock (Android 9 or later, with a PIN, pattern or password set); without that encryption the app tells Android to leave its data out of the cloud backup. The app lock's passcode is never backed up.
+- **Bank alerts come from notifications, not from your messages.** The Android app asks for no SMS permission and cannot read your messages. The optional automatic import uses Android's **Notification access**, which you turn on yourself in Android's settings after the app explains what it will read and you tap Agree. It reads notifications only from the banking and messaging apps you pick, ignores every other app's, and reads them on your phone. As on iPhone, only the amount, the merchant, the date and the last digits of the card reach your ledger, the notification text is **never saved**, and the same 24-hour message fingerprint and activity log are kept on the phone. You can turn Notification access off at any time in Android's settings. A bank message you share to the app or paste in yourself is read on the same terms.
+- **Voice entry: on your phone first, Google's speech service otherwise.** When your phone can recognise your language on the device, speech is recognised there and the audio does not leave the phone. When it can't (some phones, older Android versions, or a language the phone's on-device recogniser doesn't have), the app uses Google's speech recognition service on your phone, which may send the audio to Google to turn it into text, under Google's privacy policy at <https://policies.google.com/privacy>. When that is the case, the app says so before you speak, in one line on the listening screen, the voice limit screen and the first microphone question: "On this phone, Google's speech service turns what you say into text. Nothing is saved." The listening screen also says "Google speech" while it listens. Either way the app streams the audio to the recogniser, never writes it to a file and never keeps it; only the words come back, as a draft you confirm.
+- **The on-device model and ML Kit diagnostics.** On Android phones that have Google's on-device Gemini Nano model, a sentence or a pasted message the app's own rules cannot read may be passed to that model through Google's ML Kit. The model runs on your phone, and the text does not leave it. ML Kit, which the app includes for this, sends Google diagnostic information about how it is working: device and app information, performance metrics, the API configuration, event types, error codes, the languages configured, and a per-installation identifier. It never includes your messages, your sentences or your ledger. Google describes it at <https://developers.google.com/ml-kit/android-data-disclosure>.
+- **Purchases.** On Android, purchases are made through Google Play, under Google's privacy policy, and we never see your payment details. RevenueCat receives the Google Play purchase information, the anonymous app user ID it generates, and basic device, app and OS version details, to work out whether you have Pro access and to understand purchases. There is no Apple Ads measurement, and no other advertising measurement, on Android. A purchase belongs to the store it was made in: Pro bought on the App Store does not unlock the Android app, and Pro bought on Google Play does not unlock the iPhone app, because there is no TrackExpenses account to connect the two.
+- **Ratings.** When the app asks for a rating, it uses Google Play's in-app review, which Google Play handles.
+- **Permissions.** The microphone, only when you tap to speak. Notifications, only if you turn on import notices or the daily reminder; both are scheduled on the phone. Fingerprint or face unlock through Android's own prompt, which tells the app only whether it succeeded. A receipt photo through Android's photo picker, which hands the app only the photo you choose. The app asks for no SMS, contacts, location or storage permission, and does not request the advertising ID.
+- **Deleting.** Uninstalling the app removes its data from the phone. To remove an encrypted backup, delete it from your Google Account's backups in Android's settings. For the purchase record Google Play and RevenueCat hold, email us and we will request its deletion on your behalf.
 
 ## Things people reasonably assume, that aren't true here
 
@@ -73,6 +88,8 @@ TrackExpenses is a record-keeping tool. Its insights — safe-to-spend, projecte
 ## Changes
 
 If this policy changes, the date at the top changes with it, and material changes will be noted in the app's release notes.
+
+- **4 November 2026:** added **TrackExpenses for Android**, which describes the Android app. Nothing about the iPhone, iPad and Mac app changed.
 
 ## Contact
 

@@ -147,5 +147,24 @@ if expected!=sitemap: problems.append('sitemap has missing/extra pages')
 for bot in ['OAI-SearchBot','ChatGPT-User','GPTBot','ClaudeBot','Claude-SearchBot','Claude-User','PerplexityBot','Google-Extended','Applebot','Applebot-Extended','Bingbot']:
  if f'User-agent: {bot}\nAllow: /' not in (ROOT/'robots.txt').read_text(): problems.append('missing bot '+bot)
 if not (ROOT/'assets/og.png').exists(): problems.append('missing OG image')
+# AND-12.05: the Google Play badge and the per-store FAQ appear together with the flag, and never without it.
+PLAY=json.loads((ROOT/'_ops/config.json').read_text()).get('google_play') or {}
+PLAY_FAQ='Do I need to buy Pro again on Android?'
+home=next((p for f,p in parsers.items() if f==(ROOT/'index.html').resolve()),None)
+for f,p in parsers.items():
+ rel=f.relative_to(ROOT).as_posix(); raw=f.read_text()
+ if '{{STORE_FAQ}}' in raw or '{{APP_STORE_CTA}}' in raw: problems.append(rel+': unreplaced placeholder')
+ # A link to the listing (or the badge) is the download offer the flag holds back; Play's own terms and policy pages
+ # are legal references that terms.html needs whatever the flag says.
+ has_play=any(urlsplit(l).hostname=='play.google.com' and urlsplit(l).path.startswith('/store') for l in p.links) or 'google-play-badge' in raw
+ if not PLAY.get('enabled') and (has_play or PLAY_FAQ in raw): problems.append(rel+': Google Play shown while google_play.enabled is false')
+ if PLAY.get('enabled') and 'google-play-badge' in raw and 'trademarks of Google LLC' not in raw: problems.append(rel+': Google Play badge without the trademark line')
+if PLAY.get('enabled'):
+ if not home or PLAY.get('url') not in home.links: problems.append('index.html: google_play.enabled but no badge linking '+str(PLAY.get('url')))
+ if not home or PLAY_FAQ not in ' '.join(home.text): problems.append('index.html: google_play.enabled but no per-store purchases FAQ')
+ if not urlsplit(PLAY.get('url','')).hostname=='play.google.com' or 'id=com.atabany.trackexpenses' not in PLAY.get('url',''): problems.append('google_play.url is not this app on Google Play')
+ if not (ROOT/'assets/google-play-badge.png').exists(): problems.append('missing assets/google-play-badge.png')
+ if '(iPhone and iPad only)' in llms: problems.append('llms.txt still says iPhone and iPad only')
+elif 'play.google.com' in llms or 'play.google.com' in full: problems.append('llms.txt names Google Play while google_play.enabled is false')
 if problems: print('\n'.join(problems)); sys.exit(1)
 print(f'OK — {len(expected)} indexable pages; links, anchors, metadata, schema, videos, discovery, campaigns and facts verified')

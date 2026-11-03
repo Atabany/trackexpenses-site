@@ -375,3 +375,5 @@
 @media(max-width:760px) {
   .hero-copy>*,.hero-showcase .phone,.hero-chip,.showcase-orbit,.mini-wave i,.chip-bar i { animation:none; }
 }
+/* AND-12.05: the Google Play badge (shown only when config google_play.enabled). Its artwork carries its own padding, so it is drawn larger than the App Store badge to match it. */
+.play-badge{width:155px;height:60px}.home .download .play-badge{width:194px;height:75px}.download .play-cta,.home .download .play-cta{margin-top:-28px}

@@ -107,7 +107,7 @@ App Store: https://apps.apple.com/app/id6806614497
 - [About Mohamed Elatabany | TrackExpenses](https://trackexpenses.app/about.html): Meet the developer of Expense Tracker: SMS & Voice and learn how the site checks its product facts.
 - [Privacy Policy | TrackExpenses](https://trackexpenses.app/privacy.html): How TrackExpenses stores your ledger, processes SMS and voice locally, uses private iCloud and handles purchases.
 - [Support and Free / Pro Limits | TrackExpenses](https://trackexpenses.app/support.html): Get TrackExpenses help, review free and Pro limits, restore purchases, fix imports and export your records.
-- [Terms of Use | TrackExpenses](https://trackexpenses.app/terms.html): TrackExpenses uses Apple’s Standard EULA. Read purchase terms and the limits of spending calculations.
+- [Terms of Use | TrackExpenses](https://trackexpenses.app/terms.html): TrackExpenses terms on the App Store (Apple’s Standard EULA) and on Google Play: purchases, renewals, refunds and calculation limits.
 - [Daily Budget Until Payday Calculator | TrackExpenses](https://trackexpenses.app/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
 - [Best iPhone Expense Trackers: How to Choose](https://trackexpenses.app/compare/best-expense-trackers.html): Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.
 - [Monefy Alternative with SMS and Voice | TrackExpenses](https://trackexpenses.app/compare/monefy-alternative.html): Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.
