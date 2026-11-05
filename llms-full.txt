@@ -134,7 +134,7 @@ https://trackexpenses.app/
 
 
                             “coffee  5 , taxi  18 ”
-            Bank alert   USD 42.18  at CARREFOUR   →  Groceries
+            Bank alert   USD 42.18  at  WALMART    →  Groceries
       Daily budget allowance   USD 139.70
      Real app screens · example records · Pro guidance shown
 
@@ -154,7 +154,7 @@ https://trackexpenses.app/
         Say it     Bank SMS      Your payday
 
 
-      01 / SAY IT  10 FREE / MONTH   A few words. A few purchases. All caught up.  “Coffee 5, taxi 18, and groceries 85 at Carrefour yesterday.”  Say one purchase or several. TrackExpenses listens, shows what it understood while you speak, stops on its own when you pause, and turns your words into drafts on your device. Check the amounts, categories and dates, then save.   Multiple purchases in one phrase  Live chips show what was heard as you talk  Review and edit before saving  On-device speech processing   See how Say it works  →   Free includes 10 saved voice entries per calendar month per device; Pro removes the limit. Compatible devices and supported languages only.
+      01 / SAY IT  10 FREE / MONTH   A few words. A few purchases. All caught up.  “Coffee 5, taxi 18, and groceries 85 at  Walmart  yesterday.”  Say one purchase or several. TrackExpenses listens, shows what it understood while you speak, stops on its own when you pause, and turns your words into drafts on your device. Check the amounts, categories and dates, then save.   Multiple purchases in one phrase  Live chips show what was heard as you talk  Review and edit before saving  On-device speech processing   See how Say it works  →   Free includes 10 saved voice entries per calendar month per device; Pro removes the limit. Compatible devices and supported languages only.
 
 
 
@@ -167,7 +167,7 @@ https://trackexpenses.app/
                 USD 5  · 🍽️ Food
                 USD 18  · 🚌 Transport
                 USD 85  · 🛒 Groceries
-               📍 Carrefour
+               📍  Walmart
                📅 Yesterday
 
 
@@ -180,12 +180,12 @@ https://trackexpenses.app/
              English · On-device & private
 
 
-             “coffee  5 , taxi  18  and groceries  85  at Carrefour yesterday”
+             “coffee  5 , taxi  18  and groceries  85  at  Walmart  yesterday”
               “coffee  5 ”   USD 5    Expense 🍽️ Food Cash · Today
               “taxi  18 ”   USD 18    Expense 🚌 Transport Cash · Today
-              “groceries  85  at Carrefour yesterday”   USD 85    Expense 🛒 Groceries Carrefour · Yesterday
+              “groceries  85  at  Walmart  yesterday”   USD 85    Expense 🛒 Groceries  Walmart  · Yesterday
               ↺ Retry  ✓ Save 3
-              ✓ 3 saved  ·  USD 108  spent · last: Carrefour
+              ✓ 3 saved  ·  USD 108  spent · last:  Walmart
 
 
 
@@ -199,18 +199,19 @@ https://trackexpenses.app/
 
 
 
-            Thursday 11 September  9:41
+            Thursday, September 11  9:41
 
-                     YOURBANK  now   Purchase of   USD 42.18   at  CARREFOUR  with card  *6878 . Avl bal  USD 4,120.00
-                     YOURBANK  now   تم خصم   USD 18.50   من بطاقتك المنتهية بالرقم  6878  لدى  ENOC
+                     YOURBANK  now   Purchase of   USD 42.18   at   WALMART   with card  *6878 . Avl bal  USD 4,120.00
+                     YOURBANK  now     USD 18.50   debited from card ending  6878  at   Shell  .
+                      YOURBANK  now   تم خصم   USD 18.50   من بطاقتك المنتهية بالرقم  6878  لدى  ENOC
                      YOURBANK  now   Your one-time code is 482915. Never share it.   Skipped · code
                      YOURBANK  now   Salary of   USD 4,800.00   credited to your account ending  4410
 
              Shortcuts automation → TrackExpenses
 
                 TrackExpenses  Today
-              🛒   Carrefour  Groceries · Credit Card   − USD 42.18
-              ⛽   ENOC  Fuel · Credit Card   − USD 18.50
+              🛒    Walmart   Groceries · Credit Card   − USD 42.18
+              ⛽    Shell   Fuel · Credit Card   − USD 18.50
               💼   Salary  Review   Income · Main Bank   + USD 4,800.00
 
 
@@ -221,11 +222,11 @@ https://trackexpenses.app/
 
 
 
-      03 / YOUR PAYDAY  FREE   Your salary day. Your month. Your rules.  Paid on the 25th? Let your budget month run from the 25th to the 24th. Transactions, category budgets and charts follow the same fixed monthly period — and every budget bar shows where today falls, so 46% spent means something.   Choose your monthly start day  Budget pacing with a “today” marker on every bar  Follow spending day by day in the calendar   Build a budget around payday  →   Budget pacing is free. Daily spending guidance and forecasts require Pro.
+      03 / YOUR PAYDAY  FREE   Your payday. Your month. Your rules.  Paid on the 15th? Let your budget month run from the 15th to the 14th. Transactions, category budgets and charts follow the same fixed monthly period — and every budget bar shows where today falls, so 46% spent means something.   Choose your monthly start day  Budget pacing with a “today” marker on every bar  Follow spending day by day in the calendar   Build a budget around payday  →   Budget pacing is free. Daily spending guidance and forecasts require Pro.
 
 
 
-          25 Aug    24 Sep
+          Oct 15    Nov 14
          Remaining this month
           USD 1,955.00
              Today
@@ -375,7 +376,7 @@ https://trackexpenses.app/guides/voice-expenses-iphone.html
  Speak in the way you normally would, but include the number. A merchant name alone cannot tell the app what you paid. Watch the live transcript and the fields the screen recognizes. If the amount is missing, say it clearly before finishing. If a category or account was inferred from your saved history, check that it is the one you intended.
  On a supported speech path, recording finishes after a pause once you have completed the sentence. You can then inspect the draft. Do not interpret a progress indicator or a recognized phrase as proof that the entry has been saved; the confirmation step is where the draft becomes a ledger record.
  Log several purchases in one sentence
- A sentence such as “coffee 15, taxi 40 and groceries 120 at Carrefour yesterday” can produce three drafts. The example totals 175, so the saved rows should add up to that amount if all three are expenses in the same currency. Review each draft independently rather than checking only the first card.
+ A sentence such as “coffee 15, taxi 40 and groceries 120 at the supermarket yesterday” can produce three drafts. The example totals 175, so the saved rows should add up to that amount if all three are expenses in the same currency. Review each draft independently rather than checking only the first card.
  Shared information can apply to several purchases. Saying a date or account once may be enough for the whole list when the sentence is unambiguous. Mixed directions need greater care: “salary 3000 and coffee 15” describes income and spending, not two expenses. If the app splits a sentence differently from the way you intended, correct the drafts or use manual entry instead of saving a confusing set.
  For a longer list, a few short batches are easier to verify than a full day's purchases in one breath. The goal is less typing while keeping control of the record. Voice is especially useful for cash purchases that never produce a bank alert, or for catching up on several entries while the details are still fresh.
  Check five fields before saving
@@ -845,7 +846,7 @@ https://trackexpenses.app/guides/50-30-20-budget.html
 https://trackexpenses.app/features/voice-expense-tracker.html
  FEATURE · SAY IT · 10 FREE A MONTH
  Log expenses by voice. Several at once.
- Say it turns a sentence like “coffee 15, taxi 40 and groceries 120 at Carrefour yesterday” into three separate drafts — amount, category, payee and date filled in — that you check and save with one tap. Speech is processed on your iPhone or iPad.
+ Say it turns a sentence like “coffee 15, taxi 40 and groceries 120 at the supermarket yesterday” into three separate drafts — amount, category, payee and date filled in — that you check and save with one tap. Speech is processed on your iPhone or iPad.
 
          Real app screens with example records.
  How it works

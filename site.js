@@ -45,6 +45,19 @@
       region = zones[zone] || lang.region || lang.maximize().region || 'US';
     } catch {}
     const code = euro.includes(region) ? 'EUR' : (byRegion[region] || 'USD');
+    // The shops in the demos follow the visitor as the amounts do: the page ships American, the Gulf
+    // and the wider Arab world see their own shops and an Arabic bank alert, as the app's onboarding does.
+    const arab = 'AE SA QA KW BH OM JO EG MA DZ TN LB IQ'.split(' ').includes(region);
+    const grocery = arab || code !== 'USD' ? 'Carrefour' : 'Walmart', fuel = arab ? 'ENOC' : 'Shell';
+    if (arab) {
+      const gulf = document.getElementById('gulf-alert');
+      const english = gulf && gulf.previousElementSibling;
+      if (english) english.replaceWith(gulf.content.cloneNode(true));
+    }
+    document.querySelectorAll('[data-brand]').forEach(el => { const name = el.dataset.brand === 'fuel' ? fuel : grocery; el.textContent = 'upper' in el.dataset ? name.toUpperCase() : name; });
+    const rename = text => (arab ? text.replace('a card debit for', 'an Arabic alert for') : text).replace(/Walmart/g, grocery).replace(/Shell/g, fuel);
+    document.querySelectorAll('.demo-phone[aria-label]').forEach(el => el.setAttribute('aria-label', rename(el.getAttribute('aria-label'))));
+    document.querySelectorAll('[data-words]').forEach(el => { el.dataset.words = rename(el.dataset.words); });
     const factor = scale[code] || 1;
     const locale = 'en-' + region;
     const make = opts => { try { return new Intl.NumberFormat(locale, {style: 'currency', currency: code, ...opts}); } catch { return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', ...opts}); } };
@@ -54,7 +67,7 @@
     const exact = v => Math.round(v * factor * 100) / 100;
     const grouped = n => n.toLocaleString('en-US');
     const value = el => el.dataset.sum ? el.dataset.sum.split(',').reduce((t, v) => t + nice(+v), 0) : ('int' in el.dataset ? nice(+el.dataset.v) : exact(+el.dataset.v));
-    const format = (el, n) => ('code' in el.dataset ? plainCode : symbol).format(n);
+    const format = (el, n) => ('code' in el.dataset && code !== 'USD' ? plainCode : symbol).format(n); // an American bank writes the dollar sign
     document.querySelectorAll('.num[data-v]').forEach(el => { el.textContent = grouped(nice(+el.dataset.v)); });
     document.querySelectorAll('[data-words]').forEach(el => { el.dataset.words = el.dataset.words.replace(/\{([\d.]+)\}/g, (_, v) => grouped(nice(+v))); });
     document.querySelectorAll('.money').forEach(el => {

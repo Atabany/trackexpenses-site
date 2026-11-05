@@ -134,7 +134,7 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
 <details class="fact-block"><summary>App facts and free / Pro limits</summary><p>{esc(FACT_BLOCK)}</p></details></main>
 <footer><p>Made by <a href="{prefix}about.html">Mohamed Elatabany</a>. No cookies or analytics scripts on this site.</p>{'<p class="small">Google Play and the Google Play logo are trademarks of Google LLC.</p>' if PLAY_ON else ''}<nav aria-label="Footer"><a href="{prefix}privacy.html">Privacy</a><a href="{prefix}support.html">Support &amp; corrections</a><a href="{prefix}terms.html">Terms</a><a href="{prefix}compare/best-expense-trackers.html">Compare apps</a><a href="{prefix}features/index.html">All features</a><a href="{prefix}guides/index.html">Guides</a></nav></footer>
 <aside class="mobile-download" aria-label="Get TrackExpenses" hidden><div class="mobile-download-copy"><strong>Free to start</strong><span>iPhone &amp; iPad</span></div>{cta(path,prefix)}</aside>
-<script src="{prefix}site.js?v=9" defer></script></body></html>'''
+<script src="{prefix}site.js?v=10" defer></script></body></html>'''
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text)
  if not noindex:
   PAGES[path]=(title,desc,canonical,body,updated)

@@ -18,7 +18,7 @@ On a supported speech path, recording finishes after a pause once you have compl
 
 ## Log several purchases in one sentence
 
-A sentence such as “coffee 15, taxi 40 and groceries 120 at Carrefour yesterday” can produce three drafts. The example totals 175, so the saved rows should add up to that amount if all three are expenses in the same currency. Review each draft independently rather than checking only the first card.
+A sentence such as “coffee 15, taxi 40 and groceries 120 at the supermarket yesterday” can produce three drafts. The example totals 175, so the saved rows should add up to that amount if all three are expenses in the same currency. Review each draft independently rather than checking only the first card.
 
 Shared information can apply to several purchases. Saying a date or account once may be enough for the whole list when the sentence is unambiguous. Mixed directions need greater care: “salary 3000 and coffee 15” describes income and spending, not two expenses. If the app splits a sentence differently from the way you intended, correct the drafts or use manual entry instead of saving a confusing set.
 

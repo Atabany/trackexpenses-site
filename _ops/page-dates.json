@@ -40,8 +40,8 @@
     "updated": "2026-11-01"
   },
   "features/voice-expense-tracker.html": {
-    "hash": "d7c67ed36ad5c020cd3de8cc5c9f080a459deb4cc9340e6976b1ff844d47419e",
-    "updated": "2026-11-01"
+    "hash": "d863c267256d7d58146e271d8b757a9d97ff315ee190ee40568a5ca16d2a4187",
+    "updated": "2026-11-04"
   },
   "features/widgets-and-shortcuts.html": {
     "hash": "01ac78d0de2f4c064d1f8e50995d9f19148f5b83c4a683dfe920f83438776370",
@@ -104,12 +104,12 @@
     "updated": "2026-10-13"
   },
   "guides/voice-expenses-iphone.html": {
-    "hash": "a051b83674136365f5e4e97ea1db492e2c91331b65930a973616242e951c19f3",
+    "hash": "dc4e4561ce76f2e9d68e4f0b983b0e3043a0c5d3aba4d62f7c9bc3cfba55de9a",
     "updated": "2026-10-13"
   },
   "index.html": {
-    "hash": "7143c7a751d1ca9cabe1c376d123a4e5bdde4fb6ab3e296b34435fce66b75e5c",
-    "updated": "2026-11-01"
+    "hash": "2509293abbc2ca68fdb1aba344e9bdca7dd15ef4956a2449ecabe18fa2325044",
+    "updated": "2026-11-04"
   },
   "privacy.html": {
     "hash": "e7c6363ab475a546995ceab3813cbb5cb57d216b31cfbe4d6322c110e3e1f3ab",
