@@ -124,5 +124,14 @@
   "published": "2026-11-04",
   "updated": "2026-11-04",
   "feature": "budget-planner"
+ },
+ {
+  "slug": "log-expenses-with-siri",
+  "title": "Log Expenses with Siri and Shortcuts on iPhone",
+  "description": "Use Siri phrases and Shortcuts actions to log an expense, record income or check what is left in your budget, hands-free. Exact phrases and setup.",
+  "status": "published",
+  "published": "2026-11-08",
+  "updated": "2026-11-08",
+  "feature": "widgets-and-shortcuts"
  }
 ]

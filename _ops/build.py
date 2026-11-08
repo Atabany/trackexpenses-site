@@ -45,7 +45,7 @@ FEATURE_LIST = ['Say it: several purchases in one spoken sentence, reviewed as d
  'Daily budget with repeating bills taken out first, spending forecasts and what-if plans (Pro)', 'Daily, calendar, monthly, summary and description views',
  'Cash flow, daily average and category changes', 'Know your money: fixed costs, small purchases, biggest spending day and income kept (budget runway is Pro)', 'Multiple currencies with your own exchange rate, converted to a main currency',
  'Cash, bank, card, savings and loan accounts with transfers', 'Recurring transactions (2 free, unlimited with Pro)',
- 'Home Screen, Lock Screen widgets and Control Center buttons', 'Siri and Shortcuts actions, Apple Pay (Wallet) automation',
+ 'Seven Home Screen and Lock Screen widgets, including one-tap Quick Log and today\'s budget', 'Control Center and Action button controls (iOS 18)', 'Siri phrases such as "What can I spend today", Shortcuts actions, Apple Pay (Wallet) automation',
  'Templates and paste-a-bank-message Quick Add', 'Receipt photos, search and filters', 'App Lock with passcode and Face ID, daily reminder',
  'Monthly CSV export (free); CSV import, range export and JSON backup (Pro)', 'Private iCloud sync, no bank login, no app account',
  'Themes and alternate app icons (Pro)', 'iPhone and iPad, iOS 17 or later']

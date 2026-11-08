@@ -94,13 +94,14 @@
  },
  {
   "slug": "log-expenses-with-siri",
-  "status": "queued",
+  "status": "published",
   "priority": 10,
   "feature": "widgets-and-shortcuts",
   "title": "Log Expenses with Siri and Shortcuts on iPhone",
   "description": "Use Siri phrases and Shortcuts actions to log an expense, record income or check what is left in your budget, hands-free. Exact phrases and setup.",
   "intent": "log expenses with Siri",
-  "angle": "AppShortcuts phrases: 'Log an expense in TrackExpenses', 'What's left in TrackExpenses', 'Say an expense in TrackExpenses'."
+  "angle": "AppShortcuts phrases: 'Log an expense in TrackExpenses', 'What's left in TrackExpenses', 'Say an expense in TrackExpenses'.",
+  "published": "2026-11-08"
  },
  {
   "slug": "import-expenses-from-csv",

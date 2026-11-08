@@ -12,108 +12,112 @@
     "updated": "2026-10-25"
   },
   "features/accounts-and-transfers.html": {
-    "hash": "ed005eb9e6592aad8de016d63ff0226a73e6ecd8b9d8810499357f0cdfa43139",
-    "updated": "2026-11-01"
+    "hash": "6860c471891d0c17d66322dbba5dde6e595de5080e30d1e31babf0b07259fa4d",
+    "updated": "2026-11-04"
   },
   "features/budget-planner.html": {
-    "hash": "156c65df401ae55e4897cd3ed9025b4ca06b28f1ec318ae75d3dda5af7e49705",
+    "hash": "9e924016ffcd11a8b5971c6587551f0968ee5c5f69484eccbcfc8b4af95ef088",
     "updated": "2026-11-04"
   },
   "features/expense-reports.html": {
-    "hash": "43c1a6a87bd1487f8789b06a0ec6f3bca3309a13864cde3ba924bf8d7f6b3c20",
-    "updated": "2026-11-01"
+    "hash": "e2bb396791ef2fb19542a8332cfe5913d8e2ed7aa84cbb53bc17c7a794abd9c9",
+    "updated": "2026-11-04"
   },
   "features/index.html": {
-    "hash": "aa799c1bead3a548eef7ad15561564a07042601ba36042b0e96b6b278ad3aa0e",
-    "updated": "2026-11-01"
+    "hash": "426cb34d6c50475a77567018d8a7905f3cf72b71f77acd492057b2e9845b6540",
+    "updated": "2026-11-04"
   },
   "features/multi-currency-expense-tracker.html": {
-    "hash": "2296c8bda7859838bce100d7ead1df187d294cd8b482320a5737cd8b03c59d7f",
-    "updated": "2026-11-01"
+    "hash": "e62b0d5a66c55225a16fea46197c920a568432dd116cfa08c343ac7b43a5e8ad",
+    "updated": "2026-11-04"
   },
   "features/private-expense-tracker.html": {
-    "hash": "0d3cd94da311992496f2ac66c89fd26b4a8d3142c4169f5460ab3275393ee3f2",
-    "updated": "2026-11-01"
+    "hash": "a61f18c8aab350dddced212f53eefaf260cda4cd47898ebceef1ff97b1de16f3",
+    "updated": "2026-11-04"
   },
   "features/sms-expense-tracker.html": {
-    "hash": "8ce5946ea2d02d4654681a7a08ccc7bca25f65f715611943a3b5fc3458a70086",
-    "updated": "2026-11-01"
+    "hash": "995ed30b4d652e93d2afc9f87a5221a7e22c3fd7806f9624203b443b414b6a2a",
+    "updated": "2026-11-04"
   },
   "features/voice-expense-tracker.html": {
-    "hash": "d863c267256d7d58146e271d8b757a9d97ff315ee190ee40568a5ca16d2a4187",
+    "hash": "612ebdabc9675c6c0c1ba10de5de2e1f1d74fe18d06b17ce5d20edb8ef7e8d83",
     "updated": "2026-11-04"
   },
   "features/widgets-and-shortcuts.html": {
-    "hash": "01ac78d0de2f4c064d1f8e50995d9f19148f5b83c4a683dfe920f83438776370",
-    "updated": "2026-11-01"
+    "hash": "32a69e75f85552f709974cbff69e7818a998f671ddfa5fc9c258c036b4233a3e",
+    "updated": "2026-11-08"
   },
   "guides/50-30-20-budget.html": {
-    "hash": "297603d406a49792a35ce970be141822354f69b994a86d4360af1837be121238",
+    "hash": "d694f8e5b8e55afad91c4545e41d556db64ea7a9baaa3e0e48ce72b293bf03e6",
     "updated": "2026-11-04"
   },
   "guides/apple-pay-expenses.html": {
-    "hash": "9e198c63f549f45743ea6581e6ba3d9808aeb9452e20b98a0784b655c51dc627",
+    "hash": "16f8d343ba619d089121b78bebb42cbdc04fff65a4da0c3192ffce671adf78d2",
     "updated": "2026-10-05"
   },
   "guides/arabic-bank-sms-expenses.html": {
-    "hash": "207f41170092b066a6f967cb438bd8611a924ccd113ec80899b6443dab2ff6a9",
+    "hash": "b2bb89280c10e3e1768c446830e2a86ef11677589b43f7c021932379831cf60a",
     "updated": "2026-10-29"
   },
   "guides/bank-sms-iphone.html": {
-    "hash": "619dbc5973c8d823c24a513df8c7c48a0e1730af717d6fea795e1c02b8a66d2a",
+    "hash": "94956935a125c78eb472efc4ba56aa625384e76e9cc1464da796a5fb6c42cb66",
     "updated": "2026-10-26"
   },
   "guides/budget-pacing-explained.html": {
-    "hash": "9bac9a42c7cec084debfc12e19c546b4f47428e41696d2d9a6dc41548e8b3db6",
+    "hash": "caaa0759e2e9776e5f61bbf63514eb908a3470678f9687f9857bd99264b9abe2",
     "updated": "2026-11-04"
   },
   "guides/credit-card-payment-vs-expense.html": {
-    "hash": "0dcdbd25878c60de4e92f2ca82a8f5ff92c06b0a5ca65ba6917bcb4a777544e9",
+    "hash": "4b1ec85b8380bfbea5bdff2587aba5eab2672776272bbf728001f0bea9949190",
     "updated": "2026-10-13"
   },
   "guides/expense-tracker-without-bank-connection.html": {
-    "hash": "643e19d714cd082990d05cdfdf139e3c60731aadb84fc8de69b8a83f35f2dce7",
+    "hash": "cf35aefb8a19832d0ce97fcf7662b703bb39b796911869cd48a09a8f3575aaca",
     "updated": "2026-10-18"
   },
   "guides/export-expenses-csv.html": {
-    "hash": "82915f91dc260a0904027408ceb5656d23a58114cf3bf557a5c73a29922f6f0b",
+    "hash": "f00a8dd9dfe31d526ef2015f3bb08f30ec2f71fe8a47b3a8f10ec12977a20003",
     "updated": "2026-10-05"
   },
   "guides/index.html": {
-    "hash": "ff03ac49f6436906879d83a32fe1ecd046fd232eeaf1663d079e97a201a3dd86",
-    "updated": "2026-11-04"
+    "hash": "08fa413c51dfb43b15226e576a643206adebf91437d0aaba3949f0927199580a",
+    "updated": "2026-11-08"
+  },
+  "guides/log-expenses-with-siri.html": {
+    "hash": "290571f27aab1f463d88b042f52ba251287059769233a5e0768cc561a6e4d619",
+    "updated": "2026-11-08"
   },
   "guides/payday-budget.html": {
-    "hash": "9566cf03ec5b8c7ab6d590aef316b0f7b785cd7697faf4841bf26572b397f2e1",
+    "hash": "cd1854a805e3cc7018361e0c46a3c2b2ffcba45fa97ffe3f722e2f134c218746",
     "updated": "2026-11-04"
   },
   "guides/sms-automation-not-working.html": {
-    "hash": "6e68903a5adc5bdab0b5478477a579fcad58056f7387d0e000a48537177ccbc7",
+    "hash": "76d3238f72a683de0316859c115fb23182d2da32ad8407cee8adacc8d10e82d7",
     "updated": "2026-10-26"
   },
   "guides/sms-setup.html": {
-    "hash": "616a00f9d3415c4ebfdff104736edef4b2f4ac60e0c36c3fadecb47f38246e3a",
+    "hash": "1485c9faa5d59d0bedd10d8018a9ab79ffc65759a0f63c26f849c56c1253b394",
     "updated": "2026-10-25"
   },
   "guides/track-cash-expenses.html": {
-    "hash": "4fef25ce7e350ff2b862ae9ed387680ab8914b12b0092868a37449d601c83ccf",
+    "hash": "7503b3ab9282f349f89706046dfc3166cb076640b3652bbfad0805cf82dd3c75",
     "updated": "2026-10-13"
   },
   "guides/track-subscriptions-recurring-bills.html": {
-    "hash": "ad8f076b899be0348bd7d534d0159e344a4a426ef5e590c6f1757cc95de21575",
+    "hash": "ecc092e465cc927baa728b972b785f0b30b9e366063d239167fa5805b6163f82",
     "updated": "2026-10-13"
   },
   "guides/voice-expenses-iphone.html": {
-    "hash": "dc4e4561ce76f2e9d68e4f0b983b0e3043a0c5d3aba4d62f7c9bc3cfba55de9a",
+    "hash": "aa68c6d5643f5bd323a298997c26467f6e91a5fae5e0fe17e927e7588b4d397d",
     "updated": "2026-10-13"
   },
   "index.html": {
-    "hash": "2509293abbc2ca68fdb1aba344e9bdca7dd15ef4956a2449ecabe18fa2325044",
+    "hash": "0166f10a94058e4e93abf49633e423dd8aff99422c76ec6e4d78be9633ee7fe6",
     "updated": "2026-11-04"
   },
   "privacy.html": {
-    "hash": "e7c6363ab475a546995ceab3813cbb5cb57d216b31cfbe4d6322c110e3e1f3ab",
-    "updated": "2026-11-04"
+    "hash": "86dce970254ad99a6231003823644a38509081ccbebb3d009e5479d54f39abf1",
+    "updated": "2026-11-08"
   },
   "support.html": {
     "hash": "fab3be1f1406fb0872ebdbaf0f85496f2489e20454eefc733a330f8b945bbaf7",

@@ -42,3 +42,8 @@ Added 30 October 2026: `salary-plan.webp`, from `marketing/website-2026-10/raw/s
 (iPhone 17 Pro simulator, iOS 26.5, appearance dark, `-reset-state -seed-demo -in-memory-store -pro
 -demo-plan -present salaryPlan`). The Actual view's capture, `salary-plan-actual.png`, is kept beside
 it for a later page. Pro capability; the page labels it.
+
+Added 8 November 2026 — the 1.12.0 widgets on a real Home Screen (iPhone 17 Pro simulator, iOS 26.5,
+`-reset-state -seed-demo -pro -demo-templates`, then the Quick Log small widget set to the Taxi template and
+the Today medium widget added through the system widget gallery). Original:
+`marketing/website-2026-11/raw/widgets-home.png` → `widgets-home.webp`.
