@@ -1,10 +1,10 @@
 # Privacy Policy
 
-**Expense Tracker: SMS & Voice (TrackExpenses)** — last updated 8 November 2026.
+**Expense Tracker: SMS & Voice (TrackExpenses)** — last updated 9 November 2026.
 
 ## The short version
 
-TrackExpenses has no account, no login, and no server of ours. Your ledger lives on your iPhone, and — if you leave iCloud on — in your own private iCloud database. We cannot see it, and neither can anyone else.
+TrackExpenses has no account and no login. Your ledger lives on your iPhone, and — if you leave iCloud on — in your own private iCloud database, never on a server of ours. We cannot see it, and neither can anyone else. The one server we run is the money coach's relay, which passes on a question you choose to type and keeps none of it (see **Ask your coach** below).
 
 This policy covers the app on iPhone, iPad and Mac, and the app for Android. Where Android works differently, the section **TrackExpenses for Android** below says how; everything else applies to both.
 
@@ -19,7 +19,7 @@ This policy covers the app on iPhone, iPad and Mac, and the app for Android. Whe
 
 On your device, in the app's own container. If iCloud is on for TrackExpenses, the same data syncs through **your private iCloud database** — that is Apple's infrastructure inside your Apple Account, **not a server of ours**. We have no key to it, no console for it, and no way to read it. Turning iCloud off for TrackExpenses in your iOS settings keeps everything on the one device.
 
-Deleting the app removes the copy on that device. There is no copy on any server of ours, because there is no server of ours.
+Deleting the app removes the copy on that device. There is no copy on any server of ours: the coach's relay, the only server we run, keeps no content.
 
 ## What leaves your device
 
@@ -29,7 +29,7 @@ Deleting the app removes the copy on that device. There is no copy on any server
 
 **Apple.** Purchases are processed by Apple under Apple's own privacy policy, and iCloud sync is carried by Apple under your Apple Account. We never see your payment details.
 
-**Ask your coach.** If you type a question to the money coach, and only after you have agreed on the screen that asks, the question travels with a summary of this month and last month — totals, categories and their budgets, your biggest shops, your salary plan lines and your challenge — and with the questions you asked earlier in the same conversation and the coach's answers to them, to a small relay we run on Cloudflare, which passes it to Anthropic's Claude model and streams the answer back. If the model asks for more, the app answers from your ledger: totals by category, shop, day or month for up to the last 13 months, or, for a question about particular purchases, up to 20 of them with their date, shop name, category and amount. **Nothing else is sent**: never your notes, receipts, account names or numbers, balances, or your whole transaction history. The relay keeps nothing you wrote or asked and logs no content; Anthropic does not use the data to train its models and deletes it within 30 days under its own terms at <https://www.anthropic.com/legal/privacy>. To keep free questions fair, the relay counts how many questions each install asks (ten a month free), how many free questions come from one network address in a day, and, for subscribers, how many each subscription asks — counts that hold no content and don't say who you are; the network-address counts are deleted within two days. So that only the real app can ask, before your first typed question the app has Apple's App Attest service certify a key it creates in your device's secure chip, and signs each question with it: the relay receives Apple's certificate, which describes the key and this app and nothing about you or your money, and keeps beside the random install ID only the key's public half, a counter and the app version. The tapped questions, the entries you type to log, the charts and the files the coach makes are worked out on your device and never leave it. You can withdraw your agreement at any time under More → Privacy & data.
+**Ask your coach.** If you type a question to the money coach, and only after you have agreed on the screen that asks, the question travels with a summary of this month and last month — totals, categories and their budgets, your biggest shops, your salary plan lines and your challenge — and with the questions you asked earlier in the same conversation and the coach's answers to them, to a small relay we run on Cloudflare, which passes it to Anthropic's Claude model and streams the answer back. If the model asks for more, the app answers from your ledger: totals by category, shop, day or month for up to the last 13 months, or, for a question about particular purchases, up to 20 of them with their date, shop name, category and amount. **Nothing else is sent**: never your notes, receipts, account names or numbers, balances, or your whole transaction history. The relay keeps nothing you wrote or asked and logs no content; Anthropic does not use the data to train its models and deletes it within 30 days under its own terms at <https://www.anthropic.com/legal/privacy>. To keep free questions fair, the relay counts how many questions each install asks (ten a month free), how many free questions come from one network address in a day, and, for subscribers, how many each subscription asks — counts that hold no content and don't say who you are; the network-address counts are deleted within two days. The tapped questions, the entries you type to log, the charts and the files the coach makes are worked out on your device and never leave it. You can withdraw your agreement at any time under More → Privacy & data.
 
 On iPhone, iPad and Mac, that is the complete list. Apart from Apple's services, RevenueCat's purchase and Apple Ads measurement, and the coach relay described above, there is no separate analytics SDK, advertising network SDK or crash reporter in the app. The Android app's list is in **TrackExpenses for Android** below.
 
@@ -91,6 +91,7 @@ TrackExpenses is a record-keeping tool. Its insights — safe-to-spend, projecte
 
 If this policy changes, the date at the top changes with it, and material changes will be noted in the app's release notes.
 
+- **9 November 2026:** the coach no longer uses Apple's App Attest, so the relay keeps no key for an install; the short version now names the coach's relay as the one server we run.
 - **8 November 2026:** added **Ask your coach**: a question you type to the money coach, only after you agree on the screen that asks, is sent with a summary of this month and last month and the conversation so far to a relay we run and on to Anthropic's Claude model, which may ask the app for monthly totals or a few purchases. The relay counts questions per install, per subscription and, for a day, per network address, without content, and checks with Apple's App Attest that questions come from the real app. The tapped questions and everything else the coach says stay on your device.
 - **4 November 2026:** added **TrackExpenses for Android**, which describes the Android app. Nothing about the iPhone, iPad and Mac app changed.
 
