@@ -12,40 +12,44 @@
     "updated": "2026-10-25"
   },
   "features/accounts-and-transfers.html": {
-    "hash": "6860c471891d0c17d66322dbba5dde6e595de5080e30d1e31babf0b07259fa4d",
-    "updated": "2026-11-04"
+    "hash": "051940d3476324068e4d66507721bc1a14711f74249ff24e4108eaef2d713c53",
+    "updated": "2026-11-09"
+  },
+  "features/ai-money-coach.html": {
+    "hash": "b2f24233065260590fe6c36fdebdc096abb2e22f145b7eaf84e2c57f9836dc50",
+    "updated": "2026-11-09"
   },
   "features/budget-planner.html": {
-    "hash": "9e924016ffcd11a8b5971c6587551f0968ee5c5f69484eccbcfc8b4af95ef088",
-    "updated": "2026-11-04"
+    "hash": "afdedeb41bb293e01d4d5a6f01054a6d71976774a00c1ad0c52d0647213c94f5",
+    "updated": "2026-11-09"
   },
   "features/expense-reports.html": {
-    "hash": "e2bb396791ef2fb19542a8332cfe5913d8e2ed7aa84cbb53bc17c7a794abd9c9",
-    "updated": "2026-11-04"
+    "hash": "f182a0600b3462ee679e0e0ac1484b8947f8ed556ac6058621d4df859840a3a1",
+    "updated": "2026-11-09"
   },
   "features/index.html": {
-    "hash": "426cb34d6c50475a77567018d8a7905f3cf72b71f77acd492057b2e9845b6540",
-    "updated": "2026-11-04"
+    "hash": "bca4de5a2a678be54dd7a876f429a7309780deb7443f71dfa6072264d74ec88d",
+    "updated": "2026-11-09"
   },
   "features/multi-currency-expense-tracker.html": {
-    "hash": "e62b0d5a66c55225a16fea46197c920a568432dd116cfa08c343ac7b43a5e8ad",
-    "updated": "2026-11-04"
+    "hash": "0a72a07f450d98640ad07920fe77d4d51644eb7375108cd3887d70a6d1a174ae",
+    "updated": "2026-11-09"
   },
   "features/private-expense-tracker.html": {
-    "hash": "a61f18c8aab350dddced212f53eefaf260cda4cd47898ebceef1ff97b1de16f3",
-    "updated": "2026-11-04"
+    "hash": "fbc047c93ee56ce94991c0991fce9c77daf3366365ddb6728cf5ab77057e663b",
+    "updated": "2026-11-09"
   },
   "features/sms-expense-tracker.html": {
-    "hash": "995ed30b4d652e93d2afc9f87a5221a7e22c3fd7806f9624203b443b414b6a2a",
-    "updated": "2026-11-04"
+    "hash": "c6e8e6872b89359f64e51547ae5524ec8e9a54bcbf28a143de9a7432bef9e950",
+    "updated": "2026-11-09"
   },
   "features/voice-expense-tracker.html": {
-    "hash": "612ebdabc9675c6c0c1ba10de5de2e1f1d74fe18d06b17ce5d20edb8ef7e8d83",
-    "updated": "2026-11-04"
+    "hash": "7cbf649a02a3917cb7925e8716c5dc8655a847d05356aaa1432019c2f94469d6",
+    "updated": "2026-11-09"
   },
   "features/widgets-and-shortcuts.html": {
-    "hash": "32a69e75f85552f709974cbff69e7818a998f671ddfa5fc9c258c036b4233a3e",
-    "updated": "2026-11-08"
+    "hash": "17c398b132d9a599a2e07a267f612b5dc94ac46c32c4f067aa982cf0a6d8de96",
+    "updated": "2026-11-09"
   },
   "guides/50-30-20-budget.html": {
     "hash": "d694f8e5b8e55afad91c4545e41d556db64ea7a9baaa3e0e48ce72b293bf03e6",
@@ -112,8 +116,8 @@
     "updated": "2026-10-13"
   },
   "index.html": {
-    "hash": "0166f10a94058e4e93abf49633e423dd8aff99422c76ec6e4d78be9633ee7fe6",
-    "updated": "2026-11-04"
+    "hash": "56b56e53f677bfafef544004889c18991be995177614d0fe3678235ad75105d1",
+    "updated": "2026-11-09"
   },
   "privacy.html": {
     "hash": "cc174edea0e9cce7869806e3d96868de3d86d9df4954f01567f46970937f3c23",

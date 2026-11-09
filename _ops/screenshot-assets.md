@@ -47,3 +47,11 @@ Added 8 November 2026 — the 1.12.0 widgets on a real Home Screen (iPhone 17 Pr
 `-reset-state -seed-demo -pro -demo-templates`, then the Quick Log small widget set to the Taxi template and
 the Today medium widget added through the system widget gallery). Original:
 `marketing/website-2026-11/raw/widgets-home.png` → `widgets-home.webp`.
+
+Added 9 November 2026 — the money coach page (`features/ai-money-coach.html`): `coach-reading.webp`, from
+`marketing/app-store-2026-11-ae/raw/coach-challenge.png`, the raw capture behind the UAE store set's coach frame (commit
+8a8bc9a: a 6.9-inch simulator capture of the Coach tab on the UAE demo ledger, in English, after tapping “How do I cut
+it?”; 1320 × 2868). Scaled to 660 × 1434 and encoded as
+WebP quality 88, otherwise untouched. The UAE capture rather than the US one keeps the site's AED convention; the composed
+store frame (`upload/iphone-with-coach/02-coach.png`) was not used because it adds a headline and badges over the screen.
+Joining the challenge shown is Pro; the page labels it.

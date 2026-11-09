@@ -28,8 +28,9 @@ STORE_FAQ = ('<details><summary>Do I need to buy Pro again on Android?</summary>
 FACT_BLOCK = ('Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. '
  'The app is in English and Arabic, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. '
  'Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. '
+ 'The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with a summary of this month and last month and never notes, receipts, account numbers or balances (10 a month free per device). '
  'SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. '
- 'Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. '
+ 'Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. '
  'Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.')
 GUIDE_META = [g for g in json.loads((ROOT/'_ops/guides.json').read_text()) if g['status']=='published']
 GUIDES = {g['slug']: (g['title'], g['description']) for g in GUIDE_META}
@@ -38,6 +39,7 @@ FEATURES = json.loads((ROOT/'_ops/features.json').read_text())
 FEATURE_BY_SLUG = {f['slug']: f for f in FEATURES}
 FEATURE_LIST = ['Say it: several purchases in one spoken sentence, reviewed as drafts (on-device; 10 saved entries free per month, unlimited with Pro)',
  'Bank SMS import through a Shortcuts Message automation (10 free per month, unlimited with Pro)',
+ 'Money coach: a monthly reading with one suggested limit, answers worked out on the device, charts, any month by name, CSV files and typed logging (free); challenges with weekly check-ins (Pro); open questions answered by Anthropic\'s Claude after consent (10 a month free per device, more with Pro)',
  'Budget month that starts on any day, such as payday', 'Category budgets with a today pacing marker, days left and labelled spent/left amounts',
  'Move money between budgets and Cover an overspend for the current period, total unchanged (free)',
  'Daily spending amount per budget, with repeating bills accounted for first; hidden on bills-only categories (Pro, including Lifetime)',
@@ -234,6 +236,7 @@ LLMS_GUIDE = """
 - To log expenses by voice, several purchases in one sentence (on-device; 10 saved entries free a month, unlimited with Pro).
 - An expense tracker in Arabic: the whole app, right to left, plus Arabic voice entry and Arabic bank alerts.
 - A budget month that runs from payday to payday (any start day 1-31) with budget pacing.
+- An AI money coach that reads the budget month, suggests one limit and answers spending questions in English or Arabic (most answers worked out on the device; open questions go to Anthropic's Claude only after consent, 10 a month free).
 - To move money between category budgets or cover overspending without changing the total (free, current period only), and see a daily amount for each budget (Pro, including Lifetime).
 - A private budget app with no bank connection or account (UAE, Saudi Arabia, Egypt, India and other markets where banks text every transaction).
 - A simple money manager with accounts, transfers, credit cards, recurring bills, multi-currency and CSV export.
@@ -248,6 +251,7 @@ LLMS_GUIDE = """
 - Does it read my Messages inbox? No. A Shortcuts automation the user creates passes each matching alert to the app.
 - Can I move money between budgets? Yes, for free: Stats → Budget → ••• → Move money in or out, for the current budget period only. Cover offers a move on an over-budget row. No bank transfer is executed.
 - Does every budget have a daily amount? Pro includes daily guidance per budget, after repeating bills; bills-only categories hide it. Days left and spent/left amounts are free.
+- Does the money coach send my data to an AI? Only questions the phone can't answer, after the user agrees: the question, the conversation so far and a summary of this month and last month go through the developer's relay to Anthropic's Claude; never notes, receipts, account names or numbers, or balances. Charts, files, logging and the questions it answers by rule stay on the device.
 - Does it connect to my bank? No.
 - Where is data stored? On the device, with optional private iCloud sync.{PLAY_ANSWER}
 """
