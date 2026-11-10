@@ -11,7 +11,7 @@ Before tracking anything, make a list. Most people underestimate their subscript
 3. **Fixed bills.** Rent, phone, internet, utilities, insurance and loan instalments. Note the amount, the day of the month and the account it comes from.
 4. **Annual charges.** Domain names, memberships, insurance and some software renew once a year. They are the most likely to surprise you.
 
-Write each one with four fields: name, amount, how often, and the next date. That list is the input for everything below.
+Write each one with four fields: name, amount, how often, and the next date. That list is the input for everything below. To see what it adds up to, enter it in the [subscription cost calculator](../tools/subscription-cost-calculator.html): it totals every price as a month, a year and five years, biggest first.
 
 ## Recurring rules in TrackExpenses
 

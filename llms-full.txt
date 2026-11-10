@@ -86,6 +86,11 @@ App Store: https://apps.apple.com/app/id6806614497
 - [50/30/20 Budget: How to Split Your Take-Home Pay](https://trackexpenses.app/guides/50-30-20-budget.html): Split take-home pay into 50% needs, 30% wants and 20% savings, with a worked example, iPhone Calculator and Numbers steps, and a payday salary plan.
 - [Log Expenses with Siri and Shortcuts on iPhone](https://trackexpenses.app/guides/log-expenses-with-siri.html): Use Siri phrases and Shortcuts actions to log an expense, record income or check what is left in your budget, hands-free. Exact phrases and setup.
 
+## Free calculators (run in the browser, nothing sent or saved)
+- [Daily Budget Until Payday Calculator](https://trackexpenses.app/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
+- [50/30/20 Budget Calculator](https://trackexpenses.app/tools/50-30-20-calculator.html): Split take-home pay into needs, wants and savings per paycheck, month and year. Custom shares, a reference table, and nothing sent or saved.
+- [Subscription Cost Calculator](https://trackexpenses.app/tools/subscription-cost-calculator.html): Add up your subscriptions as a month, a year and five years, sorted by cost, with their share of your pay. Runs in your browser only.
+
 ## All official pages
 - [Expense Tracker: SMS & Voice | TrackExpenses](https://trackexpenses.app/): Track expenses with Say it voice drafts, bank SMS imports and payday budgets. See real app screenshots, free features and Pro tools for iPhone and iPad.
 - [Bank SMS Expense Tracking on iPhone | TrackExpenses](https://trackexpenses.app/guides/bank-sms-iphone.html): Set up bank SMS expense tracking on iPhone with iOS 27 or iOS 26. Connect the incoming message, test your bank alerts and review imported entries.
@@ -119,6 +124,9 @@ App Store: https://apps.apple.com/app/id6806614497
 - [Support and Free / Pro Limits | TrackExpenses](https://trackexpenses.app/support.html): Get TrackExpenses help, review free and Pro limits, restore purchases, fix imports and export your records.
 - [Terms of Use | TrackExpenses](https://trackexpenses.app/terms.html): TrackExpenses terms on the App Store (Apple’s Standard EULA) and on Google Play: purchases, renewals, refunds and calculation limits.
 - [Daily Budget Until Payday Calculator | TrackExpenses](https://trackexpenses.app/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
+- [50/30/20 Budget Calculator | TrackExpenses](https://trackexpenses.app/tools/50-30-20-calculator.html): Split take-home pay into needs, wants and savings per paycheck, month and year. Custom shares, a reference table, and nothing sent or saved.
+- [Subscription Cost Calculator | TrackExpenses](https://trackexpenses.app/tools/subscription-cost-calculator.html): Add up your subscriptions as a month, a year and five years, sorted by cost, with their share of your pay. Runs in your browser only.
+- [Free Budget Calculators | TrackExpenses](https://trackexpenses.app/tools/index.html): Three free calculators that run in your browser: daily budget until payday, the 50/30/20 split and subscription cost. No sign-up, nothing sent.
 - [Best iPhone Expense Trackers: How to Choose](https://trackexpenses.app/compare/best-expense-trackers.html): Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.
 - [Monefy Alternative with SMS and Voice | TrackExpenses](https://trackexpenses.app/compare/monefy-alternative.html): Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.
 - [iOS 27 Bank SMS Setup Video | TrackExpenses](https://trackexpenses.app/videos/sms-setup-ios27.html): Watch the iOS 27 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.
@@ -307,6 +315,8 @@ https://trackexpenses.app/
 
 
    A HELPFUL HEAD START  Make your first week easier.     SET UP  Bank SMS expense tracking on iPhone  Get the automation right →    BUDGET  Start your budget month on payday  Find your monthly rhythm →    SAY IT  Voice expense tracking on iPhone  From spoken purchase to draft →
+
+   FREE CALCULATORS  Do the arithmetic first.     UNTIL PAYDAY  Daily budget until payday  What you can spend per day →    PLAN THE MONTH  50/30/20 budget calculator  Needs, wants and savings →    FIXED COSTS  Subscription cost calculator  A month, a year, five years →
 
 
 ## Bank SMS Expense Tracking on iPhone | TrackExpenses
@@ -631,12 +641,12 @@ https://trackexpenses.app/guides/arabic-bank-sms-expenses.html
 
 ## Track Subscriptions and Recurring Bills on iPhone
 https://trackexpenses.app/guides/track-subscriptions-recurring-bills.html
- How to track subscriptions and recurring bills on iPhone  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction    In this guide    Find what you already pay    Recurring rules in TrackExpenses    Bills that change every month    Put bills inside your payday month    Let alerts confirm the charge    Review the list every quarter    Annual subscriptions    Frequently asked questions
+ How to track subscriptions and recurring bills on iPhone  By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction    In this guide    Find what you already pay    Recurring rules in TrackExpenses    Bills that change every month    Put bills inside your payday month    Let alerts confirm the charge    Review the list every quarter    Annual subscriptions    Frequently asked questions
  Write every subscription and fixed bill down once as a recurring rule, so it appears in your ledger on the day it is charged without being typed again. Then review the list every few months: recurring rules make bills visible, and visible bills are the ones you actually cancel.
  Find what you already pay
  Before tracking anything, make a list. Most people underestimate their subscriptions because each one is small and arrives on a different day.
  1.  App Store subscriptions.  On iPhone, open Settings, tap your name, then Subscriptions. This lists everything billed through Apple, active and expired. 2.  Card and bank statements.  Scan the last three months for repeated amounts and merchants: streaming, music, cloud storage, gym, software, news. 3.  Fixed bills.  Rent, phone, internet, utilities, insurance and loan instalments. Note the amount, the day of the month and the account it comes from. 4.  Annual charges.  Domain names, memberships, insurance and some software renew once a year. They are the most likely to surprise you.
- Write each one with four fields: name, amount, how often, and the next date. That list is the input for everything below.
+ Write each one with four fields: name, amount, how often, and the next date. That list is the input for everything below. To see what it adds up to, enter it in the  subscription cost calculator : it totals every price as a month, a year and five years, biggest first.
  Recurring rules in TrackExpenses
  TrackExpenses calls these Recurring. Open More → Recurring and tap the plus button. For each item:
 
@@ -811,9 +821,9 @@ https://trackexpenses.app/guides/50-30-20-budget.html
   Wants (30%)  are the things you choose: eating out, delivery, shopping, entertainment, travel and most subscriptions.
   Savings (20%)  is money you keep: an emergency fund, investments, retirement, and loan payments above the minimum.
 
- Decide the grey areas once and keep them there. A gym membership can be a want; a phone plan is usually a need, an upgrade is a want. Consistency matters more than the perfect label, because the point is to compare one month with the next.
+ Decide the grey areas once and keep them there. A gym membership can be a want; a phone plan is usually a need, an upgrade is a want. Consistency matters more than the perfect label: the point is to compare months.
  Work out your three amounts on iPhone
- You do not need an app for the arithmetic. In Calculator, type your take-home pay and multiply by 0.5, then 0.3, then 0.2. Apple's  Calculator guide  covers the basic keypad.
+ The  50/30/20 budget calculator  does the arithmetic in your browser. On iPhone, open Calculator, type your take-home pay and multiply by 0.5, then 0.3, then 0.2. Apple's  Calculator guide  covers the basic keypad.
  For a reusable sheet, open Numbers, type your take-home pay into one cell and add three result cells. Apple's  Numbers formula instructions  explain how to tap a result cell, open the Formula Editor, tap the pay cell and multiply it by 0.5, 0.3 or 0.2. When your pay changes, the three amounts update with it.
  Then list your categories in two columns, needs and wants, and write a monthly amount beside each. Add the needs: if they come to more than half your pay, you have found the real constraint before you spend anything.
  A worked example with real numbers
@@ -1115,7 +1125,7 @@ https://trackexpenses.app/features/index.html
 
 ## Expense Tracking Guides | TrackExpenses
 https://trackexpenses.app/guides/index.html
- Make your ledger easier to keep.  Start with the task you need to solve. Each guide explains the workflow and its limits.    NOVEMBER 2026   Log Expenses with Siri and Shortcuts on iPhone   Use Siri phrases and Shortcuts actions to log an expense, record income or check what is left in your budget, hands-free. Exact phrases and setup.    NOVEMBER 2026   50/30/20 Budget: How to Split Your Take-Home Pay   Split take-home pay into 50% needs, 30% wants and 20% savings, with a worked example, iPhone Calculator and Numbers steps, and a payday salary plan.    OCTOBER 2026   SMS Auto-Import Setup: iOS 27 and 26   Set up bank SMS imports with iOS 27 and iOS 26 videos, real screenshots, message variables, account matching, testing and troubleshooting.    NOVEMBER 2026   Budget Pacing: Are You Spending Too Fast This Month?   Read a budget bar with a today marker: what 60% spent means on day 10 vs day 25, planned early bills, and when to slow down. With a worked example.    OCTOBER 2026   Track Expenses Without Connecting Your Bank on iPhone   Choose manual, voice or supported SMS entry, set up a bank-free ledger and reconcile spending without sharing a bank login.    OCTOBER 2026   Credit Card Payment vs Expense: Avoid Double Counting   Is paying your credit card bill an expense? No: record purchases as expenses and the payment as a transfer. A simple method that never counts twice.    OCTOBER 2026   How to Track Cash Expenses on iPhone   Track cash spending without forgetting it: a cash account, ATM transfers, three-second logging by voice or template, and a weekly wallet count.    OCTOBER 2026   Arabic Bank SMS Expense Tracking on iPhone   Turn Arabic bank SMS alerts from UAE, Saudi, Oman and Egypt banks into expenses on iPhone. How the reader handles Arabic, codes and salary credits.    OCTOBER 2026   Track Subscriptions and Recurring Bills on iPhone   Find every subscription, add bills once as recurring rules, keep them inside your payday month and review the list quarterly to cancel what you skip.    OCTOBER 2026   Bank SMS Expense Tracking on iPhone   Set up bank SMS expense tracking on iPhone with iOS 27 or iOS 26. Connect the incoming message, test your bank alerts and review imported entries.    NOVEMBER 2026   Start Your Budget Month on Payday   Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.    OCTOBER 2026   Voice Expense Tracking on iPhone   Say one or several purchases, review the drafts and save. Learn TrackExpenses voice entry, device support and on-device privacy.    OCTOBER 2026   Fix Bank SMS Automation on iPhone   Fix iPhone bank SMS imports: iOS 27 Message Content, iOS 26 Shortcut Input, filters, activity logs, locked entries and duplicate checks.    OCTOBER 2026   Export iPhone Expenses to CSV   Export your selected month for free. Check dates and currencies in Numbers, and understand CSV versus a full TrackExpenses backup.    OCTOBER 2026   Track Apple Pay Purchases on iPhone   Set up a supported Shortcuts Transaction automation, map card inputs and review Wallet purchase entries for duplicates.
+ Make your ledger easier to keep.  Start with the task you need to solve. Each guide explains the workflow and its limits.    NOVEMBER 2026   Log Expenses with Siri and Shortcuts on iPhone   Use Siri phrases and Shortcuts actions to log an expense, record income or check what is left in your budget, hands-free. Exact phrases and setup.    NOVEMBER 2026   50/30/20 Budget: How to Split Your Take-Home Pay   Split take-home pay into 50% needs, 30% wants and 20% savings, with a worked example, iPhone Calculator and Numbers steps, and a payday salary plan.    OCTOBER 2026   SMS Auto-Import Setup: iOS 27 and 26   Set up bank SMS imports with iOS 27 and iOS 26 videos, real screenshots, message variables, account matching, testing and troubleshooting.    NOVEMBER 2026   Budget Pacing: Are You Spending Too Fast This Month?   Read a budget bar with a today marker: what 60% spent means on day 10 vs day 25, planned early bills, and when to slow down. With a worked example.    OCTOBER 2026   Track Expenses Without Connecting Your Bank on iPhone   Choose manual, voice or supported SMS entry, set up a bank-free ledger and reconcile spending without sharing a bank login.    OCTOBER 2026   Credit Card Payment vs Expense: Avoid Double Counting   Is paying your credit card bill an expense? No: record purchases as expenses and the payment as a transfer. A simple method that never counts twice.    OCTOBER 2026   How to Track Cash Expenses on iPhone   Track cash spending without forgetting it: a cash account, ATM transfers, three-second logging by voice or template, and a weekly wallet count.    OCTOBER 2026   Arabic Bank SMS Expense Tracking on iPhone   Turn Arabic bank SMS alerts from UAE, Saudi, Oman and Egypt banks into expenses on iPhone. How the reader handles Arabic, codes and salary credits.    NOVEMBER 2026   Track Subscriptions and Recurring Bills on iPhone   Find every subscription, add bills once as recurring rules, keep them inside your payday month and review the list quarterly to cancel what you skip.    OCTOBER 2026   Bank SMS Expense Tracking on iPhone   Set up bank SMS expense tracking on iPhone with iOS 27 or iOS 26. Connect the incoming message, test your bank alerts and review imported entries.    NOVEMBER 2026   Start Your Budget Month on Payday   Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.    OCTOBER 2026   Voice Expense Tracking on iPhone   Say one or several purchases, review the drafts and save. Learn TrackExpenses voice entry, device support and on-device privacy.    OCTOBER 2026   Fix Bank SMS Automation on iPhone   Fix iPhone bank SMS imports: iOS 27 Message Content, iOS 26 Shortcut Input, filters, activity logs, locked entries and duplicate checks.    OCTOBER 2026   Export iPhone Expenses to CSV   Export your selected month for free. Check dates and currencies in Numbers, and understand CSV versus a full TrackExpenses backup.    OCTOBER 2026   Track Apple Pay Purchases on iPhone   Set up a supported Shortcuts Transaction automation, map card inputs and review Wallet purchase entries for duplicates.
 
 ## About Mohamed Elatabany | TrackExpenses
 https://trackexpenses.app/about.html
@@ -1209,8 +1219,78 @@ https://trackexpenses.app/tools/daily-budget.html
    Period budget    Recorded spending    Extra upcoming commitments   Only commitments not already in recorded spending.   Today's date    Last day of this budget period   Usually the day before your next payday.    Calculate daily budget
  Example: 1,200 − 480 − 120 = 600 remaining. Over 10 days including today, that is 60.00 per day.   JavaScript enables the calculator. Use the formula and table below without it; all guides and examples remain readable.
  Reference examples    Illustrative amounts in one currency; remaining days include today    Budget  Spent  Extra commitments  Days left  Per day      1,200  480  120  10  60.00    1,200  600  0  15  40.00    900  850  50  5  0.00    900  950  0  5  0.00 (50 over budget)    600  420  0  1  180.00
- The formula and its limits   Daily amount = max(0, budget − recorded spending − extra commitments) ÷ days left.  We include today and the last day. A period ending today has one day left. A date in the past produces an error instead of an invented allowance. The display rounds to two decimal places; the calculation keeps the unrounded result.  Only subtract extra commitments once. If next week's rent is already included in recorded spending, leave it out of the extra-commitments field. This calculator offers an optional reserve you choose; it is not an exact replica of every TrackExpenses forecasting scenario.  From an example to your ledger  TrackExpenses lets your month start on a fixed monthly payday and keeps transactions, budgets and charts in the same window. Ordinary budget facts and pacing stay free. Pro adds daily guidance, forecasts and what-if plans based on your recorded figures.   Set your monthly payday period  ·  Check recorded spending in CSV
- By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction
+ The formula and its limits   Daily amount = max(0, budget − recorded spending − extra commitments) ÷ days left.  We include today and the last day. A period ending today has one day left. A date in the past produces an error instead of an invented allowance. The display rounds to two decimal places; the calculation keeps the unrounded result.  Only subtract extra commitments once. If next week's rent is already included in recorded spending, leave it out of the extra-commitments field. This calculator offers an optional reserve you choose; it is not an exact replica of every TrackExpenses forecasting scenario.  From an example to your ledger  TrackExpenses lets your month start on a fixed monthly payday and keeps transactions, budgets and charts in the same window. Ordinary budget facts and pacing stay free. Pro adds daily guidance, forecasts and what-if plans based on your recorded figures.   Set your monthly payday period  ·  Check recorded spending in CSV   More calculators:  50/30/20 budget calculator  ·  Subscription cost calculator
+ By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
+
+
+## 50/30/20 Budget Calculator | TrackExpenses
+https://trackexpenses.app/tools/50-30-20-calculator.html
+ 50/30/20 budget calculator
+ Enter your take-home pay and see what 50% for needs, 30% for wants and 20% for savings come to, per paycheck, per month and per year. Change the three shares if 50/30/20 does not fit your rent.
+  Split your take-home pay  All figures stay in this browser. They are not sent or saved.
+   Take-home pay   After tax and deductions.   I am paid   Once a month  Twice a month  Every two weeks  Every week    Needs %    Wants %    Savings %   The three shares must add up to 100.    Calculate my split
+ Example: take-home pay of 4,000 once a month gives 2,000 for needs, 1,200 for wants and 800 for savings.
+   Your split    Share  Per paycheck  Per month  Per year      Needs (50%)  2,000.00  2,000.00  24,000.00    Wants (30%)  1,200.00  1,200.00  14,400.00    Savings (20%)  800.00  800.00  9,600.00
+  JavaScript enables the calculator. Without it, use the formula and the reference table below.
+ 50/30/20 for common take-home amounts
+   Monthly take-home pay split 50/30/20, in one currency    Take-home pay  Needs (50%)  Wants (30%)  Savings (20%)      2,000  1,000  600  400    3,000  1,500  900  600    4,000  2,000  1,200  800    5,000  2,500  1,500  1,000    6,500  3,250  1,950  1,300    8,000  4,000  2,400  1,600    12,000  6,000  3,600  2,400    20,000  10,000  6,000  4,000
+ How the calculator works
+  Each amount = take-home pay × its share ÷ 100.  The per-year column multiplies one paycheck by the number of paychecks in a year: 12 when you are paid once a month, 24 twice a month, 26 every two weeks and 52 every week. The per-month column is the year divided by 12, so someone paid every two weeks sees a month slightly larger than two paychecks: 26 paychecks do not fit evenly into 12 months.
+ The display rounds to two decimal places. The three shares must add up to 100; if they do not, the calculator says what they add up to instead of guessing which one you meant to change.
+ What goes in each share
+   Needs  are payments you would have to make even in a tight month: rent or mortgage, utilities, groceries, insurance, getting to work, childcare and the minimum payment on any loan or card.   Wants  are the things you choose: eating out, delivery, shopping, entertainment, travel and most subscriptions.   Savings  is money you keep: an emergency fund, investments, retirement, and loan payments above the minimum.
+ The split comes from the book All Your Worth by Elizabeth Warren and Amelia Warren Tyagi (2005), and it works on take-home pay. The  50/30/20 budget guide  has a full worked example, with every category sorted into its group.
+ When 50/30/20 does not fit
+ Add up your needs first. If rent alone takes 40% of your pay, needs will not stop at 50%, and no calculator changes that. Enter the shares your month really has, such as 60/20/20, and treat 50/30/20 as the direction to move in when a lease or a loan ends. What matters is that the three shares are decided on purpose and add up to all of your pay.
+ From three numbers to a working budget
+ A split is a plan for the month; it helps only if you compare it with what you spent. In TrackExpenses, category budgets, pacing against today and moving money between budgets are free. The salary plan, a Pro feature, lists your income, each spending category and your savings with each line's share of income, and shows Plan beside Actual at the end of the month.
+  Daily budget until payday calculator  ·  Subscription cost calculator  ·  Budget planner in TrackExpenses
+ Questions
+  Is the 50/30/20 rule based on income before or after tax?  After tax. Use your take-home pay: what reaches your account after tax and deductions. Where salaries are not taxed, that is the salary that arrives.
+  Where do debt payments go in a 50/30/20 budget?  The minimum payment on a loan or card is a need. Anything you pay above the minimum counts in the 20% for savings, because it reduces what you owe.
+  What if my needs are more than 50% of my pay?  Then the split has shown you the real constraint. Use shares that match your month for now, such as 60/20/20, and bring needs down when you can. Do not take the difference out of savings without deciding to.
+ By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
+
+
+## Subscription Cost Calculator | TrackExpenses
+https://trackexpenses.app/tools/subscription-cost-calculator.html
+ Subscription cost calculator
+ List what you pay for each subscription and how often. The calculator adds them up as a month, a year and five years, and shows which ones cost the most.
+  Add up your subscriptions  All figures stay in this browser. They are not sent or saved. Use one currency for every price.
+    Name    Price    Billed   Every week  Every month  Every 3 months  Every year    Remove    Name    Price    Billed   Every week  Every month  Every 3 months  Every year    Remove    Name    Price    Billed   Every week  Every month  Every 3 months  Every year    Remove
+  Add a subscription
+  Monthly take-home pay (optional)     Add them up
+ Example: 3 subscriptions come to 24.50 a month, 294.00 a year and 1,470.00 over five years.
+  Video streaming: 144.00 a year  Music: 120.00 a year  Cloud storage: 30.00 a year
+  JavaScript enables the calculator. Without it, use the formula and the reference table below.
+ What a monthly price adds up to
+   One subscription at an unchanged price, in one currency    Per month  Per year  Over five years      5  60  300    10  120  600    15  180  900    20  240  1,200    30  360  1,800    50  600  3,000    100  1,200  6,000
+ How it is calculated
+  Yearly cost = price × times billed in a year.  A weekly price is multiplied by 52, a monthly one by 12, one billed every three months by 4, and a yearly one counts once. The monthly figure is the yearly total divided by 12, which is why a yearly plan of 30 shows as 2.50 a month. Five years is the yearly total times five.
+ The five-year figure assumes prices stay where they are. They usually rise, so read it as the least you would pay, not a forecast. The list under the result sorts your subscriptions by yearly cost, biggest first: the top two or three are where a decision changes the total.
+ Find every subscription you pay for
+ On iPhone, open Settings, tap your name, then tap Subscriptions. That list shows what is billed through Apple, with each renewal date and price; Apple's  subscriptions help page  shows the same steps and how to cancel there. Anything you signed up for on a website is not in that list, so go through one full month of card and bank statements as well, and look back a year for yearly renewals, which are the easiest to forget.
+ Monthly or yearly plan?
+ Divide the yearly price by 12 and compare it with the monthly price. A plan that costs 10 a month or 96 a year works out at 8 a month on the yearly plan, 24 less over the year. That saving is real only if you keep the subscription all year: cancel after three months and the yearly plan cost 96 where three monthly payments would have cost 30.
+ Keep them in your ledger
+ A total you worked out once goes stale the next time a price changes. In TrackExpenses a subscription is a repeating transaction: it is written into your ledger on its day without you entering it, and a changed price is one edit to the rule. Two repeating rules are free and Pro makes them unlimited. Stats → Overview then shows your fixed costs as a month and as a year.
+  Guide: track subscriptions and recurring bills  ·  50/30/20 budget calculator  ·  Daily budget until payday calculator
+ Questions
+  How do I see my subscriptions on iPhone?  Open Settings, tap your name, then tap Subscriptions. The list shows subscriptions billed through Apple. Ones you pay for directly, by card or through your bank, appear only on your statements.
+  Is a yearly plan cheaper than paying monthly?  Usually, if you keep it for the whole year. Divide the yearly price by 12 and compare it with the monthly price. A yearly plan you stop using after three months costs more than three monthly payments would have.
+  How much should I spend on subscriptions?  There is no fixed rule. In a 50/30/20 budget most subscriptions are wants, so they share the 30% with eating out, shopping and entertainment. Seeing the yearly total beside your pay is what makes the decision clear.
+ By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
+
+
+## Free Budget Calculators | TrackExpenses
+https://trackexpenses.app/tools/index.html
+ Free budget calculators
+ Three small calculators for the questions a budget starts with. They run in your browser: nothing you type is sent or saved, and there is nothing to sign up for.
+   UNTIL PAYDAY   Daily budget until payday   What is left of your budget, divided by the days until you are paid again, today included.    PLAN THE MONTH   50/30/20 budget calculator   Your take-home pay split into needs, wants and savings, per paycheck, per month and per year, with shares you can change.    FIXED COSTS   Subscription cost calculator   Every subscription added up as a month, a year and five years, sorted by what costs the most.
+ How these calculators are made
+ Each page states its formula and prints a reference table, so you can check a result by hand or use the page with JavaScript switched off. Amounts carry no currency symbol: use one currency for everything you enter. The results are arithmetic on the figures you type, not financial advice.
+ When you want the same answers from your real spending,  TrackExpenses  works them out from your ledger, and the  guides  explain each method step by step.
+ By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
 
 
 ## Best iPhone Expense Trackers: How to Choose

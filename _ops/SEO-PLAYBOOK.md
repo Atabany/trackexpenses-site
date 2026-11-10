@@ -237,3 +237,33 @@ Pages runs were cancelled, so the live site never lost the Android text. Lesson:
 session may publish, fetch, compare the head with the one the work was based on, and rebase if it
 moved; never lease against a head you have not reviewed. App `site/` and the public repo now match
 file for file, so the normal mirror flow can resume.
+
+## 10 November 2026 — two calculators and a calculators hub
+
+Owner's request of 10 November: "Enhance the website, make it much better ranking, and post some tool on it".
+Added `tools/50-30-20-calculator.html` (take-home pay split into needs, wants and savings per paycheck, per
+month and per year; monthly, twice-monthly, biweekly and weekly pay; shares can be changed and must add up to
+100), `tools/subscription-cost-calculator.html` (any number of subscriptions, each weekly, monthly, quarterly or
+yearly, totalled as a month, a year and five years, sorted by yearly cost, with an optional share of pay) and the
+hub `tools/index.html`. The navigation's "Calculator" link is now "Calculators" and points at the hub; the footer
+and the home page (section `#calculators`) link all three; the 50/30/20 guide, the subscriptions guide and the
+daily-budget calculator link to the new pages. Tool pages carry a WebApplication record (free, any browser) and
+their visible questions as an FAQPage; the hub an ItemList; llms.txt lists the calculators in their own section.
+
+Choice of tools is editorial judgment, not measured demand: the Chrome extension was not connected in this run,
+so no Search Console queries were read, and no search volume is claimed for either topic. Both extend pages the
+site already has (the 50/30/20 guide of 4 November, the subscriptions guide) and facts the app really has (salary
+plan percentages are Pro; two repeating rules free; Stats shows fixed costs as a month and a year). Arithmetic
+was checked in headless Chrome on the built pages: 2,500 every two weeks at 50% is 1,250 per paycheck, 2,708.33
+per month, 32,500 per year; three example subscriptions come to 24.50 a month, 294.00 a year, 1,470.00 over five
+years. Both run without sending anything and state their formula with a server-rendered reference table.
+
+Rules that came out of it: a guide must stay inside 800 to 1,300 authored words, and a relative link counts as
+words (the calculator link cost the 50/30/20 guide eleven), so adding a link to a full guide means trimming a
+sentence; a table of three or four short number columns takes `class="table-wrap compact"` so a phone shows it
+whole instead of the swipe hint; `style.css?v=12`, `site.js?v=11`.
+
+Next, in order of expected value and still to decide with the owner: an Arabic home page and one Arabic guide
+(the app is fully Arabic and its markets search in Arabic; the site is English only); a German home page once
+1.13.0 is live; reading Search Console queries when the browser is connected, before choosing the next page.
+

@@ -201,6 +201,73 @@
       observer.observe(film);
     }
   }
+  const figure = n => n.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+
+  // 50/30/20: take-home pay times each share, per paycheck, per month and per year.
+  const split = document.querySelector('#split-form');
+  if (split) {
+    const result = document.querySelector('#split-result'), rows = document.querySelectorAll('#split-table tbody tr');
+    const cycles = {12:'once a month', 24:'twice a month', 26:'every two weeks', 52:'every week'};
+    split.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!split.reportValidity()) return;
+      const pay = Number(split.elements.pay.value), perYear = Number(split.elements.cycle.value);
+      const shares = ['needs','wants','savings'].map(name => Number(split.elements[name].value));
+      const total = shares.reduce((sum, share) => sum + share, 0);
+      if (![pay, perYear, ...shares].every(Number.isFinite) || pay < 0 || shares.some(share => share < 0)) {
+        result.textContent = 'Use a pay of zero or more and shares between 0 and 100.'; return;
+      }
+      if (Math.abs(total - 100) > 0.001) {
+        result.textContent = `The three shares must add up to 100%. They add up to ${total}%.`; return;
+      }
+      const names = ['Needs','Wants','Savings'];
+      shares.forEach((share, index) => {
+        const perPay = pay * share / 100, cells = rows[index].children;
+        cells[0].textContent = `${names[index]} (${share}%)`;
+        cells[1].textContent = figure(perPay);
+        cells[2].textContent = figure(perPay * perYear / 12);
+        cells[3].textContent = figure(perPay * perYear);
+      });
+      const amounts = shares.map(share => figure(pay * share / 100));
+      result.textContent = `Take-home pay of ${figure(pay)} ${cycles[perYear]} gives ${amounts[0]} for needs, ${amounts[1]} for wants and ${amounts[2]} for savings per paycheck.`;
+    });
+  }
+
+  // Subscriptions: every price as a year, then the total as a month, a year and five years.
+  const subs = document.querySelector('#subs-form');
+  if (subs) {
+    const rowsBox = document.querySelector('#subs-rows'), result = document.querySelector('#subs-result'), list = document.querySelector('#subs-list');
+    const template = rowsBox.querySelector('.sub-row').cloneNode(true);
+    document.querySelector('#subs-add').addEventListener('click', () => {
+      if (rowsBox.children.length >= 40) return;
+      const row = template.cloneNode(true);
+      row.querySelector('[name=name]').value = ''; row.querySelector('[name=price]').value = ''; row.querySelector('[name=cycle]').value = '12';
+      rowsBox.append(row); row.querySelector('[name=name]').focus();
+    });
+    rowsBox.addEventListener('click', event => {
+      const button = event.target.closest('.sub-remove');
+      if (button && rowsBox.children.length > 1) button.closest('.sub-row').remove();
+    });
+    subs.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!subs.reportValidity()) return;
+      const items = [...rowsBox.querySelectorAll('.sub-row')].map((row, index) => ({
+        name: row.querySelector('[name=name]').value.trim() || `Subscription ${index + 1}`,
+        yearly: Number(row.querySelector('[name=price]').value) * Number(row.querySelector('[name=cycle]').value)
+      }));
+      if (!items.every(item => Number.isFinite(item.yearly) && item.yearly >= 0)) {
+        result.textContent = 'Use prices of zero or more.'; return;
+      }
+      const yearly = items.reduce((sum, item) => sum + item.yearly, 0), pay = Number(subs.elements.pay.value);
+      let text = `${items.length} subscription${items.length === 1 ? '' : 's'} come${items.length === 1 ? 's' : ''} to ${figure(yearly / 12)} a month, ${figure(yearly)} a year and ${figure(yearly * 5)} over five years.`;
+      if (Number.isFinite(pay) && pay > 0) text += ` That is ${(yearly / 12 / pay * 100).toLocaleString(undefined,{maximumFractionDigits:1})}% of your monthly take-home pay.`;
+      result.textContent = text;
+      list.replaceChildren(...items.sort((a, b) => b.yearly - a.yearly).map(item => {
+        const line = document.createElement('li'); line.textContent = `${item.name}: ${figure(item.yearly)} a year`; return line;
+      }));
+    });
+  }
+
   const form = document.querySelector('#budget-form');
   if (!form) return;
   const dateValue = date => [date.getFullYear(), String(date.getMonth()+1).padStart(2,'0'), String(date.getDate()).padStart(2,'0')].join('-');

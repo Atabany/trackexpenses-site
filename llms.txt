@@ -86,6 +86,11 @@ App Store: https://apps.apple.com/app/id6806614497
 - [50/30/20 Budget: How to Split Your Take-Home Pay](https://trackexpenses.app/guides/50-30-20-budget.html): Split take-home pay into 50% needs, 30% wants and 20% savings, with a worked example, iPhone Calculator and Numbers steps, and a payday salary plan.
 - [Log Expenses with Siri and Shortcuts on iPhone](https://trackexpenses.app/guides/log-expenses-with-siri.html): Use Siri phrases and Shortcuts actions to log an expense, record income or check what is left in your budget, hands-free. Exact phrases and setup.
 
+## Free calculators (run in the browser, nothing sent or saved)
+- [Daily Budget Until Payday Calculator](https://trackexpenses.app/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
+- [50/30/20 Budget Calculator](https://trackexpenses.app/tools/50-30-20-calculator.html): Split take-home pay into needs, wants and savings per paycheck, month and year. Custom shares, a reference table, and nothing sent or saved.
+- [Subscription Cost Calculator](https://trackexpenses.app/tools/subscription-cost-calculator.html): Add up your subscriptions as a month, a year and five years, sorted by cost, with their share of your pay. Runs in your browser only.
+
 ## All official pages
 - [Expense Tracker: SMS & Voice | TrackExpenses](https://trackexpenses.app/): Track expenses with Say it voice drafts, bank SMS imports and payday budgets. See real app screenshots, free features and Pro tools for iPhone and iPad.
 - [Bank SMS Expense Tracking on iPhone | TrackExpenses](https://trackexpenses.app/guides/bank-sms-iphone.html): Set up bank SMS expense tracking on iPhone with iOS 27 or iOS 26. Connect the incoming message, test your bank alerts and review imported entries.
@@ -119,6 +124,9 @@ App Store: https://apps.apple.com/app/id6806614497
 - [Support and Free / Pro Limits | TrackExpenses](https://trackexpenses.app/support.html): Get TrackExpenses help, review free and Pro limits, restore purchases, fix imports and export your records.
 - [Terms of Use | TrackExpenses](https://trackexpenses.app/terms.html): TrackExpenses terms on the App Store (Apple’s Standard EULA) and on Google Play: purchases, renewals, refunds and calculation limits.
 - [Daily Budget Until Payday Calculator | TrackExpenses](https://trackexpenses.app/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
+- [50/30/20 Budget Calculator | TrackExpenses](https://trackexpenses.app/tools/50-30-20-calculator.html): Split take-home pay into needs, wants and savings per paycheck, month and year. Custom shares, a reference table, and nothing sent or saved.
+- [Subscription Cost Calculator | TrackExpenses](https://trackexpenses.app/tools/subscription-cost-calculator.html): Add up your subscriptions as a month, a year and five years, sorted by cost, with their share of your pay. Runs in your browser only.
+- [Free Budget Calculators | TrackExpenses](https://trackexpenses.app/tools/index.html): Three free calculators that run in your browser: daily budget until payday, the 50/30/20 split and subscription cost. No sign-up, nothing sent.
 - [Best iPhone Expense Trackers: How to Choose](https://trackexpenses.app/compare/best-expense-trackers.html): Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.
 - [Monefy Alternative with SMS and Voice | TrackExpenses](https://trackexpenses.app/compare/monefy-alternative.html): Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.
 - [iOS 27 Bank SMS Setup Video | TrackExpenses](https://trackexpenses.app/videos/sms-setup-ios27.html): Watch the iOS 27 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.

@@ -377,3 +377,20 @@
 }
 /* AND-12.05: the Google Play badge (shown only when config google_play.enabled). Its artwork carries its own padding, so it is drawn larger than the App Store badge to match it. */
 .play-badge{width:155px;height:60px}.home .download .play-badge{width:194px;height:75px}.download .play-cta,.home .download .play-cta{margin-top:-28px}
+/* Calculators: the 50/30/20 split and the subscription list. */
+.calculator select{display:block;width:100%;max-width:100%;padding:12px;margin-top:6px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;min-height:48px}
+.calculator select:focus-visible{outline:3px solid #ecb841;outline-offset:4px}
+.calculator .table-wrap{margin-top:20px}
+/* A table of three or four short number columns fits a phone; it neither scrolls nor says to swipe. */
+.table-wrap.compact table{min-width:0}
+.table-wrap.compact::before{content:none!important}
+.table-wrap.compact th,.table-wrap.compact td{padding-left:8px;padding-right:8px}
+.table-wrap.compact td{white-space:nowrap}
+@media(max-width:640px){#split-table{font-size:13px}#split-table th,#split-table td{padding-left:6px;padding-right:6px}}
+.calculator table th[scope=row]{text-align:left;font-weight:600}
+.sub-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1.3fr) auto;gap:12px;align-items:end;margin-bottom:14px}
+.sub-row .sub-remove,button.secondary{background:transparent;color:var(--accent);border:1px solid var(--line);min-height:48px}
+.sub-list{margin:16px 0 0;padding-left:22px;color:var(--muted)}
+#split-result,#subs-result{padding:20px;background:var(--pale);border-radius:12px;color:var(--ink);margin-top:24px;font-weight:600}
+@media(max-width:640px){.sub-row{grid-template-columns:1fr 1fr;padding-bottom:14px;border-bottom:1px solid var(--line)}.sub-row label:first-child{grid-column:1/-1}.sub-row .sub-remove{grid-column:1/-1}}
+

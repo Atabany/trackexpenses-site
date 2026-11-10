@@ -52,8 +52,8 @@
     "updated": "2026-11-09"
   },
   "guides/50-30-20-budget.html": {
-    "hash": "d694f8e5b8e55afad91c4545e41d556db64ea7a9baaa3e0e48ce72b293bf03e6",
-    "updated": "2026-11-04"
+    "hash": "0f47ed6070634fd871c2ace2ef8683bceb0390020348adf6613848f8361d7ef8",
+    "updated": "2026-11-10"
   },
   "guides/apple-pay-expenses.html": {
     "hash": "16f8d343ba619d089121b78bebb42cbdc04fff65a4da0c3192ffce671adf78d2",
@@ -84,8 +84,8 @@
     "updated": "2026-10-05"
   },
   "guides/index.html": {
-    "hash": "08fa413c51dfb43b15226e576a643206adebf91437d0aaba3949f0927199580a",
-    "updated": "2026-11-08"
+    "hash": "d5a801ea64e61df90729f452063d15aef8c8c20566be09f1e6c8c62cce6a1e09",
+    "updated": "2026-11-10"
   },
   "guides/log-expenses-with-siri.html": {
     "hash": "290571f27aab1f463d88b042f52ba251287059769233a5e0768cc561a6e4d619",
@@ -108,16 +108,16 @@
     "updated": "2026-10-13"
   },
   "guides/track-subscriptions-recurring-bills.html": {
-    "hash": "ecc092e465cc927baa728b972b785f0b30b9e366063d239167fa5805b6163f82",
-    "updated": "2026-10-13"
+    "hash": "de9a366ddef80946ab3c9c36d822e82cb355ddecda87c08ee6f831340896a719",
+    "updated": "2026-11-10"
   },
   "guides/voice-expenses-iphone.html": {
     "hash": "aa68c6d5643f5bd323a298997c26467f6e91a5fae5e0fe17e927e7588b4d397d",
     "updated": "2026-10-13"
   },
   "index.html": {
-    "hash": "56b56e53f677bfafef544004889c18991be995177614d0fe3678235ad75105d1",
-    "updated": "2026-11-09"
+    "hash": "4e91c3c0ebdab966dabfa7f5182d6d3dd350787a62032712753933596d88ec05",
+    "updated": "2026-11-10"
   },
   "privacy.html": {
     "hash": "4b05396bedc96abc54bcf085942ee80b9652e90ee076dbb2af9a81ffa0854e24",
@@ -131,9 +131,21 @@
     "hash": "778199133ebc4f3eea43db3b15fc4b18bf16d1830e9bcf6ab3da2087a346abe9",
     "updated": "2026-11-04"
   },
+  "tools/50-30-20-calculator.html": {
+    "hash": "268194f23ac8f4840d260b2b5a08f268e13bd0d7ad4ca4853449776e841efbdd",
+    "updated": "2026-11-10"
+  },
   "tools/daily-budget.html": {
-    "hash": "071edcf7d75e3f62b4a47cab48b2c6c314be66d3cd8d57e35eb2bb402e3f79ed",
-    "updated": "2026-10-25"
+    "hash": "7f9fe7033a30d71e304d4dac3da764e354e8c282c78d4aba3a2fae87a9f784e2",
+    "updated": "2026-11-10"
+  },
+  "tools/index.html": {
+    "hash": "4ead4c2eea3de68eb0b56fc0143e158a299843b58ebfa36061da9667428b0da0",
+    "updated": "2026-11-10"
+  },
+  "tools/subscription-cost-calculator.html": {
+    "hash": "763c68b1e202758b1838ec828bb0f503ed2d46d7fa9db712d84da6eee096c5a1",
+    "updated": "2026-11-10"
   },
   "videos/sms-setup-ios26.html": {
     "hash": "ace144e89b4d3f97677d6853720b8d3a833dea40c23208e22395ebdf36ca6968",
