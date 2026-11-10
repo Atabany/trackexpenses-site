@@ -103,7 +103,7 @@ for f,p in parsers.items():
   if s.get('aggregateRating') and not FACTS['userRatingCount']: fail('rating fabricated at zero count')
  if not any(s.get('@type')=='BreadcrumbList' for s in schemas): fail('missing breadcrumbs')
  if not p.noindex and 'max-image-preview:large' not in raw: fail('missing large image preview permission')
- if rel!='index.html' and 'aria-label="Breadcrumb"' not in raw: fail('missing visible breadcrumb navigation')
+ if rel not in ['index.html','ar/index.html'] and 'aria-label="Breadcrumb"' not in raw and 'aria-label="مسار الصفحة"' not in raw: fail('missing visible breadcrumb navigation')
  if p.title in seen_titles or p.desc in seen_desc: fail('duplicate metadata')
  seen_titles.add(p.title); seen_desc.add(p.desc)
  if len(p.title)>60 or not p.title: fail('title length '+str(len(p.title)))
@@ -153,7 +153,7 @@ PLAY_FAQ='Do I need to buy Pro again on Android?'
 home=next((p for f,p in parsers.items() if f==(ROOT/'index.html').resolve()),None)
 for f,p in parsers.items():
  rel=f.relative_to(ROOT).as_posix(); raw=f.read_text()
- if '{{STORE_FAQ}}' in raw or '{{APP_STORE_CTA}}' in raw: problems.append(rel+': unreplaced placeholder')
+ if '{{STORE_FAQ}}' in raw or '{{APP_STORE_CTA}}' in raw or '{{AR_STEPS}}' in raw: problems.append(rel+': unreplaced placeholder')
  # A link to the listing (or the badge) is the download offer the flag holds back; Play's own terms and policy pages
  # are legal references that terms.html needs whatever the flag says.
  has_play=any(urlsplit(l).hostname=='play.google.com' and urlsplit(l).path.startswith('/store') for l in p.links) or 'google-play-badge' in raw

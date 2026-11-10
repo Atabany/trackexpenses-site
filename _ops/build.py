@@ -28,7 +28,7 @@ STORE_FAQ = ('<details><summary>Do I need to buy Pro again on Android?</summary>
 FACT_BLOCK = ('Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. '
  'The app is in English and Arabic, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. '
  'Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. '
- 'The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with a summary of this month and last month and never notes, receipts, account numbers or balances (10 a month free per device). '
+ 'The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). '
  'SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. '
  'Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. '
  'Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.')
@@ -85,32 +85,58 @@ def campaign(path):
  tag='web-home' if path=='index.html' else ('web-'+path.removesuffix('.html').replace('/','-'))[:40]
  return f'https://apps.apple.com/app/apple-store/id{APP}?'+urlencode({'pt':'127826363','ct':tag,'mt':'8'})
 
-def cta(path,prefix,compact=False):
- return f'<a class="store-cta" href="{esc(campaign(path))}" aria-label="Download Expense Tracker: SMS &amp; Voice on the App Store"><img class="app-icon" src="{prefix}assets/icon-128.webp" width="48" height="48" alt=""><img class="badge" src="{prefix}assets/app-store.svg" width="120" height="40" alt=""></a>'
+def cta(path,prefix,compact=False,label='Download Expense Tracker: SMS &amp; Voice on the App Store'):
+ return f'<a class="store-cta" href="{esc(campaign(path))}" aria-label="{label}"><img class="app-icon" src="{prefix}assets/icon-128.webp" width="48" height="48" alt=""><img class="badge" src="{prefix}assets/app-store.svg" width="120" height="40" alt=""></a>'
 
 def play_cta(prefix):
  if not PLAY_ON: return ''
  return f'<a class="store-cta play-cta" href="{esc(PLAY_URL)}" aria-label="Get Expense Tracker: SMS &amp; Voice on Google Play"><img class="play-badge" src="{prefix}assets/google-play-badge.png" width="155" height="60" alt=""></a>'
 
+# The Arabic pages live under ar/ with their own navigation, footer and fact block, right to left.
+FACT_BLOCK_AR=('تتبع المصاريف: ميزانية الراتب (TrackExpenses) تطبيق من تطوير Mohamed Elatabany لأجهزة iPhone وiPad بنظام iOS وiPadOS 17 أو أحدث، بالعربية والإنجليزية وبواجهة عربية كاملة من اليمين إلى اليسار. '
+ 'لا يتطلب حسابًا في التطبيق ولا الدخول إلى حسابك البنكي. تحكم تلقائي اختياري في «الاختصارات» يسجّل تنبيهات البنك المدعومة ومشتريات المحفظة، والتطبيق لا يقرأ صندوق رسائلك. '
+ 'الإدخال الصوتي يُنشئ مسودات على جهازك نفسه، في الأجهزة واللغات التي تدعمه. السجلّ المجاني يشمل عمليات يدوية بلا حدود، والميزانيات ونقل المال بينها في الفترة الحالية، والإحصاءات والبحث وتصدير CSV الشهري والمزامنة عبر iCloud الخاص بك، مع 3 حسابات وقاعدتي تكرار، و10 إدخالات صوتية محفوظة و10 رسائل بنكية ناجحة كل شهر ميلادي على كل جهاز. '
+ 'المدرّب المالي يقرأ آخر شهر ميزانية ويقترح حدًّا واحدًا، وأسئلته المفتوحة تذهب إلى Claude من Anthropic عبر خادم وسيط للمطوّر بعد موافقة المستخدم فقط، مع ما سبق في المحادثة وملخص لهذا الشهر والشهر الماضي، وعند طلب المدرّب مجاميع حتى 13 شهرًا أو حتى 20 عملية شراء بتاريخها ومتجرها وفئتها ومبلغها، ودون الملاحظات أو الإيصالات أو أسماء الحسابات وأرقامها أو الأرصدة (10 أسئلة مجانًا كل شهر على كل جهاز). '
+ 'التنبيهات التي تتجاوز الحصة المجانية تُحفظ خارج المجاميع ولا تُحذف: يضيفها كلها Pro، وإلا فحصة الشهر التالي تضيف منها بقدر ما تتسع. '
+ 'يضيف Pro الإدخال الصوتي وتسجيل رسائل البنك والحسابات والعمليات المتكررة بلا حدود، وتحدّيات المدرّب، وخطة الراتب، والتوقعات والميزانية اليومية، واستيراد CSV والتصدير لأي فترة والنسخ الاحتياطي الكامل، والسمات والأيقونات البديلة، باشتراك شهري أو سنوي أو بشراء لمرة واحدة. '
+ 'الأرقام والتوقعات مبنية على ما تسجّله، وليست نصيحة مالية.')
+CHROME={
+ 'en':{'skip':'Skip to content','tagline':'SMS · Voice · Payday','home':'index.html','breadcrumb':'Breadcrumb',
+  'nav':[('features/index.html','Features',''),('index.html#screenshots','Screenshots',''),('guides/index.html','Guides',''),('tools/index.html','Calculators','')],
+  'cta_label':'Download Expense Tracker: SMS &amp; Voice on the App Store','download_h':'Your money, easier to follow.',
+  'facts_summary':'App facts and free / Pro limits','fact_block':FACT_BLOCK,
+  'made_by':'Made by <a href="{prefix}about.html">Mohamed Elatabany</a>. No cookies or analytics scripts on this site.',
+  'footer':[('privacy.html','Privacy',''),('support.html','Support &amp; corrections',''),('terms.html','Terms',''),('compare/best-expense-trackers.html','Compare apps',''),('features/index.html','All features',''),('guides/index.html','Guides',''),('tools/index.html','Calculators',''),('ar/index.html','العربية',' lang="ar" hreflang="ar"')],
+  'mobile':('Get TrackExpenses','Free to start','iPhone &amp; iPad'),'image_alt':'TrackExpenses: bank SMS, voice entry and payday budgets','og_alt':'TrackExpenses: SMS, voice and payday budgeting','table':'Table; scroll horizontally for more columns'},
+ 'ar':{'skip':'انتقل إلى المحتوى','tagline':'رسائل البنك · الصوت · الراتب','home':'ar/index.html','breadcrumb':'مسار الصفحة',
+  'nav':[('ar/index.html','الرئيسية',''),('ar/bank-sms.html','دليل رسائل البنك',''),('index.html','English',' lang="en" hreflang="en"')],
+  'cta_label':'نزّل «تتبع المصاريف: ميزانية الراتب» من App Store','download_h':'مصاريفك أوضح، وشهرك تحت نظرك.',
+  'facts_summary':'معلومات التطبيق وحدود المجاني وPro','fact_block':FACT_BLOCK_AR,
+  'made_by':'من تطوير <a href="{prefix}about.html" hreflang="en">Mohamed Elatabany</a>. لا ملفات تعريف ارتباط ولا أدوات تحليل في هذا الموقع.',
+  'footer':[('ar/index.html','الرئيسية',''),('ar/bank-sms.html','دليل رسائل البنك',''),('privacy.html','الخصوصية (بالإنجليزية)',' hreflang="en"'),('support.html','الدعم (بالإنجليزية)',' hreflang="en"'),('terms.html','الشروط (بالإنجليزية)',' hreflang="en"'),('index.html','English',' lang="en" hreflang="en"')],
+  'mobile':('نزّل TrackExpenses','ابدأ مجانًا','iPhone وiPad'),'image_alt':'TrackExpenses: رسائل البنك والتسجيل بالصوت وميزانية الراتب','og_alt':'TrackExpenses: رسائل البنك والتسجيل بالصوت وميزانية الراتب','table':'جدول؛ مرّر أفقيًا لرؤية بقية الأعمدة'}}
+def chrome_links(items,prefix): return ''.join(f'<a href="{prefix}{href}"{attrs}>{label}</a>' for href,label,attrs in items)
+
 PAGES={}
-def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None,extra_schema=None):
+def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None,extra_schema=None,lang='en',alternates=None,published=None):
+ ui=CHROME[lang]
  content_hash=hashlib.sha256(json.dumps((title,desc,body),ensure_ascii=False).encode()).hexdigest()
  previous=PAGE_DATES.get(path,{})
  updated=updated or (previous.get('updated') if previous.get('hash')==content_hash else CONFIG['updated'])
  prefix='../'*path.count('/'); canonical=BASE+('' if path=='index.html' else path)
- body=body.replace('<div class="table-wrap">', '<div class="table-wrap" role="region" tabindex="0" aria-label="Table; scroll horizontally for more columns">')
+ body=body.replace('<div class="table-wrap">', '<div class="table-wrap" role="region" tabindex="0" aria-label="'+ui['table']+'">')
  name=' '.join(html.unescape(re.sub('<[^>]*>',' ',re.search(r'<h1[^>]*>(.*?)</h1>',body,re.S).group(1))).split())
- schema={'@context':'https://schema.org','@type':kind,'@id':canonical+'#webpage','isPartOf':{'@id':BASE+'#website'},'name':html.unescape(name),'url':canonical,'inLanguage':'en','description':desc}
- if kind=='Article': schema.update(image=[BASE+'assets/og.png'],headline=html.unescape(name),datePublished=(GUIDE_BY_SLUG.get(Path(path).stem) or {}).get('published','2026-10-05'),dateModified=updated,author={'@id':BASE+'#author','@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'},publisher={'@type':'Person','name':'Mohamed Elatabany'})
- crumbs=[('TrackExpenses','index.html')]
+ schema={'@context':'https://schema.org','@type':kind,'@id':canonical+'#webpage','isPartOf':{'@id':BASE+'#website'},'name':html.unescape(name),'url':canonical,'inLanguage':lang,'description':desc}
+ if kind=='Article': schema.update(image=[BASE+'assets/og.png'],headline=html.unescape(name),datePublished=(GUIDE_BY_SLUG.get(Path(path).stem) or {}).get('published',published or '2026-10-05'),dateModified=updated,author={'@id':BASE+'#author','@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'},publisher={'@type':'Person','name':'Mohamed Elatabany'})
+ crumbs=[('TrackExpenses',ui['home'])]
  if path.startswith('guides/') and path!='guides/index.html': crumbs.append(('Guides','guides/index.html'))
  elif path.startswith('features/') and path!='features/index.html': crumbs.append(('Features','features/index.html'))
  elif path.startswith('videos/'): crumbs.append(('SMS setup','guides/sms-setup.html'))
  elif path.startswith('compare/') and path!='compare/best-expense-trackers.html': crumbs.append(('Compare apps','compare/best-expense-trackers.html'))
  elif path.startswith('tools/') and path!='tools/index.html': crumbs.append(('Calculators','tools/index.html'))
- if path!='index.html': crumbs.append((html.unescape(name),path))
+ if path!=ui['home']: crumbs.append((html.unescape(name),path))
  breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':n,'item':BASE+('' if u=='index.html' else u)} for i,(n,u) in enumerate(crumbs)]}
- breadcrumb_html='' if path=='index.html' else '<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>'+''.join(f'<li>{esc(n) if i==len(crumbs)-1 else f"<a href={esc(prefix+u)}>{esc(n)}</a>"}</li>' for i,(n,u) in enumerate(crumbs))+'</ol></nav>'
+ breadcrumb_html='' if path==ui['home'] else '<nav class="breadcrumbs" aria-label="'+ui['breadcrumb']+'"><ol>'+''.join(f'<li>{esc(n) if i==len(crumbs)-1 else f"<a href={esc(prefix+u)}>{esc(n)}</a>"}</li>' for i,(n,u) in enumerate(crumbs))+'</ol></nav>'
  schemas=[schema,breadcrumb]
  if path=='index.html': schemas.append({'@context':'https://schema.org','@type':'WebSite','@id':BASE+'#website','url':BASE,'name':'TrackExpenses','alternateName':'Expense Tracker: SMS & Voice','inLanguage':'en','publisher':{'@id':BASE+'#author'}})
  if path in ['index.html','about.html']: schemas.append({'@context':'https://schema.org','@type':'Person','@id':BASE+'#author','name':'Mohamed Elatabany','url':BASE+'about.html','sameAs':['https://github.com/Atabany',FACTS['artistViewUrl']]})
@@ -124,19 +150,19 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
  if faq: schemas.append({'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in faq]})
  ld=json.dumps(schemas,ensure_ascii=False).replace('</','<\\/')
  text=f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><meta name="color-scheme" content="light dark"><meta property="og:site_name" content="TrackExpenses"><meta name="twitter:image:alt" content="TrackExpenses: bank SMS, voice entry and payday budgets">
-<link rel="canonical" href="{canonical}"><meta name="apple-itunes-app" content="app-id={APP}">
-<meta property="og:type" content="{'article' if kind=='Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="TrackExpenses: SMS, voice and payday budgeting">
+<html lang="{lang}"{' dir="rtl"' if lang=='ar' else ''}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><meta name="color-scheme" content="light dark"><meta property="og:site_name" content="TrackExpenses"><meta name="twitter:image:alt" content="{ui['image_alt']}">
+<link rel="canonical" href="{canonical}">{''.join(f'<link rel="alternate" hreflang="{code}" href="{BASE+("" if target=="index.html" else target)}">' for code,target in (alternates or {}).items())}<meta name="apple-itunes-app" content="app-id={APP}">
+<meta property="og:type" content="{'article' if kind=='Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{ui['og_alt']}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}assets/og.png">
-{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=12">
+{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=13">
 <script type="application/ld+json">{ld}</script></head><body>
-<a class="skip" href="#main">Skip to content</a><header class="nav"><a class="brand" href="{prefix}index.html">TrackExpenses<span>SMS · Voice · Payday</span></a><nav aria-label="Main"><a href="{prefix}features/index.html">Features</a><a href="{prefix}index.html#screenshots">Screenshots</a><a href="{prefix}guides/index.html">Guides</a><a href="{prefix}tools/index.html">Calculators</a></nav>{cta(path,prefix,True)}</header>
+<a class="skip" href="#main">{ui['skip']}</a><header class="nav"><a class="brand" href="{prefix}{ui['home']}">TrackExpenses<span>{ui['tagline']}</span></a><nav aria-label="Main">{chrome_links(ui['nav'],prefix)}</nav>{cta(path,prefix,True,ui['cta_label'])}</header>
 <main id="main" class="{'home' if path=='index.html' else 'article'}">{breadcrumb_html}{body}
-<section class="download"><h2>Your money, easier to follow.</h2><p>Expense Tracker: SMS &amp; Voice for {'iPhone, iPad and Android' if PLAY_ON else 'iPhone and iPad'}.</p>{cta(path,prefix)}{play_cta(prefix)}{f'<p class="small">{esc(rating())} · Checked {esc(FACTS["checked"])}</p>' if rating() else ''}</section>
-<details class="fact-block"><summary>App facts and free / Pro limits</summary><p>{esc(FACT_BLOCK)}</p></details></main>
-<footer><p>Made by <a href="{prefix}about.html">Mohamed Elatabany</a>. No cookies or analytics scripts on this site.</p>{'<p class="small">Google Play and the Google Play logo are trademarks of Google LLC.</p>' if PLAY_ON else ''}<nav aria-label="Footer"><a href="{prefix}privacy.html">Privacy</a><a href="{prefix}support.html">Support &amp; corrections</a><a href="{prefix}terms.html">Terms</a><a href="{prefix}compare/best-expense-trackers.html">Compare apps</a><a href="{prefix}features/index.html">All features</a><a href="{prefix}guides/index.html">Guides</a><a href="{prefix}tools/index.html">Calculators</a></nav></footer>
-<aside class="mobile-download" aria-label="Get TrackExpenses" hidden><div class="mobile-download-copy"><strong>Free to start</strong><span>iPhone &amp; iPad</span></div>{cta(path,prefix)}</aside>
+<section class="download"><h2>{ui['download_h']}</h2><p>{('تتبع المصاريف: ميزانية الراتب، لـ iPhone وiPad.' if lang=='ar' else 'Expense Tracker: SMS &amp; Voice for '+('iPhone, iPad and Android' if PLAY_ON else 'iPhone and iPad')+'.')}</p>{cta(path,prefix,False,ui['cta_label'])}{play_cta(prefix)}{f'<p class="small">{esc(rating())} · Checked {esc(FACTS["checked"])}</p>' if rating() else ''}</section>
+<details class="fact-block"><summary>{ui['facts_summary']}</summary><p>{esc(ui['fact_block'])}</p></details></main>
+<footer><p>{ui['made_by'].format(prefix=prefix)}</p>{'<p class="small">Google Play and the Google Play logo are trademarks of Google LLC.</p>' if PLAY_ON else ''}<nav aria-label="Footer">{chrome_links(ui['footer'],prefix)}</nav></footer>
+<aside class="mobile-download" aria-label="{ui['mobile'][0]}" hidden><div class="mobile-download-copy"><strong>{ui['mobile'][1]}</strong><span>{ui['mobile'][2]}</span></div>{cta(path,prefix,False,ui['cta_label'])}</aside>
 <script src="{prefix}site.js?v=11" defer></script></body></html>'''
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text)
  if not noindex:
@@ -191,8 +217,9 @@ def feature(f):
  page(path,f['title'],f['description'],body,'WebPage',faq)
 
 home=(ROOT/'_content/home.html').read_text().replace('{{APP_STORE_CTA}}',cta('index.html','')).replace('{{STORE_FAQ}}',STORE_FAQ if PLAY_ON else '')
+HOME_ALTERNATES={'en':'index.html','ar':'ar/index.html','x-default':'index.html'}
 home_faq=re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p>',home,re.S)
-page('index.html','Expense Tracker: SMS & Voice | TrackExpenses','Track expenses with Say it voice drafts, bank SMS imports and payday budgets. See real app screenshots, free features and Pro tools for iPhone and iPad.',home,faq=home_faq)
+page('index.html','Expense Tracker: SMS & Voice | TrackExpenses','Track expenses with Say it voice drafts, bank SMS imports and payday budgets. See real app screenshots, free features and Pro tools for iPhone and iPad.',home,faq=home_faq,alternates=HOME_ALTERNATES)
 
 for sl,meta in GUIDES.items(): guide(sl,meta)
 links='<div class="guide-grid">'+''.join(f'<article><p class="eyebrow">{esc(label(g["updated"]).upper())}</p><h2><a href="{g["slug"]}.html">{esc(g["title"].split(" | ")[0])}</a></h2><p>{esc(g["description"])}</p></article>' for g in sorted(GUIDE_META,key=lambda g:g['published'],reverse=True))+'</div>'
@@ -223,6 +250,17 @@ for path,title,desc in [
  ('compare/best-expense-trackers.html','Best iPhone Expense Trackers: How to Choose','Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.'),
  ('compare/monefy-alternative.html','Monefy Alternative with SMS and Voice | TrackExpenses','Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.')]:
  page(path,title,desc,(ROOT/'_content'/Path(path).name).read_text(),'WebPage')
+# Arabic: a home page and the bank-SMS setup guide. Bodies are reviewed fragments in _content/ar/.
+def arabic_faq(body): return re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p>',body,re.S) or None
+ar_home=(ROOT/'_content/ar/home.html').read_text().replace('{{APP_STORE_CTA}}',cta('ar/index.html','../',False,CHROME['ar']['cta_label']))
+page('ar/index.html','تطبيق مصاريف من رسائل البنك وبالصوت | TrackExpenses','تطبيق لتتبع المصاريف والميزانية على iPhone بالعربية: رسائل البنك تُسجَّل وحدها، وتسجيل بالصوت، وشهر يبدأ يوم الراتب. بلا حساب ولا اتصال بالبنك.',ar_home,faq=arabic_faq(ar_home),lang='ar',alternates=HOME_ALTERNATES)
+AR_STEPS=json.loads((ROOT/'_ops/ar-steps.json').read_text())  # the app's own Arabic step wording: tools/site_ar_steps.py
+def ar_step(n,s):
+ lazy='' if n==1 else ' loading="lazy"'
+ return f'<li><h3>{esc(s["title"])}</h3><p>{esc(s["detail"])}</p><img src="../assets/ar/sms/{s["image"]}.webp" width="540" height="1174" alt="الاختصارات في iOS 27 بالعربية، الخطوة {n}: {esc(s["title"])}"{lazy} decoding="async"></li>'
+ar_steps='<ol class="ar-steps">'+''.join(ar_step(n,s) for n,s in enumerate(AR_STEPS,1))+'</ol>'
+ar_guide=(ROOT/'_content/ar/bank-sms.html').read_text().replace('{{AR_STEPS}}',ar_steps)
+page('ar/bank-sms.html','تسجيل المصاريف من رسائل البنك على iPhone | TrackExpenses','دليل بالعربية وبالصور: أعدّ تحكمًا تلقائيًا في «الاختصارات» يسجّل تنبيهات بنكك في TrackExpenses، مع اختيار كلمة التصفية وحل المشكلات الشائعة.',ar_guide,'Article',faq=arabic_faq(ar_guide),lang='ar',published='2026-11-10')
 for video in VIDEOS:
  body,video_schema=watch_page(video,BASE)
  page(video['path'],video['title'],video['description'],body,extra_schema=video_schema)
@@ -263,7 +301,7 @@ LLMS_GUIDE = """
 - Does it read my Messages inbox? No. A Shortcuts automation the user creates passes each matching alert to the app.
 - Can I move money between budgets? Yes, for free: Stats → Budget → ••• → Move money in or out, for the current budget period only. Cover offers a move on an over-budget row. No bank transfer is executed.
 - Does every budget have a daily amount? Pro includes daily guidance per budget, after repeating bills; bills-only categories hide it. Days left and spent/left amounts are free.
-- Does the money coach send my data to an AI? Only questions the phone can't answer, after the user agrees: the question, the conversation so far and a summary of this month and last month go through the developer's relay to Anthropic's Claude; never notes, receipts, account names or numbers, or balances. Charts, files, logging and the questions it answers by rule stay on the device.
+- Does the money coach send my data to an AI? Only questions the phone can't answer, after the user agrees: the question, the conversation so far and a summary of this month and last month go through the developer's relay to Anthropic's Claude, plus, when the model asks, totals for up to 13 months or up to 20 purchases with date, shop, category and amount; never notes, receipts, account names or numbers, or balances. Charts, files, logging and the questions it answers by rule stay on the device.
 - Does it connect to my bank? No.
 - Where is data stored? On the device, with optional private iCloud sync.{PLAY_ANSWER}
 """

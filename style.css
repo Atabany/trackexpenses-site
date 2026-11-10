@@ -393,4 +393,20 @@
 .sub-list{margin:16px 0 0;padding-left:22px;color:var(--muted)}
 #split-result,#subs-result{padding:20px;background:var(--pale);border-radius:12px;color:var(--ink);margin-top:24px;font-weight:600}
 @media(max-width:640px){.sub-row{grid-template-columns:1fr 1fr;padding-bottom:14px;border-bottom:1px solid var(--line)}.sub-row label:first-child{grid-column:1/-1}.sub-row .sub-remove{grid-column:1/-1}}
+/* Arabic pages (ar/): right to left. Tracking is reset everywhere, because letter spacing pulls Arabic letters apart. */
+[dir=rtl] body{font-family:-apple-system,BlinkMacSystemFont,"SF Arabic","Geeza Pro","Segoe UI","Noto Sans Arabic",Tahoma,sans-serif}
+[dir=rtl] *{letter-spacing:0!important}
+[dir=rtl] .article h1{line-height:1.3}
+[dir=rtl] .article h2{line-height:1.4}
+.ar-shots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:32px 0}
+.ar-shots figure{margin:0}
+.ar-shots img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.ar-shots figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5}
+.ar-steps{padding:0;margin:24px 0;list-style:none;counter-reset:step;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ar-steps li{counter-increment:step;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:20px}
+.ar-steps h3{margin:0 0 6px;font-size:18px}
+.ar-steps h3::before{content:counter(step) ". ";color:var(--accent)}
+.ar-steps p{margin:0 0 14px;font-size:15px}
+.ar-steps img{display:block;width:100%;max-width:300px;height:auto;margin:0 auto;border-radius:18px;border:1px solid var(--line)}
+@media(max-width:760px){.ar-shots{grid-template-columns:repeat(2,minmax(0,1fr))}.ar-steps{grid-template-columns:1fr}}
 

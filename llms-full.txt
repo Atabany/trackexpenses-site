@@ -22,12 +22,12 @@
 - Does it read my Messages inbox? No. A Shortcuts automation the user creates passes each matching alert to the app.
 - Can I move money between budgets? Yes, for free: Stats → Budget → ••• → Move money in or out, for the current budget period only. Cover offers a move on an over-budget row. No bank transfer is executed.
 - Does every budget have a daily amount? Pro includes daily guidance per budget, after repeating bills; bills-only categories hide it. Days left and spent/left amounts are free.
-- Does the money coach send my data to an AI? Only questions the phone can't answer, after the user agrees: the question, the conversation so far and a summary of this month and last month go through the developer's relay to Anthropic's Claude; never notes, receipts, account names or numbers, or balances. Charts, files, logging and the questions it answers by rule stay on the device.
+- Does the money coach send my data to an AI? Only questions the phone can't answer, after the user agrees: the question, the conversation so far and a summary of this month and last month go through the developer's relay to Anthropic's Claude, plus, when the model asks, totals for up to 13 months or up to 20 purchases with date, shop, category and amount; never notes, receipts, account names or numbers, or balances. Charts, files, logging and the questions it answers by rule stay on the device.
 - Does it connect to my bank? No.
 - Where is data stored? On the device, with optional private iCloud sync.
 
 ## Facts
-Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. The app is in English and Arabic, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with a summary of this month and last month and never notes, receipts, account numbers or balances (10 a month free per device). SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
+Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. The app is in English and Arabic, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
 
 App Store: https://apps.apple.com/app/id6806614497
 
@@ -129,6 +129,8 @@ App Store: https://apps.apple.com/app/id6806614497
 - [Free Budget Calculators | TrackExpenses](https://trackexpenses.app/tools/index.html): Three free calculators that run in your browser: daily budget until payday, the 50/30/20 split and subscription cost. No sign-up, nothing sent.
 - [Best iPhone Expense Trackers: How to Choose](https://trackexpenses.app/compare/best-expense-trackers.html): Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.
 - [Monefy Alternative with SMS and Voice | TrackExpenses](https://trackexpenses.app/compare/monefy-alternative.html): Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.
+- [تطبيق مصاريف من رسائل البنك وبالصوت | TrackExpenses](https://trackexpenses.app/ar/index.html): تطبيق لتتبع المصاريف والميزانية على iPhone بالعربية: رسائل البنك تُسجَّل وحدها، وتسجيل بالصوت، وشهر يبدأ يوم الراتب. بلا حساب ولا اتصال بالبنك.
+- [تسجيل المصاريف من رسائل البنك على iPhone | TrackExpenses](https://trackexpenses.app/ar/bank-sms.html): دليل بالعربية وبالصور: أعدّ تحكمًا تلقائيًا في «الاختصارات» يسجّل تنبيهات بنكك في TrackExpenses، مع اختيار كلمة التصفية وحل المشكلات الشائعة.
 - [iOS 27 Bank SMS Setup Video | TrackExpenses](https://trackexpenses.app/videos/sms-setup-ios27.html): Watch the iOS 27 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.
 - [iOS 26 Bank SMS Setup Video | TrackExpenses](https://trackexpenses.app/videos/sms-setup-ios26.html): Watch the iOS 26 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.
 
@@ -1307,6 +1309,94 @@ https://trackexpenses.app/compare/monefy-alternative.html
  A Monefy alternative for SMS and voice entry.  Consider TrackExpenses if you want optional bank SMS imports and on-device voice drafts alongside a fixed monthly payday budget. Monefy already documents a custom first day of month, so payday reporting alone is not a reason to switch.  By  Mohamed Elatabany  · Updated October 2026 ·  Suggest a correction   This page is written by TrackExpenses' developer. It compares documented workflows and does not claim to have tested every Monefy feature.
   When to keep Monefy  ·  When to try TrackExpenses  ·  Check your data first
  When to keep Monefy  If you are comfortable with manual entry and Monefy already gives you the records you need, there may be little value in moving. Its  official help  documents a first-day-of-month setting from 1 to 31, including aligning the month with payroll. A familiar entry habit is valuable.  When to try TrackExpenses  Try it when logging is the part you struggle to maintain. Optional Shortcuts automations pass supported bank alerts or Wallet purchases into the ledger. The app does not read your Messages inbox and does not need a bank login. One spoken sentence can become several on-device drafts that you review before saving.  The free ledger includes budgets, historical stats, monthly CSV export and private iCloud sync, with 3 accounts, 2 recurring rules, 10 saved voice entries and 10 successful automatic bank SMS imports per calendar month per device. Pro adds forecasts/daily guidance, unlimited voice entry/SMS imports/accounts/rules and flexible import/export. Device and language support apply to voice.  Check your data before moving  Keep an original copy of your old records. Do not assume a CSV's columns have the same meanings in another app. TrackExpenses Pro previews CSV import and lets you map columns, but this page does not promise that every Monefy export is compatible. Test a small sample and check date, amount, currency, category and direction before confirming a larger import.  Account transfers are especially important to check: a move between your own accounts should not become a new purchase. A change of app should improve your workflow while preserving your understanding of the figures.  Compare a week of ordinary use  Try the same three or four real tasks: record a cash expense, review a bank alert, browse your payday month and export records. Keep the tool that makes those tasks easiest for you. No website comparison can measure that personal fit in advance.   Compare more documented workflows  ·  CSV export and import limits  ·  Payday setup
+
+
+## تطبيق مصاريف من رسائل البنك وبالصوت | TrackExpenses
+https://trackexpenses.app/ar/index.html
+ سجّل مصاريفك دون أن تكتب
+ رسائل البنك تُسجَّل وحدها، وجملة واحدة بصوتك تكفي لتسجيل عدة مصاريف، وشهرك يبدأ يوم الراتب. TrackExpenses تطبيق لتتبع المصاريف والميزانية على iPhone وiPad، بالعربية بالكامل ومن اليمين إلى اليسار.
+
+    شهرك من الراتب إلى الراتب     جملة واحدة، ثلاث عمليات     ميزانية لكل فئة، وعلامة تبيّن أين وصل اليوم     مدرّب مالي يقرأ شهرك
+
+ رسائل البنك تُسجَّل وحدها
+ في الخليج ومصر يرسل البنك رسالة مع كل عملية شراء. أعدّ تحكمًا تلقائيًا في «الاختصارات» مرة واحدة، وستتحول هذه التنبيهات ومشتريات بطاقات المحفظة إلى عمليات في سجلّك، تراجعها متى شئت.
+  يقرأ المبلغ والمتجر والتاريخ والبطاقة من الرسالة، بالعربية أو الإنجليزية، ويتجاهل رموز التحقق والعمليات المرفوضة والعروض.  التطبيق لا يقرأ صندوق رسائلك ولا يتصل ببنكك. التحكم التلقائي الذي تعدّه أنت هو من يمرّر الرسالة المطابقة.  أو الصق رسالة البنك بنفسك، وستُعبّأ التفاصيل لك.  10 رسائل مجانًا كل شهر ميلادي على كل جهاز، وبلا حدود مع Pro.
+  دليل الإعداد خطوة بخطوة، بصور من «الاختصارات» بالعربية
+
+ سجّل بصوتك
+ قل «قهوة 15، تاكسي 40 وبقالة 120 من كارفور البارحة»، وستجد ثلاث مسودات بمبالغها وفئاتها وتاريخها، تراجعها وتحفظها معًا. يفهم الأرقام كما تُقال، مثل «خمسة وعشرين» و«مية ونص»، ويعمل الاستماع على جهازك.
+  10 إدخالات صوتية محفوظة مجانًا كل شهر ميلادي على كل جهاز، وبلا حدود مع Pro.  يعتمد الإدخال الصوتي على دعم الجهاز واللغة.
+
+ شهرك يبدأ يوم الراتب
+ اختر اليوم الذي يبدأ فيه شهرك، مثل يوم 25 حين ينزل الراتب، فتتبعه القوائم والميزانيات والرسوم البيانية كلها. وكل شريط ميزانية يُظهر أين وصل اليوم، لتعرف إن كنت تصرف أسرع من اللازم قبل أن ينتهي الشهر.
+  ميزانية إجمالية وميزانية لكل فئة، ونقل المال بين الميزانيات في الشهر الحالي، مجانًا.  مع Pro: خطة راتب تخبرك هل يكفي دخلك كل ما تخطط له، والميزانية اليومية بعد خصم الفواتير المتكررة، وتوقّع إنفاقك حتى نهاية الشهر.
+
+ مدرّبك المالي
+ يقرأ المدرّب شهرك المنتهي، ويسمّي أكبر بنود صرفك المعتادة، ويقترح حدًّا واحدًا تجرّبه. اسأله «هل أنا على الوتيرة الصحيحة؟» أو «كيف كان سبتمبر؟»، أو اكتب ما صرفته فيسجّله.
+  الأسئلة التي يجيب عنها بالقواعد، والرسوم، وتسجيل ما تكتبه، كلها تتم على جهازك مجانًا.  الأسئلة المفتوحة يجيب عنها Claude من Anthropic بعد موافقتك فقط. يُرسَل سؤالك مع ما سبقه في المحادثة وملخص لهذا الشهر والشهر الماضي، وقد يطلب المدرّب مجاميع أشهر سابقة أو بعض المشتريات بتاريخها ومتجرها ومبلغها. ولا تُرسل أبدًا ملاحظاتك ولا إيصالاتك ولا أرقام حساباتك ولا أرصدتك. 10 أسئلة مجانًا كل شهر على كل جهاز.  التحدّيات والمتابعة الأسبوعية والمزيد من الأسئلة مع Pro.
+
+ مصاريفك بوضوح
+  عرض يومي وتقويم وملخص شهري، والإنفاق حسب الجهة.  دخلك ومصاريفك، وأكبر تغيّر في الفئات عن الفترة السابقة.  حسابات نقدية وبنكية وبطاقات، مع التحويلات والأرصدة، وعملات متعددة بسعر صرف تحدده أنت.  عمليات متكررة للإيجار والراتب والاشتراكات.  أدوات للشاشة الرئيسية وشاشة القفل، وSiri والاختصارات.
+
+ بياناتك لك وحدك
+ بلا إعلانات، ودون الدخول إلى حسابك البنكي، ودون إنشاء حساب في TrackExpenses. سجلّك على جهازك ويتزامن بين أجهزتك عبر iCloud الخاص بك. يمكنك قفله برمز الدخول أو ببصمة الوجه، وتصدير الشهر المعروض بصيغة CSV مجانًا، وإرفاق صور الإيصالات.
+
+ ابدأ مجانًا
+ عمليات بلا حدود، والميزانيات والتقويم والرسوم البيانية والبحث وتصدير CSV الشهري ومزامنة iCloud، كلها مجانية، وما يصل إلى 3 حسابات وقاعدتي تكرار، و10 رسائل بنكية و10 إدخالات صوتية كل شهر ميلادي على كل جهاز. والتنبيهات التي تصل بعد ذلك تُحفظ خارج مجاميعك: يضيفها كلها الاشتراك في Pro، وإلا فحصة الشهر القادم المجانية تضيف منها بقدر ما تتسع.
+ ومع Pro تحصل على تسجيل رسائل البنك والإدخال الصوتي بلا حدود، وخطة الراتب، وتوقعات الإنفاق، والميزانية اليومية، وخطط «ماذا لو»، وتحدّيات المدرّب المالي، وحسابات وعمليات متكررة بلا حدود، واستيراد ملفات CSV، والتصدير لأي فترة، والنسخ الاحتياطي الكامل واستعادته، والسمات اللونية وأيقونات التطبيق البديلة. اختر اشتراكًا شهريًا أو سنويًا، أو ادفع مرة واحدة مدى الحياة.
+
+ أسئلة شائعة
+  هل يتصل التطبيق بحسابي البنكي؟  لا. لا يطلب التطبيق الدخول إلى حسابك البنكي ولا يتصل ببنكك. تُدخل عملياتك بنفسك، أو تعدّ تحكمًا تلقائيًا في «الاختصارات» يمرّر تنبيهات البنك التي تختارها.
+  هل يقرأ التطبيق رسائلي؟  لا. التحكم التلقائي الذي تعدّه أنت في «الاختصارات» هو من يمرّر الرسالة المطابقة إلى TrackExpenses، ولا يصل التطبيق إلى صندوق رسائلك.
+  هل يقرأ رسائل بنكي بالذات؟  يقرأ صيغًا كثيرة من تنبيهات البنوك بالعربية والإنجليزية في الخليج ومصر وغيرها، لكن لا يمكن ضمان كل بنك. جرّب إحدى رسائل بنكك في شاشة الإعداد داخل التطبيق قبل أن تعتمد عليه، وأي رسالة لا تُقرأ يمكنك لصقها أو إدخالها يدويًا.
+  هل التطبيق مجاني؟  نعم، تنزيله مجاني وسجلّه الأساسي كامل دون مقابل: عمليات بلا حدود وميزانيات وبحث وتصدير CSV شهري. ويضيف Pro تسجيل رسائل البنك والإدخال الصوتي بلا حدود وأدوات التخطيط، باشتراك شهري أو سنوي أو بالدفع مرة واحدة.
+  أين تُحفظ بياناتي؟  على جهازك، وتتزامن بين أجهزتك عبر iCloud الخاص بك إن أردت. لا يوجد حساب في TrackExpenses ولا خادم يحفظ سجلّك.
+
+ أدلة وأدوات أخرى
+ بقية الموقع بالإنجليزية حاليًا:
+   Arabic Bank SMS Expense Tracking on iPhone    Start Your Budget Month on Payday    Free budget calculators    Privacy Policy
+ من تطوير  Mohamed Elatabany  · آخر تحديث: نوفمبر 2026 ·  اقترح تصحيحًا
+
+
+## تسجيل المصاريف من رسائل البنك على iPhone | TrackExpenses
+https://trackexpenses.app/ar/bank-sms.html
+ تسجيل المصاريف من رسائل البنك على iPhone
+ لتسجيل مصاريفك من رسائل البنك على iPhone، أنشئ في تطبيق «الاختصارات» تحكمًا تلقائيًا يعمل عند وصول رسالة تتضمن كلمة من تنبيهات بنكك، ويمرّر نصها إلى إجراء «استيراد رسالة البنك» في TrackExpenses. بعدها تُسجَّل كل عملية شراء وحدها، وتراجعها في التطبيق متى شئت.
+    ما تحتاجه    اختر كلمة التصفية    الإعداد خطوة بخطوة    ماذا يحدث بعد الإعداد    إن لم تُسجَّل رسالة    الخصوصية    أسئلة شائعة
+
+ ما تحتاجه
+  iPhone يعمل بنظام iOS 17 أو أحدث، وعليه تطبيق «الاختصارات» من Apple.  تطبيق TrackExpenses مثبّتًا على الجهاز نفسه.  أن يرسل لك بنكك تنبيهًا نصيًا (SMS) مع كل عملية.
+ الصور في هذا الدليل من iOS 27. في iOS 26 وما قبله تختلف الشاشات وبعض الخطوات، وتجد الخطوات المناسبة لنظامك داخل التطبيق: المزيد ← تسجيل رسائل البنك تلقائيًا.
+
+ اختر كلمة التصفية
+ التحكم التلقائي يعمل فقط مع الرسائل التي تتضمن نصًّا تختاره أنت. اختر كلمة تظهر في كل تنبيهات بنكك، من شراء وسحب وراتب، ولا تكاد تظهر في رسائلك الشخصية. رمز العملة مثل AED أو SAR أو EGP يصلح غالبًا، لأن البنك يكتبه مع كل مبلغ. وإن كان بنكك يكتب تنبيهاته بالعربية فاختر اسم العملة كما يكتبه، مثل «درهم» أو «ريال» أو «جنيه». وتجنّب كلمة «خصم»، فهي تأتي في رسائل العروض أيضًا. ولا تحدد مرسلًا بعينه، فالبنوك تغيّر اسم المرسل أحيانًا.
+
+ الإعداد خطوة بخطوة
+ الخطوات الثماني عشرة التالية تُنفَّذ مرة واحدة، وتأخذ بضع دقائق. كلمة «شراء» في الصور مجرد مثال.
+   ابدأ من «المكتبة»  افتح الاختصارات. ارجع إلى «المكتبة»، ثم اختر «التحكم التلقائي».     أنشئ اختصارًا جديدًا  اضغط + في الأسفل. في iOS 27 يوجد التحكم التلقائي داخل الاختصارات.     افتح المحرر  إن فُتحت شاشة «صف اختصارًا»، فاضغط «المحرر» أو «تعديل». ثم اضغط «التحكم التلقائي» في لوحة الإجراءات.     اختر «رسالة»  ضمن «التواصل»، اضغط «رسالة» لإضافة مشغّل الرسائل الواردة.     غيّر حقل التصفية  اضغط حقل «المرسل» الأزرق الأول. فهذا يحدد أي جزء من الرسالة تتم مطابقته.     طابِق نص الرسالة  اختر «رسالة» من القائمة. يصبح الشرط: «رسالة» تتضمن «نص».     استخدم صياغة بنكك  اضغط «نص» وأدخل كلمات من تنبيهات بنكك. كلمة «شراء» مجرد مثال. ثم اضغط السهم الأزرق للمشغّل.     دعه يعمل تلقائيًا  أبقِ «التحكم التلقائي» مفعّلًا و«التأكيد قبل التشغيل» معطّلًا. هذان يحلّان محل شاشة «تشغيل مباشرة» القديمة.     ابحث عن إجراء الاستيراد  اضغط «بحث» واكتب TrackExpenses، ثم اختر «استيراد رسالة البنك».     اربط النص الوارد  اضغط العنصر الأزرق «رسالة» داخل “استيراد عملية من رسالة”.     افتح «تحديد متغير»  اضغط «تحديد متغير» في الشريط السفلي. لا تكتب رسالة ولا تستخدم «السؤال في كل مرة».     اختر «رسالة» الخاصة بالمشغّل  اضغط «رسالة» أسفل المشغّل مباشرةً. في iOS 27 هذا هو ناتج الرسالة الواردة.     استخدم نص الرسالة  أغلق الشريط السفلي بالزر ×. ثم اضغط على متغير «رسالة» المُدرج لعرض خصائصه.     اختر «المحتوى»  في قائمة «إحضار» الخاصة بالمتغير، اختر «المحتوى». اضغط «رجوع»، ثم أغلق شريط المتغير بالزر ×.     اجعل الاستيراد بلا تنبيهات  وسّع السهم الأزرق لإجراء الاستيراد وعطّل «إظهار عند التشغيل». يجب أن يظهر في المتغير المتصل «المحتوى».     تحقّق من خصوصية الاختصار  اضغط زر ⓘ في شريط أدوات المحرر، ثم افتح «الخصوصية».     اسمح بتشغيله عند القفل  أبقِ «السماح بالتشغيل عند القفل» مفعّلًا. عد إلى «التفاصيل»، واضغط «تم»، ثم ارجع لحفظ الاختصار.     جاهز لتنبيهك البنكي التالي  تأكد أن التحكم التلقائي مفعّل، ثم تابع التنبيه المطابق التالي في TrackExpenses ← المزيد ← تسجيل رسائل البنك تلقائيًا.
+
+ ماذا يحدث بعد الإعداد
+ عند وصول تنبيه مطابق يقرأ TrackExpenses المبلغ والمتجر والتاريخ والبطاقة، ويسجّل العملية في الحساب الذي تنتهي بطاقته بالأرقام نفسها إن كنت ربطتها، ويقترح فئة مما تعلّمه من عملياتك السابقة. ما يحتاج إلى مراجعة يظهر في بطاقة أعلى القائمة اليومية.
+  رموز التحقق والعمليات المرفوضة والعروض الترويجية لا تُسجَّل.  الراتب والمبالغ الواردة تُسجَّل دخلًا وتُعلَّم للمراجعة، ويمكنك إيقاف ذلك من مفتاح «استيراد الأموال الواردة».  العملية بعملة أجنبية لم تحدد لها سعر صرف من قبل تنتظر حتى تحدده، فلا تدخل مجاميعك بسعر خاطئ.  iOS يعرض إشعاره الخاص عند كل تشغيل للتحكم التلقائي. هذه قاعدة من Apple ولا يستطيع أي تطبيق إخفاءها.
+ 10 رسائل ناجحة مجانًا كل شهر ميلادي على كل جهاز. ما يصل بعدها يُحفظ خارج مجاميعك ولا يضيع: يضيفه كله الاشتراك في Pro، وإلا فحصة الشهر القادم المجانية تضيف منه بقدر ما تتسع.
+
+ إن لم تُسجَّل رسالة
+  افتح المزيد ← تسجيل رسائل البنك تلقائيًا، والصق الرسالة في بطاقة «جرّب إحدى رسائل بنكك». ستعرف فورًا هل قُرئت، وما السبب إن لم تُقرأ.  تأكد أن التحكم التلقائي مفعّل، وأن «التأكيد قبل التشغيل» معطّل.  تأكد أن المتغير داخل إجراء الاستيراد هو «رسالة» الخاصة بالمشغّل، وأنه يعرض «المحتوى» (الخطوات 10 إلى 15).  تأكد أن كلمة التصفية مكتوبة كما يكتبها بنكك تمامًا.
+ وأي رسالة لم تُقرأ يمكنك نسخها ثم الضغط على «لصق» في شاشة العمليات، فتُعبّأ العملية لتراجعها وتحفظها.
+
+ الخصوصية
+ TrackExpenses لا يقرأ صندوق رسائلك، فـ iOS لا يسمح بذلك لأي تطبيق. وإنما يمرّر التحكم التلقائي الذي أعددته نص الرسالة المطابقة وحدها إلى التطبيق. يُقرأ النص على جهازك، ويُحفظ ما قُرئ منه (المبلغ والجهة والتاريخ) في سجلّك، ولا يُحفظ نص الرسالة نفسه. لا يوجد اتصال ببنكك ولا حساب في التطبيق.
+
+ أسئلة شائعة
+  هل يقرأ التطبيق كل رسائلي؟  لا. تصله فقط الرسائل التي تطابق الكلمة التي اخترتها في التحكم التلقائي، وأنت من يعدّه ويستطيع إيقافه أو حذفه في أي وقت من تطبيق «الاختصارات».
+  هل يفهم تنبيهات البنك المكتوبة بالعربية؟  نعم. يقرأ التنبيهات بالعربية والإنجليزية، بالأرقام العربية أو الهندية، ويعرف صيغ الشراء والخصم والسحب والتحويل والإيداع الشائعة في الخليج ومصر. ولا يمكن ضمان كل بنك، فجرّب إحدى رسائل بنكك أولًا.
+  كم رسالة يسجّلها التطبيق مجانًا؟  10 رسائل ناجحة كل شهر ميلادي على كل جهاز. ما يزيد يُحفظ ولا يُحذف: يضيفه كله الاشتراك في Pro، وإلا فحصة الشهر القادم المجانية تضيف منه بقدر ما تتسع.
+
+ للمزيد
+  TrackExpenses بالعربية: كل المزايا
+ وبالإنجليزية:
+   Arabic Bank SMS Expense Tracking on iPhone    Fix Bank SMS Automation on iPhone    SMS Auto-Import Setup: iOS 27 and 26
+ من تطوير  Mohamed Elatabany  · آخر تحديث: نوفمبر 2026 ·  اقترح تصحيحًا
 
 
 ## iOS 27 Bank SMS Setup Video | TrackExpenses

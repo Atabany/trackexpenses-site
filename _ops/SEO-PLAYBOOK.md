@@ -267,3 +267,31 @@ Next, in order of expected value and still to decide with the owner: an Arabic h
 (the app is fully Arabic and its markets search in Arabic; the site is English only); a German home page once
 1.13.0 is live; reading Search Console queries when the browser is connected, before choosing the next page.
 
+## 10 November 2026 — Arabic pages (`/ar/`)
+
+Owner's yes of 10 November to the proposal above. Two pages, right to left: `ar/index.html` (an Arabic home page)
+and `ar/bank-sms.html` (the bank-SMS setup guide with the 18 iOS 27 steps). 41 indexable pages.
+
+- **Where the Arabic comes from.** The home page is built on the vetted Arabic App Store description
+  (`docs/APP_STORE_METADATA.md`), brought up to 1.12.0 (the money coach, widgets and Siri). The guide's 18 step
+  titles and instructions are the app's own shipped strings (`SMSSetupSteps` in `Localizable.xcstrings`), so the
+  site and the app say the same words; its pictures are the app's real Arabic Shortcuts captures
+  (`marketing/sms-setup-ar/screens/ios27`, 540 px WebP in `assets/ar/sms/`), and the four app pictures are the
+  Arabic store captures (`marketing/app-store-2026-11-ar/raw`, 660 px WebP in `assets/ar/`). The rest follows
+  `docs/l10n/ARABIC_STYLE.md` and was reviewed independently before publication (3 fact corrections and 11 small
+  wording ones, all applied: what the coach sends is now listed in full, here and in the English fact block; the
+  filter-word advice is the currency's name, never «خصم», which offers use too; the free allowance is «حصة», never
+  «رصيد», which is an account balance).
+- **How they are built.** `page(..., lang='ar')` in `build.py` takes its navigation, footer, download section and
+  fact block from `CHROME['ar']` and `FACT_BLOCK_AR`; bodies are `_content/ar/home.html` and
+  `_content/ar/bank-sms.html`. The two home pages name each other with `hreflang` (`x-default` is English); the
+  guide is not a translation of one English guide, so it carries none. English pages link to Arabic from the footer.
+  The App Store badge stays the English one (Apple's badge service returned no Arabic file).
+- **Rules.** Letter spacing is reset on Arabic pages (`[dir=rtl] *`), because tracking pulls Arabic letters apart.
+  A fact changed in `FACT_BLOCK` must be changed in `FACT_BLOCK_AR` too. The guide's steps are data,
+  `_ops/ar-steps.json`, written from the app's catalog by `tools/site_ar_steps.py`: run it when a setup step or its
+  Arabic changes. Nothing from an unreleased version goes on either page. The validator accepts the
+  Arabic breadcrumb label and treats `ar/index.html` as a home page.
+- **Not claimed.** No search volume was measured for any Arabic query, and no ranking is promised. Read Search
+  Console by page (`/ar/`) after a few weeks before writing a second Arabic guide.
+
