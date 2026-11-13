@@ -103,7 +103,7 @@ for f,p in parsers.items():
   if s.get('aggregateRating') and not FACTS['userRatingCount']: fail('rating fabricated at zero count')
  if not any(s.get('@type')=='BreadcrumbList' for s in schemas): fail('missing breadcrumbs')
  if not p.noindex and 'max-image-preview:large' not in raw: fail('missing large image preview permission')
- if rel not in ['index.html','ar/index.html'] and 'aria-label="Breadcrumb"' not in raw and 'aria-label="مسار الصفحة"' not in raw: fail('missing visible breadcrumb navigation')
+ if rel not in ['index.html','ar/index.html','de/index.html'] and 'aria-label="Breadcrumb"' not in raw and 'aria-label="مسار الصفحة"' not in raw and 'aria-label="Seitenpfad"' not in raw: fail('missing visible breadcrumb navigation')
  if p.title in seen_titles or p.desc in seen_desc: fail('duplicate metadata')
  seen_titles.add(p.title); seen_desc.add(p.desc)
  if len(p.title)>60 or not p.title: fail('title length '+str(len(p.title)))

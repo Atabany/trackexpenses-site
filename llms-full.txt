@@ -27,7 +27,7 @@
 - Where is data stored? On the device, with optional private iCloud sync.
 
 ## Facts
-Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. The app is in English and Arabic, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
+Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. The app is in English, Arabic and German, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
 
 App Store: https://apps.apple.com/app/id6806614497
 
@@ -131,6 +131,8 @@ App Store: https://apps.apple.com/app/id6806614497
 - [Monefy Alternative with SMS and Voice | TrackExpenses](https://trackexpenses.app/compare/monefy-alternative.html): Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.
 - [تطبيق مصاريف من رسائل البنك وبالصوت | TrackExpenses](https://trackexpenses.app/ar/index.html): تطبيق لتتبع المصاريف والميزانية على iPhone بالعربية: رسائل البنك تُسجَّل وحدها، وتسجيل بالصوت، وشهر يبدأ يوم الراتب. بلا حساب ولا اتصال بالبنك.
 - [تسجيل المصاريف من رسائل البنك على iPhone | TrackExpenses](https://trackexpenses.app/ar/bank-sms.html): دليل بالعربية وبالصور: أعدّ تحكمًا تلقائيًا في «الاختصارات» يسجّل تنبيهات بنكك في TrackExpenses، مع اختيار كلمة التصفية وحل المشكلات الشائعة.
+- [Haushaltsbuch-App mit Spracheingabe | TrackExpenses](https://trackexpenses.app/de/index.html): Haushaltsbuch für iPhone und iPad auf Deutsch: Ausgaben per Sprache eintragen, Budget ab Zahltag, Tagesbudget und Finanzcoach. Ohne Konto und Bank-Login.
+- [Bank-SMS automatisch eintragen (iPhone) | TrackExpenses](https://trackexpenses.app/de/bank-sms.html): Anleitung mit Bildern auf Deutsch: Richte in Kurzbefehle eine Automation ein, die Bank-SMS in TrackExpenses einträgt. Mit Filterwort und Fehlersuche.
 - [iOS 27 Bank SMS Setup Video | TrackExpenses](https://trackexpenses.app/videos/sms-setup-ios27.html): Watch the iOS 27 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.
 - [iOS 26 Bank SMS Setup Video | TrackExpenses](https://trackexpenses.app/videos/sms-setup-ios26.html): Watch the iOS 26 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.
 
@@ -906,7 +908,7 @@ https://trackexpenses.app/features/voice-expense-tracker.html
  Say it uses Apple's on-device speech recognition in your current language where the device supports it, falling back to English. On devices with Apple Intelligence it can use Apple's on-device model to read meaning; everywhere else, including Arabic, a built-in rule set reads the sentence. The listening screen tells you which one is in use. Audio is never uploaded by the app, and every result is a draft you confirm.
  Free or Pro
  Free includes 10 saved voice entries per calendar month on each device; each purchase you save counts as one, so a sentence with three purchases uses three. Pro makes Say it unlimited. Typing, templates and pasting a bank message stay free and unlimited.
-  Questions   Is the voice processed in the cloud?  No. TrackExpenses requires on-device speech recognition and does not upload your audio. Results are drafts you review before anything is saved.    Can I say several expenses in one sentence?  Yes. Separate them naturally with commas or “and”. Each purchase becomes its own draft, and a date or account said once can apply to the whole list.    Does it work in Arabic?  Arabic sentences are read by the built-in rules, including Arabic category words, accounts and day words such as yesterday. The app interface supports English and Arabic, including right-to-left layout.    What happens if a price is in another currency?  The draft shows the currency and a rate field prefilled from the last rate you used, so the entry converts correctly into your main currency.
+  Questions   Is the voice processed in the cloud?  No. TrackExpenses requires on-device speech recognition and does not upload your audio. Results are drafts you review before anything is saved.    Can I say several expenses in one sentence?  Yes. Separate them naturally with commas or “and”. Each purchase becomes its own draft, and a date or account said once can apply to the whole list.    Does it work in Arabic?  Arabic sentences are read by the built-in rules, including Arabic category words, accounts and day words such as yesterday. The app interface supports English, Arabic and German, including a right-to-left Arabic layout.    What happens if a price is in another currency?  The draft shows the currency and a rate field prefilled from the last rate you used, so the entry converts correctly into your main currency.
   Step-by-step guides    Voice Expense Tracking on iPhone    How to Track Cash Expenses on iPhone      More features   Bank SMS import  Money coach  Budget moves, daily amounts & payday  Reports, calendar & insights  Multi-currency  Accounts, cards & recurring  Widgets, Siri & Shortcuts  Private by design
 
 ## Bank SMS Expense Tracker for iPhone | TrackExpenses
@@ -1397,6 +1399,98 @@ https://trackexpenses.app/ar/bank-sms.html
  وبالإنجليزية:
    Arabic Bank SMS Expense Tracking on iPhone    Fix Bank SMS Automation on iPhone    SMS Auto-Import Setup: iOS 27 and 26
  من تطوير  Mohamed Elatabany  · آخر تحديث: نوفمبر 2026 ·  اقترح تصحيحًا
+
+
+## Haushaltsbuch-App mit Spracheingabe | TrackExpenses
+https://trackexpenses.app/de/index.html
+ Ausgaben eintragen, ohne zu tippen
+ Aus einem gesprochenen Satz werden mehrere Buchungen, dein Monat beginnt am Zahltag, und dein Tagesbudget zeigt, was heute noch drin ist. TrackExpenses ist ein privates Haushaltsbuch für iPhone und iPad, komplett auf Deutsch.
+
+    Dein Monat, von Zahltag zu Zahltag     Ein Satz, drei Buchungen     Dein Tagesbudget, nachvollziehbar gerechnet     Ein Coach, der deinen Monat liest
+
+ Gesagt, gebucht
+ Sag „Kaffee 3,50, Tanken 60 und Lebensmittel 45 bei Rewe“, und du bekommst drei Entwürfe mit Betrag, Kategorie und Datum, die du prüfst und zusammen speicherst. Die App versteht Zahlen so, wie man sie spricht, etwa „zwölf fünfzig“ oder „anderthalb“, und das Zuhören läuft auf deinem Gerät.
+  10 gespeicherte Spracheingaben pro Kalendermonat und Gerät sind kostenlos, mit Pro unbegrenzt.  Ob die Spracheingabe verfügbar ist, hängt von Gerät und Sprache ab.
+
+ Ein Monat, der beginnt, wenn dein Geld kommt
+ Leg fest, an welchem Tag dein Monat beginnt: am 1., am 15. oder wenn dein Gehalt kommt. Listen, Budgets und Diagramme folgen diesem Rhythmus. Jeder Budgetbalken markiert außerdem den heutigen Tag. So siehst du, ob du zu schnell ausgibst, bevor der Monat vorbei ist.
+  Ein Gesamtbudget und Budgets je Kategorie, Umschichten zwischen Budgets im laufenden Monat und Budgetwarnungen: kostenlos.  Mit Pro: ein Gehaltsplan, der zeigt, ob dein Einkommen für alles reicht, was du planst, ein Tagesbudget, bei dem die Fixkosten zuerst abgezogen werden, und eine Prognose bis zum Monatsende.
+
+ Dein Finanzcoach
+ Der Coach liest deinen abgeschlossenen Monat, nennt den größten Posten deiner Alltagsausgaben und schlägt ein Limit vor, das du ausprobieren kannst. Frag ihn „Liege ich diesen Monat im Plan?“ oder „Wie war mein September?“, oder tipp einfach ein, was du ausgegeben hast.
+  Antworten nach festen Regeln, Diagramme und getippte Einträge entstehen auf deinem Gerät und sind kostenlos.  Offene Fragen beantwortet Claude von Anthropic, erst nach deiner Zustimmung. Gesendet werden deine Frage, das bisherige Gespräch und eine Zusammenfassung dieses und des letzten Monats. Der Coach kann außerdem Summen früherer Monate oder einzelne Käufe mit Datum, Geschäft, Kategorie und Betrag anfordern. Notizen, Belege, Kontonummern und Kontostände werden nie gesendet. 10 Fragen pro Monat und Gerät sind kostenlos.  Challenges, wöchentliche Check-ins und mehr Fragen gibt es mit Pro.
+
+ Apple Pay-Käufe und Bank-SMS, von selbst eingetragen
+ Richte in der App „Kurzbefehle“ einmal eine Automation ein. Danach landen Käufe mit Karten aus Wallet oder die SMS deiner Bank von selbst als Buchungen in deinem Haushaltsbuch, und du prüfst sie, wann du willst.
+  Aus einer Bank-SMS liest die App Betrag, Geschäft, Datum und Karte. Abgelehnte Zahlungen und Werbung trägt sie nicht ein.  Die App liest dein Nachrichten-Postfach nicht und verbindet sich nicht mit deiner Bank. Die Automation, die du selbst einrichtest, gibt nur die passende Nachricht weiter.  Oder setz eine Bank-SMS selbst ein: Die Buchung wird für dich ausgefüllt.  10 erfolgreiche Bank-SMS-Importe pro Kalendermonat und Gerät sind kostenlos, mit Pro unbegrenzt.
+  Die Einrichtung Schritt für Schritt, mit Bildern aus Kurzbefehle auf Deutsch
+
+ Deine Ausgaben im Blick
+  Tagesliste, Kalender, Monatssummen und Ausgaben nach Empfänger.  Einkommen und Ausgaben, dazu die größte Veränderung je Kategorie gegenüber dem Zeitraum davor.  Bargeld, Konten und Karten mit Umbuchungen und Kontoständen, auch in mehreren Währungen zu einem Kurs, den du festlegst.  Wiederkehrende Buchungen für Miete, Gehalt und Abos, und für Fixkosten auf Wunsch eine Erinnerung am Tag vorher.  Widgets für Home-Bildschirm und Sperrbildschirm, Siri und Kurzbefehle.
+
+ Deine Daten gehören dir
+ Keine Werbung, kein Bank-Login, kein TrackExpenses-Konto. Dein Haushaltsbuch liegt auf deinem Gerät und wird über deine private iCloud zwischen deinen Geräten synchronisiert. Du kannst die App mit Code oder Face ID schützen, den angezeigten Monat kostenlos als CSV exportieren und Belegfotos anhängen.
+
+ Kostenlos starten
+ Unbegrenzt viele Buchungen, Budgets, Kalender, Diagramme, Suche, monatlicher CSV-Export und iCloud-Sync sind kostenlos, dazu bis zu 3 Konten und 2 wiederkehrende Regeln sowie 10 Bank-SMS-Importe und 10 Spracheingaben pro Kalendermonat und Gerät. Bank-SMS, die danach eintreffen, werden außerhalb deiner Summen aufbewahrt: Pro fügt alle hinzu, sonst gibt das Kontingent des nächsten Monats so viele frei, wie es deckt.
+ Pro ergänzt unbegrenzte Bank-SMS-Importe und Spracheingabe, den Gehaltsplan, Ausgabenprognosen, das Tagesbudget, Was-wäre-wenn-Pläne, Challenges mit dem Finanzcoach, unbegrenzt viele Konten und wiederkehrende Regeln, CSV-Import, Exporte für beliebige Zeiträume, ein vollständiges Backup mit Wiederherstellung, Farbdesigns und alternative App-Icons. Wähl ein Monats- oder Jahresabo oder einen einmaligen Kauf (Lebenslang).
+
+ Häufige Fragen
+  Verbindet sich die App mit meinem Bankkonto?  Nein. Die App fragt nicht nach deinem Bank-Login und verbindet sich nicht mit deiner Bank. Du trägst Buchungen selbst ein oder richtest in Kurzbefehle eine Automation ein, die Apple Pay-Käufe oder ausgewählte Bank-SMS weitergibt.
+  Liest die App meine Nachrichten?  Nein. Die Automation, die du selbst in Kurzbefehle einrichtest, gibt die passende Nachricht an TrackExpenses weiter. Auf dein Nachrichten-Postfach hat die App keinen Zugriff.
+  Meine Bank schickt keine SMS. Was dann?  Viele Banken in Deutschland, Österreich und der Schweiz schicken Mitteilungen in ihrer eigenen App statt SMS. Dann trägst du deine Ausgaben per Sprache oder von Hand ein, oder du richtest die Automation für Käufe mit Karten aus Wallet ein. Die Schritte stehen in der App unter „Mehr“ → „Automatischer SMS-Import“.
+  Ist die App kostenlos?  Ja. Der Download ist kostenlos, und das Haushaltsbuch selbst ist ohne Bezahlung vollständig: unbegrenzt viele Buchungen, Budgets, Suche und monatlicher CSV-Export. Pro ergänzt unbegrenzte Spracheingabe und Bank-SMS-Importe sowie die Planungswerkzeuge, als Monats- oder Jahresabo oder als einmaliger Kauf.
+  Wo liegen meine Daten?  Auf deinem Gerät, und wenn du willst, über deine private iCloud auf deinen anderen Geräten. Es gibt kein TrackExpenses-Konto und keinen Server, der dein Haushaltsbuch speichert.
+
+ Mehr Anleitungen und Rechner
+ Der Rest der Website ist derzeit auf Englisch:
+   Voice Expense Tracking on iPhone    Start Your Budget Month on Payday    Free budget calculators    Privacy Policy
+ Entwickelt von  Mohamed Elatabany  · Zuletzt aktualisiert: November 2026 ·  Korrektur vorschlagen
+
+
+## Bank-SMS automatisch eintragen (iPhone) | TrackExpenses
+https://trackexpenses.app/de/bank-sms.html
+ Bank-SMS auf dem iPhone automatisch eintragen
+ Damit die SMS deiner Bank von selbst in deinem Haushaltsbuch landen, legst du in der App „Kurzbefehle“ eine Automation an. Sie läuft, sobald eine Nachricht mit einem Wort aus den SMS deiner Bank eintrifft, und gibt deren Text an die TrackExpenses-Aktion „Bank-SMS importieren“ weiter. Danach wird jeder Kauf von selbst eingetragen, und du prüfst ihn in der App, wann du willst.
+    Was du brauchst    Wenn deine Bank keine SMS schickt    Das Filterwort wählen    Die Einrichtung Schritt für Schritt    Was danach passiert    Wenn eine SMS nicht eingetragen wurde    Datenschutz    Häufige Fragen
+
+ Was du brauchst
+  Ein iPhone mit iOS 17 oder neuer und Apples App „Kurzbefehle“.  TrackExpenses auf demselben Gerät.  Eine Bank, die dir zu jeder Buchung eine SMS schickt.
+ Die Bilder in dieser Anleitung stammen aus iOS 27. In iOS 26 und älter sehen die Bildschirme anders aus, und einige Schritte weichen ab. Die Schritte für dein System findest du in der App unter „Mehr“ → „Automatischer SMS-Import“.
+
+ Wenn deine Bank keine SMS schickt
+ Viele Banken in Deutschland, Österreich und der Schweiz schicken Mitteilungen in ihrer eigenen App statt SMS. Die kann eine Automation nicht weitergeben. Für Käufe mit Karten aus Wallet gibt es in Kurzbefehle den Auslöser „Transaktion“: Er läuft bei jedem Kauf, und die TrackExpenses-Aktion „Wallet-Transaktion importieren“ trägt ihn ein. Die drei Schritte dazu stehen in der App unter „Mehr“ → „Automatischer SMS-Import“ → „Auch Apple Pay-Käufe importieren“.
+ Schickt deine Bank zu Apple Pay-Käufen auch eine SMS, dann nimm pro Karte nur einen der beiden Wege. Sonst kommt jeder Kauf zweimal an, und der zweite wird als mögliches Duplikat markiert.
+
+ Das Filterwort wählen
+ Die Automation läuft nur bei Nachrichten, die einen Text enthalten, den du festlegst. Nimm ein Wort, das in jeder SMS deiner Bank steht, bei Käufen wie bei Abhebungen und beim Gehalt, und das in deinen privaten Nachrichten kaum vorkommt. Ein Währungskürzel wie EUR oder CHF passt oft, weil die Bank es zu jedem Betrag schreibt. Sonst eignet sich ein Wort, das deine Bank immer wiederholt, oder ihr Name. „Zahlung“ in den Bildern ist nur ein Beispiel. Leg keinen bestimmten Absender fest, denn Banken wechseln ihren Absendernamen gelegentlich.
+
+ Die Einrichtung Schritt für Schritt
+ Die folgenden 18 Schritte machst du einmal, in ein paar Minuten.
+   In der Mediathek beginnen  Öffne Kurzbefehle. Geh zurück zur „Mediathek“ und wähle „Automation“.     Neuen Kurzbefehl erstellen  Tippe unten auf +. In iOS 27 liegen Automationen in Kurzbefehlen.     Editor öffnen  Wenn sich „Kurzbefehl beschreiben“ öffnet, tippe auf „Editor“ oder „Bearbeiten“. Tippe dann im Aktionsbereich auf „Automation“.     „Nachricht“ wählen  Tippe unter „Kommunikation“ auf „Nachricht“, um den Auslöser für eingehende Nachrichten hinzuzufügen.     Filterfeld ändern  Tippe auf das erste blaue Feld „Absender:in“. Damit wählst du, welcher Teil der Nachricht verglichen wird.     Auf den Nachrichtentext filtern  Wähle im Menü „Nachricht“. Die Bedingung lautet dann „Nachricht enthält Text“.     Die Wortwahl deiner Bank verwenden  Tippe auf „Text“ und gib eine Formulierung aus deinen Bank-SMS ein. „Zahlung“ ist nur ein Beispiel. Tippe dann auf den blauen Pfeil des Auslösers.     Automatisch ausführen lassen  Lass „Automation“ an und „Vor dem Ausführen bestätigen“ aus. Die beiden ersetzen den älteren Bildschirm „Sofort ausführen“.     Import-Aktion suchen  Tippe auf „Suchen“, gib „Bank-SMS importieren“ ein und wähle die TrackExpenses-Aktion.     Eingehenden Text verbinden  Tippe in „Buchung aus Nachricht importieren“ auf den blauen Platzhalter „Nachricht“.     „Variable auswählen“ öffnen  Tippe in der unteren Leiste auf „Variable auswählen“. Tipp keine Nachricht ein und verwende nicht „Jedes Mal fragen“.     „Nachricht“ des Auslösers wählen  Tippe direkt unter dem Auslöser auf „Nachricht“. In iOS 27 ist das die Ausgabe der eingehenden Nachricht.     Nachrichtentext verwenden  Schließ die untere Leiste mit ×. Tippe auf die eingefügte Variable „Nachricht“, um ihre Eigenschaften zu sehen.     „Inhalt“ wählen  Wähle in der Liste „Laden“ der Variablen „Inhalt“. Tippe auf „Zurück“ und schließ die Variablenleiste mit ×.     Importe leise halten  Klapp den blauen Pfeil der Import-Aktion auf und schalte „Beim Ausführen anzeigen“ aus. Die verbundene Variable sollte „Inhalt“ heißen.     Datenschutz des Kurzbefehls prüfen  Tippe in der Symbolleiste des Editors auf ⓘ und öffne dann „Datenschutz“.     Im Sperrzustand erlauben  Lass „Ausführung im Sperrzustand erlauben“ aktiviert. Geh zurück zu „Details“, tippe auf „Fertig“ und dann auf „Zurück“, um den Kurzbefehl zu sichern.     Bereit für deine nächste Bank-SMS  Prüf, ob die Automation aktiviert ist. Sieh dir die nächste passende SMS in TrackExpenses unter „Mehr“ → „Automatischer SMS-Import“ an.
+
+ Was danach passiert
+ Trifft eine passende SMS ein, liest TrackExpenses Betrag, Geschäft, Datum und Karte. Die Buchung kommt auf das Konto, dem du die Karte mit denselben Endziffern zugeordnet hast, und bekommt eine Kategorie aus dem, was die App aus deinen früheren Buchungen gelernt hat. Was du noch prüfen solltest, steht in einer Karte oben in der Tagesliste.
+  Abgelehnte Zahlungen und Werbung werden nicht eingetragen.  Gehalt und andere Geldeingänge werden als Einkommen eingetragen und zum Prüfen markiert. Mit dem Schalter „Geldeingänge importieren“ stellst du das ab.  Ein Kauf in einer fremden Währung, für die du noch keinen Kurs festgelegt hast, wartet, bis du ihn festlegst. So kommt er nicht zu einem falschen Kurs in deine Summen.  iOS zeigt bei jedem Lauf der Automation eine eigene Mitteilung. Das ist eine Regel von Apple, die keine App abschalten kann.
+ 10 erfolgreiche Importe pro Kalendermonat und Gerät sind kostenlos. Was danach eintrifft, wird außerhalb deiner Summen aufbewahrt und geht nicht verloren: Pro fügt alles hinzu, sonst gibt das kostenlose Kontingent des nächsten Monats so viele frei, wie es deckt.
+
+ Wenn eine SMS nicht eingetragen wurde
+  Öffne „Mehr“ → „Automatischer SMS-Import“ und setz die SMS in die Karte „Probier eine SMS deiner Bank aus“ ein. Du siehst sofort, ob sie gelesen wurde, und wenn nicht, warum.  Prüf, ob die Automation aktiviert ist und „Vor dem Ausführen bestätigen“ aus ist.  Prüf, ob die Variable in der Import-Aktion die „Nachricht“ des Auslösers ist und „Inhalt“ anzeigt (Schritte 10 bis 15).  Prüf, ob das Filterwort genau so geschrieben ist, wie deine Bank es schreibt.
+ Eine SMS, die nicht gelesen wurde, kannst du auch kopieren und in den Buchungen auf „Einsetzen“ tippen. Die Buchung wird dann ausgefüllt, und du prüfst und speicherst sie.
+
+ Datenschutz
+ TrackExpenses liest dein Nachrichten-Postfach nicht: iOS erlaubt das keiner App. Die Automation, die du eingerichtet hast, gibt nur den Text der passenden Nachricht an die App weiter. Der Text wird auf deinem Gerät gelesen. In deinem Haushaltsbuch gespeichert wird, was daraus gelesen wurde (Betrag, Empfänger, Datum), nicht der Text der SMS selbst. Es gibt keine Verbindung zu deiner Bank und kein Konto in der App.
+
+ Häufige Fragen
+  Liest die App alle meine Nachrichten?  Nein. Die App bekommt nur die Nachrichten, die das Wort enthalten, das du in der Automation festgelegt hast. Du richtest sie ein und kannst sie in Kurzbefehle jederzeit ausschalten oder löschen.
+  Versteht die App Bank-SMS auf Deutsch?  Ja. Sie liest deutsche Formulierungen wie Kartenzahlung, Abbuchung, Lastschrift, Gutschrift und Zahlungseingang, ebenso englische und arabische SMS. Garantieren lässt sich das nicht für jede Bank. Probier deshalb zuerst eine SMS deiner Bank in der App aus.
+  Wie viele SMS trägt die App kostenlos ein?  10 erfolgreiche Importe pro Kalendermonat und Gerät. Was darüber hinausgeht, wird aufbewahrt und nicht gelöscht: Pro fügt alles hinzu, sonst gibt das kostenlose Kontingent des nächsten Monats so viele frei, wie es deckt.
+
+ Mehr dazu
+  TrackExpenses auf Deutsch: alle Funktionen
+ Auf Englisch:
+   SMS Auto-Import Setup: iOS 27 and 26    Fix Bank SMS Automation on iPhone    Track Apple Pay Purchases on iPhone
+ Entwickelt von  Mohamed Elatabany  · Zuletzt aktualisiert: November 2026 ·  Korrektur vorschlagen
 
 
 ## iOS 27 Bank SMS Setup Video | TrackExpenses

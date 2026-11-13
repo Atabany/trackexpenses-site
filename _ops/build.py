@@ -26,7 +26,7 @@ STORE_FAQ = ('<details><summary>Do I need to buy Pro again on Android?</summary>
  'Pro bought on the App Store unlocks TrackExpenses on your Apple devices, and Pro bought on Google Play unlocks it on Android. '
  'There is no TrackExpenses account to connect the two, so one store\u2019s purchase can\u2019t be moved to the other.</p></details>')
 FACT_BLOCK = ('Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. '
- 'The app is in English and Arabic, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. '
+ 'The app is in English, Arabic and German, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. '
  'Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. '
  'The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). '
  'SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. '
@@ -93,28 +93,43 @@ def play_cta(prefix):
  return f'<a class="store-cta play-cta" href="{esc(PLAY_URL)}" aria-label="Get Expense Tracker: SMS &amp; Voice on Google Play"><img class="play-badge" src="{prefix}assets/google-play-badge.png" width="155" height="60" alt=""></a>'
 
 # The Arabic pages live under ar/ with their own navigation, footer and fact block, right to left.
-FACT_BLOCK_AR=('تتبع المصاريف: ميزانية الراتب (TrackExpenses) تطبيق من تطوير Mohamed Elatabany لأجهزة iPhone وiPad بنظام iOS وiPadOS 17 أو أحدث، بالعربية والإنجليزية وبواجهة عربية كاملة من اليمين إلى اليسار. '
+FACT_BLOCK_AR=('تتبع المصاريف: ميزانية الراتب (TrackExpenses) تطبيق من تطوير Mohamed Elatabany لأجهزة iPhone وiPad بنظام iOS وiPadOS 17 أو أحدث، بالعربية والإنجليزية والألمانية وبواجهة عربية كاملة من اليمين إلى اليسار. '
  'لا يتطلب حسابًا في التطبيق ولا الدخول إلى حسابك البنكي. تحكم تلقائي اختياري في «الاختصارات» يسجّل تنبيهات البنك المدعومة ومشتريات المحفظة، والتطبيق لا يقرأ صندوق رسائلك. '
  'الإدخال الصوتي يُنشئ مسودات على جهازك نفسه، في الأجهزة واللغات التي تدعمه. السجلّ المجاني يشمل عمليات يدوية بلا حدود، والميزانيات ونقل المال بينها في الفترة الحالية، والإحصاءات والبحث وتصدير CSV الشهري والمزامنة عبر iCloud الخاص بك، مع 3 حسابات وقاعدتي تكرار، و10 إدخالات صوتية محفوظة و10 رسائل بنكية ناجحة كل شهر ميلادي على كل جهاز. '
  'المدرّب المالي يقرأ آخر شهر ميزانية ويقترح حدًّا واحدًا، وأسئلته المفتوحة تذهب إلى Claude من Anthropic عبر خادم وسيط للمطوّر بعد موافقة المستخدم فقط، مع ما سبق في المحادثة وملخص لهذا الشهر والشهر الماضي، وعند طلب المدرّب مجاميع حتى 13 شهرًا أو حتى 20 عملية شراء بتاريخها ومتجرها وفئتها ومبلغها، ودون الملاحظات أو الإيصالات أو أسماء الحسابات وأرقامها أو الأرصدة (10 أسئلة مجانًا كل شهر على كل جهاز). '
  'التنبيهات التي تتجاوز الحصة المجانية تُحفظ خارج المجاميع ولا تُحذف: يضيفها كلها Pro، وإلا فحصة الشهر التالي تضيف منها بقدر ما تتسع. '
  'يضيف Pro الإدخال الصوتي وتسجيل رسائل البنك والحسابات والعمليات المتكررة بلا حدود، وتحدّيات المدرّب، وخطة الراتب، والتوقعات والميزانية اليومية، واستيراد CSV والتصدير لأي فترة والنسخ الاحتياطي الكامل، والسمات والأيقونات البديلة، باشتراك شهري أو سنوي أو بشراء لمرة واحدة. '
  'الأرقام والتوقعات مبنية على ما تسجّله، وليست نصيحة مالية.')
+# The German pages live under de/, built the same way as the Arabic ones. A fact changed in FACT_BLOCK changes here too.
+FACT_BLOCK_DE=('Haushaltsbuch: Budget & Coach (TrackExpenses) ist eine App von Mohamed Elatabany für iPhone und iPad mit iOS/iPadOS 17 oder neuer, auf Deutsch, Englisch und Arabisch. '
+ 'Ein Konto in der App oder ein Bank-Login ist nicht nötig. Optionale Automationen in der App „Kurzbefehle“ importieren unterstützte Bank-SMS und Wallet-Käufe; die App liest dein Nachrichten-Postfach nicht. '
+ 'Die Spracheingabe erstellt Entwürfe direkt auf dem Gerät, sofern Gerät und Sprache sie unterstützen. Kostenlos sind unbegrenzt viele Buchungen von Hand, Budgets, das Umschichten zwischen Budgets im laufenden Zeitraum und „Ausgleichen“ bei gleichem Gesamtbudget, verbleibende Tage und die Beträge für Ausgegeben und Übrig, Auswertungen, Suche, monatlicher CSV-Export, privater iCloud-Sync, 3 Konten und 2 wiederkehrende Regeln sowie 10 gespeicherte Spracheingaben und 10 erfolgreiche Bank-SMS-Importe pro Kalendermonat und Gerät. '
+ 'Der Finanzcoach liest den letzten Budgetmonat und schlägt ein Limit vor. Was er nach Regeln beantworten kann, dazu Diagramme, Dateien und getippte Einträge, entsteht auf dem Gerät. Offene Fragen gehen erst nach deiner Zustimmung über einen Server des Entwicklers an Claude von Anthropic, zusammen mit dem bisherigen Gespräch, einer Zusammenfassung dieses und des letzten Monats und, wenn das Modell danach fragt, Summen für bis zu 13 Monate oder bis zu 20 Käufe mit Datum, Geschäft, Kategorie und Betrag; niemals Notizen, Belege, Kontonamen oder Kontonummern oder Kontostände (10 Fragen pro Monat und Gerät kostenlos). '
+ 'Bank-SMS über das kostenlose Kontingent hinaus werden aufbewahrt, aber gesperrt und außerhalb der Summen: Pro fügt alle hinzu, sonst gibt das Kontingent des nächsten Kalendermonats so viele frei, wie es deckt. Nichts geht verloren, und gespeicherte Buchungen werden nie gesperrt. '
+ 'Pro ergänzt unbegrenzte Spracheingabe, Bank-SMS-Importe, Konten und wiederkehrende Regeln, Challenges mit dem Finanzcoach und mehr Fragen, einen Gehaltsplan, Prognosen, ein Tagesbudget insgesamt und je Budget, bei dem die Fixkosten zuerst abgezogen werden, Was-wäre-wenn-Pläne, CSV-Import, CSV-Export für beliebige Zeiträume, ein vollständiges JSON-Backup mit Wiederherstellung, Farbdesigns und alternative App-Icons. '
+ 'Es gibt ein Monatsabo, ein Jahresabo und einen einmaligen Kauf (Lebenslang). Berechnungen beruhen auf deinen Einträgen und sind keine Finanzberatung.')
 CHROME={
  'en':{'skip':'Skip to content','tagline':'SMS · Voice · Payday','home':'index.html','breadcrumb':'Breadcrumb',
   'nav':[('features/index.html','Features',''),('index.html#screenshots','Screenshots',''),('guides/index.html','Guides',''),('tools/index.html','Calculators','')],
-  'cta_label':'Download Expense Tracker: SMS &amp; Voice on the App Store','download_h':'Your money, easier to follow.',
+  'cta_label':'Download Expense Tracker: SMS &amp; Voice on the App Store','download_h':'Your money, easier to follow.','download_p':'Expense Tracker: SMS &amp; Voice for '+('iPhone, iPad and Android' if PLAY_ON else 'iPhone and iPad')+'.',
   'facts_summary':'App facts and free / Pro limits','fact_block':FACT_BLOCK,
   'made_by':'Made by <a href="{prefix}about.html">Mohamed Elatabany</a>. No cookies or analytics scripts on this site.',
-  'footer':[('privacy.html','Privacy',''),('support.html','Support &amp; corrections',''),('terms.html','Terms',''),('compare/best-expense-trackers.html','Compare apps',''),('features/index.html','All features',''),('guides/index.html','Guides',''),('tools/index.html','Calculators',''),('ar/index.html','العربية',' lang="ar" hreflang="ar"')],
+  'footer':[('privacy.html','Privacy',''),('support.html','Support &amp; corrections',''),('terms.html','Terms',''),('compare/best-expense-trackers.html','Compare apps',''),('features/index.html','All features',''),('guides/index.html','Guides',''),('tools/index.html','Calculators',''),('ar/index.html','العربية',' lang="ar" hreflang="ar"'),('de/index.html','Deutsch',' lang="de" hreflang="de"')],
   'mobile':('Get TrackExpenses','Free to start','iPhone &amp; iPad'),'image_alt':'TrackExpenses: bank SMS, voice entry and payday budgets','og_alt':'TrackExpenses: SMS, voice and payday budgeting','table':'Table; scroll horizontally for more columns'},
  'ar':{'skip':'انتقل إلى المحتوى','tagline':'رسائل البنك · الصوت · الراتب','home':'ar/index.html','breadcrumb':'مسار الصفحة',
   'nav':[('ar/index.html','الرئيسية',''),('ar/bank-sms.html','دليل رسائل البنك',''),('index.html','English',' lang="en" hreflang="en"')],
-  'cta_label':'نزّل «تتبع المصاريف: ميزانية الراتب» من App Store','download_h':'مصاريفك أوضح، وشهرك تحت نظرك.',
+  'cta_label':'نزّل «تتبع المصاريف: ميزانية الراتب» من App Store','download_h':'مصاريفك أوضح، وشهرك تحت نظرك.','download_p':'تتبع المصاريف: ميزانية الراتب، لـ iPhone وiPad.',
   'facts_summary':'معلومات التطبيق وحدود المجاني وPro','fact_block':FACT_BLOCK_AR,
   'made_by':'من تطوير <a href="{prefix}about.html" hreflang="en">Mohamed Elatabany</a>. لا ملفات تعريف ارتباط ولا أدوات تحليل في هذا الموقع.',
   'footer':[('ar/index.html','الرئيسية',''),('ar/bank-sms.html','دليل رسائل البنك',''),('privacy.html','الخصوصية (بالإنجليزية)',' hreflang="en"'),('support.html','الدعم (بالإنجليزية)',' hreflang="en"'),('terms.html','الشروط (بالإنجليزية)',' hreflang="en"'),('index.html','English',' lang="en" hreflang="en"')],
-  'mobile':('نزّل TrackExpenses','ابدأ مجانًا','iPhone وiPad'),'image_alt':'TrackExpenses: رسائل البنك والتسجيل بالصوت وميزانية الراتب','og_alt':'TrackExpenses: رسائل البنك والتسجيل بالصوت وميزانية الراتب','table':'جدول؛ مرّر أفقيًا لرؤية بقية الأعمدة'}}
+  'mobile':('نزّل TrackExpenses','ابدأ مجانًا','iPhone وiPad'),'image_alt':'TrackExpenses: رسائل البنك والتسجيل بالصوت وميزانية الراتب','og_alt':'TrackExpenses: رسائل البنك والتسجيل بالصوت وميزانية الراتب','table':'جدول؛ مرّر أفقيًا لرؤية بقية الأعمدة'},
+ 'de':{'skip':'Zum Inhalt springen','tagline':'Sprache · Budget · Zahltag','home':'de/index.html','breadcrumb':'Seitenpfad',
+  'nav':[('de/index.html','Start',''),('de/bank-sms.html','Bank-SMS einrichten',''),('index.html','English',' lang="en" hreflang="en"')],
+  'cta_label':'Haushaltsbuch: Budget &amp; Coach im App Store laden','download_h':'Dein Geld, leichter im Blick.','download_p':'Haushaltsbuch: Budget &amp; Coach für iPhone und iPad.',
+  'facts_summary':'Fakten zur App: was kostenlos ist und was Pro bietet','fact_block':FACT_BLOCK_DE,
+  'made_by':'Entwickelt von <a href="{prefix}about.html" hreflang="en">Mohamed Elatabany</a>. Diese Website setzt keine Cookies und keine Analyse-Skripte ein.',
+  'footer':[('de/index.html','Start',''),('de/bank-sms.html','Bank-SMS einrichten',''),('privacy.html','Datenschutz (Englisch)',' hreflang="en"'),('support.html','Support (Englisch)',' hreflang="en"'),('terms.html','Nutzungsbedingungen (Englisch)',' hreflang="en"'),('index.html','English',' lang="en" hreflang="en"')],
+  'mobile':('TrackExpenses laden','Kostenlos starten','iPhone &amp; iPad'),'image_alt':'TrackExpenses: Spracheingabe, Bank-SMS und Budget ab Zahltag','og_alt':'TrackExpenses: Spracheingabe, Bank-SMS und Budget ab Zahltag','table':'Tabelle; für weitere Spalten horizontal scrollen'}}
 def chrome_links(items,prefix): return ''.join(f'<a href="{prefix}{href}"{attrs}>{label}</a>' for href,label,attrs in items)
 
 PAGES={}
@@ -159,7 +174,7 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
 <script type="application/ld+json">{ld}</script></head><body>
 <a class="skip" href="#main">{ui['skip']}</a><header class="nav"><a class="brand" href="{prefix}{ui['home']}">TrackExpenses<span>{ui['tagline']}</span></a><nav aria-label="Main">{chrome_links(ui['nav'],prefix)}</nav>{cta(path,prefix,True,ui['cta_label'])}</header>
 <main id="main" class="{'home' if path=='index.html' else 'article'}">{breadcrumb_html}{body}
-<section class="download"><h2>{ui['download_h']}</h2><p>{('تتبع المصاريف: ميزانية الراتب، لـ iPhone وiPad.' if lang=='ar' else 'Expense Tracker: SMS &amp; Voice for '+('iPhone, iPad and Android' if PLAY_ON else 'iPhone and iPad')+'.')}</p>{cta(path,prefix,False,ui['cta_label'])}{play_cta(prefix)}{f'<p class="small">{esc(rating())} · Checked {esc(FACTS["checked"])}</p>' if rating() else ''}</section>
+<section class="download"><h2>{ui['download_h']}</h2><p>{ui['download_p']}</p>{cta(path,prefix,False,ui['cta_label'])}{play_cta(prefix)}{f'<p class="small">{esc(rating())} · Checked {esc(FACTS["checked"])}</p>' if rating() else ''}</section>
 <details class="fact-block"><summary>{ui['facts_summary']}</summary><p>{esc(ui['fact_block'])}</p></details></main>
 <footer><p>{ui['made_by'].format(prefix=prefix)}</p>{'<p class="small">Google Play and the Google Play logo are trademarks of Google LLC.</p>' if PLAY_ON else ''}<nav aria-label="Footer">{chrome_links(ui['footer'],prefix)}</nav></footer>
 <aside class="mobile-download" aria-label="{ui['mobile'][0]}" hidden><div class="mobile-download-copy"><strong>{ui['mobile'][1]}</strong><span>{ui['mobile'][2]}</span></div>{cta(path,prefix,False,ui['cta_label'])}</aside>
@@ -217,7 +232,7 @@ def feature(f):
  page(path,f['title'],f['description'],body,'WebPage',faq)
 
 home=(ROOT/'_content/home.html').read_text().replace('{{APP_STORE_CTA}}',cta('index.html','')).replace('{{STORE_FAQ}}',STORE_FAQ if PLAY_ON else '')
-HOME_ALTERNATES={'en':'index.html','ar':'ar/index.html','x-default':'index.html'}
+HOME_ALTERNATES={'en':'index.html','ar':'ar/index.html','de':'de/index.html','x-default':'index.html'}
 home_faq=re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p>',home,re.S)
 page('index.html','Expense Tracker: SMS & Voice | TrackExpenses','Track expenses with Say it voice drafts, bank SMS imports and payday budgets. See real app screenshots, free features and Pro tools for iPhone and iPad.',home,faq=home_faq,alternates=HOME_ALTERNATES)
 
@@ -254,13 +269,23 @@ for path,title,desc in [
 def arabic_faq(body): return re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p>',body,re.S) or None
 ar_home=(ROOT/'_content/ar/home.html').read_text().replace('{{APP_STORE_CTA}}',cta('ar/index.html','../',False,CHROME['ar']['cta_label']))
 page('ar/index.html','تطبيق مصاريف من رسائل البنك وبالصوت | TrackExpenses','تطبيق لتتبع المصاريف والميزانية على iPhone بالعربية: رسائل البنك تُسجَّل وحدها، وتسجيل بالصوت، وشهر يبدأ يوم الراتب. بلا حساب ولا اتصال بالبنك.',ar_home,faq=arabic_faq(ar_home),lang='ar',alternates=HOME_ALTERNATES)
-AR_STEPS=json.loads((ROOT/'_ops/ar-steps.json').read_text())  # the app's own Arabic step wording: tools/site_ar_steps.py
+AR_STEPS=json.loads((ROOT/'_ops/ar-steps.json').read_text())  # the app's own Arabic step wording: tools/site_steps.py
 def ar_step(n,s):
  lazy='' if n==1 else ' loading="lazy"'
  return f'<li><h3>{esc(s["title"])}</h3><p>{esc(s["detail"])}</p><img src="../assets/ar/sms/{s["image"]}.webp" width="540" height="1174" alt="الاختصارات في iOS 27 بالعربية، الخطوة {n}: {esc(s["title"])}"{lazy} decoding="async"></li>'
 ar_steps='<ol class="ar-steps">'+''.join(ar_step(n,s) for n,s in enumerate(AR_STEPS,1))+'</ol>'
 ar_guide=(ROOT/'_content/ar/bank-sms.html').read_text().replace('{{AR_STEPS}}',ar_steps)
 page('ar/bank-sms.html','تسجيل المصاريف من رسائل البنك على iPhone | TrackExpenses','دليل بالعربية وبالصور: أعدّ تحكمًا تلقائيًا في «الاختصارات» يسجّل تنبيهات بنكك في TrackExpenses، مع اختيار كلمة التصفية وحل المشكلات الشائعة.',ar_guide,'Article',faq=arabic_faq(ar_guide),lang='ar',published='2026-11-10')
+# German: the same two pages. The guide's steps are the app's own German strings (tools/site_steps.py) over its German captures.
+de_home=(ROOT/'_content/de/home.html').read_text().replace('{{APP_STORE_CTA}}',cta('de/index.html','../',False,CHROME['de']['cta_label']))
+page('de/index.html','Haushaltsbuch-App mit Spracheingabe | TrackExpenses','Haushaltsbuch für iPhone und iPad auf Deutsch: Ausgaben per Sprache eintragen, Budget ab Zahltag, Tagesbudget und Finanzcoach. Ohne Konto und Bank-Login.',de_home,faq=arabic_faq(de_home),lang='de',alternates=HOME_ALTERNATES)
+DE_STEPS=json.loads((ROOT/'_ops/de-steps.json').read_text())
+def de_step(n,s):
+ lazy='' if n==1 else ' loading="lazy"'
+ return f'<li><h3>{esc(s["title"])}</h3><p>{esc(s["detail"])}</p><img src="../assets/de/sms/{s["image"]}.webp" width="540" height="1174" alt="Kurzbefehle unter iOS 27 auf Deutsch, Schritt {n}: {esc(s["title"])}"{lazy} decoding="async"></li>'
+de_steps='<ol class="ar-steps">'+''.join(de_step(n,s) for n,s in enumerate(DE_STEPS,1))+'</ol>'
+de_guide=(ROOT/'_content/de/bank-sms.html').read_text().replace('{{DE_STEPS}}',de_steps)
+page('de/bank-sms.html','Bank-SMS automatisch eintragen (iPhone) | TrackExpenses','Anleitung mit Bildern auf Deutsch: Richte in Kurzbefehle eine Automation ein, die Bank-SMS in TrackExpenses einträgt. Mit Filterwort und Fehlersuche.',de_guide,'Article',faq=arabic_faq(de_guide),lang='de',published='2026-11-14')
 for video in VIDEOS:
  body,video_schema=watch_page(video,BASE)
  page(video['path'],video['title'],video['description'],body,extra_schema=video_schema)

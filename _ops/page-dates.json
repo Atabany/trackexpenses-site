@@ -19,6 +19,14 @@
     "hash": "04905527a0a1925aa8f3211dca73071058fe6bb47b3997f5f3b96ce0571397c5",
     "updated": "2026-10-25"
   },
+  "de/bank-sms.html": {
+    "hash": "a1bb260014267273186ffaf7caf00522d61e3d97f5ef0677b4f88b464b1f7c1b",
+    "updated": "2026-11-14"
+  },
+  "de/index.html": {
+    "hash": "2d6f9c5849802613c77ee9fedce628cd271b31544934f22b998958b230319e6f",
+    "updated": "2026-11-14"
+  },
   "features/accounts-and-transfers.html": {
     "hash": "051940d3476324068e4d66507721bc1a14711f74249ff24e4108eaef2d713c53",
     "updated": "2026-11-09"
@@ -52,8 +60,8 @@
     "updated": "2026-11-09"
   },
   "features/voice-expense-tracker.html": {
-    "hash": "7cbf649a02a3917cb7925e8716c5dc8655a847d05356aaa1432019c2f94469d6",
-    "updated": "2026-11-09"
+    "hash": "375b59de1100145c4dcf3651149a9bb71f49d36c158e8f0a26888607498b9ab7",
+    "updated": "2026-11-14"
   },
   "features/widgets-and-shortcuts.html": {
     "hash": "17c398b132d9a599a2e07a267f612b5dc94ac46c32c4f067aa982cf0a6d8de96",

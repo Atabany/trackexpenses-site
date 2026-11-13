@@ -1,0 +1,92 @@
+[
+ {
+  "image": "01-library",
+  "title": "In der Mediathek beginnen",
+  "detail": "Öffne Kurzbefehle. Geh zurück zur „Mediathek“ und wähle „Automation“."
+ },
+ {
+  "image": "02-automation",
+  "title": "Neuen Kurzbefehl erstellen",
+  "detail": "Tippe unten auf +. In iOS 27 liegen Automationen in Kurzbefehlen."
+ },
+ {
+  "image": "04-editor",
+  "title": "Editor öffnen",
+  "detail": "Wenn sich „Kurzbefehl beschreiben“ öffnet, tippe auf „Editor“ oder „Bearbeiten“. Tippe dann im Aktionsbereich auf „Automation“."
+ },
+ {
+  "image": "05-triggers",
+  "title": "„Nachricht“ wählen",
+  "detail": "Tippe unter „Kommunikation“ auf „Nachricht“, um den Auslöser für eingehende Nachrichten hinzuzufügen."
+ },
+ {
+  "image": "06-sender",
+  "title": "Filterfeld ändern",
+  "detail": "Tippe auf das erste blaue Feld „Absender:in“. Damit wählst du, welcher Teil der Nachricht verglichen wird."
+ },
+ {
+  "image": "07-field-menu",
+  "title": "Auf den Nachrichtentext filtern",
+  "detail": "Wähle im Menü „Nachricht“. Die Bedingung lautet dann „Nachricht enthält Text“."
+ },
+ {
+  "image": "08-filter",
+  "title": "Die Wortwahl deiner Bank verwenden",
+  "detail": "Tippe auf „Text“ und gib eine Formulierung aus deinen Bank-SMS ein. „Zahlung“ ist nur ein Beispiel. Tippe dann auf den blauen Pfeil des Auslösers."
+ },
+ {
+  "image": "09-run-settings",
+  "title": "Automatisch ausführen lassen",
+  "detail": "Lass „Automation“ an und „Vor dem Ausführen bestätigen“ aus. Die beiden ersetzen den älteren Bildschirm „Sofort ausführen“."
+ },
+ {
+  "image": "10-search-action",
+  "title": "Import-Aktion suchen",
+  "detail": "Tippe auf „Suchen“, gib „Bank-SMS importieren“ ein und wähle die TrackExpenses-Aktion."
+ },
+ {
+  "image": "11-import-action",
+  "title": "Eingehenden Text verbinden",
+  "detail": "Tippe in „Buchung aus Nachricht importieren“ auf den blauen Platzhalter „Nachricht“."
+ },
+ {
+  "image": "12-select-variable",
+  "title": "„Variable auswählen“ öffnen",
+  "detail": "Tippe in der unteren Leiste auf „Variable auswählen“. Tipp keine Nachricht ein und verwende nicht „Jedes Mal fragen“."
+ },
+ {
+  "image": "13-message-output",
+  "title": "„Nachricht“ des Auslösers wählen",
+  "detail": "Tippe direkt unter dem Auslöser auf „Nachricht“. In iOS 27 ist das die Ausgabe der eingehenden Nachricht."
+ },
+ {
+  "image": "14-connected",
+  "title": "Nachrichtentext verwenden",
+  "detail": "Schließ die untere Leiste mit ×. Tippe auf die eingefügte Variable „Nachricht“, um ihre Eigenschaften zu sehen."
+ },
+ {
+  "image": "20-message-content",
+  "title": "„Inhalt“ wählen",
+  "detail": "Wähle in der Liste „Laden“ der Variablen „Inhalt“. Tippe auf „Zurück“ und schließ die Variablenleiste mit ×."
+ },
+ {
+  "image": "23-final",
+  "title": "Importe leise halten",
+  "detail": "Klapp den blauen Pfeil der Import-Aktion auf und schalte „Beim Ausführen anzeigen“ aus. Die verbundene Variable sollte „Inhalt“ heißen."
+ },
+ {
+  "image": "16-details",
+  "title": "Datenschutz des Kurzbefehls prüfen",
+  "detail": "Tippe in der Symbolleiste des Editors auf ⓘ und öffne dann „Datenschutz“."
+ },
+ {
+  "image": "17-privacy",
+  "title": "Im Sperrzustand erlauben",
+  "detail": "Lass „Ausführung im Sperrzustand erlauben“ aktiviert. Geh zurück zu „Details“, tippe auf „Fertig“ und dann auf „Zurück“, um den Kurzbefehl zu sichern."
+ },
+ {
+  "image": "19-saved",
+  "title": "Bereit für deine nächste Bank-SMS",
+  "detail": "Prüf, ob die Automation aktiviert ist. Sieh dir die nächste passende SMS in TrackExpenses unter „Mehr“ → „Automatischer SMS-Import“ an."
+ }
+]

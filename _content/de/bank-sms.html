@@ -1,0 +1,41 @@
+<h1>Bank-SMS auf dem iPhone automatisch eintragen</h1>
+<p class="lead">Damit die SMS deiner Bank von selbst in deinem Haushaltsbuch landen, legst du in der App „Kurzbefehle“ eine Automation an. Sie läuft, sobald eine Nachricht mit einem Wort aus den SMS deiner Bank eintrifft, und gibt deren Text an die TrackExpenses-Aktion „Bank-SMS importieren“ weiter. Danach wird jeder Kauf von selbst eingetragen, und du prüfst ihn in der App, wann du willst.</p>
+<nav class="toc" aria-label="Inhalt der Anleitung"><ul><li><a href="#need">Was du brauchst</a></li><li><a href="#no-sms">Wenn deine Bank keine SMS schickt</a></li><li><a href="#word">Das Filterwort wählen</a></li><li><a href="#steps">Die Einrichtung Schritt für Schritt</a></li><li><a href="#after">Was danach passiert</a></li><li><a href="#missed">Wenn eine SMS nicht eingetragen wurde</a></li><li><a href="#privacy">Datenschutz</a></li><li><a href="#faq">Häufige Fragen</a></li></ul></nav>
+
+<h2 id="need">Was du brauchst</h2>
+<ul><li>Ein iPhone mit iOS 17 oder neuer und Apples App „Kurzbefehle“.</li><li>TrackExpenses auf demselben Gerät.</li><li>Eine Bank, die dir zu jeder Buchung eine SMS schickt.</li></ul>
+<p>Die Bilder in dieser Anleitung stammen aus iOS 27. In iOS 26 und älter sehen die Bildschirme anders aus, und einige Schritte weichen ab. Die Schritte für dein System findest du in der App unter „Mehr“ → „Automatischer SMS-Import“.</p>
+
+<h2 id="no-sms">Wenn deine Bank keine SMS schickt</h2>
+<p>Viele Banken in Deutschland, Österreich und der Schweiz schicken Mitteilungen in ihrer eigenen App statt SMS. Die kann eine Automation nicht weitergeben. Für Käufe mit Karten aus Wallet gibt es in Kurzbefehle den Auslöser „Transaktion“: Er läuft bei jedem Kauf, und die TrackExpenses-Aktion „Wallet-Transaktion importieren“ trägt ihn ein. Die drei Schritte dazu stehen in der App unter „Mehr“ → „Automatischer SMS-Import“ → „Auch Apple Pay-Käufe importieren“.</p>
+<p>Schickt deine Bank zu Apple Pay-Käufen auch eine SMS, dann nimm pro Karte nur einen der beiden Wege. Sonst kommt jeder Kauf zweimal an, und der zweite wird als mögliches Duplikat markiert.</p>
+
+<h2 id="word">Das Filterwort wählen</h2>
+<p>Die Automation läuft nur bei Nachrichten, die einen Text enthalten, den du festlegst. Nimm ein Wort, das in jeder SMS deiner Bank steht, bei Käufen wie bei Abhebungen und beim Gehalt, und das in deinen privaten Nachrichten kaum vorkommt. Ein Währungskürzel wie EUR oder CHF passt oft, weil die Bank es zu jedem Betrag schreibt. Sonst eignet sich ein Wort, das deine Bank immer wiederholt, oder ihr Name. „Zahlung“ in den Bildern ist nur ein Beispiel. Leg keinen bestimmten Absender fest, denn Banken wechseln ihren Absendernamen gelegentlich.</p>
+
+<h2 id="steps">Die Einrichtung Schritt für Schritt</h2>
+<p>Die folgenden 18 Schritte machst du einmal, in ein paar Minuten.</p>
+{{DE_STEPS}}
+
+<h2 id="after">Was danach passiert</h2>
+<p>Trifft eine passende SMS ein, liest TrackExpenses Betrag, Geschäft, Datum und Karte. Die Buchung kommt auf das Konto, dem du die Karte mit denselben Endziffern zugeordnet hast, und bekommt eine Kategorie aus dem, was die App aus deinen früheren Buchungen gelernt hat. Was du noch prüfen solltest, steht in einer Karte oben in der Tagesliste.</p>
+<ul><li>Abgelehnte Zahlungen und Werbung werden nicht eingetragen.</li><li>Gehalt und andere Geldeingänge werden als Einkommen eingetragen und zum Prüfen markiert. Mit dem Schalter „Geldeingänge importieren“ stellst du das ab.</li><li>Ein Kauf in einer fremden Währung, für die du noch keinen Kurs festgelegt hast, wartet, bis du ihn festlegst. So kommt er nicht zu einem falschen Kurs in deine Summen.</li><li>iOS zeigt bei jedem Lauf der Automation eine eigene Mitteilung. Das ist eine Regel von Apple, die keine App abschalten kann.</li></ul>
+<p>10 erfolgreiche Importe pro Kalendermonat und Gerät sind kostenlos. Was danach eintrifft, wird außerhalb deiner Summen aufbewahrt und geht nicht verloren: Pro fügt alles hinzu, sonst gibt das kostenlose Kontingent des nächsten Monats so viele frei, wie es deckt.</p>
+
+<h2 id="missed">Wenn eine SMS nicht eingetragen wurde</h2>
+<ul><li>Öffne „Mehr“ → „Automatischer SMS-Import“ und setz die SMS in die Karte „Probier eine SMS deiner Bank aus“ ein. Du siehst sofort, ob sie gelesen wurde, und wenn nicht, warum.</li><li>Prüf, ob die Automation aktiviert ist und „Vor dem Ausführen bestätigen“ aus ist.</li><li>Prüf, ob die Variable in der Import-Aktion die „Nachricht“ des Auslösers ist und „Inhalt“ anzeigt (Schritte 10 bis 15).</li><li>Prüf, ob das Filterwort genau so geschrieben ist, wie deine Bank es schreibt.</li></ul>
+<p>Eine SMS, die nicht gelesen wurde, kannst du auch kopieren und in den Buchungen auf „Einsetzen“ tippen. Die Buchung wird dann ausgefüllt, und du prüfst und speicherst sie.</p>
+
+<h2 id="privacy">Datenschutz</h2>
+<p>TrackExpenses liest dein Nachrichten-Postfach nicht: iOS erlaubt das keiner App. Die Automation, die du eingerichtet hast, gibt nur den Text der passenden Nachricht an die App weiter. Der Text wird auf deinem Gerät gelesen. In deinem Haushaltsbuch gespeichert wird, was daraus gelesen wurde (Betrag, Empfänger, Datum), nicht der Text der SMS selbst. Es gibt keine Verbindung zu deiner Bank und kein Konto in der App.</p>
+
+<h2 id="faq">Häufige Fragen</h2>
+<details><summary>Liest die App alle meine Nachrichten?</summary><p>Nein. Die App bekommt nur die Nachrichten, die das Wort enthalten, das du in der Automation festgelegt hast. Du richtest sie ein und kannst sie in Kurzbefehle jederzeit ausschalten oder löschen.</p></details>
+<details><summary>Versteht die App Bank-SMS auf Deutsch?</summary><p>Ja. Sie liest deutsche Formulierungen wie Kartenzahlung, Abbuchung, Lastschrift, Gutschrift und Zahlungseingang, ebenso englische und arabische SMS. Garantieren lässt sich das nicht für jede Bank. Probier deshalb zuerst eine SMS deiner Bank in der App aus.</p></details>
+<details><summary>Wie viele SMS trägt die App kostenlos ein?</summary><p>10 erfolgreiche Importe pro Kalendermonat und Gerät. Was darüber hinausgeht, wird aufbewahrt und nicht gelöscht: Pro fügt alles hinzu, sonst gibt das kostenlose Kontingent des nächsten Monats so viele frei, wie es deckt.</p></details>
+
+<h2 id="more">Mehr dazu</h2>
+<p><a href="index.html">TrackExpenses auf Deutsch: alle Funktionen</a></p>
+<p>Auf Englisch:</p>
+<ul><li><a href="../guides/sms-setup.html" hreflang="en" lang="en">SMS Auto-Import Setup: iOS 27 and 26</a></li><li><a href="../guides/sms-automation-not-working.html" hreflang="en" lang="en">Fix Bank SMS Automation on iPhone</a></li><li><a href="../guides/apple-pay-expenses.html" hreflang="en" lang="en">Track Apple Pay Purchases on iPhone</a></li></ul>
+<p class="byline">Entwickelt von <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · Zuletzt aktualisiert: November 2026 · <a href="../support.html" hreflang="en">Korrektur vorschlagen</a></p>
