@@ -289,9 +289,38 @@ and `ar/bank-sms.html` (the bank-SMS setup guide with the 18 iOS 27 steps). 41 i
   The App Store badge stays the English one (Apple's badge service returned no Arabic file).
 - **Rules.** Letter spacing is reset on Arabic pages (`[dir=rtl] *`), because tracking pulls Arabic letters apart.
   A fact changed in `FACT_BLOCK` must be changed in `FACT_BLOCK_AR` too. The guide's steps are data,
-  `_ops/ar-steps.json`, written from the app's catalog by `tools/site_ar_steps.py`: run it when a setup step or its
+  `_ops/ar-steps.json`, written from the app's catalog by `tools/site_steps.py` (then `site_ar_steps.py`): run it when a setup step or its
   Arabic changes. Nothing from an unreleased version goes on either page. The validator accepts the
   Arabic breadcrumb label and treats `ar/index.html` as a home page.
 - **Not claimed.** No search volume was measured for any Arabic query, and no ranking is promised. Read Search
   Console by page (`/ar/`) after a few weeks before writing a second Arabic guide.
 
+
+
+## 14 November 2026 — German pages (`/de/`)
+
+Owner's request of 14 November: the app's "Learn more" (SMS setup) and "Visit Website" should open the site in the
+reader's language, Arabic and German. Arabic pages existed; German ones were written: `de/index.html` and
+`de/bank-sms.html`. 43 indexable pages.
+
+- **Where the German comes from.** The home page is built on the vetted German App Store description
+  (`marketing/app-store-2026-11-de/listing.json`) and follows `docs/l10n/GERMAN_STYLE.md`: du, „ “ quotes, and the
+  order German marketing takes (voice, the payday month, the coach, then Apple Pay purchases and bank SMS, because
+  banks in Germany, Austria and Switzerland mostly send app notices, not SMS). The guide's 18 steps are the app's own
+  German strings (`tools/site_steps.py` → `_ops/de-steps.json`) over its German Shortcuts captures
+  (`marketing/sms-setup-de/screens/ios27`, 540 px WebP in `assets/de/sms/`); the four app pictures are the German store
+  captures (`marketing/app-store-2026-11-de/raw`, 660 px WebP in `assets/de/`). It has one section the Arabic guide
+  lacks: what to do when the bank sends no SMS (the Wallet "Transaktion" trigger, steps in the app).
+- **How they are built.** `CHROME['de']` and `FACT_BLOCK_DE` in `build.py`, bodies in `_content/de/`. The three home
+  pages name each other with `hreflang`; the English footer links to Deutsch. The validator accepts the German
+  breadcrumb label ("Seitenpfad") and treats `de/index.html` as a home page. The step and picture grids reuse the
+  `ar-steps` and `ar-shots` classes, which carry no direction.
+- **Rules.** A fact changed in `FACT_BLOCK` changes in `FACT_BLOCK_AR` and `FACT_BLOCK_DE`. Every app or iOS label a
+  page quotes is the catalog's string. **Nothing from an unreleased version:** the independent review caught "TAN-Codes
+  werden nicht eingetragen", true only from 1.15.0 (the German TAN words are in the unreleased reader), so the pages
+  say only that declined payments and offers are skipped; put the TAN claim back when 1.15.0 is live.
+- **The app links here.** From 1.15.0, `AppLinks` opens `/ar/…` or `/de/…` by the app's language, and
+  `AppLinksTests` fails if a language is listed whose pages are not in these sources. Renaming or removing
+  `ar/bank-sms.html`, `de/bank-sms.html` or either home page breaks a link inside the shipped app.
+- **Not claimed.** No search volume was measured for any German query. Read Search Console by page (`/de/`) before
+  writing more German pages.
