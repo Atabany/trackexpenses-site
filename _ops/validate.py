@@ -100,7 +100,10 @@ for f,p in parsers.items():
      if clip.get('name','') not in visible: fail('video chapter not in visible transcript')
      if not clip.get('url','').startswith(p.canon+'?t='): fail('video chapter URL does not seek within watch page')
    if 'data-video-time=' not in raw: fail('video has no working chapter links')
-  if s.get('aggregateRating') and not FACTS['userRatingCount']: fail('rating fabricated at zero count')
+  if s.get('aggregateRating'):
+   ar=s['aggregateRating']; places=FACTS.get('ratingsByStorefront',{})
+   if not FACTS.get('allRatingCount'): fail('rating fabricated at zero count')
+   elif ar.get('ratingCount')!=sum(x['count'] for x in places.values()) or ar.get('ratingCount')!=FACTS['allRatingCount'] or abs(ar.get('ratingValue',0)-sum(x['average']*x['count'] for x in places.values())/FACTS['allRatingCount'])>0.006: fail('rating differs from the storefront figures in facts.json')
  if not any(s.get('@type')=='BreadcrumbList' for s in schemas): fail('missing breadcrumbs')
  if not p.noindex and 'max-image-preview:large' not in raw: fail('missing large image preview permission')
  if rel not in ['index.html','ar/index.html','de/index.html'] and 'aria-label="Breadcrumb"' not in raw and 'aria-label="مسار الصفحة"' not in raw and 'aria-label="Seitenpfad"' not in raw: fail('missing visible breadcrumb navigation')

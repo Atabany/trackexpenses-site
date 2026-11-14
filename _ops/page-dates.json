@@ -84,8 +84,8 @@
     "updated": "2026-10-26"
   },
   "guides/budget-pacing-explained.html": {
-    "hash": "caaa0759e2e9776e5f61bbf63514eb908a3470678f9687f9857bd99264b9abe2",
-    "updated": "2026-11-04"
+    "hash": "c5b86cc579076b0e3e995e5c6bb76c516722eeb9a6690a7c4ae7d4ab7904c3b8",
+    "updated": "2026-11-15"
   },
   "guides/credit-card-payment-vs-expense.html": {
     "hash": "4b1ec85b8380bfbea5bdff2587aba5eab2672776272bbf728001f0bea9949190",
@@ -108,8 +108,8 @@
     "updated": "2026-11-08"
   },
   "guides/payday-budget.html": {
-    "hash": "cd1854a805e3cc7018361e0c46a3c2b2ffcba45fa97ffe3f722e2f134c218746",
-    "updated": "2026-11-04"
+    "hash": "699cd7003dc4be13325539990951bd1e7d5d3ce02b187fb0b2a49dadae0fe255",
+    "updated": "2026-11-15"
   },
   "guides/sms-automation-not-working.html": {
     "hash": "76d3238f72a683de0316859c115fb23182d2da32ad8407cee8adacc8d10e82d7",
@@ -132,8 +132,8 @@
     "updated": "2026-10-13"
   },
   "index.html": {
-    "hash": "4e91c3c0ebdab966dabfa7f5182d6d3dd350787a62032712753933596d88ec05",
-    "updated": "2026-11-10"
+    "hash": "3cfeb153d92b7e3569a84f11d93fc81dadd39b52ea82faaec69e044e08e44bb8",
+    "updated": "2026-11-15"
   },
   "privacy.html": {
     "hash": "4b05396bedc96abc54bcf085942ee80b9652e90ee076dbb2af9a81ffa0854e24",
@@ -148,20 +148,36 @@
     "updated": "2026-11-04"
   },
   "tools/50-30-20-calculator.html": {
-    "hash": "268194f23ac8f4840d260b2b5a08f268e13bd0d7ad4ca4853449776e841efbdd",
-    "updated": "2026-11-10"
+    "hash": "3ec7ad655b2e8da0c33d1b479d3a271d41b1ae9fa6bd8d1d8e7b34d20b7c5b4f",
+    "updated": "2026-11-15"
+  },
+  "tools/budget-pacing-calculator.html": {
+    "hash": "7afee457b8e0f805afe4d90d63320fc8232771ffcdd58e9dd5e873e7aa689092",
+    "updated": "2026-11-15"
   },
   "tools/daily-budget.html": {
-    "hash": "7f9fe7033a30d71e304d4dac3da764e354e8c282c78d4aba3a2fae87a9f784e2",
-    "updated": "2026-11-10"
+    "hash": "b384b2808d0a924ec0a0961c9e96186fa1090443da0cd906f7532f7cad7d6309",
+    "updated": "2026-11-15"
+  },
+  "tools/habit-cost-calculator.html": {
+    "hash": "c4f23229807e70aaabee3be836ca13a0e9d4298965e32fc27777163d441b0b72",
+    "updated": "2026-11-15"
   },
   "tools/index.html": {
-    "hash": "4ead4c2eea3de68eb0b56fc0143e158a299843b58ebfa36061da9667428b0da0",
-    "updated": "2026-11-10"
+    "hash": "fdedab133dc1f9292d786f30f5f67155ebb42b6467052631edd54a32a274b6e3",
+    "updated": "2026-11-15"
+  },
+  "tools/payday-calculator.html": {
+    "hash": "38e1fa33403551a8d9933883490e2548394ff58456b56f98db927e6270cd4e56",
+    "updated": "2026-11-15"
+  },
+  "tools/savings-goal-calculator.html": {
+    "hash": "7b821846b3a6bd40f77521fa1a0f80c4bb3bda97171aec696048e641ea01af5f",
+    "updated": "2026-11-15"
   },
   "tools/subscription-cost-calculator.html": {
-    "hash": "763c68b1e202758b1838ec828bb0f503ed2d46d7fa9db712d84da6eee096c5a1",
-    "updated": "2026-11-10"
+    "hash": "7a7bf64d947948ecc1fcf4ca8980277f348497232ad40409c1ad2c4233f7973e",
+    "updated": "2026-11-15"
   },
   "videos/sms-setup-ios26.html": {
     "hash": "ace144e89b4d3f97677d6853720b8d3a833dea40c23208e22395ebdf36ca6968",

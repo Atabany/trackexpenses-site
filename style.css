@@ -391,7 +391,7 @@
 .sub-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1.3fr) auto;gap:12px;align-items:end;margin-bottom:14px}
 .sub-row .sub-remove,button.secondary{background:transparent;color:var(--accent);border:1px solid var(--line);min-height:48px}
 .sub-list{margin:16px 0 0;padding-left:22px;color:var(--muted)}
-#split-result,#subs-result{padding:20px;background:var(--pale);border-radius:12px;color:var(--ink);margin-top:24px;font-weight:600}
+#split-result,#subs-result,#pace-result,#payday-result,#goal-result,#habit-result{padding:20px;background:var(--pale);border-radius:12px;color:var(--ink);margin-top:24px;font-weight:600}
 @media(max-width:640px){.sub-row{grid-template-columns:1fr 1fr;padding-bottom:14px;border-bottom:1px solid var(--line)}.sub-row label:first-child{grid-column:1/-1}.sub-row .sub-remove{grid-column:1/-1}}
 /* Arabic pages (ar/): right to left. Tracking is reset everywhere, because letter spacing pulls Arabic letters apart. */
 [dir=rtl] body{font-family:-apple-system,BlinkMacSystemFont,"SF Arabic","Geeza Pro","Segoe UI","Noto Sans Arabic",Tahoma,sans-serif}
@@ -409,4 +409,9 @@
 .ar-steps p{margin:0 0 14px;font-size:15px}
 .ar-steps img{display:block;width:100%;max-width:300px;height:auto;margin:0 auto;border-radius:18px;border:1px solid var(--line)}
 @media(max-width:760px){.ar-shots{grid-template-columns:repeat(2,minmax(0,1fr))}.ar-steps{grid-template-columns:1fr}}
-
+/* Calculators of 15 November: a field that does not apply to the chosen option is not shown, and a two-column result table reads as label and value. */
+.calculator [hidden]{display:none}
+#pace-table td,#habit-table td{text-align:right;white-space:normal}
+#payday-table td:last-child{text-align:right}#payday-table td{white-space:normal}
+.more-link{margin:24px 0 0;font-size:15px}
+#payday-reference td{white-space:normal}#pace-table thead th:last-child,#habit-table thead th:last-child,#payday-table thead th:last-child{text-align:right}

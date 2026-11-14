@@ -12,7 +12,7 @@ The method works if you maintain the window consistently. The weakness is the re
 
 Suppose salary normally arrives on the 25th. Your September pay period can run from 25 August through 24 September. A purchase on 24 September belongs to that period; a purchase on 25 September belongs to the next one. The label of a period is less important than its visible start and end dates.
 
-TrackExpenses uses a fixed monthly start day. That is suited to monthly pay on the 25th or another regular date. It is not automatic scheduling of a paycheck every two weeks. If your pay moves substantially or you are paid several times each month, choose a reporting convention you can use consistently and keep the individual income dates accurate. Do not change the month setting repeatedly just to make one chart look better.
+TrackExpenses uses a fixed monthly start day. That is suited to monthly pay on the 25th or another regular date. It is not automatic scheduling of a paycheck every two weeks. The [payday calculator](../tools/payday-calculator.html) lists two-weekly paydays and the months with three. If your pay moves substantially or you are paid several times each month, choose a reporting convention you can use consistently and keep the individual income dates accurate. Do not change the month setting repeatedly just to make one chart look better.
 
 Days near the end of a month need a rule. A start day of 31 cannot literally occur in February. TrackExpenses clamps the chosen day to the last available day in a shorter month. If exact boundaries matter to you, browse the displayed dates after changing the setting and confirm that this convention fits the way you want to report.
 

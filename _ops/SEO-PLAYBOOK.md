@@ -324,3 +324,46 @@ reader's language, Arabic and German. Arabic pages existed; German ones were wri
   `ar/bank-sms.html`, `de/bank-sms.html` or either home page breaks a link inside the shipped app.
 - **Not claimed.** No search volume was measured for any German query. Read Search Console by page (`/de/`) before
   writing more German pages.
+
+## 15 November 2026 — four more calculators, chosen from Search Console, and real ratings
+
+Owner's request of 15 November: "work on the website, add some tools so to improve the SEO". 47 indexable pages.
+
+- **What Search Console said (read in Chrome this time; 3 months to 11 November, web search).** 614 impressions, 2 clicks,
+  average position 12.8; 32 pages indexed, 9 not (3 redirects, 2 canonical alternates, 3 discovered, 1 crawled). **The
+  daily budget calculator alone had 495 of the 614 impressions, at an average position of 9.2, steady at about 15 to 40 a
+  day since 18 October, and no click.** Next were the credit-card guide (26, position 50.6), bank-sms-iphone (22, 18.3, one
+  click) and sms-setup (14, 5.2). Countries: United Kingdom 157 (position 8.7), United States 147 (15.4), Philippines 38,
+  India 34, Australia 31. Google hides almost every query (13 shown, each 1 to 3 impressions, among them "budget pacing
+  formula" and "how to account for credit card payments in budget"). The two calculators of 10 November had no impressions
+  yet, five days after publication. Small numbers: they show which kind of page gets shown, not how much traffic to expect.
+- **So: more calculators, next to the one that is shown.** `tools/budget-pacing-calculator.html` (share of budget spent
+  against share of period passed, the gap in money, where the period ends at this pace, and a daily amount; days completed
+  are the days before today, as in the pacing guide's example), `tools/payday-calculator.html` (days until the next payday
+  and every payday for twelve calendar months, for pay every week, every two weeks, once or twice a month; the months with a
+  third or fifth payday; a server-rendered table of 2027's three-paycheck months), `tools/savings-goal-calculator.html` (per
+  month, week and day to reach a goal by a date, or how long at a monthly amount; no interest, said on the page) and
+  `tools/habit-cost-calculator.html` (a small repeated purchase as a week, a month, a year, five and ten years, and what one
+  fewer saves). The hub lists seven and a "Suggest a calculator" card; the home page shows six and links the seventh.
+  The pacing and payday guides link to their calculators (the pacing guide stays at 1,300 words: the link replaced a clause).
+- **The daily budget calculator's description was rewritten** as the question it answers ("How much can you spend per day
+  until payday?"); its title and URL are unchanged because that page is the one that ranks. Judge it by its click rate
+  over the next four weeks, not sooner.
+- **Ratings.** The US storefront still has none, so the site showed none, while the UAE (4), India, Saudi Arabia and Egypt
+  (1 each) hold seven ratings, all five stars. `update_rating.py` now reads 52 storefronts into
+  `facts.json` (`ratingsByStorefront`, `allRatingCount`, `allRatingAverage`); the download section of every page shows
+  "5.0 on the App Store · 7 ratings across 4 countries · Checked <date>" (Arabic and German in their own words), the home
+  page's MobileApplication record carries the matching aggregateRating, and llms.txt lists the count per storefront.
+  The validator fails if the record's count or average differs from the storefront figures. Run `update_rating.py` before
+  each publication so the count and date stay true; a storefront that does not answer keeps its last figure.
+- **Checked.** Every calculator was run in headless Chrome on the built page with normal and edge inputs (first day of a
+  period, a period that ended, a used-up budget, the 31st in short months, a weekend payday moved to Friday, a goal already
+  reached, a date under a week away); phone layouts were looked at at 390 points through an iframe, because headless
+  Chrome will not make a window narrower than 500. Facts about the app were checked in the code (search shows no total,
+  so the habit page does not claim one; the start day is 1 to 31 and clamps to the last day).
+- **Rules.** A field that applies to one option only carries `data-for` and is hidden by script (`.calculator [hidden]`).
+  The 2027 payday table is dated content: replace it with 2028's in late 2027. Nothing unreleased is on these pages (no
+  savings goals feature, no every-two-weeks budget period: the payday page says the start day is a fixed day of the month).
+  `style.css?v=14`, `site.js?v=12`.
+- **Not claimed.** No search volume was measured for any of the four topics. Read Search Console by page in two to four
+  weeks; if a calculator is shown and not clicked, rewrite its title and description before adding more pages.

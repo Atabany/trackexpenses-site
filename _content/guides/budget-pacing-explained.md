@@ -6,7 +6,7 @@ Budget pacing compares the share of your budget already spent with the share of 
 
 You need a spending budget, recorded expenses and the dates the budget covers. Use one currency and one period for every number. A payday month beginning on the 25th should not be compared with expenses counted from the 1st.
 
-First calculate spending as a percentage: expenses divided by budget, multiplied by 100. Then calculate the percentage of the period that has passed. For a simple check, use completed days divided by the total days in the period, multiplied by 100. Calculator on iPhone is enough for both calculations; you do not need a bank connection or a paid app.
+First calculate spending as a percentage: expenses divided by budget, multiplied by 100. Then calculate the percentage of the period that has passed. For a simple check, use completed days divided by the total days in the period, multiplied by 100. Calculator on iPhone is enough for both, or use the [budget pacing calculator](../tools/budget-pacing-calculator.html).
 
 Spending ahead of time means purchases arrived faster than an even daily spread; spending behind time means they arrived more slowly. Check transactions before changing your plan, especially if rent or an annual renewal landed early.
 

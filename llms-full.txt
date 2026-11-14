@@ -29,6 +29,8 @@
 ## Facts
 Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. The app is in English, Arabic and German, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, monthly CSV export, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV import, date-range CSV exports, full JSON backup and restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
 
+App Store rating: 5.0 out of 5 from 7 ratings (United Arab Emirates 4, Egypt 1, India 1, Saudi Arabia 1; the other storefronts checked have none yet), checked 2026-11-15.
+
 App Store: https://apps.apple.com/app/id6806614497
 
 ## Features
@@ -87,9 +89,13 @@ App Store: https://apps.apple.com/app/id6806614497
 - [Log Expenses with Siri and Shortcuts on iPhone](https://trackexpenses.app/guides/log-expenses-with-siri.html): Use Siri phrases and Shortcuts actions to log an expense, record income or check what is left in your budget, hands-free. Exact phrases and setup.
 
 ## Free calculators (run in the browser, nothing sent or saved)
-- [Daily Budget Until Payday Calculator](https://trackexpenses.app/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
+- [Daily Budget Until Payday Calculator](https://trackexpenses.app/tools/daily-budget.html): How much can you spend per day until payday? Enter your budget, spending and payday for a daily amount, today included. Free, nothing sent or saved.
+- [Budget Pacing Calculator: Am I Overspending?](https://trackexpenses.app/tools/budget-pacing-calculator.html): Compare the share of your budget spent with the share of the period passed: the gap in money, where the period ends at this pace, and a daily amount.
+- [Payday Calculator: Days Until Payday](https://trackexpenses.app/tools/payday-calculator.html): Count the days until your next payday and list every payday for 12 months, with the three-paycheck months if you are paid every two weeks.
 - [50/30/20 Budget Calculator](https://trackexpenses.app/tools/50-30-20-calculator.html): Split take-home pay into needs, wants and savings per paycheck, month and year. Custom shares, a reference table, and nothing sent or saved.
+- [Savings Goal Calculator: How Much to Save](https://trackexpenses.app/tools/savings-goal-calculator.html): Work out how much to save each month, week and day to reach a goal by a date, or how long it takes at a monthly amount. Nothing is sent or saved.
 - [Subscription Cost Calculator](https://trackexpenses.app/tools/subscription-cost-calculator.html): Add up your subscriptions as a month, a year and five years, sorted by cost, with their share of your pay. Runs in your browser only.
+- [Habit Cost Calculator: Daily Coffee Per Year](https://trackexpenses.app/tools/habit-cost-calculator.html): See what a daily coffee or any small habit costs in a week, a month, a year and five years, and what buying one fewer saves. Runs in your browser.
 
 ## All official pages
 - [Expense Tracker: SMS & Voice | TrackExpenses](https://trackexpenses.app/): Track expenses with Say it voice drafts, bank SMS imports and payday budgets. See real app screenshots, free features and Pro tools for iPhone and iPad.
@@ -123,10 +129,14 @@ App Store: https://apps.apple.com/app/id6806614497
 - [Privacy Policy | TrackExpenses](https://trackexpenses.app/privacy.html): How TrackExpenses stores your ledger, processes SMS and voice locally, uses private iCloud and handles purchases.
 - [Support and Free / Pro Limits | TrackExpenses](https://trackexpenses.app/support.html): Get TrackExpenses help, review free and Pro limits, restore purchases, fix imports and export your records.
 - [Terms of Use | TrackExpenses](https://trackexpenses.app/terms.html): TrackExpenses terms on the App Store (Apple’s Standard EULA) and on Google Play: purchases, renewals, refunds and calculation limits.
-- [Daily Budget Until Payday Calculator | TrackExpenses](https://trackexpenses.app/tools/daily-budget.html): Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.
+- [Daily Budget Until Payday Calculator | TrackExpenses](https://trackexpenses.app/tools/daily-budget.html): How much can you spend per day until payday? Enter your budget, spending and payday for a daily amount, today included. Free, nothing sent or saved.
+- [Budget Pacing Calculator: Am I Overspending? | TrackExpenses](https://trackexpenses.app/tools/budget-pacing-calculator.html): Compare the share of your budget spent with the share of the period passed: the gap in money, where the period ends at this pace, and a daily amount.
+- [Payday Calculator: Days Until Payday | TrackExpenses](https://trackexpenses.app/tools/payday-calculator.html): Count the days until your next payday and list every payday for 12 months, with the three-paycheck months if you are paid every two weeks.
 - [50/30/20 Budget Calculator | TrackExpenses](https://trackexpenses.app/tools/50-30-20-calculator.html): Split take-home pay into needs, wants and savings per paycheck, month and year. Custom shares, a reference table, and nothing sent or saved.
+- [Savings Goal Calculator: How Much to Save | TrackExpenses](https://trackexpenses.app/tools/savings-goal-calculator.html): Work out how much to save each month, week and day to reach a goal by a date, or how long it takes at a monthly amount. Nothing is sent or saved.
 - [Subscription Cost Calculator | TrackExpenses](https://trackexpenses.app/tools/subscription-cost-calculator.html): Add up your subscriptions as a month, a year and five years, sorted by cost, with their share of your pay. Runs in your browser only.
-- [Free Budget Calculators | TrackExpenses](https://trackexpenses.app/tools/index.html): Three free calculators that run in your browser: daily budget until payday, the 50/30/20 split and subscription cost. No sign-up, nothing sent.
+- [Habit Cost Calculator: Daily Coffee Per Year | TrackExpenses](https://trackexpenses.app/tools/habit-cost-calculator.html): See what a daily coffee or any small habit costs in a week, a month, a year and five years, and what buying one fewer saves. Runs in your browser.
+- [Free Budget Calculators | TrackExpenses](https://trackexpenses.app/tools/index.html): Seven free calculators that run in your browser: daily budget, budget pacing, paydays, 50/30/20, savings goals, subscriptions and habit costs.
 - [Best iPhone Expense Trackers: How to Choose](https://trackexpenses.app/compare/best-expense-trackers.html): Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.
 - [Monefy Alternative with SMS and Voice | TrackExpenses](https://trackexpenses.app/compare/monefy-alternative.html): Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.
 - [تطبيق مصاريف من رسائل البنك وبالصوت | TrackExpenses](https://trackexpenses.app/ar/index.html): تطبيق لتتبع المصاريف والميزانية على iPhone بالعربية: رسائل البنك تُسجَّل وحدها، وتسجيل بالصوت، وشهر يبدأ يوم الراتب. بلا حساب ولا اتصال بالبنك.
@@ -320,7 +330,7 @@ https://trackexpenses.app/
 
    A HELPFUL HEAD START  Make your first week easier.     SET UP  Bank SMS expense tracking on iPhone  Get the automation right →    BUDGET  Start your budget month on payday  Find your monthly rhythm →    SAY IT  Voice expense tracking on iPhone  From spoken purchase to draft →
 
-   FREE CALCULATORS  Do the arithmetic first.     UNTIL PAYDAY  Daily budget until payday  What you can spend per day →    PLAN THE MONTH  50/30/20 budget calculator  Needs, wants and savings →    FIXED COSTS  Subscription cost calculator  A month, a year, five years →
+   FREE CALCULATORS  Do the arithmetic first.     UNTIL PAYDAY  Daily budget until payday  What you can spend per day →    AM I OVERSPENDING?  Budget pacing calculator  Spending against time →    PAYDAYS  Payday calculator  Days until payday, three-paycheck months →    PLAN THE MONTH  50/30/20 budget calculator  Needs, wants and savings →    SAVING  Savings goal calculator  How much to save, or how long →    FIXED COSTS  Subscription cost calculator  A month, a year, five years →     All seven calculators , including the  habit cost calculator
 
 
 ## Bank SMS Expense Tracking on iPhone | TrackExpenses
@@ -362,7 +372,7 @@ https://trackexpenses.app/guides/payday-budget.html
  The method works if you maintain the window consistently. The weakness is the repetition: changing the filter in one table but forgetting a chart or another sheet makes reports disagree. A monthly app setting is useful when it applies to the whole ledger rather than only to an individual budget. Before choosing any app, check whether its transaction lists, charts and comparisons follow the same dates.
  Choose the period that matches your pay
  Suppose salary normally arrives on the 25th. Your September pay period can run from 25 August through 24 September. A purchase on 24 September belongs to that period; a purchase on 25 September belongs to the next one. The label of a period is less important than its visible start and end dates.
- TrackExpenses uses a fixed monthly start day. That is suited to monthly pay on the 25th or another regular date. It is not automatic scheduling of a paycheck every two weeks. If your pay moves substantially or you are paid several times each month, choose a reporting convention you can use consistently and keep the individual income dates accurate. Do not change the month setting repeatedly just to make one chart look better.
+ TrackExpenses uses a fixed monthly start day. That is suited to monthly pay on the 25th or another regular date. It is not automatic scheduling of a paycheck every two weeks. The  payday calculator  lists two-weekly paydays and the months with three. If your pay moves substantially or you are paid several times each month, choose a reporting convention you can use consistently and keep the individual income dates accurate. Do not change the month setting repeatedly just to make one chart look better.
  Days near the end of a month need a rule. A start day of 31 cannot literally occur in February. TrackExpenses clamps the chosen day to the last available day in a shorter month. If exact boundaries matter to you, browse the displayed dates after changing the setting and confirm that this convention fits the way you want to report.
  Set the start day in TrackExpenses
  Open More → Period & Entry and choose the monthly start day. Return to the ledger and check the period shown above the transactions. Browse the previous and next months so you can see where entries move. The records keep their original dates; you have changed the window used to group them.
@@ -692,7 +702,7 @@ https://trackexpenses.app/guides/budget-pacing-explained.html
  Budget pacing compares the share of your budget already spent with the share of the period already elapsed. TrackExpenses puts a time marker beside spending progress, so you can check the two together without treating an early bill as proof that the whole month is going wrong.
  Check pacing with an iPhone calculator
  You need a spending budget, recorded expenses and the dates the budget covers. Use one currency and one period for every number. A payday month beginning on the 25th should not be compared with expenses counted from the 1st.
- First calculate spending as a percentage: expenses divided by budget, multiplied by 100. Then calculate the percentage of the period that has passed. For a simple check, use completed days divided by the total days in the period, multiplied by 100. Calculator on iPhone is enough for both calculations; you do not need a bank connection or a paid app.
+ First calculate spending as a percentage: expenses divided by budget, multiplied by 100. Then calculate the percentage of the period that has passed. For a simple check, use completed days divided by the total days in the period, multiplied by 100. Calculator on iPhone is enough for both, or use the  budget pacing calculator .
  Spending ahead of time means purchases arrived faster than an even daily spread; spending behind time means they arrived more slowly. Check transactions before changing your plan, especially if rent or an annual renewal landed early.
  For a reusable worksheet, Numbers can calculate from table cells. Keep your budget and expenses in separate cells, then divide expenses by budget. Apple's  Numbers formula instructions  explain opening the formula keyboard, selecting cells and using arithmetic operators. Label your period dates beside the calculation so the result remains understandable next week.
  Read the spending bar and today marker together
@@ -1223,7 +1233,67 @@ https://trackexpenses.app/tools/daily-budget.html
    Period budget    Recorded spending    Extra upcoming commitments   Only commitments not already in recorded spending.   Today's date    Last day of this budget period   Usually the day before your next payday.    Calculate daily budget
  Example: 1,200 − 480 − 120 = 600 remaining. Over 10 days including today, that is 60.00 per day.   JavaScript enables the calculator. Use the formula and table below without it; all guides and examples remain readable.
  Reference examples    Illustrative amounts in one currency; remaining days include today    Budget  Spent  Extra commitments  Days left  Per day      1,200  480  120  10  60.00    1,200  600  0  15  40.00    900  850  50  5  0.00    900  950  0  5  0.00 (50 over budget)    600  420  0  1  180.00
- The formula and its limits   Daily amount = max(0, budget − recorded spending − extra commitments) ÷ days left.  We include today and the last day. A period ending today has one day left. A date in the past produces an error instead of an invented allowance. The display rounds to two decimal places; the calculation keeps the unrounded result.  Only subtract extra commitments once. If next week's rent is already included in recorded spending, leave it out of the extra-commitments field. This calculator offers an optional reserve you choose; it is not an exact replica of every TrackExpenses forecasting scenario.  From an example to your ledger  TrackExpenses lets your month start on a fixed monthly payday and keeps transactions, budgets and charts in the same window. Ordinary budget facts and pacing stay free. Pro adds daily guidance, forecasts and what-if plans based on your recorded figures.   Set your monthly payday period  ·  Check recorded spending in CSV   More calculators:  50/30/20 budget calculator  ·  Subscription cost calculator
+ The formula and its limits   Daily amount = max(0, budget − recorded spending − extra commitments) ÷ days left.  We include today and the last day. A period ending today has one day left. A date in the past produces an error instead of an invented allowance. The display rounds to two decimal places; the calculation keeps the unrounded result.  Only subtract extra commitments once. If next week's rent is already included in recorded spending, leave it out of the extra-commitments field. This calculator offers an optional reserve you choose; it is not an exact replica of every TrackExpenses forecasting scenario.  From an example to your ledger  TrackExpenses lets your month start on a fixed monthly payday and keeps transactions, budgets and charts in the same window. Ordinary budget facts and pacing stay free. Pro adds daily guidance, forecasts and what-if plans based on your recorded figures.   Set your monthly payday period  ·  Check recorded spending in CSV   More calculators:  Budget pacing calculator  ·  Payday calculator  ·  50/30/20 budget calculator  ·  All calculators
+ By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
+
+
+## Budget Pacing Calculator: Am I Overspending? | TrackExpenses
+https://trackexpenses.app/tools/budget-pacing-calculator.html
+ Budget pacing calculator
+ Compare how much of your budget is spent with how much of the period has passed. The calculator shows whether you are spending faster or slower than an even pace, where the period ends if nothing changes, and what you can spend per day from today.
+  Am I spending too fast?  All figures stay in this browser. They are not sent or saved. Use one currency for every amount.
+   Period budget    Spent so far   Up to the end of yesterday gives the cleanest reading.   First day of the period   Usually your payday.   Last day of the period   Usually the day before your next payday.   Today's date     Check my pace
+ Example: 60% of a 3,000 budget is spent with 50% of the period gone. That is 300.00 more than an even pace.
+   Your pace    Measure  Result      Budget spent  60%    Period passed  50% (15 of 30 days)    Even pace by today  1,500.00    Against an even pace  300.00 over    Period ends at this pace  3,600.00 (600.00 over budget)    Per day to stay within budget  80.00 for 15 days
+  JavaScript enables the calculator. Without it, use the formula and the reference table below.
+ An even pace through a 30-day period
+   Days already completed, and what an even pace has spent of a 3,000 budget    Day of period  Days completed  Period passed  Even pace      1  0  0%  0    6  5  16.7%  500    11  10  33.3%  1,000    16  15  50%  1,500    21  20  66.7%  2,000    26  25  83.3%  2,500    30  29  96.7%  2,900
+ The budget pacing formula
+  Budget spent = spending ÷ budget. Period passed = days completed ÷ days in the period.  When the first share is larger than the second, you are spending faster than an even pace. The gap in money is spending − budget × period passed.
+ Days completed are the days before today, so on the first day nothing has passed yet. The days in the period include both its first and its last day. In the example, 25 September to 24 October is 30 days; at the start of 10 October, 15 are complete. Spending of 1,800 is 60% of 3,000, the period is 50% gone, an even pace would have spent 1,500, and the gap is 300.
+  Period ends at this pace = spending ÷ days completed × days in the period.  1,800 over 15 days is 120 a day; 30 such days come to 3,600, which is 600 over.  Per day to stay within budget = what is left ÷ days left, today included.  1,200 over 15 days is 80 a day.
+ How to read the answer
+ An even pace is a reference line, not a rule. Rent, a loan payment or a yearly insurance bill paid in the first week puts anyone far over an even pace on day five, and nothing is wrong. Two ways to get a truer reading:
+   Pace only what varies.  Take your fixed bills out of both figures: enter the budget without them and spending without them. What remains is groceries, transport, eating out and the rest of everyday spending, which is the part a pace can describe.   Look at the daily figure.  If the amount per day for the rest of the period is one you can live on, an early bill has not hurt you. If it is far below what you normally spend in a day, the pace is telling you something real.
+ Being under pace is not automatically good news either: a bill that has not arrived yet is not money saved. Check what is still due before the period ends.
+ The same check on your real spending
+ In TrackExpenses every budget bar carries a marker for today, so spending and time are read together without a calculation; that is free, and your month can start on your payday. An optional budget alert tells you when a budget passes 80% while ahead of pace. Pro adds the daily budget, worked out after repeating bills, and a forecast of where the period ends.
+  Guide: budget pacing explained  ·  Daily budget until payday calculator  ·  Payday calculator  ·  Budget planner in TrackExpenses
+ Questions
+  What is budget pacing?  Budget pacing compares the share of a budget already spent with the share of the period already passed. Spending 60% of the budget when half the period is gone means you are spending faster than an even pace.
+  What is the budget pacing formula?  Divide spending by the budget, and divide the days completed by the days in the period. The difference in money is spending minus the budget multiplied by the share of the period passed.
+  Is spending faster than an even pace always a problem?  No. Fixed bills paid early in the period, such as rent, put you over an even pace without any overspending. Leave fixed bills out of both figures to pace only everyday spending.
+ By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
+
+
+## Payday Calculator: Days Until Payday | TrackExpenses
+https://trackexpenses.app/tools/payday-calculator.html
+ Payday calculator
+ Count the days until your next payday and list every payday of this month and the eleven after it. If you are paid every two weeks, it also shows which months bring a third paycheck.
+  When am I paid next?  Everything stays in this browser. Nothing is sent or saved.
+   I am paid   Every two weeks  Every week  Once a month  Twice a month    A payday you know   Any past or coming payday. The others are counted from it.   Day of the month   31 means the last day of every month.   Second day of the month    If payday falls on a weekend   Keep the date  Pay on the Friday before    Today's date     Show my paydays
+ Example: paid every two weeks from Friday 1 January 2027, the year has 27 paydays, and January, July and December have three.
+   Paydays month by month    Month  Paydays  Count      January 2027  1, 15, 29  3    February 2027  12, 26  2    March 2027  12, 26  2    April 2027  9, 23  2    May 2027  7, 21  2    June 2027  4, 18  2    July 2027  2, 16, 30  3    August 2027  13, 27  2    September 2027  10, 24  2    October 2027  8, 22  2    November 2027  5, 19  2    December 2027  3, 17, 31  3
+  JavaScript enables the calculator. Without it, use the reference table and the counting rule below.
+ Three-paycheck months in 2027
+ If you are paid every second Friday, 2027 runs on one of two calendars. Find the first Friday you are paid in January.
+   Paid every two weeks on a Friday: months with three paydays and paydays in the year, 2027    First payday  Three paydays in  In 2027      Friday 1 January  January, July, December  27    Friday 8 January  April, October  26
+ Paid every Friday instead? In 2027 there are 53 Fridays, and January, April, July, October and December each have five. For any other weekday, enter one payday above and read the table the calculator prints.
+ How the paydays are counted
+  Every two weeks:  each payday is 14 days after the one before, counted from the date you entered. A year has 52 weeks and one day (two in a leap year), so it holds 26 such paydays and, once in a while, 27. Twelve months of two paydays make only 24, which is why two months of the year, sometimes three, carry a third.
+  Every week:  each payday is 7 days after the one before. Most months have four and four or five months have five.
+  Once or twice a month:  the payday is the same day number every month. A day that a short month does not have, such as the 31st in June or the 30th in February, moves to that month's last day. If you choose it, a payday on a Saturday or Sunday moves to the Friday before; when that Friday is in the month before, the table keeps it in its own month's row and writes the date with its month. Employers and countries differ here: some pay on the working day after, and where the weekend is Friday and Saturday the rule is different again, so check your contract or a past payslip.
+  Days until payday  are counted from today to the next payday on the calendar. If today is a payday, the answer is zero and the result names the one after.
+ What to do with a third paycheck
+ Most monthly bills are sized for two paychecks. The simplest plan when you are paid every two weeks is to budget every month on two, then decide in advance what a third one is for: a yearly bill such as insurance, a savings goal, or paying a debt down faster. Decided ahead of time it is a plan; left open it tends to disappear into ordinary spending.
+ The same reasoning works the other way round. Twice-a-month pay is 24 paydays a year, so there is never a third paycheck, but each one is a little larger than a two-weekly one for the same yearly salary.
+ A budget month that starts on payday
+ If you are paid once a month, TrackExpenses can start your month on that day: choose a start day from 1 to 31 in More → Period & Entry, and your transactions, budgets and charts all run from payday to the day before the next. The start day is a fixed day of the month; the app does not follow a two-weekly schedule by itself. With Pro, the salary plan has a place for extra income that belongs to one month only, which is where a third paycheck fits.
+  Guide: budget from payday to payday  ·  Daily budget until payday calculator  ·  Budget pacing calculator  ·  50/30/20 budget calculator
+ Questions
+  How many paychecks are there in a year when you are paid every two weeks?  Usually 26. A year is 52 weeks and one day, so every eleven years or so a two-weekly schedule fits 27 paydays into one calendar year. In 2027 that happens when the first payday is Friday 1 January.
+  Which months have three paychecks in 2027?  For pay every second Friday: January, July and December if your first payday of the year is 1 January, or April and October if it is 8 January. For another weekday, enter one of your paydays in the calculator.
+  What is the difference between biweekly and twice a month?  Biweekly pay comes every 14 days, 26 times a year, on the same weekday. Twice-a-month pay comes on two fixed dates, 24 times a year, on changing weekdays. For the same yearly salary a biweekly paycheck is smaller, and two or three months a year contain a third one.
  By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
 
 
@@ -1248,11 +1318,39 @@ https://trackexpenses.app/tools/50-30-20-calculator.html
  Add up your needs first. If rent alone takes 40% of your pay, needs will not stop at 50%, and no calculator changes that. Enter the shares your month really has, such as 60/20/20, and treat 50/30/20 as the direction to move in when a lease or a loan ends. What matters is that the three shares are decided on purpose and add up to all of your pay.
  From three numbers to a working budget
  A split is a plan for the month; it helps only if you compare it with what you spent. In TrackExpenses, category budgets, pacing against today and moving money between budgets are free. The salary plan, a Pro feature, lists your income, each spending category and your savings with each line's share of income, and shows Plan beside Actual at the end of the month.
-  Daily budget until payday calculator  ·  Subscription cost calculator  ·  Budget planner in TrackExpenses
+  Savings goal calculator  ·  Daily budget until payday calculator  ·  Subscription cost calculator  ·  Budget planner in TrackExpenses
  Questions
   Is the 50/30/20 rule based on income before or after tax?  After tax. Use your take-home pay: what reaches your account after tax and deductions. Where salaries are not taxed, that is the salary that arrives.
   Where do debt payments go in a 50/30/20 budget?  The minimum payment on a loan or card is a need. Anything you pay above the minimum counts in the 20% for savings, because it reduces what you owe.
   What if my needs are more than 50% of my pay?  Then the split has shown you the real constraint. Use shares that match your month for now, such as 60/20/20, and bring needs down when you can. Do not take the difference out of savings without deciding to.
+ By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
+
+
+## Savings Goal Calculator: How Much to Save | TrackExpenses
+https://trackexpenses.app/tools/savings-goal-calculator.html
+ Savings goal calculator
+ Enter what you are saving for and what you already have. The calculator shows how much to put aside each month, week and day to get there by a date, or how long it takes at the amount you can save.
+  Plan a savings goal  All figures stay in this browser. They are not sent or saved. Use one currency for every amount.
+   Goal amount    Already saved    I want to know   How much to save to reach it by a date  How long it takes at a monthly amount    Reach it by   Counted from today.   I can save per month     Calculate my plan
+ Example: 4,500 still to save over 365 days is 375.00 a month, 86.30 a week or 12.33 a day.
+  JavaScript enables the calculator. Without it, use the formula and the reference table below.
+ What to save each month
+   Monthly amount for what is still to save, with no interest, in one currency    Still to save  In 12 months  In 24 months  In 36 months      1,000  83.33  41.67  27.78    3,000  250.00  125.00  83.33    5,000  416.67  208.33  138.89    10,000  833.33  416.67  277.78    20,000  1,666.67  833.33  555.56    50,000  4,166.67  2,083.33  1,388.89
+ How it is calculated
+  Still to save = goal − already saved.  With a date, the calculator divides that by the days from today to the date:  per day = still to save ÷ days . A week is seven of those days, and a month is the daily amount times 365 ÷ 12, so a goal 365 days away comes to one twelfth a month. In the example, 5,000 less the 500 already saved leaves 4,500; over 365 days that is 12.33 a day, 86.30 a week and 375.00 a month.
+ With a monthly amount,  months needed = still to save ÷ monthly amount, rounded up . 4,500 at 300 a month takes 15 months; the last month completes the goal.
+ The calculator does not add interest. For a goal a year or two away, interest on an ordinary savings account changes the monthly figure very little, and leaving it out means you arrive slightly early instead of slightly short. For goals many years away, or money that is invested, the result here is the most you would need to put in, not a forecast.
+ Make the monthly amount real
+ A monthly figure works when it leaves your account before you can spend it. Three things help:
+   Move it on payday.  Transfer the amount to a separate savings account the day you are paid, and budget the month on what is left.   Check it against your pay.  If the figure is more than you can spare, move the date instead of giving up on the goal: twice the time is half the monthly amount.   Keep goals apart.  An emergency fund, a trip and a new phone are easier to follow as separate amounts than as one balance.
+ In a 50/30/20 budget, savings are the 20%. If one goal needs more than that share of your take-home pay, you can see at once that either the date or another part of the budget has to change.
+ Follow it in your ledger
+ In TrackExpenses, Savings is its own kind of account, and money moved into it is a transfer, not an expense, so your spending totals stay honest while the savings balance grows. Three accounts are free. With Pro, the salary plan gives each savings account a monthly line next to your spending, and says in one sentence whether your income covers everything you planned.
+  50/30/20 budget calculator  ·  Payday calculator  ·  Habit cost calculator  ·  Accounts and transfers in TrackExpenses
+ Questions
+  How much should I save each month to reach my goal?  Subtract what you already have from the goal and divide by the number of months left. To save 4,500 in 12 months you need 375 a month; in 24 months, 187.50 a month.
+  Should a savings goal calculation include interest?  For a goal one or two years away it makes little difference, and leaving interest out is the safer estimate. This calculator leaves it out, so any interest you earn brings the goal a little closer.
+  Where should the money for a savings goal come from in a budget?  Treat it like a bill you pay to yourself on payday. In a 50/30/20 budget it is part of the 20% for savings. If the goal needs more, lengthen the time or reduce another part of the budget.
  By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
 
 
@@ -1278,7 +1376,7 @@ https://trackexpenses.app/tools/subscription-cost-calculator.html
  Divide the yearly price by 12 and compare it with the monthly price. A plan that costs 10 a month or 96 a year works out at 8 a month on the yearly plan, 24 less over the year. That saving is real only if you keep the subscription all year: cancel after three months and the yearly plan cost 96 where three monthly payments would have cost 30.
  Keep them in your ledger
  A total you worked out once goes stale the next time a price changes. In TrackExpenses a subscription is a repeating transaction: it is written into your ledger on its day without you entering it, and a changed price is one edit to the rule. Two repeating rules are free and Pro makes them unlimited. Stats → Overview then shows your fixed costs as a month and as a year.
-  Guide: track subscriptions and recurring bills  ·  50/30/20 budget calculator  ·  Daily budget until payday calculator
+  Guide: track subscriptions and recurring bills  ·  Habit cost calculator  ·  50/30/20 budget calculator  ·  Daily budget until payday calculator
  Questions
   How do I see my subscriptions on iPhone?  Open Settings, tap your name, then tap Subscriptions. The list shows subscriptions billed through Apple. Ones you pay for directly, by card or through your bank, appear only on your statements.
   Is a yearly plan cheaper than paying monthly?  Usually, if you keep it for the whole year. Divide the yearly price by 12 and compare it with the monthly price. A yearly plan you stop using after three months costs more than three monthly payments would have.
@@ -1286,11 +1384,40 @@ https://trackexpenses.app/tools/subscription-cost-calculator.html
  By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
 
 
+## Habit Cost Calculator: Daily Coffee Per Year | TrackExpenses
+https://trackexpenses.app/tools/habit-cost-calculator.html
+ Habit cost calculator
+ A coffee, a delivery fee, a snack on the way home: enter the price and how often you buy it. The calculator shows what that one habit costs in a week, a month, a year and five years.
+  What does it add up to?  All figures stay in this browser. They are not sent or saved.
+   What you buy    Price each time    How many times    Every   Day  Week  Month    Monthly take-home pay (optional)     Add it up
+ Example: coffee at 4.50, 5 times a week, costs 1,170.00 a year. One fewer a week saves 234.00 a year.
+   What it costs    Over  Cost      A week  22.50    A month  97.50    A year  1,170.00    Five years  5,850.00    Ten years  11,700.00
+  JavaScript enables the calculator. Without it, use the formula and the reference table below.
+ What a small price costs in a year
+   One purchase at an unchanged price, in one currency    Price each time  5 times a week  Every day      2  520  730    3  780  1,095    4  1,040  1,460    5  1,300  1,825    8  2,080  2,920    12  3,120  4,380    15  3,900  5,475
+ How it is calculated
+  Yearly cost = price × times × periods in a year.  A year counts as 365 days, 52 weeks or 12 months, depending on how you entered the habit. The month is the yearly cost divided by 12. The week is seven days of a daily habit, and the yearly cost divided by 52 for one counted by the week or the month. In the example, 4.50 five times a week is 22.50 a week; 52 weeks make 1,170 a year, which is 97.50 a month.
+ The five- and ten-year figures assume the price never changes. Prices usually rise, so read them as the least the habit would cost. The line about buying one fewer is the price times the periods in a year: at 4.50, skipping one coffee a week is 4.50 × 52, or 234 a year.
+ What the number is for
+ The yearly figure is not a verdict. A daily coffee that costs 1,170 a year may be worth every bit of it to you; the point is to decide with the real number in front of you, because a price seen once at the counter never looks like much. Two comparisons make it useful:
+   Against your pay.  Enter your monthly take-home pay and the result shows the habit's share of it.   Against your fixed costs.  A habit of 100 a month weighs the same as a 100 a month subscription. If you are looking for room in a budget, compare both lists before choosing what to change.
+ Find how often you really buy it
+ People usually guess the price right and the count wrong. Before trusting the result, count: open your card or bank statement for last month and count the purchases at that shop, or search your expense records for its name. If you pay in cash, keep the receipts for two weeks and double the count.
+ See it in your own spending
+ TrackExpenses can do the counting once purchases are in your ledger. Search lists every entry for a shop or a word, so you can count them. On Stats → Overview, the Know your money card adds up the small purchases of the current period, how many there were and what share of your spending they made, once there are at least five; the same card shows your fixed costs as a month and as a year. Both are free.
+  Subscription cost calculator  ·  Savings goal calculator  ·  Daily budget until payday calculator  ·  Reports and stats in TrackExpenses
+ Questions
+  How much does a daily coffee cost in a year?  Multiply the price by 365. A coffee at 4 every day is 1,460 a year; bought only on five days a week it is 1,040 a year.
+  How do I work out the yearly cost of a habit?  Multiply the price by how many times you buy it in a week, then by 52. For something bought monthly, multiply the monthly spending by 12.
+  Do small purchases matter more than big bills?  Not necessarily. Rent, loans and subscriptions are often larger in total. Work out the yearly cost of each and compare them before deciding what to change.
+ By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction
+
+
 ## Free Budget Calculators | TrackExpenses
 https://trackexpenses.app/tools/index.html
  Free budget calculators
- Three small calculators for the questions a budget starts with. They run in your browser: nothing you type is sent or saved, and there is nothing to sign up for.
-   UNTIL PAYDAY   Daily budget until payday   What is left of your budget, divided by the days until you are paid again, today included.    PLAN THE MONTH   50/30/20 budget calculator   Your take-home pay split into needs, wants and savings, per paycheck, per month and per year, with shares you can change.    FIXED COSTS   Subscription cost calculator   Every subscription added up as a month, a year and five years, sorted by what costs the most.
+ Seven small calculators for the questions a budget starts with. They run in your browser: nothing you type is sent or saved, and there is nothing to sign up for.
+   UNTIL PAYDAY   Daily budget until payday   What is left of your budget, divided by the days until you are paid again, today included.    AM I OVERSPENDING?   Budget pacing calculator   The share of your budget spent against the share of the period passed, the gap in money, and where the period ends at this pace.    PAYDAYS   Payday calculator   Days until your next payday and every payday for twelve months, with the three-paycheck months when you are paid every two weeks.    PLAN THE MONTH   50/30/20 budget calculator   Your take-home pay split into needs, wants and savings, per paycheck, per month and per year, with shares you can change.    SAVING   Savings goal calculator   How much to put aside each month, week and day to reach a goal by a date, or how long it takes at the amount you can save.    FIXED COSTS   Subscription cost calculator   Every subscription added up as a month, a year and five years, sorted by what costs the most.    SMALL PURCHASES   Habit cost calculator   What a daily coffee or any small habit costs in a week, a month, a year and five years, and what buying one fewer saves.    MISSING ONE?   Suggest a calculator   If there is a budget sum you keep doing by hand, write to us. The useful ones get built.
  How these calculators are made
  Each page states its formula and prints a reference table, so you can check a result by hand or use the page with JavaScript switched off. Amounts carry no currency symbol: use one currency for everything you enter. The results are arithmetic on the figures you type, not financial advice.
  When you want the same answers from your real spending,  TrackExpenses  works them out from your ledger, and the  guides  explain each method step by step.

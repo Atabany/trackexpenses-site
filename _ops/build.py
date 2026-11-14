@@ -77,9 +77,20 @@ def markdown(md):
   else: para.append(line.strip())
  return '\n'.join(out)
 
-def rating():
- n=FACTS['userRatingCount']; r=FACTS['averageUserRating']
- return f'{r:.1f} on the US App Store · rated by {n:,} users' if n else ''
+# Ratings are the sum of every storefront that has some (update_rating.py), always shown with their count and the date read.
+RATING_COUNT=FACTS.get('allRatingCount',0); RATING_AVERAGE=FACTS.get('allRatingAverage',0)
+RATING_PLACES=[v['name'] for v in FACTS.get('ratingsByStorefront',{}).values()]
+def rating(lang='en'):
+ n=RATING_COUNT; r=f'{RATING_AVERAGE:.1f}'; k=len(RATING_PLACES)
+ if not n: return ''
+ checked=datetime.strptime(FACTS['checked'],'%Y-%m-%d')
+ if lang=='ar':
+  month=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'][checked.month-1]
+  return f'\u200f{r} من 5 في App Store · عدد التقييمات: {n:,} · حتى {checked.day} {month} {checked.year}'
+ if lang=='de':
+  day=checked.strftime('%d.%m.%Y')
+  return f'{r.replace(".",",")} von 5 Sternen im App Store · {n} Bewertung{"" if n==1 else "en"} · Stand {day}'
+ return f'{r} on the App Store · {n:,} rating{"" if n==1 else "s"}'+(f' across {k} countries' if k>1 else '')+f' · Checked {FACTS["checked"]}'
 
 def campaign(path):
  tag='web-home' if path=='index.html' else ('web-'+path.removesuffix('.html').replace('/','-'))[:40]
@@ -157,7 +168,7 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
  if path in ['index.html','about.html']: schemas.append({'@context':'https://schema.org','@type':'Person','@id':BASE+'#author','name':'Mohamed Elatabany','url':BASE+'about.html','sameAs':['https://github.com/Atabany',FACTS['artistViewUrl']]})
  if path=='index.html':
   app={'@context':'https://schema.org','@type':'MobileApplication','@id':BASE+'#app','name':FACTS['trackName'],'alternateName':'TrackExpenses','operatingSystem':'iOS 17+, iPadOS 17+','applicationCategory':'FinanceApplication','url':BASE,'downloadUrl':STORE,'author':{'@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'},'description':FACT_BLOCK,'softwareVersion':CONFIG.get('app_version',FACTS['version']),'featureList':FEATURE_LIST,'screenshot':[BASE+'assets/screenshots/'+x+'.webp' for x in ['transactions','say','sms','budget','calendar','insights']],'offers':{'@type':'Offer','price':0,'priceCurrency':'USD','description':'Free download with optional Pro subscription or lifetime purchase'}}
-  if FACTS['userRatingCount']: app['aggregateRating']={'@type':'AggregateRating','ratingValue':FACTS['averageUserRating'],'ratingCount':FACTS['userRatingCount'],'bestRating':5,'worstRating':1}
+  if RATING_COUNT: app['aggregateRating']={'@type':'AggregateRating','ratingValue':RATING_AVERAGE,'ratingCount':RATING_COUNT,'bestRating':5,'worstRating':1}
   schemas.append(app)
  if extra_schema:
   schemas.append(extra_schema)
@@ -170,15 +181,15 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
 <link rel="canonical" href="{canonical}">{''.join(f'<link rel="alternate" hreflang="{code}" href="{BASE+("" if target=="index.html" else target)}">' for code,target in (alternates or {}).items())}<meta name="apple-itunes-app" content="app-id={APP}">
 <meta property="og:type" content="{'article' if kind=='Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{ui['og_alt']}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}assets/og.png">
-{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=13">
+{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=14">
 <script type="application/ld+json">{ld}</script></head><body>
 <a class="skip" href="#main">{ui['skip']}</a><header class="nav"><a class="brand" href="{prefix}{ui['home']}">TrackExpenses<span>{ui['tagline']}</span></a><nav aria-label="Main">{chrome_links(ui['nav'],prefix)}</nav>{cta(path,prefix,True,ui['cta_label'])}</header>
 <main id="main" class="{'home' if path=='index.html' else 'article'}">{breadcrumb_html}{body}
-<section class="download"><h2>{ui['download_h']}</h2><p>{ui['download_p']}</p>{cta(path,prefix,False,ui['cta_label'])}{play_cta(prefix)}{f'<p class="small">{esc(rating())} · Checked {esc(FACTS["checked"])}</p>' if rating() else ''}</section>
+<section class="download"><h2>{ui['download_h']}</h2><p>{ui['download_p']}</p>{cta(path,prefix,False,ui['cta_label'])}{play_cta(prefix)}{f'<p class="small">{esc(rating(lang))}</p>' if rating(lang) else ''}</section>
 <details class="fact-block"><summary>{ui['facts_summary']}</summary><p>{esc(ui['fact_block'])}</p></details></main>
 <footer><p>{ui['made_by'].format(prefix=prefix)}</p>{'<p class="small">Google Play and the Google Play logo are trademarks of Google LLC.</p>' if PLAY_ON else ''}<nav aria-label="Footer">{chrome_links(ui['footer'],prefix)}</nav></footer>
 <aside class="mobile-download" aria-label="{ui['mobile'][0]}" hidden><div class="mobile-download-copy"><strong>{ui['mobile'][1]}</strong><span>{ui['mobile'][2]}</span></div>{cta(path,prefix,False,ui['cta_label'])}</aside>
-<script src="{prefix}site.js?v=11" defer></script></body></html>'''
+<script src="{prefix}site.js?v=12" defer></script></body></html>'''
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text)
  if not noindex:
   PAGES[path]=(title,desc,canonical,body,updated)
@@ -253,14 +264,18 @@ page('404.html','Page Not Found | TrackExpenses','Find the TrackExpenses homepag
 def tool_schema(path,name,desc):
  return {'@context':'https://schema.org','@type':'WebApplication','@id':BASE+path+'#tool','name':name,'url':BASE+path,'description':desc,'applicationCategory':'FinanceApplication','operatingSystem':'Any','browserRequirements':'Requires JavaScript','isAccessibleForFree':True,'inLanguage':'en','offers':{'@type':'Offer','price':0,'priceCurrency':'USD'},'author':{'@type':'Person','name':'Mohamed Elatabany','url':BASE+'about.html'}}
 TOOLS=[
- ('tools/daily-budget.html','daily-budget.html','Daily Budget Until Payday Calculator | TrackExpenses','Calculate remaining budget per day, with optional commitments. Local-only inputs, worked examples and an inclusive count of days left.'),
+ ('tools/daily-budget.html','daily-budget.html','Daily Budget Until Payday Calculator | TrackExpenses','How much can you spend per day until payday? Enter your budget, spending and payday for a daily amount, today included. Free, nothing sent or saved.'),
+ ('tools/budget-pacing-calculator.html','budget-pacing-calculator.html','Budget Pacing Calculator: Am I Overspending? | TrackExpenses','Compare the share of your budget spent with the share of the period passed: the gap in money, where the period ends at this pace, and a daily amount.'),
+ ('tools/payday-calculator.html','payday-calculator.html','Payday Calculator: Days Until Payday | TrackExpenses','Count the days until your next payday and list every payday for 12 months, with the three-paycheck months if you are paid every two weeks.'),
  ('tools/50-30-20-calculator.html','50-30-20-calculator.html','50/30/20 Budget Calculator | TrackExpenses','Split take-home pay into needs, wants and savings per paycheck, month and year. Custom shares, a reference table, and nothing sent or saved.'),
- ('tools/subscription-cost-calculator.html','subscription-cost-calculator.html','Subscription Cost Calculator | TrackExpenses','Add up your subscriptions as a month, a year and five years, sorted by cost, with their share of your pay. Runs in your browser only.')]
+ ('tools/savings-goal-calculator.html','savings-goal-calculator.html','Savings Goal Calculator: How Much to Save | TrackExpenses','Work out how much to save each month, week and day to reach a goal by a date, or how long it takes at a monthly amount. Nothing is sent or saved.'),
+ ('tools/subscription-cost-calculator.html','subscription-cost-calculator.html','Subscription Cost Calculator | TrackExpenses','Add up your subscriptions as a month, a year and five years, sorted by cost, with their share of your pay. Runs in your browser only.'),
+ ('tools/habit-cost-calculator.html','habit-cost-calculator.html','Habit Cost Calculator: Daily Coffee Per Year | TrackExpenses','See what a daily coffee or any small habit costs in a week, a month, a year and five years, and what buying one fewer saves. Runs in your browser.')]
 for path,source,title,desc in TOOLS:
  body=(ROOT/'_content'/source).read_text()
  page(path,title,desc,body,'WebPage',faq=re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p>',body,re.S) or None,extra_schema=tool_schema(path,title.split(' | ')[0],desc))
 tool_list={'@context':'https://schema.org','@type':'ItemList','name':'TrackExpenses calculators','itemListElement':[{'@type':'ListItem','position':n+1,'name':title.split(' | ')[0],'url':BASE+path} for n,(path,_,title,_) in enumerate(TOOLS)]}
-page('tools/index.html','Free Budget Calculators | TrackExpenses','Three free calculators that run in your browser: daily budget until payday, the 50/30/20 split and subscription cost. No sign-up, nothing sent.',(ROOT/'_content/tools-index.html').read_text(),extra_schema=tool_list)
+page('tools/index.html','Free Budget Calculators | TrackExpenses','Seven free calculators that run in your browser: daily budget, budget pacing, paydays, 50/30/20, savings goals, subscriptions and habit costs.',(ROOT/'_content/tools-index.html').read_text(),extra_schema=tool_list)
 for path,title,desc in [
  ('compare/best-expense-trackers.html','Best iPhone Expense Trackers: How to Choose','Compare documented SMS, voice, payday and bank-connection features across expense apps. Choose a workflow that fits your records.'),
  ('compare/monefy-alternative.html','Monefy Alternative with SMS and Voice | TrackExpenses','Compare Monefy’s documented custom month with TrackExpenses’ optional SMS imports and on-device voice drafts. A fair workflow comparison.')]:
@@ -331,7 +346,7 @@ LLMS_GUIDE = """
 - Where is data stored? On the device, with optional private iCloud sync.{PLAY_ANSWER}
 """
 LLMS_GUIDE = LLMS_GUIDE.replace('{NOT_A_FIT_PLATFORMS}', '- Web or desktop apps (iPhone, iPad and Android only).' if PLAY_ON else '- Android, web or desktop apps (iPhone and iPad only).').replace('{PLAY_ANSWER}', '\n- Is there an Android app? Yes, on Google Play: '+PLAY_URL+'. Purchases are per store: Pro bought on the App Store does not unlock Android, and Pro bought on Google Play does not unlock iPhone.' if PLAY_ON else '')
-llms='# Expense Tracker: SMS & Voice (TrackExpenses)\n'+LLMS_GUIDE+'\n## Facts\n'+FACT_BLOCK+'\n\n'+(rating()+'. US storefront; checked '+FACTS['checked']+'.\n\n' if rating() else '')+'App Store: '+STORE+'\n\n## Features\n'+''.join(f'- {x}\n' for x in FEATURE_LIST)+'\n## Feature pages\n'+''.join(f'- [{f["label"]}]({BASE}features/{f["slug"]}.html): {f["summary"]}\n' for f in FEATURES)+'\n## Guides\n'+''.join(f'- [{g["title"].split(" | ")[0]}]({BASE}guides/{g["slug"]}.html): {g["description"]}\n' for g in GUIDE_META)+'\n## Free calculators (run in the browser, nothing sent or saved)\n'+''.join(f'- [{title.split(" | ")[0]}]({BASE}{path}): {desc}\n' for path,_,title,desc in TOOLS)+'\n## All official pages\n'+''.join(f'- [{v[0]}]({v[2]}): {v[1]}\n' for v in PAGES.values())
+llms='# Expense Tracker: SMS & Voice (TrackExpenses)\n'+LLMS_GUIDE+'\n## Facts\n'+FACT_BLOCK+'\n\n'+(f'App Store rating: {RATING_AVERAGE:.1f} out of 5 from {RATING_COUNT} ratings ('+', '.join(f'{v["name"]} {v["count"]}' for v in FACTS['ratingsByStorefront'].values())+'; the other storefronts checked have none yet), checked '+FACTS['checked']+'.\n\n' if RATING_COUNT else '')+'App Store: '+STORE+'\n\n## Features\n'+''.join(f'- {x}\n' for x in FEATURE_LIST)+'\n## Feature pages\n'+''.join(f'- [{f["label"]}]({BASE}features/{f["slug"]}.html): {f["summary"]}\n' for f in FEATURES)+'\n## Guides\n'+''.join(f'- [{g["title"].split(" | ")[0]}]({BASE}guides/{g["slug"]}.html): {g["description"]}\n' for g in GUIDE_META)+'\n## Free calculators (run in the browser, nothing sent or saved)\n'+''.join(f'- [{title.split(" | ")[0]}]({BASE}{path}): {desc}\n' for path,_,title,desc in TOOLS)+'\n## All official pages\n'+''.join(f'- [{v[0]}]({v[2]}): {v[1]}\n' for v in PAGES.values())
 (ROOT/'llms.txt').write_text(llms)
 full_text = llms+'\n\n'+ '\n\n'.join('## '+v[0]+'\n'+v[2]+'\n'+html.unescape(re.sub(r'<[^>]+>',' ',v[3])) for v in PAGES.values())
 (ROOT/'llms-full.txt').write_text('\n'.join(line.rstrip() for line in full_text.splitlines())+'\n')

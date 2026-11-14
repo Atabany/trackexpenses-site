@@ -268,6 +268,161 @@
     });
   }
 
+  // Shared by the date-based calculators: a date as a day number, today shifted by some days, a share as a percentage.
+  const dayNumber = str => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(str); return m ? Date.UTC(+m[1],+m[2]-1,+m[3])/86400000 : NaN; };
+  const localDay = offset => { const d = new Date(); d.setDate(d.getDate()+offset); return [d.getFullYear(), String(d.getMonth()+1).padStart(2,'0'), String(d.getDate()).padStart(2,'0')].join('-'); };
+  const percent = n => (n*100).toLocaleString(undefined,{maximumFractionDigits:1}) + '%';
+  const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+  // A field marked data-for shows only for the options it names.
+  const showFor = (formEl, value) => formEl.querySelectorAll('[data-for]').forEach(field => {
+    field.hidden = !field.dataset.for.split(' ').includes(value);
+    // A hidden field is disabled too, or the browser still validates it and blocks the form with nothing to show.
+    field.querySelectorAll('input,select').forEach(control => { control.disabled = field.hidden; });
+  });
+
+  // Budget pacing: share of the budget spent against share of the period passed (days before today).
+  const pace = document.querySelector('#pace-form');
+  if (pace) {
+    const result = document.querySelector('#pace-result'), cells = [...document.querySelectorAll('#pace-table tbody td')];
+    pace.elements.start.value = localDay(-15); pace.elements.end.value = localDay(14); pace.elements.today.value = localDay(0);
+    pace.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!pace.reportValidity()) return;
+      const budget = Number(pace.elements.budget.value), spent = Number(pace.elements.spent.value);
+      const start = dayNumber(pace.elements.start.value), end = dayNumber(pace.elements.end.value), today = dayNumber(pace.elements.today.value);
+      const total = end - start + 1;
+      if (![budget, spent, total, today].every(Number.isFinite) || budget <= 0 || spent < 0 || total < 1 || total > 3660 || today < start) {
+        result.textContent = 'Use a budget above zero, a last day on or after the first day, and a today that is not before the period starts.'; return;
+      }
+      const done = Math.min(today - start, total), left = Math.max(0, end - today + 1);
+      const elapsed = done / total, even = budget * elapsed, gap = spent - even, remaining = budget - spent;
+      const projected = done > 0 ? spent / done * total : null;
+      cells[0].textContent = percent(spent / budget);
+      cells[1].textContent = `${percent(elapsed)} (${done} of ${plural(total, 'day')})`;
+      cells[2].textContent = figure(even);
+      cells[3].textContent = Math.abs(gap) < 0.005 ? 'On pace' : `${figure(Math.abs(gap))} ${gap > 0 ? 'over' : 'under'}`;
+      cells[4].textContent = projected === null ? 'Needs one completed day' : `${figure(projected)} (${Math.abs(projected - budget) < 0.005 ? 'on budget' : `${figure(Math.abs(projected - budget))} ${projected > budget ? 'over' : 'under'} budget`})`;
+      cells[5].textContent = left === 0 ? 'The period has ended' : remaining <= 0 ? `0.00 (budget used up, ${plural(left, 'day')} left)` : `${figure(remaining / left)} for ${plural(left, 'day')}`;
+      if (left === 0) { result.textContent = `The period has ended: ${percent(spent / budget)} of the budget was spent, ${figure(Math.abs(remaining))} ${remaining >= 0 ? 'under' : 'over'} budget.`; return; }
+      result.textContent = `${percent(spent / budget)} of the budget is spent with ${percent(elapsed)} of the period gone. ` + (gap > 0.005 ? `That is ${figure(gap)} more than an even pace.` : gap < -0.005 ? `That is ${figure(-gap)} less than an even pace.` : 'That is exactly an even pace.');
+    });
+  }
+
+  // Paydays: every 7 or 14 days from a known payday, or fixed days of the month, for twelve calendar months.
+  const payday = document.querySelector('#payday-form');
+  if (payday) {
+    const result = document.querySelector('#payday-result'), body = document.querySelector('#payday-table tbody');
+    const sync = () => showFor(payday, payday.elements.cycle.value);
+    payday.elements.cycle.addEventListener('change', sync); sync();
+    payday.elements.today.value = localDay(0);
+    const utc = n => new Date(n * 86400000);
+    const long = n => utc(n).toLocaleDateString(undefined,{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
+    // A day of the month: the last day when the month is shorter, the Friday before a weekend when asked.
+    const fixed = (year, month, day, toFriday) => {
+      const last = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+      let n = Date.UTC(year, month, Math.min(day, last)) / 86400000;
+      const weekday = utc(n).getUTCDay();
+      if (toFriday && weekday === 6) n -= 1;
+      if (toFriday && weekday === 0) n -= 2;
+      return n;
+    };
+    payday.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!payday.reportValidity()) return;
+      const cycle = payday.elements.cycle.value, today = dayNumber(payday.elements.today.value);
+      if (!Number.isFinite(today)) { result.textContent = 'Enter today’s date.'; return; }
+      const year = utc(today).getUTCFullYear(), month = utc(today).getUTCMonth();
+      const from = Date.UTC(year, month, 1) / 86400000, to = Date.UTC(year, month + 13, 1) / 86400000;
+      // Each payday keeps the month it belongs to: one moved back to a Friday can fall in the month before.
+      let days = [];
+      const entry = n => ({n, key: utc(n).getUTCFullYear() * 12 + utc(n).getUTCMonth()});
+      if (cycle === '14' || cycle === '7') {
+        const step = Number(cycle), known = dayNumber(payday.elements.known.value);
+        if (!Number.isFinite(known)) { result.textContent = 'Enter one payday you know.'; return; }
+        for (let n = known + Math.ceil((from - known) / step) * step; n < to; n += step) days.push(entry(n));
+      } else {
+        const picks = [Number(payday.elements.day1.value)];
+        if (cycle === 'twice') picks.push(Number(payday.elements.day2.value));
+        if (!picks.every(day => Number.isInteger(day) && day >= 1 && day <= 31) || picks[0] === picks[1]) {
+          result.textContent = cycle === 'twice' ? 'Use two different days of the month, each between 1 and 31.' : 'Use a day of the month between 1 and 31.'; return;
+        }
+        const toFriday = payday.elements.weekend.value === 'friday';
+        for (let i = 0; i <= 13; i++) for (const day of picks) {
+          const n = fixed(year, month + i, day, toFriday);
+          if (!days.some(other => other.n === n)) days.push({n, key: year * 12 + month + i});
+        }
+        days.sort((a, b) => a.n - b.n);
+      }
+      const next = days.find(day => day.n >= today).n, after = days.find(day => day.n > today).n;
+      const usual = cycle === '14' ? 2 : cycle === '7' ? 4 : null, extras = [];
+      let count = 0;
+      body.replaceChildren(...Array.from({length: 12}, (_, i) => {
+        const first = Date.UTC(year, month + i, 1) / 86400000, key = year * 12 + month + i;
+        const inMonth = days.filter(day => day.key === key), name = utc(first).toLocaleDateString(undefined,{month:'long',year:'numeric',timeZone:'UTC'});
+        // A payday moved into the month before is written with its month, e.g. "30 Apr" in May's row.
+        const label = day => day.n >= first ? String(utc(day.n).getUTCDate()) : utc(day.n).toLocaleDateString(undefined,{day:'numeric',month:'short',timeZone:'UTC'});
+        count += inMonth.length;
+        if (usual && inMonth.length > usual) extras.push(name);
+        const row = document.createElement('tr'), head = document.createElement('th');
+        head.scope = 'row'; head.textContent = name; row.append(head);
+        for (const text of [inMonth.map(label).join(', ') || 'None', String(inMonth.length)]) { const cell = document.createElement('td'); cell.textContent = text; row.append(cell); }
+        return row;
+      }));
+      let text = next === today ? `Today is payday. The next one is ${long(after)}, in ${plural(after - today, 'day')}.` : `Your next payday is ${long(next)}, in ${plural(next - today, 'day')}.`;
+      text += ` In the 12 months of the table, this month included, you are paid ${plural(count, 'time')}.`;
+      if (extras.length) text += ` ${extras.join(', ')} ${extras.length === 1 ? 'has' : 'have'} ${usual + 1} paydays.`;
+      result.textContent = text;
+    });
+  }
+
+  // Savings goal: what is still to save, spread over the days to a date, or divided by a monthly amount.
+  const goal = document.querySelector('#goal-form');
+  if (goal) {
+    const result = document.querySelector('#goal-result');
+    const sync = () => showFor(goal, goal.elements.mode.value);
+    goal.elements.mode.addEventListener('change', sync); sync();
+    goal.elements.by.value = localDay(365);
+    goal.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!goal.reportValidity()) return;
+      const target = Number(goal.elements.goal.value), saved = Number(goal.elements.saved.value), left = target - saved;
+      if (![target, saved].every(Number.isFinite) || target <= 0 || saved < 0) { result.textContent = 'Use a goal above zero and savings of zero or more.'; return; }
+      if (left <= 0) { result.textContent = left < 0 ? `You already have the goal amount, with ${figure(-left)} to spare.` : 'You already have the goal amount.'; return; }
+      if (goal.elements.mode.value === 'date') {
+        const days = dayNumber(goal.elements.by.value) - dayNumber(localDay(0));
+        if (!Number.isFinite(days) || days < 1 || days > 36600) { result.textContent = 'Choose a date after today, within 100 years.'; return; }
+        const perDay = left / days;
+        result.textContent = `${figure(left)} still to save over ${plural(days, 'day')} is ` + (days >= 31 ? `${figure(perDay * 365 / 12)} a month, ${figure(perDay * 7)} a week or ${figure(perDay)} a day.` : days >= 7 ? `${figure(perDay * 7)} a week or ${figure(perDay)} a day.` : `${figure(perDay)} a day.`);
+        return;
+      }
+      const monthly = Number(goal.elements.monthly.value);
+      if (!(monthly > 0)) { result.textContent = 'Enter a monthly amount above zero.'; return; }
+      const months = Math.ceil(left / monthly - 1e-9);
+      if (months > 1200) { result.textContent = `At ${figure(monthly)} a month, ${figure(left)} takes more than 100 years. Try a larger monthly amount.`; return; }
+      const when = new Date(); when.setDate(1); when.setMonth(when.getMonth() + months);
+      const span = months >= 12 ? ` (${plural(Math.floor(months / 12), 'year')}${months % 12 ? ` and ${plural(months % 12, 'month')}` : ''})` : '';
+      result.textContent = `At ${figure(monthly)} a month, ${figure(left)} takes ${plural(months, 'month')}${span}: you reach it in ${when.toLocaleDateString(undefined,{month:'long',year:'numeric'})}.`;
+    });
+  }
+
+  // Habit cost: price times how often, as a week, a month, a year, five years and ten.
+  const habit = document.querySelector('#habit-form');
+  if (habit) {
+    const result = document.querySelector('#habit-result'), cells = [...document.querySelectorAll('#habit-table tbody td')];
+    habit.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!habit.reportValidity()) return;
+      const price = Number(habit.elements.price.value), times = Number(habit.elements.times.value), perYear = Number(habit.elements.per.value), pay = Number(habit.elements.pay.value);
+      if (![price, times, perYear].every(Number.isFinite) || price < 0 || times < 0) { result.textContent = 'Use a price and a count of zero or more.'; return; }
+      const yearly = price * times * perYear, unit = {365:'day', 52:'week', 12:'month'}[perYear], name = habit.elements.name.value.trim();
+      [perYear === 365 ? price * times * 7 : yearly / 52, yearly / 12, yearly, yearly * 5, yearly * 10].forEach((amount, index) => { cells[index].textContent = figure(amount); });
+      let text = `${name ? `${name} at` : 'At'} ${figure(price)}, ${plural(times, 'time')} a ${unit}, ${name ? '' : 'it '}costs ${figure(yearly)} a year.`;
+      if (times >= 1 && price > 0) text += ` One fewer a ${unit} saves ${figure(price * perYear)} a year.`;
+      if (Number.isFinite(pay) && pay > 0) text += ` That is ${(yearly / 12 / pay * 100).toLocaleString(undefined,{maximumFractionDigits:1})}% of your monthly take-home pay.`;
+      result.textContent = text;
+    });
+  }
+
   const form = document.querySelector('#budget-form');
   if (!form) return;
   const dateValue = date => [date.getFullYear(), String(date.getMonth()+1).padStart(2,'0'), String(date.getDate()).padStart(2,'0')].join('-');
