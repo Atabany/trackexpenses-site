@@ -367,3 +367,8 @@ Owner's request of 15 November: "work on the website, add some tools so to impro
   `style.css?v=14`, `site.js?v=12`.
 - **Not claimed.** No search volume was measured for any of the four topics. Read Search Console by page in two to four
   weeks; if a calculator is shown and not clicked, rewrite its title and description before adding more pages.
+- **After publication (public `c899d4c`).** All five tool URLs answered 200; the live home page shows the rating line and the
+  live policy is still the one dated 9 November (the 1.15.0 policy waits for the release: publish with `_ops/build.py`
+  and a copy, not the app repo's wrapper, until then). IndexNow accepted 13 URLs. In Google Search Console the sitemap
+  was resubmitted and indexing was requested for the four new pages, each accepted into the crawl queue; that is a
+  request, not proof of indexing. Bing was not opened.
