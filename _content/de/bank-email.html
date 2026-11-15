@@ -1,0 +1,44 @@
+<h1>Bank-Benachrichtigungen per E-Mail automatisch eintragen</h1>
+<p class="lead">Schickt dir deine Bank zu jeder Buchung eine E-Mail, etwa als Kontowecker oder Umsatzbenachrichtigung, kann eine Automation in „Kurzbefehle“ jede dieser E-Mails an TrackExpenses weitergeben, genau wie eine Bank-SMS. Der einzige zusätzliche Schritt: Dein Postfach muss in Apples Mail-App eingerichtet sein, denn nur dort sieht Kurzbefehle neue E-Mails, nicht in der Gmail-App oder einer anderen Mail-App.</p>
+<nav class="toc" aria-label="Inhalt der Anleitung"><ul><li><a href="#need">Was du brauchst</a></li><li><a href="#mail">Das Postfach in Mail einrichten</a></li><li><a href="#word">Das Wort im Betreff wählen</a></li><li><a href="#steps">Die Automation einrichten</a></li><li><a href="#check">Vorher ausprobieren</a></li><li><a href="#limits">Gut zu wissen</a></li><li><a href="#privacy">Datenschutz</a></li><li><a href="#faq">Häufige Fragen</a></li></ul></nav>
+
+<h2 id="need">Was du brauchst</h2>
+<ul><li>Ein iPhone mit iOS 17 oder neuer und Apples App „Kurzbefehle“.</li><li>TrackExpenses auf demselben Gerät.</li><li>Eine Bank, die dir zu jeder Buchung eine E-Mail mit dem Betrag schickt.</li></ul>
+<p>Lesen kannst du deine E-Mails weiter, wo du willst. Mail muss nur eine Kopie bekommen. Wenn dich zwei Mitteilungen pro E-Mail stören, schalte unter Einstellungen → Mitteilungen → Mail die Mitteilungen von Mail aus. Die Automation läuft trotzdem.</p>
+
+<h2 id="mail">Das Postfach in Mail einrichten</h2>
+<p>Tippe unter Einstellungen → Apps → Mail → Mail-Accounts auf „Account hinzufügen“ und melde dich an, für Gmail mit „Google“. Unter iOS 17 heißt der Weg Einstellungen → Mail → Accounts.</p>
+<p>Mail ruft Gmail in Abständen ab, nicht in dem Moment, in dem die E-Mail ankommt. Stell deshalb auf derselben Seite unter „Datenabgleich“ alle 15 Minuten ein, den kürzesten Abstand. Eine Buchung kann also ein paar Minuten nach der E-Mail erscheinen. Öffnest du Mail, wird sofort abgerufen. GMX, web.de, iCloud und andere Postfächer richtest du genauso ein.</p>
+
+<h2 id="word">Das Wort im Betreff wählen</h2>
+<p>Die Automation läuft nur bei E-Mails, deren Betreff ein Wort enthält, das du festlegst. Nach dem Text der E-Mail kann Kurzbefehle nicht filtern, nur nach Absender und Betreff. Leg wie bei der SMS-Automation keinen Absender fest: Banken schicken ihre Benachrichtigungen oft von mehreren Adressen. Sieh dir drei oder vier Benachrichtigungen deiner Bank an und nimm ein Wort, das in jedem Betreff steht und in ihren Werbe-E-Mails nicht, zum Beispiel „Umsatz“, „Buchung“ oder „Kontowecker“. Ganz ohne Filter lässt sich die Automation nicht einrichten.</p>
+
+<h2 id="steps">Die Automation einrichten</h2>
+<p>Die Schritte unterscheiden sich je nach iOS-Version.</p>
+<h3>iOS 27</h3>
+<ol><li>Geh in Kurzbefehle zu Mediathek → Automation → +, tippe auf „Automation“ und wähle „E-Mail“.</li><li>Tippe auf „Absender“, stell auf „Betreff“ um und gib dein Wort ein. Lass „Vor dem Ausführen bestätigen“ aus.</li><li>Füge die TrackExpenses-Aktion „Bank-SMS importieren“ hinzu. Tippe auf das Feld „Nachricht“ → „Variable auswählen“ → „E-Mail“, tippe dann auf „E-Mail“ und wähle „Inhalt“.</li><li>Schalte „Beim Ausführen anzeigen“ aus und sichere den Kurzbefehl.</li></ol>
+<h3>iOS 26 und älter</h3>
+<ol><li>Tippe in Kurzbefehle auf „Automation“, dann auf + und wähle „E-Mail“.</li><li>Tippe auf „Betreff enthält“ und gib dein Wort ein. Wähle „Sofort ausführen“, dann „Weiter“ und „Neuen Kurzbefehl erstellen“ (unter iOS 18 und älter „Neue leere Automation“).</li><li>Füge „Bank-SMS importieren“ hinzu. Tippe auf das Feld „Nachricht“ → „Variable auswählen“ → „Kurzbefehleingabe“.</li><li>Schalte „Beim Ausführen anzeigen“ aus und sichere die Automation.</li></ol>
+<p>Die Aktion heißt „Bank-SMS importieren“, liest aber E-Mails genauso. Bleibt das Feld „Nachricht“ leer, hat die Aktion nichts zu lesen: Es muss die Variable zeigen.</p>
+
+<h2 id="check">Vorher ausprobieren</h2>
+<p>Kopiere den Text einer Benachrichtigung aus deinem Postfach. Öffne in TrackExpenses „Mehr“ → „Automatischer SMS-Import“ und setz ihn in die Karte „Probier eine SMS deiner Bank aus“ ein. Du siehst sofort, was die Automation damit machen würde: Betrag, Geschäft, Konto, oder warum sie die E-Mail überspringen würde. Gespeichert wird dabei nichts.</p>
+<p>Nach der nächsten echten Benachrichtigung zeigt dieselbe Seite unter „Letzte Aktivität“, was eingetragen und was übersprungen wurde, und warum. Steht dort gar nichts, liegt es am Auslöser: am Wort im Betreff, oder Mail hat die E-Mail noch nicht abgerufen.</p>
+
+<h2 id="limits">Gut zu wissen</h2>
+<ul><li>Steht in der E-Mail kein Betrag, sondern nur „Sie haben eine neue Nachricht im Online-Banking“, kann nichts eingetragen werden.</li><li>Eine E-Mail ergibt eine Buchung. Eine tägliche Übersicht mit mehreren Umsätzen wird nicht aufgeteilt, und Kontoauszüge als PDF werden nicht gelesen.</li><li>E-Mails werden nach denselben Regeln gelesen wie SMS: Abgelehnte Zahlungen und Werbung werden nicht eingetragen, ein Kauf in fremder Währung wartet auf deinen Kurs, und mögliche Duplikate werden markiert.</li><li>Schickt dir die Bank dieselben Käufe auch per SMS, richte nur einen der beiden Wege ein. Sonst kommt jeder Kauf doppelt an.</li><li>E-Mail-Importe zählen zum selben Kontingent wie SMS-Importe: 10 erfolgreiche Importe pro Kalendermonat und Gerät kostenlos, mit Pro unbegrenzt.</li></ul>
+
+<h2 id="privacy">Datenschutz</h2>
+<p>Kurzbefehle gibt nur die E-Mails weiter, die zu deinem Filter passen, und nur ihren Inhalt. TrackExpenses liest den Text auf deinem Gerät und speichert die gefundene Buchung, nie die E-Mail selbst. Die App meldet sich nicht bei deinem Postfach oder deiner Bank an.</p>
+
+<h2 id="faq">Häufige Fragen</h2>
+<details><summary>Kann TrackExpenses die Gmail-App direkt lesen?</summary><p>Nein. Der Auslöser „E-Mail“ in Kurzbefehle sieht nur, was in Apples Mail-App ankommt. Richte dein Gmail-Postfach deshalb zusätzlich in Mail ein.</p></details>
+<details><summary>Warum der Betreff und nicht der Absender?</summary><p>Wie bei der SMS-Einrichtung zählt die Formulierung der Bank, nicht wer schreibt. Banken schicken Benachrichtigungen oft von mehreren Adressen, der Betreff bleibt gleich.</p></details>
+<details><summary>Warum kam eine Buchung erst später an?</summary><p>Mail ruft Gmail in Abständen ab. Stell „Datenabgleich“ auf alle 15 Minuten oder öffne Mail.</p></details>
+<details><summary>Meine Bank schickt nur Mitteilungen in ihrer App. Was nun?</summary><p>Mitteilungen anderer Apps kann Kurzbefehle nicht lesen. Für Käufe mit Apple Pay gibt es den Auslöser „Transaktion“, und jede Benachrichtigung kannst du in TrackExpenses auch von Hand einsetzen.</p></details>
+
+<h2 id="more">Mehr dazu</h2>
+<p><a href="bank-sms.html">Bank-SMS automatisch eintragen: die Einrichtung mit Bildern</a></p>
+<p><a href="index.html">TrackExpenses auf Deutsch: alle Funktionen</a></p>
+<p>Auf Englisch: <a href="../guides/bank-email-alerts-iphone.html" hreflang="en" lang="en">Import bank email alerts on iPhone</a></p>
+<p class="byline">Entwickelt von <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · Zuletzt aktualisiert: November 2026 · <a href="../support.html" hreflang="en">Korrektur vorschlagen</a></p>

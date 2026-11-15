@@ -301,6 +301,12 @@ def de_step(n,s):
 de_steps='<ol class="ar-steps">'+''.join(de_step(n,s) for n,s in enumerate(DE_STEPS,1))+'</ol>'
 de_guide=(ROOT/'_content/de/bank-sms.html').read_text().replace('{{DE_STEPS}}',de_steps)
 page('de/bank-sms.html','Bank-SMS automatisch eintragen (iPhone) | TrackExpenses','Anleitung mit Bildern auf Deutsch: Richte in Kurzbefehle eine Automation ein, die Bank-SMS in TrackExpenses einträgt. Mit Filterwort und Fehlersuche.',de_guide,'Article',faq=arabic_faq(de_guide),lang='de',published='2026-11-14')
+# The email alerts guide in Arabic and German: reviewed fragments, no pictures; the steps are the app's own strings (EmailAlertSteps).
+for code,title,desc,date in [
+ ('ar','تسجيل تنبيهات البنك من البريد الإلكتروني | TrackExpenses','أضف Gmail أو أي بريد إلى تطبيق «البريد»، وأنشئ تحكمًا تلقائيًا في «الاختصارات» يسجّل تنبيهات بنكك في TrackExpenses. خطوات iOS 27 و26 و18.','2026-11-15'),
+ ('de','Bank-E-Mails automatisch eintragen (iPhone) | TrackExpenses','Postfach in Apples Mail-App einrichten, Automation „E-Mail“ in Kurzbefehle anlegen: So landen Bank-E-Mails aus Gmail und Co. in TrackExpenses.','2026-11-15')]:
+ email_guide=(ROOT/f'_content/{code}/bank-email.html').read_text()
+ page(f'{code}/bank-email.html',title,desc,email_guide,'Article',faq=arabic_faq(email_guide),lang=code,published=date)
 for video in VIDEOS:
  body,video_schema=watch_page(video,BASE)
  page(video['path'],video['title'],video['description'],body,extra_schema=video_schema)

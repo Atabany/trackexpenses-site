@@ -3,9 +3,13 @@
     "hash": "d9326cfc0f73ae8ec39dd709db9a88b6ed5c194e3dd361f6b989b6ac7213b351",
     "updated": "2026-10-25"
   },
+  "ar/bank-email.html": {
+    "hash": "4f8d28c2217f8d4532282e7b13939ddb0c37bd8d0813fff101caf270300fc9df",
+    "updated": "2026-11-15"
+  },
   "ar/bank-sms.html": {
-    "hash": "ae4b19b593dc32c3c5f342db21580475a1ffe3b0587d99ea9b8115d6e5d2a486",
-    "updated": "2026-11-10"
+    "hash": "c0f80910ca5356e78d56ff559a0aaa22051d81f7ae9e8c24cd815138e09b5a02",
+    "updated": "2026-11-15"
   },
   "ar/index.html": {
     "hash": "d804916bc19d0fb0d48adbfa7f0d5cd152862a46a7d1e23dadae9c255d74ec24",
@@ -19,9 +23,13 @@
     "hash": "04905527a0a1925aa8f3211dca73071058fe6bb47b3997f5f3b96ce0571397c5",
     "updated": "2026-10-25"
   },
+  "de/bank-email.html": {
+    "hash": "65fa1e0c55e67a409167b788ae9f81089cb0bbd786083a0d0dcefdece628402e",
+    "updated": "2026-11-15"
+  },
   "de/bank-sms.html": {
-    "hash": "a1bb260014267273186ffaf7caf00522d61e3d97f5ef0677b4f88b464b1f7c1b",
-    "updated": "2026-11-14"
+    "hash": "d238f46420fa985b304ff892974e9f88715d9fe8abd24dd4eb6f68730fec879a",
+    "updated": "2026-11-15"
   },
   "de/index.html": {
     "hash": "2d6f9c5849802613c77ee9fedce628cd271b31544934f22b998958b230319e6f",
@@ -80,7 +88,7 @@
     "updated": "2026-10-29"
   },
   "guides/bank-email-alerts-iphone.html": {
-    "hash": "d32bf9fe5056d8a58e03f1ea2e8b02a2b9076a508bad385c4fdbc9d25e4dae3d",
+    "hash": "5e33e4a939dce55020804ad58eaba64234e937cae7a74cb807042ce888b48364",
     "updated": "2026-11-15"
   },
   "guides/bank-sms-iphone.html": {

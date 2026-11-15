@@ -38,7 +38,7 @@ Finally, expand the action with its arrow and switch off Show When Run, so it ne
 
 Copy the text of one real alert email from Gmail. In TrackExpenses, open More → SMS Auto-Import, find "Try one of your bank's messages" and paste it. The card shows what the automation would do with that email: the amount, whether it is spending or money in, the merchant and the account, or why it would skip it. Nothing is saved.
 
-For example, an email saying a card ending 1234 was used for 45.67 at STARBUCKS should come back as a 45.67 expense at STARBUCKS. If the card reports the balance as the amount, or skips the email, the automation will do the same, and it is better to know now than after a week of missing entries.
+Look at what comes back. If the email was about a 45.67 card payment, you want a 45.67 expense with the shop's name. If the card shows another figure, such as the balance, or says it would skip the email, the automation would do the same. It is better to know now than after a week of missing entries, and a copy of that alert sent to support, with your name and account number removed, is how the reader learns your bank's format.
 
 After the next real alert, look at Recent activity on the same screen. Each run is listed with what it imported or why it skipped the email. No run at all points at the trigger: the subject word, or Mail not having fetched the email yet.
 
@@ -68,4 +68,4 @@ My bank only sends app notifications. What can I do? Shortcuts can't read notifi
 
 It still doesn't import. Where do I start? Follow the SMS troubleshooting guide, with Email in place of Message. Or contact support with the activity entry and a copy of the alert with your name and account number removed.
 
-Sources: Apple's [communication triggers](https://support.apple.com/guide/shortcuts/apdd711f9dff/ios) documentation, the Shortcuts app on iOS 27.2 and the TrackExpenses app, checked in November 2026. Related: [Apple Pay purchases](apple-pay-expenses.html), [SMS troubleshooting](sms-automation-not-working.html) and the [bank SMS feature](../features/sms-expense-tracker.html).
+Sources: Apple's [communication triggers](https://support.apple.com/guide/shortcuts/apdd711f9dff/ios) documentation, the Shortcuts app on iOS 27.2 and the TrackExpenses app, checked in November 2026. Related: [Apple Pay purchases](apple-pay-expenses.html), [SMS troubleshooting](sms-automation-not-working.html) and the [bank SMS feature](../features/sms-expense-tracker.html). This guide in [Arabic](../ar/bank-email.html) and [German](../de/bank-email.html).
