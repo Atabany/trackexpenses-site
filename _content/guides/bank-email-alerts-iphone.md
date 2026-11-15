@@ -24,7 +24,7 @@ The editor changed in iOS 27, so follow the steps for the version on your iPhone
 
 On iOS 27, open Shortcuts, go back to Library, choose Automation and tap +. If Describe a Shortcut opens, tap Editor. Tap Automation in the actions panel, then Email under Communication. The trigger reads "When I receive an email where Sender is Email Address". Tap Sender and choose Subject, then enter your filter word. Expand the trigger with its blue arrow: keep Automation on and Confirm Before Run off.
 
-On iOS 26 and earlier, open the Automation tab, tap + and choose Email. Tap Subject Contains, enter your filter word and leave Sender empty. Choose Run Immediately, tap Next and choose Create New Shortcut. Do not choose one of the ready-made TrackExpenses tiles: they can't receive the email.
+On iOS 26 and earlier, open the Automation tab, tap + and choose Email. Tap Subject Contains, enter your filter word and leave Sender empty. Choose Run Immediately, tap Next and choose Create New Shortcut (New Blank Automation on iOS 18 and earlier). Do not choose one of the ready-made TrackExpenses tiles: they can't receive the email.
 
 ## Step 3: hand the email to TrackExpenses
 
