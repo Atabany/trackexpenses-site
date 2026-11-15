@@ -133,5 +133,14 @@
   "published": "2026-11-08",
   "updated": "2026-11-08",
   "feature": "widgets-and-shortcuts"
+ },
+ {
+  "slug": "bank-email-alerts-iphone",
+  "title": "Import Bank Email Alerts on iPhone | TrackExpenses",
+  "description": "Turn bank email alerts from Gmail or any account into expenses on iPhone: add the account to Mail, then a Shortcuts Email automation passes each one on.",
+  "status": "published",
+  "published": "2026-11-15",
+  "updated": "2026-11-15",
+  "feature": "sms-expense-tracker"
  }
 ]

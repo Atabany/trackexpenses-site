@@ -56,8 +56,8 @@
     "updated": "2026-11-09"
   },
   "features/sms-expense-tracker.html": {
-    "hash": "c6e8e6872b89359f64e51547ae5524ec8e9a54bcbf28a143de9a7432bef9e950",
-    "updated": "2026-11-09"
+    "hash": "0dd3d6bd40da60e99b1c34c782a552f280c08958d9642c9c4ca885018449cd7f",
+    "updated": "2026-11-15"
   },
   "features/voice-expense-tracker.html": {
     "hash": "375b59de1100145c4dcf3651149a9bb71f49d36c158e8f0a26888607498b9ab7",
@@ -68,67 +68,71 @@
     "updated": "2026-11-09"
   },
   "guides/50-30-20-budget.html": {
-    "hash": "0f47ed6070634fd871c2ace2ef8683bceb0390020348adf6613848f8361d7ef8",
+    "hash": "9eace013ae436f33e5a5dea4ddb21e6d4a442cec563c8827e35a40caf8e52982",
     "updated": "2026-11-10"
   },
   "guides/apple-pay-expenses.html": {
-    "hash": "16f8d343ba619d089121b78bebb42cbdc04fff65a4da0c3192ffce671adf78d2",
+    "hash": "6c955f4716963447f0cbabcfa5c3229cecb471d5a57f58f98c1c85036c68d322",
     "updated": "2026-10-05"
   },
   "guides/arabic-bank-sms-expenses.html": {
-    "hash": "b2bb89280c10e3e1768c446830e2a86ef11677589b43f7c021932379831cf60a",
+    "hash": "a581b45887b3db5ab5252ea8629b640b0e5a5156fb0aa78f92d6e5b7b054f9a5",
     "updated": "2026-10-29"
   },
+  "guides/bank-email-alerts-iphone.html": {
+    "hash": "6a6c86dc837933ca9ba2d134add2418921457e2fd4d6a0f9023f2447933cba2b",
+    "updated": "2026-11-15"
+  },
   "guides/bank-sms-iphone.html": {
-    "hash": "94956935a125c78eb472efc4ba56aa625384e76e9cc1464da796a5fb6c42cb66",
+    "hash": "811cc5ef949d6f819b7a94e5e253b76e4cf5156322d5308a617b1b898bd014f5",
     "updated": "2026-10-26"
   },
   "guides/budget-pacing-explained.html": {
-    "hash": "c5b86cc579076b0e3e995e5c6bb76c516722eeb9a6690a7c4ae7d4ab7904c3b8",
+    "hash": "835cb7a5c9eba077013304f868a1a1dbf822eda395b792bc22a3ecdc5fe5688b",
     "updated": "2026-11-15"
   },
   "guides/credit-card-payment-vs-expense.html": {
-    "hash": "4b1ec85b8380bfbea5bdff2587aba5eab2672776272bbf728001f0bea9949190",
+    "hash": "7e6522c95f6316aa7ef93cfd28823ac29fcf3666ac7a830a12c0283686ab46de",
     "updated": "2026-10-13"
   },
   "guides/expense-tracker-without-bank-connection.html": {
-    "hash": "cf35aefb8a19832d0ce97fcf7662b703bb39b796911869cd48a09a8f3575aaca",
+    "hash": "5968ecdac08c0ac7664ed1e8e9735d072a9a8daf84734794a9846c2a3c55c074",
     "updated": "2026-10-18"
   },
   "guides/export-expenses-csv.html": {
-    "hash": "f00a8dd9dfe31d526ef2015f3bb08f30ec2f71fe8a47b3a8f10ec12977a20003",
+    "hash": "107c7422db97ba86167177d64eb0742ae57a345986b9f69827d05d471472ef87",
     "updated": "2026-10-05"
   },
   "guides/index.html": {
-    "hash": "d5a801ea64e61df90729f452063d15aef8c8c20566be09f1e6c8c62cce6a1e09",
-    "updated": "2026-11-10"
+    "hash": "01c73b0c3d5ce29da8bb79b1ffbbffa8c450dee59b1510fc1cabec996f3bdef8",
+    "updated": "2026-11-15"
   },
   "guides/log-expenses-with-siri.html": {
-    "hash": "290571f27aab1f463d88b042f52ba251287059769233a5e0768cc561a6e4d619",
+    "hash": "aa89948116bef268ba47dc9a4ce27f532fe4de6f3809c631791756df9ed3a2d6",
     "updated": "2026-11-08"
   },
   "guides/payday-budget.html": {
-    "hash": "699cd7003dc4be13325539990951bd1e7d5d3ce02b187fb0b2a49dadae0fe255",
+    "hash": "50a4cd5f2bb1f5626cffc1ab81441134e4fa21a37f8a34a31dd8ea9fee33865f",
     "updated": "2026-11-15"
   },
   "guides/sms-automation-not-working.html": {
-    "hash": "76d3238f72a683de0316859c115fb23182d2da32ad8407cee8adacc8d10e82d7",
+    "hash": "46bb9f0f7c273008912144ace49db9d42e1e0be05c1c40fd4b400f4237c205d6",
     "updated": "2026-10-26"
   },
   "guides/sms-setup.html": {
-    "hash": "1485c9faa5d59d0bedd10d8018a9ab79ffc65759a0f63c26f849c56c1253b394",
+    "hash": "6fdd7b0d978c78c2b51e2343d78f3adcde5ed2ff36c1f955191181713750fc04",
     "updated": "2026-10-25"
   },
   "guides/track-cash-expenses.html": {
-    "hash": "7503b3ab9282f349f89706046dfc3166cb076640b3652bbfad0805cf82dd3c75",
+    "hash": "13bce0c11c560efc93312e1ef1c7ecf603d7494a56c6a8e4d84d522b922652c7",
     "updated": "2026-10-13"
   },
   "guides/track-subscriptions-recurring-bills.html": {
-    "hash": "de9a366ddef80946ab3c9c36d822e82cb355ddecda87c08ee6f831340896a719",
+    "hash": "02cf32f4a436df72be5f61dd7f782a00641d4cd35b0eed3ac962067f81a0204b",
     "updated": "2026-11-10"
   },
   "guides/voice-expenses-iphone.html": {
-    "hash": "aa68c6d5643f5bd323a298997c26467f6e91a5fae5e0fe17e927e7588b4d397d",
+    "hash": "10c7717d62744e17765c3cbe2c1613a03646b7e1aa10e25854a07230506b4d8b",
     "updated": "2026-10-13"
   },
   "index.html": {
