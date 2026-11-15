@@ -909,16 +909,16 @@ https://trackexpenses.app/guides/log-expenses-with-siri.html
 
 ## Import Bank Email Alerts on iPhone | TrackExpenses
 https://trackexpenses.app/guides/bank-email-alerts-iphone.html
- Import bank email alerts on iPhone, from Gmail or any account  By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction    In this guide    What Shortcuts can and can't see    Step 1: add Gmail to the Mail app    Step 2: create the Email automation    Step 3: hand the email to TrackExpenses    Check an alert before the next purchase    Limits worth knowing    Privacy    Frequently asked questions
+ Import bank email alerts on iPhone, from Gmail or any account  By  Mohamed Elatabany  · Updated November 2026 ·  Suggest a correction    In this guide    What Shortcuts can and can't see    Step 1: add Gmail to the Mail app    Step 2: create the Email automation    Step 3: hand the email to TrackExpenses    iOS 27, screen by screen    Check an alert before the next purchase    Limits worth knowing    Privacy    Frequently asked questions
  If your bank emails you about card payments, a Shortcuts Email automation can pass each alert to TrackExpenses, the same way the SMS automation passes a text. Shortcuts can't see inside the Gmail app, so the one extra step is adding your Gmail account to Apple's Mail app, which is what the Email trigger watches.
  What Shortcuts can and can't see
  The Email trigger in Shortcuts runs when Apple's Mail app receives a message that matches your filter. It has no access to the Gmail app, Outlook or any other mail app, and no automation can read a notification banner. That is why the steps below begin in Settings rather than in Shortcuts.
- Adding the account to Mail doesn't change how you read email. Keep using the Gmail app if you like it. Mail only has to receive a copy of the alerts. If you don't want two notifications for every email, turn off notifications for Mail in Settings → Notifications → Mail. The automation still runs.
+ Adding the account to Mail doesn't change how you read email: keep using the Gmail app. Mail only needs a copy of the alerts. If you don't want two notifications for every email, turn off notifications for Mail in Settings → Notifications → Mail. The automation still runs.
  The filter works on the subject line, much as the SMS automation works on the message's wording. Shortcuts offers no "body contains" option for email, only Sender and Subject. Open three or four alert emails from your bank and find a word that every alert subject contains and marketing emails don't, such as "transaction", "purchase" or "alert". That word is your filter.
  Step 1: add Gmail to the Mail app
  Open Settings → Apps → Mail → Mail Accounts → Add Account and choose Google. Sign in to the Gmail account your bank writes to, and leave Mail switched on for it. On iOS 17, the same screen is Settings → Mail → Accounts.
  Apple's Mail app checks Gmail on a schedule rather than receiving each email the moment it lands. On the Mail Accounts screen, open Fetch New Data and choose Every 15 Minutes, the shortest interval. An alert can therefore reach your ledger a few minutes after the email arrives. Opening Mail makes it check at once.
- iCloud Mail, Outlook and most other accounts work the same way: add them to Mail and the Email trigger sees what arrives there.
+ iCloud Mail, Outlook and most other accounts work the same way.
  Step 2: create the Email automation
  The editor changed in iOS 27, so follow the steps for the version on your iPhone.
  On iOS 27, open Shortcuts, go back to Library, choose Automation and tap +. If Describe a Shortcut opens, tap Editor. Tap Automation in the actions panel, then Email under Communication. The trigger reads "When I receive an email where Sender is Email Address". Tap Sender and choose Subject, then enter your filter word. Expand the trigger with its blue arrow: keep Automation on and Confirm Before Run off.
@@ -926,7 +926,10 @@ https://trackexpenses.app/guides/bank-email-alerts-iphone.html
  Step 3: hand the email to TrackExpenses
  Add TrackExpenses' Import Bank Message action. It appears as "Import transaction from Message". The blue Message placeholder must be connected to the incoming email. A blank placeholder doesn't fill itself in.
  On iOS 27, tap Message, then Select Variable in the bottom bar, and tap Email directly below the trigger. Tap the inserted Email variable and choose Content from its Get list, which is the body of the email. On iOS 26, tap Message → Select Variable → Shortcut Input.
- Finally, expand the action with its arrow and switch off Show When Run, so it never stops to ask for text. Save the shortcut. This is the same connection the SMS automation needs; the  bank SMS guide  shows it with screenshots.
+ Finally, expand the action with its arrow and switch off Show When Run, so it never stops to ask for text. Save the shortcut. The SMS automation needs the same connection; see the  bank SMS guide .
+ iOS 27, screen by screen
+ These are the real Shortcuts screens on iOS 27, in order.
+   Choose Email  In Shortcuts, go to Library → Automation → +, tap Automation and choose Email under Communication.     Filter on the subject  Tap Sender, switch it to Subject and enter your word. Keep Automation on and Confirm Before Run off.     Add the import action  Search for Import Bank Message and add it. Its Message field is still empty.     Choose the email  Tap Message, then Select Variable, and tap Email right below the trigger.     Use the email's content  Tap the Email variable you just inserted and choose Content.     Turn Show When Run off  Expand the action with its arrow, switch Show When Run off and save.
  Check an alert before the next purchase
  Copy the text of one real alert email from Gmail. In TrackExpenses, open More → SMS Auto-Import, find "Try one of your bank's messages" and paste it. The card shows what the automation would do with that email: the amount, whether it is spending or money in, the merchant and the account, or why it would skip it. Nothing is saved.
  Look at what comes back. If the email was about a 45.67 card payment, you want a 45.67 expense with the shop's name. If the card shows another figure, such as the balance, or says it would skip the email, the automation would do the same. It is better to know now than after a week of missing entries, and a copy of that alert sent to support, with your name and account number removed, is how the reader learns your bank's format.
@@ -1685,10 +1688,10 @@ https://trackexpenses.app/ar/bank-email.html
  أنشئ التحكم التلقائي
  تختلف الخطوات بحسب إصدار iOS.
  iOS 27
-  في الاختصارات، انتقل إلى «المكتبة» ← «التحكم التلقائي» ← +، ثم اضغط «التحكم التلقائي» واختر «البريد الإلكتروني».  اضغط «المرسل» وغيّره إلى «الموضوع»، واكتب كلمتك. اترك «التأكيد قبل التشغيل» مطفأً.  أضف إجراء TrackExpenses «استيراد رسالة البنك». اضغط حقل «رسالة» ← «تحديد متغير» ← «البريد الإلكتروني»، ثم اضغط «البريد الإلكتروني» واختر «المحتوى».  أطفئ «إظهار عند التشغيل» واحفظ الاختصار.
+   اختر «بريد إلكتروني»  في الاختصارات، انتقل إلى «المكتبة» ← «التحكم التلقائي» ← +، ثم اضغط «التحكم التلقائي» واختر «بريد إلكتروني» تحت «التواصل».     صفِّ حسب الموضوع  اضغط «المرسِل» وغيّره إلى «الموضوع»، واكتب كلمتك. يبقى «التحكم التلقائي» مفعّلًا و«التأكيد قبل التشغيل» مطفأً.     أضف إجراء الاستيراد  ابحث عن TrackExpenses وأضف «استيراد رسالة البنك». حقل «الرسالة» ما زال فارغًا.     اختر الرسالة  اضغط «الرسالة» ثم «تحديد متغير»، واضغط «بريد الإلكتروني» أسفل المشغّل مباشرة.     استخدم المحتوى  اضغط متغير «بريد الإلكتروني» الذي أضفته، واختر «المحتوى».     أطفئ «إظهار عند التشغيل»  افتح الإجراء بسهمه، وأطفئ «إظهار عند التشغيل»، ثم احفظ الاختصار.
  iOS 26 والإصدارات الأقدم
-  في الاختصارات، اضغط «التحكم التلقائي» ثم + واختر «البريد الإلكتروني».  اضغط «الموضوع يتضمن» واكتب كلمتك. اختر «تشغيل مباشرة»، ثم «التالي» و«إنشاء اختصار جديد» (وفي iOS 18 وما قبله: «تحكم تلقائي فارغ جديد»).  أضف «استيراد رسالة البنك». اضغط حقل «رسالة» ← «تحديد متغير» ← «إدخال الاختصار».  أطفئ «إظهار عند التشغيل» واحفظ التحكم التلقائي.
- اسم الإجراء «استيراد رسالة البنك»، لكنه يقرأ رسائل البريد بالطريقة نفسها. وإن بقي حقل «رسالة» فارغًا فلن يجد الإجراء ما يقرؤه، فلا بد أن يظهر فيه المتغير.
+  في الاختصارات، اضغط «التحكم التلقائي» ثم + واختر «بريد إلكتروني».  اضغط «الموضوع يتضمن» واكتب كلمتك. اختر «تشغيل مباشرة»، ثم «التالي» و«إنشاء اختصار جديد» (وفي iOS 18 وما قبله: «تحكم تلقائي فارغ جديد»).  أضف «استيراد رسالة البنك». اضغط حقل «الرسالة» ← «تحديد متغير» ← «إدخال الاختصار».  أطفئ «إظهار عند التشغيل» واحفظ التحكم التلقائي.
+ اسم الإجراء «استيراد رسالة البنك»، لكنه يقرأ رسائل البريد بالطريقة نفسها. وإن بقي حقل «الرسالة» فارغًا فلن يجد الإجراء ما يقرؤه، فلا بد أن يظهر فيه المتغير.
 
  جرّب قبل أول عملية
  انسخ نص أحد التنبيهات من بريدك. ثم افتح في TrackExpenses «المزيد» ← «تسجيل رسائل البنك تلقائيًا»، والصقه في بطاقة «جرّب إحدى رسائل بنكك». سترى فورًا ما سيفعله التحكم التلقائي به: المبلغ والمتجر والحساب، أو سبب تخطيه للرسالة. ولا يُحفظ شيء.
@@ -1701,7 +1704,7 @@ https://trackexpenses.app/ar/bank-email.html
  لا تمرر «الاختصارات» إلا الرسائل التي تطابق التصفية التي اخترتها، ولا تمرر منها إلا محتواها. يقرأ TrackExpenses النص على جهازك ويحفظ العملية التي وجدها، لا الرسالة نفسها، ولا يسجّل الدخول إلى بريدك ولا إلى بنكك.
 
  أسئلة شائعة
-  هل يستطيع TrackExpenses قراءة تطبيق Gmail مباشرة؟  لا. مشغّل «البريد الإلكتروني» في «الاختصارات» لا يرى إلا ما يصل إلى تطبيق «البريد» من Apple، لذا أضف حساب Gmail إليه.
+  هل يستطيع TrackExpenses قراءة تطبيق Gmail مباشرة؟  لا. مشغّل «بريد إلكتروني» في «الاختصارات» لا يرى إلا ما يصل إلى تطبيق «البريد» من Apple، لذا أضف حساب Gmail إليه.
   لماذا الموضوع وليس المرسل؟  كما في إعداد الرسائل النصية، العبرة بصياغة البنك لا بمن أرسل. البنوك ترسل التنبيهات غالبًا من أكثر من عنوان، أما الموضوع فيبقى ثابتًا.
   لماذا وصلت العملية متأخرة؟  لأن «البريد» يجلب رسائل Gmail على فترات. اضبط «جلب بيانات جديدة» على كل 15 دقيقة، أو افتح تطبيق «البريد».
   بنكي يرسل الإشعارات داخل تطبيقه فقط، فما الحل؟  لا تستطيع «الاختصارات» قراءة إشعارات التطبيقات الأخرى. لمشتريات Apple Pay يوجد مشغّل «المعاملة»، ويمكنك دائمًا لصق أي تنبيه في TrackExpenses بنفسك.
@@ -1733,7 +1736,7 @@ https://trackexpenses.app/de/bank-email.html
  Die Automation einrichten
  Die Schritte unterscheiden sich je nach iOS-Version.
  iOS 27
-  Geh in Kurzbefehle zu Mediathek → Automation → +, tippe auf „Automation“ und wähle „E-Mail“.  Tippe auf „Absender“, stell auf „Betreff“ um und gib dein Wort ein. Lass „Vor dem Ausführen bestätigen“ aus.  Füge die TrackExpenses-Aktion „Bank-SMS importieren“ hinzu. Tippe auf das Feld „Nachricht“ → „Variable auswählen“ → „E-Mail“, tippe dann auf „E-Mail“ und wähle „Inhalt“.  Schalte „Beim Ausführen anzeigen“ aus und sichere den Kurzbefehl.
+   „E-Mail“ wählen  Geh in Kurzbefehle zu Mediathek → Automation → +, tippe auf „Automation“ und wähle unter „Kommunikation“ „E-Mail“.     Nach dem Betreff filtern  Tippe auf „Absender:in“, stell auf „Betreff“ um und gib dein Wort ein. „Automation“ bleibt an, „Vor dem Ausführen bestätigen“ aus.     Die Import-Aktion hinzufügen  Such nach „Bank-SMS importieren“ und füge die Aktion hinzu. Das Feld „Nachricht“ ist noch leer.     Die E-Mail wählen  Tippe auf „Nachricht“, dann auf „Variable auswählen“ und auf „E-Mail“ direkt unter dem Auslöser.     Den Inhalt nehmen  Tippe auf die eingefügte Variable „E-Mail“ und wähle „Inhalt“.     „Beim Ausführen anzeigen“ ausschalten  Öffne die Aktion mit ihrem Pfeil, schalte „Beim Ausführen anzeigen“ aus und sichere den Kurzbefehl.
  iOS 26 und älter
   Tippe in Kurzbefehle auf „Automation“, dann auf + und wähle „E-Mail“.  Tippe auf „Betreff enthält“ und gib dein Wort ein. Wähle „Sofort ausführen“, dann „Weiter“ und „Neuen Kurzbefehl erstellen“ (unter iOS 18 und älter „Neue leere Automation“).  Füge „Bank-SMS importieren“ hinzu. Tippe auf das Feld „Nachricht“ → „Variable auswählen“ → „Kurzbefehleingabe“.  Schalte „Beim Ausführen anzeigen“ aus und sichere die Automation.
  Die Aktion heißt „Bank-SMS importieren“, liest aber E-Mails genauso. Bleibt das Feld „Nachricht“ leer, hat die Aktion nichts zu lesen: Es muss die Variable zeigen.

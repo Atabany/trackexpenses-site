@@ -1,0 +1,98 @@
+{
+ "en": [
+  [
+   "Choose Email",
+   "In Shortcuts, go to Library → Automation → +, tap Automation and choose Email under Communication.",
+   "01-trigger"
+  ],
+  [
+   "Filter on the subject",
+   "Tap Sender, switch it to Subject and enter your word. Keep Automation on and Confirm Before Run off.",
+   "02-subject"
+  ],
+  [
+   "Add the import action",
+   "Search for Import Bank Message and add it. Its Message field is still empty.",
+   "03-action"
+  ],
+  [
+   "Choose the email",
+   "Tap Message, then Select Variable, and tap Email right below the trigger.",
+   "04-variable"
+  ],
+  [
+   "Use the email's content",
+   "Tap the Email variable you just inserted and choose Content.",
+   "05-content"
+  ],
+  [
+   "Turn Show When Run off",
+   "Expand the action with its arrow, switch Show When Run off and save.",
+   "06-show-when-run"
+  ]
+ ],
+ "de": [
+  [
+   "„E-Mail“ wählen",
+   "Geh in Kurzbefehle zu Mediathek → Automation → +, tippe auf „Automation“ und wähle unter „Kommunikation“ „E-Mail“.",
+   "01-trigger"
+  ],
+  [
+   "Nach dem Betreff filtern",
+   "Tippe auf „Absender:in“, stell auf „Betreff“ um und gib dein Wort ein. „Automation“ bleibt an, „Vor dem Ausführen bestätigen“ aus.",
+   "02-subject"
+  ],
+  [
+   "Die Import-Aktion hinzufügen",
+   "Such nach „Bank-SMS importieren“ und füge die Aktion hinzu. Das Feld „Nachricht“ ist noch leer.",
+   "03-action"
+  ],
+  [
+   "Die E-Mail wählen",
+   "Tippe auf „Nachricht“, dann auf „Variable auswählen“ und auf „E-Mail“ direkt unter dem Auslöser.",
+   "04-variable"
+  ],
+  [
+   "Den Inhalt nehmen",
+   "Tippe auf die eingefügte Variable „E-Mail“ und wähle „Inhalt“.",
+   "05-content"
+  ],
+  [
+   "„Beim Ausführen anzeigen“ ausschalten",
+   "Öffne die Aktion mit ihrem Pfeil, schalte „Beim Ausführen anzeigen“ aus und sichere den Kurzbefehl.",
+   "06-show-when-run"
+  ]
+ ],
+ "ar": [
+  [
+   "اختر «بريد إلكتروني»",
+   "في الاختصارات، انتقل إلى «المكتبة» ← «التحكم التلقائي» ← +، ثم اضغط «التحكم التلقائي» واختر «بريد إلكتروني» تحت «التواصل».",
+   "01-trigger"
+  ],
+  [
+   "صفِّ حسب الموضوع",
+   "اضغط «المرسِل» وغيّره إلى «الموضوع»، واكتب كلمتك. يبقى «التحكم التلقائي» مفعّلًا و«التأكيد قبل التشغيل» مطفأً.",
+   "02-subject"
+  ],
+  [
+   "أضف إجراء الاستيراد",
+   "ابحث عن TrackExpenses وأضف «استيراد رسالة البنك». حقل «الرسالة» ما زال فارغًا.",
+   "03-action"
+  ],
+  [
+   "اختر الرسالة",
+   "اضغط «الرسالة» ثم «تحديد متغير»، واضغط «بريد الإلكتروني» أسفل المشغّل مباشرة.",
+   "04-variable"
+  ],
+  [
+   "استخدم المحتوى",
+   "اضغط متغير «بريد الإلكتروني» الذي أضفته، واختر «المحتوى».",
+   "05-content"
+  ],
+  [
+   "أطفئ «إظهار عند التشغيل»",
+   "افتح الإجراء بسهمه، وأطفئ «إظهار عند التشغيل»، ثم احفظ الاختصار.",
+   "06-show-when-run"
+  ]
+ ]
+}

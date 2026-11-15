@@ -202,11 +202,21 @@ def callout(prefix,path,feature=None):
  more=f' <a href="{prefix}features/{f["slug"]}.html">See {esc(f["label"])} →</a>' if f else ''
  return f'<aside class="app-callout"><div><p class="eyebrow">TRACKEXPENSES FOR IPHONE &amp; IPAD</p><p><strong>Say it, import bank SMS, budget from payday.</strong> Free to start, no bank login.{more}</p></div>{cta(path,prefix)}</aside>'
 
+# The email alerts guide's iOS 27 screens, in each language, captured on the 27.2 simulator (_ops/email-steps.json).
+EMAIL_STEPS=json.loads((ROOT/'_ops/email-steps.json').read_text())
+EMAIL_ALT={'en':'Shortcuts on iOS 27, step {n}: {t}','de':'Kurzbefehle unter iOS 27, Schritt {n}: {t}','ar':'الاختصارات في iOS 27، الخطوة {n}: {t}'}
+def email_steps(code,prefix):
+ def one(n,s):
+  title,detail,image=s
+  lazy='' if n==1 else ' loading="lazy"'
+  return f'<li><h3>{esc(title)}</h3><p>{esc(detail)}</p><img src="{prefix}assets/email/{code}/{image}.webp" width="540" height="1174" alt="{esc(EMAIL_ALT[code].format(n=n,t=title))}"{lazy} decoding="async"></li>'
+ return '<ol class="ar-steps">'+''.join(one(n,s) for n,s in enumerate(EMAIL_STEPS[code],1))+'</ol>'
 def guide(sl,meta):
  g=GUIDE_BY_SLUG[sl]; path='guides/'+sl+'.html'
  md=(ROOT/f'_content/guides/{sl}.md').read_text()
  heads=re.findall(r'^## (.+)$',md,re.M)
  body=markdown(md)
+ if sl=='bank-email-alerts-iphone': body=body.replace('<p>{{EMAIL_STEPS}}</p>',email_steps('en','../'))
  if sl=='sms-setup':
   videos='<fieldset class="sms-videos"><legend>Choose your iOS version</legend><input type="radio" name="sms-ios" id="sms-ios27" checked><label for="sms-ios27">iOS 27</label><input type="radio" name="sms-ios" id="sms-ios26"><label for="sms-ios26">iOS 26 or earlier</label>'
   for version in ['27','26']:
@@ -305,7 +315,7 @@ page('de/bank-sms.html','Bank-SMS automatisch eintragen (iPhone) | TrackExpenses
 for code,title,desc,date in [
  ('ar','تسجيل تنبيهات البنك من البريد الإلكتروني | TrackExpenses','أضف Gmail أو أي بريد إلى تطبيق «البريد»، وأنشئ تحكمًا تلقائيًا في «الاختصارات» يسجّل تنبيهات بنكك في TrackExpenses. خطوات iOS 27 و26 و18.','2026-11-15'),
  ('de','Bank-E-Mails automatisch eintragen (iPhone) | TrackExpenses','Postfach in Apples Mail-App einrichten, Automation „E-Mail“ in Kurzbefehle anlegen: So landen Bank-E-Mails aus Gmail und Co. in TrackExpenses.','2026-11-15')]:
- email_guide=(ROOT/f'_content/{code}/bank-email.html').read_text()
+ email_guide=(ROOT/f'_content/{code}/bank-email.html').read_text().replace('{{EMAIL_STEPS}}',email_steps(code,'../'))
  page(f'{code}/bank-email.html',title,desc,email_guide,'Article',faq=arabic_faq(email_guide),lang=code,published=date)
 for video in VIDEOS:
  body,video_schema=watch_page(video,BASE)

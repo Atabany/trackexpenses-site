@@ -6,7 +6,7 @@ If your bank emails you about card payments, a Shortcuts Email automation can pa
 
 The Email trigger in Shortcuts runs when Apple's Mail app receives a message that matches your filter. It has no access to the Gmail app, Outlook or any other mail app, and no automation can read a notification banner. That is why the steps below begin in Settings rather than in Shortcuts.
 
-Adding the account to Mail doesn't change how you read email. Keep using the Gmail app if you like it. Mail only has to receive a copy of the alerts. If you don't want two notifications for every email, turn off notifications for Mail in Settings → Notifications → Mail. The automation still runs.
+Adding the account to Mail doesn't change how you read email: keep using the Gmail app. Mail only needs a copy of the alerts. If you don't want two notifications for every email, turn off notifications for Mail in Settings → Notifications → Mail. The automation still runs.
 
 The filter works on the subject line, much as the SMS automation works on the message's wording. Shortcuts offers no "body contains" option for email, only Sender and Subject. Open three or four alert emails from your bank and find a word that every alert subject contains and marketing emails don't, such as "transaction", "purchase" or "alert". That word is your filter.
 
@@ -16,7 +16,7 @@ Open Settings → Apps → Mail → Mail Accounts → Add Account and choose Goo
 
 Apple's Mail app checks Gmail on a schedule rather than receiving each email the moment it lands. On the Mail Accounts screen, open Fetch New Data and choose Every 15 Minutes, the shortest interval. An alert can therefore reach your ledger a few minutes after the email arrives. Opening Mail makes it check at once.
 
-iCloud Mail, Outlook and most other accounts work the same way: add them to Mail and the Email trigger sees what arrives there.
+iCloud Mail, Outlook and most other accounts work the same way.
 
 ## Step 2: create the Email automation
 
@@ -32,7 +32,13 @@ Add TrackExpenses' Import Bank Message action. It appears as "Import transaction
 
 On iOS 27, tap Message, then Select Variable in the bottom bar, and tap Email directly below the trigger. Tap the inserted Email variable and choose Content from its Get list, which is the body of the email. On iOS 26, tap Message → Select Variable → Shortcut Input.
 
-Finally, expand the action with its arrow and switch off Show When Run, so it never stops to ask for text. Save the shortcut. This is the same connection the SMS automation needs; the [bank SMS guide](bank-sms-iphone.html) shows it with screenshots.
+Finally, expand the action with its arrow and switch off Show When Run, so it never stops to ask for text. Save the shortcut. The SMS automation needs the same connection; see the [bank SMS guide](bank-sms-iphone.html).
+
+## iOS 27, screen by screen
+
+These are the real Shortcuts screens on iOS 27, in order.
+
+{{EMAIL_STEPS}}
 
 ## Check an alert before the next purchase
 

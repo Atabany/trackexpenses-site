@@ -4,7 +4,7 @@
     "updated": "2026-10-25"
   },
   "ar/bank-email.html": {
-    "hash": "4f8d28c2217f8d4532282e7b13939ddb0c37bd8d0813fff101caf270300fc9df",
+    "hash": "af0b84c7fa929947e8f452a1bde5ef1e96b65fb30db3229b403a8ccb3bfa5110",
     "updated": "2026-11-15"
   },
   "ar/bank-sms.html": {
@@ -24,7 +24,7 @@
     "updated": "2026-10-25"
   },
   "de/bank-email.html": {
-    "hash": "65fa1e0c55e67a409167b788ae9f81089cb0bbd786083a0d0dcefdece628402e",
+    "hash": "72e809b066e1276da29315c7fe3a058b56fc83ddfb29df6703a940190052954e",
     "updated": "2026-11-15"
   },
   "de/bank-sms.html": {
@@ -88,7 +88,7 @@
     "updated": "2026-10-29"
   },
   "guides/bank-email-alerts-iphone.html": {
-    "hash": "5e33e4a939dce55020804ad58eaba64234e937cae7a74cb807042ce888b48364",
+    "hash": "fbc31d9e2eeeff39deea61edf43b29825b755a3cf4c187ada3feb05f239448da",
     "updated": "2026-11-15"
   },
   "guides/bank-sms-iphone.html": {
