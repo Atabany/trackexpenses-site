@@ -1,0 +1,92 @@
+[
+ {
+  "image": "01-library",
+  "title": "Empieza en la Biblioteca",
+  "detail": "Abre Atajos. Vuelve a “Biblioteca” y elige “Automatización”."
+ },
+ {
+  "image": "02-automation",
+  "title": "Crea un atajo nuevo",
+  "detail": "Toca el + de abajo. En iOS 27, las automatizaciones están dentro de los atajos."
+ },
+ {
+  "image": "04-editor",
+  "title": "Abre el editor",
+  "detail": "Si se abre “Describir un atajo”, toca “Editor” o “Editar”. Luego toca “Automatización” en el panel de acciones."
+ },
+ {
+  "image": "05-triggers",
+  "title": "Elige “Mensaje”",
+  "detail": "En “Comunicación”, toca “Mensaje” para agregar el activador de mensajes entrantes."
+ },
+ {
+  "image": "06-sender",
+  "title": "Cambia el campo del filtro",
+  "detail": "Toca el primer campo azul “Remitente”. Aquí eliges qué parte del mensaje se compara."
+ },
+ {
+  "image": "07-field-menu",
+  "title": "Filtra por el texto del mensaje",
+  "detail": "Elige “Mensaje” en el menú. La condición queda como “Mensaje contiene Texto”."
+ },
+ {
+  "image": "08-filter",
+  "title": "Usa las palabras de tu banco",
+  "detail": "Toca “Texto” y escribe algo que traigan todos los avisos de tu banco, como el símbolo “$”. Luego toca la flecha azul del activador."
+ },
+ {
+  "image": "09-run-settings",
+  "title": "Deja que se ejecute sola",
+  "detail": "Deja “Automatización” activada y “Confirmar antes de ejecutar” desactivado. Estos reemplazan la pantalla anterior de “Ejecutar de inmediato”."
+ },
+ {
+  "image": "10-search-action",
+  "title": "Busca la acción para importar",
+  "detail": "Toca “Buscar”, escribe “Importar SMS del banco” y selecciona la acción de TrackExpenses."
+ },
+ {
+  "image": "11-import-action",
+  "title": "Conecta el texto entrante",
+  "detail": "Toca el marcador azul “Mensaje” dentro de “Importar movimiento de Mensaje”."
+ },
+ {
+  "image": "12-select-variable",
+  "title": "Abre “Seleccionar variable”",
+  "detail": "Toca “Seleccionar variable” en la barra inferior. No escribas un mensaje ni uses “Preguntar cada vez”."
+ },
+ {
+  "image": "13-message-output",
+  "title": "Elige el “Mensaje” del activador",
+  "detail": "Toca “Mensaje” justo debajo del activador. En iOS 27, esa es la salida del mensaje entrante."
+ },
+ {
+  "image": "14-connected",
+  "title": "Usa el cuerpo del mensaje",
+  "detail": "Cierra la barra inferior con ×. Toca la variable “Mensaje” que se insertó para ver sus propiedades."
+ },
+ {
+  "image": "20-message-content",
+  "title": "Elige “Contenido”",
+  "detail": "En la lista “Obtener” de la variable, elige “Contenido”. Toca “Regresar” y luego cierra la barra de variables con ×."
+ },
+ {
+  "image": "23-final",
+  "title": "Importaciones sin interrupciones",
+  "detail": "Abre la flecha azul de la acción para importar y desactiva “Mostrar al ejecutar”. La variable conectada debe decir “Contenido”."
+ },
+ {
+  "image": "16-details",
+  "title": "Revisa la privacidad del atajo",
+  "detail": "Toca el botón ⓘ en la barra del editor y luego abre “Privacidad”."
+ },
+ {
+  "image": "17-privacy",
+  "title": "Permítelo con el dispositivo bloqueado",
+  "detail": "Deja activado “Permitir ejecución en dispositivo bloqueado”. Vuelve a “Detalles”, toca “Listo” y luego regresa para guardar el atajo."
+ },
+ {
+  "image": "19-saved",
+  "title": "Listo para tu próximo SMS del banco",
+  "detail": "Confirma que la automatización esté activada. Revisa el próximo aviso que coincida en TrackExpenses → “Más” → “Registro automático de SMS”."
+ }
+]

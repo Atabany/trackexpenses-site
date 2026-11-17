@@ -1,6 +1,6 @@
 # Export iPhone expenses to CSV
 
-TrackExpenses exports the month you are viewing as CSV for free, so you can review your own records in Numbers or another spreadsheet. Pro adds exports for a chosen date range, CSV import and full JSON backup and restore through More → Backup & Export.
+With TrackExpenses Pro, the Export & Share screen writes your records as CSV, so you can review them in Numbers or another spreadsheet, and makes a full JSON backup you can restore later. Since version 1.15.0 every export is part of Pro, including the month on screen; the ledger itself, its budgets, stats and search stay free and are never locked.
 
 ## Use a spreadsheet when that is enough
 
@@ -10,11 +10,11 @@ An expense app is useful when it collects the entries, accounts and categories y
 
 ## Choose the period before exporting
 
-In TrackExpenses, open the Transactions screen and browse to the month you want. Check the visible period boundaries before using its CSV export. If your month starts on payday, the selected window follows that setting rather than automatically becoming the first through the last calendar day.
+In TrackExpenses, open the Transactions screen and browse to the month you want, then tap the share button in the toolbar to open Export & Share. Check the visible period boundaries before exporting. If your month starts on payday, the selected window follows that setting rather than automatically becoming the first through the last calendar day.
 
 For example, a month starting on the 25th can include purchases from the last week of one calendar month and the first weeks of the next. Those rows belong together if they were funded by the same monthly payday. Give the exported file a name that includes its actual dates so that a later spreadsheet review does not misinterpret the window.
 
-Single-month export stays free. For a custom date range, open More → Backup & Export with Pro and choose the period there. Do not pay merely because you need a copy of the selected month's records; the app keeps that ordinary route available in the free ledger.
+Export & Share offers five spans: this month, the last 3 months, the last 6 months, this fiscal year and all transactions, each with the number of entries it would hold. While a Transactions filter is on, a switch keeps only what the filter shows. More → Backup & Export opens the same screen. Without Pro, each row shows a lock and opens the Pro offer; nothing is written until you choose.
 
 ## Save the file somewhere you control
 
@@ -42,7 +42,7 @@ A spreadsheet can answer a narrow question well. For example, group by category 
 
 CSV is useful for portable tables, but it is not the same as a full TrackExpenses backup. A backup preserves the app's broader record structure and identities; a table does not necessarily carry everything required to rebuild accounts, budgets, settings or attachments.
 
-With Pro, More → Backup & Export can write a full JSON backup and restore it. Keep that file separately from your analysis sheet, and read the restore screen before proceeding: restoring a ledger has a different purpose from adding some CSV rows. For a normal analysis, you do not need to restore or replace anything in the app.
+Export & Share can also write a full JSON backup, and More → Backup & Export restores it. Keep that file separately from your analysis sheet, and read the restore screen before proceeding: restoring a ledger has a different purpose from adding some CSV rows. For a normal analysis, you do not need to restore or replace anything in the app.
 
 ## Importing an older CSV is a separate task
 
@@ -52,9 +52,9 @@ Do not assume that importing an export will update existing transactions. TrackE
 
 ## Frequently asked questions
 
-Is monthly CSV export free? Yes. Export the month you are viewing from Transactions.
+Is CSV export free? No. Since version 1.15.0 every export is part of Pro, including the month you are viewing. Your records stay in the app, free, whether or not you export them.
 
-Does CSV include the entire app backup? No. Use the Pro JSON backup route for a full ledger backup.
+Does CSV include the entire app backup? No. Use the JSON backup in Export & Share for a full ledger backup.
 
 Does exporting erase my data? No. It creates a file copy of the selected records.
 

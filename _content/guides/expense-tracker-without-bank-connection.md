@@ -48,7 +48,7 @@ Keep a short note about unresolved differences. Correct the record when you unde
 
 No bank connection does not mean that every service is offline. TrackExpenses can sync the ledger through your private iCloud account; Apple and RevenueCat handle purchases. Read the [privacy policy](../privacy.html) for the actual data flow and decide whether that fits your needs.
 
-Export a selected month as CSV when you want a portable table. CSV is useful for reviewing rows in Numbers, but it is not a complete app backup. Pro adds full JSON backup and restore. Check an exported file before depending on it, and store copies somewhere you control.
+With Pro, export a month or a longer span as CSV when you want a portable table. CSV is useful for reviewing rows in Numbers, but it is not a complete app backup; Pro also writes a full JSON backup you can restore. Check an exported file before depending on it, and store copies somewhere you control.
 
 ## Frequently asked questions
 

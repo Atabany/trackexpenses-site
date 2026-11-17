@@ -106,12 +106,14 @@ for f,p in parsers.items():
    elif ar.get('ratingCount')!=sum(x['count'] for x in places.values()) or ar.get('ratingCount')!=FACTS['allRatingCount'] or abs(ar.get('ratingValue',0)-sum(x['average']*x['count'] for x in places.values())/FACTS['allRatingCount'])>0.006: fail('rating differs from the storefront figures in facts.json')
  if not any(s.get('@type')=='BreadcrumbList' for s in schemas): fail('missing breadcrumbs')
  if not p.noindex and 'max-image-preview:large' not in raw: fail('missing large image preview permission')
- if rel not in ['index.html','ar/index.html','de/index.html'] and 'aria-label="Breadcrumb"' not in raw and 'aria-label="مسار الصفحة"' not in raw and 'aria-label="Seitenpfad"' not in raw: fail('missing visible breadcrumb navigation')
+ if rel not in ['index.html','ar/index.html','de/index.html','es/index.html','pt/index.html'] and not any(f'aria-label="{x}"' in raw for x in ['Breadcrumb','مسار الصفحة','Seitenpfad','Ruta de navegación','Caminho da página']): fail('missing visible breadcrumb navigation')
  if p.title in seen_titles or p.desc in seen_desc: fail('duplicate metadata')
  seen_titles.add(p.title); seen_desc.add(p.desc)
  if len(p.title)>60 or not p.title: fail('title length '+str(len(p.title)))
  if len(p.desc)>155 or not p.desc: fail('description length '+str(len(p.desc)))
- for banned in [r'\$\d',r'AI-powered',r'TrackExpenses: Money Manager',r'guaranteed ranking',r'#1 app',r'no external services']:
+ # Latin American pesos are written "$1,234.56" by every bank there, so the Spanish pages may show "$" before a figure.
+ spanish=bool(re.search(r'<html lang="es',raw))
+ for banned in ([] if spanish else [r'\$\d'])+[r'AI-powered',r'TrackExpenses: Money Manager',r'guaranteed ranking',r'#1 app',r'no external services']:
   if re.search(banned,visible,re.I): fail('banned/outdated copy '+banned)
  if p.noindex: continue
  url=BASE+('' if rel=='index.html' else rel); expected.add(url)
@@ -169,5 +171,50 @@ if PLAY.get('enabled'):
  if not (ROOT/'assets/google-play-badge.png').exists(): problems.append('missing assets/google-play-badge.png')
  if '(iPhone and iPad only)' in llms: problems.append('llms.txt still says iPhone and iPad only')
 elif 'play.google.com' in llms or 'play.google.com' in full: problems.append('llms.txt names Google Play while google_play.enabled is false')
+# The release switch (config.json unreleased_languages): a folder still listed describes an app version that is not on the
+# App Store yet. Its pages are reached only from that version's own links: noindex, out of the sitemap and llms files,
+# linked from no page of another folder, named in no hreflang, and the other fact blocks don't name its language. Emptied,
+# the same pages must be indexable, linked from the English footer and named by every home page's hreflang, and every fact
+# block names the language.
+CONFIG=json.loads((ROOT/'_ops/config.json').read_text())
+UNRELEASED=set(CONFIG.get('unreleased_languages',[]))
+NEW={'es':('es-419',{'en':'Spanish','ar':'الإسبانية','de':'Spanisch','pt':'espanhol'}),'pt':('pt-BR',{'en':'Portuguese','ar':'البرتغالية','de':'Portugiesisch','es':'portugués'})}
+HOMES=['index.html','ar/index.html','de/index.html','es/index.html','pt/index.html']
+def folder(rel): return rel.split('/')[0] if '/' in rel else ''
+def fact_text(raw):
+ m=re.search(r'<details class="fact-block">.*?<p>(.*?)</p>',raw,re.S); return html.unescape(m.group(1)) if m else ''
+import html
+for code,(hreflang,names) in NEW.items():
+ pages=[f for f in parsers if folder(f.relative_to(ROOT).as_posix())==code]
+ if len(pages)!=3: problems.append(f'{code}/: expected index.html, bank-sms.html and bank-email.html, found {len(pages)}')
+ for f in pages:
+  p=parsers[f]; rel=f.relative_to(ROOT).as_posix(); raw=f.read_text(); url=BASE+rel
+  if f'<html lang="{hreflang}"' not in raw: problems.append(rel+': html lang is not '+hreflang)
+  if code in UNRELEASED:
+   if not p.noindex: problems.append(rel+': unreleased language page without noindex')
+   if url in sitemap or url in llms or url in full: problems.append(rel+': unreleased language page listed in the sitemap or llms files')
+   if 'hreflang="'+hreflang+'"' in raw or '<link rel="alternate"' in raw: problems.append(rel+': unreleased language page carries hreflang alternates')
+  else:
+   if p.noindex: problems.append(rel+': released language page is still noindex')
+ for f,p in parsers.items():
+  rel=f.relative_to(ROOT).as_posix(); raw=f.read_text(); lang=folder(rel) if folder(rel) in ['ar','de','es','pt'] else 'en'
+  if code in UNRELEASED and folder(rel)!=code:
+   for link in p.links:
+    u=urlsplit(link)
+    if u.scheme or u.netloc or not u.path: continue
+    target=(f.parent/unquote(u.path)).resolve()
+    if target.is_relative_to((ROOT/code).resolve()): problems.append(rel+': links to the unreleased '+code+'/ pages ('+link+')')
+   if f'hreflang="{hreflang}"' in raw: problems.append(rel+': names the unreleased '+code+' pages in hreflang')
+  if lang!=code and lang in names and not p.noindex:
+   said=names[lang] in fact_text(raw)
+   if code in UNRELEASED and said: problems.append(rel+': fact block names '+names[lang]+' before the language is released')
+   if code not in UNRELEASED and not said: problems.append(rel+': fact block does not name '+names[lang])
+ if code not in UNRELEASED:
+  for home in HOMES:
+   raw=(ROOT/home).read_text()
+   if f'<link rel="alternate" hreflang="{hreflang}" href="{BASE}{code}/index.html">' not in raw: problems.append(home+': no hreflang '+hreflang)
+  if f'href="{code}/index.html"' not in (ROOT/'index.html').read_text(): problems.append('index.html: footer does not link '+code+'/')
+  if names['en'] not in llms: problems.append('llms.txt does not name '+names['en'])
+ elif names['en'] in llms.split('## All official pages')[0]: problems.append('llms.txt names '+names['en']+' before the language is released')
 if problems: print('\n'.join(problems)); sys.exit(1)
-print(f'OK — {len(expected)} indexable pages; links, anchors, metadata, schema, videos, discovery, campaigns and facts verified')
+print(f'OK — {len(expected)} indexable pages (unreleased: {", ".join(sorted(UNRELEASED)) or "none"}); links, anchors, metadata, schema, videos, discovery, campaigns and facts verified')

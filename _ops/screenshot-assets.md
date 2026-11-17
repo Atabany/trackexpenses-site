@@ -55,3 +55,21 @@ it?”; 1320 × 2868). Scaled to 660 × 1434 and encoded as
 WebP quality 88, otherwise untouched. The UAE capture rather than the US one keeps the site's AED convention; the composed
 store frame (`upload/iphone-with-coach/02-coach.png`) was not used because it adds a headline and badges over the screen.
 Joining the challenge shown is Pro; the page labels it.
+
+Added 17 November 2026 — the Spanish and Portuguese home pages (`es/index.html`, `pt/index.html`, built for 1.16.0 and
+noindex until it is live). Real captures of the 1.16.0 app on an iPhone 17 Pro simulator (iOS 26.5, 1206 × 2622), taken
+on 17 November for the 1.16.0 market QA pass (`~/indie/qa-1.16-market/`); the eight used are copied unchanged into
+`marketing/website-2026-11-latam/raw/`. Scaled to 660 × 1434 and encoded as WebP quality 82, otherwise untouched.
+- `assets/es/ledger.webp` ← `es-tab-budget.png` (Stats → Budget, Mexican peso demo ledger, period 15/11–14/12/2026)
+- `assets/es/voice.webp` ← `es-onb1.png` (onboarding page 2, the voice demo: three drafts saved)
+- `assets/es/alerts.webp` ← `es-mx-onb3-sms.png` (onboarding page 3 for a Mexican peso ledger: BBVA alerts filed, a code skipped)
+- `assets/es/coach.webp` ← `es-onb4.png` (onboarding page 5, the coach demo answering “¿Qué puedo mejorar?”)
+- `assets/pt/ledger.webp` ← `pt-tab-daily.png` (Lançamentos → Diário, real ledger list with the SMS setup card)
+- `assets/pt/voice.webp` ← `pt-onb1.png` (onboarding voice demo)
+- `assets/pt/alerts.webp` ← `pt-onb3-sms.png` (onboarding page 3: a purchase at Pão de Açúcar and a Pix received filed, a code skipped)
+- `assets/pt/budget.webp` ← `pt-tab-budget.png` (Stats → Budget, real ledger in R$)
+Three of each set are onboarding demos (the app's own animated pages, settled frame), which the captions present as
+what the feature does, not as someone's ledger. The Spanish daily list was not used: an Apple Intelligence system banner
+covers its top. The bank-SMS guides' 18 pictures each are the real Shortcuts captures in
+`marketing/sms-setup-es/screens/ios27` and `marketing/sms-setup-pt-BR/screens/ios27`, 540 px WebP quality 80 in
+`assets/es/sms/` and `assets/pt/sms/`, as the German ones.

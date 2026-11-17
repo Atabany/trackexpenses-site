@@ -1,0 +1,44 @@
+<h1>Lance os avisos do banco que chegam por e-mail</h1>
+<p class="lead">Se o seu banco manda um e-mail a cada compra, Pix ou transferência, uma automação no Atalhos pode passar cada um para o TrackExpenses, igual a um SMS. O único passo a mais: sua conta de e-mail precisa estar no app Mail, da Apple, porque o Atalhos só enxerga os e-mails que chegam ali, não os do app do Gmail nem os do Outlook.</p>
+<nav class="toc" aria-label="Conteúdo do guia"><ul><li><a href="#need">O que você precisa</a></li><li><a href="#mail">Adicione sua conta ao Mail</a></li><li><a href="#word">Escolha a palavra do assunto</a></li><li><a href="#steps">Crie a automação</a></li><li><a href="#check">Teste antes</a></li><li><a href="#limits">Bom saber</a></li><li><a href="#privacy">Privacidade</a></li><li><a href="#faq">Perguntas frequentes</a></li></ul></nav>
+
+<h2 id="need">O que você precisa</h2>
+<ul><li>Um iPhone com iOS 17 ou posterior e o app Atalhos, da Apple.</li><li>O TrackExpenses no mesmo iPhone.</li><li>Um banco que mande um e-mail com o valor a cada lançamento.</li></ul>
+<p>Você continua lendo seus e-mails onde preferir: o Mail só precisa receber uma cópia. Se duas notificações por e-mail incomodarem, desative as do Mail em Ajustes → Notificações → Mail; a automação continua rodando.</p>
+
+<h2 id="mail">Adicione sua conta ao Mail</h2>
+<p>Em Ajustes → Apps → Mail → Contas do Mail, toque em “Adicionar Conta” e entre (Google para o Gmail, Outlook.com para Hotmail e Outlook). No iOS 17, o caminho é Ajustes → Mail → Contas.</p>
+<p>O Mail verifica o Gmail de tempos em tempos, não no instante em que o e-mail chega. Na mesma tela, ajuste “Obter Novos Dados” para a cada 15 minutos, o intervalo mais curto. Assim, um lançamento pode aparecer alguns minutos depois do e-mail; se você abrir o Mail, ele verifica na hora.</p>
+
+<h2 id="word">Escolha a palavra do assunto</h2>
+<p>A automação só roda com e-mails cujo assunto contém uma palavra que você escolher. O Atalhos não filtra pelo texto do e-mail, só por remetente e assunto. Como no SMS, não escolha um remetente: os bancos mandam avisos de vários endereços. Olhe três ou quatro avisos do seu banco e escolha uma palavra que esteja em todos os assuntos e não nos e-mails de propaganda, como “compra”, “Pix” ou “transação”. Sem nenhum filtro, o Atalhos não deixa criar a automação.</p>
+
+<h2 id="steps">Crie a automação</h2>
+<p>Os passos mudam conforme a versão do iOS. O app também mostra os passos para a sua versão, em “Mais” → “Lançamento automático de SMS” → “Avisos do banco por e-mail?”.</p>
+<h3>iOS 27</h3>
+{{EMAIL_STEPS}}
+<h3>iOS 26 e anteriores</h3>
+<ol><li>No app Atalhos, toque em “Automação”, depois em + e escolha “E-mail”.</li><li>Toque em “Assunto Contém” e digite sua palavra. Escolha “Executar Imediatamente”, depois “Seguinte” e “Criar Novo Atalho” (no iOS 18 e anteriores, “Nova Automação em Branco”).</li><li>Adicione “Importar SMS do banco”. Toque no campo “Mensagem” → “Selecionar Variável” → “Entrada do Atalho”.</li><li>Desative “Mostrar ao Executar” e salve a automação.</li></ol>
+<p>A ação se chama “Importar SMS do banco”, mas lê e-mails do mesmo jeito. Se o campo “Mensagem” ficar vazio, a ação não tem o que ler: ele precisa mostrar a variável.</p>
+
+<h2 id="check">Teste antes</h2>
+<p>Copie o texto de um aviso do seu e-mail. No TrackExpenses, abra “Mais” → “Lançamento automático de SMS” e cole no cartão “Teste uma mensagem do seu banco”. Você vê na hora o que a automação faria: valor, estabelecimento, conta, ou por que ela pularia o e-mail. Nada é salvo.</p>
+<p>Depois do próximo aviso de verdade, a mesma tela mostra em “Atividade recente” o que foi lançado, o que foi ignorado e por quê. Se nada aparecer ali, o problema está no gatilho: a palavra do assunto, ou o Mail ainda não baixou o e-mail.</p>
+
+<h2 id="limits">Bom saber</h2>
+<ul><li>Se o e-mail não traz o valor, só algo como “Você tem uma nova mensagem no internet banking”, não há o que lançar.</li><li>Um e-mail vira um lançamento. Um resumo diário com várias compras não é dividido, e faturas em PDF não são lidas.</li><li>Os e-mails são lidos com as mesmas regras dos SMS: códigos, compras negadas e propagandas ficam de fora, uma compra em outra moeda espera sua cotação e possíveis duplicados ficam marcados.</li><li>Se o banco também manda as mesmas compras por SMS, use um caminho só, senão cada compra chega duas vezes.</li><li>As importações por e-mail contam no mesmo limite das de SMS: 10 importações bem-sucedidas por mês grátis em cada aparelho, ilimitadas com o Pro.</li></ul>
+
+<h2 id="privacy">Privacidade</h2>
+<p>O Atalhos passa só os e-mails que combinam com o seu filtro, e só o conteúdo deles. O TrackExpenses lê o texto no seu iPhone e guarda o lançamento que encontrou, nunca o e-mail. O app não entra no seu e-mail nem no seu banco.</p>
+
+<h2 id="faq">Perguntas frequentes</h2>
+<details><summary>O TrackExpenses consegue ler o app do Gmail direto?</summary><p>Não. O gatilho “E-mail” do Atalhos só vê o que chega ao app Mail, da Apple. Por isso você adiciona sua conta do Gmail também ao Mail.</p></details>
+<details><summary>Por que o assunto e não o remetente?</summary><p>Como no SMS, o que vale é como o banco escreve, não quem manda. Os bancos mandam avisos de vários endereços, mas o assunto se mantém.</p></details>
+<details><summary>Por que um lançamento chegou atrasado?</summary><p>O Mail verifica o Gmail de tempos em tempos. Ajuste “Obter Novos Dados” para a cada 15 minutos ou abra o Mail.</p></details>
+<details><summary>Funciona com os e-mails do Nubank?</summary><p>Ainda não testamos um e-mail real de aviso do Nubank, então não prometemos. Teste um no cartão “Teste uma mensagem do seu banco” antes de criar a automação. Enquanto isso, cole o aviso do Nubank no TrackExpenses.</p></details>
+
+<h2 id="more">Saiba mais</h2>
+<p><a href="bank-sms.html">Lance os avisos do banco: os três caminhos e a configuração de SMS com telas</a></p>
+<p><a href="index.html">TrackExpenses em português: todos os recursos</a></p>
+<p>Em inglês: <a href="../guides/bank-email-alerts-iphone.html" hreflang="en" lang="en">Import bank email alerts on iPhone</a></p>
+<p class="byline">Feito por <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · Atualizado em novembro de 2026 · <a href="../support.html" hreflang="en">Sugerir uma correção</a></p>

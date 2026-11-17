@@ -1,0 +1,47 @@
+<h1>Lance os avisos do banco no iPhone</h1>
+<p class="lead">Um aviso do banco ou do Pix vira lançamento no TrackExpenses de três jeitos: colando o aviso, que funciona com qualquer banco; com uma automação de e-mail, se o banco avisa por e-mail; e com uma automação de Mensagens, se ele manda SMS. Este guia mostra qual serve para você e configura a de SMS passo a passo, com telas do Atalhos em português.</p>
+<nav class="toc" aria-label="Conteúdo do guia"><ul><li><a href="#how">Primeiro: como seu banco avisa?</a></li><li><a href="#paste">Colar um aviso</a></li><li><a href="#need">O que você precisa para a automação</a></li><li><a href="#word">Escolha a palavra do filtro</a></li><li><a href="#steps">A configuração passo a passo</a></li><li><a href="#after">O que acontece depois</a></li><li><a href="#missed">Se um aviso não foi lançado</a></li><li><a href="#privacy">Privacidade</a></li><li><a href="#faq">Perguntas frequentes</a></li></ul></nav>
+
+<h2 id="how">Primeiro: como seu banco avisa?</h2>
+<p>Nenhuma automação do iPhone consegue ler a notificação de outro app, e é assim que muitos bancos brasileiros avisam. Olhe seus últimos avisos. Seu banco avisa…</p>
+<ul><li><strong>Por notificação do app</strong> (Nubank, C6, Inter, PicPay, Mercado Pago): <a href="#paste">cole o aviso</a>.</li><li><strong>Por SMS</strong> (Itaú no serviço de aviso por SMS, Bradesco, Banco do Brasil): use a <a href="#steps">automação deste guia</a>.</li><li><strong>Por e-mail a cada compra</strong>: use a <a href="bank-email.html">automação de e-mail</a>.</li></ul>
+<p>Se você paga com Apple Pay, o Atalhos também tem o gatilho “Carteira”: ele roda a cada compra, e a ação “Importar transação da Carteira” lança a compra. Os passos estão no app, em “Mais” → “Lançamento automático de SMS” → “Importar também compras com Apple Pay”. Se o banco também manda SMS dessas compras, use um caminho só por cartão, senão cada compra chega duas vezes.</p>
+
+<h2 id="paste">Colar um aviso</h2>
+<p>Copie o texto do aviso: do SMS, do e-mail ou do comprovante no app do banco. Abra um novo gasto no TrackExpenses e toque em “Colar”. Valor, estabelecimento, data e cartão vêm preenchidos, e você confere antes de salvar. Se o final do cartão no aviso for o mesmo de uma das suas contas, o lançamento vai para essa conta, e a categoria vem do que você já lançou naquele estabelecimento.</p>
+<p>É assim que o aviso do Nubank entra: colando. Ao colar, o app também lê o que uma automação deixa passar sem lançar, como um estorno ou uma compra cancelada, porque você vê o resultado antes de salvar.</p>
+
+<h2 id="need">O que você precisa para a automação</h2>
+<ul><li>Um iPhone com iOS 17 ou posterior e o app Atalhos, da Apple.</li><li>O TrackExpenses no mesmo iPhone.</li><li>Um banco que mande SMS a cada lançamento.</li></ul>
+<p>As telas deste guia são do iOS 27. No iOS 26 e anteriores, as telas são diferentes e alguns passos mudam; os passos para a sua versão estão no app, em “Mais” → “Lançamento automático de SMS”.</p>
+
+<h2 id="word">Escolha a palavra do filtro</h2>
+<p>A automação só roda com mensagens que contêm o texto que você escolher. Use <strong>R$</strong>: todo aviso de banco brasileiro escreve o valor com R$, seja compra, Pix, saque ou salário, e quase nenhuma mensagem pessoal tem esse símbolo. Não escolha um remetente: os bancos trocam de número de vez em quando, e um filtro por remetente pararia de funcionar sem avisar.</p>
+
+<h2 id="steps">A configuração passo a passo</h2>
+<p>São 18 passos, feitos uma vez só, em poucos minutos.</p>
+{{PT_STEPS}}
+
+<h2 id="after">O que acontece depois</h2>
+<p>Quando chega um SMS que combina, o TrackExpenses lê valor, estabelecimento, data e cartão. O lançamento vai para a conta do cartão com o mesmo final e ganha a categoria que o app aprendeu com seus lançamentos anteriores. O que vale conferir aparece num cartão no topo da lista do dia.</p>
+<ul><li>Códigos de verificação, compras negadas, perguntas como “Você reconhece esta compra?”, cobranças Pix e promoções não são lançados.</li><li>Estornos e compras canceladas também não entram sozinhos: cole o aviso para conferir.</li><li>Salário e Pix recebido entram como receita e ficam marcados para revisar. Para desligar, use a chave “Importar dinheiro que entra”.</li><li>Uma compra em outra moeda sem cotação salva espera você definir a cotação, para não entrar nos totais com um valor errado.</li><li>O iOS mostra o próprio aviso toda vez que a automação roda. É uma regra da Apple que nenhum app consegue tirar.</li></ul>
+<p>10 importações bem-sucedidas por mês são grátis em cada aparelho. O que chega depois fica guardado fora dos seus totais e não se perde: o Pro acrescenta tudo; senão, o limite grátis do mês seguinte libera o que couber.</p>
+
+<h2 id="missed">Se um aviso não foi lançado</h2>
+<ul><li>Abra “Mais” → “Lançamento automático de SMS” e cole a mensagem no cartão “Teste uma mensagem do seu banco”. Você vê na hora se ela foi lida e, se não foi, por quê.</li><li>Confira se a automação está ativada e se “Confirmar Antes de Executar” está desativado.</li><li>Confira se a variável da ação é a “Mensagem” do gatilho e se mostra “Conteúdo” (passos 10 a 15).</li><li>Confira se a palavra do filtro está escrita igual aos avisos do banco.</li></ul>
+<p>Um aviso que não entrou sempre pode ser copiado e colado num novo gasto.</p>
+
+<h2 id="privacy">Privacidade</h2>
+<p>O TrackExpenses não lê suas mensagens: o iOS não permite isso a nenhum app. A automação que você configurou passa só o texto da mensagem que combina, e esse texto é lido no seu iPhone. Nos seus lançamentos fica o que foi lido (valor, estabelecimento, data), não o texto do SMS. Não há conexão com o banco nem conta no app.</p>
+
+<h2 id="faq">Perguntas frequentes</h2>
+<details><summary>O app lê todas as minhas mensagens?</summary><p>Não. Ele só recebe as mensagens que contêm o texto que você escolheu na automação. Você cria a automação e pode desligar ou apagar no Atalhos quando quiser.</p></details>
+<details><summary>O app entende os avisos dos bancos brasileiros?</summary><p>Ele lê compra aprovada, Pix enviado e recebido, saque e débito automático, com valores escritos como R$ 1.234,56. Não dá para garantir para todo banco, então teste antes um aviso seu no cartão “Teste uma mensagem do seu banco”.</p></details>
+<details><summary>Quantos avisos o app lança de graça?</summary><p>10 importações bem-sucedidas por mês em cada aparelho. O que passar disso fica guardado e não é apagado: o Pro acrescenta tudo; senão, o limite grátis do mês seguinte libera o que couber.</p></details>
+
+<h2 id="more">Saiba mais</h2>
+<p><a href="bank-email.html">Lance os avisos que chegam por e-mail</a></p>
+<p><a href="index.html">TrackExpenses em português: todos os recursos</a></p>
+<p>Em inglês:</p>
+<ul><li><a href="../guides/sms-setup.html" hreflang="en" lang="en">SMS Auto-Import Setup: iOS 27 and 26</a></li><li><a href="../guides/sms-automation-not-working.html" hreflang="en" lang="en">Fix Bank SMS Automation on iPhone</a></li><li><a href="../guides/apple-pay-expenses.html" hreflang="en" lang="en">Track Apple Pay Purchases on iPhone</a></li></ul>
+<p class="byline">Feito por <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · Atualizado em novembro de 2026 · <a href="../support.html" hreflang="en">Sugerir uma correção</a></p>

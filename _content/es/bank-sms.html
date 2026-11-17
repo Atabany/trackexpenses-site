@@ -1,0 +1,47 @@
+<h1>Registra los avisos de tu banco en tu iPhone</h1>
+<p class="lead">Hay tres maneras de que un aviso de tu banco se vuelva un movimiento en TrackExpenses: pegarlo, que funciona con cualquier banco; una automatización de correo, si tu banco te avisa por correo; y una automatización de Mensajes, si te manda SMS. Esta guía explica cuál te conviene y configura la de SMS paso a paso, con imágenes de Atajos en español.</p>
+<nav class="toc" aria-label="Contenido de la guía"><ul><li><a href="#how">Primero: ¿cómo te avisa tu banco?</a></li><li><a href="#paste">Pegar un aviso</a></li><li><a href="#need">Lo que necesitas para la automatización</a></li><li><a href="#word">Elige la palabra del filtro</a></li><li><a href="#steps">La configuración paso a paso</a></li><li><a href="#after">Qué pasa después</a></li><li><a href="#missed">Si un aviso no se registró</a></li><li><a href="#privacy">Privacidad</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ul></nav>
+
+<h2 id="how">Primero: ¿cómo te avisa tu banco?</h2>
+<p>Ninguna automatización del iPhone puede leer las notificaciones de otra app, y en México y casi toda Latinoamérica es así como avisan la mayoría de los bancos. Fíjate en tus últimos avisos. Tu banco te avisa…</p>
+<ul><li><strong>Con una notificación de su app</strong> (Nu, Mercado Pago, Nequi, Yape, Plin, Ualá): <a href="#paste">pega el aviso</a>.</li><li><strong>Con un correo por cada compra</strong> (la mayoría de los bancos de Chile, BCP, Interbank, Galicia): usa la <a href="bank-email.html">automatización de correo</a>.</li><li><strong>Con un SMS</strong> (Bancolombia, Banco de Occidente, BBVA México, Banorte, Santander Río): usa la <a href="#steps">automatización de esta guía</a>.</li></ul>
+<p>Si pagas con Apple Pay, Atajos también tiene el activador “Wallet”: se ejecuta con cada compra y la acción “Importar movimiento de Wallet” la registra. Los pasos están en la app, en “Más” → “Registro automático de SMS” → “Importar también compras con Apple Pay”. Si tu banco también te manda un SMS por esas compras, usa un solo camino por tarjeta, o cada compra llegará dos veces.</p>
+
+<h2 id="paste">Pegar un aviso</h2>
+<p>Copia el texto del aviso: del SMS, del correo o del detalle del movimiento en la app de tu banco. Abre un gasto nuevo en TrackExpenses y toca “Pegar”. El monto, el comercio, la fecha y la tarjeta se llenan solos, y tú revisas antes de guardar. Si la tarjeta del aviso termina igual que una de tus cuentas, el movimiento va a esa cuenta, y la categoría sale de lo que registraste antes en ese comercio.</p>
+<p>Al pegar, la app también lee lo que una automatización deja pasar sin registrar, como una devolución o una compra cancelada, porque tú estás viendo el resultado antes de guardar.</p>
+
+<h2 id="need">Lo que necesitas para la automatización</h2>
+<ul><li>Un iPhone con iOS 17 o posterior y la app Atajos de Apple.</li><li>TrackExpenses en el mismo iPhone.</li><li>Un banco que te mande un SMS por cada movimiento.</li></ul>
+<p>Las imágenes de esta guía son de iOS 27. En iOS 26 y versiones anteriores las pantallas se ven distintas y algunos pasos cambian; los pasos para tu versión están en la app, en “Más” → “Registro automático de SMS”.</p>
+
+<h2 id="word">Elige la palabra del filtro</h2>
+<p>La automatización solo se ejecuta con los mensajes que contienen el texto que tú eliges. Usa la marca que tu banco escribe junto a cada monto: <strong>$</strong> en México, Colombia, Argentina y Chile, y <strong>S/</strong> en Perú. Aparece en compras, retiros y depósitos, y casi nunca en tus mensajes personales. No elijas un remitente: los bancos cambian de número corto de vez en cuando, y un filtro por remitente dejaría de funcionar sin avisarte.</p>
+
+<h2 id="steps">La configuración paso a paso</h2>
+<p>Estos 18 pasos se hacen una sola vez, en unos minutos.</p>
+{{ES_STEPS}}
+
+<h2 id="after">Qué pasa después</h2>
+<p>Cuando llega un SMS que coincide, TrackExpenses lee el monto, el comercio, la fecha y la tarjeta. El movimiento va a la cuenta que tiene la tarjeta con esos últimos dígitos y toma la categoría de lo que la app aprendió de tus movimientos anteriores. Lo que conviene revisar aparece en una tarjeta arriba de la lista del día.</p>
+<ul><li>Los códigos de verificación, las compras rechazadas, las preguntas como “¿Reconoces esta compra?”, las solicitudes de dinero y las promociones no se registran.</li><li>Las devoluciones y las compras canceladas tampoco se registran solas: pégalas para revisarlas tú.</li><li>El sueldo y otros depósitos se registran como ingreso y quedan marcados para revisar. Lo apagas con el interruptor “Importar el dinero que entra”.</li><li>Una compra en otra moneda sin tipo de cambio guardado espera a que lo pongas, para que no entre a tus totales con un tipo equivocado.</li><li>iOS muestra su propio aviso cada vez que se ejecuta la automatización. Es una regla de Apple que ninguna app puede quitar.</li></ul>
+<p>10 importaciones exitosas al mes son gratis en cada dispositivo. Lo que llega después se guarda fuera de tus totales y no se pierde: Pro lo agrega todo; si no, el límite gratis del mes siguiente libera lo que alcance.</p>
+
+<h2 id="missed">Si un aviso no se registró</h2>
+<ul><li>Abre “Más” → “Registro automático de SMS” y pega el mensaje en la tarjeta “Prueba con un SMS de tu banco”. Verás al momento si se pudo leer y, si no, por qué.</li><li>Revisa que la automatización esté activada y que “Confirmar antes de ejecutar” esté desactivado.</li><li>Revisa que la variable de la acción sea el “Mensaje” del activador y que diga “Contenido” (pasos 10 a 15).</li><li>Revisa que la palabra del filtro esté escrita igual que en los avisos de tu banco.</li></ul>
+<p>Un aviso que no se registró siempre puedes copiarlo y pegarlo en un gasto nuevo.</p>
+
+<h2 id="privacy">Privacidad</h2>
+<p>TrackExpenses no lee tus mensajes: iOS no se lo permite a ninguna app. La automatización que configuraste le pasa solo el texto del mensaje que coincide, y ese texto se lee en tu iPhone. En tus movimientos se guarda lo que se leyó (monto, comercio, fecha), no el texto del SMS. No hay conexión con tu banco ni cuenta en la app.</p>
+
+<h2 id="faq">Preguntas frecuentes</h2>
+<details><summary>¿La app lee todos mis mensajes?</summary><p>No. Solo recibe los mensajes que contienen el texto que elegiste en la automatización. Tú la creas y puedes apagarla o eliminarla en Atajos cuando quieras.</p></details>
+<details><summary>¿Entiende los avisos de bancos de mi país?</summary><p>Lee avisos de bancos y billeteras de México, Colombia, Argentina, Chile y Perú, con los montos como los escribe cada banco. No se puede garantizar para todos los bancos, así que prueba primero un aviso tuyo en la tarjeta “Prueba con un SMS de tu banco”.</p></details>
+<details><summary>¿Cuántos avisos registra gratis?</summary><p>10 importaciones exitosas al mes en cada dispositivo. Los que pasan del límite se guardan y no se borran: Pro los agrega todos; si no, el límite gratis del mes siguiente libera los que alcance.</p></details>
+
+<h2 id="more">Más información</h2>
+<p><a href="bank-email.html">Registra los avisos que llegan por correo</a></p>
+<p><a href="index.html">TrackExpenses en español: todas las funciones</a></p>
+<p>En inglés:</p>
+<ul><li><a href="../guides/sms-setup.html" hreflang="en" lang="en">SMS Auto-Import Setup: iOS 27 and 26</a></li><li><a href="../guides/sms-automation-not-working.html" hreflang="en" lang="en">Fix Bank SMS Automation on iPhone</a></li><li><a href="../guides/apple-pay-expenses.html" hreflang="en" lang="en">Track Apple Pay Purchases on iPhone</a></li></ul>
+<p class="byline">Hecho por <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · Actualizado en noviembre de 2026 · <a href="../support.html" hreflang="en">Sugerir una corrección</a></p>

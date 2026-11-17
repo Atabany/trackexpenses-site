@@ -20,7 +20,7 @@ iCloud Mail, Outlook and most other accounts work the same way.
 
 ## Step 2: create the Email automation
 
-The editor changed in iOS 27, so follow the steps for the version on your iPhone.
+The editor changed in iOS 27. The app shows the steps for your version too: More → SMS Auto-Import → Bank alerts by email?
 
 On iOS 27, open Shortcuts, go back to Library, choose Automation and tap +. If Describe a Shortcut opens, tap Editor. Tap Automation in the actions panel, then Email under Communication. The trigger reads "When I receive an email where Sender is Email Address". Tap Sender and choose Subject, then enter your filter word. Expand the trigger with its blue arrow: keep Automation on and Confirm Before Run off.
 

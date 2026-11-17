@@ -1,0 +1,92 @@
+[
+ {
+  "image": "01-library",
+  "title": "Comece na Biblioteca",
+  "detail": "Abra o app Atalhos. Volte para “Biblioteca” e escolha “Automação”."
+ },
+ {
+  "image": "02-automation",
+  "title": "Crie um novo atalho",
+  "detail": "Toque no + embaixo. No iOS 27, as automações ficam dentro dos atalhos."
+ },
+ {
+  "image": "04-editor",
+  "title": "Abra o editor",
+  "detail": "Se abrir “Descrever um Atalho”, toque em “Editor” ou “Editar”. Depois toque em “Automação” no painel de ações."
+ },
+ {
+  "image": "05-triggers",
+  "title": "Escolha “Mensagem”",
+  "detail": "Em “Comunicação”, toque em “Mensagem” para adicionar o gatilho de mensagem recebida."
+ },
+ {
+  "image": "06-sender",
+  "title": "Mude o campo do filtro",
+  "detail": "Toque no primeiro campo azul “Remetente”. Ele escolhe qual parte da mensagem vai ser comparada."
+ },
+ {
+  "image": "07-field-menu",
+  "title": "Filtre pelo texto da mensagem",
+  "detail": "Escolha “Mensagem” no menu. A condição fica “Mensagem contém Texto”."
+ },
+ {
+  "image": "08-filter",
+  "title": "Use as palavras do seu banco",
+  "detail": "Toque em “Texto” e digite algo que aparece em todo SMS do seu banco, como o símbolo “R$”. Depois toque na seta azul do gatilho."
+ },
+ {
+  "image": "09-run-settings",
+  "title": "Deixe rodar sozinho",
+  "detail": "Deixe “Automação” ativada e “Confirmar Antes de Executar” desativado. Eles substituem a antiga tela “Executar Imediatamente”."
+ },
+ {
+  "image": "10-search-action",
+  "title": "Encontre a ação de importar",
+  "detail": "Toque em “Buscar”, digite “Importar SMS do banco” e escolha a ação do TrackExpenses."
+ },
+ {
+  "image": "11-import-action",
+  "title": "Conecte o texto recebido",
+  "detail": "Toque no marcador azul “Mensagem” dentro de “Importar lançamento de Mensagem”."
+ },
+ {
+  "image": "12-select-variable",
+  "title": "Abra “Selecionar Variável”",
+  "detail": "Toque em “Selecionar Variável” na barra de baixo. Não digite uma mensagem nem use “Sempre Perguntar”."
+ },
+ {
+  "image": "13-message-output",
+  "title": "Escolha a “Mensagem” do gatilho",
+  "detail": "Toque em “Mensagem” logo abaixo do gatilho. No iOS 27, essa é a saída da mensagem recebida."
+ },
+ {
+  "image": "14-connected",
+  "title": "Use o corpo da mensagem",
+  "detail": "Feche a barra de baixo com ×. Toque na variável “Mensagem” inserida para ver as propriedades dela."
+ },
+ {
+  "image": "20-message-content",
+  "title": "Escolha “Conteúdo”",
+  "detail": "Na lista “Obter” da variável, escolha “Conteúdo”. Toque em “Retorno” e feche a barra de variáveis com ×."
+ },
+ {
+  "image": "23-final",
+  "title": "Importe em silêncio",
+  "detail": "Abra a seta azul da ação de importar e desative “Mostrar ao Executar”. A variável conectada deve dizer “Conteúdo”."
+ },
+ {
+  "image": "16-details",
+  "title": "Confira a privacidade do atalho",
+  "detail": "Toque no botão ⓘ na barra do editor e abra “Privacidade”."
+ },
+ {
+  "image": "17-privacy",
+  "title": "Permita com o iPhone bloqueado",
+  "detail": "Deixe “Permitir Execução Quando Bloqueado” ativado. Volte para “Detalhes”, toque em “OK” e depois volte para salvar o atalho."
+ },
+ {
+  "image": "19-saved",
+  "title": "Pronto para o próximo SMS do banco",
+  "detail": "Confirme que a automação está ativada. Confira o próximo SMS que combinar no TrackExpenses → “Mais” → “Lançamento automático de SMS”."
+ }
+]

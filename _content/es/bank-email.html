@@ -1,0 +1,44 @@
+<h1>Registra los avisos de tu banco que llegan por correo</h1>
+<p class="lead">Si tu banco te manda un correo por cada compra o transferencia, una automatización en Atajos puede pasarle cada uno a TrackExpenses, igual que un SMS. El único paso extra: tu cuenta de correo tiene que estar en la app Mail de Apple, porque Atajos solo ve los correos que llegan ahí, no los de la app de Gmail ni los de Outlook.</p>
+<nav class="toc" aria-label="Contenido de la guía"><ul><li><a href="#need">Lo que necesitas</a></li><li><a href="#mail">Agrega tu cuenta a Mail</a></li><li><a href="#word">Elige la palabra del asunto</a></li><li><a href="#steps">Crea la automatización</a></li><li><a href="#check">Pruébalo antes</a></li><li><a href="#limits">Bueno saberlo</a></li><li><a href="#privacy">Privacidad</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ul></nav>
+
+<h2 id="need">Lo que necesitas</h2>
+<ul><li>Un iPhone con iOS 17 o posterior y la app Atajos de Apple.</li><li>TrackExpenses en el mismo iPhone.</li><li>Un banco que te mande un correo con el monto por cada movimiento. En Chile lo hacen casi todos; en Perú, el BCP e Interbank mandan su constancia por correo; en Argentina, Galicia avisa sus compras por correo.</li></ul>
+<p>Puedes seguir leyendo tu correo donde quieras: Mail solo necesita recibir una copia. Si te molestan dos notificaciones por correo, apaga las de Mail en “Configuración” → “Notificaciones” → “Mail”; la automatización se sigue ejecutando.</p>
+
+<h2 id="mail">Agrega tu cuenta a Mail</h2>
+<p>En “Configuración” → “Apps” → “Mail” → “Cuentas de correo”, toca “Agregar cuenta” e inicia sesión (Google para Gmail, Outlook.com para Hotmail y Outlook). En iOS 17, el camino es “Configuración” → “Mail” → “Cuentas”.</p>
+<p>Mail revisa Gmail cada cierto tiempo, no en el momento en que llega el correo. En la misma pantalla, configura “Obtener datos” cada 15 minutos, el intervalo más corto. Así, un movimiento puede aparecer unos minutos después del correo; si abres Mail, revisa al momento.</p>
+
+<h2 id="word">Elige la palabra del asunto</h2>
+<p>La automatización solo se ejecuta con los correos cuyo asunto contiene una palabra que tú eliges. Atajos no puede filtrar por el texto del correo, solo por remitente y asunto. Igual que con los SMS, no elijas un remitente: los bancos mandan sus avisos desde varias direcciones. Mira tres o cuatro avisos de tu banco y elige una palabra que esté en todos los asuntos y no en sus correos de promociones, como “compra”, “cargo”, “transferencia” o “constancia”. Sin ningún filtro, Atajos no deja crear la automatización.</p>
+
+<h2 id="steps">Crea la automatización</h2>
+<p>Los pasos cambian según la versión de iOS. La app también te los muestra para tu versión, en “Más” → “Registro automático de SMS” → “¿Avisos del banco por correo?”.</p>
+<h3>iOS 27</h3>
+{{EMAIL_STEPS}}
+<h3>iOS 26 y anteriores</h3>
+<ol><li>En Atajos, toca “Automatización”, luego + y elige “Correo electrónico”.</li><li>Toca “El asunto contiene” y escribe tu palabra. Elige “Ejecutar de inmediato”, luego “Siguiente” y “Crear nuevo atajo” (en iOS 18 y anteriores, “Nueva automatización en blanco”).</li><li>Agrega “Importar SMS del banco”. Toca su campo “Mensaje” → “Seleccionar variable” → “Entrada de atajo”.</li><li>Desactiva “Mostrar al ejecutar” y guarda la automatización.</li></ol>
+<p>La acción se llama “Importar SMS del banco”, pero lee los correos igual. Si el campo “Mensaje” se queda vacío, la acción no tiene nada que leer: tiene que mostrar la variable.</p>
+
+<h2 id="check">Pruébalo antes</h2>
+<p>Copia el texto de un aviso de tu correo. En TrackExpenses, abre “Más” → “Registro automático de SMS” y pégalo en la tarjeta “Prueba con un SMS de tu banco”. Verás al momento qué haría la automatización con él: el monto, el comercio, la cuenta, o por qué lo saltaría. No se guarda nada.</p>
+<p>Después del siguiente aviso real, la misma pantalla muestra en “Actividad reciente” qué se registró, qué se saltó y por qué. Si ahí no aparece nada, el problema está en el activador: la palabra del asunto, o Mail todavía no ha descargado el correo.</p>
+
+<h2 id="limits">Bueno saberlo</h2>
+<ul><li>Si el correo no trae el monto, solo algo como “Tienes un nuevo movimiento, entra a tu banca en línea”, no hay nada que registrar.</li><li>Un correo es un movimiento. Un resumen diario con varios movimientos no se divide, y los estados de cuenta en PDF no se leen.</li><li>Muchos correos traen una tabla con varios montos, como “Monto” y “Comisión”: la etiqueta decide cuál es el pago.</li><li>Los correos se leen con las mismas reglas que los SMS: los códigos, las compras rechazadas y las promociones no se registran, una compra en otra moneda espera tu tipo de cambio y los posibles duplicados quedan marcados.</li><li>Si tu banco también te manda las mismas compras por SMS, usa un solo camino, o cada compra llegará dos veces.</li><li>Las importaciones por correo cuentan en el mismo límite que las de SMS: 10 importaciones exitosas al mes gratis en cada dispositivo, ilimitadas con Pro.</li></ul>
+
+<h2 id="privacy">Privacidad</h2>
+<p>Atajos solo le pasa los correos que coinciden con tu filtro, y solo su contenido. TrackExpenses lee el texto en tu iPhone y guarda el movimiento que encontró, nunca el correo. La app no inicia sesión en tu correo ni en tu banco.</p>
+
+<h2 id="faq">Preguntas frecuentes</h2>
+<details><summary>¿TrackExpenses puede leer la app de Gmail directamente?</summary><p>No. El activador “Correo electrónico” de Atajos solo ve lo que llega a la app Mail de Apple. Por eso agregas tu cuenta de Gmail también a Mail.</p></details>
+<details><summary>¿Por qué el asunto y no el remitente?</summary><p>Igual que con los SMS, importa cómo escribe el banco, no quién manda el correo. Los bancos mandan sus avisos desde varias direcciones, pero el asunto se mantiene.</p></details>
+<details><summary>¿Por qué un movimiento llegó tarde?</summary><p>Mail revisa Gmail cada cierto tiempo. Configura “Obtener datos” cada 15 minutos o abre Mail.</p></details>
+<details><summary>¿Funciona con los correos de Nu o de Mercado Pago?</summary><p>Todavía no hemos probado un correo real de aviso de Nu ni de Mercado Pago, así que no lo prometemos. Prueba uno en la tarjeta “Prueba con un SMS de tu banco” antes de crear la automatización; si no se lee, pega sus avisos.</p></details>
+
+<h2 id="more">Más información</h2>
+<p><a href="bank-sms.html">Registra los avisos de tu banco: los tres caminos y la configuración de SMS con imágenes</a></p>
+<p><a href="index.html">TrackExpenses en español: todas las funciones</a></p>
+<p>En inglés: <a href="../guides/bank-email-alerts-iphone.html" hreflang="en" lang="en">Import bank email alerts on iPhone</a></p>
+<p class="byline">Hecho por <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · Actualizado en noviembre de 2026 · <a href="../support.html" hreflang="en">Sugerir una corrección</a></p>

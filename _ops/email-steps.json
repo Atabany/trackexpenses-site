@@ -94,5 +94,69 @@
    "افتح الإجراء بسهمه، وأطفئ «إظهار عند التشغيل»، ثم احفظ الاختصار.",
    "06-show-when-run"
   ]
+ ],
+ "es": [
+  [
+   "Elige “Correo electrónico”",
+   "En Atajos, ve a “Biblioteca” → “Automatización” → +, toca “Automatización” y elige “Correo electrónico” en “Comunicación”.",
+   "01-trigger"
+  ],
+  [
+   "Filtra por el asunto",
+   "Toca “Remitente”, cámbialo a “Asunto” y escribe tu palabra. Deja “Automatización” activada y “Confirmar antes de ejecutar” desactivado.",
+   "02-subject"
+  ],
+  [
+   "Agrega la acción para importar",
+   "Busca “Importar SMS del banco” y agrégala. Su campo “Mensaje” todavía está vacío.",
+   "03-action"
+  ],
+  [
+   "Elige el correo",
+   "Toca “Mensaje”, luego “Seleccionar variable”, y toca “Correo” justo debajo del activador.",
+   "04-variable"
+  ],
+  [
+   "Usa el contenido del correo",
+   "Toca la variable “Correo” que acabas de insertar y elige “Contenido”.",
+   "05-content"
+  ],
+  [
+   "Desactiva “Mostrar al ejecutar”",
+   "Abre la acción con su flecha, desactiva “Mostrar al ejecutar” y guarda.",
+   "06-show-when-run"
+  ]
+ ],
+ "pt": [
+  [
+   "Escolha “E-mail”",
+   "No app Atalhos, vá em “Biblioteca” → “Automação” → +, toque em “Automação” e escolha “E-mail” em “Comunicação”.",
+   "01-trigger"
+  ],
+  [
+   "Filtre pelo assunto",
+   "Toque em “Remetente”, troque por “Assunto” e digite a sua palavra. Deixe “Automação” ativada e “Confirmar Antes de Executar” desativado.",
+   "02-subject"
+  ],
+  [
+   "Adicione a ação de importar",
+   "Busque “Importar SMS do banco” e adicione a ação. O campo “Mensagem” ainda está vazio.",
+   "03-action"
+  ],
+  [
+   "Escolha o e-mail",
+   "Toque em “Mensagem”, depois em “Selecionar Variável”, e toque em “E-mail” logo abaixo do gatilho.",
+   "04-variable"
+  ],
+  [
+   "Use o conteúdo do e-mail",
+   "Toque na variável “E-mail” que você acabou de inserir e escolha “Conteúdo”.",
+   "05-content"
+  ],
+  [
+   "Desative “Mostrar ao Executar”",
+   "Abra a ação pela seta, desative “Mostrar ao Executar” e salve.",
+   "06-show-when-run"
+  ]
  ]
 }

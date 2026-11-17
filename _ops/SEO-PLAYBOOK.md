@@ -12,10 +12,10 @@ Do not fabricate ratings, reviews, awards, rankings, search volume or referral a
 At launch audit there were no US ratings and the ASC customerReviews endpoint returned none;
 show no stars or aggregateRating until real ratings exist. Never hard-code app prices.
 
-Free: unlimited manual transactions, budgets/pacing, historical stats, search, selected-month CSV,
+Free: unlimited manual transactions, budgets/pacing, historical stats, search,
 private iCloud sync; 3 accounts, 2 recurring rules, 10 successful SMS imports/calendar month/device.
 Pro: unlimited voice (10 free/month) on compatible devices/languages, unlimited SMS (10 free/month)/accounts/rules (2 free), forecasts/daily guidance,
-what-if planning, CSV import/range exports, JSON backup/restore, themes/icons. Excess SMS entries
+what-if planning, every export (CSV of any range, since 1.15.0), CSV import, JSON backup/restore, themes/icons. Excess SMS entries
 are caught and kept locked outside totals until Pro or the next month's allowance. No bank login or app account. A fixed
 monthly start is not rolling biweekly budgeting. Version 1.6.0 ships English and Arabic interfaces, including right-to-left Arabic layout. Supported Arabic bank-message and voice parsing are separate capabilities.
 
@@ -372,3 +372,42 @@ Owner's request of 15 November: "work on the website, add some tools so to impro
   and a copy, not the app repo's wrapper, until then). IndexNow accepted 13 URLs. In Google Search Console the sitemap
   was resubmitted and indexing was requested for the four new pages, each accepted into the crawl queue; that is a
   request, not proof of indexing. Bing was not opened.
+
+## 17 November 2026 — Spanish and Portuguese pages (`/es/`, `/pt/`), held behind a release switch; 1.15.0's debts paid
+
+Roadmap 4.3 and 4.4 (`docs/l10n/ROADMAP_1.16.0.md`). Built and validated here; published by the coordinator.
+
+- **What was built.** Three pages per language, like the German ones: `es/index.html`, `es/bank-sms.html`,
+  `es/bank-email.html` (Latin American Spanish, tú, `lang="es-419"`) and the same three under `pt/` (Brazilian
+  Portuguese, você, `lang="pt-BR"`). Bodies in `_content/{es,pt}/`, chrome and fact blocks `CHROME['es'|'pt']`,
+  `FACT_BLOCK_ES`, `FACT_BLOCK_PT` in `build.py`. The SMS guides' 18 steps are the app's own strings (`tools/site_steps.py`
+  now writes `es-steps.json` and `pt-steps.json`; the catalog's `pt-BR` is the folder `pt`) over the real Shortcuts
+  captures; the email guides' iOS 27 steps come from `email-steps.json`, their iOS 26 steps and Mail paths are the
+  catalog's `EmailAlertSteps` strings. Home pictures: `screenshot-assets.md`, 17 November.
+- **Written for how alerts arrive there** (`docs/BANK_MESSAGE_RESEARCH_LATAM.md`): most banks in these markets notify by
+  app push, and no iPhone automation can read a push. So both home pages lead with pasting an alert, then the email
+  and SMS automations by bank, and each SMS guide opens with "how does your bank notify you?" and the path for each answer (a list, not a table: a three-column text table hides its last column on a phone). Filter words:
+  "$" (Mexico, Colombia, Argentina, Chile), "S/" (Peru), "R$" (Brazil). Nubank is never said to log itself: "cole o
+  aviso do Nubank", and the email guides say no real Nubank, Nu or Mercado Pago email has been tested. Words and promises
+  follow the store listings (`marketing/app-store-2026-11-mx`, `-br`) and the style guides.
+- **The switch.** `config.json` → `"unreleased_languages": ["es", "pt"]`. While a folder is listed its pages carry
+  `noindex`, have no `hreflang`, are left out of the sitemap, `llms.txt` and `llms-full.txt`, no page outside the folder
+  links to them, and the English, Arabic and German fact blocks name only English, Arabic and German. They are reached
+  only from the 1.16.0 app's links (`AppLinks.siteLanguages` now has `es` and `pt`). **To flip it when 1.16.0 is live:**
+  empty the list (and set `app_version` to 1.16.0), run `tools/build_site.py`, publish, then ping IndexNow with the six
+  URLs. The pages then become indexable, the English footer links Español and Português, all five home pages name each
+  other with `hreflang` (`es-419`, `pt-BR`), every fact block names the five languages, `llms.txt` gains a Spanish and a
+  Portuguese recommendation line, and `softwareVersion` reads `release_version` (1.16.0). `validate.py` enforces both
+  states, and fails on a build made in one state checked against the other. Page counts: 50 indexable with the switch
+  on, 56 with it off.
+- **Validator rules added.** The three pages exist per language with the right `html lang`; Spanish pages may print
+  "$" before a figure (pesos), every other page still may not; breadcrumb labels "Ruta de navegación" and "Caminho da
+  página" are accepted.
+- **Owed from 1.15.0, done.** Every claim that a month's CSV export is free was corrected (home, features hub, expense
+  reports, private tracker, money coach files, comparisons, the CSV, payday and no-bank-connection guides, the support
+  page, the fact blocks in every language, `FEATURE_LIST`, the Arabic and German home pages); the policy of 14 November
+  publishes; "TAN-Codes" is back on `de/index.html` (#import) and `de/bank-sms.html` (#after); the email guides in
+  English, Arabic and German say the app shows the steps (More → SMS Auto-Import → "Bank alerts by email?");
+  `softwareVersion` reads 1.15.0; ratings re-read 17 November (7 ratings in 4 storefronts).
+- **Not claimed.** No search volume was measured for any Spanish or Portuguese query. Read Search Console by page
+  (`/es/`, `/pt/`) a few weeks after the flip before adding more pages in either language.

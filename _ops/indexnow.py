@@ -7,6 +7,9 @@ base=json.loads((root/'_ops/config.json').read_text())['base_url'].rstrip('/')+'
 key=json.loads((root/'_ops/indexnow.json').read_text())['key']
 urls=sys.argv[1:]
 if not urls or any(not u.startswith(base) for u in urls): sys.exit('Provide URLs under '+base)
+# Pages of a language not yet released (config.json unreleased_languages) are noindex and must not be submitted.
+held=json.loads((root/'_ops/config.json').read_text()).get('unreleased_languages',[])
+if any(u.removeprefix(base).split('/')[0] in held for u in urls): sys.exit('Refusing: '+', '.join(held)+' pages are unreleased (config.json unreleased_languages)')
 payload={'host':urllib.parse.urlsplit(base).hostname,'key':key,'keyLocation':base+key+'.txt','urlList':urls}
 req=urllib.request.Request('https://api.indexnow.org/indexnow',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'},method='POST')
 with urllib.request.urlopen(req,context=ssl.create_default_context(cafile='/etc/ssl/cert.pem'),timeout=40) as r:

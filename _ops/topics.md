@@ -5,7 +5,7 @@ product fit and market (UAE, Saudi, India and other SMS-alert markets); no measu
 volume is claimed. Reorder only on evidence (Search Console queries, support email, reviews).
 
 Published 5 October 2026: bank SMS on iPhone, payday budget month, voice expense entry,
-SMS automation troubleshooting, monthly CSV export, Apple Pay automation.
+SMS automation troubleshooting, CSV export, Apple Pay automation.
 Published 6 October 2026: credit card payment vs expense, cash expenses, Arabic bank SMS,
 subscriptions and recurring bills; eight feature pages and the features hub.
 

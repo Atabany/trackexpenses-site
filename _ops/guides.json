@@ -14,7 +14,7 @@
   "description": "Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.",
   "status": "published",
   "published": "2026-10-05",
-  "updated": "2026-11-15",
+  "updated": "2026-11-17",
   "feature": "budget-planner"
  },
  {
@@ -38,10 +38,10 @@
  {
   "slug": "export-expenses-csv",
   "title": "Export iPhone Expenses to CSV | TrackExpenses",
-  "description": "Export your selected month for free. Check dates and currencies in Numbers, and understand CSV versus a full TrackExpenses backup.",
+  "description": "Export a month or any span to CSV with Pro, check dates and currencies in Numbers, and understand CSV versus a full TrackExpenses backup.",
   "status": "published",
   "published": "2026-10-05",
-  "updated": "2026-10-05",
+  "updated": "2026-11-17",
   "feature": "expense-reports"
  },
  {
@@ -104,7 +104,7 @@
   "description": "Choose manual, voice or supported SMS entry, set up a bank-free ledger and reconcile spending without sharing a bank login.",
   "status": "published",
   "published": "2026-10-18",
-  "updated": "2026-10-18",
+  "updated": "2026-11-17",
   "feature": "private-expense-tracker"
  },
  {
@@ -140,7 +140,7 @@
   "description": "Turn bank email alerts from Gmail or any account into expenses on iPhone: add the account to Mail, then a Shortcuts Email automation passes each one on.",
   "status": "published",
   "published": "2026-11-15",
-  "updated": "2026-11-15",
+  "updated": "2026-11-17",
   "feature": "sms-expense-tracker"
  }
 ]

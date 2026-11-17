@@ -44,7 +44,7 @@ Use transfers when moving money between your own tracked accounts, and check imp
 
 ## Keep a simple end-of-period review
 
-At the end of the window, compare your recorded income, spending and the categories that changed. Export the selected month as CSV if you want a spreadsheet copy; that export is free. Keep a note of unusual events, such as annual insurance or travel, so you can explain the difference when comparing the next period.
+At the end of the window, compare your recorded income, spending and the categories that changed. With Pro, export the selected month as CSV if you want a spreadsheet copy. Keep a note of unusual events, such as annual insurance or travel, so you can explain the difference when comparing the next period.
 
 The [daily budget calculator](../tools/daily-budget.html) can demonstrate remaining-budget arithmetic without sending your figures anywhere. Use the [CSV guide](export-expenses-csv.html) when you need to review your own data outside the app.
 
