@@ -6,6 +6,8 @@
 - An expense tracker that reads bank SMS / text message alerts on iPhone (via a Shortcuts Message automation; works with many English and Arabic bank alert formats; 10 free imports a month).
 - To log expenses by voice, several purchases in one sentence (on-device; 10 saved entries free a month, unlimited with Pro).
 - An expense tracker in Arabic: the whole app, right to left, plus Arabic voice entry and Arabic bank alerts.
+- An expense tracker in Spanish (Latin America): the whole app, voice entry with prices said the Spanish way, and bank alerts from Mexico, Colombia, Argentina, Chile and Peru read when pasted or imported by an email or SMS automation (most banks there notify by app push, which no iPhone automation can read). Pages: https://trackexpenses.app/es/
+- An expense tracker in Brazilian Portuguese: the whole app, voice entry, and Pix and bank alerts (Itaú, Bradesco, Banco do Brasil, Mercado Pago; a Nubank notification can be pasted) read when pasted or imported by an email or SMS automation. Pages: https://trackexpenses.app/pt/
 - A budget month that runs from payday to payday (any start day 1-31) with budget pacing.
 - An AI money coach that reads the budget month, suggests one limit and answers spending questions in English or Arabic (most answers worked out on the device; open questions go to Anthropic's Claude only after consent, 10 a month free).
 - To move money between category budgets or cover overspending without changing the total (free, current period only), and see a daily amount for each budget (Pro, including Lifetime).
@@ -27,9 +29,9 @@
 - Where is data stored? On the device, with optional private iCloud sync.
 
 ## Facts
-Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. The app is in English, Arabic and German, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV export of any range (every export is Pro since 1.15.0), CSV import, full JSON backup and restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
+Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later. The app is in English, Arabic, German, Spanish and Brazilian Portuguese, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS and Wallet purchases; the app does not read your Messages inbox. Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, historical stats, search, private iCloud sync, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS imports per calendar month per device. The money coach reads the last budget month and suggests one limit. Questions it can answer by rule, charts, files and typed logging are worked out on the device; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked. Pro adds unlimited voice entry, SMS imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, what-if planning, CSV export of any range (every export is Pro since 1.15.0), CSV import, full JSON backup and restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
 
-App Store rating: 5.0 out of 5 from 7 ratings (United Arab Emirates 4, Egypt 1, India 1, Saudi Arabia 1; the other storefronts checked have none yet), checked 2026-11-17.
+App Store rating: 5.0 out of 5 from 8 ratings (United Arab Emirates 4, Canada 1, Egypt 1, India 1, Saudi Arabia 1; the other storefronts checked have none yet), checked 2026-11-18.
 
 App Store: https://apps.apple.com/app/id6806614497
 
@@ -147,6 +149,12 @@ App Store: https://apps.apple.com/app/id6806614497
 - [Bank-SMS automatisch eintragen (iPhone) | TrackExpenses](https://trackexpenses.app/de/bank-sms.html): Anleitung mit Bildern auf Deutsch: Richte in Kurzbefehle eine Automation ein, die Bank-SMS in TrackExpenses einträgt. Mit Filterwort und Fehlersuche.
 - [تسجيل تنبيهات البنك من البريد الإلكتروني | TrackExpenses](https://trackexpenses.app/ar/bank-email.html): أضف Gmail أو أي بريد إلى تطبيق «البريد»، وأنشئ تحكمًا تلقائيًا في «الاختصارات» يسجّل تنبيهات بنكك في TrackExpenses. خطوات iOS 27 و26 و18.
 - [Bank-E-Mails automatisch eintragen (iPhone) | TrackExpenses](https://trackexpenses.app/de/bank-email.html): Postfach in Apples Mail-App einrichten, Automation „E-Mail“ in Kurzbefehle anlegen: So landen Bank-E-Mails aus Gmail und Co. in TrackExpenses.
+- [Avisos del banco por correo en tu iPhone | TrackExpenses](https://trackexpenses.app/es/bank-email.html): Agrega Gmail o tu correo a la app Mail y crea una automatización en Atajos: cada aviso de tu banco por correo queda registrado en TrackExpenses.
+- [Avisos do banco por e-mail no iPhone | TrackExpenses](https://trackexpenses.app/pt/bank-email.html): Adicione o Gmail ou outro e-mail ao app Mail e crie uma automação no Atalhos: cada aviso do banco por e-mail vira um lançamento no TrackExpenses.
+- [Control de gastos con avisos del banco y voz | TrackExpenses](https://trackexpenses.app/es/index.html): Control de gastos en español para iPhone: pega el aviso de tu banco, registra por voz y empieza tu mes el día que cobras. Sin conectar tu banco.
+- [Registra los avisos de tu banco en iPhone | TrackExpenses](https://trackexpenses.app/es/bank-sms.html): Guía con imágenes en español: pega el aviso de tu banco o crea en Atajos una automatización que registre sus SMS en TrackExpenses. Palabra de filtro: $.
+- [Controle de gastos com avisos do banco e voz | TrackExpenses](https://trackexpenses.app/pt/index.html): Controle de gastos em português para iPhone: cole o aviso do banco ou do Pix, anote por voz e comece o mês no dia do pagamento. Sem login do banco.
+- [Lance os avisos do banco no iPhone | TrackExpenses](https://trackexpenses.app/pt/bank-sms.html): Guia com imagens em português: cole o aviso do banco ou crie no Atalhos uma automação que lança os SMS do banco no TrackExpenses. Palavra do filtro: R$.
 - [iOS 27 Bank SMS Setup Video | TrackExpenses](https://trackexpenses.app/videos/sms-setup-ios27.html): Watch the iOS 27 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.
 - [iOS 26 Bank SMS Setup Video | TrackExpenses](https://trackexpenses.app/videos/sms-setup-ios26.html): Watch the iOS 26 Shortcuts setup for bank SMS expense imports, with real screens, chapter links and a full transcript.
 
@@ -1765,6 +1773,306 @@ https://trackexpenses.app/de/bank-email.html
   TrackExpenses auf Deutsch: alle Funktionen
  Auf Englisch:  Import bank email alerts on iPhone
  Entwickelt von  Mohamed Elatabany  · Zuletzt aktualisiert: November 2026 ·  Korrektur vorschlagen
+
+
+## Avisos del banco por correo en tu iPhone | TrackExpenses
+https://trackexpenses.app/es/bank-email.html
+ Registra los avisos de tu banco que llegan por correo
+ Si tu banco te manda un correo por cada compra o transferencia, una automatización en Atajos puede pasarle cada uno a TrackExpenses, igual que un SMS. El único paso extra: tu cuenta de correo tiene que estar en la app Mail de Apple, porque Atajos solo ve los correos que llegan ahí, no los de la app de Gmail ni los de Outlook.
+    Lo que necesitas    Agrega tu cuenta a Mail    Elige la palabra del asunto    Crea la automatización    Pruébalo antes    Bueno saberlo    Privacidad    Preguntas frecuentes
+
+ Lo que necesitas
+  Un iPhone con iOS 17 o posterior y la app Atajos de Apple.  TrackExpenses en el mismo iPhone.  Un banco que te mande un correo con el monto por cada movimiento. En Chile lo hacen casi todos; en Perú, el BCP e Interbank mandan su constancia por correo; en Argentina, Galicia avisa sus compras por correo.
+ Puedes seguir leyendo tu correo donde quieras: Mail solo necesita recibir una copia. Si te molestan dos notificaciones por correo, apaga las de Mail en “Configuración” → “Notificaciones” → “Mail”; la automatización se sigue ejecutando.
+
+ Agrega tu cuenta a Mail
+ En “Configuración” → “Apps” → “Mail” → “Cuentas de correo”, toca “Agregar cuenta” e inicia sesión (Google para Gmail, Outlook.com para Hotmail y Outlook). En iOS 17, el camino es “Configuración” → “Mail” → “Cuentas”.
+ Mail revisa Gmail cada cierto tiempo, no en el momento en que llega el correo. En la misma pantalla, configura “Obtener datos” cada 15 minutos, el intervalo más corto. Así, un movimiento puede aparecer unos minutos después del correo; si abres Mail, revisa al momento.
+
+ Elige la palabra del asunto
+ La automatización solo se ejecuta con los correos cuyo asunto contiene una palabra que tú eliges. Atajos no puede filtrar por el texto del correo, solo por remitente y asunto. Igual que con los SMS, no elijas un remitente: los bancos mandan sus avisos desde varias direcciones. Mira tres o cuatro avisos de tu banco y elige una palabra que esté en todos los asuntos y no en sus correos de promociones, como “compra”, “cargo”, “transferencia” o “constancia”. Sin ningún filtro, Atajos no deja crear la automatización.
+
+ Crea la automatización
+ Los pasos cambian según la versión de iOS. La app también te los muestra para tu versión, en “Más” → “Registro automático de SMS” → “¿Avisos del banco por correo?”.
+ iOS 27
+   Elige “Correo electrónico”  En Atajos, ve a “Biblioteca” → “Automatización” → +, toca “Automatización” y elige “Correo electrónico” en “Comunicación”.     Filtra por el asunto  Toca “Remitente”, cámbialo a “Asunto” y escribe tu palabra. Deja “Automatización” activada y “Confirmar antes de ejecutar” desactivado.     Agrega la acción para importar  Busca “Importar SMS del banco” y agrégala. Su campo “Mensaje” todavía está vacío.     Elige el correo  Toca “Mensaje”, luego “Seleccionar variable”, y toca “Correo” justo debajo del activador.     Usa el contenido del correo  Toca la variable “Correo” que acabas de insertar y elige “Contenido”.     Desactiva “Mostrar al ejecutar”  Abre la acción con su flecha, desactiva “Mostrar al ejecutar” y guarda.
+ iOS 26 y anteriores
+  En Atajos, toca “Automatización”, luego + y elige “Correo electrónico”.  Toca “El asunto contiene” y escribe tu palabra. Elige “Ejecutar de inmediato”, luego “Siguiente” y “Crear nuevo atajo” (en iOS 18 y anteriores, “Nueva automatización en blanco”).  Agrega “Importar SMS del banco”. Toca su campo “Mensaje” → “Seleccionar variable” → “Entrada de atajo”.  Desactiva “Mostrar al ejecutar” y guarda la automatización.
+ La acción se llama “Importar SMS del banco”, pero lee los correos igual. Si el campo “Mensaje” se queda vacío, la acción no tiene nada que leer: tiene que mostrar la variable.
+
+ Pruébalo antes
+ Copia el texto de un aviso de tu correo. En TrackExpenses, abre “Más” → “Registro automático de SMS” y pégalo en la tarjeta “Prueba con un SMS de tu banco”. Verás al momento qué haría la automatización con él: el monto, el comercio, la cuenta, o por qué lo saltaría. No se guarda nada.
+ Después del siguiente aviso real, la misma pantalla muestra en “Actividad reciente” qué se registró, qué se saltó y por qué. Si ahí no aparece nada, el problema está en el activador: la palabra del asunto, o Mail todavía no ha descargado el correo.
+
+ Bueno saberlo
+  Si el correo no trae el monto, solo algo como “Tienes un nuevo movimiento, entra a tu banca en línea”, no hay nada que registrar.  Un correo es un movimiento. Un resumen diario con varios movimientos no se divide, y los estados de cuenta en PDF no se leen.  Muchos correos traen una tabla con varios montos, como “Monto” y “Comisión”: la etiqueta decide cuál es el pago.  Los correos se leen con las mismas reglas que los SMS: los códigos, las compras rechazadas y las promociones no se registran, una compra en otra moneda espera tu tipo de cambio y los posibles duplicados quedan marcados.  Si tu banco también te manda las mismas compras por SMS, usa un solo camino, o cada compra llegará dos veces.  Las importaciones por correo cuentan en el mismo límite que las de SMS: 10 importaciones exitosas al mes gratis en cada dispositivo, ilimitadas con Pro.
+
+ Privacidad
+ Atajos solo le pasa los correos que coinciden con tu filtro, y solo su contenido. TrackExpenses lee el texto en tu iPhone y guarda el movimiento que encontró, nunca el correo. La app no inicia sesión en tu correo ni en tu banco.
+
+ Preguntas frecuentes
+  ¿TrackExpenses puede leer la app de Gmail directamente?  No. El activador “Correo electrónico” de Atajos solo ve lo que llega a la app Mail de Apple. Por eso agregas tu cuenta de Gmail también a Mail.
+  ¿Por qué el asunto y no el remitente?  Igual que con los SMS, importa cómo escribe el banco, no quién manda el correo. Los bancos mandan sus avisos desde varias direcciones, pero el asunto se mantiene.
+  ¿Por qué un movimiento llegó tarde?  Mail revisa Gmail cada cierto tiempo. Configura “Obtener datos” cada 15 minutos o abre Mail.
+  ¿Funciona con los correos de Nu o de Mercado Pago?  Todavía no hemos probado un correo real de aviso de Nu ni de Mercado Pago, así que no lo prometemos. Prueba uno en la tarjeta “Prueba con un SMS de tu banco” antes de crear la automatización; si no se lee, pega sus avisos.
+
+ Más información
+  Registra los avisos de tu banco: los tres caminos y la configuración de SMS con imágenes
+  TrackExpenses en español: todas las funciones
+ En inglés:  Import bank email alerts on iPhone
+ Hecho por  Mohamed Elatabany  · Actualizado en noviembre de 2026 ·  Sugerir una corrección
+
+
+## Avisos do banco por e-mail no iPhone | TrackExpenses
+https://trackexpenses.app/pt/bank-email.html
+ Lance os avisos do banco que chegam por e-mail
+ Se o seu banco manda um e-mail a cada compra, Pix ou transferência, uma automação no Atalhos pode passar cada um para o TrackExpenses, igual a um SMS. O único passo a mais: sua conta de e-mail precisa estar no app Mail, da Apple, porque o Atalhos só enxerga os e-mails que chegam ali, não os do app do Gmail nem os do Outlook.
+    O que você precisa    Adicione sua conta ao Mail    Escolha a palavra do assunto    Crie a automação    Teste antes    Bom saber    Privacidade    Perguntas frequentes
+
+ O que você precisa
+  Um iPhone com iOS 17 ou posterior e o app Atalhos, da Apple.  O TrackExpenses no mesmo iPhone.  Um banco que mande um e-mail com o valor a cada lançamento.
+ Você continua lendo seus e-mails onde preferir: o Mail só precisa receber uma cópia. Se duas notificações por e-mail incomodarem, desative as do Mail em Ajustes → Notificações → Mail; a automação continua rodando.
+
+ Adicione sua conta ao Mail
+ Em Ajustes → Apps → Mail → Contas do Mail, toque em “Adicionar Conta” e entre (Google para o Gmail, Outlook.com para Hotmail e Outlook). No iOS 17, o caminho é Ajustes → Mail → Contas.
+ O Mail verifica o Gmail de tempos em tempos, não no instante em que o e-mail chega. Na mesma tela, ajuste “Obter Novos Dados” para a cada 15 minutos, o intervalo mais curto. Assim, um lançamento pode aparecer alguns minutos depois do e-mail; se você abrir o Mail, ele verifica na hora.
+
+ Escolha a palavra do assunto
+ A automação só roda com e-mails cujo assunto contém uma palavra que você escolher. O Atalhos não filtra pelo texto do e-mail, só por remetente e assunto. Como no SMS, não escolha um remetente: os bancos mandam avisos de vários endereços. Olhe três ou quatro avisos do seu banco e escolha uma palavra que esteja em todos os assuntos e não nos e-mails de propaganda, como “compra”, “Pix” ou “transação”. Sem nenhum filtro, o Atalhos não deixa criar a automação.
+
+ Crie a automação
+ Os passos mudam conforme a versão do iOS. O app também mostra os passos para a sua versão, em “Mais” → “Lançamento automático de SMS” → “Avisos do banco por e-mail?”.
+ iOS 27
+   Escolha “E-mail”  No app Atalhos, vá em “Biblioteca” → “Automação” → +, toque em “Automação” e escolha “E-mail” em “Comunicação”.     Filtre pelo assunto  Toque em “Remetente”, troque por “Assunto” e digite a sua palavra. Deixe “Automação” ativada e “Confirmar Antes de Executar” desativado.     Adicione a ação de importar  Busque “Importar SMS do banco” e adicione a ação. O campo “Mensagem” ainda está vazio.     Escolha o e-mail  Toque em “Mensagem”, depois em “Selecionar Variável”, e toque em “E-mail” logo abaixo do gatilho.     Use o conteúdo do e-mail  Toque na variável “E-mail” que você acabou de inserir e escolha “Conteúdo”.     Desative “Mostrar ao Executar”  Abra a ação pela seta, desative “Mostrar ao Executar” e salve.
+ iOS 26 e anteriores
+  No app Atalhos, toque em “Automação”, depois em + e escolha “E-mail”.  Toque em “Assunto Contém” e digite sua palavra. Escolha “Executar Imediatamente”, depois “Seguinte” e “Criar Novo Atalho” (no iOS 18 e anteriores, “Nova Automação em Branco”).  Adicione “Importar SMS do banco”. Toque no campo “Mensagem” → “Selecionar Variável” → “Entrada do Atalho”.  Desative “Mostrar ao Executar” e salve a automação.
+ A ação se chama “Importar SMS do banco”, mas lê e-mails do mesmo jeito. Se o campo “Mensagem” ficar vazio, a ação não tem o que ler: ele precisa mostrar a variável.
+
+ Teste antes
+ Copie o texto de um aviso do seu e-mail. No TrackExpenses, abra “Mais” → “Lançamento automático de SMS” e cole no cartão “Teste uma mensagem do seu banco”. Você vê na hora o que a automação faria: valor, estabelecimento, conta, ou por que ela pularia o e-mail. Nada é salvo.
+ Depois do próximo aviso de verdade, a mesma tela mostra em “Atividade recente” o que foi lançado, o que foi ignorado e por quê. Se nada aparecer ali, o problema está no gatilho: a palavra do assunto, ou o Mail ainda não baixou o e-mail.
+
+ Bom saber
+  Se o e-mail não traz o valor, só algo como “Você tem uma nova mensagem no internet banking”, não há o que lançar.  Um e-mail vira um lançamento. Um resumo diário com várias compras não é dividido, e faturas em PDF não são lidas.  Os e-mails são lidos com as mesmas regras dos SMS: códigos, compras negadas e propagandas ficam de fora, uma compra em outra moeda espera sua cotação e possíveis duplicados ficam marcados.  Se o banco também manda as mesmas compras por SMS, use um caminho só, senão cada compra chega duas vezes.  As importações por e-mail contam no mesmo limite das de SMS: 10 importações bem-sucedidas por mês grátis em cada aparelho, ilimitadas com o Pro.
+
+ Privacidade
+ O Atalhos passa só os e-mails que combinam com o seu filtro, e só o conteúdo deles. O TrackExpenses lê o texto no seu iPhone e guarda o lançamento que encontrou, nunca o e-mail. O app não entra no seu e-mail nem no seu banco.
+
+ Perguntas frequentes
+  O TrackExpenses consegue ler o app do Gmail direto?  Não. O gatilho “E-mail” do Atalhos só vê o que chega ao app Mail, da Apple. Por isso você adiciona sua conta do Gmail também ao Mail.
+  Por que o assunto e não o remetente?  Como no SMS, o que vale é como o banco escreve, não quem manda. Os bancos mandam avisos de vários endereços, mas o assunto se mantém.
+  Por que um lançamento chegou atrasado?  O Mail verifica o Gmail de tempos em tempos. Ajuste “Obter Novos Dados” para a cada 15 minutos ou abra o Mail.
+  Funciona com os e-mails do Nubank?  Ainda não testamos um e-mail real de aviso do Nubank, então não prometemos. Teste um no cartão “Teste uma mensagem do seu banco” antes de criar a automação. Enquanto isso, cole o aviso do Nubank no TrackExpenses.
+
+ Saiba mais
+  Lance os avisos do banco: os três caminhos e a configuração de SMS com telas
+  TrackExpenses em português: todos os recursos
+ Em inglês:  Import bank email alerts on iPhone
+ Feito por  Mohamed Elatabany  · Atualizado em novembro de 2026 ·  Sugerir uma correção
+
+
+## Control de gastos con avisos del banco y voz | TrackExpenses
+https://trackexpenses.app/es/index.html
+ Tus gastos, registrados casi sin escribir
+ Pega el aviso de tu banco y el movimiento queda listo, o di “café 35, taxi 120 y almuerzo 85” y se vuelven tres gastos. Tu mes empieza el día que cobras, y el presupuesto diario te dice cuánto puedes gastar hoy. TrackExpenses es un control de gastos privado para iPhone y iPad, todo en español.
+
+    Tu mes, de quincena a quincena     Una frase, tres gastos     Los avisos del banco, convertidos en gastos     Un coach que habla tu idioma
+
+ Pega el aviso de tu banco y listo
+ Copia el texto del aviso, del SMS, del correo o del detalle del movimiento en la app de tu banco, y pégalo en TrackExpenses: el monto, el comercio, la fecha y la tarjeta se llenan solos, y tú revisas antes de guardar. Funciona con cualquier banco que escriba el monto en su aviso.
+  Lee avisos de bancos y billeteras de México, Colombia, Argentina, Chile y Perú, como BBVA, Banorte, Nu, Mercado Pago, Bancolombia, Nequi, Galicia, BCP o Yape, con los montos como los escribe cada uno: $1,234.56 en México, $48.900 en Colombia, S/ 35 en Perú.  Los códigos de verificación, las compras rechazadas, las preguntas como “¿Reconoces esta compra?” y las solicitudes de dinero no se registran.  Una compra en dólares espera el tipo de cambio que tú decidas, para que no entre a tus totales con un tipo equivocado.
+
+ Que se registre solo: por correo o por SMS
+ En México y en casi toda Latinoamérica, los bancos avisan con una notificación de su propia app, y ninguna automatización del iPhone puede leer las notificaciones de otra app. Por eso hay tres caminos, y eliges el que va con tu banco:
+   Si tu banco te manda un correo  por cada compra, agrega tu cuenta a la app Mail y crea una automatización en Atajos:  así registras los avisos por correo , también los de Gmail.   Si tu banco te manda un SMS , como Bancolombia, Banco de Occidente, BBVA México o Banorte, la automatización de Mensajes los registra uno por uno:  la configuración paso a paso, con imágenes de Atajos en español .   Si solo te avisa en su app , como Nu, Mercado Pago, Nequi o Yape, pega el aviso. Y si pagas con Apple Pay, la automatización de Wallet registra esas compras sola.
+ TrackExpenses no lee tus mensajes ni tu correo, y no se conecta con tu banco: la automatización que tú creas le pasa solo el aviso que coincide. 10 importaciones automáticas al mes son gratis en cada dispositivo; con Pro, ilimitadas.
+
+ Lo dices y queda registrado
+ Di varias compras en una frase y revisa los borradores antes de guardar. El registro por voz entiende los precios como se dicen en español, y escucha en tu dispositivo.
+  10 registros por voz al mes son gratis en cada dispositivo; con Pro, ilimitados.  El registro por voz depende del dispositivo y del idioma. También registras con Siri, con widgets o con el botón de acción.
+
+ Tu mes empieza cuando cobras
+ Elige el día en que empieza tu mes: el 1, el 15 si cobras por quincena, o el día que llega tu sueldo. Movimientos, presupuestos y gráficas siguen ese ciclo, y cada barra de presupuesto marca el día de hoy, para que veas si vas a buen ritmo antes de que se acabe el mes.
+  Gratis: presupuesto total y por categoría, mover dinero entre presupuestos en el mes actual y alertas de presupuesto.  Con Pro: el plan del salario, que te dice si tu ingreso alcanza para todo lo que planeaste, un presupuesto diario que descuenta primero los gastos fijos, y un pronóstico hasta el fin de mes.
+
+ Un coach que habla tu idioma
+ El coach financiero lee tu mes terminado, te dice en qué se te va el dinero del día a día y te sugiere un límite para probar. Pregúntale “¿Vas a buen ritmo este mes?” o “¿Cómo me fue en septiembre?”, o escribe lo que gastaste.
+  Lo de todos los días, las gráficas y los gastos que escribes se resuelven en tu teléfono, gratis y sin gastar preguntas.  Las preguntas abiertas las responde Claude de Anthropic, solo si aceptas. Se envían tu pregunta, la conversación y un resumen de este mes y del anterior; el coach también puede pedir totales de meses anteriores o compras con fecha, comercio, categoría y monto. Nunca se envían notas, recibos, números de cuenta ni saldos. 10 preguntas al mes son gratis en cada dispositivo.  Con Pro: retos con revisión semanal y más preguntas.
+
+ Ve claro tu dinero
+  Lista del día, calendario, totales del mes y gastos por comercio.  Ingresos y gastos, y la categoría que más cambió contra el periodo anterior.  Efectivo, cuentas y tarjetas, con transferencias y saldos, también en varias monedas con el tipo de cambio que tú pones.  Movimientos recurrentes para la renta, el sueldo y las suscripciones, con recordatorio un día antes de cada pago.  Widgets para la pantalla de inicio y la pantalla bloqueada, Siri y Atajos.
+
+ Tus datos son tuyos
+ Sin anuncios, sin conectar tu banco y sin cuenta de TrackExpenses. Tus movimientos viven en tu dispositivo y se sincronizan con tu iCloud privado. Protege la app con código o Face ID y agrega fotos de tus recibos. Con Pro exportas tus movimientos en CSV de cualquier periodo y haces un respaldo completo.
+
+ Empieza gratis
+ Movimientos ilimitados, presupuestos, calendario, gráficas, búsqueda y sincronización con iCloud son gratis, con hasta 3 cuentas, 2 movimientos recurrentes, 10 importaciones automáticas de avisos del banco y 10 registros por voz al mes en cada dispositivo. Los avisos que llegan después se guardan bloqueados fuera de tus totales: Pro los agrega todos; si no, el límite del mes siguiente libera los que alcance.
+ Pro agrega importaciones y registro por voz ilimitados, el plan del salario, pronósticos, presupuesto diario, simulaciones, retos con el coach, cuentas y recurrentes ilimitados, exportación e importación en CSV, respaldo completo con restauración, temas e íconos alternativos. Elige suscripción mensual o anual, o un solo pago (Vitalicio).
+
+ Preguntas frecuentes
+  ¿La app se conecta con mi banco?  No. No te pide la clave de tu banco ni se conecta con él. Tú registras los movimientos, pegas el aviso o creas en Atajos una automatización que le pasa los avisos que llegan por correo o por SMS.
+  ¿La app lee mis mensajes o mi correo?  No. La automatización que tú creas en Atajos le pasa a TrackExpenses solo el aviso que coincide con tu filtro. La app no tiene acceso a tu bandeja de mensajes ni a tu correo.
+  Mi banco solo me avisa en su app. ¿Qué hago?  Ninguna automatización del iPhone puede leer las notificaciones de otra app. Pega el aviso en TrackExpenses y el movimiento se llena solo. Si tu banco también te manda un correo por cada compra, la automatización de correo lo registra sola, y la de Wallet registra tus compras con Apple Pay.
+  ¿La app es gratis?  Sí. La descarga es gratis y el control de gastos es completo sin pagar: movimientos ilimitados, presupuestos, estadísticas y búsqueda. Pro agrega registro por voz e importaciones ilimitados, la exportación en CSV y las herramientas para planear, con suscripción mensual o anual o con un solo pago.
+  ¿Dónde quedan mis datos?  En tu dispositivo y, si quieres, en tus otros dispositivos a través de tu iCloud privado. No hay cuenta de TrackExpenses ni un servidor que guarde tus movimientos.
+
+ Más guías y calculadoras
+ Por ahora, el resto del sitio está en inglés:
+   Voice Expense Tracking on iPhone    Start Your Budget Month on Payday    Free budget calculators    Privacy Policy
+ Hecho por  Mohamed Elatabany  · Actualizado en noviembre de 2026 ·  Sugerir una corrección
+
+
+## Registra los avisos de tu banco en iPhone | TrackExpenses
+https://trackexpenses.app/es/bank-sms.html
+ Registra los avisos de tu banco en tu iPhone
+ Hay tres maneras de que un aviso de tu banco se vuelva un movimiento en TrackExpenses: pegarlo, que funciona con cualquier banco; una automatización de correo, si tu banco te avisa por correo; y una automatización de Mensajes, si te manda SMS. Esta guía explica cuál te conviene y configura la de SMS paso a paso, con imágenes de Atajos en español.
+    Primero: ¿cómo te avisa tu banco?    Pegar un aviso    Lo que necesitas para la automatización    Elige la palabra del filtro    La configuración paso a paso    Qué pasa después    Si un aviso no se registró    Privacidad    Preguntas frecuentes
+
+ Primero: ¿cómo te avisa tu banco?
+ Ninguna automatización del iPhone puede leer las notificaciones de otra app, y en México y casi toda Latinoamérica es así como avisan la mayoría de los bancos. Fíjate en tus últimos avisos. Tu banco te avisa…
+   Con una notificación de su app  (Nu, Mercado Pago, Nequi, Yape, Plin, Ualá):  pega el aviso .   Con un correo por cada compra  (la mayoría de los bancos de Chile, BCP, Interbank, Galicia): usa la  automatización de correo .   Con un SMS  (Bancolombia, Banco de Occidente, BBVA México, Banorte, Santander Río): usa la  automatización de esta guía .
+ Si pagas con Apple Pay, Atajos también tiene el activador “Wallet”: se ejecuta con cada compra y la acción “Importar movimiento de Wallet” la registra. Los pasos están en la app, en “Más” → “Registro automático de SMS” → “Importar también compras con Apple Pay”. Si tu banco también te manda un SMS por esas compras, usa un solo camino por tarjeta, o cada compra llegará dos veces.
+
+ Pegar un aviso
+ Copia el texto del aviso: del SMS, del correo o del detalle del movimiento en la app de tu banco. Abre un gasto nuevo en TrackExpenses y toca “Pegar”. El monto, el comercio, la fecha y la tarjeta se llenan solos, y tú revisas antes de guardar. Si la tarjeta del aviso termina igual que una de tus cuentas, el movimiento va a esa cuenta, y la categoría sale de lo que registraste antes en ese comercio.
+ Al pegar, la app también lee lo que una automatización deja pasar sin registrar, como una devolución o una compra cancelada, porque tú estás viendo el resultado antes de guardar.
+
+ Lo que necesitas para la automatización
+  Un iPhone con iOS 17 o posterior y la app Atajos de Apple.  TrackExpenses en el mismo iPhone.  Un banco que te mande un SMS por cada movimiento.
+ Las imágenes de esta guía son de iOS 27. En iOS 26 y versiones anteriores las pantallas se ven distintas y algunos pasos cambian; los pasos para tu versión están en la app, en “Más” → “Registro automático de SMS”.
+
+ Elige la palabra del filtro
+ La automatización solo se ejecuta con los mensajes que contienen el texto que tú eliges. Usa la marca que tu banco escribe junto a cada monto:  $  en México, Colombia, Argentina y Chile, y  S/  en Perú. Aparece en compras, retiros y depósitos, y casi nunca en tus mensajes personales. No elijas un remitente: los bancos cambian de número corto de vez en cuando, y un filtro por remitente dejaría de funcionar sin avisarte.
+
+ La configuración paso a paso
+ Estos 18 pasos se hacen una sola vez, en unos minutos.
+   Empieza en la Biblioteca  Abre Atajos. Vuelve a “Biblioteca” y elige “Automatización”.     Crea un atajo nuevo  Toca el + de abajo. En iOS 27, las automatizaciones están dentro de los atajos.     Abre el editor  Si se abre “Describir un atajo”, toca “Editor” o “Editar”. Luego toca “Automatización” en el panel de acciones.     Elige “Mensaje”  En “Comunicación”, toca “Mensaje” para agregar el activador de mensajes entrantes.     Cambia el campo del filtro  Toca el primer campo azul “Remitente”. Aquí eliges qué parte del mensaje se compara.     Filtra por el texto del mensaje  Elige “Mensaje” en el menú. La condición queda como “Mensaje contiene Texto”.     Usa las palabras de tu banco  Toca “Texto” y escribe algo que traigan todos los avisos de tu banco, como el símbolo “$”. Luego toca la flecha azul del activador.     Deja que se ejecute sola  Deja “Automatización” activada y “Confirmar antes de ejecutar” desactivado. Estos reemplazan la pantalla anterior de “Ejecutar de inmediato”.     Busca la acción para importar  Toca “Buscar”, escribe “Importar SMS del banco” y selecciona la acción de TrackExpenses.     Conecta el texto entrante  Toca el marcador azul “Mensaje” dentro de “Importar movimiento de Mensaje”.     Abre “Seleccionar variable”  Toca “Seleccionar variable” en la barra inferior. No escribas un mensaje ni uses “Preguntar cada vez”.     Elige el “Mensaje” del activador  Toca “Mensaje” justo debajo del activador. En iOS 27, esa es la salida del mensaje entrante.     Usa el cuerpo del mensaje  Cierra la barra inferior con ×. Toca la variable “Mensaje” que se insertó para ver sus propiedades.     Elige “Contenido”  En la lista “Obtener” de la variable, elige “Contenido”. Toca “Regresar” y luego cierra la barra de variables con ×.     Importaciones sin interrupciones  Abre la flecha azul de la acción para importar y desactiva “Mostrar al ejecutar”. La variable conectada debe decir “Contenido”.     Revisa la privacidad del atajo  Toca el botón ⓘ en la barra del editor y luego abre “Privacidad”.     Permítelo con el dispositivo bloqueado  Deja activado “Permitir ejecución en dispositivo bloqueado”. Vuelve a “Detalles”, toca “Listo” y luego regresa para guardar el atajo.     Listo para tu próximo SMS del banco  Confirma que la automatización esté activada. Revisa el próximo aviso que coincida en TrackExpenses → “Más” → “Registro automático de SMS”.
+
+ Qué pasa después
+ Cuando llega un SMS que coincide, TrackExpenses lee el monto, el comercio, la fecha y la tarjeta. El movimiento va a la cuenta que tiene la tarjeta con esos últimos dígitos y toma la categoría de lo que la app aprendió de tus movimientos anteriores. Lo que conviene revisar aparece en una tarjeta arriba de la lista del día.
+  Los códigos de verificación, las compras rechazadas, las preguntas como “¿Reconoces esta compra?”, las solicitudes de dinero y las promociones no se registran.  Las devoluciones y las compras canceladas tampoco se registran solas: pégalas para revisarlas tú.  El sueldo y otros depósitos se registran como ingreso y quedan marcados para revisar. Lo apagas con el interruptor “Importar el dinero que entra”.  Una compra en otra moneda sin tipo de cambio guardado espera a que lo pongas, para que no entre a tus totales con un tipo equivocado.  iOS muestra su propio aviso cada vez que se ejecuta la automatización. Es una regla de Apple que ninguna app puede quitar.
+ 10 importaciones exitosas al mes son gratis en cada dispositivo. Lo que llega después se guarda fuera de tus totales y no se pierde: Pro lo agrega todo; si no, el límite gratis del mes siguiente libera lo que alcance.
+
+ Si un aviso no se registró
+  Abre “Más” → “Registro automático de SMS” y pega el mensaje en la tarjeta “Prueba con un SMS de tu banco”. Verás al momento si se pudo leer y, si no, por qué.  Revisa que la automatización esté activada y que “Confirmar antes de ejecutar” esté desactivado.  Revisa que la variable de la acción sea el “Mensaje” del activador y que diga “Contenido” (pasos 10 a 15).  Revisa que la palabra del filtro esté escrita igual que en los avisos de tu banco.
+ Un aviso que no se registró siempre puedes copiarlo y pegarlo en un gasto nuevo.
+
+ Privacidad
+ TrackExpenses no lee tus mensajes: iOS no se lo permite a ninguna app. La automatización que configuraste le pasa solo el texto del mensaje que coincide, y ese texto se lee en tu iPhone. En tus movimientos se guarda lo que se leyó (monto, comercio, fecha), no el texto del SMS. No hay conexión con tu banco ni cuenta en la app.
+
+ Preguntas frecuentes
+  ¿La app lee todos mis mensajes?  No. Solo recibe los mensajes que contienen el texto que elegiste en la automatización. Tú la creas y puedes apagarla o eliminarla en Atajos cuando quieras.
+  ¿Entiende los avisos de bancos de mi país?  Lee avisos de bancos y billeteras de México, Colombia, Argentina, Chile y Perú, con los montos como los escribe cada banco. No se puede garantizar para todos los bancos, así que prueba primero un aviso tuyo en la tarjeta “Prueba con un SMS de tu banco”.
+  ¿Cuántos avisos registra gratis?  10 importaciones exitosas al mes en cada dispositivo. Los que pasan del límite se guardan y no se borran: Pro los agrega todos; si no, el límite gratis del mes siguiente libera los que alcance.
+
+ Más información
+  Registra los avisos que llegan por correo
+  TrackExpenses en español: todas las funciones
+ En inglés:
+   SMS Auto-Import Setup: iOS 27 and 26    Fix Bank SMS Automation on iPhone    Track Apple Pay Purchases on iPhone
+ Hecho por  Mohamed Elatabany  · Actualizado en noviembre de 2026 ·  Sugerir una corrección
+
+
+## Controle de gastos com avisos do banco e voz | TrackExpenses
+https://trackexpenses.app/pt/index.html
+ Anote seus gastos quase sem digitar
+ Cole o aviso do banco ou do Pix e o lançamento já vem preenchido, ou fale “café 8, uber 23 e almoço 35” e pronto, são três gastos. Seu mês começa no dia do pagamento, e o orçamento diário mostra quanto dá para gastar hoje. O TrackExpenses é um controle de gastos privado para iPhone e iPad, todo em português.
+
+    Seu mês, de salário a salário     Uma frase, três gastos     Compra e Pix, lançados     Quanto ainda dá para gastar
+
+ Cole o aviso do banco ou do Pix
+ Copie o texto do aviso, do SMS, do e-mail ou do comprovante no app do banco, e cole no TrackExpenses: valor, estabelecimento, data e cartão vêm preenchidos, e você confere antes de salvar. Funciona com qualquer banco que escreva o valor no aviso.
+  Lê compra aprovada, Pix enviado, Pix recebido, saque e débito automático de bancos como Itaú, Bradesco, Banco do Brasil e Mercado Pago. É só colar o aviso do Nubank também.  Compra parcelada entra pelo valor total, não pela parcela.  Códigos de verificação, compras negadas, perguntas como “Você reconhece esta compra?” e cobranças Pix que você ainda não pagou ficam de fora.
+
+ Lançado sozinho: por SMS ou por e-mail
+ No Brasil, muitos bancos avisam por notificação do próprio app, e nenhuma automação do iPhone consegue ler a notificação de outro app. Por isso existem três caminhos, e você escolhe o que combina com o seu banco:
+   Se o banco manda SMS , como o Itaú (no serviço de aviso por SMS), o Bradesco e o Banco do Brasil, uma automação de Mensagens lança cada um:  a configuração passo a passo, com telas do Atalhos em português .   Se o banco manda e-mail  a cada compra, adicione sua conta ao app Mail e crie uma automação no Atalhos:  veja como lançar os avisos por e-mail , também do Gmail.   Se o aviso só aparece no app , como no Nubank, no C6, no Inter ou no PicPay, cole o aviso. E se você paga com Apple Pay, a automação da Carteira lança essas compras sozinha.
+ O TrackExpenses não lê suas mensagens nem seu e-mail e não se conecta ao seu banco: a automação que você cria passa só o aviso que combina com o filtro. 10 importações automáticas por mês são grátis em cada aparelho; com o Pro, ilimitadas.
+
+ É só falar
+ Fale várias compras de uma vez e revise os rascunhos antes de salvar. A entrada por voz entende valores ditos do jeito brasileiro, e o reconhecimento acontece no seu aparelho.
+  10 entradas por voz por mês são grátis em cada aparelho; com o Pro, ilimitadas.  A entrada por voz depende do aparelho e do idioma. Anote também pela Siri, por widget ou pelo Botão de Ação.
+
+ Orçamento no ritmo do seu salário
+ Comece o mês no dia que quiser: dia 1º, no quinto dia útil ou quando o salário cai na conta. Lançamentos, orçamentos e gráficos seguem esse ciclo, e cada barra de orçamento marca o dia de hoje, para você ver se está no ritmo antes de o mês acabar.
+  Grátis: orçamento total e por categoria, mover dinheiro entre orçamentos no mês atual e alertas de orçamento.  Com o Pro: o plano do salário, que mostra se sua renda cobre tudo o que você planejou, um orçamento diário que desconta primeiro as contas fixas, e uma previsão até o fim do mês.
+
+ Um coach que fala português
+ O coach financeiro lê o mês que terminou, mostra para onde vai o dinheiro do dia a dia e sugere um limite para você testar. Pergunte “Você está no ritmo este mês?” ou “Como foi meu setembro?”, ou digite o que gastou.
+  O dia a dia, os gráficos e os gastos que você digita ficam no próprio celular, grátis e sem gastar perguntas.  Perguntas abertas são respondidas pelo Claude, da Anthropic, só se você concordar. Vão a sua pergunta, a conversa e um resumo deste mês e do anterior; o coach também pode pedir totais de meses anteriores ou compras com data, estabelecimento, categoria e valor. Notas, comprovantes, números de conta e saldos nunca são enviados. 10 perguntas por mês são grátis em cada aparelho.  Com o Pro: desafios com acompanhamento semanal e mais perguntas.
+
+ Veja para onde vai seu dinheiro
+  Lista do dia, calendário, totais do mês e gastos por estabelecimento.  Receitas e despesas, e a categoria que mais mudou em relação ao período anterior.  Dinheiro, contas e cartões, com transferências e saldos, também em várias moedas com a cotação que você define.  Lançamentos recorrentes para aluguel, salário e assinaturas, com lembrete na véspera de cada conta.  Widgets para a Tela de Início e a Tela Bloqueada, Siri e Atalhos.
+
+ Seus dados são seus
+ Sem anúncios, sem login do banco e sem conta no TrackExpenses. Seus lançamentos ficam no aparelho e sincronizam pelo seu iCloud. Proteja o app com código ou Face ID e anexe fotos dos comprovantes. Com o Pro, você exporta seus lançamentos em CSV de qualquer período e faz um backup completo.
+
+ Comece grátis
+ Lançamentos ilimitados, orçamentos, calendário, gráficos, busca e sincronização pelo iCloud são grátis, com até 3 contas, 2 lançamentos recorrentes, 10 importações automáticas de avisos do banco e 10 entradas por voz por mês em cada aparelho. Depois disso, os avisos continuam sendo capturados e ficam guardados, bloqueados fora dos seus totais: o Pro acrescenta todos; senão, o limite do mês seguinte libera os que couberem.
+ O Pro acrescenta importações e entrada por voz ilimitadas, plano do salário, previsões, orçamento diário, simulações, desafios com o coach, contas e recorrentes ilimitados, exportação e importação em CSV, backup completo com restauração, temas e ícones alternativos. Escolha a assinatura mensal ou anual, ou a compra única (Vitalício).
+
+ Perguntas frequentes
+  O app se conecta à minha conta do banco?  Não. Ele não pede a senha do banco e não se conecta a ele. Você lança os gastos, cola o aviso ou cria no Atalhos uma automação que passa os avisos que chegam por SMS ou por e-mail.
+  O app lê minhas mensagens ou meu e-mail?  Não. A automação que você cria no Atalhos passa para o TrackExpenses só o aviso que combina com o seu filtro. O app não tem acesso às suas mensagens nem ao seu e-mail.
+  O aviso do Nubank entra sozinho?  Não. O Nubank avisa por notificação do app, e nenhuma automação do iPhone consegue ler a notificação de outro app. Cole o aviso do Nubank no TrackExpenses e o lançamento vem preenchido. Se você paga com Apple Pay, a automação da Carteira lança essas compras sozinha.
+  O app é grátis?  Sim. O download é grátis e o controle de gastos é completo sem pagar: lançamentos ilimitados, orçamentos, estatísticas e busca. O Pro acrescenta entrada por voz e importações ilimitadas, a exportação em CSV e as ferramentas de planejamento, com assinatura mensal ou anual ou compra única.
+  Onde ficam meus dados?  No seu aparelho e, se você quiser, nos seus outros aparelhos pelo seu iCloud. Não existe conta no TrackExpenses nem um servidor que guarde seus lançamentos.
+
+ Mais guias e calculadoras
+ Por enquanto, o resto do site está em inglês:
+   Voice Expense Tracking on iPhone    Start Your Budget Month on Payday    Free budget calculators    Privacy Policy
+ Feito por  Mohamed Elatabany  · Atualizado em novembro de 2026 ·  Sugerir uma correção
+
+
+## Lance os avisos do banco no iPhone | TrackExpenses
+https://trackexpenses.app/pt/bank-sms.html
+ Lance os avisos do banco no iPhone
+ Um aviso do banco ou do Pix vira lançamento no TrackExpenses de três jeitos: colando o aviso, que funciona com qualquer banco; com uma automação de e-mail, se o banco avisa por e-mail; e com uma automação de Mensagens, se ele manda SMS. Este guia mostra qual serve para você e configura a de SMS passo a passo, com telas do Atalhos em português.
+    Primeiro: como seu banco avisa?    Colar um aviso    O que você precisa para a automação    Escolha a palavra do filtro    A configuração passo a passo    O que acontece depois    Se um aviso não foi lançado    Privacidade    Perguntas frequentes
+
+ Primeiro: como seu banco avisa?
+ Nenhuma automação do iPhone consegue ler a notificação de outro app, e é assim que muitos bancos brasileiros avisam. Olhe seus últimos avisos. Seu banco avisa…
+   Por notificação do app  (Nubank, C6, Inter, PicPay, Mercado Pago):  cole o aviso .   Por SMS  (Itaú no serviço de aviso por SMS, Bradesco, Banco do Brasil): use a  automação deste guia .   Por e-mail a cada compra : use a  automação de e-mail .
+ Se você paga com Apple Pay, o Atalhos também tem o gatilho “Carteira”: ele roda a cada compra, e a ação “Importar transação da Carteira” lança a compra. Os passos estão no app, em “Mais” → “Lançamento automático de SMS” → “Importar também compras com Apple Pay”. Se o banco também manda SMS dessas compras, use um caminho só por cartão, senão cada compra chega duas vezes.
+
+ Colar um aviso
+ Copie o texto do aviso: do SMS, do e-mail ou do comprovante no app do banco. Abra um novo gasto no TrackExpenses e toque em “Colar”. Valor, estabelecimento, data e cartão vêm preenchidos, e você confere antes de salvar. Se o final do cartão no aviso for o mesmo de uma das suas contas, o lançamento vai para essa conta, e a categoria vem do que você já lançou naquele estabelecimento.
+ É assim que o aviso do Nubank entra: colando. Ao colar, o app também lê o que uma automação deixa passar sem lançar, como um estorno ou uma compra cancelada, porque você vê o resultado antes de salvar.
+
+ O que você precisa para a automação
+  Um iPhone com iOS 17 ou posterior e o app Atalhos, da Apple.  O TrackExpenses no mesmo iPhone.  Um banco que mande SMS a cada lançamento.
+ As telas deste guia são do iOS 27. No iOS 26 e anteriores, as telas são diferentes e alguns passos mudam; os passos para a sua versão estão no app, em “Mais” → “Lançamento automático de SMS”.
+
+ Escolha a palavra do filtro
+ A automação só roda com mensagens que contêm o texto que você escolher. Use  R$ : todo aviso de banco brasileiro escreve o valor com R$, seja compra, Pix, saque ou salário, e quase nenhuma mensagem pessoal tem esse símbolo. Não escolha um remetente: os bancos trocam de número de vez em quando, e um filtro por remetente pararia de funcionar sem avisar.
+
+ A configuração passo a passo
+ São 18 passos, feitos uma vez só, em poucos minutos.
+   Comece na Biblioteca  Abra o app Atalhos. Volte para “Biblioteca” e escolha “Automação”.     Crie um novo atalho  Toque no + embaixo. No iOS 27, as automações ficam dentro dos atalhos.     Abra o editor  Se abrir “Descrever um Atalho”, toque em “Editor” ou “Editar”. Depois toque em “Automação” no painel de ações.     Escolha “Mensagem”  Em “Comunicação”, toque em “Mensagem” para adicionar o gatilho de mensagem recebida.     Mude o campo do filtro  Toque no primeiro campo azul “Remetente”. Ele escolhe qual parte da mensagem vai ser comparada.     Filtre pelo texto da mensagem  Escolha “Mensagem” no menu. A condição fica “Mensagem contém Texto”.     Use as palavras do seu banco  Toque em “Texto” e digite algo que aparece em todo SMS do seu banco, como o símbolo “R$”. Depois toque na seta azul do gatilho.     Deixe rodar sozinho  Deixe “Automação” ativada e “Confirmar Antes de Executar” desativado. Eles substituem a antiga tela “Executar Imediatamente”.     Encontre a ação de importar  Toque em “Buscar”, digite “Importar SMS do banco” e escolha a ação do TrackExpenses.     Conecte o texto recebido  Toque no marcador azul “Mensagem” dentro de “Importar lançamento de Mensagem”.     Abra “Selecionar Variável”  Toque em “Selecionar Variável” na barra de baixo. Não digite uma mensagem nem use “Sempre Perguntar”.     Escolha a “Mensagem” do gatilho  Toque em “Mensagem” logo abaixo do gatilho. No iOS 27, essa é a saída da mensagem recebida.     Use o corpo da mensagem  Feche a barra de baixo com ×. Toque na variável “Mensagem” inserida para ver as propriedades dela.     Escolha “Conteúdo”  Na lista “Obter” da variável, escolha “Conteúdo”. Toque em “Retorno” e feche a barra de variáveis com ×.     Importe em silêncio  Abra a seta azul da ação de importar e desative “Mostrar ao Executar”. A variável conectada deve dizer “Conteúdo”.     Confira a privacidade do atalho  Toque no botão ⓘ na barra do editor e abra “Privacidade”.     Permita com o iPhone bloqueado  Deixe “Permitir Execução Quando Bloqueado” ativado. Volte para “Detalhes”, toque em “OK” e depois volte para salvar o atalho.     Pronto para o próximo SMS do banco  Confirme que a automação está ativada. Confira o próximo SMS que combinar no TrackExpenses → “Mais” → “Lançamento automático de SMS”.
+
+ O que acontece depois
+ Quando chega um SMS que combina, o TrackExpenses lê valor, estabelecimento, data e cartão. O lançamento vai para a conta do cartão com o mesmo final e ganha a categoria que o app aprendeu com seus lançamentos anteriores. O que vale conferir aparece num cartão no topo da lista do dia.
+  Códigos de verificação, compras negadas, perguntas como “Você reconhece esta compra?”, cobranças Pix e promoções não são lançados.  Estornos e compras canceladas também não entram sozinhos: cole o aviso para conferir.  Salário e Pix recebido entram como receita e ficam marcados para revisar. Para desligar, use a chave “Importar dinheiro que entra”.  Uma compra em outra moeda sem cotação salva espera você definir a cotação, para não entrar nos totais com um valor errado.  O iOS mostra o próprio aviso toda vez que a automação roda. É uma regra da Apple que nenhum app consegue tirar.
+ 10 importações bem-sucedidas por mês são grátis em cada aparelho. O que chega depois fica guardado fora dos seus totais e não se perde: o Pro acrescenta tudo; senão, o limite grátis do mês seguinte libera o que couber.
+
+ Se um aviso não foi lançado
+  Abra “Mais” → “Lançamento automático de SMS” e cole a mensagem no cartão “Teste uma mensagem do seu banco”. Você vê na hora se ela foi lida e, se não foi, por quê.  Confira se a automação está ativada e se “Confirmar Antes de Executar” está desativado.  Confira se a variável da ação é a “Mensagem” do gatilho e se mostra “Conteúdo” (passos 10 a 15).  Confira se a palavra do filtro está escrita igual aos avisos do banco.
+ Um aviso que não entrou sempre pode ser copiado e colado num novo gasto.
+
+ Privacidade
+ O TrackExpenses não lê suas mensagens: o iOS não permite isso a nenhum app. A automação que você configurou passa só o texto da mensagem que combina, e esse texto é lido no seu iPhone. Nos seus lançamentos fica o que foi lido (valor, estabelecimento, data), não o texto do SMS. Não há conexão com o banco nem conta no app.
+
+ Perguntas frequentes
+  O app lê todas as minhas mensagens?  Não. Ele só recebe as mensagens que contêm o texto que você escolheu na automação. Você cria a automação e pode desligar ou apagar no Atalhos quando quiser.
+  O app entende os avisos dos bancos brasileiros?  Ele lê compra aprovada, Pix enviado e recebido, saque e débito automático, com valores escritos como R$ 1.234,56. Não dá para garantir para todo banco, então teste antes um aviso seu no cartão “Teste uma mensagem do seu banco”.
+  Quantos avisos o app lança de graça?  10 importações bem-sucedidas por mês em cada aparelho. O que passar disso fica guardado e não é apagado: o Pro acrescenta tudo; senão, o limite grátis do mês seguinte libera o que couber.
+
+ Saiba mais
+  Lance os avisos que chegam por e-mail
+  TrackExpenses em português: todos os recursos
+ Em inglês:
+   SMS Auto-Import Setup: iOS 27 and 26    Fix Bank SMS Automation on iPhone    Track Apple Pay Purchases on iPhone
+ Feito por  Mohamed Elatabany  · Atualizado em novembro de 2026 ·  Sugerir uma correção
 
 
 ## iOS 27 Bank SMS Setup Video | TrackExpenses

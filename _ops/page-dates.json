@@ -35,6 +35,18 @@
     "hash": "45fa2d9712d4934039d6d9db5fe96e3fa40e3a61a5b0b51b61ac5a98157ab346",
     "updated": "2026-11-17"
   },
+  "es/bank-email.html": {
+    "hash": "0efa82839aebb773b67e920add4fc8e20a9edce550a3d687f7fdead8fb7ca8d2",
+    "updated": "2026-11-18"
+  },
+  "es/bank-sms.html": {
+    "hash": "9533881c4d6b60c7edb558e36938bef08b6c57e69b7ee3e7fff068432fe359a1",
+    "updated": "2026-11-18"
+  },
+  "es/index.html": {
+    "hash": "3c1dd1afb497cac39cd39ec11acebadb95ce75879c5ae168dba4235dfada0b3b",
+    "updated": "2026-11-18"
+  },
   "features/accounts-and-transfers.html": {
     "hash": "051940d3476324068e4d66507721bc1a14711f74249ff24e4108eaef2d713c53",
     "updated": "2026-11-09"
@@ -150,6 +162,18 @@
   "privacy.html": {
     "hash": "42fb06adf9d77a99e01a12e15b20295fd9ad694ae62d0178c204ceb8dc3f5d72",
     "updated": "2026-11-17"
+  },
+  "pt/bank-email.html": {
+    "hash": "8c8a699f04f8c2392dc79248b0fbff2df199cb1398bfa1df1e2bfaeb791ff0f8",
+    "updated": "2026-11-18"
+  },
+  "pt/bank-sms.html": {
+    "hash": "5032d63ee7b0a09c62f90cc17b8a31d9cb28ba0fd4ee9dbbaa81b4b34f9f7f1c",
+    "updated": "2026-11-18"
+  },
+  "pt/index.html": {
+    "hash": "10c327d8417f810134b40fbba4c51002602726b379b1c0c441b4674c144ef93c",
+    "updated": "2026-11-18"
   },
   "support.html": {
     "hash": "7d2dccae307824438c73cd94360c37344ab8db959f548743f5f7f4e0e578c871",
