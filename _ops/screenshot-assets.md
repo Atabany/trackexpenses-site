@@ -73,3 +73,36 @@ what the feature does, not as someone's ledger. The Spanish daily list was not u
 covers its top. The bank-SMS guides' 18 pictures each are the real Shortcuts captures in
 `marketing/sms-setup-es/screens/ios27` and `marketing/sms-setup-pt-BR/screens/ios27`, 540 px WebP quality 80 in
 `assets/es/sms/` and `assets/pt/sms/`, as the German ones.
+
+Replaced 17 November 2026, the same day — the eight home-page captures above predated the last string fixes (the voice page
+said “Solo dilo.” where the app now says “Dilo y listo.”). They now come from the store-screenshot capture pass (roadmap
+6.4), on the integrated 1.16.0 branch after the second screen sweep: iPhone 17 Pro Max simulator, iOS 26.5, 1320 × 2868,
+light, status bar 9:41, Mexican and Brazilian demo ledgers (`-seed-demo -pro -demo-sms-hero`, the day's other purchase
+deleted in the app so today is under its share, as in the store set). Sources copied unchanged into
+`marketing/website-2026-11-latam/raw/` as `*-1117-store-pass-*.png` (the earlier eight stay beside them), scaled to
+660 × 1434, WebP quality 82:
+- `assets/es/ledger.webp` ← `es-1117-store-pass-stats-budget.png` (Stats → Budget: $9,804.13 left, daily budget $359.18)
+- `assets/es/voice.webp` ← `es-1117-store-pass-onb-voice.png` (onboarding page 2, “Dilo y listo.”, three drafts saved)
+- `assets/es/alerts.webp` ← `es-1117-store-pass-onb-sms.png` (onboarding page 3: BBVA alerts at Walmart and Pemex filed, a code skipped)
+- `assets/es/coach.webp` ← `es-1117-store-pass-onb-coach.png` (onboarding page 5, the coach answering “¿Qué puedo mejorar?”)
+- `assets/pt/ledger.webp` ← `pt-1117-store-pass-daily.png` (Lançamentos → Diário: the Pão de Açúcar purchase from a bank alert, R$ 6,65 left today)
+- `assets/pt/voice.webp` ← `pt-1117-store-pass-onb-voice.png` (onboarding voice demo, “É só falar.”)
+- `assets/pt/alerts.webp` ← `pt-1117-store-pass-onb-sms.png` (onboarding page 3: Pão de Açúcar and a Pix received filed, a code skipped)
+- `assets/pt/budget.webp` ← `pt-1117-store-pass-stats-budget.png` (Stats → Budget: R$ 1.195,44 left, daily budget R$ 69,92)
+
+Replaced 17 November 2026, later the same day — the app changed after the store pass (a budget month is named for the
+month that holds most of its days, the Mexican and Brazilian demo ledgers rebalanced so today is under its share, the
+Brazilian bank SMS read to "PAO DE ACUCAR" on the Nubank card). Recaptured from a fresh `-reset-state -seed-demo -pro
+-demo-sms-hero` launch of the integrated branch (`5a0d31e`): iPhone 17 Pro Max simulator, iOS 26.5, 1320 × 2868, light,
+status bar 9:41; nothing deleted in the app any more. The onboarding captures are the settled frames (coach with
+`-coach-demo-at 20`), taken with the market's own ledger so the demos use its currency. Sources copied unchanged into
+`marketing/website-2026-11-latam/raw/` as `*-1117-recapture-*.png` (the earlier ones stay beside them), scaled to
+660 × 1434, WebP quality 82:
+- `assets/es/ledger.webp` ← `es-1117-recapture-stats-budget.png` (Stats → Budget: $9,472.36 left, daily budget $347.33)
+- `assets/es/voice.webp` ← `es-1117-recapture-onb-voice.png` (onboarding page 2, “Dilo y listo.”, three drafts saved)
+- `assets/es/alerts.webp` ← `es-1117-recapture-onb-sms.png` (onboarding page 3: BBVA alerts at Walmart and Pemex filed, a code skipped)
+- `assets/es/coach.webp` ← `es-1117-recapture-onb-coach.png` (onboarding page 5, the coach answering “¿Qué puedo mejorar?”, $483.00)
+- `assets/pt/ledger.webp` ← `pt-1117-recapture-daily.png` (Lançamentos → Diário: Pão de Açúcar R$ 63,27 on Nubank from a bank alert, R$ 37,90 left of R$ 101,17 today)
+- `assets/pt/voice.webp` ← `pt-1117-recapture-onb-voice.png` (onboarding voice demo, “É só falar.”)
+- `assets/pt/alerts.webp` ← `pt-1117-recapture-onb-sms.png` (onboarding page 3: Pão de Açúcar and a Pix received filed, a code skipped)
+- `assets/pt/budget.webp` ← `pt-1117-recapture-stats-budget.png` (Stats → Budget: R$ 1.757,88 left, daily budget R$ 101,17)
