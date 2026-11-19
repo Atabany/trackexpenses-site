@@ -214,5 +214,14 @@
   "published": "2026-11-19",
   "updated": "2026-11-19",
   "feature": "expense-reports"
+ },
+ {
+  "slug": "december-money-reset",
+  "title": "December Money Reset: A Spending Challenge | TrackExpenses",
+  "description": "A December money reset in four steps: find last month's biggest everyday category, set one limit, check in weekly. On paper or with TrackExpenses' coach.",
+  "status": "published",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "feature": "ai-money-coach"
  }
 ]

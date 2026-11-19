@@ -124,5 +124,16 @@
   "description": "Count the days you spent nothing, see them in a calendar, and use them to cut discretionary spending without a strict budget. With realistic rules.",
   "intent": "no spend days tracker",
   "angle": "Stats shows days without logged spending; calendar view; must log every expense for it to be meaningful."
+ },
+ {
+  "slug": "december-money-reset",
+  "status": "published",
+  "priority": 13,
+  "feature": "ai-money-coach",
+  "title": "December Money Reset: A Spending Challenge You Can Keep | TrackExpenses",
+  "description": "A December money reset in four steps: find last month's biggest everyday category, set one limit for it, check in weekly. Works on paper or with the TrackExpenses coach.",
+  "intent": "December Money Reset: A Spending Challenge You Can Keep | TrackExpenses",
+  "angle": "Seasonal: one-limit spending challenge for December (money reset, spending challenge, no-spend alternatives)",
+  "published": "2026-11-20"
  }
 ]
