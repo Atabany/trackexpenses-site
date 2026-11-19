@@ -184,6 +184,7 @@ App Store: [Expense Tracker: SMS & Voice](https://apps.apple.com/app/id680661449
 - [All Features: SMS, Voice, Budgets | TrackExpenses](https://trackexpenses.app/features/index.html): Every TrackExpenses feature, free and Pro: voice, bank SMS and email alerts, payday budgets, daily budget, alerts, reminders, iCloud sync and widgets.
 - [Expense Tracking Guides | TrackExpenses](https://trackexpenses.app/guides/index.html): Practical iPhone guides for bank SMS imports, voice entry, payday budgeting, Apple Pay and CSV exports.
 - [About Mohamed Elatabany | TrackExpenses](https://trackexpenses.app/about.html): Meet the developer of Expense Tracker: SMS & Voice and learn how the site checks its product facts.
+- [Press Kit: Screenshots, Icon and Facts | TrackExpenses](https://trackexpenses.app/press.html): TrackExpenses press kit: descriptions to copy, facts, screenshots, app icon and contact for the iPhone expense tracker that logs itself.
 - [Privacy Policy | TrackExpenses](https://trackexpenses.app/privacy.html): How TrackExpenses stores your ledger, processes SMS and voice locally, uses private iCloud and handles purchases.
 - [Support and Free / Pro Limits | TrackExpenses](https://trackexpenses.app/support.html): Get TrackExpenses help, review free and Pro limits, restore purchases, fix imports and export your records.
 - [Terms of Use | TrackExpenses](https://trackexpenses.app/terms.html): TrackExpenses terms on the App Store (Apple’s Standard EULA) and on Google Play: purchases, renewals, refunds and calculation limits.

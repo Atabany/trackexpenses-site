@@ -184,6 +184,7 @@ App Store: [Expense Tracker: SMS & Voice](https://apps.apple.com/app/id680661449
 - [All Features: SMS, Voice, Budgets | TrackExpenses](https://trackexpenses.app/features/index.html): Every TrackExpenses feature, free and Pro: voice, bank SMS and email alerts, payday budgets, daily budget, alerts, reminders, iCloud sync and widgets.
 - [Expense Tracking Guides | TrackExpenses](https://trackexpenses.app/guides/index.html): Practical iPhone guides for bank SMS imports, voice entry, payday budgeting, Apple Pay and CSV exports.
 - [About Mohamed Elatabany | TrackExpenses](https://trackexpenses.app/about.html): Meet the developer of Expense Tracker: SMS & Voice and learn how the site checks its product facts.
+- [Press Kit: Screenshots, Icon and Facts | TrackExpenses](https://trackexpenses.app/press.html): TrackExpenses press kit: descriptions to copy, facts, screenshots, app icon and contact for the iPhone expense tracker that logs itself.
 - [Privacy Policy | TrackExpenses](https://trackexpenses.app/privacy.html): How TrackExpenses stores your ledger, processes SMS and voice locally, uses private iCloud and handles purchases.
 - [Support and Free / Pro Limits | TrackExpenses](https://trackexpenses.app/support.html): Get TrackExpenses help, review free and Pro limits, restore purchases, fix imports and export your records.
 - [Terms of Use | TrackExpenses](https://trackexpenses.app/terms.html): TrackExpenses terms on the App Store (Apple’s Standard EULA) and on Google Play: purchases, renewals, refunds and calculation limits.
@@ -1762,6 +1763,51 @@ https://trackexpenses.app/guides/index.html
 ## About Mohamed Elatabany | TrackExpenses
 https://trackexpenses.app/about.html
  Made by Mohamed Elatabany.  I build TrackExpenses, listed on the App Store as Expense Tracker: SMS & Voice. This is its official website.  Why this app  A ledger should be easier to maintain and follow the month you actually budget in. TrackExpenses brings manual, SMS and voice entry into a private ledger with a fixed monthly payday period.  How these guides are checked  Product claims are checked against the app's code and live listing. Guide steps use the app's current screens and Apple's Shortcuts documentation. Examples are illustrative. Competitor comparisons link their own documentation, show what was verified and leave uncertain features unclaimed.  Feature, comparison and FAQ pages were last checked against version 1.16.0 in November 2026, and each guide shows its own update date. Every release is listed in  what’s new . If a menu changes or an explanation is unclear,  send a correction .  Author and contact   Mohamed Elatabany on the App Store  ·  GitHub profile  ·  atabany.apps@gmail.com
+
+## Press Kit: Screenshots, Icon and Facts | TrackExpenses
+https://trackexpenses.app/press.html
+ TrackExpenses press kit.
+ Expense Tracker: SMS & Voice (TrackExpenses) is an iPhone, iPad and Mac expense tracker that keeps itself up to date: bank alerts log themselves, you can say several purchases in one sentence, and it tells you what you can spend today. Everything on this page may be used in coverage.
+  Download the press kit   ZIP, about 7 MB: app icon, English and Arabic screenshots, share images in five languages.
+
+ Facts
+   Name  Expense Tracker: SMS & Voice (short: TrackExpenses). In Mexico “Control de Gastos por Voz”, in Brazil “Controle de Gastos por Voz”, in Germany „Haushaltsbuch: Budget & Coach“.    Developer  Mohamed Elatabany, an independent developer in the United Arab Emirates    Platforms  iPhone and iPad with iOS/iPadOS 17 or later; Mac computers with Apple silicon    Languages  English, Arabic (right to left), German, Spanish (Latin America), Portuguese (Brazil)    First release  September 2026 on the App Store; version 1.16.0 on 18 November 2026    Business model  Free to download with a complete free ledger; Pro as a monthly or yearly subscription or a one-time lifetime purchase    Category  Finance    Privacy  No bank login and no app account. The ledger stays on the device, with optional private iCloud sync
+
+ Descriptions to copy
+  One line:  The iPhone expense tracker that logs itself from bank alerts and your voice.
+  Short:  TrackExpenses logs spending without the typing. A Shortcuts automation hands each bank SMS or email alert to the app, which reads the amount, shop, card and date, and you can say several purchases in one sentence. The budget month starts on payday, and the app shows what you can spend today. No bank login, no account.
+  Long:  Most expense trackers fail at the same step: people stop typing receipts. TrackExpenses removes that step. Banks already text or email every card purchase; an Apple Shortcuts automation passes those alerts to the app, which reads the amount, shop, card and date across many bank formats in the Gulf, India, Latin America, Europe and the US, and leaves one-time codes and declined payments out. Saying “coffee 15, taxi 40 and lunch 60” creates three drafts, processed on the iPhone. Budgets follow a month that starts on payday, every budget bar shows where today falls, and the daily figure shares what is left across the days left after the bills still to come. An AI money coach answers questions about spending in plain language, most of them on the device. There is no bank connection and no account: the ledger stays on the user’s devices, with optional private iCloud sync across iPhone, iPad and Mac. The whole app, voice entry and coach included, works in English, Arabic, German, Spanish and Portuguese.
+
+ What makes it different
+
+  Bank alerts without a bank connection.  Many markets have no open-banking feed, but every bank texts or emails each purchase. The app reads those alerts; it never sees a bank password or the Messages inbox.
+  Several purchases in one spoken sentence,  read on the device, with prices said the way people say them, in five languages.
+  A budget month that starts on payday  (any day from the 1st to the 31st), with pacing that shows where today falls.
+  A daily number : what is left after the bills still to come, shared across the days left.
+  Built for Arabic speakers as much as English ones:  a full right-to-left interface, Arabic voice entry and Arabic bank alerts.
+
+
+ Screenshots
+
+
+
+
+
+
+
+
+
+
+
+ Tap a screenshot for the full-size image (1320 × 2868). Arabic screenshots are in the ZIP; Spanish, Portuguese and German ones are on the App Store listing in those countries.
+  App icon, 1024 × 1024 PNG
+
+ About the developer
+ TrackExpenses is designed, built and supported by  Mohamed Elatabany , an independent iOS developer in the United Arab Emirates. It is built around a simple fact: in the Gulf, India and much of Latin America, banks text or email every card purchase, yet most expense apps still ask people to type it again.
+
+ Contact
+ Questions, interviews and review access:  atabany.apps@gmail.com . Reviewers can ask for a Pro code. Corrections to anything written about the app are welcome on the  support page .
+
 
 ## Privacy Policy | TrackExpenses
 https://trackexpenses.app/privacy.html
