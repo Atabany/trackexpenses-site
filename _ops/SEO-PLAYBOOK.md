@@ -520,3 +520,11 @@ universal node: `arch -arm64 /usr/local/bin/node <lighthouse>/cli/index.js …` 
 clicks in the 28 days to 17 November), whether the 50/30/20 retitle (weekly, biweekly, monthly pay) earns clicks, first
 impressions for the Money Manager and YNAB pages and the four new calculators, and the localized landings by folder.
 Bing Webmaster Tools has an AI Performance report (citations, cited pages); read it when signed in.
+
+**Published 20 November 2026 (public `00f29ad`).** All 75 pages in the live sitemap; 28 key URLs checked over HTTPS (200), the
+landing seen live in iOS Safari (English and Arabic). IndexNow accepted the 50 pages whose lastmod is 19–20 November plus
+`llms.txt`. Search Console: sitemap resubmitted (read "Submitted Nov 20"); indexing requested for the home page, `faq.html`,
+both new comparisons, `track-expenses-iphone` and `daily-spending-limit`; the seventh request hit the daily quota, so the
+calculators, `features/daily-budget` and `whats-new` wait for the sitemap or a request on another day. Requests are not
+proof of indexing. Ratings re-read the same day (5.0 from 8 in 5 storefronts). Reader and copy gaps the localizers found
+are app issues #46 and #47, kept off every page.
