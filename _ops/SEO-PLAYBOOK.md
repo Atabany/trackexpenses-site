@@ -513,8 +513,8 @@ universal node: `arch -arm64 /usr/local/bin/node <lighthouse>/cli/index.js …` 
   wrapper (the hero's `.hx-demo`) must add `animate` to the phone too (`home.js`).
 - Generated HTML is restored before every commit in a shared checkout (sources only); the local preview then serves the old
   output until the next build — rebuild before every screenshot.
-- Reviews: one written review is held off the website (`site: false` in `reviews.json`) until the owner decides; the app
-  shows it. Flip `site` to show it.
+- Reviews: every written review is shown (owner, 20 November: "show all reviews"); a review longer than about 13 lines
+  folds behind "Read the whole review" (home.js), the full text stays in the page. A new review goes into `reviews.json` as read.
 
 **To check in two to four weeks (Search Console by page):** the daily-budget calculator's click rate (510 impressions, 0
 clicks in the 28 days to 17 November), whether the 50/30/20 retitle (weekly, biweekly, monthly pay) earns clicks, first

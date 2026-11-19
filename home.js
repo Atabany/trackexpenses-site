@@ -27,6 +27,22 @@
     if (brand) hero.setAttribute('aria-label', hero.getAttribute('aria-label').replace('Walmart', brand.textContent));
   }
 
+  // A long review folds after a few lines behind a button; the whole text is in the page, word for word.
+  const moreWords = ({ar: ['اقرأ المراجعة كاملة', 'عرض أقل'], de: ['Ganze Rezension lesen', 'Weniger anzeigen'],
+    es: ['Leer la reseña completa', 'Ver menos'], pt: ['Ler a avaliação completa', 'Ver menos']})[(document.documentElement.lang || 'en').split('-')[0]]
+    || ['Read the whole review', 'Show less'];
+  document.querySelectorAll('.review blockquote').forEach(quote => {
+    if (quote.scrollHeight <= 330) return;
+    quote.classList.add('clamp');
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = 'rv-more'; button.textContent = moreWords[0]; button.setAttribute('aria-expanded', 'false');
+    button.addEventListener('click', () => {
+      const open = quote.classList.toggle('open');
+      button.textContent = moreWords[open ? 1 : 0]; button.setAttribute('aria-expanded', String(open));
+    });
+    quote.after(button);
+  });
+
   // Three ways in: a link to #say, #sms or #tap opens that tab.
   const openWay = () => {
     let target = null;

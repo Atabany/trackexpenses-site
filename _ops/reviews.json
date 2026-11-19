@@ -1,5 +1,5 @@
 {
- "_note": "Real App Store reviews, word for word, read from App Store Connect (customerReviews) on 2026-11-19. Never edit a word or add one that is not there. Not marked up as Review schema (self-serving reviews). Re-read with the snippet in SEO-PLAYBOOK, 19 November.",
+ "_note": "Real App Store reviews, word for word, all shown (owner, 20 November: \"show all reviews\"), read from App Store Connect (customerReviews) on 2026-11-19. Never edit a word or add one that is not there. Not marked up as Review schema (self-serving reviews). Re-read with the snippet in SEO-PLAYBOOK, 19 November.",
  "checked": "2026-11-19",
  "reviews": [
   {
@@ -22,8 +22,7 @@
    "territory": "ARE",
    "country": "United Arab Emirates",
    "lang": "en",
-   "site": false,
-   "note": "Not shown on the website until the owner decides; the app shows it."
+   "site": true
   },
   {
    "rating": 5,

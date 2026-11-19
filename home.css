@@ -286,12 +286,14 @@ a.tile:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 /* Reviews */
 .rv-summary{font-size:16px!important}
 .rv-summary b{color:var(--ink);font-size:20px}
-.review-rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 18px;margin:0 -16px;scroll-padding:16px;scrollbar-width:thin}
+.review-rail{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 18px;margin:0 -16px;scroll-padding:16px;scrollbar-width:thin}
 .review{flex:0 0 min(84%,380px);scroll-snap-align:start;margin:0;display:flex;flex-direction:column;padding:20px 18px;border-radius:24px;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}
 .rv-stars{color:#f5b301;font-size:16px;letter-spacing:2px}
 .review blockquote{margin:8px 0 14px;flex:1}
 .review blockquote p{margin:0 0 8px;font-size:15px;line-height:1.55;color:var(--ink)}
 .review .rv-title{font-weight:800;font-size:17px;letter-spacing:-.01em}
+.review blockquote.clamp:not(.open){max-height:14.5em;overflow:hidden;-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
+.rv-more{align-self:flex-start;min-height:44px;margin:-8px 0 8px;padding:0;border:0;background:none;color:var(--accent);font-weight:700;font-size:15px;cursor:pointer}
 .review figcaption{display:flex;flex-direction:column;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
 .review figcaption b{color:var(--ink)}
 .review[dir=rtl] blockquote p{font-family:-apple-system,"SF Arabic","Geeza Pro",Tahoma,sans-serif;font-size:16px;line-height:1.7}
