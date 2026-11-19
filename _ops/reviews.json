@@ -1,0 +1,73 @@
+{
+ "_note": "Real App Store reviews, word for word, read from App Store Connect (customerReviews) on 2026-11-19. Never edit a word or add one that is not there. Not marked up as Review schema (self-serving reviews). Re-read with the snippet in SEO-PLAYBOOK, 19 November.",
+ "checked": "2026-11-19",
+ "reviews": [
+  {
+   "rating": 5,
+   "title": "Everything included",
+   "body": "This is the BEST app by far, and I have tried so many apps, it has everything you need to be on track. Wallet transactions, email notifications and SMS, all can be captured using IO-shortcuts, and it offers lifetime subscription, which is exactly what I was looking for. Hope there is a BlackFriday deal for everyone. Keep up the good work!",
+   "author": "jrgrodriguez",
+   "date": "2026-11-15",
+   "territory": "CAN",
+   "country": "Canada",
+   "lang": "en",
+   "site": true
+  },
+  {
+   "rating": 5,
+   "title": "Amazing app, truly next level 🤩",
+   "body": "This app is amazing, amazing, AMAZING ❤️\n\nIt’s honestly the first time I’ve used an expense tracker that works this well.\n\nThe best feature is that I don’t have to manually enter every single expense. The app can automatically detect my bank SMS messages and add my expenses with the correct amounts and categories. How cool is that?\n\nI also love that I can simply copy a bank transaction message and paste it into the app, and it does the rest.\n\nAnd the voice recording feature is just WOW 😍 I can literally say all my expenses in one recording, and the app adds them for me. I don’t even have to record them one by one.\n\nThis is truly a next-generation app. I’ve never seen these features work together so smoothly in an expense tracker.\n\nI 100% recommend everyone to download it and give it a try. You’ll love it ❤️",
+   "author": "Iman-Mohamed",
+   "date": "2026-11-07",
+   "territory": "ARE",
+   "country": "United Arab Emirates",
+   "lang": "en",
+   "site": false,
+   "note": "Not shown on the website until the owner decides; the app shows it."
+  },
+  {
+   "rating": 5,
+   "title": "Very clean and full features",
+   "body": "The App provides a lot of convenient features that cover all my needs. Keep up the good work and consistent updates.",
+   "author": "AAllaithy",
+   "date": "2026-11-05",
+   "territory": "EGY",
+   "country": "Egypt",
+   "lang": "en",
+   "site": true
+  },
+  {
+   "rating": 5,
+   "title": "The best App",
+   "body": "Simple, easy to use, track my expenses with hands free from my bank sms automatically it logged the expenses, also by talking to it or just say what I spend, it’s very smart app.",
+   "author": "Meto Omar",
+   "date": "2026-11-04",
+   "territory": "ARE",
+   "country": "United Arab Emirates",
+   "lang": "en",
+   "site": true
+  },
+  {
+   "rating": 5,
+   "title": "تطبيق ممتاز لمن يبحث عن التحكم بالميزانيه",
+   "body": "استخدمت التطبيق لكم يوم ووجدت ان التطبيق فك لي ازمة (اين يذهب الراتب) و (كم احتاج لاخر الشهر) و التحكم بالمشتريات (لو اشتريت هذا الشيء هل سيكفي المبلغ لاخر الشهر؟)\nبالفعل تطبيق يستحق ٥ نجوم",
+   "author": "Kt220022",
+   "date": "2026-11-03",
+   "territory": "ARE",
+   "country": "United Arab Emirates",
+   "lang": "ar",
+   "site": true
+  },
+  {
+   "rating": 5,
+   "title": "Worth for money",
+   "body": "I like it",
+   "author": "Anish1501",
+   "date": "2026-10-25",
+   "territory": "IND",
+   "country": "India",
+   "lang": "en",
+   "site": true
+  }
+ ]
+}

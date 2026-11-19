@@ -1,47 +1,256 @@
-<h1>Anote seus gastos quase sem digitar</h1>
-<p class="lead">Cole o aviso do banco ou do Pix e o lançamento já vem preenchido, ou fale “café 8, uber 23 e almoço 35” e pronto, são três gastos. Seu mês começa no dia do pagamento, e o orçamento diário mostra quanto dá para gastar hoje. O TrackExpenses é um controle de gastos privado para iPhone e iPad, todo em português.</p>
-{{APP_STORE_CTA}}
-<div class="ar-shots"><figure><img src="../assets/pt/ledger.webp" width="660" height="1434" alt="Lançamentos no TrackExpenses em português: receitas de R$ 4.500,00, gastos de R$ 2.342,12, o orçamento diário de R$ 101,17 e uma compra no Pão de Açúcar lançada a partir do aviso do banco, no período de 05/11 a 04/12/2026" decoding="async"><figcaption>Seu mês, de salário a salário</figcaption></figure><figure><img src="../assets/pt/voice.webp" width="660" height="1434" alt="A entrada por voz: “café 7,50”, “uber 27” e “mercado 130 no Pão de Açúcar” viram três lançamentos para revisar" loading="lazy" decoding="async"><figcaption>Uma frase, três gastos</figcaption></figure><figure><img src="../assets/pt/alerts.webp" width="660" height="1434" alt="Avisos do banco viram lançamentos: uma compra aprovada no Pão de Açúcar e um Pix recebido de R$ 150,00; um código de verificação fica de fora" loading="lazy" decoding="async"><figcaption>Compra e Pix, lançados</figcaption></figure><figure><img src="../assets/pt/budget.webp" width="660" height="1434" alt="Estatísticas do orçamento: R$ 1.757,88 restantes no mês, o plano do salário e um orçamento diário de R$ 101,17" loading="lazy" decoding="async"><figcaption>Quanto ainda dá para gastar</figcaption></figure></div>
+<section class="hx" aria-labelledby="hx-title">
+  <div class="hx-bg" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i></div>
+  <div class="hx-inner">
+    <div class="hx-copy">
+      {{RATING_PILL}}
+      <h1 id="hx-title">O dinheiro vai embora<br>aos pouquinhos.<br><em>Aqui, nada escapa.</em></h1>
+      <p class="hx-lead">O controle de gastos para iPhone que faz as contas por você: cole o aviso do banco ou do Pix e o lançamento vem pronto, fale “café 8, uber 23” e são dois gastos, e saiba quanto ainda dá para gastar hoje.</p>
+      <div class="hx-cta">{{APP_STORE_CTA}}<p>Comece grátis<span>Sem login do banco, sem cadastro</span></p></div>
+    </div>
+    <figure class="hx-stage">
+      <div class="hx-demo" data-demo data-loop="15000" data-threshold="0.05" role="img" aria-label="Animação: um aviso do banco de 54,90 no Pão de Açúcar vira um gasto em Mercado, falar “café 8, uber 23” lança mais dois, uma compra com Apple Pay no iFood entra sozinha, o disponível de hoje cai de 150,00 para 25,20 e o coach financeiro diz que o mês está no ritmo. Valores de exemplo.">
+        <span class="hx-prop p-groceries" data-at="2300" aria-hidden="true"><img src="../assets/home/groceries.webp" width="177" height="240" alt="" decoding="async"><b class="money" data-v="9.9818">R$&nbsp;54,90</b></span>
+        <span class="hx-prop p-coffee" data-at="5900" aria-hidden="true"><img src="../assets/home/coffee.webp" width="169" height="240" alt="" decoding="async"><b class="money" data-v="1.4545">R$&nbsp;8,00</b></span>
+        <span class="hx-prop p-taxi" data-at="6100" aria-hidden="true"><img src="../assets/home/taxi.webp" width="240" height="229" alt="" decoding="async"><b class="money" data-v="4.1818">R$&nbsp;23,00</b></span>
+        <span class="hx-prop p-delivery" data-at="8300" aria-hidden="true"><img src="../assets/home/delivery.webp" width="195" height="240" alt="" decoding="async"><b class="money" data-v="7.0727">R$&nbsp;38,90</b></span>
+        <div class="demo-phone hx-phone">
+          <div class="demo-screen hx-screen" aria-hidden="true">
+            <div class="hx-status"><b>9:41</b><span class="hx-sig"><i></i><i></i><i></i><i></i></span></div>
+            <div class="hx-banner" data-at="1000" data-off="2600"><span class="hx-banner-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="hx-banner-head"><b>Seu banco</b><span>agora</span></p><p>Compra aprovada no seu cartão final 6878: <span class="money" data-v="9.9818">R$&nbsp;54,90</span> em PAO DE ACUCAR.</p></div></div>
+            <div class="hx-pay" data-at="7800" data-off="9000"><span class="hx-pay-mark"></span><div><p class="hx-banner-head"><b>Carteira</b><span>agora</span></p><p>Apple Pay · iFood · <span class="money" data-v="7.0727">R$&nbsp;38,90</span></p></div></div>
+            <p class="hx-date">quinta-feira, 19 de novembro</p>
+            <p class="hx-title">Hoje</p>
+            <div class="hx-card">
+              <p class="hx-card-label">DISPONÍVEL HOJE</p>
+              <p class="hx-left"><b class="money hx-v0" data-v="27.2727" data-off="2600">R$&nbsp;150,00</b><b class="money hx-v1" data-v="17.2909" data-at="2600" data-off="6600">R$&nbsp;95,10</b><b class="money hx-v2" data-v="11.6545" data-at="6600" data-off="9000">R$&nbsp;64,10</b><b class="money hx-v3" data-v="4.5818" data-at="9000">R$&nbsp;25,20</b></p>
+              <span class="hx-bar"><i></i><em></em></span>
+              <p class="hx-card-foot"><span>Orçamento diário <span class="money" data-v="27.2727">R$&nbsp;150,00</span></span><span class="hx-pace">✓ Mês no ritmo</span></p>
+            </div>
+            <div class="hx-rows">
+              <div class="hx-row" data-at="2600"><span class="hx-emoji">🛒</span><span class="hx-main"><b>Pão de Açúcar</b><small>Mercado <em class="src">SMS do banco</em></small></span><span class="hx-amt">−<span class="money" data-v="9.9818">R$&nbsp;54,90</span></span></div>
+              <div class="hx-row" data-at="6600"><span class="hx-emoji">🍽️</span><span class="hx-main"><b>Café</b><small>Restaurantes <em class="src v">Voz</em></small></span><span class="hx-amt">−<span class="money" data-v="1.4545">R$&nbsp;8,00</span></span></div>
+              <div class="hx-row" data-at="6800"><span class="hx-emoji">🚌</span><span class="hx-main"><b>Uber</b><small>Transporte <em class="src v">Voz</em></small></span><span class="hx-amt">−<span class="money" data-v="4.1818">R$&nbsp;23,00</span></span></div>
+              <div class="hx-row" data-at="9000"><span class="hx-emoji">🍽️</span><span class="hx-main"><b>iFood</b><small>Restaurantes <em class="src p">Apple Pay</em></small></span><span class="hx-amt">−<span class="money" data-v="7.0727">R$&nbsp;38,90</span></span></div>
+            </div>
+            <div class="hx-say" data-at="3900" data-off="6600"><span class="hx-mic"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><p class="hx-words"><span data-at="4200">“café</span> <span data-at="4500"><span class="hx-num" data-v="1.4545">8</span>,</span> <span data-at="4900">uber</span> <span data-at="5200"><span class="hx-num" data-v="4.1818">23</span>”</span></p><span class="hx-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+            <div class="hx-coach" data-at="10000"><img src="../assets/home/coach-talk.webp" width="278" height="320" alt="" loading="lazy" decoding="async"><p><b>No ritmo.</b> Você usou 46% do orçamento, e 58% do mês já passou. Restam <span class="money" data-v="4.5818">R$&nbsp;25,20</span> hoje.</p></div>
+            <div class="hx-dock"><span class="say" data-pulse="3900,4600">Falar</span><span>Colar</span><span class="add">+ Digitar</span></div>
+          </div>
+        </div>
+      </div>
+      <figcaption><span>Animação ilustrativa · compras de exemplo</span><button class="demo-toggle hx-toggle" type="button" hidden>Pausar</button></figcaption>
+    </figure>
+  </div>
+</section>
 
-<h2 id="paste">Cole o aviso do banco ou do Pix</h2>
-<p>Copie o texto do aviso, do SMS, do e-mail ou do comprovante no app do banco, e cole no TrackExpenses: valor, estabelecimento, data e cartão vêm preenchidos, e você confere antes de salvar. Funciona com qualquer banco que escreva o valor no aviso.</p>
-<ul><li>Lê compra aprovada, Pix enviado, Pix recebido, saque e débito automático de bancos como Itaú, Bradesco, Banco do Brasil e Mercado Pago. É só colar o aviso do Nubank também.</li><li>Compra parcelada entra pelo valor total, não pela parcela.</li><li>Códigos de verificação, compras negadas, perguntas como “Você reconhece esta compra?” e cobranças Pix que você ainda não pagou ficam de fora.</li></ul>
+<ul class="hx-proof" aria-label="O TrackExpenses em resumo">
+  <li><b>Avisos do banco e do Pix</b> lançados para você</li>
+  <li><b>Várias compras</b> numa frase só</li>
+  <li><b>Mês do orçamento</b> a partir do dia do pagamento</li>
+  <li><b>Coach financeiro com IA</b> que respeita sua privacidade</li>
+  <li><b>5 idiomas</b> · iPhone, iPad e Mac</li>
+</ul>
 
-<h2 id="auto">Lançado sozinho: por SMS ou por e-mail</h2>
-<p>No Brasil, muitos bancos avisam por notificação do próprio app, e nenhuma automação do iPhone consegue ler a notificação de outro app. Por isso existem três caminhos, e você escolhe o que combina com o seu banco:</p>
-<ul><li><strong>Se o banco manda SMS</strong>, como o Itaú (no serviço de aviso por SMS), o Bradesco e o Banco do Brasil, uma automação de Mensagens lança cada um: <a href="bank-sms.html">a configuração passo a passo, com telas do Atalhos em português</a>.</li><li><strong>Se o banco manda e-mail</strong> a cada compra, adicione sua conta ao app Mail e crie uma automação no Atalhos: <a href="bank-email.html">veja como lançar os avisos por e-mail</a>, também do Gmail.</li><li><strong>Se o aviso só aparece no app</strong>, como no Nubank, no C6, no Inter ou no PicPay, cole o aviso. E se você paga com Apple Pay, a automação da Carteira lança essas compras sozinha.</li></ul>
-<p>O TrackExpenses não lê suas mensagens nem seu e-mail e não se conecta ao seu banco: a automação que você cria passa só o aviso que combina com o filtro. 10 importações automáticas por mês são grátis em cada aparelho; com o Pro, ilimitadas.</p>
+<section id="ways" class="hs ways">
+  <header class="hs-head reveal"><p class="eyebrow">TRÊS JEITOS DE LANÇAR</p><h2>Chega de digitar gasto por gasto.<br>Escolha o jeito mais fácil.</h2><p>Use o que combinar com o momento. Tudo vai para o mesmo lugar, no mesmo mês do seu orçamento.</p></header>
+  <div class="ways-tabs">
+    <input type="radio" name="ways" id="way-say" checked><label for="way-say"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Falar</label>
+    <input type="radio" name="ways" id="way-tap"><label for="way-tap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M8 5H6.5A1.5 1.5 0 0 0 5 6.5v13A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 17.5 5H16"/></svg>Colar</label>
+    <input type="radio" name="ways" id="way-sms"><label for="way-sms"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg>Automático</label>
+    <article class="way way-say" id="say">
+      <div class="way-copy"><span class="tier">10 GRÁTIS POR MÊS · ILIMITADO COM PRO</span><h3>Falou, anotou.</h3><p class="quote-line">“Café 8, uber 27 e mercado 130 no Pão de Açúcar ontem.”</p><p>Fale uma compra ou as compras da tarde inteira. Enquanto você fala, o TrackExpenses mostra o que entendeu; quando você dá uma pausa, ele encerra sozinho e monta um rascunho para cada compra, com valor, categoria, loja e data. A fala é processada no seu iPhone. É só conferir e salvar.</p><ul class="benefits"><li>Várias compras numa frase só</li><li>Preço dito do jeito brasileiro: “42 e 90” vira R$&nbsp;42,90</li><li>Escolha na tela de escuta o idioma em que você fala</li><li>Lojas conhecidas, como iFood e Pão de Açúcar, já trazem a categoria</li></ul><a href="../guides/voice-expenses-iphone.html" hreflang="en">Como funciona a entrada por voz (em inglês) <span aria-hidden="true">→</span></a></div>
+      <figure class="screen-stage stage-dark demo-stage">
+      <div class="demo-phone say-demo" data-demo data-loop="13500" role="img" aria-label="Animação: alguém fala “café 8, uber 27 e mercado 130 no Pão de Açúcar ontem”. A tela de voz escuta com a onda sonora ao vivo, mostra os valores e as categorias que entendeu e depois apresenta três rascunhos para revisar (8 em Restaurantes, 27 em Transporte e 130 em Mercado no Pão de Açúcar, os três com a data de ontem) e salva os três.">
+        <div class="demo-screen" aria-hidden="true">
+          <div class="demo-bar"><span class="demo-x">✕</span><b>Por voz</b><span class="demo-gap"></span></div>
+          <div class="say-listen" data-off="6700">
+            <p class="say-kicker"><span class="rec-dot"></span>OUVINDO</p>
+            <p class="say-heard-label">ENTENDI</p>
+            <p class="say-transcript" data-words="café {1.4545}, uber {4.9091} e mercado {23.6364} no Pão de Açúcar ontem" data-start="700" data-step="320"></p>
+            <div class="say-chips">
+              <span class="chip c-exp" data-at="1250"><span class="money" data-v="1.4545" data-int>R$&nbsp;8</span> · 🍽️ Restaurantes</span>
+              <span class="chip c-exp" data-at="1900"><span class="money" data-v="4.9091" data-int>R$&nbsp;27</span> · 🚌 Transporte</span>
+              <span class="chip c-exp" data-at="2800"><span class="money" data-v="23.6364" data-int>R$&nbsp;130</span> · 🛒 Mercado</span>
+              <span class="chip" data-at="4000">📍 Pão de Açúcar</span>
+              <span class="chip" data-at="4300">📅 Ontem</span>
+            </div>
+            <div class="say-mic">
+              <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+              <svg class="silence" viewBox="0 0 120 120" data-at="4700"><circle cx="60" cy="60" r="54"/></svg>
+              <span class="mic-btn"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+            </div>
+            <div class="say-wave" data-off="4600"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="say-pause" data-at="4700">Faça uma pausa para terminar…</p>
+            <p class="say-tier">Português · No aparelho e privado</p>
+          </div>
+          <div class="say-review">
+            <p class="say-quote" data-at="6900">“café <span class="num" data-v="1.4545">8</span>, uber <span class="num" data-v="4.9091">27</span> e mercado <span class="num" data-v="23.6364">130</span> no Pão de Açúcar ontem”</p>
+            <div class="draft" data-at="7200"><p class="d-said">“café <span class="num" data-v="1.4545">8</span>”</p><p class="d-amt"><span class="money" data-v="1.4545" data-int>R$&nbsp;8</span></p><p class="d-meta"><span class="pill">Gasto</span>🍽️ Restaurantes<span class="d-right">Dinheiro · Ontem</span></p></div>
+            <div class="draft" data-at="7550"><p class="d-said">“uber <span class="num" data-v="4.9091">27</span>”</p><p class="d-amt"><span class="money" data-v="4.9091" data-int>R$&nbsp;27</span></p><p class="d-meta"><span class="pill">Gasto</span>🚌 Transporte<span class="d-right">Uber · Ontem</span></p></div>
+            <div class="draft" data-at="7900"><p class="d-said">“mercado <span class="num" data-v="23.6364">130</span> no Pão de Açúcar ontem”</p><p class="d-amt"><span class="money" data-v="23.6364" data-int>R$&nbsp;130</span></p><p class="d-meta"><span class="pill">Gasto</span>🛒 Mercado<span class="d-right">Pão de Açúcar · Ontem</span></p></div>
+            <div class="say-actions" data-at="8500"><span class="btn-retry">↺ Tentar de novo</span><span class="btn-save" data-pulse="9600">✓ Salvar 3</span></div>
+            <p class="say-saved" data-at="10300"><b>✓ 3 salvos</b> · <span class="money" data-sum="1.4545,4.9091,23.6364">R$&nbsp;165</span> gastos · último: Pão de Açúcar</p>
+          </div>
+        </div>
+      </div>
+      <button class="demo-toggle" type="button" hidden>Pausar</button>
+      <figcaption>Animação ilustrativa da entrada por voz. Compras de exemplo.</figcaption>
+    </figure>
+    </article>
+    <article class="way way-tap" id="tap">
+      <div class="way-copy"><span class="tier">GRÁTIS</span><h3>Copiou o aviso? Colou, lançou.</h3><p>Muitos bancos avisam só pela notificação do próprio app, e nenhuma automação do iPhone consegue ler a notificação de outro app. Para esses, o caminho é colar: copie o SMS, o e-mail ou o detalhe da compra no app do banco e cole no TrackExpenses. Valor, loja, data e cartão vêm preenchidos, e você confere antes de salvar.</p><ul class="benefits"><li>Compra aprovada, compra parcelada, Pix enviado e recebido, saque e débito automático</li><li>De qualquer banco que escreva o valor no aviso: Nubank, Itaú, Bradesco, Inter, C6…</li><li>Toque e segure o ícone do app e escolha “Colar SMS do banco”</li><li>Uma loja que você já usou traz a categoria e a conta de sempre</li></ul><a href="bank-sms.html">Como colar ou automatizar, passo a passo <span aria-hidden="true">→</span></a></div>
+      <figure class="screen-stage stage-sand"><div class="phone"><img src="../assets/pt/ledger.webp" width="660" height="1434" alt="Lançamentos no TrackExpenses em português, com os botões Falar, Colar e Digitar e uma compra no Pão de Açúcar lançada a partir do aviso do banco" loading="lazy" decoding="async"></div><figcaption>Tela real do app · lançamentos de exemplo</figcaption></figure>
+    </article>
+    <article class="way way-sms" id="sms">
+      <div class="way-copy"><span class="tier">10 GRÁTIS POR MÊS · ILIMITADO COM PRO</span><h3>Chegou o aviso? Já está lançado.</h3><p>O Itaú (no Aviso SMS), o Bradesco e o Banco do Brasil mandam SMS a cada compra, e muitos bancos mandam e-mail. Uma automação do app Atalhos entrega esses avisos ao TrackExpenses, que lança valor, loja, cartão e data. Códigos de verificação, compras negadas e ofertas ficam de fora.</p><ul class="benefits"><li>SMS do banco, ou e-mails do banco pelo app Mail (Gmail também)</li><li>A palavra do filtro é R$, que vem em todo aviso de compra</li><li>O final do cartão escolhe a conta certa</li><li>Compras com Apple Pay entram pela automação da Carteira</li><li>O app nunca abre suas mensagens nem seu e-mail</li></ul><a href="bank-sms.html">Configurar os SMS do banco <span aria-hidden="true">→</span></a> <a href="bank-email.html">Avisos por e-mail <span aria-hidden="true">→</span></a></div>
+      <figure class="screen-stage stage-mint demo-stage">
+      <div class="demo-phone sms-demo" data-demo data-loop="15000" role="img" aria-label="Animação: SMS do banco chegam na Tela Bloqueada do iPhone. Uma compra de 54,90 no Pão de Açúcar e outra de 64,30 no Posto Ipiranga viram gastos; um código de verificação é ignorado; um Pix recebido de Mariana Costa vira uma receita marcada para revisar.">
+        <div class="demo-screen lock" aria-hidden="true">
+          <div class="lock-time"><span>quinta-feira, 19 de novembro</span><b>9:41</b></div>
+          <ol class="notes">
+            <li class="note" data-at="300"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>Seu banco</b><span>agora</span></p><p class="note-body">Compra aprovada no seu cartão final <mark class="m-card" data-at="1100">6878</mark>: <mark class="m-amt" data-at="1400"><span class="money" data-v="9.9818">R$&nbsp;54,90</span></mark> em <mark class="m-pay" data-at="1700">PAO DE ACUCAR</mark>.</p></div></li>
+            <li class="note" data-at="3600"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>Seu banco</b><span>agora</span></p><p class="note-body">Compra de <mark class="m-amt" data-at="4400"><span class="money" data-v="11.6909">R$&nbsp;64,30</span></mark> em <mark class="m-pay" data-at="4700">POSTO IPIRANGA</mark> cartao final <mark class="m-card" data-at="5000">6878</mark> em 20/11 08:12.</p></div></li>
+            <li class="note note-otp" data-at="6900"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>Seu banco</b><span>agora</span></p><p class="note-body">Seu código de verificação é 482915. Não compartilhe com ninguém.</p></div><span class="skip-stamp" data-at="7700">Ignorado · código</span></li>
+            <li class="note" data-at="9100"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>Seu banco</b><span>agora</span></p><p class="note-body">Pix recebido no valor de <mark class="m-inc" data-at="9900"><span class="money" data-v="27.2727">R$&nbsp;150,00</span></mark>, de <mark class="m-pay" data-at="10200">MARIANA COSTA</mark>.</p></div></li>
+          </ol>
+          <div class="automation" data-pulse="2000,5400,10500"><span class="auto-dot"></span>Automação do Atalhos → TrackExpenses</div>
+          <div class="ledger-card">
+            <p class="ledger-head"><span class="ledger-icon"></span><b>TrackExpenses</b><span>Hoje</span></p>
+            <div class="ledger-row" data-at="2300"><span class="row-emoji">🛒</span><span class="row-main"><b>Pão de Açúcar</b><small>Mercado · Cartão de crédito</small></span><span class="row-amt exp">−<span class="money" data-v="9.9818">R$&nbsp;54,90</span></span></div>
+            <div class="ledger-row" data-at="5700"><span class="row-emoji">⛽</span><span class="row-main"><b>Posto Ipiranga</b><small>Combustível · Cartão de crédito</small></span><span class="row-amt exp">−<span class="money" data-v="11.6909">R$&nbsp;64,30</span></span></div>
+            <div class="ledger-row" data-at="10800"><span class="row-emoji">💸</span><span class="row-main"><b>Mariana Costa <em class="flag">Revisar</em></b><small>Receita · Conta corrente</small></span><span class="row-amt inc">+<span class="money" data-v="27.2727">R$&nbsp;150,00</span></span></div>
+          </div>
+        </div>
+      </div>
+      <button class="demo-toggle" type="button" hidden>Pausar</button>
+      <figcaption>Animação ilustrativa da importação de SMS do banco. Mensagens e valores de exemplo.</figcaption>
+    </figure>
+    </article>
+  </div>
+</section>
 
-<h2 id="voice">É só falar</h2>
-<p>Fale várias compras de uma vez e revise os rascunhos antes de salvar. A entrada por voz entende valores ditos do jeito brasileiro, e o reconhecimento acontece no seu aparelho.</p>
-<ul><li>10 entradas por voz por mês são grátis em cada aparelho; com o Pro, ilimitadas.</li><li>A entrada por voz depende do aparelho e do idioma. Anote também pela Siri, por widget ou pelo Botão de Ação.</li></ul>
+<section id="try" class="hs try">
+  <header class="hs-head reveal"><p class="eyebrow">VEJA COMO ELE LÊ</p><h2>Toque num exemplo.<br>Veja o que o app entende.</h2><p>Cada resultado é a leitura real do app para essas mesmas palavras, com as mesmas regras que rodam no seu iPhone. Nada aqui é enviado para lugar nenhum.</p></header>
+  <div class="try-box">
+    <div class="try-switch" hidden><button type="button" data-group="say" aria-pressed="true">Falar</button><button type="button" data-group="alert" aria-pressed="false">Aviso do banco</button></div>
+    <div class="try-group" data-group="say">
+      <h3 class="try-title">Coisas que você diria</h3>
+      <article class="try-card" data-label="3 de uma vez"><p class="try-in say">café 8, uber 23 e almoço 35</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;8,00</b><span>🍽️ Restaurantes</span><span class="k">Gasto</span></div><div class="try-draft"><b>R$&nbsp;23,00</b><span>🚌 Transporte</span><span>Uber</span><span class="k">Gasto</span></div><div class="try-draft"><b>R$&nbsp;35,00</b><span>🍽️ Restaurantes</span><span class="k">Gasto</span></div></div><p class="try-note">Três compras de uma vez só: três rascunhos para conferir e salvar juntos.</p></article>
+      <article class="try-card" data-label="Loja, cartão, ontem"><p class="try-in say">mercado 250 no Pão de Açúcar no cartão ontem</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;250,00</b><span>🛒 Mercado</span><span>Pão de Açúcar</span><span>Cartão de crédito</span><span>Ontem</span><span class="k">Gasto</span></div></div><p class="try-note">A loja, a conta e o dia também entram. “No cartão” é a sua conta de cartão, quando você tem uma.</p></article>
+      <article class="try-card" data-label="42 e 90"><p class="try-in say">iFood 42 e 90</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;42,90</b><span>🍽️ Restaurantes</span><span>iFood</span><span class="k">Gasto</span></div></div><p class="try-note">O preço do jeito que se fala: “42 e 90” é R$&nbsp;42,90. E marcas conhecidas já trazem a loja e a categoria.</p></article>
+      <article class="try-card" data-label="Pix pro João"><p class="try-in say">fiz um Pix de 50 pro João</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;50,00</b><span>João</span><span class="k">Gasto</span></div></div><p class="try-note">Pix enviado é gasto, com o nome de quem recebeu.</p></article>
+      <article class="try-card" data-label="Por extenso"><p class="try-in say">dois mil e quinhentos de aluguel</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;2.500,00</b><span>🏠 Moradia</span><span class="k">Gasto</span></div></div><p class="try-note">Valores falados por extenso, com mil e tudo.</p></article>
+      <article class="try-card" data-label="Fatura do cartão"><p class="try-in say">paguei a fatura do cartão 1800</p><div class="try-out"><div class="try-draft transfer"><b>R$&nbsp;1.800,00</b><span>Conta corrente → Cartão de crédito</span><span class="k">Transferência</span></div></div><p class="try-note">Pagar a fatura é transferência, não gasto: as compras do cartão não contam duas vezes.</p></article>
+      <article class="try-card" data-label="O salário caiu"><p class="try-in say">caiu o salário 4500</p><div class="try-out"><div class="try-draft income"><b>R$&nbsp;4.500,00</b><span>💰 Salário</span><span class="k">Receita</span></div></div><p class="try-note">Dinheiro que entra é receita.</p></article>
+    </div>
+    <div class="try-group" data-group="alert">
+      <h3 class="try-title">Avisos do banco, do jeito que chegam</h3>
+      <article class="try-card" data-label="💸 Pix recebido"><p class="try-in sms"><b>SEU BANCO</b>Pix recebido no valor de R$&nbsp;150,00, de JULIANA COSTA.</p><div class="try-out"><div class="try-draft income"><b>R$&nbsp;150,00</b><span>JULIANA COSTA</span><span class="k">Receita</span></div></div><p class="try-note">Pix recebido entra como receita, com o nome de quem mandou.</p></article>
+      <article class="try-card" data-label="💳 Compra no cartão"><p class="try-in sms"><b>SEU BANCO</b>Compra de R$&nbsp;54,90 APROVADA em PAO DE ACUCAR para o cartão com final 4821.</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;54,90</b><span>🛒 Mercado</span><span>PAO DE ACUCAR</span><span>Cartão ••4821</span><span class="k">Gasto</span></div></div><p class="try-note">O valor da compra, a loja e o final do cartão, que escolhe a conta.</p></article>
+      <article class="try-card" data-label="🧾 Parcelado em 4x"><p class="try-in sms"><b>SEU BANCO</b>Compra de R$&nbsp;600,00 APROVADA em CASAS BAHIA em 4x de R$&nbsp;150,00 para o cartão com final 4821.</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;600,00</b><span>CASAS BAHIA</span><span>Cartão ••4821</span><span class="k">Gasto</span></div></div><p class="try-note">Entra o valor total, não a parcela. Escolha a categoria uma vez e a próxima compra na loja já vem com ela.</p></article>
+      <article class="try-card" data-label="💊 SMS com data"><p class="try-in sms"><b>SEU BANCO</b>Compra de R$&nbsp;129,90 em RAIA DROGASIL cartao final 4471 em 18/11 14:32.</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;129,90</b><span>💊 Saúde</span><span>RAIA DROGASIL</span><span>18 de nov.</span><span>Cartão ••4471</span><span class="k">Gasto</span></div></div><p class="try-note">Vale a data do aviso, mesmo que você cole dias depois.</p></article>
+      <article class="try-card" data-label="↗ Pix enviado"><p class="try-in sms"><b>SEU BANCO</b>Você enviou um Pix para MARIANA LIMA no valor de R$&nbsp;75,00.</p><div class="try-out"><div class="try-draft"><b>R$&nbsp;75,00</b><span class="k">Gasto</span></div></div><p class="try-note">Pix enviado entra como gasto.</p></article>
+      <article class="try-card" data-label="🔒 Código"><p class="try-in sms"><b>SEU BANCO</b>Seu código para aprovar a compra de R$&nbsp;1.890,00 em MAGAZINE LUIZA é 482913. Não compartilhe.</p><div class="try-out"><div class="try-draft skipped"><b>Ignorado</b><span>Código de verificação, não é compra</span></div></div><p class="try-note">O código cita um valor, mas serve só para aprovar a compra: não entra nos seus gastos.</p></article>
+      <article class="try-card" data-label="✕ Negada"><p class="try-in sms"><b>SEU BANCO</b>Compra no cartão de R$&nbsp;212,00 foi NEGADA, pois o limite disponível não é suficiente.</p><div class="try-out"><div class="try-draft skipped"><b>Ignorado</b><span>A compra não foi concluída</span></div></div><p class="try-note">Compra negada nunca entra nos seus totais.</p></article>
+      <article class="try-card" data-label="⏳ Cobrança Pix"><p class="try-in sms"><b>SEU BANCO</b>Você recebeu uma cobrança Pix de R$&nbsp;89,90 de NETFLIX ENTRETENIMENTO. Pague até 20/11.</p><div class="try-out"><div class="try-draft skipped"><b>Ignorado</b><span>Ainda não foi paga</span></div></div><p class="try-note">Uma cobrança Pix só pede o pagamento. Nada saiu da sua conta, então nada é lançado.</p></article>
+    </div>
+  </div>
+</section>
 
-<h2 id="payday">Orçamento no ritmo do seu salário</h2>
-<p>Comece o mês no dia que quiser: dia 1º, no quinto dia útil ou quando o salário cai na conta. Lançamentos, orçamentos e gráficos seguem esse ciclo, e cada barra de orçamento marca o dia de hoje, para você ver se está no ritmo antes de o mês acabar.</p>
-<ul><li>Grátis: orçamento total e por categoria, mover dinheiro entre orçamentos no mês atual e alertas de orçamento.</li><li>Com o Pro: o plano do salário, que mostra se sua renda cobre tudo o que você planejou, um orçamento diário que desconta primeiro as contas fixas, e uma previsão até o fim do mês.</li></ul>
+<section id="today" class="hs today">
+  <div class="today-copy reveal"><p class="eyebrow">SEU NÚMERO DE HOJE</p><h2>Saiba quanto dá<br>para gastar hoje.</h2><p>Escolha o dia em que seu mês começa: dia 1º, dia 5 ou o dia em que o salário costuma cair. O TrackExpenses separa primeiro as contas que ainda vão vencer e divide o resto pelos dias que faltam. Gastou menos hoje? Amanhã você tem mais.</p><ul class="benefits"><li>Cada barra de orçamento marca o dia de hoje, para você ver se 46% gasto é muito ou pouco</li><li>Mova dinheiro entre orçamentos ou cubra um que estourou, sem mudar o total (grátis)</li><li>Um orçamento diário só para algumas categorias, até a data que você escolher: ótimo para uma viagem (Pro)</li><li>Estourou? O app mostra quanto passou do limite e quando começa um orçamento novo</li></ul><p class="small">O orçamento diário e as previsões fazem parte do Pro. O ritmo, os dias que faltam e os valores gastos e disponíveis são grátis.</p></div>
+  <form class="today-calc reveal" aria-label="Teste o orçamento diário" onsubmit="return false">
+    <p class="today-calc-label">TESTE · QUANTO POSSO GASTAR POR DIA?</p>
+    <div class="step-row"><label for="tc-left">Disponível no orçamento</label><div class="stepper"><button type="button" data-step="-50" data-for="tc-left" aria-label="50 a menos">−</button><input id="tc-left" type="number" inputmode="decimal" min="0" step="any" value="2400"><button type="button" data-step="50" data-for="tc-left" aria-label="50 a mais">+</button></div></div>
+    <div class="step-row"><label for="tc-bills">Contas que ainda vão vencer</label><div class="stepper"><button type="button" data-step="-25" data-for="tc-bills" aria-label="25 a menos">−</button><input id="tc-bills" type="number" inputmode="decimal" min="0" step="any" value="450"><button type="button" data-step="25" data-for="tc-bills" aria-label="25 a mais">+</button></div></div>
+    <div class="step-row"><label for="tc-days">Dias que faltam, contando hoje</label><div class="stepper"><button type="button" data-step="-1" data-for="tc-days" aria-label="Um dia a menos">−</button><input id="tc-days" type="number" inputmode="numeric" min="1" max="31" step="1" value="15"><button type="button" data-step="1" data-for="tc-days" aria-label="Um dia a mais">+</button></div></div>
+    <div class="today-result" aria-live="polite"><span>Você pode gastar</span><b id="tc-out">130,00</b><span>por dia, a partir de hoje</span></div>
+    <span class="today-bar" aria-hidden="true"><i></i><em data-label="Hoje · 58% do mês">Hoje</em></span>
+    <p class="today-calc-foot">(Disponível − contas a vencer) ÷ dias que faltam, arredondado para baixo. <a href="../tools/daily-budget.html" hreflang="en">Abrir a calculadora completa (em inglês) →</a></p>
+  </form>
+</section>
 
-<h2 id="coach">Um coach que fala português</h2>
-<p>O coach financeiro lê o mês que terminou, mostra para onde vai o dinheiro do dia a dia e sugere um limite para você testar. Pergunte “Você está no ritmo este mês?” ou “Como foi meu setembro?”, ou digite o que gastou.</p>
-<ul><li>O dia a dia, os gráficos e os gastos que você digita ficam no próprio celular, grátis e sem gastar perguntas.</li><li>Perguntas abertas são respondidas pelo Claude, da Anthropic, só se você concordar. Vão a sua pergunta, a conversa e um resumo deste mês e do anterior; o coach também pode pedir totais de meses anteriores ou compras com data, estabelecimento, categoria e valor. Notas, comprovantes, números de conta e saldos nunca são enviados. 10 perguntas por mês são grátis em cada aparelho.</li><li>Com o Pro: desafios com acompanhamento semanal e mais perguntas.</li></ul>
+<section id="coach" class="hs coach">
+  <figure class="coach-stage">
+    <div class="coach-chat" data-demo data-loop="14500" role="img" aria-label="Animação: alguém pergunta ao coach financeiro “Estou no ritmo este mês?” e ele responde no próprio celular que 46% do orçamento foi gasto com 58% do mês já passado. Depois a pessoa toca em “O que posso melhorar?” e uma resposta da IA sugere passar o café em casa três dias por semana. Por fim, ela digita “café 8 uber 23” e os dois gastos são salvos. Valores de exemplo.">
+      <div class="demo-screen coach-screen" aria-hidden="true">
+        <div class="coach-head"><img src="../assets/home/coach-wave.webp" width="310" height="320" alt="" loading="lazy" decoding="async"><div><b>Seu coach financeiro</b><small>Lê seu mês · responde do seu jeito</small></div></div>
+        <p class="cb me" data-at="0">Estou no ritmo este mês?</p>
+        <p class="cb dots" data-at="300" data-off="1300"><i></i><i></i><i></i></p>
+        <p class="cb coach" data-at="1300">Está, sim. Você gastou <b>46%</b> do orçamento e <b>58%</b> do mês já passou. O que pede atenção é o Mercado, que já está em 82%.<span class="cb-tag">No seu celular · grátis</span></p>
+        <p class="cb me ai" data-at="5200">✦ O que posso melhorar?</p>
+        <p class="cb dots" data-at="6000" data-off="7300"><i></i><i></i><i></i></p>
+        <p class="cb coach ai" data-at="7300">O cafezinho é a compra pequena que mais se repete: 21 vezes neste mês. Passar o café em casa três dias por semana economiza cerca de um terço desse valor.<span class="cb-tag ai">IA · confira os números</span></p>
+        <p class="cb me" data-at="10300">café 8 uber 23</p>
+        <div class="cb logged" data-at="11100"><span>🍽️ Café <b>8,00</b></span><span>🚌 Uber <b>23,00</b></span><em>✓ 2 salvos · grátis</em></div>
+      </div>
+    </div>
+    <button class="demo-toggle" type="button" hidden>Pausar</button>
+    <figcaption>Conversa ilustrativa · valores de exemplo</figcaption>
+  </figure>
+  <div class="coach-copy reveal"><p class="eyebrow">COACH FINANCEIRO <span class="tier">GRÁTIS + PRO</span></p><h2>Pergunte sobre seu dinheiro<br>do seu jeito.</h2><p>“Estou no ritmo?” “Como foi setembro?” “Quanto gastei no mercado?” As perguntas do dia a dia o coach responde no próprio celular, na hora e de graça. Para uma pergunta aberta, ele consulta o Claude, da Anthropic, só depois que você concorda, com um resumo do seu mês. Suas notas, comprovantes, nomes de contas e saldos nunca vão junto.</p><ul class="benefits"><li>Lê o mês que passou e sugere um limite; entre no desafio para ter acompanhamento semanal (Pro)</li><li>Digite “café 8 uber 23” e ele lança os dois, de graça</li><li>10 perguntas com IA por mês grátis em cada aparelho, mais com o Pro</li><li>Fala português, inglês, espanhol, alemão e árabe</li></ul><a href="../features/ai-money-coach.html" hreflang="en">Conheça o coach financeiro (em inglês) <span aria-hidden="true">→</span></a></div>
+</section>
 
-<h2 id="clear">Veja para onde vai seu dinheiro</h2>
-<ul><li>Lista do dia, calendário, totais do mês e gastos por estabelecimento.</li><li>Receitas e despesas, e a categoria que mais mudou em relação ao período anterior.</li><li>Dinheiro, contas e cartões, com transferências e saldos, também em várias moedas com a cotação que você define.</li><li>Lançamentos recorrentes para aluguel, salário e assinaturas, com lembrete na véspera de cada conta.</li><li>Widgets para a Tela de Início e a Tela Bloqueada, Siri e Atalhos.</li></ul>
+<section id="more" class="hs more">
+  <header class="hs-head reveal"><p class="eyebrow">OS DETALHES QUE SOMAM</p><h2>E tudo mais<br>que você espera.</h2></header>
+  <div class="tiles">
+    <div class="tile reveal"><span class="ti">🔔</span><b>Alertas de orçamento</b><span>Um aviso aos 80%, se você estiver gastando mais rápido que o planejado, e outro quando o orçamento estoura.</span><em>GRÁTIS</em></div>
+    <div class="tile reveal"><span class="ti">🗓️</span><b>Lembretes de contas</b><span>Um aviso às 9h, na véspera do vencimento do aluguel, do condomínio ou de uma assinatura.</span><em>GRÁTIS</em></div>
+    <div class="tile reveal"><span class="ti">✈️</span><b>Orçamento diário da viagem</b><span>Escolha alguns orçamentos e o último dia, e veja quanto dá para gastar por dia.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">📱</span><b>Widgets e Siri</b><span>Lance a compra de sempre com um toque e pergunte à Siri quanto ainda dá para gastar hoje.</span><em>GRÁTIS</em></div>
+    <div class="tile reveal"><span class="ti">🔎</span><b>A busca soma</b><span>Busque uma loja e veja quanto você já gastou lá, em todos os meses.</span><em>GRÁTIS</em></div>
+    <div class="tile reveal"><span class="ti">💻</span><b>iPhone, iPad e Mac</b><span>A sincronização privada pelo iCloud mantém os mesmos lançamentos em todos os aparelhos.</span><em>GRÁTIS</em></div>
+    <div class="tile reveal"><span class="ti">💱</span><b>Qualquer moeda</b><span>Gastou em dólar na viagem? Lance com a sua cotação; os totais ficam em reais.</span><em>GRÁTIS</em></div>
+    <div class="tile reveal"><span class="ti">📤</span><b>Exportar e compartilhar</b><span>Uma planilha de qualquer mês ou período, ou o backup completo.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">💼</span><b>Plano do salário</b><span>Divida sua renda entre gastos e poupança, linha por linha, com o planejado ao lado do real.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">💳</span><b>Contas e cartões</b><span>Dinheiro, conta, cartão, poupança e empréstimo, com transferências que não contam duas vezes.</span><em>3 GRÁTIS</em></div>
+    <div class="tile reveal"><span class="ti">🔒</span><b>Bloqueio do app</b><span>Face ID ou código. Sem login do banco, sem cadastro.</span><em>GRÁTIS</em></div>
+    <div class="tile tile-lang reveal"><span class="ti">🌍</span><b>Cinco idiomas</b><span>Voz e coach inclusos: <a href="../index.html" lang="en" hreflang="en">English</a> · <a href="../ar/index.html" lang="ar" hreflang="ar">العربية</a> · <a href="../de/index.html" lang="de" hreflang="de">Deutsch</a> · <a href="../es/index.html" lang="es-419" hreflang="es-419">Español</a></span><em>GRÁTIS</em></div>
+  </div>
+  <p class="section-cta"><a href="../features/index.html" hreflang="en">Todos os recursos, grátis e Pro, lado a lado (em inglês) →</a></p>
+</section>
 
-<h2 id="private">Seus dados são seus</h2>
-<p>Sem anúncios, sem login do banco e sem conta no TrackExpenses. Seus lançamentos ficam no aparelho e sincronizam pelo seu iCloud. Proteja o app com código ou Face ID e anexe fotos dos comprovantes. Com o Pro, você exporta seus lançamentos em CSV de qualquer período e faz um backup completo.</p>
+<section id="reviews" class="hs reviews">
+  <header class="hs-head reveal"><p class="eyebrow">NAS PALAVRAS DE QUEM USA</p><h2>Quem usa, conta.</h2>{{RATING_SUMMARY}}</header>
+  {{REVIEWS}}
+</section>
 
-<h2 id="free-and-pro">Comece grátis</h2>
-<p>Lançamentos ilimitados, orçamentos, calendário, gráficos, busca e sincronização pelo iCloud são grátis, com até 3 contas, 2 lançamentos recorrentes, 10 importações automáticas de avisos do banco e 10 entradas por voz por mês em cada aparelho. Depois disso, os avisos continuam sendo capturados e ficam guardados, bloqueados fora dos seus totais: o Pro acrescenta todos; senão, o limite do mês seguinte libera os que couberem.</p>
-<p>O Pro acrescenta importações e entrada por voz ilimitadas, plano do salário, previsões, orçamento diário, simulações, desafios com o coach, contas e recorrentes ilimitados, exportação e importação em CSV, backup completo com restauração, temas e ícones alternativos. Escolha a assinatura mensal ou anual, ou a compra única (Vitalício).</p>
+<section id="screenshots" class="hs screens">
+  <header class="hs-head reveal"><p class="eyebrow">O APP POR DENTRO</p><h2>Telas reais, em português.<br>Deslize para ver.</h2></header>
+  <div class="gallery-wrap">
+    <div class="screen-gallery" tabindex="0" role="region" aria-label="Telas do app; deslize para o lado">
+      <article class="gallery-card"><span class="feature-label">LANÇAMENTOS <span class="tier">GRÁTIS</span></span><h3>Seu mês, de salário a salário.</h3><p>Receitas, gastos e o disponível de hoje, com uma compra lançada pelo aviso do banco.</p><div class="phone"><img src="../assets/pt/ledger.webp" width="660" height="1434" alt="Lançamentos no TrackExpenses em português: receitas de R$&nbsp;4.500,00, gastos de R$&nbsp;2.342,12, o orçamento diário de R$&nbsp;101,17 e uma compra no Pão de Açúcar lançada a partir do aviso do banco, no período de 05/11 a 04/12/2026" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">POR VOZ <span class="tier">10 GRÁTIS POR MÊS</span></span><h3>Uma frase, três gastos.</h3><p>Cada compra que você falou vira um rascunho para conferir antes de salvar.</p><div class="phone"><img src="../assets/pt/voice.webp" width="660" height="1434" alt="A entrada por voz: “café 7,50”, “uber 27” e “mercado 130 no Pão de Açúcar” viram três lançamentos para revisar" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">SMS DO BANCO <span class="tier">10 GRÁTIS POR MÊS</span></span><h3>Compra e Pix, lançados.</h3><p>Uma compra aprovada e um Pix recebido viram lançamentos; o código de verificação fica de fora.</p><div class="phone"><img src="../assets/pt/alerts.webp" width="660" height="1434" alt="Avisos do banco viram lançamentos: uma compra aprovada no Pão de Açúcar e um Pix recebido de R$&nbsp;150,00; um código de verificação fica de fora" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">ORÇAMENTO <span class="tier">DIÁRIO NO PRO</span></span><h3>Quanto ainda dá para gastar.</h3><p>O que resta no mês, o plano do salário e o orçamento diário, já sem as contas fixas.</p><div class="phone"><img src="../assets/pt/budget.webp" width="660" height="1434" alt="Estatísticas do orçamento: R$&nbsp;1.757,88 restantes no mês, o plano do salário e um orçamento diário de R$&nbsp;101,17" loading="lazy" decoding="async"></div></article>
+    </div>
+    <div class="gallery-controls" hidden><button type="button" class="g-prev" aria-label="Telas anteriores">←</button><button type="button" class="g-next" aria-label="Próximas telas">→</button></div>
+  </div>
+  <p class="gallery-note small">Capturas reais do iPhone com lançamentos de exemplo.</p>
+</section>
 
-<h2 id="faq">Perguntas frequentes</h2>
-<details><summary>O app se conecta à minha conta do banco?</summary><p>Não. Ele não pede a senha do banco e não se conecta a ele. Você lança os gastos, cola o aviso ou cria no Atalhos uma automação que passa os avisos que chegam por SMS ou por e-mail.</p></details>
-<details><summary>O app lê minhas mensagens ou meu e-mail?</summary><p>Não. A automação que você cria no Atalhos passa para o TrackExpenses só o aviso que combina com o seu filtro. O app não tem acesso às suas mensagens nem ao seu e-mail.</p></details>
-<details><summary>O aviso do Nubank entra sozinho?</summary><p>Não. O Nubank avisa por notificação do app, e nenhuma automação do iPhone consegue ler a notificação de outro app. Cole o aviso do Nubank no TrackExpenses e o lançamento vem preenchido. Se você paga com Apple Pay, a automação da Carteira lança essas compras sozinha.</p></details>
-<details><summary>O app é grátis?</summary><p>Sim. O download é grátis e o controle de gastos é completo sem pagar: lançamentos ilimitados, orçamentos, estatísticas e busca. O Pro acrescenta entrada por voz e importações ilimitadas, a exportação em CSV e as ferramentas de planejamento, com assinatura mensal ou anual ou compra única.</p></details>
-<details><summary>Onde ficam meus dados?</summary><p>No seu aparelho e, se você quiser, nos seus outros aparelhos pelo seu iCloud. Não existe conta no TrackExpenses nem um servidor que guarde seus lançamentos.</p></details>
+<section class="hs plans" id="free-and-pro">
+  <header class="hs-head reveal"><p class="eyebrow">COMECE GRÁTIS</p><h2>Um controle completo, de graça.<br>Menos trabalho com o Pro.</h2></header>
+  <div class="plans-row">
+    <article class="plan reveal"><p class="eyebrow">GRÁTIS</p><h3>Tudo para criar o hábito.</h3><ul class="benefits"><li>Lançamentos manuais ilimitados, orçamentos e busca</li><li>Colar avisos do banco e do Pix, sem limite</li><li>Mês do orçamento a partir do dia do pagamento, ritmo e estatísticas</li><li>Mover dinheiro entre orçamentos e cobrir um que estourou</li><li>Alertas de orçamento e lembretes de contas</li><li>Sincronização privada pelo iCloud no iPhone, iPad e Mac</li><li>3 contas e 2 lançamentos recorrentes</li><li>Todo mês, em cada aparelho: 10 entradas por voz, 10 importações automáticas de avisos do banco e 10 perguntas com IA ao coach</li></ul></article>
+    <article class="plan plan-pro reveal"><p class="eyebrow">PRO</p><h3>A parte chata, resolvida.</h3><ul class="benefits"><li>Entrada por voz e importações automáticas ilimitadas</li><li>Contas e lançamentos recorrentes ilimitados</li><li>Plano do salário, previsões e simulações</li><li>Orçamento diário geral e por orçamento, e um só para as categorias que você escolher, até a data que quiser</li><li>Desafios do coach e mais perguntas com IA</li><li>Exportar e compartilhar, importação de CSV e backup completo</li><li>Temas e ícones alternativos</li></ul><p class="small">Mensal, anual ou compra única (Vitalício), com o preço da sua App Store. Se o Pro acabar, nada do que você salvou fica bloqueado.</p></article>
+  </div>
+  <div class="plans-cta">{{APP_STORE_CTA}}</div>
+</section>
 
-<h2 id="more">Mais guias e calculadoras</h2>
-<p>Por enquanto, o resto do site está em inglês:</p>
-<ul><li><a href="../guides/voice-expenses-iphone.html" hreflang="en" lang="en">Voice Expense Tracking on iPhone</a></li><li><a href="../guides/payday-budget.html" hreflang="en" lang="en">Start Your Budget Month on Payday</a></li><li><a href="../tools/index.html" hreflang="en" lang="en">Free budget calculators</a></li><li><a href="../privacy.html" hreflang="en" lang="en">Privacy Policy</a></li></ul>
-<p class="byline">Feito por <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · Atualizado em novembro de 2026 · <a href="../support.html" hreflang="en">Sugerir uma correção</a></p>
+<section class="hs faq-section" id="faq"><header class="hs-head"><p class="eyebrow">BOAS PERGUNTAS</p><h2>Antes de baixar.</h2></header>
+  <details><summary>O TrackExpenses se conecta ao meu banco?</summary><p>Não. Não existe conexão com o banco, nem login do banco, nem cadastro no app. Você lança os gastos falando, colando o aviso ou com automações do Atalhos para os avisos do banco e as compras com Apple Pay.</p></details>
+  <details><summary>Como ele lê os avisos sem ler minhas mensagens?</summary><p>Você cria no app Atalhos uma automação que passa para o TrackExpenses cada aviso do banco, por SMS ou por e-mail, que tenha uma palavra escolhida por você, como R$. O app lê só o que a automação entrega e guarda o lançamento, nunca a mensagem. Ele nunca abre suas mensagens nem seu e-mail.</p></details>
+  <details><summary>O aviso do Nubank entra sozinho?</summary><p>Não. O Nubank avisa pela notificação do app, e nenhuma automação do iPhone consegue ler a notificação de outro app. Copie o e-mail do banco ou o detalhe da compra no app e cole no TrackExpenses: valor, loja e data vêm preenchidos, e você confere antes de salvar. Vale o mesmo para C6, Inter, PicPay e Mercado Pago. Se você paga com Apple Pay, a automação da Carteira lança essas compras sozinha.</p></details>
+  <details><summary>O TrackExpenses é grátis?</summary><p>Sim. O plano grátis tem lançamentos manuais ilimitados, orçamentos, mês do orçamento a partir do dia do pagamento, estatísticas, busca e sincronização privada pelo iCloud, além de 10 entradas por voz, 10 importações automáticas de avisos do banco e 10 perguntas com IA ao coach por mês em cada aparelho. O Pro tira esses limites e acrescenta o plano do salário, as previsões, o orçamento diário, toda a exportação e o backup completo, com assinatura mensal ou anual ou compra única (Vitalício).</p></details>
+  <details><summary>O coach manda meus dados para uma IA?</summary><p>Só quando você pergunta algo que o próprio celular não sabe responder, e só depois que você concorda. Aí vão para o Claude, da Anthropic, pelo servidor do desenvolvedor, a pergunta, a conversa até ali e um resumo deste mês e do anterior; se o coach precisar, também totais de até 13 meses ou até 20 compras. Nunca suas notas, comprovantes, nomes ou números de conta, nem saldos.</p></details>
+  <details><summary>Em quais idiomas ele funciona?</summary><p>Em português do Brasil, inglês, espanhol da América Latina, alemão e árabe, este com a tela inteira da direita para a esquerda. Vale para todas as telas, a entrada por voz, os avisos do banco e o coach financeiro.</p></details>
+  <details><summary>O mês do orçamento pode começar no dia do pagamento?</summary><p>Pode. Escolha qualquer dia de 1 a 31, e seus lançamentos, orçamentos e gráficos seguem esse mês. É um período mensal, de pagamento a pagamento, não um ciclo quinzenal.</p></details>
+  <details><summary>Funciona no iPad e no Mac?</summary><p>Sim. O TrackExpenses funciona no iPhone e no iPad com iOS 17 ou posterior e nos Macs com Apple silicon, e a sincronização privada pelo iCloud mantém os mesmos lançamentos em todos eles.</p></details>
+  <details><summary>Onde ficam meus dados?</summary><p>No seu aparelho e, se você quiser, nos seus outros aparelhos Apple pela sincronização privada do iCloud. Não existe cadastro no app. A Política de Privacidade explica como ficam guardados os lançamentos, a voz, o coach e as compras.</p><a href="../privacy.html" hreflang="en">Ler a Política de Privacidade (em inglês) →</a></details>{{STORE_FAQ}}
+</section>
+
+<section class="hs learn" id="learn">
+  <header class="hs-head reveal"><p class="eyebrow">APRENDA E PLANEJE</p><h2>Guias e calculadoras grátis.</h2></header>
+  <div class="learn-cols">
+    <div class="learn-col"><h3>Guias passo a passo</h3><a href="bank-sms.html">Lance os avisos do banco por SMS</a><a href="bank-email.html">Avisos do banco por e-mail (Gmail também)</a><a href="../guides/daily-spending-limit.html" hreflang="en">Limite de gasto por dia (em inglês)</a><a href="../guides/travel-expenses-abroad.html" hreflang="en">Gastos de viagem no exterior (em inglês)</a><a href="../guides/budget-alerts-iphone.html" hreflang="en">Alertas de orçamento no iPhone (em inglês)</a><a href="../guides/credit-card-payment-vs-expense.html" hreflang="en">Fatura do cartão: gasto ou transferência? (em inglês)</a><a class="all" href="../guides/index.html" hreflang="en">Todos os guias, em inglês →</a></div>
+    <div class="learn-col"><h3>Calculadoras grátis, em inglês</h3><a href="../tools/daily-budget.html" hreflang="en">Orçamento diário até o pagamento</a><a href="../tools/monthly-budget-calculator.html" hreflang="en">Orçamento do mês</a><a href="../tools/50-30-20-calculator.html" hreflang="en">Regra 50/30/20</a><a href="../tools/travel-budget-calculator.html" hreflang="en">Orçamento de viagem</a><a href="../tools/emergency-fund-calculator.html" hreflang="en">Reserva de emergência</a><a href="../tools/subscription-cost-calculator.html" hreflang="en">Quanto custam suas assinaturas</a><a href="../tools/habit-cost-calculator.html" hreflang="en">Quanto custa um hábito</a><a class="all" href="../tools/index.html" hreflang="en">Todas as 11 calculadoras →</a></div>
+  </div>
+</section>

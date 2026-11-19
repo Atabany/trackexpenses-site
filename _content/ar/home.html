@@ -1,43 +1,252 @@
-<h1>سجّل مصاريفك دون أن تكتب</h1>
-<p class="lead">رسائل البنك تُسجَّل وحدها، وجملة واحدة بصوتك تكفي لتسجيل عدة مصاريف، وشهرك يبدأ يوم الراتب. TrackExpenses تطبيق لتتبع المصاريف والميزانية على iPhone وiPad، بالعربية بالكامل ومن اليمين إلى اليسار.</p>
-{{APP_STORE_CTA}}
-<div class="ar-shots"><figure><img src="../assets/ar/ledger.webp" width="660" height="1434" alt="شاشة العمليات في TrackExpenses بالعربية: دخل الشهر ومصاريفه والميزانية اليومية وعمليات اليوم" decoding="async"><figcaption>شهرك من الراتب إلى الراتب</figcaption></figure><figure><img src="../assets/ar/voice.webp" width="660" height="1434" alt="شاشة التسجيل بالصوت: جملة «غداء 45، كريم 30 ومقاضي 180 من كارفور» تتحول إلى ثلاث عمليات" loading="lazy" decoding="async"><figcaption>جملة واحدة، ثلاث عمليات</figcaption></figure><figure><img src="../assets/ar/budget.webp" width="660" height="1434" alt="شاشة الميزانية: شريط لكل فئة مع علامة اليوم والمبلغ المتبقي" loading="lazy" decoding="async"><figcaption>ميزانية لكل فئة، وعلامة تبيّن أين وصل اليوم</figcaption></figure><figure><img src="../assets/ar/coach.webp" width="660" height="1434" alt="شاشة المدرّب المالي: قراءة لشهر أكتوبر واقتراح حدّ لمصاريف البقالة" loading="lazy" decoding="async"><figcaption>مدرّب مالي يقرأ شهرك</figcaption></figure></div>
+<section class="hx" aria-labelledby="hx-title">
+  <div class="hx-bg" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i></div>
+  <div class="hx-inner">
+    <div class="hx-copy">
+      {{RATING_PILL}}
+      <h1 id="hx-title">المصاريف الصغيرة<br>تأكل الراتب.<br><em>لا تفوّت منها شيئًا.</em></h1>
+      <p class="hx-lead">تطبيق لتتبع المصاريف على iPhone يتابع عنك: رسائل البنك تُسجَّل وحدها، ويكفي أن تقول «قهوة 15، تاكسي 40» لتُسجَّل العمليتان، ثم يخبرك كم يمكنك أن تصرف اليوم.</p>
+      <div class="hx-cta">{{APP_STORE_CTA}}<p>ابدأ مجانًا<span>بلا ربط بالبنك ولا حساب</span></p></div>
+    </div>
+    <figure class="hx-stage">
+      <div class="hx-demo" data-demo data-loop="15000" data-threshold="0.05" role="img" aria-label="رسم متحرك: رسالة شراء من البنك في كارفور تصبح عملية في البقالة، وجملة «قهوة وبترول» بصوتك تضيف عمليتين، ومشترى من طلبات عبر Apple Pay يُسجَّل، وما يتبقى لك اليوم ينقص مع كل عملية، ثم يخبرك المدرّب المالي أن الشهر ضمن الوتيرة. أرقام للتوضيح.">
+        <span class="hx-prop p-groceries" data-at="2300" aria-hidden="true"><img src="../assets/home/groceries.webp" width="177" height="240" alt="" decoding="async"><b class="money" data-v="42.18">AED 168.72</b></span>
+        <span class="hx-prop p-coffee" data-at="5900" aria-hidden="true"><img src="../assets/home/coffee.webp" width="169" height="240" alt="" decoding="async"><b class="money" data-v="5">AED 20.00</b></span>
+        <span class="hx-prop p-taxi" data-at="6100" aria-hidden="true"><img src="../assets/home/fuel.webp" width="184" height="240" alt="" decoding="async"><b class="money" data-v="18">AED 72.00</b></span>
+        <span class="hx-prop p-delivery" data-at="8300" aria-hidden="true"><img src="../assets/home/delivery.webp" width="195" height="240" alt="" decoding="async"><b class="money" data-v="23.40">AED 93.60</b></span>
+        <div class="demo-phone hx-phone">
+          <div class="demo-screen hx-screen" aria-hidden="true">
+            <div class="hx-status"><b>9:41</b><span class="hx-sig"><i></i><i></i><i></i><i></i></span></div>
+            <div class="hx-banner" data-at="1000" data-off="2600"><span class="hx-banner-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="hx-banner-head"><b dir="ltr">BANK</b><span>الآن</span></p><p>تمت عملية شراء بقيمة <span class="money" data-v="42.18" data-code>AED 168.72</span> على بطاقتك المنتهية بـ 6878 لدى CARREFOUR</p></div></div>
+            <div class="hx-pay" data-at="7800" data-off="9000"><span class="hx-pay-mark"></span><div><p class="hx-banner-head"><b>المحفظة</b><span>الآن</span></p><p>Apple Pay · Talabat · <span class="money" data-v="23.40">AED 93.60</span></p></div></div>
+            <p class="hx-date">الخميس، 19 نوفمبر</p>
+            <p class="hx-title">اليوم</p>
+            <div class="hx-card">
+              <p class="hx-card-label">يتبقى لك اليوم</p>
+              <p class="hx-left"><b class="money hx-v0" data-v="120" data-off="2600">AED 480.00</b><b class="money hx-v1" data-v="77.82" data-at="2600" data-off="6600">AED 311.28</b><b class="money hx-v2" data-v="54.82" data-at="6600" data-off="9000">AED 219.28</b><b class="money hx-v3" data-v="31.42" data-at="9000">AED 125.68</b></p>
+              <span class="hx-bar"><i></i><em></em></span>
+              <p class="hx-card-foot"><span>الميزانية اليومية <span class="money" data-v="120">AED 480.00</span></span><span class="hx-pace">✓ الشهر ضمن الوتيرة</span></p>
+            </div>
+            <div class="hx-rows">
+              <div class="hx-row" data-at="2600"><span class="hx-emoji">🛒</span><span class="hx-main"><b>Carrefour</b><small>البقالة <em class="src">رسائل البنك</em></small></span><span class="hx-amt" dir="ltr">−<span class="money" data-v="42.18">AED 168.72</span></span></div>
+              <div class="hx-row" data-at="6600"><span class="hx-emoji">🍽️</span><span class="hx-main"><b>قهوة</b><small>الطعام <em class="src v">الصوت</em></small></span><span class="hx-amt" dir="ltr">−<span class="money" data-v="5">AED 20.00</span></span></div>
+              <div class="hx-row" data-at="6800"><span class="hx-emoji">⛽</span><span class="hx-main"><b>بترول</b><small>الوقود <em class="src v">الصوت</em></small></span><span class="hx-amt" dir="ltr">−<span class="money" data-v="18">AED 72.00</span></span></div>
+              <div class="hx-row" data-at="9000"><span class="hx-emoji">🍽️</span><span class="hx-main"><b>Talabat</b><small>الطعام <em class="src p">Apple Pay</em></small></span><span class="hx-amt" dir="ltr">−<span class="money" data-v="23.40">AED 93.60</span></span></div>
+            </div>
+            <div class="hx-say" data-at="3900" data-off="6600"><span class="hx-mic"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><p class="hx-words"><span data-at="4200">«قهوة</span> <span data-at="4500"><span class="hx-num" data-v="5">20</span>،</span> <span data-at="4900">بترول</span> <span data-at="5200"><span class="hx-num" data-v="18">72</span>»</span></p><span class="hx-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+            <div class="hx-coach" data-at="10000"><img src="../assets/home/coach-talk.webp" width="278" height="320" alt="" loading="lazy" decoding="async"><p><b>ضمن الوتيرة.</b> صرفت 46% من ميزانيتك ومضى 58% من الشهر، ويتبقى لك اليوم <span class="money" data-v="31.42">AED 125.68</span>.</p></div>
+            <div class="hx-dock"><span class="say" data-pulse="3900,4600">بالصوت</span><span>لصق</span><span class="add">+ إضافة</span></div>
+          </div>
+        </div>
+      </div>
+      <figcaption><span>رسم متحرك توضيحي · مشتريات للتوضيح</span><button class="demo-toggle hx-toggle" type="button" hidden>إيقاف مؤقت</button></figcaption>
+    </figure>
+  </div>
+</section>
 
-<h2 id="bank-sms">رسائل البنك تُسجَّل وحدها</h2>
-<p>في الخليج ومصر يرسل البنك رسالة مع كل عملية شراء. أعدّ تحكمًا تلقائيًا في «الاختصارات» مرة واحدة، وستتحول هذه التنبيهات ومشتريات بطاقات المحفظة إلى عمليات في سجلّك، تراجعها متى شئت.</p>
-<ul><li>يقرأ المبلغ والمتجر والتاريخ والبطاقة من الرسالة، بالعربية أو الإنجليزية، ويتجاهل رموز التحقق والعمليات المرفوضة والعروض.</li><li>التطبيق لا يقرأ صندوق رسائلك ولا يتصل ببنكك. التحكم التلقائي الذي تعدّه أنت هو من يمرّر الرسالة المطابقة.</li><li>أو الصق رسالة البنك بنفسك، وستُعبّأ التفاصيل لك.</li><li>10 رسائل مجانًا كل شهر ميلادي على كل جهاز، وبلا حدود مع Pro.</li></ul>
-<p><a href="bank-sms.html">دليل الإعداد خطوة بخطوة، بصور من «الاختصارات» بالعربية</a></p>
+<ul class="hx-proof" aria-label="TrackExpenses باختصار">
+  <li><b>تنبيهات البنك</b> بالرسائل والبريد تُسجَّل وحدها</li>
+  <li><b>عدة مشتريات</b> في جملة واحدة</li>
+  <li><b>شهر الميزانية</b> يبدأ يوم الراتب</li>
+  <li><b>مدرّب مالي بالذكاء الاصطناعي</b>، وخصوصيتك أولًا</li>
+  <li><b>5 لغات</b> · iPhone وiPad وMac</li>
+</ul>
 
-<h2 id="voice">سجّل بصوتك</h2>
-<p>قل «قهوة 15، تاكسي 40 وبقالة 120 من كارفور البارحة»، وستجد ثلاث مسودات بمبالغها وفئاتها وتاريخها، تراجعها وتحفظها معًا. يفهم الأرقام كما تُقال، مثل «خمسة وعشرين» و«مية ونص»، ويعمل الاستماع على جهازك.</p>
-<ul><li>10 إدخالات صوتية محفوظة مجانًا كل شهر ميلادي على كل جهاز، وبلا حدود مع Pro.</li><li>يعتمد الإدخال الصوتي على دعم الجهاز واللغة.</li></ul>
+<section id="ways" class="hs ways">
+  <header class="hs-head reveal"><p class="eyebrow">ثلاث طرق للتسجيل</p><h2>لا تكتب كل مصروف بيدك.<br>اختر الطريقة الأسهل.</h2><p>سجّل بالطريقة التي تناسب اللحظة. كل عملية تصل إلى الدفتر نفسه، وفي شهر الميزانية نفسه.</p></header>
+  <div class="ways-tabs">
+    <input type="radio" name="ways" id="way-say" checked><label for="way-say"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>بالصوت</label>
+    <input type="radio" name="ways" id="way-sms"><label for="way-sms"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg>رسائل البنك</label>
+    <input type="radio" name="ways" id="way-tap"><label for="way-tap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>لصق وأدوات</label>
+    <article class="way way-say" id="say">
+      <div class="way-copy"><span class="tier">10 مجانًا كل شهر · بلا حدود مع Pro</span><h3>جملة واحدة تكفي لعدة مشتريات.</h3><p class="quote-line">«قهوة 15، تاكسي 40 ومقاضي 180 من كارفور أمس.»</p><p>قل عملية واحدة أو مشتريات يوم كامل دفعة واحدة. يعرض TrackExpenses ما فهمه وأنت تتكلم، ويتوقف وحده حين تنتهي من الكلام، ثم يحوّل كلامك إلى مسودة لكل عملية بمبلغها وفئتها ومحلها وتاريخها. والتعرّف على الكلام يجري على جهازك نفسه. راجِع ثم احفظ.</p><ul class="benefits"><li>عدة مشتريات في جملة واحدة</li><li>يفهم الأرقام كما تُقال: «خمستاشر» و«ألفين ونص»</li><li>اختر اللغة التي تتحدث بها من شاشة الاستماع</li><li>سُمع السعر 1250 وأنت تقصد 12.50؟ بلمسة واحدة تصحّحه</li><li>الأسماء المعروفة مثل طلبات وكارفور تملأ فئتها وحدها</li></ul><a href="../guides/voice-expenses-iphone.html" hreflang="en">كيف يعمل التسجيل بالصوت (بالإنجليزية) <span aria-hidden="true">←</span></a></div>
+      <figure class="screen-stage stage-dark demo-stage">
+      <div class="demo-phone say-demo" data-demo data-loop="13500" role="img" aria-label="رسم متحرك: شخص يقول «قهوة، تاكسي ومقاضي من كارفور أمس». شاشة التسجيل بالصوت تستمع وتعرض المبالغ والفئات التي فهمتها، ثم ثلاث مسودات للمراجعة: الطعام، والمواصلات، والبقالة من كارفور، وكلها بتاريخ البارحة، ثم تحفظ الثلاث معًا.">
+        <div class="demo-screen" aria-hidden="true">
+          <div class="demo-bar"><span class="demo-x">✕</span><b>سجّل بصوتك</b><span class="demo-gap"></span></div>
+          <div class="say-listen" data-off="6700">
+            <p class="say-kicker"><span class="rec-dot"></span>جارٍ الاستماع</p>
+            <p class="say-heard-label">ما سمعته</p>
+            <p class="say-transcript" data-words="قهوة {5}، تاكسي {10} ومقاضي {85} من كارفور أمس" data-start="700" data-step="420"></p>
+            <div class="say-chips">
+              <span class="chip c-exp" data-at="1250"><span class="money" data-v="5" data-int>AED 20</span> · 🍽️ الطعام</span>
+              <span class="chip c-exp" data-at="2050"><span class="money" data-v="10" data-int>AED 40</span> · 🚌 المواصلات</span>
+              <span class="chip c-exp" data-at="2900"><span class="money" data-v="85" data-int>AED 340</span> · 🛒 البقالة</span>
+              <span class="chip" data-at="3700">📍 كارفور</span>
+              <span class="chip" data-at="4100">📅 البارحة</span>
+            </div>
+            <div class="say-mic">
+              <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+              <svg class="silence" viewBox="0 0 120 120" data-at="4700"><circle cx="60" cy="60" r="54"/></svg>
+              <span class="mic-btn"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+            </div>
+            <div class="say-wave" data-off="4600"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="say-pause" data-at="4700">يتوقف حين تنتهي من الكلام…</p>
+            <p class="say-tier">العربية · على جهازك فقط</p>
+          </div>
+          <div class="say-review">
+            <p class="say-quote" data-at="6900">«قهوة <span class="num" data-v="5">20</span>، تاكسي <span class="num" data-v="10">40</span> ومقاضي <span class="num" data-v="85">340</span> من كارفور أمس»</p>
+            <div class="draft" data-at="7200"><p class="d-said">«قهوة <span class="num" data-v="5">20</span>»</p><p class="d-amt"><span class="money" data-v="5" data-int>AED 20</span></p><p class="d-meta"><span class="pill">مصروف</span>🍽️ الطعام<span class="d-right">البارحة</span></p></div>
+            <div class="draft" data-at="7550"><p class="d-said">«تاكسي <span class="num" data-v="10">40</span>»</p><p class="d-amt"><span class="money" data-v="10" data-int>AED 40</span></p><p class="d-meta"><span class="pill">مصروف</span>🚌 المواصلات<span class="d-right">البارحة</span></p></div>
+            <div class="draft" data-at="7900"><p class="d-said">«مقاضي <span class="num" data-v="85">340</span> من كارفور أمس»</p><p class="d-amt"><span class="money" data-v="85" data-int>AED 340</span></p><p class="d-meta"><span class="pill">مصروف</span>🛒 البقالة<span class="d-right">كارفور · البارحة</span></p></div>
+            <div class="say-actions" data-at="8500"><span class="btn-retry">↺ إعادة المحاولة</span><span class="btn-save" data-pulse="9600">✓ حفظ 3 عمليات</span></div>
+            <p class="say-saved" data-at="10300"><b>✓ حُفظت 3 عمليات</b> · صُرف <span class="money" data-sum="5,10,85">AED 400</span> · الأخيرة: كارفور</p>
+          </div>
+        </div>
+      </div>
+      <button class="demo-toggle" type="button" hidden>إيقاف مؤقت</button>
+      <figcaption>رسم متحرك توضيحي للتسجيل بالصوت. مشتريات للتوضيح.</figcaption>
+    </figure>
+    </article>
+    <article class="way way-sms" id="sms">
+      <div class="way-copy"><span class="tier">10 مجانًا كل شهر · بلا حدود مع Pro</span><h3>تصل رسالة البنك، فتجدها في دفترك.</h3><p>بنكك يرسل لك رسالة أو بريدًا مع كل عملية شراء. وبتحكم تلقائي واحد في «الاختصارات» تصل هذه التنبيهات إلى TrackExpenses، فيسجّل المبلغ والمحل والبطاقة والتاريخ بعملتك. أما رموز التحقق والعمليات المرفوضة والعروض فتبقى خارج دفترك.</p><ul class="benefits"><li>رسائل البنك النصية، أو بريده عبر تطبيق «البريد» من Apple، وGmail أيضًا</li><li>بالعربية والإنجليزية، وبالأرقام العربية أو الغربية، وصيغ كثيرة غيرها</li><li>آخر أرقام البطاقة تختار الحساب الصحيح</li><li>التطبيق لا يفتح صندوق رسائلك ولا بريدك أبدًا</li></ul><a href="bank-sms.html">إعداد رسائل البنك خطوة بخطوة <span aria-hidden="true">←</span></a> <a href="bank-email.html">التنبيهات بالبريد <span aria-hidden="true">←</span></a></div>
+      <figure class="screen-stage stage-mint demo-stage">
+      <div class="demo-phone sms-demo" data-demo data-loop="15000" role="img" aria-label="رسم متحرك: رسائل البنك تصل إلى شاشة القفل. شراء من كارفور وخصم من ENOC يصبحان مصروفين، ورمز تحقق يُتجاهل، وإيداع الراتب يصبح دخلًا بانتظار مراجعتك.">
+        <div class="demo-screen lock" aria-hidden="true">
+          <div class="lock-time"><span>الخميس، 19 نوفمبر</span><b>9:41</b></div>
+          <ol class="notes">
+            <li class="note" data-at="300"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b dir="ltr">BANK</b><span>الآن</span></p><p class="note-body" dir="rtl">تمت عملية شراء بقيمة <mark class="m-amt" data-at="1100"><span class="money" data-v="42.18" data-code>AED 168.72</span></mark> على بطاقتك المنتهية بـ <mark class="m-card" data-at="1700">6878</mark> لدى <mark class="m-pay" data-at="1400">CARREFOUR</mark>. الرصيد المتاح <span class="money" data-v="4120" data-code>AED 16,480.00</span></p></div></li>
+            <li class="note" data-at="3600"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b dir="ltr">BANK</b><span>الآن</span></p><p class="note-body" dir="rtl">تم خصم <mark class="m-amt" data-at="4400"><span class="money" data-v="18.50" data-code>AED 74.00</span></mark> من بطاقتك المنتهية بالرقم <mark class="m-card" data-at="4700">6878</mark> لدى <mark class="m-pay" data-at="5000">ENOC</mark></p></div></li>
+            <li class="note note-otp" data-at="6900"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b dir="ltr">BANK</b><span>الآن</span></p><p class="note-body" dir="rtl">رمز التحقق الخاص بك هو 482915. لا تشاركه مع أحد.</p></div><span class="skip-stamp" data-at="7700">رمز تحقق · تم تجاهله</span></li>
+            <li class="note" data-at="9100"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b dir="ltr">BANK</b><span>الآن</span></p><p class="note-body" dir="rtl">تم إيداع راتب بمبلغ <mark class="m-inc" data-at="9900"><span class="money" data-v="4800" data-code>AED 19,200.00</span></mark> في حسابك رقم <mark class="m-card" data-at="10200">XXX4410</mark></p></div></li>
+          </ol>
+          <div class="automation" data-pulse="2000,5400,10500"><span class="auto-dot"></span>التحكم التلقائي ← TrackExpenses</div>
+          <div class="ledger-card">
+            <p class="ledger-head"><span class="ledger-icon"></span><b>TrackExpenses</b><span>اليوم</span></p>
+            <div class="ledger-row" data-at="2300"><span class="row-emoji">🛒</span><span class="row-main"><b>Carrefour</b><small>البقالة · البطاقة الائتمانية</small></span><span class="row-amt exp" dir="ltr">−<span class="money" data-v="42.18">AED 168.72</span></span></div>
+            <div class="ledger-row" data-at="5700"><span class="row-emoji">⛽</span><span class="row-main"><b>ENOC</b><small>الوقود · البطاقة الائتمانية</small></span><span class="row-amt exp" dir="ltr">−<span class="money" data-v="18.50">AED 74.00</span></span></div>
+            <div class="ledger-row" data-at="10800"><span class="row-emoji">💼</span><span class="row-main"><b>الراتب <em class="flag">للمراجعة</em></b><small>الدخل · البنك الرئيسي</small></span><span class="row-amt inc" dir="ltr">+<span class="money" data-v="4800">AED 19,200.00</span></span></div>
+          </div>
+        </div>
+      </div>
+      <button class="demo-toggle" type="button" hidden>إيقاف مؤقت</button>
+      <figcaption>رسم متحرك توضيحي لتسجيل رسائل البنك. رسائل ومبالغ للتوضيح.</figcaption>
+    </figure>
+    </article>
+    <article class="way way-tap" id="tap">
+      <div class="way-copy"><span class="tier">مجاني</span><h3>الصق الرسالة، أو المس الأداة، أو اسأل Siri.</h3><p>لا تريد إعداد تحكم تلقائي؟ انسخ أي رسالة أو بريد أو إشعار من البنك والصقه، فتُعبّأ العملية وحدها. والمس أيقونة التطبيق مطولًا لتسجّل بصوتك أو تضيف مصروفًا أو تلصق رسالة البنك مباشرة. سجّل مشترياتك المعتادة من أداة دون أن تفتح التطبيق، واسأل Siri: «كم أقدر أصرف اليوم في TrackExpenses؟»</p><ul class="benefits"><li>الصق أي تنبيه، أيًّا كان مصدره</li><li>سبع أدوات للشاشة الرئيسية وشاشة القفل، ومركز التحكم وزر الإجراءات</li><li>مشتريات Apple Pay عبر تحكم تلقائي في «المحفظة»</li><li>المحل الذي سجّلت منه من قبل يملأ فئته وحسابه المعتادين</li></ul><a href="../features/widgets-and-shortcuts.html" hreflang="en">الأدوات وSiri والاختصارات (بالإنجليزية) <span aria-hidden="true">←</span></a></div>
+      <figure class="screen-stage stage-sand"><div class="phone"><img src="../assets/ar/ledger.webp" width="660" height="1434" alt="شاشة العمليات بالعربية: زر «لصق» بين «بالصوت» و«إضافة»، والميزانية اليومية وما يتبقى لك اليوم، وعمليات من Carrefour وCareem" loading="lazy" decoding="async"></div><figcaption>شاشة حقيقية من التطبيق · سجلات للتوضيح</figcaption></figure>
+    </article>
+  </div>
+</section>
 
-<h2 id="payday">شهرك يبدأ يوم الراتب</h2>
-<p>اختر اليوم الذي يبدأ فيه شهرك، مثل يوم 25 حين ينزل الراتب، فتتبعه القوائم والميزانيات والرسوم البيانية كلها. وكل شريط ميزانية يُظهر أين وصل اليوم، لتعرف إن كنت تصرف أسرع من اللازم قبل أن ينتهي الشهر.</p>
-<ul><li>ميزانية إجمالية وميزانية لكل فئة، ونقل المال بين الميزانيات في الشهر الحالي، مجانًا.</li><li>مع Pro: خطة راتب تخبرك هل يكفي دخلك كل ما تخطط له، والميزانية اليومية بعد خصم الفواتير المتكررة، وتوقّع إنفاقك حتى نهاية الشهر.</li></ul>
+<section id="try" class="hs try">
+  <header class="hs-head reveal"><p class="eyebrow">هكذا يقرأ</p><h2>اضغط على مثال،<br>وانظر ماذا يفهم التطبيق.</h2><p>كل نتيجة هنا هي قراءة التطبيق الفعلية لهذه الكلمات نفسها، بالقواعد ذاتها التي تعمل على iPhone. ولا يُرسَل شيء من هذه الصفحة إلى أي مكان.</p></header>
+  <div class="try-box">
+    <div class="try-switch" hidden><button type="button" data-group="say" aria-pressed="true">بالصوت</button><button type="button" data-group="alert" aria-pressed="false">رسالة البنك</button></div>
+    <div class="try-group" data-group="say">
+      <h3 class="try-title">جمل قد تقولها</h3>
+      <article class="try-card" data-label="ثلاث في جملة"><p class="try-in say">قهوة 15، تاكسي 40 وغداء 60</p><div class="try-out"><div class="try-draft"><b>15.00</b><span>🍽️ الطعام</span><span class="k">مصروف</span></div><div class="try-draft"><b>40.00</b><span>🚌 المواصلات</span><span class="k">مصروف</span></div><div class="try-draft"><b>60.00</b><span>🍽️ الطعام</span><span class="k">مصروف</span></div></div><p class="try-note">ثلاث مشتريات في نفَس واحد: ثلاث مسودات تراجعها وتحفظها معًا.</p></article>
+      <article class="try-card" data-label="المحل والبطاقة وأمس"><p class="try-in say">مقاضي 180 من كارفور بالبطاقة أمس</p><div class="try-out"><div class="try-draft"><b>180.00</b><span>🛒 البقالة</span><span>كارفور</span><span>البطاقة الائتمانية</span><span>البارحة</span><span class="k">مصروف</span></div></div><p class="try-note">يقرأ المحل والحساب واليوم أيضًا. و«البطاقة» تعني حساب بطاقتك إن كان لديك حساب بطاقة واحد.</p></article>
+      <article class="try-card" data-label="خمسة آلاف ونص"><p class="try-in say">إيجار خمسة آلاف ونص</p><div class="try-out"><div class="try-draft"><b>5,500.00</b><span>🏠 المنزل</span><span class="k">مصروف</span></div></div><p class="try-note">الأرقام كما تُقال، بالآلاف والأنصاف.</p></article>
+      <article class="try-card" data-label="سداد البطاقة"><p class="try-in say">سددت البطاقة 4000</p><div class="try-out"><div class="try-draft transfer"><b>4,000.00</b><span>البنك الرئيسي ← البطاقة الائتمانية</span><span class="k">تحويل</span></div></div><p class="try-note">سداد البطاقة تحويل لا مصروف، فلا تُحسب مشترياتك مرتين.</p></article>
+      <article class="try-card" data-label="نزل الراتب"><p class="try-in say">نزل الراتب 15000</p><div class="try-out"><div class="try-draft income"><b>15,000.00</b><span>💰 الراتب</span><span class="k">دخل</span></div></div><p class="try-note">المال الداخل يُسجَّل دخلًا.</p></article>
+      <article class="try-card" data-label="طلبات 65"><p class="try-in say">طلبات 65</p><div class="try-out"><div class="try-draft"><b>65.00</b><span>🍽️ الطعام</span><span>طلبات</span><span class="k">مصروف</span></div></div><p class="try-note">الأسماء المعروفة تملأ المحل والفئة.</p></article>
+      <article class="try-card" data-label="من الصراف"><p class="try-in say">سحبت 500 من الصراف</p><div class="try-out"><div class="try-draft transfer"><b>500.00</b><span>البنك الرئيسي ← النقد</span><span class="k">تحويل</span></div></div><p class="try-note">السحب من الصراف نقلٌ من البنك إلى النقد، لا مصروف.</p></article>
+    </div>
+    <div class="try-group" data-group="alert">
+      <h3 class="try-title">تنبيهات البنك كما تصل فعلًا</h3>
+      <article class="try-card" data-label="🇦🇪 شراء بالبطاقة"><p class="try-in sms" dir="rtl"><b>BANK</b>تمت عملية شراء بقيمة 168.72 درهم إماراتي على بطاقتك المنتهية بـ 6878 لدى CARREFOUR في 18/11/2026. الرصيد المتاح 4,021.10 درهم</p><div class="try-out"><div class="try-draft"><b>AED 168.72</b><span>🛒 البقالة</span><span>CARREFOUR</span><span>18 نوفمبر</span><span>البطاقة <bdi dir="ltr">••6878</bdi></span><span class="k">مصروف</span></div></div><p class="try-note">يُسجَّل المبلغ المدفوع لا الرصيد المذكور بعده، وتختار آخر أرقام البطاقة الحساب.</p></article>
+      <article class="try-card" data-label="🇸🇦 مدى عبر Apple Pay"><p class="try-in sms" dir="rtl"><b>BANK</b>شراء عبر نقاط البيع<br>بطاقة: 6878;مدى-ابل باي<br>مبلغ: 18.00 SAR<br>لدى: STARBUCKS<br>في: 2026-11-18 09:41</p><div class="try-out"><div class="try-draft"><b>SAR 18.00</b><span>🍽️ الطعام</span><span>STARBUCKS</span><span>18 نوفمبر</span><span>البطاقة <bdi dir="ltr">••6878</bdi></span><span class="k">مصروف</span></div></div><p class="try-note">رسالة بالحقول كما ترسلها بنوك سعودية: المبلغ في سطر، والمحل في سطر آخر.</p></article>
+      <article class="try-card" data-label="🇦🇪 أرقام عربية"><p class="try-in sms" dir="rtl"><b>BANK</b>تم خصم ١٥٠٫٧٥ د.إ من بطاقتك المنتهية بـ ٦٨٧٨ لدى طلبات</p><div class="try-out"><div class="try-draft"><b>AED 150.75</b><span>🍽️ الطعام</span><span>طلبات</span><span>البطاقة <bdi dir="ltr">••6878</bdi></span><span class="k">مصروف</span></div></div><p class="try-note">الأرقام العربية (١٥٠٫٧٥) تُقرأ تمامًا مثل 150.75.</p></article>
+      <article class="try-card" data-label="🇰🇼 دينار كويتي"><p class="try-in sms" dir="rtl"><b>BANK</b>تم خصم 12.500 د.ك من حسابك لدى TALABAT</p><div class="try-out"><div class="try-draft"><b>KWD 12.500</b><span>🍽️ الطعام</span><span>TALABAT</span><span class="k">مصروف</span></div></div><p class="try-note">يُقرأ الدينار بثلاث خانات عشرية كما يكتبه البنك: اثنا عشر دينارًا ونصف، لا 12,500.</p></article>
+      <article class="try-card" data-label="🇦🇪 بالإنجليزية"><p class="try-in sms" dir="ltr" lang="en"><b>BANK</b>Purchase of AED 63.00 at ENOC with card ending 6878. Avl Bal AED 4,021.10</p><div class="try-out"><div class="try-draft"><b>AED 63.00</b><span>⛽️ الوقود</span><span>ENOC</span><span>البطاقة <bdi dir="ltr">••6878</bdi></span><span class="k">مصروف</span></div></div><p class="try-note">كثير من بنوك الخليج ترسل تنبيهاتها بالإنجليزية، فيقرؤها التطبيق كذلك.</p></article>
+      <article class="try-card" data-label="💼 الراتب"><p class="try-in sms" dir="rtl"><b>BANK</b>تم إيداع راتب بمبلغ 15,000.00 درهم في حسابك رقم XXX4410. الرصيد المتاح 18,250.00 درهم</p><div class="try-out"><div class="try-draft income"><b>AED 15,000.00</b><span>الحساب <bdi dir="ltr">••4410</bdi></span><span class="k">دخل</span></div></div><p class="try-note">يسجّل التحكم التلقائي المال الداخل أيضًا، مع علامة لتراجعه.</p></article>
+      <article class="try-card" data-label="🔒 رمز تحقق"><p class="try-in sms" dir="rtl"><b>BANK</b>رمز التحقق الخاص بك هو 482915 لعملية شراء بمبلغ 320 درهم لدى NOON. لا تشارك الرمز مع أحد</p><div class="try-out"><div class="try-draft skipped"><b>تم تجاهلها</b><span>رمز تحقق، لا عملية شراء</span></div></div><p class="try-note">رمز التحقق يذكر مبلغًا، لكن لم يُصرف شيء بعد، فلا يُسجَّل شيء.</p></article>
+      <article class="try-card" data-label="✕ مرفوضة"><p class="try-in sms" dir="rtl"><b>BANK</b>تم رفض عملية شراء بمبلغ 89.00 درهم لدى AMAZON لعدم كفاية الرصيد. بطاقتك المنتهية بـ 6878</p><div class="try-out"><div class="try-draft skipped"><b>تم تجاهلها</b><span>الدفع لم يتم</span></div></div><p class="try-note">العملية المرفوضة لا تدخل مجاميعك أبدًا.</p></article>
+    </div>
+  </div>
+</section>
 
-<h2 id="coach">مدرّبك المالي</h2>
-<p>يقرأ المدرّب شهرك المنتهي، ويسمّي أكبر بنود صرفك المعتادة، ويقترح حدًّا واحدًا تجرّبه. اسأله «هل أنا على الوتيرة الصحيحة؟» أو «كيف كان سبتمبر؟»، أو اكتب ما صرفته فيسجّله.</p>
-<ul><li>الأسئلة التي يجيب عنها بالقواعد، والرسوم، وتسجيل ما تكتبه، كلها تتم على جهازك مجانًا.</li><li>الأسئلة المفتوحة يجيب عنها Claude من Anthropic بعد موافقتك فقط. يُرسَل سؤالك مع ما سبقه في المحادثة وملخص لهذا الشهر والشهر الماضي، وقد يطلب المدرّب مجاميع أشهر سابقة أو بعض المشتريات بتاريخها ومتجرها ومبلغها. ولا تُرسل أبدًا ملاحظاتك ولا إيصالاتك ولا أرقام حساباتك ولا أرصدتك. 10 أسئلة مجانًا كل شهر على كل جهاز.</li><li>التحدّيات والمتابعة الأسبوعية والمزيد من الأسئلة مع Pro.</li></ul>
+<section id="today" class="hs today">
+  <div class="today-copy reveal"><p class="eyebrow">رقمك لهذا اليوم</p><h2>اعرف كم يمكنك<br>صرفه اليوم.</h2><p>اجعل شهر ميزانيتك يبدأ يوم الراتب، أي يوم من 1 إلى 31. يخصم TrackExpenses أولًا الفواتير التي لم تُدفع بعد، ثم يقسم الباقي على الأيام المتبقية. وما توفّره اليوم يزيد حصة الغد.</p><ul class="benefits"><li>على كل شريط ميزانية علامة لليوم، فتعرف إن كانت 46% كثيرة أم لا</li><li>انقل المال بين الميزانيات أو غطِّ أي تجاوز، ويبقى الإجمالي كما هو (مجانًا)</li><li>ميزانية يومية لفئات تختارها حتى تاريخ تحدده، تفيدك في السفر (Pro)</li><li>تجاوزت الميزانية؟ يخبرك بكم، ومتى تبدأ ميزانية جديدة</li></ul><p class="small">الميزانية اليومية والتوقعات من مزايا Pro. أما الوتيرة والأيام المتبقية والمصروف والمتبقي فمجانية.</p></div>
+  <form class="today-calc reveal" aria-label="جرّب الميزانية اليومية" onsubmit="return false">
+    <p class="today-calc-label">جرّبها · كم يمكنني أن أصرف يوميًا؟</p>
+    <div class="step-row"><label for="tc-left">المتبقي من ميزانيتك</label><div class="stepper"><button type="button" data-step="-50" data-for="tc-left" aria-label="أنقص 50">−</button><input id="tc-left" type="number" inputmode="decimal" min="0" step="any" value="1955"><button type="button" data-step="50" data-for="tc-left" aria-label="زد 50">+</button></div></div>
+    <div class="step-row"><label for="tc-bills">فواتير لم تُدفع بعد</label><div class="stepper"><button type="button" data-step="-25" data-for="tc-bills" aria-label="أنقص 25">−</button><input id="tc-bills" type="number" inputmode="decimal" min="0" step="any" value="300"><button type="button" data-step="25" data-for="tc-bills" aria-label="زد 25">+</button></div></div>
+    <div class="step-row"><label for="tc-days">الأيام الباقية مع اليوم</label><div class="stepper"><button type="button" data-step="-1" data-for="tc-days" aria-label="يوم أقل">−</button><input id="tc-days" type="number" inputmode="numeric" min="1" max="31" step="1" value="12"><button type="button" data-step="1" data-for="tc-days" aria-label="يوم أكثر">+</button></div></div>
+    <div class="today-result" aria-live="polite"><span>يمكنك أن تصرف</span><b id="tc-out">137.91</b><span>يوميًا، بدءًا من اليوم</span></div>
+    <span class="today-bar" aria-hidden="true"><i></i><em data-label="اليوم · مضى 58% من الشهر"></em></span>
+    <p class="today-calc-foot">(المتبقي − الفواتير القادمة) ÷ الأيام المتبقية، مقرّبًا إلى الأدنى. <a href="../tools/daily-budget.html" hreflang="en">الحاسبة الكاملة (بالإنجليزية) ←</a></p>
+  </form>
+</section>
 
-<h2 id="clear">مصاريفك بوضوح</h2>
-<ul><li>عرض يومي وتقويم وملخص شهري، والإنفاق حسب الجهة.</li><li>دخلك ومصاريفك، وأكبر تغيّر في الفئات عن الفترة السابقة.</li><li>حسابات نقدية وبنكية وبطاقات، مع التحويلات والأرصدة، وعملات متعددة بسعر صرف تحدده أنت.</li><li>عمليات متكررة للإيجار والراتب والاشتراكات.</li><li>أدوات للشاشة الرئيسية وشاشة القفل، وSiri والاختصارات.</li></ul>
+<section id="coach" class="hs coach">
+  <figure class="coach-stage">
+    <div class="coach-chat" data-demo data-loop="14500" role="img" aria-label="رسم متحرك: شخص يسأل المدرّب المالي «هل أنا على الوتيرة الصحيحة هذا الشهر؟» فيجيبه من الهاتف أنه صرف 46% من ميزانيته ومضى 58% من الشهر. ثم يضغط «كيف أحسّن إنفاقي؟» فيقترح جواب بالذكاء الاصطناعي إعداد القهوة في البيت ثلاثة أيام في الأسبوع. وأخيرًا يكتب «قهوة 15 تاكسي 40» فتُحفظ عمليتان. أرقام للتوضيح.">
+      <div class="demo-screen coach-screen" aria-hidden="true">
+        <div class="coach-head"><img src="../assets/home/coach-wave.webp" width="310" height="320" alt="" loading="lazy" decoding="async"><div><b>مدرّبك المالي</b><small>يقرأ شهرك، ويجيب عن أسئلتك</small></div></div>
+        <p class="cb me" data-at="0">هل أنا على الوتيرة الصحيحة هذا الشهر؟</p>
+        <p class="cb dots" data-at="300" data-off="1300"><i></i><i></i><i></i></p>
+        <p class="cb coach" data-at="1300">نعم. صرفت <b>46%</b> من ميزانيتك، ومضى <b>58%</b> من الشهر. راقب البقالة، فقد وصلت إلى 82%.<span class="cb-tag">على هاتفك · مجانًا</span></p>
+        <p class="cb me ai" data-at="5200">✦ كيف أحسّن إنفاقي؟</p>
+        <p class="cb dots" data-at="6000" data-off="7300"><i></i><i></i><i></i></p>
+        <p class="cb coach ai" data-at="7300">القهوة أكثر مشترياتك الصغيرة تكرارًا: 21 مرة هذا الشهر. لو أعددتها في البيت ثلاثة أيام في الأسبوع لوفّرت نحو ثلث ما تصرفه عليها.<span class="cb-tag ai">ذكاء اصطناعي · راجع الأرقام</span></p>
+        <p class="cb me" data-at="10300">قهوة 15 تاكسي 40</p>
+        <div class="cb logged" data-at="11100"><span>🍽️ قهوة <b>15.00</b></span><span>🚌 تاكسي <b>40.00</b></span><em>✓ حُفظت عمليتان · مجانًا</em></div>
+      </div>
+    </div>
+    <button class="demo-toggle" type="button" hidden>إيقاف مؤقت</button>
+    <figcaption>محادثة توضيحية · أرقام للتوضيح</figcaption>
+  </figure>
+  <div class="coach-copy reveal"><p class="eyebrow">المدرّب المالي <span class="tier">مجاني + Pro</span></p><h2>اسأل عن أموالك<br>بكلماتك أنت.</h2><p>«هل أنا على الوتيرة الصحيحة؟» «كيف كان سبتمبر؟» «كم صرفت على البقالة؟» يجيبك مدرّبك عن هذه الأسئلة اليومية من هاتفك، فورًا ومجانًا. وللأسئلة المفتوحة يستعين بـ Claude من Anthropic بعد موافقتك فقط، ويرسل له ملخصًا لشهرك، لا ملاحظاتك ولا إيصالاتك ولا أسماء حساباتك ولا أرصدتك.</p><ul class="benefits"><li>يقرأ شهرك الماضي ويقترح حدًّا واحدًا، وإذا انضممت إلى التحدّي يطمئن عليك كل أسبوع (Pro)</li><li>اكتب «قهوة 15 تاكسي 40» فيسجّل العمليتين، مجانًا</li><li>10 أسئلة للذكاء الاصطناعي مجانًا كل شهر على كل جهاز، وأكثر مع Pro</li><li>يتحدث العربية والإنجليزية والألمانية والإسبانية والبرتغالية</li></ul><a href="../features/ai-money-coach.html" hreflang="en">تعرّف إلى المدرّب المالي (بالإنجليزية) <span aria-hidden="true">←</span></a></div>
+</section>
 
-<h2 id="private">بياناتك لك وحدك</h2>
-<p>بلا إعلانات، ودون الدخول إلى حسابك البنكي، ودون إنشاء حساب في TrackExpenses. سجلّك على جهازك ويتزامن بين أجهزتك عبر iCloud الخاص بك. يمكنك قفله برمز الدخول أو ببصمة الوجه وإرفاق صور الإيصالات، ومع Pro تصدّره بصيغة CSV لأي فترة.</p>
+<section id="more" class="hs more">
+  <header class="hs-head reveal"><p class="eyebrow">تفاصيل صغيرة تصنع الفرق</p><h2>وكل ما تتوقعه<br>من تطبيق مصاريف.</h2></header>
+  <div class="tiles">
+    <div class="tile reveal"><span class="ti">🔔</span><b>تنبيهات الميزانية</b><span>إشعار حين تبلغ 80% من ميزانية قبل أوانها، وآخر حين تتجاوزها.</span><em>مجاني</em></div>
+    <div class="tile reveal"><span class="ti">🗓️</span><b>تذكير بالفواتير</b><span>إشعار في التاسعة من صباح اليوم السابق لموعد الإيجار أو أي اشتراك.</span><em>مجاني</em></div>
+    <div class="tile reveal"><span class="ti">✈️</span><b>ميزانية يومية للسفر</b><span>اختر بعض الميزانيات وآخر يوم، واعرف كم يمكنك أن تصرف يوميًا.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">📱</span><b>الأدوات وSiri</b><span>سجّل مشترياتك المعتادة بلمسة، واسأل Siri كم تبقى لك اليوم.</span><em>مجاني</em></div>
+    <div class="tile reveal"><span class="ti">🔎</span><b>البحث يجمع لك المبالغ</b><span>ابحث عن محل لترى كم صرفت فيه، في كل الأشهر.</span><em>مجاني</em></div>
+    <div class="tile reveal"><span class="ti">💻</span><b>iPhone وiPad وMac</b><span>المزامنة الخاصة عبر iCloud تُبقي أجهزتك كلها على السجل نفسه.</span><em>مجاني</em></div>
+    <div class="tile reveal"><span class="ti">💱</span><b>أي عملة</b><span>سجّل ما دفعته في السفر بسعر الصرف الذي تحدده، والمجاميع بعملتك.</span><em>مجاني</em></div>
+    <div class="tile reveal"><span class="ti">📤</span><b>التصدير والمشاركة</b><span>جدول بيانات لأي شهر أو فترة، أو النسخة الاحتياطية الكاملة.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">💼</span><b>خطة الراتب</b><span>خطّط للدخل والمصاريف والتوفير بندًا بندًا، والمخطط بجانب الفعلي.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">💳</span><b>الحسابات والبطاقات</b><span>نقد وبنك وبطاقات وتوفير وقروض، والتحويلات لا تُحسب مرتين.</span><em>3 مجانًا</em></div>
+    <div class="tile reveal"><span class="ti">🔒</span><b>قفل التطبيق</b><span>بصمة الوجه أو رمز الدخول، بلا ربط بالبنك ولا حساب.</span><em>مجاني</em></div>
+    <div class="tile tile-lang reveal"><span class="ti">🌍</span><b>خمس لغات</b><span>ومعها الصوت والمدرّب: <a href="../index.html" lang="en" hreflang="en">English</a> · <a href="../de/index.html" lang="de" hreflang="de">Deutsch</a> · <a href="../es/index.html" lang="es-419" hreflang="es-419">Español</a> · <a href="../pt/index.html" lang="pt-BR" hreflang="pt-BR">Português</a></span><em>مجاني</em></div>
+  </div>
+  <p class="section-cta"><a href="../features/index.html" hreflang="en">كل الميزات، المجانية وPro، جنبًا إلى جنب (بالإنجليزية) ←</a></p>
+</section>
 
-<h2 id="free-and-pro">ابدأ مجانًا</h2>
-<p>عمليات بلا حدود، والميزانيات والتقويم والرسوم البيانية والبحث ومزامنة iCloud، كلها مجانية، وما يصل إلى 3 حسابات وقاعدتي تكرار، و10 رسائل بنكية و10 إدخالات صوتية كل شهر ميلادي على كل جهاز. والتنبيهات التي تصل بعد ذلك تُحفظ خارج مجاميعك: يضيفها كلها الاشتراك في Pro، وإلا فحصة الشهر القادم المجانية تضيف منها بقدر ما تتسع.</p>
-<p>ومع Pro تحصل على تسجيل رسائل البنك والإدخال الصوتي بلا حدود، وخطة الراتب، وتوقعات الإنفاق، والميزانية اليومية، وخطط «ماذا لو»، وتحدّيات المدرّب المالي، وحسابات وعمليات متكررة بلا حدود، وتصدير ملفات CSV لأي فترة واستيرادها، والنسخ الاحتياطي الكامل واستعادته، والسمات اللونية وأيقونات التطبيق البديلة. اختر اشتراكًا شهريًا أو سنويًا، أو ادفع مرة واحدة مدى الحياة.</p>
+<section id="reviews" class="hs reviews">
+  <header class="hs-head reveal"><p class="eyebrow">بكلماتهم</p><h2>آراء من يستخدمونه.</h2>{{RATING_SUMMARY}}</header>
+  {{REVIEWS}}
+</section>
 
-<h2 id="faq">أسئلة شائعة</h2>
-<details><summary>هل يتصل التطبيق بحسابي البنكي؟</summary><p>لا. لا يطلب التطبيق الدخول إلى حسابك البنكي ولا يتصل ببنكك. تُدخل عملياتك بنفسك، أو تعدّ تحكمًا تلقائيًا في «الاختصارات» يمرّر تنبيهات البنك التي تختارها.</p></details>
-<details><summary>هل يقرأ التطبيق رسائلي؟</summary><p>لا. التحكم التلقائي الذي تعدّه أنت في «الاختصارات» هو من يمرّر الرسالة المطابقة إلى TrackExpenses، ولا يصل التطبيق إلى صندوق رسائلك.</p></details>
-<details><summary>هل يقرأ رسائل بنكي بالذات؟</summary><p>يقرأ صيغًا كثيرة من تنبيهات البنوك بالعربية والإنجليزية في الخليج ومصر وغيرها، لكن لا يمكن ضمان كل بنك. جرّب إحدى رسائل بنكك في شاشة الإعداد داخل التطبيق قبل أن تعتمد عليه، وأي رسالة لا تُقرأ يمكنك لصقها أو إدخالها يدويًا.</p></details>
-<details><summary>هل التطبيق مجاني؟</summary><p>نعم، تنزيله مجاني وسجلّه الأساسي كامل دون مقابل: عمليات بلا حدود وميزانيات وإحصاءات وبحث. ويضيف Pro تسجيل رسائل البنك والإدخال الصوتي بلا حدود وأدوات التخطيط، باشتراك شهري أو سنوي أو بالدفع مرة واحدة.</p></details>
-<details><summary>أين تُحفظ بياناتي؟</summary><p>على جهازك، وتتزامن بين أجهزتك عبر iCloud الخاص بك إن أردت. لا يوجد حساب في TrackExpenses ولا خادم يحفظ سجلّك.</p></details>
+<section id="screenshots" class="hs screens">
+  <header class="hs-head reveal"><p class="eyebrow">من داخل التطبيق</p><h2>التطبيق بالعربية،<br>من اليمين إلى اليسار.</h2></header>
+  <div class="ar-shots"><figure><img src="../assets/ar/ledger.webp" width="660" height="1434" alt="شاشة العمليات في TrackExpenses بالعربية: دخل الشهر ومصاريفه والميزانية اليومية وعمليات اليوم" loading="lazy" decoding="async"><figcaption>شهرك من الراتب إلى الراتب</figcaption></figure><figure><img src="../assets/ar/voice.webp" width="660" height="1434" alt="شاشة التسجيل بالصوت: جملة «غداء 45، كريم 30 ومقاضي 180 من كارفور» تتحول إلى ثلاث عمليات" loading="lazy" decoding="async"><figcaption>جملة واحدة، ثلاث عمليات</figcaption></figure><figure><img src="../assets/ar/budget.webp" width="660" height="1434" alt="شاشة الميزانية: شريط لكل فئة مع علامة اليوم والمبلغ المتبقي والمتاح يوميًا" loading="lazy" decoding="async"><figcaption>ميزانية لكل فئة، وعلامة تبيّن أين وصل اليوم</figcaption></figure><figure><img src="../assets/ar/coach.webp" width="660" height="1434" alt="شاشة المدرّب المالي: قراءة لشهر أكتوبر واقتراح حدّ لمصاريف البقالة" loading="lazy" decoding="async"><figcaption>مدرّب مالي يقرأ شهرك</figcaption></figure></div>
+  <p class="gallery-note small">لقطات حقيقية من iPhone بسجلات للتوضيح.</p>
+</section>
 
-<h2 id="more">أدلة وأدوات أخرى</h2>
-<p>بقية الموقع بالإنجليزية حاليًا:</p>
-<ul><li><a href="../guides/arabic-bank-sms-expenses.html" hreflang="en" lang="en" dir="ltr">Arabic Bank SMS Expense Tracking on iPhone</a></li><li><a href="../guides/payday-budget.html" hreflang="en" lang="en" dir="ltr">Start Your Budget Month on Payday</a></li><li><a href="../tools/index.html" hreflang="en" lang="en" dir="ltr">Free budget calculators</a></li><li><a href="../privacy.html" hreflang="en" lang="en" dir="ltr">Privacy Policy</a></li></ul>
-<p class="byline">من تطوير <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · آخر تحديث: نوفمبر 2026 · <a href="../support.html" hreflang="en">اقترح تصحيحًا</a></p>
+<section class="hs plans" id="free-and-pro">
+  <header class="hs-head reveal"><p class="eyebrow">ابدأ مجانًا</p><h2>سجلّ مجاني كامل.<br>وعناء أقل مع Pro.</h2></header>
+  <div class="plans-row">
+    <article class="plan reveal"><p class="eyebrow">مجاني</p><h3>كل ما تحتاجه لتجعل التسجيل عادة.</h3><ul class="benefits"><li>عمليات يدوية وميزانيات وبحث بلا حدود</li><li>شهر ميزانية يبدأ يوم الراتب، مع الوتيرة والإحصاءات</li><li>نقل المال بين الميزانيات وتغطية التجاوز</li><li>تنبيهات الميزانية والتذكير بالفواتير</li><li>مزامنة خاصة عبر iCloud على iPhone وiPad وMac</li><li>3 حسابات وقاعدتا تكرار</li><li>كل شهر وعلى كل جهاز: 10 إدخالات صوتية، و10 تنبيهات بنكية تُسجَّل تلقائيًا، و10 أسئلة للمدرّب بالذكاء الاصطناعي</li></ul></article>
+    <article class="plan plan-pro reveal"><p class="eyebrow">PRO</p><h3>والباقي علينا.</h3><ul class="benefits"><li>إدخال صوتي وتسجيل تنبيهات البنك بلا حدود</li><li>حسابات وعمليات متكررة بلا حدود</li><li>خطة الراتب والتوقعات وخطط «ماذا لو»</li><li>ميزانية يومية للإجمالي، أو لكل ميزانية، أو لميزانيات تختارها حتى تاريخ تحدده</li><li>تحدّيات المدرّب ومزيد من الأسئلة</li><li>التصدير والمشاركة، واستيراد CSV، والنسخة الاحتياطية الكاملة</li><li>السمات وأيقونات التطبيق البديلة</li></ul><p class="small">اشتراك شهري أو سنوي، أو شراء لمرة واحدة مدى الحياة، بالسعر الذي تجده في App Store ببلدك. وإذا انتهى Pro، لا يُقفل شيء مما حفظته.</p></article>
+  </div>
+  <div class="plans-cta">{{APP_STORE_CTA}}</div>
+</section>
+
+<section class="hs faq-section" id="faq"><header class="hs-head"><p class="eyebrow">أسئلة في محلها</p><h2>قبل أن تنزّل التطبيق.</h2></header>
+  <details><summary>هل يتصل TrackExpenses بحسابي البنكي؟</summary><p>لا. لا ربط بالبنك، ولا دخول إلى حسابك البنكي، ولا حساب في التطبيق. تسجّل عملياتك بنفسك: بصوتك، أو بلصق التنبيه، أو بتحكم تلقائي في «الاختصارات» يسجّل تنبيهات البنك ومشتريات Apple Pay.</p></details>
+  <details><summary>كيف يقرأ تنبيهات البنك دون أن يقرأ رسائلي؟</summary><p>تنشئ في «الاختصارات» تحكمًا تلقائيًا يمرّر إلى TrackExpenses كل تنبيه من البنك يحتوي على كلمة تختارها، سواء وصل برسالة نصية أو بالبريد الإلكتروني. يقرأ التطبيق ما يمرّره التحكم التلقائي فقط، ويحتفظ بالعملية دون نص الرسالة، ولا يفتح صندوق رسائلك ولا بريدك.</p></details>
+  <details><summary>بنكي يرسل إشعارات من تطبيقه فقط. هل يفيدني TrackExpenses؟</summary><p>نعم. لا يستطيع التحكم التلقائي في iPhone قراءة إشعارات تطبيق آخر، لكن يمكنك نسخ الإشعار أو الرسالة أو البريد ولصقه في TrackExpenses، فيُملأ المبلغ والمحل والتاريخ تلقائيًا. وإن كان بنكك يرسل أيضًا رسائل نصية أو بريدًا، فالتحكم التلقائي يسجّلها لك.</p></details>
+  <details><summary>هل يقرأ رسائل بنكي بالذات؟</summary><p>يقرأ صيغًا كثيرة من تنبيهات البنوك بالعربية والإنجليزية في الإمارات والسعودية والكويت وقطر والبحرين وعُمان ومصر والأردن وغيرها، بالأرقام العربية أو الغربية، لكن لا يمكن ضمان كل بنك. جرّب إحدى رسائل بنكك في شاشة الإعداد داخل التطبيق قبل أن تعتمد عليه، وأي رسالة لا تُقرأ يمكنك لصقها أو إدخالها يدويًا.</p></details>
+  <details><summary>هل التطبيق مجاني؟</summary><p>نعم. السجل المجاني فيه عمليات يدوية بلا حدود، وميزانيات، وشهر ميزانية يبدأ يوم الراتب، وإحصاءات، وبحث، ومزامنة خاصة عبر iCloud، ومعها كل شهر وعلى كل جهاز 10 إدخالات صوتية و10 تنبيهات بنكية تُسجَّل تلقائيًا و10 أسئلة للمدرّب بالذكاء الاصطناعي. ويرفع Pro هذه الحدود ويضيف خطة الراتب والتوقعات والميزانية اليومية وكل أنواع التصدير والنسخ الاحتياطي الكامل، باشتراك شهري أو سنوي أو بشراء لمرة واحدة مدى الحياة.</p></details>
+  <details><summary>هل يرسل المدرّب المالي بياناتي إلى الذكاء الاصطناعي؟</summary><p>فقط حين تسأل سؤالًا لا يستطيع هاتفك الإجابة عنه وحده، وبعد موافقتك. عندها يُرسَل سؤالك وما سبقه في المحادثة وملخص لهذا الشهر والشهر الماضي إلى Claude من Anthropic عبر خادم وسيط للمطوّر، وإذا احتاج المدرّب المزيد فمجاميع حتى 13 شهرًا أو حتى 20 عملية شراء. ولا تُرسَل أبدًا ملاحظاتك ولا إيصالاتك ولا أسماء حساباتك أو أرقامها ولا أرصدتك.</p></details>
+  <details><summary>بأي اللغات يعمل؟</summary><p>بالعربية بواجهة كاملة من اليمين إلى اليسار، وبالإنجليزية والألمانية والإسبانية لأمريكا اللاتينية والبرتغالية البرازيلية: كل الشاشات، والتسجيل بالصوت، وتنبيهات البنك، والمدرّب المالي.</p></details>
+  <details><summary>هل يمكن أن يبدأ شهر ميزانيتي يوم الراتب؟</summary><p>نعم. اختر أي يوم من 1 إلى 31، فتتبعه عملياتك وميزانياتك ورسومك البيانية. إنه شهر من الراتب إلى الراتب، لا دورة متجددة كل أسبوعين.</p></details>
+  <details><summary>هل يعمل على iPad وMac؟</summary><p>نعم. يعمل TrackExpenses على iPhone وiPad بنظام iOS 17 أو أحدث، وعلى أجهزة Mac بشريحة Apple، والمزامنة الخاصة عبر iCloud تُبقيها كلها على السجل نفسه.</p></details>
+  <details><summary>أين تُحفظ بياناتي؟</summary><p>على جهازك، مع مزامنة اختيارية عبر iCloud الخاص بك بين أجهزة Apple التي تملكها. لا حاجة إلى حساب في التطبيق. وتشرح سياسة الخصوصية كيف تُحفظ البيانات، وكيف يُعالَج الصوت، وما يخص المدرّب والمشتريات.</p><a href="../privacy.html" hreflang="en">اقرأ سياسة الخصوصية (بالإنجليزية) ←</a></details>{{STORE_FAQ}}
+</section>
+
+<section class="hs learn" id="learn">
+  <header class="hs-head reveal"><p class="eyebrow">تعلّم وخطّط</p><h2>أدلة وحاسبات مجانية.</h2></header>
+  <div class="learn-cols">
+    <div class="learn-col"><h3>أدلة بالعربية</h3><a href="bank-sms.html">تسجيل المصاريف من رسائل البنك، خطوة بخطوة</a><a href="bank-email.html">تسجيل تنبيهات البنك من البريد الإلكتروني</a></div>
+    <div class="learn-col"><h3>أدلة وحاسبات بالإنجليزية</h3><a href="../guides/arabic-bank-sms-expenses.html" hreflang="en"><span lang="en" dir="ltr">Arabic bank SMS expense tracking</span></a><a href="../guides/track-expenses-iphone.html" hreflang="en"><span lang="en" dir="ltr">How to track expenses on iPhone</span></a><a href="../guides/credit-card-payment-vs-expense.html" hreflang="en"><span lang="en" dir="ltr">Credit card payment vs expense</span></a><a href="../tools/daily-budget.html" hreflang="en"><span lang="en" dir="ltr">Daily budget until payday</span></a><a href="../tools/50-30-20-calculator.html" hreflang="en"><span lang="en" dir="ltr">50/30/20 budget calculator</span></a><a class="all" href="../tools/index.html" hreflang="en">كل الحاسبات (بالإنجليزية) ←</a></div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
 {
  "base_url": "https://trackexpenses.app/",
- "updated": "2026-11-18",
+ "updated": "2026-11-20",
  "app_version": "1.16.0",
  "unreleased_languages": [],
  "_unreleased_note": "Site folders whose pages describe a version not yet on the App Store (es and pt arrive with 1.16.0). While listed, their pages carry noindex, stay out of the sitemap, llms.txt and IndexNow, get no hreflang or footer links from the other languages, and the other fact blocks do not name those languages. When 1.16.0 is live, empty the list (and set app_version to release_version). validate.py checks both states.",

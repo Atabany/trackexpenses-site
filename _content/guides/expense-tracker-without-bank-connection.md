@@ -10,7 +10,7 @@ Apple Numbers is a reasonable built-in option if it is already on your phone. Cr
 
 For the first week, use a few recognizable categories rather than dozens. Groceries, transport, eating out and bills can be enough to discover whether the routine works. Keep the currency alongside the amount: 50 in one currency is not interchangeable with 50 in another.
 
-A spreadsheet gives you flexible columns and direct control over formulas. Its trade-off is the work of maintaining those formulas and entering purchases on a small screen. If entry becomes the obstacle, look for a faster input method before abandoning the record.
+A spreadsheet gives you flexible columns and direct control over formulas. Its trade-off is the work of maintaining those formulas and entering purchases on a small screen. If entry becomes the obstacle, look for a faster input method before abandoning the record. The [iPhone expense tracking guide](track-expenses-iphone.html) compares Notes, Numbers, Wallet and app entry.
 
 ## Compare manual, SMS and bank-connected tracking
 

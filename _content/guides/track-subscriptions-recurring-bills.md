@@ -22,7 +22,7 @@ TrackExpenses calls these Recurring. Open More → Recurring and tap the plus bu
 - Choose how often: every day, week, month or year. You can also repeat every N periods, for example every 2 weeks or every 3 months for a quarterly bill.
 - Set the start date to the next charge.
 
-When the date arrives, the transaction is added to your ledger automatically the next time you open the app. Each occurrence is created once, even if you use two devices with iCloud sync, so a rent rule never charges twice. The Repeat Setting screen groups income and expenses and shows their totals, so you can see at a glance how much of your month is already committed.
+When the date arrives, the transaction is added to your ledger automatically the next time you open the app. Each occurrence is created once, even if you use two devices with iCloud sync, so a rent rule never charges twice. The Recurring screen groups income and expenses and shows their totals, so you can see at a glance how much of your month is already committed. To hear about each bill the day before it is due, see the [bill reminders guide](bill-reminders-iphone.html).
 
 Free includes two recurring rules, enough for salary and rent. Pro makes rules unlimited, so every subscription can have its own.
 

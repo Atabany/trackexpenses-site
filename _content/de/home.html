@@ -1,43 +1,256 @@
-<h1>Ausgaben eintragen, ohne zu tippen</h1>
-<p class="lead">Aus einem gesprochenen Satz werden mehrere Buchungen, dein Monat beginnt am Zahltag, und dein Tagesbudget zeigt, was heute noch drin ist. TrackExpenses ist ein privates Haushaltsbuch für iPhone und iPad, komplett auf Deutsch.</p>
-{{APP_STORE_CTA}}
-<div class="ar-shots"><figure><img src="../assets/de/ledger.webp" width="660" height="1434" alt="Die Buchungen in TrackExpenses auf Deutsch: Einkommen, Ausgaben und Saldo des Zeitraums 28.10. bis 27.11.2026, das Tagesbudget und die Buchungen des Tages" decoding="async"><figcaption>Dein Monat, von Zahltag zu Zahltag</figcaption></figure><figure><img src="../assets/de/voice.webp" width="660" height="1434" alt="Die Spracheingabe: Aus dem Satz „Mittagessen 12, Taxi 9 und Lebensmittel 38 bei Rewe“ werden drei Buchungen" loading="lazy" decoding="async"><figcaption>Ein Satz, drei Buchungen</figcaption></figure><figure><img src="../assets/de/budget.webp" width="660" height="1434" alt="Das heutige Budget: 84,00 € übrig, darunter die Rechnung vom Monatsbudget über Fixkosten bis zum Tagesbudget" loading="lazy" decoding="async"><figcaption>Dein Tagesbudget, nachvollziehbar gerechnet</figcaption></figure><figure><img src="../assets/de/coach.webp" width="660" height="1434" alt="Der Finanzcoach: ein Blick auf den Oktober 2026 und der Vorschlag, im Dezember unter 180 € für Lebensmittel zu bleiben" loading="lazy" decoding="async"><figcaption>Ein Coach, der deinen Monat liest</figcaption></figure></div>
+<section class="hx" aria-labelledby="hx-title">
+  <div class="hx-bg" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i></div>
+  <div class="hx-inner">
+    <div class="hx-copy">
+      {{RATING_PILL}}
+      <h1 id="hx-title">Kleine Beträge<br>läppern sich.<br><em>Halt jeden fest.</em></h1>
+      <p class="hx-lead">Das Haushaltsbuch fürs iPhone, das für dich mitschreibt: Sag „Kaffee 5, Taxi 18“, und beides ist eingetragen. Dein Monat beginnt am Zahltag, und dein Tagesbudget zeigt, was heute noch drin ist.</p>
+      <div class="hx-cta">{{APP_STORE_CTA}}<p>Kostenlos starten<span>Ohne Bank-Login</span></p></div>
+    </div>
+    <figure class="hx-stage">
+      <div class="hx-demo" data-demo data-loop="15000" data-threshold="0.05" role="img" aria-label="Animation: Aus einer Bank-SMS über 42,18 bei REWE wird eine Ausgabe für Lebensmittel, der Satz „Kaffee 5, Taxi 18“ trägt zwei weitere ein, ein Apple Pay-Kauf bei Lieferando wird erfasst, das Budget für heute sinkt von 120,00 auf 31,42, und der Finanzcoach meldet, dass der Monat im Plan liegt. Beispielbeträge.">
+        <span class="hx-prop p-groceries" data-at="2300" aria-hidden="true"><img src="../assets/home/groceries.webp" width="177" height="240" alt="" decoding="async"><b class="money" data-v="42.18">42,18 €</b></span>
+        <span class="hx-prop p-coffee" data-at="5900" aria-hidden="true"><img src="../assets/home/coffee.webp" width="169" height="240" alt="" decoding="async"><b class="money" data-v="5">5,00 €</b></span>
+        <span class="hx-prop p-taxi" data-at="6100" aria-hidden="true"><img src="../assets/home/taxi.webp" width="240" height="229" alt="" decoding="async"><b class="money" data-v="18">18,00 €</b></span>
+        <span class="hx-prop p-delivery" data-at="8300" aria-hidden="true"><img src="../assets/home/delivery.webp" width="195" height="240" alt="" decoding="async"><b class="money" data-v="23.40">23,40 €</b></span>
+        <div class="demo-phone hx-phone">
+          <div class="demo-screen hx-screen" aria-hidden="true">
+            <div class="hx-status"><b>9:41</b><span class="hx-sig"><i></i><i></i><i></i><i></i></span></div>
+            <div class="hx-banner" data-at="1000" data-off="2600"><span class="hx-banner-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="hx-banner-head"><b>DEINE BANK</b><span>jetzt</span></p><p>Kartenzahlung: <span class="money" data-v="42.18" data-code>42,18 EUR</span> bei REWE mit Karte *6878</p></div></div>
+            <div class="hx-pay" data-at="7800" data-off="9000"><span class="hx-pay-mark"></span><div><p class="hx-banner-head"><b>Wallet</b><span>jetzt</span></p><p>Apple Pay · Lieferando · <span class="money" data-v="23.40">23,40 €</span></p></div></div>
+            <p class="hx-date">Donnerstag, 19. November</p>
+            <p class="hx-title">Heute</p>
+            <div class="hx-card">
+              <p class="hx-card-label">HEUTE ÜBRIG</p>
+              <p class="hx-left"><b class="money hx-v0" data-v="120" data-off="2600">120,00 €</b><b class="money hx-v1" data-v="77.82" data-at="2600" data-off="6600">77,82 €</b><b class="money hx-v2" data-v="54.82" data-at="6600" data-off="9000">54,82 €</b><b class="money hx-v3" data-v="31.42" data-at="9000">31,42 €</b></p>
+              <span class="hx-bar"><i></i><em></em></span>
+              <p class="hx-card-foot"><span>Tagesbudget <span class="money" data-v="120">120,00 €</span></span><span class="hx-pace">✓ Monat im Plan</span></p>
+            </div>
+            <div class="hx-rows">
+              <div class="hx-row" data-at="2600"><span class="hx-emoji">🛒</span><span class="hx-main"><b>REWE</b><small>Lebensmittel <em class="src">Bank-SMS</em></small></span><span class="hx-amt">−<span class="money" data-v="42.18">42,18 €</span></span></div>
+              <div class="hx-row" data-at="6600"><span class="hx-emoji">🍽️</span><span class="hx-main"><b>Kaffee</b><small>Restaurant &amp; Café <em class="src v">Sprache</em></small></span><span class="hx-amt">−<span class="money" data-v="5">5,00 €</span></span></div>
+              <div class="hx-row" data-at="6800"><span class="hx-emoji">🚌</span><span class="hx-main"><b>Taxi</b><small>Transport <em class="src v">Sprache</em></small></span><span class="hx-amt">−<span class="money" data-v="18">18,00 €</span></span></div>
+              <div class="hx-row" data-at="9000"><span class="hx-emoji">🍽️</span><span class="hx-main"><b>Lieferando</b><small>Restaurant &amp; Café <em class="src p">Apple Pay</em></small></span><span class="hx-amt">−<span class="money" data-v="23.40">23,40 €</span></span></div>
+            </div>
+            <div class="hx-say" data-at="3900" data-off="6600"><span class="hx-mic"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span><p class="hx-words"><span data-at="4200">„Kaffee</span> <span data-at="4500"><span class="hx-num" data-v="5">5</span>,</span> <span data-at="4900">Taxi</span> <span data-at="5200"><span class="hx-num" data-v="18">18</span>“</span></p><span class="hx-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+            <div class="hx-coach" data-at="10000"><img src="../assets/home/coach-talk.webp" width="278" height="320" alt="" loading="lazy" decoding="async"><p><b>Im Plan.</b> 46 % deines Budgets ausgegeben, 58 % des Monats vorbei. Heute noch <span class="money" data-v="31.42">31,42 €</span> übrig.</p></div>
+            <div class="hx-dock"><span class="say" data-pulse="3900,4600">Sprechen</span><span>Einsetzen</span><span class="add">+ Eintragen</span></div>
+          </div>
+        </div>
+      </div>
+      <figcaption><span>Animation mit Beispielkäufen</span><button class="demo-toggle hx-toggle" type="button" hidden>Pause</button></figcaption>
+    </figure>
+  </div>
+</section>
 
-<h2 id="voice">Gesagt, gebucht</h2>
-<p>Sag „Kaffee 3,50, Tanken 60 und Lebensmittel 45 bei Rewe“, und du bekommst drei Entwürfe mit Betrag, Kategorie und Datum, die du prüfst und zusammen speicherst. Die App versteht Zahlen so, wie man sie spricht, etwa „zwölf fünfzig“ oder „anderthalb“, und das Zuhören läuft auf deinem Gerät.</p>
-<ul><li>10 gespeicherte Spracheingaben pro Kalendermonat und Gerät sind kostenlos, mit Pro unbegrenzt.</li><li>Ob die Spracheingabe verfügbar ist, hängt von Gerät und Sprache ab.</li></ul>
+<ul class="hx-proof" aria-label="TrackExpenses auf einen Blick">
+  <li><b>Mehrere Ausgaben</b> in einem Satz</li>
+  <li><b>Budget ab Zahltag</b> statt ab dem 1.</li>
+  <li><b>Finanzcoach</b>, der deinen Monat liest</li>
+  <li><b>Apple Pay &amp; Bank-SMS</b> von selbst eingetragen</li>
+  <li><b>Komplett auf Deutsch</b> · iPhone, iPad &amp; Mac</li>
+</ul>
 
-<h2 id="payday">Ein Monat, der beginnt, wenn dein Geld kommt</h2>
-<p>Leg fest, an welchem Tag dein Monat beginnt: am 1., am 15. oder wenn dein Gehalt kommt. Listen, Budgets und Diagramme folgen diesem Rhythmus. Jeder Budgetbalken markiert außerdem den heutigen Tag. So siehst du, ob du zu schnell ausgibst, bevor der Monat vorbei ist.</p>
-<ul><li>Ein Gesamtbudget und Budgets je Kategorie, Umschichten zwischen Budgets im laufenden Monat und Budgetwarnungen: kostenlos.</li><li>Mit Pro: ein Gehaltsplan, der zeigt, ob dein Einkommen für alles reicht, was du planst, ein Tagesbudget, bei dem die Fixkosten zuerst abgezogen werden, und eine Prognose bis zum Monatsende.</li></ul>
+<section id="ways" class="hs ways">
+  <header class="hs-head reveal"><p class="eyebrow">DREI WEGE</p><h2>Weniger tippen.<br>Mehr im Blick.</h2><p>Trag ein, wie es gerade passt. Alles landet im selben Haushaltsbuch und im selben Budgetmonat.</p></header>
+  <div class="ways-tabs">
+    <input type="radio" name="ways" id="way-say" checked><label for="way-say"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Sprechen</label>
+    <input type="radio" name="ways" id="way-sms"><label for="way-sms" id="import"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg>Bank-SMS</label>
+    <input type="radio" name="ways" id="way-tap"><label for="way-tap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>Einsetzen</label>
+    <article class="way way-say" id="say">
+      <div class="way-copy"><span class="tier">10 GRATIS IM MONAT · PRO UNBEGRENZT</span><h3>Gesagt, gebucht.</h3><p class="quote-line">„Kaffee 5, Taxi 18 und Wocheneinkauf 85 bei Rewe, gestern.“</p><p>Sag einen Kauf oder gleich alle auf einmal. TrackExpenses zeigt schon beim Sprechen, was es verstanden hat, hört bei der nächsten Pause auf und macht aus deinen Worten einen Entwurf pro Kauf, mit Betrag, Kategorie, Geschäft und Datum. „Gestern“ sagst du dabei nur einmal. Das Zuhören läuft auf deinem iPhone. Prüfen, speichern, fertig.</p><ul class="benefits"><li>Mehrere Ausgaben in einem Satz</li><li>Beim Zuhören wählst du die Sprache, die du sprichst</li><li>„Sieben fünfzig“ als 750 verstanden? Ein Tipp macht 7,50 daraus</li><li>Bekannte Geschäfte wie Aral, Lidl oder Rossmann bringen ihre Kategorie mit</li></ul><a href="../guides/voice-expenses-iphone.html" hreflang="en">So funktioniert die Spracheingabe (auf Englisch) <span aria-hidden="true">→</span></a></div>
+      <figure class="screen-stage stage-dark demo-stage">
+      <div class="demo-phone say-demo" data-demo data-loop="13500" role="img" aria-label="Animation: Jemand sagt „Kaffee 5, Taxi 18 und Wocheneinkauf 85 bei Rewe, gestern“. „Einfach sagen“ hört mit einer Wellenform zu, zeigt die verstandenen Beträge und Kategorien und dann drei Entwürfe zum Prüfen, alle von gestern: 5 für Restaurant &amp; Café, 18 für Transport und 85 für Lebensmittel bei Rewe. Alle drei werden gespeichert.">
+        <div class="demo-screen" aria-hidden="true">
+          <div class="demo-bar"><span class="demo-x">✕</span><b>Einfach sagen</b><span class="demo-gap"></span></div>
+          <div class="say-listen" data-off="6700">
+            <p class="say-kicker"><span class="rec-dot"></span>HÖRT ZU</p>
+            <p class="say-heard-label">VERSTANDEN</p>
+            <p class="say-transcript" data-words="Kaffee {5}, Taxi {18} und Wocheneinkauf {85} bei Rewe, gestern" data-start="700" data-step="360"></p>
+            <div class="say-chips">
+              <span class="chip c-exp" data-at="1250"><span class="money" data-v="5" data-int>5,00 €</span> · 🍽️ Restaurant &amp; Café</span>
+              <span class="chip c-exp" data-at="2000"><span class="money" data-v="18" data-int>18,00 €</span> · 🚌 Transport</span>
+              <span class="chip c-exp" data-at="3150"><span class="money" data-v="85" data-int>85,00 €</span> · 🛒 Lebensmittel</span>
+              <span class="chip" data-at="3900">📍 Rewe</span>
+              <span class="chip" data-at="4250">📅 Gestern</span>
+            </div>
+            <div class="say-mic">
+              <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+              <svg class="silence" viewBox="0 0 120 120" data-at="4700"><circle cx="60" cy="60" r="54"/></svg>
+              <span class="mic-btn"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+            </div>
+            <div class="say-wave" data-off="4600"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="say-pause" data-at="4700">Eine Pause, und fertig.</p>
+            <p class="say-tier">Deutsch · Auf dem Gerät &amp; privat</p>
+          </div>
+          <div class="say-review">
+            <p class="say-quote" data-at="6900">„Kaffee <span class="num" data-v="5">5</span>, Taxi <span class="num" data-v="18">18</span> und Wocheneinkauf <span class="num" data-v="85">85</span> bei Rewe, gestern“</p>
+            <div class="draft" data-at="7200"><p class="d-said">„Kaffee <span class="num" data-v="5">5</span>“</p><p class="d-amt"><span class="money" data-v="5" data-int>5,00 €</span></p><p class="d-meta"><span class="pill">Ausgabe</span>🍽️ Restaurant &amp; Café<span class="d-right">Bargeld · Gestern</span></p></div>
+            <div class="draft" data-at="7550"><p class="d-said">„Taxi <span class="num" data-v="18">18</span>“</p><p class="d-amt"><span class="money" data-v="18" data-int>18,00 €</span></p><p class="d-meta"><span class="pill">Ausgabe</span>🚌 Transport<span class="d-right">Bargeld · Gestern</span></p></div>
+            <div class="draft" data-at="7900"><p class="d-said">„Wocheneinkauf <span class="num" data-v="85">85</span> bei Rewe, gestern“</p><p class="d-amt"><span class="money" data-v="85" data-int>85,00 €</span></p><p class="d-meta"><span class="pill">Ausgabe</span>🛒 Lebensmittel<span class="d-right">Rewe · Gestern</span></p></div>
+            <div class="say-actions" data-at="8500"><span class="btn-retry">Erneut versuchen</span><span class="btn-save" data-pulse="9600">✓ 3 speichern</span></div>
+            <p class="say-saved" data-at="10300"><b>✓ 3 gespeichert</b> · <span class="money" data-sum="5,18,85">108,00 €</span> · zuletzt: Rewe</p>
+          </div>
+        </div>
+      </div>
+      <button class="demo-toggle" type="button" hidden>Pause</button>
+      <figcaption>Animation zu „Einfach sagen“. Beispielkäufe.</figcaption>
+    </figure>
+    </article>
+    <article class="way way-sms" id="sms">
+      <div class="way-copy"><span class="tier">10 GRATIS IM MONAT · PRO UNBEGRENZT</span><h3>Kaum bezahlt, schon eingetragen.</h3><p>Schickt dir deine Bank zu jeder Buchung eine SMS oder E-Mail, gibt eine Automation in Kurzbefehle sie an TrackExpenses weiter: Betrag, Geschäft, Karte und Datum landen in deinem Haushaltsbuch. Käufe mit Apple Pay trägt eine Wallet-Automation ein, auch wenn deine Bank gar nichts schickt. TAN-Codes, abgelehnte Zahlungen und Werbung bleiben draußen.</p><ul class="benefits"><li>Apple Pay-Käufe über die Wallet-Automation, ganz ohne Bank-SMS</li><li>Bank-E-Mails über Apples Mail-App, auch von Gmail, GMX oder web.de</li><li>Die letzten Ziffern der Karte wählen das richtige Konto</li><li>Die App öffnet weder dein Nachrichten-Postfach noch deine E-Mails</li></ul><a href="bank-sms.html">Bank-SMS einrichten <span aria-hidden="true">→</span></a> <a href="bank-email.html">Bank-E-Mails einrichten <span aria-hidden="true">→</span></a></div>
+      <figure class="screen-stage stage-mint demo-stage">
+      <div class="demo-phone sms-demo" data-demo data-loop="15000" role="img" aria-label="Animation: Bank-Nachrichten erscheinen auf dem Sperrbildschirm eines iPhones. Eine Kartenzahlung über 42,18 bei REWE und eine über 18,50 bei ARAL werden zu Ausgaben, eine TAN wird übersprungen, und eine Gutschrift wird als Einnahme zum Prüfen eingetragen.">
+        <div class="demo-screen lock" aria-hidden="true">
+          <div class="lock-time"><span>Donnerstag, 19. November</span><b>9:41</b></div>
+          <ol class="notes">
+            <li class="note" data-at="300"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>DEINE BANK</b><span>jetzt</span></p><p class="note-body">Kartenzahlung: <mark class="m-amt" data-at="1100"><span class="money" data-v="42.18" data-code>42,18 EUR</span></mark> bei <mark class="m-pay" data-at="1400">REWE</mark> mit Karte <mark class="m-card" data-at="1700">*6878</mark>. Kontostand: <span class="money" data-v="4120" data-code>4.120,00 EUR</span></p></div></li>
+            <li class="note" data-at="3600"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>DEINE BANK</b><span>jetzt</span></p><p class="note-body"><mark class="m-amt" data-at="4400"><span class="money" data-v="18.50" data-code>18,50 EUR</span></mark> bei <mark class="m-pay" data-at="4700">ARAL</mark> mit Karte <mark class="m-card" data-at="5000">*6878</mark> bezahlt.</p></div></li>
+            <li class="note note-otp" data-at="6900"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>DEINE BANK</b><span>jetzt</span></p><p class="note-body">Ihre TAN für die Überweisung von <span class="money" data-v="500" data-code>500,00 EUR</span> lautet 482915. Geben Sie diese niemals weiter.</p></div><span class="skip-stamp" data-at="7700">Übersprungen · TAN</span></li>
+            <li class="note" data-at="9100"><span class="note-icon"><svg viewBox="0 0 24 24"><path d="M12 4c4.97 0 9 3.36 9 7.5S16.97 19 12 19c-1.1 0-2.15-.16-3.12-.46L4 20l1.4-3.6C3.9 15.03 3 13.35 3 11.5 3 7.36 7.03 4 12 4z"/></svg></span><div><p class="note-head"><b>DEINE BANK</b><span>jetzt</span></p><p class="note-body">Gutschrift: <mark class="m-inc" data-at="9900"><span class="money" data-v="4800" data-code>4.800,00 EUR</span></mark> von Musterfirma GmbH (Gehalt)</p></div></li>
+          </ol>
+          <div class="automation" data-pulse="2000,5400,10500"><span class="auto-dot"></span>Automation in Kurzbefehle → TrackExpenses</div>
+          <div class="ledger-card">
+            <p class="ledger-head"><span class="ledger-icon"></span><b>TrackExpenses</b><span>Heute</span></p>
+            <div class="ledger-row" data-at="2300"><span class="row-emoji">🛒</span><span class="row-main"><b>REWE</b><small>Lebensmittel · Kreditkarte</small></span><span class="row-amt exp">−<span class="money" data-v="42.18">42,18 €</span></span></div>
+            <div class="ledger-row" data-at="5700"><span class="row-emoji">⛽</span><span class="row-main"><b>ARAL</b><small>Tanken · Kreditkarte</small></span><span class="row-amt exp">−<span class="money" data-v="18.50">18,50 €</span></span></div>
+            <div class="ledger-row" data-at="10800"><span class="row-emoji">💰</span><span class="row-main"><b>Gutschrift <em class="flag">Prüfen</em></b><small>Einnahme</small></span><span class="row-amt inc">+<span class="money" data-v="4800">4.800,00 €</span></span></div>
+          </div>
+        </div>
+      </div>
+      <button class="demo-toggle" type="button" hidden>Pause</button>
+      <figcaption>Animation zum automatischen SMS-Import. Beispielnachrichten und Beispielbeträge.</figcaption>
+    </figure>
+    </article>
+    <article class="way way-tap" id="tap">
+      <div class="way-copy"><span class="tier">KOSTENLOS</span><h3>Einsetzen, antippen oder Siri fragen.</h3><p>Keine Automation? Kopier die Nachricht deiner Bank und setz sie ein: Die Buchung füllt sich von selbst. Halte das App-Symbol gedrückt, um mit einem Griff eine Ausgabe anzusagen, einzutragen oder einzusetzen. Trag den üblichen Kaffee mit einem Tipp im Widget ein, ohne die App zu öffnen, und frag Siri, was du heute noch ausgeben kannst.</p><ul class="benefits"><li>Jede kopierte Bank-Nachricht, egal woher sie kommt</li><li>Sieben Widgets für Home- und Sperrbildschirm, dazu Kontrollzentrum und Aktionstaste</li><li>Aktionen am App-Symbol: ansagen, eintragen, einsetzen, den Coach fragen</li><li>Ein Geschäft, das du schon einmal eingetragen hast, bringt seine Kategorie und sein Konto mit</li></ul><a href="../features/widgets-and-shortcuts.html" hreflang="en">Widgets, Siri und Kurzbefehle (auf Englisch) <span aria-hidden="true">→</span></a></div>
+      <figure class="screen-stage stage-sand tap-stage"><div class="phone"><img src="../assets/de/ledger.webp" width="660" height="1434" alt="Die Buchungen des Tages mit den Tasten Sprechen, Einsetzen und Eintragen und dem Hinweis „Dein Budget auf einen Blick“ für die Widgets" loading="lazy" decoding="async"></div><div class="phone tap-second"><img src="../assets/de/paste.webp" width="660" height="1434" alt="Neue Buchung, aus einer eingesetzten Bank-Nachricht gelesen: 27,45 € bei Rewe, Kategorie Lebensmittel, Konto Kreditkarte" loading="lazy" decoding="async"></div><figcaption>Echte Bildschirme · Beispieldaten</figcaption></figure>
+    </article>
+  </div>
+</section>
 
-<h2 id="coach">Dein Finanzcoach</h2>
-<p>Der Coach liest deinen abgeschlossenen Monat, nennt den größten Posten deiner Alltagsausgaben und schlägt ein Limit vor, das du ausprobieren kannst. Frag ihn „Liege ich diesen Monat im Plan?“ oder „Wie war mein September?“, oder tipp einfach ein, was du ausgegeben hast.</p>
-<ul><li>Antworten nach festen Regeln, Diagramme und getippte Einträge entstehen auf deinem Gerät und sind kostenlos.</li><li>Offene Fragen beantwortet Claude von Anthropic, erst nach deiner Zustimmung. Gesendet werden deine Frage, das bisherige Gespräch und eine Zusammenfassung dieses und des letzten Monats. Der Coach kann außerdem Summen früherer Monate oder einzelne Käufe mit Datum, Geschäft, Kategorie und Betrag anfordern. Notizen, Belege, Kontonummern und Kontostände werden nie gesendet. 10 Fragen pro Monat und Gerät sind kostenlos.</li><li>Challenges, wöchentliche Check-ins und mehr Fragen gibt es mit Pro.</li></ul>
+<section id="try" class="hs try">
+  <header class="hs-head reveal"><p class="eyebrow">SO LIEST DIE APP</p><h2>Tipp ein Beispiel an.<br>Sieh, was ankommt.</h2><p>Jedes Ergebnis ist die echte Auswertung genau dieser Worte, mit denselben Regeln, die auf deinem iPhone laufen. Hier wird nichts gesendet.</p></header>
+  <div class="try-box">
+    <div class="try-switch" hidden><button type="button" data-group="say" aria-pressed="true">Gesagt</button><button type="button" data-group="alert" aria-pressed="false">Bank-Nachricht</button></div>
+    <div class="try-group" data-group="say">
+      <h3 class="try-title">Was du sagen könntest</h3>
+      <article class="try-card" data-label="3 auf einmal"><p class="try-in say">Brötchen 3, Tanken 60 und Döner 7</p><div class="try-out"><div class="try-draft"><b>3,00 €</b><span>🍽️ Restaurant &amp; Café</span><span class="k">Ausgabe</span></div><div class="try-draft"><b>60,00 €</b><span>⛽️ Tanken</span><span class="k">Ausgabe</span></div><div class="try-draft"><b>7,00 €</b><span>🍽️ Restaurant &amp; Café</span><span class="k">Ausgabe</span></div></div><p class="try-note">Drei Käufe in einem Atemzug: drei Entwürfe, die du zusammen prüfst und speicherst.</p></article>
+      <article class="try-card" data-label="Geschäft, Karte, gestern"><p class="try-in say">gestern 45 bei Rewe mit der Karte</p><div class="try-out"><div class="try-draft"><b>45,00 €</b><span>🛒 Lebensmittel</span><span>Rewe</span><span>Kreditkarte</span><span>Gestern</span><span class="k">Ausgabe</span></div></div><p class="try-note">Geschäft, Konto und Tag werden mitgelesen. „Die Karte“ ist dein Kartenkonto, wenn du eins hast.</p></article>
+      <article class="try-card" data-label="Zwölf fünfzig"><p class="try-in say">zwölf fünfzig beim Bäcker</p><div class="try-out"><div class="try-draft"><b>12,50 €</b><span>🍽️ Restaurant &amp; Café</span><span class="k">Ausgabe</span></div></div><p class="try-note">Preise so, wie man sie sagt. Auch lange Zahlwörter wie „neunhundertfünfzig“ oder „anderthalbtausend“.</p></article>
+      <article class="try-card" data-label="Geld abgehoben"><p class="try-in say">200 abgehoben</p><div class="try-out"><div class="try-draft transfer"><b>200,00 €</b><span>Girokonto → Bargeld</span><span class="k">Umbuchung</span></div></div><p class="try-note">Abgehobenes Geld ist eine Umbuchung, keine Ausgabe. Was du damit bezahlst, zählt erst, wenn du es einträgst.</p></article>
+      <article class="try-card" data-label="Kreditkarte"><p class="try-in say">Kreditkartenrechnung 800 bezahlt</p><div class="try-out"><div class="try-draft transfer"><b>800,00 €</b><span>Girokonto → Kreditkarte</span><span class="k">Umbuchung</span></div></div><p class="try-note">Die Kreditkartenrechnung zu bezahlen ist eine Umbuchung. So zählen deine Käufe nicht doppelt.</p></article>
+      <article class="try-card" data-label="Gehalt"><p class="try-in say">Gehalt 3.200 bekommen</p><div class="try-out"><div class="try-draft income"><b>3.200,00 €</b><span>💰 Gehalt</span><span class="k">Einnahme</span></div></div><p class="try-note">Geld, das reinkommt, ist eine Einnahme.</p></article>
+      <article class="try-card" data-label="Aral 60"><p class="try-in say">Aral 60</p><div class="try-out"><div class="try-draft"><b>60,00 €</b><span>⛽️ Tanken</span><span>Aral</span><span class="k">Ausgabe</span></div></div><p class="try-note">Bekannte Marken bringen Geschäft und Kategorie mit.</p></article>
+    </div>
+    <div class="try-group" data-group="alert">
+      <h3 class="try-title">Bank-Nachrichten, wie Banken sie schreiben</h3>
+      <article class="try-card" data-label="🇩🇪 Kartenzahlung"><p class="try-in sms"><b>DEINE BANK</b>Kartenzahlung: 45,67 EUR bei REWE Markt GmbH am 18.11.2026 mit Karte *4821</p><div class="try-out"><div class="try-draft"><b>45,67 €</b><span>🛒 Lebensmittel</span><span>REWE Markt GmbH</span><span>18. November</span><span>Karte ••4821</span><span class="k">Ausgabe</span></div></div><p class="try-note">Betrag, Geschäft, Datum und Karte. Die letzten Ziffern der Karte wählen das Konto.</p></article>
+      <article class="try-card" data-label="🇩🇪 Kurz und knapp"><p class="try-in sms"><b>DEINE BANK</b>Du hast 12,50 € bei Lidl bezahlt.</p><div class="try-out"><div class="try-draft"><b>12,50 €</b><span>🛒 Lebensmittel</span><span>Lidl</span><span class="k">Ausgabe</span></div></div><p class="try-note">Auch ein einzelner kurzer Satz reicht: Betrag, Geschäft und Kategorie sind drin.</p></article>
+      <article class="try-card" data-label="🇦🇹 Kartenzahlung"><p class="try-in sms"><b>DEINE BANK</b>Kartenzahlung € 34,90 SPAR DANKT 1234</p><div class="try-out"><div class="try-draft"><b>34,90 €</b><span>🛒 Lebensmittel</span><span class="k">Ausgabe</span></div></div><p class="try-note">Das Eurozeichen vor dem Betrag, wie in Österreich üblich, wird genauso gelesen.</p></article>
+      <article class="try-card" data-label="🇨🇭 Belastung"><p class="try-in sms"><b>DEINE BANK</b>Belastung CHF 45.50 Karte 1234 MIGROS ZUERICH</p><div class="try-out"><div class="try-draft"><b>45.50 CHF</b><span>🛒 Lebensmittel</span><span>Karte ••1234</span><span class="k">Ausgabe</span></div></div><p class="try-note">Franken mit Dezimalpunkt, wie Schweizer Banken sie schreiben.</p></article>
+      <article class="try-card" data-label="💰 Gutschrift"><p class="try-in sms"><b>DEINE BANK</b>Gutschrift: 2.450,00 € von Musterfirma GmbH (Gehalt)</p><div class="try-out"><div class="try-draft income"><b>2.450,00 €</b><span class="k">Einnahme</span></div></div><p class="try-note">Auch Geld, das reinkommt, kann eine Automation eintragen, zum Prüfen markiert.</p></article>
+      <article class="try-card" data-label="🔒 TAN"><p class="try-in sms"><b>DEINE BANK</b>Ihre TAN für die Überweisung von 500,00 EUR an Max Mustermann lautet 123456.</p><div class="try-out"><div class="try-draft skipped"><b>Übersprungen</b><span>Eine TAN, keine Zahlung</span></div></div><p class="try-note">Eine TAN nennt oft einen Betrag, ausgegeben ist aber noch nichts. Also wird nichts eingetragen.</p></article>
+      <article class="try-card" data-label="✕ Abgelehnt"><p class="try-in sms"><b>DEINE BANK</b>Kartenzahlung abgelehnt: 45,67 EUR bei REWE</p><div class="try-out"><div class="try-draft skipped"><b>Übersprungen</b><span>Die Zahlung ist nicht durchgegangen</span></div></div><p class="try-note">Eine abgelehnte Zahlung landet nie in deinen Summen.</p></article>
+      <article class="try-card" data-label="📅 Lastschrift"><p class="try-in sms"><b>DEINE BANK</b>Die Lastschrift über 89,00 EUR von Stadtwerke Musterstadt wird am 25.11.2026 eingezogen.</p><div class="try-out"><div class="try-draft skipped"><b>Übersprungen</b><span>Noch nicht abgebucht</span></div></div><p class="try-note">Eine angekündigte Lastschrift ist noch kein Geld, das geflossen ist.</p></article>
+    </div>
+  </div>
+</section>
 
-<h2 id="import">Apple Pay-Käufe und Bank-SMS, von selbst eingetragen</h2>
-<p>Richte in der App „Kurzbefehle“ einmal eine Automation ein. Danach landen Käufe mit Karten aus Wallet oder die SMS deiner Bank von selbst als Buchungen in deinem Haushaltsbuch, und du prüfst sie, wann du willst.</p>
-<ul><li>Aus einer Bank-SMS liest die App Betrag, Geschäft, Datum und Karte. TAN-Codes, abgelehnte Zahlungen und Werbung trägt sie nicht ein.</li><li>Die App liest dein Nachrichten-Postfach nicht und verbindet sich nicht mit deiner Bank. Die Automation, die du selbst einrichtest, gibt nur die passende Nachricht weiter.</li><li>Oder setz eine Bank-SMS selbst ein: Die Buchung wird für dich ausgefüllt.</li><li>10 erfolgreiche Bank-SMS-Importe pro Kalendermonat und Gerät sind kostenlos, mit Pro unbegrenzt.</li></ul>
-<p><a href="bank-sms.html">Die Einrichtung Schritt für Schritt, mit Bildern aus Kurzbefehle auf Deutsch</a></p>
+<section id="today" class="hs today">
+  <div class="today-copy reveal"><p class="eyebrow">DEINE ZAHL FÜR HEUTE</p><h2>So viel kannst du<br>heute ausgeben.</h2><p>Dein Budgetmonat kann am Zahltag beginnen, an jedem Tag vom 1. bis zum 31. TrackExpenses zieht zuerst die Fixkosten ab, die noch kommen, und verteilt den Rest auf die verbleibenden Tage. Gibst du heute weniger aus, bleibt morgen mehr.</p><ul class="benefits"><li>Jeder Budgetbalken markiert den heutigen Tag. Erst so sagt „46 % ausgegeben“ etwas aus</li><li>Geld zwischen Budgets umschichten oder ein überzogenes Budget ausgleichen, bei gleicher Summe (kostenlos)</li><li>Ein Tagesbudget nur für ausgewählte Kategorien, bis zu einem Datum deiner Wahl, etwa für den Urlaub (Pro)</li><li>Über dem Budget? Du siehst, um wie viel, und wann ein neues Budget beginnt</li></ul><p class="small">Tagesbudget und Prognosen gehören zu Pro. Tempo, verbleibende Tage und die Beträge für Ausgegeben und Übrig sind kostenlos.</p></div>
+  <form class="today-calc reveal" aria-label="Tagesbudget ausprobieren" onsubmit="return false">
+    <p class="today-calc-label">AUSPROBIEREN · WIE VIEL PRO TAG?</p>
+    <div class="step-row"><label for="tc-left">Übrig im Budget</label><div class="stepper"><button type="button" data-step="-50" data-for="tc-left" aria-label="50 weniger">−</button><input id="tc-left" type="number" inputmode="decimal" min="0" step="any" value="1955"><button type="button" data-step="50" data-for="tc-left" aria-label="50 mehr">+</button></div></div>
+    <div class="step-row"><label for="tc-bills">Fixkosten, die noch kommen</label><div class="stepper"><button type="button" data-step="-25" data-for="tc-bills" aria-label="25 weniger">−</button><input id="tc-bills" type="number" inputmode="decimal" min="0" step="any" value="300"><button type="button" data-step="25" data-for="tc-bills" aria-label="25 mehr">+</button></div></div>
+    <div class="step-row"><label for="tc-days">Tage übrig, heute mitgezählt</label><div class="stepper"><button type="button" data-step="-1" data-for="tc-days" aria-label="Ein Tag weniger">−</button><input id="tc-days" type="number" inputmode="numeric" min="1" max="31" step="1" value="12"><button type="button" data-step="1" data-for="tc-days" aria-label="Ein Tag mehr">+</button></div></div>
+    <div class="today-result" aria-live="polite"><span>Du kannst</span><b id="tc-out">137,91</b><span>pro Tag ausgeben, ab heute</span></div>
+    <span class="today-bar" aria-hidden="true"><i></i><em data-label="Heute · 58 % des Monats"></em></span>
+    <p class="today-calc-foot">(Übrig im Budget − Fixkosten, die noch kommen) ÷ Tage übrig, abgerundet. <a href="../tools/daily-budget.html" hreflang="en">Zum ausführlichen Rechner (auf Englisch) →</a></p>
+  </form>
+</section>
 
-<h2 id="clear">Deine Ausgaben im Blick</h2>
-<ul><li>Tagesliste, Kalender, Monatssummen und Ausgaben nach Empfänger.</li><li>Einkommen und Ausgaben, dazu die größte Veränderung je Kategorie gegenüber dem Zeitraum davor.</li><li>Bargeld, Konten und Karten mit Umbuchungen und Kontoständen, auch in mehreren Währungen zu einem Kurs, den du festlegst.</li><li>Wiederkehrende Buchungen für Miete, Gehalt und Abos, und für Fixkosten auf Wunsch eine Erinnerung am Tag vorher.</li><li>Widgets für Home-Bildschirm und Sperrbildschirm, Siri und Kurzbefehle.</li></ul>
+<section id="coach" class="hs coach">
+  <figure class="coach-stage">
+    <div class="coach-chat" data-demo data-loop="14500" role="img" aria-label="Animation: Jemand fragt den Finanzcoach „Liege ich diesen Monat im Plan?“, und er antwortet direkt vom iPhone: 46 Prozent des Budgets sind ausgegeben, 58 Prozent des Monats vorbei. Dann folgt ein Tipp auf „Was kann ich besser machen?“, und eine KI-Antwort schlägt vor, an drei Tagen pro Woche zu Hause Kaffee zu machen. Zum Schluss wird „Kaffee 4 Taxi 18“ getippt, und zwei Einträge sind gespeichert. Beispielzahlen.">
+      <div class="demo-screen coach-screen" aria-hidden="true">
+        <div class="coach-head"><img src="../assets/home/coach-wave.webp" width="310" height="320" alt="" loading="lazy" decoding="async"><div><b>Dein Finanzcoach</b><small>Liest deinen Monat · auf Deutsch</small></div></div>
+        <p class="cb me" data-at="0">Liege ich diesen Monat im Plan?</p>
+        <p class="cb dots" data-at="300" data-off="1300"><i></i><i></i><i></i></p>
+        <p class="cb coach" data-at="1300">Ja. Du hast <b>46 %</b> deines Budgets ausgegeben, und <b>58 %</b> des Monats sind vorbei. Behalte Lebensmittel im Auge, dort sind es schon 82 %.<span class="cb-tag">Auf deinem iPhone · kostenlos</span></p>
+        <p class="cb me ai" data-at="5200">✦ Was kann ich besser machen?</p>
+        <p class="cb dots" data-at="6000" data-off="7300"><i></i><i></i><i></i></p>
+        <p class="cb coach ai" data-at="7300">Kaffee ist dein häufigster kleiner Kauf: 21-mal diesen Monat. Machst du ihn an drei Tagen pro Woche zu Hause, sparst du etwa ein Drittel dieser Ausgaben.<span class="cb-tag ai">KI · Zahlen prüfen</span></p>
+        <p class="cb me" data-at="10300">Kaffee 4 Taxi 18</p>
+        <div class="cb logged" data-at="11100"><span>🍽️ Kaffee <b>4,00 €</b></span><span>🚌 Taxi <b>18,00 €</b></span><em>✓ 2 gespeichert · kostenlos</em></div>
+      </div>
+    </div>
+    <button class="demo-toggle" type="button" hidden>Pause</button>
+    <figcaption>Gespräch zur Veranschaulichung · Beispielzahlen</figcaption>
+  </figure>
+  <div class="coach-copy reveal"><p class="eyebrow">FINANZCOACH <span class="tier">KOSTENLOS + PRO</span></p><h2>Frag einfach.<br>Dein Coach weiß es.</h2><p>„Liege ich im Plan?“ „Wie war der September?“ „Was habe ich für Lebensmittel ausgegeben?“ Alltagsfragen beantwortet dein Coach direkt auf dem iPhone, sofort und kostenlos. Offene Fragen gehen erst nach deiner Zustimmung an Claude von Anthropic, mit einer Zusammenfassung deines Monats, nie mit Notizen, Belegen, Kontonamen oder Kontoständen.</p><ul class="benefits"><li>Liest den letzten Monat und schlägt ein Limit vor. Machst du bei der Challenge mit, meldet er sich jede Woche (Pro)</li><li>Tipp „Kaffee 4 Taxi 18“, und beides ist eingetragen, kostenlos</li><li>10 KI-Fragen pro Monat und Gerät kostenlos, mehr mit Pro</li><li>Spricht Deutsch, Englisch, Arabisch, Spanisch und Portugiesisch</li></ul><a href="../features/ai-money-coach.html" hreflang="en">Mehr über den Finanzcoach (auf Englisch) <span aria-hidden="true">→</span></a></div>
+</section>
 
-<h2 id="private">Deine Daten gehören dir</h2>
-<p>Keine Werbung, kein Bank-Login, kein TrackExpenses-Konto. Dein Haushaltsbuch liegt auf deinem Gerät und wird über deine private iCloud zwischen deinen Geräten synchronisiert. Du kannst die App mit Code oder Face ID schützen und Belegfotos anhängen. Mit Pro exportierst du jeden Zeitraum als CSV.</p>
+<section id="more" class="hs more">
+  <header class="hs-head reveal"><p class="eyebrow">DIE KLEINEN DINGE</p><h2>Und alles, was du<br>sonst noch brauchst.</h2></header>
+  <div class="tiles">
+    <div class="tile reveal"><span class="ti">🔔</span><b>Budget&shy;warnungen</b><span>Ein Hinweis bei 80 %, wenn du schneller ausgibst als geplant, und wenn ein Budget überzogen ist.</span><em>KOSTENLOS</em></div>
+    <div class="tile reveal"><span class="ti">🗓️</span><b>Fixkosten-Erinnerungen</b><span>Eine Mitteilung um 9 Uhr am Tag, bevor die Miete oder ein Abo fällig ist.</span><em>KOSTENLOS</em></div>
+    <div class="tile reveal"><span class="ti">✈️</span><b>Tagesbudget für den Urlaub</b><span>Wähl Budgets und einen letzten Tag und sieh, was pro Tag drin ist.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">📱</span><b>Widgets &amp; Siri</b><span>Den üblichen Kauf mit einem Tipp eintragen, Siri fragen, was heute übrig ist.</span><em>KOSTENLOS</em></div>
+    <div class="tile reveal"><span class="ti">🔎</span><b>Die Suche rechnet mit</b><span>Such ein Geschäft und sieh, was du dort ausgegeben hast, über alle Monate.</span><em>KOSTENLOS</em></div>
+    <div class="tile reveal"><span class="ti">💻</span><b>iPhone, iPad &amp; Mac</b><span>Der private iCloud-Sync hält alle Geräte auf demselben Stand.</span><em>KOSTENLOS</em></div>
+    <div class="tile reveal"><span class="ti">💱</span><b>Jede Währung</b><span>Im Ausland zahlen, zu deinem eigenen Kurs. Die Summen stehen in deiner Währung.</span><em>KOSTENLOS</em></div>
+    <div class="tile reveal"><span class="ti">📤</span><b>Exportieren &amp; Teilen</b><span>Eine Tabelle für jeden Monat oder Zeitraum, oder das vollständige Backup.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">💼</span><b>Gehaltsplan</b><span>Einkommen, Ausgaben und Sparen Zeile für Zeile, Plan neben Ist.</span><em>PRO</em></div>
+    <div class="tile reveal"><span class="ti">💳</span><b>Konten &amp; Karten</b><span>Bargeld, Girokonto, Kreditkarte, Sparkonto und Kredite. Umbuchungen zählen nie doppelt.</span><em>3 GRATIS</em></div>
+    <div class="tile reveal"><span class="ti">🔒</span><b>App-Sperre</b><span>Face ID oder Code. Kein Bank-Login, kein Benutzerkonto.</span><em>KOSTENLOS</em></div>
+    <div class="tile tile-lang reveal"><span class="ti">🌍</span><b>Fünf Sprachen</b><span>Mit Spracheingabe und Coach: <a href="../index.html" lang="en" hreflang="en">English</a> · <a href="../ar/index.html" lang="ar" hreflang="ar">العربية</a> · <a href="../es/index.html" lang="es-419" hreflang="es-419">Español</a> · <a href="../pt/index.html" lang="pt-BR" hreflang="pt-BR">Português</a></span><em>KOSTENLOS</em></div>
+  </div>
+  <p class="section-cta"><a href="../features/index.html" hreflang="en">Alle Funktionen, kostenlos und Pro, im Vergleich (auf Englisch) →</a></p>
+</section>
 
-<h2 id="free-and-pro">Kostenlos starten</h2>
-<p>Unbegrenzt viele Buchungen, Budgets, Kalender, Diagramme, Suche und iCloud-Sync sind kostenlos, dazu bis zu 3 Konten und 2 wiederkehrende Regeln sowie 10 Bank-SMS-Importe und 10 Spracheingaben pro Kalendermonat und Gerät. Bank-SMS, die danach eintreffen, werden außerhalb deiner Summen aufbewahrt: Pro fügt alle hinzu, sonst gibt das Kontingent des nächsten Monats so viele frei, wie es deckt.</p>
-<p>Pro ergänzt unbegrenzte Bank-SMS-Importe und Spracheingabe, den Gehaltsplan, Ausgabenprognosen, das Tagesbudget, Was-wäre-wenn-Pläne, Challenges mit dem Finanzcoach, unbegrenzt viele Konten und wiederkehrende Regeln, CSV-Export für jeden Zeitraum, CSV-Import, ein vollständiges Backup mit Wiederherstellung, Farbdesigns und alternative App-Icons. Wähl ein Monats- oder Jahresabo oder einen einmaligen Kauf (Lebenslang).</p>
+<section id="reviews" class="hs reviews">
+  <header class="hs-head reveal"><p class="eyebrow">BEWERTUNGEN</p><h2>Echte Stimmen<br>aus dem App Store.</h2>{{RATING_SUMMARY}}</header>
+  {{REVIEWS}}
+</section>
 
-<h2 id="faq">Häufige Fragen</h2>
-<details><summary>Verbindet sich die App mit meinem Bankkonto?</summary><p>Nein. Die App fragt nicht nach deinem Bank-Login und verbindet sich nicht mit deiner Bank. Du trägst Buchungen selbst ein oder richtest in Kurzbefehle eine Automation ein, die Apple Pay-Käufe oder ausgewählte Bank-SMS weitergibt.</p></details>
-<details><summary>Liest die App meine Nachrichten?</summary><p>Nein. Die Automation, die du selbst in Kurzbefehle einrichtest, gibt die passende Nachricht an TrackExpenses weiter. Auf dein Nachrichten-Postfach hat die App keinen Zugriff.</p></details>
-<details><summary>Meine Bank schickt keine SMS. Was dann?</summary><p>Viele Banken in Deutschland, Österreich und der Schweiz schicken Mitteilungen in ihrer eigenen App statt SMS. Dann trägst du deine Ausgaben per Sprache oder von Hand ein, oder du richtest die Automation für Käufe mit Karten aus Wallet ein. Die Schritte stehen in der App unter „Mehr“ → „Automatischer SMS-Import“.</p></details>
-<details><summary>Ist die App kostenlos?</summary><p>Ja. Der Download ist kostenlos, und das Haushaltsbuch selbst ist ohne Bezahlung vollständig: unbegrenzt viele Buchungen, Budgets, Auswertungen und Suche. Pro ergänzt unbegrenzte Spracheingabe und Bank-SMS-Importe sowie die Planungswerkzeuge, als Monats- oder Jahresabo oder als einmaliger Kauf.</p></details>
-<details><summary>Wo liegen meine Daten?</summary><p>Auf deinem Gerät, und wenn du willst, über deine private iCloud auf deinen anderen Geräten. Es gibt kein TrackExpenses-Konto und keinen Server, der dein Haushaltsbuch speichert.</p></details>
+<section id="screenshots" class="hs screens">
+  <header class="hs-head reveal"><p class="eyebrow">DAS GANZE BILD</p><h2>Elf echte Bildschirme.<br>Zum Durchwischen.</h2></header>
+  <div class="gallery-wrap">
+    <div class="screen-gallery" tabindex="0" role="region" aria-label="Bildschirme der App; horizontal scrollen">
+      <article class="gallery-card"><span class="feature-label">EINFACH SAGEN <span class="tier">10 GRATIS IM MONAT</span></span><h3>Ein Satz, drei Entwürfe.</h3><p>Jeder gesagte Kauf, bereit zum Prüfen und gemeinsamen Speichern.</p><div class="phone"><img src="../assets/de/say.webp" width="660" height="1434" alt="„Einfach sagen“ im dunklen Design: drei Entwürfe aus dem Satz „Kaffee 15, Taxi 40 und Mittagessen 60“, jeder mit Betrag, Kategorie, Konto und Datum" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">HÖRT ZU</span><h3>Du siehst, was verstanden wurde.</h3><p>Beträge und Kategorien erscheinen, während du sprichst. Eine Pause beendet die Aufnahme.</p><div class="phone"><img src="../assets/de/voice.webp" width="660" height="1434" alt="„Einfach sagen“ beim Zuhören: „Mittagessen 12, Taxi 9 und Lebensmittel 38 bei Rewe“, drei Buchungen verstanden" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">EINSETZEN <span class="tier">KOSTENLOS</span></span><h3>Aus deiner Nachricht gelesen.</h3><p>Betrag, Geschäft, Konto und Kategorie sind schon ausgefüllt.</p><div class="phone"><img src="../assets/de/paste.webp" width="660" height="1434" alt="Neue Buchung, aus einer eingesetzten Bank-Nachricht gelesen: 27,45 € bei Rewe, Kategorie Lebensmittel, Konto Kreditkarte" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">TÄGLICH <span class="tier">KOSTENLOS</span></span><h3>Dein Tag auf einen Blick.</h3><p>Was heute weg ist, was noch drin ist, und jede Buchung mit Kategorie und Konto.</p><div class="phone"><img src="../assets/de/daily.webp" width="660" height="1434" alt="Die Liste „Täglich“ für den Zeitraum 28.10. bis 27.11.2026: heute 24,83 € ausgegeben, 123,00 € übrig, Buchungen bei Friseur, BVG und Edeka" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">TAGESBUDGET <span class="tier">PRO</span></span><h3>Nachvollziehbar gerechnet.</h3><p>Monatsbudget minus Fixkosten und bisherige Ausgaben, verteilt auf die Tage, die bleiben.</p><div class="phone"><img src="../assets/de/budget.webp" width="660" height="1434" alt="Das heutige Budget: 84,00 € übrig, darunter die Rechnung vom Monatsbudget über Fixkosten bis zum Tagesbudget" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">BUDGET <span class="tier">KOSTENLOS</span></span><h3>Jedes Budget mit Tempo.</h3><p>Der Strich im Balken markiert den heutigen Tag. So siehst du, ob du zu schnell bist.</p><div class="phone"><img src="../assets/de/budgets.webp" width="660" height="1434" alt="Statistik, Budget: 1.601,30 € übrig im Monat, noch 11 Tage, das Budget für Wohnen zu 90 Prozent ausgegeben" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">GEHALTSPLAN <span class="tier">PRO</span></span><h3>Reicht das Gehalt?</h3><p>Einkommen, Ausgaben und Sparen Zeile für Zeile. Die Antwort steht direkt unter dem Einkommen.</p><div class="phone"><img src="../assets/de/salary-plan.webp" width="660" height="1434" alt="Gehaltsplan für November 2026: 3.400,00 € Einkommen decken den Plan, 150,00 € sind noch zu verplanen" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">FINANZCOACH <span class="tier">KOSTENLOS + PRO</span></span><h3>Ein Limit, das passt.</h3><p>Der Coach liest deinen Monat und schlägt eine Challenge vor.</p><div class="phone"><img src="../assets/de/coach.webp" width="660" height="1434" alt="Der Finanzcoach: Lebensmittel waren 31 Prozent der Alltagsausgaben im Oktober 2026, der Vorschlag lautet, im Dezember unter 180 € zu bleiben" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">KALENDER <span class="tier">KOSTENLOS</span></span><h3>Tag für Tag.</h3><p>Tipp auf einen Tag und sieh, wohin dein Geld ging.</p><div class="phone"><img src="../assets/de/calendar.webp" width="660" height="1434" alt="Kalender für den Zeitraum 28.10. bis 27.11.2026 mit Einnahmen und Ausgaben je Tag, darunter die Buchungen vom Dienstag, 17. November" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">KONTEN</span><h3>Alle Kontostände im Blick.</h3><p>Bargeld, Girokonto und Kreditkarte. Drei Konten kostenlos, unbegrenzt mit Pro.</p><div class="phone"><img src="../assets/de/accounts.webp" width="660" height="1434" alt="Konten: Nettovermögen 13.012,28 € mit Bargeld, Girokonto und Kreditkarte" loading="lazy" decoding="async"></div></article><article class="gallery-card"><span class="feature-label">ICLOUD-SYNC <span class="tier">KOSTENLOS</span></span><h3>Auf jedem deiner Geräte.</h3><p>iPhone, iPad und Mac, über deine private iCloud. Ohne Benutzerkonto.</p><div class="phone"><img src="../assets/de/icloud.webp" width="660" height="1434" alt="iCloud-Sync: Dein Haushaltsbuch auf jedem Gerät, iPhone, Mac und iPad auf dem neuesten Stand" loading="lazy" decoding="async"></div></article>
+    </div>
+    <div class="gallery-controls" hidden><button type="button" class="g-prev" aria-label="Vorherige Bildschirme">←</button><button type="button" class="g-next" aria-label="Nächste Bildschirme">→</button></div>
+  </div>
+  <p class="gallery-note small">Echte iPhone-Bildschirme mit Beispieldaten. Prognosen hängen von deinen Einträgen ab.</p>
+</section>
 
-<h2 id="more">Mehr Anleitungen und Rechner</h2>
-<p>Der Rest der Website ist derzeit auf Englisch:</p>
-<ul><li><a href="../guides/voice-expenses-iphone.html" hreflang="en" lang="en">Voice Expense Tracking on iPhone</a></li><li><a href="../guides/payday-budget.html" hreflang="en" lang="en">Start Your Budget Month on Payday</a></li><li><a href="../tools/index.html" hreflang="en" lang="en">Free budget calculators</a></li><li><a href="../privacy.html" hreflang="en" lang="en">Privacy Policy</a></li></ul>
-<p class="byline">Entwickelt von <a href="../about.html" hreflang="en">Mohamed Elatabany</a> · Zuletzt aktualisiert: November 2026 · <a href="../support.html" hreflang="en">Korrektur vorschlagen</a></p>
+<section class="hs plans" id="free-and-pro">
+  <header class="hs-head reveal"><p class="eyebrow">KOSTENLOS ODER PRO</p><h2>Kostenlos komplett.<br>Mit Pro weniger Arbeit.</h2></header>
+  <div class="plans-row">
+    <article class="plan reveal"><p class="eyebrow">KOSTENLOS</p><h3>Alles, um dranzubleiben.</h3><ul class="benefits"><li>Unbegrenzt viele Einträge von Hand, Budgets und Suche</li><li>Budgetmonat ab Zahltag, Tempo und Statistik</li><li>Geld zwischen Budgets umschichten und ausgleichen</li><li>Budgetwarnungen und Fixkosten-Erinnerungen</li><li>Privater iCloud-Sync auf iPhone, iPad und Mac</li><li>3 Konten und 2 wiederkehrende Buchungen</li><li>Pro Monat und Gerät: 10 Spracheingaben, 10 automatische Bank-Importe und 10 KI-Fragen an den Coach</li></ul></article>
+    <article class="plan plan-pro reveal"><p class="eyebrow">PRO</p><h3>Den Rest erledigt die App.</h3><ul class="benefits"><li>Unbegrenzt viele Spracheingaben und Bank-Importe</li><li>Unbegrenzt viele Konten und wiederkehrende Buchungen</li><li>Gehaltsplan, Prognosen und Was-wäre-wenn-Pläne</li><li>Tagesbudget insgesamt, je Budget oder für ausgewählte Budgets bis zu einem Datum</li><li>Challenges mit dem Coach und mehr KI-Fragen</li><li>Exportieren &amp; Teilen, CSV-Import und vollständiges Backup</li><li>Farbdesigns und alternative App-Icons</li></ul><p class="small">Monatlich, jährlich oder als einmaliger Kauf (Lebenslang), Preise in deinem App Store. Endet Pro, wird nichts gesperrt, was du gespeichert hast.</p></article>
+  </div>
+  <div class="plans-cta">{{APP_STORE_CTA}}</div>
+</section>
+
+<section class="hs faq-section" id="faq"><header class="hs-head"><p class="eyebrow">GUTE FRAGEN</p><h2>Vor dem Download.</h2></header>
+  <details><summary>Verbindet sich TrackExpenses mit meiner Bank?</summary><p>Nein. Es gibt keine Bankverbindung, keinen Bank-Login und kein Benutzerkonto. Du trägst selbst ein: per Sprache, indem du eine Bank-Nachricht einsetzt, oder mit Automationen in Kurzbefehle für Bank-SMS, Bank-E-Mails und Apple Pay-Käufe.</p></details>
+  <details><summary>Liest die App meine SMS oder E-Mails?</summary><p>Nein. Du richtest in Kurzbefehle eine Automation ein, die jede Bank-SMS oder Bank-E-Mail mit einem Wort deiner Wahl an TrackExpenses weitergibt. Die App liest nur, was die Automation ihr übergibt, und behält das Ergebnis, nie die Nachricht. Dein Nachrichten-Postfach und deine E-Mails öffnet sie nicht.</p></details>
+  <details><summary>Meine Bank schickt nur Mitteilungen in ihrer App. Hilft mir TrackExpenses trotzdem?</summary><p>Ja. Eine iPhone-Automation kann die Mitteilungen anderer Apps nicht lesen. Käufe mit Apple Pay trägt aber die Wallet-Automation ein, ganz ohne Nachricht deiner Bank. Kannst du den Text einer Bank-Nachricht kopieren, setzt du ihn ein, und Betrag, Geschäft und Datum füllen sich von selbst. Und wenn deine Bank auf Wunsch auch E-Mails schickt, kann eine Automation diese eintragen.</p></details>
+  <details><summary>Ist TrackExpenses kostenlos?</summary><p>Ja. Das kostenlose Haushaltsbuch hat unbegrenzt viele Einträge von Hand, Budgets, einen Budgetmonat ab Zahltag, Statistik, Suche und privaten iCloud-Sync, dazu pro Monat und Gerät 10 Spracheingaben, 10 automatische Bank-Importe und 10 KI-Fragen an den Coach. Pro hebt diese Grenzen auf und ergänzt Gehaltsplan, Prognosen, Tagesbudget, jeden Export und vollständige Backups, als Monats- oder Jahresabo oder als einmaliger Kauf (Lebenslang).</p></details>
+  <details><summary>Schickt der Finanzcoach meine Daten an eine KI?</summary><p>Nur wenn du etwas fragst, das dein iPhone nicht selbst beantworten kann, und erst nach deiner Zustimmung. Dann gehen deine Frage, das bisherige Gespräch und eine Zusammenfassung dieses und des letzten Monats über einen Server des Entwicklers an Claude von Anthropic, und wenn der Coach mehr braucht, Summen für bis zu 13 Monate oder bis zu 20 Käufe. Nie deine Notizen, Belege, Kontonamen, Kontonummern oder Kontostände.</p></details>
+  <details><summary>Werden TAN-Codes oder abgelehnte Zahlungen eingetragen?</summary><p>Nein. Die Automation überspringt TANs und andere Einmalcodes, abgelehnte und stornierte Zahlungen, angekündigte Lastschriften, reine Kontostände und Werbung, auch wenn darin ein Betrag steht.</p></details>
+  <details><summary>Kann mein Budgetmonat am Zahltag beginnen?</summary><p>Ja. Wähl einen Starttag vom 1. bis zum 31., und Buchungen, Budgets und Diagramme folgen diesem Monat. Es ist ein monatlicher Zeitraum ab Zahltag, kein Rhythmus alle zwei Wochen.</p></details>
+  <details><summary>Gibt es die App auch für iPad und Mac?</summary><p>Ja. TrackExpenses läuft auf iPhone und iPad mit iOS 17 oder neuer und auf Macs mit Apple Chip, und der private iCloud-Sync hält alle Geräte auf demselben Stand.</p></details>
+  <details><summary>Wo liegt mein Haushaltsbuch?</summary><p>Auf deinem Gerät, auf Wunsch per privatem iCloud-Sync auch auf deinen anderen Apple-Geräten. Ein Benutzerkonto brauchst du nicht. Die Datenschutzerklärung erklärt Speicherung, Spracheingabe, Coach und Käufe.</p><a href="../privacy.html" hreflang="en">Zur Datenschutzerklärung (auf Englisch) →</a></details>
+</section>
+
+<section class="hs learn" id="learn">
+  <header class="hs-head reveal"><p class="eyebrow">WEITERLESEN</p><h2>Anleitungen und Rechner.</h2></header>
+  <div class="learn-cols">
+    <div class="learn-col"><h3>Auf Deutsch</h3><a href="bank-sms.html">Bank-SMS automatisch eintragen</a><a href="bank-email.html">Bank-E-Mails automatisch eintragen</a></div>
+    <div class="learn-col"><h3>Auf Englisch</h3><a href="../guides/track-expenses-iphone.html" hreflang="en" lang="en">How to track expenses on iPhone</a><a href="../guides/travel-expenses-abroad.html" hreflang="en" lang="en">Track travel expenses abroad</a><a href="../tools/daily-budget.html" hreflang="en" lang="en">Daily budget until payday</a><a href="../tools/travel-budget-calculator.html" hreflang="en" lang="en">Travel budget calculator</a><a href="../tools/50-30-20-calculator.html" hreflang="en" lang="en">50/30/20 budget calculator</a><a href="../tools/payday-calculator.html" hreflang="en" lang="en">Payday calculator</a><a class="all" href="../guides/index.html" hreflang="en" lang="en">All guides →</a><a class="all" href="../tools/index.html" hreflang="en" lang="en">All calculators →</a></div>
+  </div>
+</section>

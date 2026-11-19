@@ -14,7 +14,7 @@
   "description": "Set a monthly payday period for transactions, budgets and charts. Understand period boundaries, budget pacing and transfers.",
   "status": "published",
   "published": "2026-10-05",
-  "updated": "2026-11-17",
+  "updated": "2026-11-19",
   "feature": "budget-planner"
  },
  {
@@ -86,7 +86,7 @@
   "description": "Find every subscription, add bills once as recurring rules, keep them inside your payday month and review the list quarterly to cancel what you skip.",
   "status": "published",
   "published": "2026-10-06",
-  "updated": "2026-11-10",
+  "updated": "2026-11-19",
   "feature": "accounts-and-transfers"
  },
  {
@@ -104,7 +104,7 @@
   "description": "Choose manual, voice or supported SMS entry, set up a bank-free ledger and reconcile spending without sharing a bank login.",
   "status": "published",
   "published": "2026-10-18",
-  "updated": "2026-11-17",
+  "updated": "2026-11-19",
   "feature": "private-expense-tracker"
  },
  {
@@ -142,5 +142,77 @@
   "published": "2026-11-15",
   "updated": "2026-11-17",
   "feature": "sms-expense-tracker"
+ },
+ {
+  "slug": "daily-spending-limit",
+  "title": "How to Set a Daily Spending Limit | TrackExpenses",
+  "description": "Work out a daily spending limit: money left after bills still due, divided by the days left, today included. A worked example, a calculator and the app.",
+  "status": "published",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "feature": "daily-budget"
+ },
+ {
+  "slug": "travel-expenses-abroad",
+  "title": "Track Travel Expenses Abroad on iPhone | TrackExpenses",
+  "description": "Record trip spending in the currency you paid, at your card's real rate, see one total in your own currency and give the trip its own daily budget.",
+  "status": "published",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "feature": "multi-currency-expense-tracker"
+ },
+ {
+  "slug": "bill-reminders-iphone",
+  "title": "Get Reminded Before Bills Are Due on iPhone | TrackExpenses",
+  "description": "Set a repeating reminder with an early alert in the Reminders app, or get one free notification the morning before each repeating bill in TrackExpenses.",
+  "status": "published",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "feature": "budget-alerts-and-bill-reminders"
+ },
+ {
+  "slug": "budget-alerts-iphone",
+  "title": "Get an Alert Before You Overspend | TrackExpenses",
+  "description": "Bank apps watch balances, not budgets. Get a free notification when a budget passes 80% ahead of its pace or goes over, with what is left and days to go.",
+  "status": "published",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "feature": "budget-alerts-and-bill-reminders"
+ },
+ {
+  "slug": "track-expenses-iphone",
+  "title": "How to Track Expenses on iPhone | TrackExpenses",
+  "description": "Track spending on iPhone with Notes, Numbers, Wallet or an app that records voice, bank SMS, email and Apple Pay purchases. How to choose and keep it up.",
+  "status": "published",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "feature": "private-expense-tracker"
+ },
+ {
+  "slug": "envelope-budgeting-iphone",
+  "title": "Envelope Budgeting on iPhone Without Cash | TrackExpenses",
+  "description": "Run envelope budgeting with category budgets instead of cash: move money between them for this month with the total unchanged, and no bank login.",
+  "status": "published",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "feature": "budget-planner"
+ },
+ {
+  "slug": "zero-based-budget",
+  "title": "Zero-Based Budget: Give Every Unit of Pay a Job",
+  "description": "Plan your whole take-home pay before the month starts, so income minus everything planned is zero. A worked example, iPhone arithmetic and a salary plan.",
+  "status": "published",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "feature": "budget-planner"
+ },
+ {
+  "slug": "spending-at-one-shop",
+  "title": "See How Much You Spent at One Shop | TrackExpenses",
+  "description": "Find what you spent at one store or on one thing: Wallet and bank search first, then TrackExpenses search, which adds up every match in every period.",
+  "status": "published",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "feature": "expense-reports"
  }
 ]

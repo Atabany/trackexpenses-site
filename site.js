@@ -30,6 +30,14 @@
     document.addEventListener('focusout', () => requestAnimationFrame(syncDownload));
   }
 
+  // The phone header's menu closes on a link, a tap outside it and Escape (it works without script as a plain disclosure).
+  document.querySelectorAll('.nav-menu').forEach(menu => {
+    const close = () => { menu.open = false; };
+    menu.addEventListener('click', e => { if (e.target.closest('a')) close(); });
+    document.addEventListener('click', e => { if (menu.open && !menu.contains(e.target)) close(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.open) { close(); menu.querySelector('summary').focus(); } });
+  });
+
   // Example amounts follow the visitor's own currency. The region comes from the browser's time
   // zone or language — nothing is requested or stored. Base values are US-dollar sized and are
   // scaled by a rough, rounded factor so a coffee never reads as ¥5. Illustrative, not live rates.
@@ -59,13 +67,15 @@
     document.querySelectorAll('.demo-phone[aria-label]').forEach(el => el.setAttribute('aria-label', rename(el.getAttribute('aria-label'))));
     document.querySelectorAll('[data-words]').forEach(el => { el.dataset.words = rename(el.dataset.words); });
     const factor = scale[code] || 1;
-    const locale = 'en-' + region;
+    // Formatted in the page's language for the visitor's region, in Western digits (the app's choice for Arabic too).
+    const pageLang = (document.documentElement.lang || 'en').split('-')[0];
+    const locale = (pageLang === 'ar' ? 'en' : pageLang) + '-' + region + '-u-nu-latn'; // Arabic writes AED 312.40, as the app does
     const make = opts => { try { return new Intl.NumberFormat(locale, {style: 'currency', currency: code, ...opts}); } catch { return new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', ...opts}); } };
     const symbol = make({currencyDisplay: 'narrowSymbol'}), plainCode = make({currencyDisplay: 'code'});
     // Spoken numbers are whole and rounded like a person would say them.
     const nice = v => { const x = v * factor; if (x < 10) return Math.round(x * 10) / 10; if (x < 100) return Math.round(x); const p = Math.pow(10, Math.floor(Math.log10(x)) - 1); return Math.round(x / p) * p; };
     const exact = v => Math.round(v * factor * 100) / 100;
-    const grouped = n => n.toLocaleString('en-US');
+    const grouped = n => n.toLocaleString(locale); // spoken numbers as the page's language writes them ("café 1,5")
     const value = el => el.dataset.sum ? el.dataset.sum.split(',').reduce((t, v) => t + nice(+v), 0) : ('int' in el.dataset ? nice(+el.dataset.v) : exact(+el.dataset.v));
     const format = (el, n) => ('code' in el.dataset && code !== 'USD' ? plainCode : symbol).format(n); // an American bank writes the dollar sign
     document.querySelectorAll('.num[data-v]').forEach(el => { el.textContent = grouped(nice(+el.dataset.v)); });
@@ -75,8 +85,9 @@
       if (el.dataset.count) el.dataset.count = n;
       el.textContent = format(el, n);
     });
-    return {format};
+    return {format, nice, exact, factor, locale};
   })();
+  window.teMoney = localMoney; // home.js keeps its demo arithmetic in the same scaled money
 
   // Scroll reveals and count-ups run once, when the element first enters the viewport.
   const countUp = el => {
@@ -115,6 +126,14 @@
     tabs.forEach(tab => { const target = document.querySelector(tab.getAttribute('href')); if (target) spy.observe(target); });
   }
 
+  // The demos' pause button speaks the page's language: [visible label, spoken label] for Pause, then for Play.
+  const toggleWords = ({
+    ar: [['إيقاف مؤقت', 'إيقاف الحركة مؤقتًا'], ['تشغيل', 'تشغيل الحركة']],
+    de: [['Pause', 'Animation anhalten'], ['Abspielen', 'Animation abspielen']],
+    es: [['Pausa', 'Pausar la animación'], ['Reproducir', 'Reproducir la animación']],
+    pt: [['Pausar', 'Pausar a animação'], ['Reproduzir', 'Reproduzir a animação']]
+  })[(document.documentElement.lang || 'en').split('-')[0]] || [['Pause', 'Pause animation'], ['Play', 'Play animation']];
+
   // Demo phones: a declarative timeline. data-at / data-off are milliseconds into the loop,
   // data-pulse a list of moments for a brief .ping. Runs only while visible and not paused.
   document.querySelectorAll('[data-demo]').forEach(demo => {
@@ -149,13 +168,13 @@
       demo.classList.toggle('paused', !run);
       if (run && !timer) timer = setInterval(tick, 100);
       if (!run && timer) { clearInterval(timer); timer = null; }
-      if (toggle) { toggle.textContent = userPaused ? 'Play' : 'Pause'; toggle.setAttribute('aria-label', (userPaused ? 'Play' : 'Pause') + ' animation'); }
+      if (toggle) { const w = toggleWords[userPaused ? 1 : 0]; toggle.textContent = w[0]; toggle.setAttribute('aria-label', w[1]); }
     };
     // Reduced motion keeps the finished screen: drafts listed, messages read, rows filed.
     if (reduced.matches || !canObserve) return;
     demo.classList.add('animate'); render();
     if (toggle) { toggle.hidden = false; toggle.addEventListener('click', () => { userPaused = !userPaused; sync(); }); }
-    new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }, {threshold: 0.35}).observe(demo);
+    new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }, {threshold: Number(demo.dataset.threshold || 0.35)}).observe(demo);
     document.addEventListener('visibilitychange', sync);
     reduced.addEventListener('change', () => { if (reduced.matches) { userPaused = true; sync(); } });
   });
@@ -439,7 +458,7 @@
       result.textContent='Use non-negative amounts and a period ending today or later, within ten years.'; return;
     }
     const raw=budget-spent-reserved, remaining=Math.max(0,raw);
-    result.textContent=raw<0 ? `Budget exceeded by ${money(-raw)} after extra commitments. Daily amount: 0.00 over ${days} day${days===1?'':'s'}, including today.` : `${money(remaining)} remaining ÷ ${days} day${days===1?'':'s'}, including today = ${money(remaining/days)} per day.`;
+    result.textContent=raw<0 ? `Budget exceeded by ${money(-raw)} after extra commitments. Daily amount: 0.00 over ${days} day${days===1?'':'s'}, including today.` : `${money(remaining)} remaining ÷ ${days} day${days===1?'':'s'}, including today = ${money(Math.floor(Math.round(remaining*100)/days)/100)} per day.`;
   });
 })();
 
@@ -472,4 +491,216 @@ document.querySelectorAll('input[name="sms-ios"]').forEach(input => {
       video.focus();
     });
   });
+})();
+
+/* === Calculators batch 2026-11-19 === */
+// Monthly budget, travel budget, emergency fund and net worth. Arithmetic on what is typed, in this browser only:
+// nothing is requested, sent or stored.
+(() => {
+  const formats = {};
+  const number = (n, digits = 2) => {
+    formats[digits] ||= new Intl.NumberFormat(undefined, {minimumFractionDigits: digits, maximumFractionDigits: digits});
+    // Never print "-0.00" for a figure that rounds to nothing.
+    return formats[digits].format(Math.abs(n) < 0.5 * 10 ** -digits ? 0 : n);
+  };
+  const oneDecimal = new Intl.NumberFormat(undefined, {maximumFractionDigits: 1});
+  const percentFormat = new Intl.NumberFormat(undefined, {style: 'percent', maximumFractionDigits: 0});
+  // A whole percent, rounded half away from zero like the app's salary plan (12.5% shows as 13%).
+  const wholePercent = (part, whole) => { const x = part * 100 / whole; return Math.sign(x) * Math.round(Math.abs(x) + 1e-9); };
+  const showPercent = n => percentFormat.format(n / 100);
+  const plural = (n, word) => `${n}\u00a0${word}${n === 1 ? '' : 's'}`;
+  const span = months => months >= 12 ? ` (${plural(Math.floor(months / 12), 'year')}${months % 12 ? ` and ${plural(months % 12, 'month')}` : ''})` : '';
+  // Money is added in cents, so 0.1 + 0.2 is 0.30 and not 0.30000000000000004.
+  const cents = value => Math.round(Number(value) * 100);
+  const amountOf = input => input.value.trim() === '' ? 0 : Number(input.value);
+  const dayNumber = str => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(str); return m ? Date.UTC(+m[1], +m[2] - 1, +m[3]) / 86400000 : NaN; };
+  const localDay = offset => { const d = new Date(); d.setDate(d.getDate() + offset); return [d.getFullYear(), String(d.getMonth() + 1).padStart(2, '0'), String(d.getDate()).padStart(2, '0')].join('-'); };
+  // A field marked data-for shows only for the option it names; hidden fields are disabled so they never block the form.
+  const showFor = (formEl, value) => formEl.querySelectorAll('[data-for]').forEach(field => {
+    field.hidden = !field.dataset.for.split(' ').includes(value);
+    field.querySelectorAll('input,select').forEach(control => { control.disabled = field.hidden; });
+  });
+  // Rows that can be added and removed; at least one always stays.
+  const editableRows = (box, addButton, max = 40) => {
+    const template = box.querySelector('.sub-row').cloneNode(true);
+    addButton.addEventListener('click', () => {
+      if (box.children.length >= max) return;
+      const row = template.cloneNode(true);
+      row.querySelectorAll('input').forEach(input => { input.value = ''; input.removeAttribute('placeholder'); });
+      row.querySelectorAll('select').forEach(select => { select.selectedIndex = 0; });
+      box.append(row); row.querySelector('input').focus();
+    });
+    box.addEventListener('click', event => {
+      const button = event.target.closest('.sub-remove');
+      if (!button || box.children.length <= 1) return;
+      const row = button.closest('.sub-row'), next = row.nextElementSibling || row.previousElementSibling;
+      row.remove(); next.querySelector('input').focus();
+    });
+  };
+  const cell = (tag, text, scope) => { const el = document.createElement(tag); el.textContent = text; if (scope) el.scope = scope; return el; };
+  const tableRow = (label, ...values) => { const row = document.createElement('tr'); row.append(cell('th', label, 'row'), ...values.map(v => cell('td', v))); return row; };
+  const setCells = (table, values) => table.querySelectorAll('tbody td').forEach((td, i) => { td.textContent = values[i]; });
+
+  // Monthly budget: one paycheck turned into a month, every line's share of it, and what is left to plan.
+  const month = document.querySelector('#month-form');
+  if (month) {
+    const box = document.querySelector('#month-rows'), result = document.querySelector('#month-result');
+    const body = document.querySelector('#month-table tbody'), foot = document.querySelector('#month-table tfoot');
+    const cycles = {12: 'a month', 24: 'twice a month', 26: 'every two weeks', 52: 'every week'};
+    editableRows(box, document.querySelector('#month-add'));
+    month.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!month.reportValidity()) return;
+      const pay = Number(month.elements.pay.value), perYear = Number(month.elements.cycle.value), income = pay * perYear / 12;
+      const lines = [...box.querySelectorAll('.sub-row')].map((row, i) => ({
+        name: row.querySelector('[name=name]').value.trim() || `Line ${i + 1}`,
+        cents: cents(amountOf(row.querySelector('[name=amount]'))),
+        saving: row.querySelector('[name=kind]').value === 'save'
+      }));
+      if (!Number.isFinite(income) || income < 0 || !lines.every(line => Number.isFinite(line.cents) && line.cents >= 0)) {
+        result.textContent = 'Use a take-home pay and line amounts of zero or more.'; return;
+      }
+      const sum = list => list.reduce((total, line) => total + line.cents, 0) / 100;
+      const spending = sum(lines.filter(line => !line.saving)), saving = sum(lines.filter(line => line.saving)), planned = spending + saving;
+      const left = income - planned, hasIncome = income > 0, share = amount => hasIncome ? showPercent(wholePercent(amount, income)) : '—';
+      const plannedShare = hasIncome ? wholePercent(planned, income) : 0;
+      body.replaceChildren(...lines.map(line => tableRow(line.name, number(line.cents / 100), share(line.cents / 100))));
+      const over = hasIncome && left < -0.005;
+      foot.replaceChildren(
+        tableRow('Spending', number(spending), share(spending)),
+        tableRow('Saving', number(saving), share(saving)),
+        tableRow('Planned', number(planned), share(planned)),
+        tableRow(over ? 'Over by' : 'Left to plan', hasIncome ? number(Math.abs(left)) : '—',
+          !hasIncome ? '—' : over ? share(-left) : showPercent(Math.max(0, 100 - plannedShare))));
+      if (!hasIncome) { result.textContent = `Your lines come to ${number(planned)} a month. Enter your take-home pay to see what is left to plan and each line's share of it.`; return; }
+      const intro = perYear === 12 ? '' : `${number(pay)} ${cycles[perYear]} is ${number(income)} a month. `;
+      result.textContent = intro + (over
+        ? `Your plan is ${number(-left)} (${share(-left)}) more than your take-home pay of ${number(income)} a month. Lower a line or two until nothing is over.`
+        : Math.abs(left) <= 0.005
+          ? `Every part of your ${number(income)} a month has a job: nothing is left to plan.`
+          : `You have planned ${number(planned)} (${showPercent(plannedShare)}) of ${number(income)} a month, so ${number(left)} (${showPercent(Math.max(0, 100 - plannedShare))}) is left to plan. Give it a job, such as savings, until nothing is left.`);
+    });
+  }
+
+  // Travel budget: what is left, shared across the days left (today included), at home and in local money.
+  const trip = document.querySelector('#trip-form');
+  if (trip) {
+    const result = document.querySelector('#trip-result'), table = document.querySelector('#trip-table'), unit = document.querySelector('#trip-unit');
+    const sync = () => showFor(trip, trip.elements.mode.value);
+    trip.elements.mode.addEventListener('change', sync); sync();
+    trip.elements.start.value = localDay(-4); trip.elements.end.value = localDay(5); trip.elements.today.value = localDay(0);
+    const label = () => trip.elements.code.value.trim();
+    trip.elements.code.addEventListener('input', () => { unit.textContent = label() || 'unit of local money'; });
+    // A currency code such as JPY gets its own usual decimals; anything else gets two.
+    const digitsFor = code => { try { return /^[A-Za-z]{3}$/.test(code) ? new Intl.NumberFormat('en', {style: 'currency', currency: code.toUpperCase()}).resolvedOptions().maximumFractionDigits : 2; } catch { return 2; } };
+    trip.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!trip.reportValidity()) return;
+      const budget = Number(trip.elements.budget.value), spent = Number(trip.elements.spent.value);
+      let total, done, startsIn = 0;
+      if (trip.elements.mode.value === 'dates') {
+        const start = dayNumber(trip.elements.start.value), end = dayNumber(trip.elements.end.value), today = dayNumber(trip.elements.today.value);
+        if (![start, end, today].every(Number.isFinite) || end < start) { result.textContent = 'Enter a first day, a last day on or after it, and today’s date.'; return; }
+        total = end - start + 1;
+        if (today < start) { startsIn = start - today; done = 0; } else done = Math.min(today - start, total);
+      } else {
+        total = Number(trip.elements.days.value); done = Number(trip.elements.over.value);
+        if (!Number.isInteger(total) || total < 1 || !Number.isInteger(done) || done < 0) { result.textContent = 'Use a trip of at least one day and zero or more days already over.'; return; }
+        done = Math.min(done, total);
+      }
+      if (![budget, spent].every(Number.isFinite) || budget < 0 || spent < 0 || total > 3660) { result.textContent = 'Use amounts of zero or more and a trip of up to ten years.'; return; }
+      const daysLeft = total - done, left = budget - spent, even = budget * done / total, gap = spent - even, plannedDay = budget / total;
+      const code = label(), rate = Number(trip.elements.rate.value), hasRate = trip.elements.rate.value.trim() !== '' && rate > 0;
+      const digits = digitsFor(code), name = code || 'in local money';
+      const inLocal = amount => `${number(amount / rate, digits)}\u00a0${name}`;
+      // In the sentence the local figure is in brackets; in the table it is on a line of its own.
+      const local = amount => hasRate ? ` (${inLocal(amount)})` : '', localLine = amount => hasRate ? `\n${inLocal(amount)}` : '';
+      const pace = startsIn ? 'Not started yet' : Math.abs(gap) < 0.005 ? 'On pace' : `${number(Math.abs(gap))} ${gap > 0 ? 'over' : 'under'}`;
+      if (daysLeft === 0) {
+        setCells(table, [left >= 0 ? number(left) + localLine(left) : `0.00 (${number(-left)} over)`, `0 of ${total}`, 'The trip is over', number(plannedDay) + localLine(plannedDay), number(budget), left >= 0 ? `${number(left)} under` : `${number(-left)} over`]);
+        result.textContent = `The trip is over: you spent ${number(spent)} of a ${number(budget)} budget, ` + (Math.abs(left) < 0.005 ? 'exactly on budget.' : `${number(Math.abs(left))} ${left > 0 ? 'under' : 'over'} budget.`);
+        return;
+      }
+      const perDay = Math.max(0, left) / daysLeft;
+      setCells(table, [
+        left >= 0 ? number(left) + localLine(left) : `0.00 (${number(-left)} over)`,
+        startsIn ? `${total}, starting in ${plural(startsIn, 'day')}` : `${daysLeft} of ${total}`,
+        left > 0 ? number(perDay) + localLine(perDay) : '0.00 (budget used up)',
+        number(plannedDay) + localLine(plannedDay),
+        number(even), pace]);
+      if (left <= 0) {
+        result.textContent = (left < 0 ? `You have spent ${number(-left)} more than the whole budget` : 'The whole budget is spent') + `, with ${plural(daysLeft, 'day')} left. Nothing is left to share across them.`;
+        return;
+      }
+      let text = startsIn ? `The trip starts in ${plural(startsIn, 'day')}. ` : '';
+      text += `${number(left)} left for ${plural(daysLeft, 'day')} is ${number(perDay)} a day${local(perDay)}.`;
+      if (!startsIn && done > 0) text += Math.abs(gap) < 0.005 ? ` That is exactly an even pace: ${number(plannedDay)} a day, as planned.`
+        : ` You are ${number(Math.abs(gap))} ${gap > 0 ? 'over' : 'under'} an even pace, so each day left gets ${number(Math.abs(plannedDay - perDay))} ${gap > 0 ? 'less' : 'more'} than the ${number(plannedDay)} a day you planned.`;
+      if (code && !hasRate) text += ` Add a rate to see it in ${code}.`;
+      result.textContent = text;
+    });
+  }
+
+  // Emergency fund: essential costs times months of cover, less what is saved, at a monthly amount.
+  const fund = document.querySelector('#fund-form');
+  if (fund) {
+    const result = document.querySelector('#fund-result'), table = document.querySelector('#fund-table');
+    const sync = () => showFor(fund, fund.elements.months.value);
+    fund.elements.months.addEventListener('change', sync); sync();
+    const monthYear = new Intl.DateTimeFormat(undefined, {month: 'long', year: 'numeric'});
+    fund.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!fund.reportValidity()) return;
+      const costs = Number(fund.elements.costs.value), saved = Number(fund.elements.saved.value), monthly = Number(fund.elements.monthly.value);
+      const months = fund.elements.months.value === 'custom' ? Number(fund.elements.custom.value) : Number(fund.elements.months.value);
+      if (![costs, saved, monthly, months].every(Number.isFinite) || costs <= 0 || saved < 0 || monthly < 0 || !Number.isInteger(months) || months < 1) {
+        result.textContent = 'Use essential costs above zero, a whole number of months, and savings of zero or more.'; return;
+      }
+      const target = (cents(costs) * months) / 100, gap = target - saved, cover = saved / costs;
+      const coverMonths = `${oneDecimal.format(cover)}\u00a0${oneDecimal.format(cover) === oneDecimal.format(1) ? 'month' : 'months'}`;
+      const coverText = saved > 0 ? `${number(saved)} (${coverMonths})` : '0.00';
+      const intro = `Your target is ${number(target)}: ${plural(months, 'month')} of ${number(costs)}.`;
+      if (gap <= 0.005) {
+        setCells(table, [number(target), coverText, '0.00', 'Reached', 'Already there']);
+        result.textContent = `${intro} Your ${number(saved)} already covers it: ${coverMonths} of essential costs` + (gap < -0.005 ? `, ${number(-gap)} more than the target.` : '.');
+        return;
+      }
+      const have = saved > 0 ? ` You have ${number(saved)}, enough for ${coverMonths}, so ${number(gap)} is still to save.` : ` Nothing is saved for it yet, so all of it is still to save.`;
+      if (!(monthly > 0)) {
+        setCells(table, [number(target), coverText, number(gap), 'Add a monthly amount', '—']);
+        result.textContent = intro + have + ' Add a monthly amount to see when you would get there.'; return;
+      }
+      const needed = Math.ceil(gap / monthly - 1e-9);
+      if (needed > 1200) {
+        setCells(table, [number(target), coverText, number(gap), 'More than 100 years', '—']);
+        result.textContent = intro + have + ` At ${number(monthly)} a month that takes more than 100 years. Try a larger monthly amount.`; return;
+      }
+      const now = new Date(), when = monthYear.format(new Date(now.getFullYear(), now.getMonth() + needed, 1));
+      setCells(table, [number(target), coverText, number(gap), `${needed}${span(needed)}`, when]);
+      result.textContent = intro + have + ` At ${number(monthly)} a month that takes ${plural(needed, 'month')}${span(needed)}: adding it from next month, you get there in ${when}.`;
+    });
+  }
+
+  // Net worth: what is owned minus what is owed, the total derived from the two so the three always agree.
+  const worth = document.querySelector('#worth-form');
+  if (worth) {
+    const result = document.querySelector('#worth-result'), table = document.querySelector('#worth-table');
+    const assets = document.querySelector('#worth-assets'), debts = document.querySelector('#worth-debts');
+    editableRows(assets, document.querySelector('#worth-add-asset'));
+    editableRows(debts, document.querySelector('#worth-add-debt'));
+    const total = box => [...box.querySelectorAll('[name=amount]')].reduce((sum, input) => sum + cents(amountOf(input)), 0);
+    worth.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!worth.reportValidity()) return;
+      const owned = total(assets), owed = total(debts);
+      if (![owned, owed].every(Number.isFinite)) { result.textContent = 'Use amounts of zero or more.'; return; }
+      const net = (owned - owed) / 100;
+      setCells(table, [number(owned / 100), number(owed / 100), number(net)]);
+      if (owned === 0 && owed === 0) { result.textContent = 'Enter what you own and what you owe.'; return; }
+      let text = `${number(owned / 100)} owned − ${number(owed / 100)} owed = ${number(net)} net worth.`;
+      if (net < 0) text += ` You owe ${number(-net)} more than you own.`;
+      if (owned > 0 && owed > 0) text += ` What you owe is ${oneDecimal.format(owed / owned * 100)}% of what you own.`;
+      result.textContent = text;
+    });
+  }
 })();

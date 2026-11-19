@@ -106,3 +106,20 @@ status bar 9:41; nothing deleted in the app any more. The onboarding captures ar
 - `assets/pt/voice.webp` ← `pt-1117-recapture-onb-voice.png` (onboarding voice demo, “É só falar.”)
 - `assets/pt/alerts.webp` ← `pt-1117-recapture-onb-sms.png` (onboarding page 3: Pão de Açúcar and a Pix received filed, a code skipped)
 - `assets/pt/budget.webp` ← `pt-1117-recapture-stats-budget.png` (Stats → Budget: R$ 1.757,88 left, daily budget R$ 101,17)
+
+## German home on the landing (20 November 2026)
+
+The German home moved onto the phone-first landing and gained a screen gallery and a two-phone "Einsetzen" stage. Eight
+more real German captures were added beside the four of 14 November (`ledger`, `voice`, `budget`, `coach`, which stay).
+Sources are the German store-screenshot captures, used unchanged: `marketing/app-store-2026-11-de-october/raw/`
+(17 November, iPhone 17 Pro Max simulator, iOS 26.5, 1320 × 2868, German demo ledger, light except the dark voice and
+paste screens; capture details in that folder's README) and `marketing/app-store-2026-11-de/raw/` (10 November, same
+device). Scaled to 660 × 1434, WebP quality 82:
+- `assets/de/say.webp` ← `de-october/raw/voice-say.png` („Einfach sagen“, three drafts from „Kaffee 15, Taxi 40 und Mittagessen 60“, dark)
+- `assets/de/paste.webp` ← `de-october/raw/bank-sms.png` (Neue Buchung „Aus deiner Nachricht gelesen“: 27,45 € bei Rewe, Lebensmittel, Kreditkarte, dark)
+- `assets/de/daily.webp` ← `de-october/raw/daily.png` (Buchungen → Täglich, 24,83 € heute ausgegeben, 123,00 € übrig)
+- `assets/de/budgets.webp` ← `de-october/raw/stats-budget.png` (Statistik → Budget: 1.601,30 € übrig, noch 11 Tage)
+- `assets/de/calendar.webp` ← `de-october/raw/calendar.png` (Kalender, Dienstag, 17. November)
+- `assets/de/accounts.webp` ← `de-october/raw/accounts.png` (Konten: Nettovermögen 13.012,28 €)
+- `assets/de/salary-plan.webp` ← `de/raw/salary-plan.png` (Gehaltsplan November 2026: 150,00 € noch zu verplanen)
+- `assets/de/icloud.webp` ← `de/raw/icloud.png` (iCloud-Sync, auf dem neuesten Stand)

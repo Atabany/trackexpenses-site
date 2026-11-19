@@ -1,0 +1,14 @@
+{
+ "_note": "Words around the real App Store reviews on the Arabic landing (build.py _words()). Counts are written as «عدد …: n» so they read right for any number.",
+ "pill": "‏{avg} في App Store · عدد التقييمات: {n}",
+ "pill_one": "‏{avg} في App Store · تقييم واحد",
+ "summary": "‏{avg} من 5 في App Store · عدد التقييمات: {n} · عدد الدول: {k} · حتى {date}. وهذه المراجعات المكتوبة بنصّها:",
+ "rail_label": "مراجعات App Store؛ مرّر أفقيًا لرؤية المزيد",
+ "stars_label": "{r} من 5 نجوم",
+ "caption": "App Store في {country} · {month_year}",
+ "decimal": ".",
+ "months": ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+ "date": "{d} {month} {y}",
+ "month_year": "{month} {y}",
+ "countries": {"ARE": "الإمارات", "CAN": "كندا", "EGY": "مصر", "IND": "الهند", "SAU": "السعودية", "USA": "الولايات المتحدة", "GBR": "المملكة المتحدة"}
+}

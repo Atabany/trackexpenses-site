@@ -411,3 +411,112 @@ Roadmap 4.3 and 4.4 (`docs/l10n/ROADMAP_1.16.0.md`). Built and validated here; p
   `softwareVersion` reads 1.15.0; ratings re-read 17 November (7 ratings in 4 storefronts).
 - **Not claimed.** No search volume was measured for any Spanish or Portuguese query. Read Search Console by page
   (`/es/`, `/pt/`) a few weeks after the flip before adding more pages in either language.
+
+## 19 November 2026 — the big update: rules every agent in this batch follows
+
+Owner's request of 19 November: bring the site up to date with everything the app gained, make it the best it can be
+for search engines and AI assistants, add guides and calculators, and make the phone landing "next level". Mobile is
+57% of impressions (Search Console, 28 days to 17 November: 471 mobile, 348 desktop, 6 tablet; 825 impressions, 2
+clicks, average position 12.9). Calculators are what Google shows: daily budget 510 impressions, 50/30/20 51, payday
+43, savings goal 33, pacing 22, subscriptions 17. Queries seen: "50 30 20 budget calculator" (and weekly, biweekly,
+UK), "subscription cost calculator", "budget pacing formula", "how to account for credit card payments in budget",
+"how can i track my spending from sms without linking my bank account?". Small numbers: they say which kind of page
+is shown, not how much traffic to expect.
+
+- **Claim only what the live app does: 1.16.0** (on the App Store since 18 November). 1.17.0 is in release and is not
+  live: nothing from `docs/releases/1.17.0.json` (decimal-comma and big-amount lists) goes on any page until it is.
+- **Where the facts come from:** the code, `Services/FreeTier.swift` for the free/Pro line, `docs/releases/1.1x.0.json`
+  up to 1.16.0, and the feature paragraphs in the repo's `CLAUDE.md`. What 1.12.0–1.16.0 added and the site barely
+  says, with where it lives in the app:
+  - Budget alerts (free): a notification when a budget passes 80% ahead of its pace, and when it goes over, with what
+    is left and the days it has to last. Budget settings → "Budget alerts".
+  - Bill reminders (free): a notification at 9:00 the morning before a repeating expense is due, with amount and
+    account; one notification per day for several bills. More → Recurring → "Remind me the day before".
+  - Daily budget for chosen categories (Pro): one category or several read as one, optionally up to a last day inside
+    the current budget period (a trip). Today's budget sheet → "Daily budget for". Budgets themselves don't change.
+  - Actions on the app icon: touch and hold the icon for Say an expense, New expense, Paste bank message, Ask your coach.
+  - Export & Share (Pro, every export since 1.15.0): spreadsheet (CSV) of a month, a range or everything, and the full
+    backup, from the share button on Transactions or More → Backup & Export.
+  - Search adds it up (free): Spent and Income across every match in every period.
+  - Quicker typing (free): arrows beside the date step a day; a shop used before fills its usual category and account.
+  - Bank alerts by email: add the account to Apple's Mail app, Shortcuts Email automation filtered on a word in the
+    subject (never the sender), action Import Bank Message. Guide: `guides/bank-email-alerts-iphone.html`.
+  - Voice: pick the spoken language on the listening screen; a price heard as "1250" for "twelve fifty" is offered as
+    12.50 in one tap; lists without pauses; brands fill shop and category.
+  - The money coach answers today's spending, a category, account balances and any named month on the phone without
+    using an AI question; it speaks English, Arabic, German, Spanish and Portuguese.
+  - Five languages: English, Arabic (right to left), German, Spanish (Latin America), Portuguese (Brazil).
+  - Private iCloud sync (free) across iPhone, iPad and Mac (Apple silicon), and a settings-conflict card.
+  - Getting-started checklist, Siri and widgets (seven widgets, Control Center, Action button on iOS 18).
+  - When Pro or a trial ends, nothing saved is locked; the theme and icon come back with Pro.
+  - Pro icons: five coach icons (Starry Night, Royal, Sunset Shades, Sweetheart, Violet Spark).
+- **Words:** plain and specific, no hype ("AI-powered", "#1", "revolutionary", "game-changer" are out). Never print the
+  app's prices. In English visible text never "$" before a digit (validator); write amounts like "120.00" or with a
+  code ("AED 120"). Titles ≤ 60 characters, descriptions ≤ 155, both unique.
+- **Guides:** 800–1,300 authored words, the direct answer in the first two sentences, the built-in iPhone way first with
+  Apple's exact labels, then where the app helps, limits, then "## Frequently asked questions" with "Question? Answer"
+  paragraphs (that is how the FAQ schema is read). Register in `_ops/guides.json`. The owner's request lifts the
+  one-guide-a-week limit for this batch.
+- **Reviews:** `_ops/reviews.json` holds the real App Store reviews word for word (read from App Store Connect on 19
+  November). Never edit a word, never invent one, never mark up your own reviews as Review schema (self-serving).
+- **File ownership in this batch** (so parallel agents don't collide): calculators agent — `_content/<tool>.html`,
+  `_content/tools-index.html`, the `TOOLS` list and tools hub line in `build.py`, a block appended at the end of
+  `site.js` and of `style.css`; guides agent — `_content/guides/*.md`, `_ops/guides.json`, `_ops/topics.*`; pages agent —
+  `features.json`, `_content/features/*`, compare pages, new standalone pages in `build.py`, `FACT_BLOCK`,
+  `FEATURE_LIST`, `LLMS_GUIDE`; coordinator — `_content/home.html`, `home.css`, `home.js`, the `page()` template,
+  `_ops/reviews.json`, the shared mobile header and download bar.
+- **Commit sources only.** Never commit generated output (`*.html` outside `_content`, `sitemap.xml`, `llms*.txt`,
+  `robots.txt`, `_ops/page-dates.json`); build and validate locally, restore the generated files, commit sources. The
+  coordinator rebuilds and publishes once at the end. Integrate from your own worktree: commit, `git fetch` and merge
+  `origin/main`, build and validate again, grep for conflict markers, push `HEAD:main`; on a rejected push fetch, merge
+  and retry. Never force-push.
+
+## 19–20 November 2026 — what the big update built, and what it taught
+
+**The landing (phone first).** `_content/home.html` is rebuilt; it loads `home.css` and `home.js` (only pages in
+`build.py`'s `LANDING` set; a localized home joins automatically once its body contains `<section class="hx"`). The hero
+is the app's own story line from the onboarding film, "Money slips away in small pieces. Catch every one.", on the app's
+dark money-month surface, with a live phone (the timeline engine in `site.js`: `data-at`/`data-off`/`data-pulse`) in which
+a bank SMS, two spoken purchases and an Apple Pay purchase are caught while "left today" counts down, and the ChatGPT-made
+clay props of the onboarding film (`assets/home/`) fly into it. On a 390 × 664 phone the first screen shows the rating
+pill, headline, CTA and the phone's banner and today's number. Then: a proof strip, "three ways in" as radio tabs (work
+without script), **"see it read"** (tap an example: every result is the app's real reading of those exact words, produced
+by `tools/spoken_bench.swift` and a bank-message harness over `BankMessageParser`; never write a result by hand), today's
+number with a mini calculator ((left − bills still to come) ÷ days left, rounded down), the coach chat, twelve tiles, the
+real reviews (`_ops/reviews.json`, cards built by `review_rail()`), the 17 screens, plans, FAQ, guides and calculators.
+Page height on a phone went from about 19,000 px to 14,700 px.
+
+**Shared chrome.** One-row phone header (brand icon + name, badge, a `<details>` menu that works without script); the
+brand carries the app icon on every page; apple-touch-icon; theme colour; a new share image (`assets/og.png`, template
+`marketing/og-2026-11/og.html`, no rating baked in because an image can't stay current). Money in the demos is formatted
+in the page's language for the visitor's region, Western digits, Arabic keeps "AED 312.40" as the app does.
+
+**Content added by the batch's agents:** 8 guides (daily spending limit, travel abroad, bill reminders, budget alerts,
+tracking expenses on iPhone, envelope budgeting, zero-based budget, one shop's total), 4 calculators (monthly zero-based,
+trip, emergency fund, net worth; eleven in all), 3 feature pages (daily budget, budget alerts and bill reminders, iCloud
+sync), 2 comparisons (Money Manager alternative, YNAB alternative; the research found no comparison page ranking for
+"Money Manager alternative"), `faq.html` (27 questions with FAQ schema), `whats-new.html` (1.10.0–1.16.0), every feature
+page brought up to 1.16.0, fact block, feature list and `llms.txt` (markdown links, comparisons, FAQ, release history).
+75 indexable pages. Research: `docs/growth/2026-11-19-website-research.md`.
+
+**Measured (Lighthouse 13, mobile, local):** home 99 / 100 / 100 / 100 (performance, accessibility, best practices, SEO),
+LCP 1.7 s, blocking time 0 ms, CLS 0; a guide and a calculator 100 / 100 / 100 / 100. Run it with the arm64 half of the
+universal node: `arch -arm64 /usr/local/bin/node <lighthouse>/cli/index.js …` (x64 node refuses on Apple silicon).
+
+**Lessons, each paid for once:**
+- **Never animate an element with `filter: blur()`.** The hero's three blurred, drifting glows cost one 8-second main-thread
+  task under Lighthouse's mobile throttling (performance 59). Radial gradients look the same and cost nothing (99).
+- **iOS 26 Safari paints the status-bar strip with the body's background**, not `theme-color` or the root: a dark header
+  under a white strip needs a dark body, with `main` and the footer carrying the page background (`display:flow-root` on
+  main, or a child's margin shows the dark body through).
+- `style.css` hides a `.demo-phone`'s timed elements unless the phone itself has `animate`; a timeline that runs on a
+  wrapper (the hero's `.hx-demo`) must add `animate` to the phone too (`home.js`).
+- Generated HTML is restored before every commit in a shared checkout (sources only); the local preview then serves the old
+  output until the next build — rebuild before every screenshot.
+- Reviews: one written review is held off the website (`site: false` in `reviews.json`) until the owner decides; the app
+  shows it. Flip `site` to show it.
+
+**To check in two to four weeks (Search Console by page):** the daily-budget calculator's click rate (510 impressions, 0
+clicks in the 28 days to 17 November), whether the 50/30/20 retitle (weekly, biweekly, monthly pay) earns clicks, first
+impressions for the Money Manager and YNAB pages and the four new calculators, and the localized landings by folder.
+Bing Webmaster Tools has an AI Performance report (citations, cited pages); read it when signed in.

@@ -1,0 +1,21 @@
+{
+  "pill": "{avg} im App Store · {n} Bewertungen",
+  "pill_one": "{avg} im App Store · 1 Bewertung",
+  "summary": "{avg} von 5 Sternen im App Store, aus {n} Bewertungen in {k} Ländern (Stand: {date}). Die Rezensionen im Original, Wort für Wort:",
+  "rail_label": "Rezensionen aus dem App Store; horizontal scrollen",
+  "stars_label": "{r} von 5 Sternen",
+  "caption": "App Store, {country} · {month_year}",
+  "decimal": ",",
+  "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+  "date": "{d}. {month} {y}",
+  "month_year": "{month} {y}",
+  "countries": {
+    "ARE": "Vereinigte Arabische Emirate",
+    "CAN": "Kanada",
+    "EGY": "Ägypten",
+    "IND": "Indien",
+    "SAU": "Saudi-Arabien",
+    "USA": "USA",
+    "GBR": "Vereinigtes Königreich"
+  }
+}
