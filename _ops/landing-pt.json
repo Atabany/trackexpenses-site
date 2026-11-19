@@ -2,7 +2,7 @@
  "_note": "Brazilian Portuguese (você) words around the App Store reviews on pt/index.html, read by build.py (_words). The reviews themselves stay word for word in their own language.",
  "pill": "{avg} na App Store · {n} avaliações",
  "pill_one": "{avg} na App Store · 1 avaliação",
- "summary": "Nota {avg} de 5 na App Store, com {n} avaliações em {k} países (conferido em {date}). As avaliações escritas, palavra por palavra e no idioma original:",
+ "summary": "Nota {avg} de 5 na App Store, com {n} avaliações em {k} países (conferido em {date}). Abaixo, as avaliações escritas, sem tirar nem pôr, no idioma original:",
  "rail_label": "Avaliações da App Store; deslize para o lado",
  "stars_label": "{r} de 5 estrelas",
  "caption": "App Store, {country} · {month_year}",

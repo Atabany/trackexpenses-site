@@ -127,10 +127,11 @@
   }
 
   // The demos' pause button speaks the page's language: [visible label, spoken label] for Pause, then for Play.
+  // The spoken label always contains the visible word (WCAG 2.5.3, label in name).
   const toggleWords = ({
-    ar: [['إيقاف مؤقت', 'إيقاف الحركة مؤقتًا'], ['تشغيل', 'تشغيل الحركة']],
-    de: [['Pause', 'Animation anhalten'], ['Abspielen', 'Animation abspielen']],
-    es: [['Pausa', 'Pausar la animación'], ['Reproducir', 'Reproducir la animación']],
+    ar: [['إيقاف مؤقت', 'إيقاف مؤقت للحركة'], ['تشغيل', 'تشغيل الحركة']],
+    de: [['Pausieren', 'Animation pausieren'], ['Abspielen', 'Animation abspielen']],
+    es: [['Pausar', 'Pausar la animación'], ['Reproducir', 'Reproducir la animación']],
     pt: [['Pausar', 'Pausar a animação'], ['Reproduzir', 'Reproduzir a animação']]
   })[(document.documentElement.lang || 'en').split('-')[0]] || [['Pause', 'Pause animation'], ['Play', 'Play animation']];
 

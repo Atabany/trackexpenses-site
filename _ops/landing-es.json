@@ -1,7 +1,7 @@
 {
- "pill": "{avg} en el App Store · {n} calificaciones",
- "pill_one": "{avg} en el App Store · 1 calificación",
- "summary": "{avg} de 5 en el App Store, con {n} calificaciones de {k} países (revisado el {date}). Estas son las reseñas escritas, tal cual, en el idioma en que se escribieron:",
+ "pill": "{avg} en el App Store · {n} calificaciones",
+ "pill_one": "{avg} en el App Store · 1 calificación",
+ "summary": "{avg} de 5 en el App Store, con {n} calificaciones en {k} países (datos del {date}). Estas son las reseñas escritas, palabra por palabra y en su idioma original:",
  "rail_label": "Reseñas del App Store; desliza hacia los lados",
  "stars_label": "{r} de 5 estrellas",
  "caption": "App Store, {country} · {month_year}",

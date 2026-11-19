@@ -70,7 +70,7 @@ Why use the subject and not the sender? It mirrors the SMS setup, which matches 
 
 Why did an import arrive late? Mail fetches Gmail on a schedule. Set Fetch New Data to Every 15 Minutes, or open Mail.
 
-My bank only sends app notifications. What can I do? Shortcuts can't read notifications. If you pay with Apple Pay, a Wallet Transaction automation covers those purchases, and any alert can be pasted into a new transaction by hand.
+My bank only sends app notifications. What can I do? Shortcuts can't read notifications. If you pay with Apple Pay, a Wallet Transaction automation covers those purchases; text your bank app lets you copy can be pasted into a new transaction.
 
 It still doesn't import. Where do I start? Follow the SMS troubleshooting guide, with Email in place of Message. Or contact support with the activity entry and a copy of the alert with your name and account number removed.
 

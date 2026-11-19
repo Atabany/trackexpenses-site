@@ -12,11 +12,11 @@
     "updated": "2026-11-15"
   },
   "ar/index.html": {
-    "hash": "6a3c7ec79af4ac143b4a43a3f74fcd054b123cd3428892c734f5da7184f69626",
+    "hash": "b18d3c8f79ed3b6226885705649f1d2d0067613cec6dbda2ebed284c19af6503",
     "updated": "2026-11-20"
   },
   "compare/best-expense-trackers.html": {
-    "hash": "d51a22e87db208cf8017451866f2807308289ec0ca82ff1ce264e5a32e3efb41",
+    "hash": "6c92dda5c778272a49e89f31e616c1031415655bce2442bcda58b71e10ded821",
     "updated": "2026-11-20"
   },
   "compare/monefy-alternative.html": {
@@ -32,15 +32,15 @@
     "updated": "2026-11-20"
   },
   "de/bank-email.html": {
-    "hash": "76b00ce122d5578e8c4221243a512691cb3c02ff8bdb622007f30dd48b43ddbe",
-    "updated": "2026-11-17"
+    "hash": "5b619737f52677ca44af43afad17d90dfea75df91649d7506dccf902f6c8f289",
+    "updated": "2026-11-20"
   },
   "de/bank-sms.html": {
     "hash": "af2d5a19fd98e5fd966d5f9528775a342211a4c8c6c14362a3997ed64aa2dad3",
     "updated": "2026-11-17"
   },
   "de/index.html": {
-    "hash": "fb5edca6000b2213a3541cbbb7362fff912c1326fc5ccfa552a7d3bf07f3a2e7",
+    "hash": "bf9111c84f11e39d28d4aedb20d3ccb2eddcd3e2d24a7116b8e892cf6a8cd5c2",
     "updated": "2026-11-20"
   },
   "es/bank-email.html": {
@@ -48,15 +48,15 @@
     "updated": "2026-11-18"
   },
   "es/bank-sms.html": {
-    "hash": "9533881c4d6b60c7edb558e36938bef08b6c57e69b7ee3e7fff068432fe359a1",
-    "updated": "2026-11-18"
+    "hash": "a896cd7da3fce9474939a5faa1341a31705a6008db3aeacb39cff45cd466dace",
+    "updated": "2026-11-20"
   },
   "es/index.html": {
-    "hash": "8da0eb7aea348132ccd4ca3696a80fd9f9602f7d4d2169fec799d4cdabc35288",
+    "hash": "18bc26e01969f29ffa3237017048d74390f7ab6f67ef4cb10afcfcf830060836",
     "updated": "2026-11-20"
   },
   "faq.html": {
-    "hash": "6fda9b6aad77912b5bad80ff3e7ac01001df8b1cf710004001e7996ba59bad76",
+    "hash": "e98cd3008698bc76cb7a8e2e5dad2067e772e01fa0ff3124e567de21b67bb1b7",
     "updated": "2026-11-20"
   },
   "features/accounts-and-transfers.html": {
@@ -100,7 +100,7 @@
     "updated": "2026-11-20"
   },
   "features/sms-expense-tracker.html": {
-    "hash": "29947a4eb56649a8827808c20615771841c38363137b23bc376728065047cf9d",
+    "hash": "ee8afe30d128c263549392c85a357b4990450a27ed13c4e84856df01a651557b",
     "updated": "2026-11-20"
   },
   "features/voice-expense-tracker.html": {
@@ -124,7 +124,7 @@
     "updated": "2026-10-29"
   },
   "guides/bank-email-alerts-iphone.html": {
-    "hash": "ec4b118783f8d01c60083c5fe7f362703a1a43920ec95ae1dc4d9fc9e0b3e3dd",
+    "hash": "0e01425e84843bd23e43accdd26566f51a041f07a1cbe8e8e1488f85ce5cc031",
     "updated": "2026-11-17"
   },
   "guides/bank-sms-iphone.html": {
@@ -212,7 +212,7 @@
     "updated": "2026-11-19"
   },
   "index.html": {
-    "hash": "1d570917c77d14a8a99aa069b47f9d446cb511fb4fcd8817de4df8575be44caf",
+    "hash": "ad2a7e850c22ef3dac7be4e74ec5ef8c0bc1c62dc8ada39c36d1ececffef4a43",
     "updated": "2026-11-20"
   },
   "privacy.html": {
@@ -220,15 +220,15 @@
     "updated": "2026-11-17"
   },
   "pt/bank-email.html": {
-    "hash": "8c8a699f04f8c2392dc79248b0fbff2df199cb1398bfa1df1e2bfaeb791ff0f8",
-    "updated": "2026-11-18"
+    "hash": "425e305582a5a34e0c0fe321f54d168b1c8cac89b17916a960322700563d3242",
+    "updated": "2026-11-20"
   },
   "pt/bank-sms.html": {
-    "hash": "5032d63ee7b0a09c62f90cc17b8a31d9cb28ba0fd4ee9dbbaa81b4b34f9f7f1c",
-    "updated": "2026-11-18"
+    "hash": "a90481a6e206989cdf6e6dc7a7245257c212b35164a2ff8005432fc6c587f737",
+    "updated": "2026-11-20"
   },
   "pt/index.html": {
-    "hash": "af29881e11175502bae706c273cb9d20495328caa83d41cae5648d90bdc59c66",
+    "hash": "36c02ab92beb13218cdefe96db072290bc5ce4fd7fb46789be27539d9c070a4d",
     "updated": "2026-11-20"
   },
   "support.html": {

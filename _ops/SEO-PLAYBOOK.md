@@ -528,3 +528,12 @@ both new comparisons, `track-expenses-iphone` and `daily-spending-limit`; the se
 calculators, `features/daily-budget` and `whats-new` wait for the sitemap or a request on another day. Requests are not
 proof of indexing. Ratings re-read the same day (5.0 from 8 in 5 storefronts). Reader and copy gaps the localizers found
 are app issues #46 and #47, kept off every page.
+
+**Guard for the "see it read" cards (20 November).** `python3 tools/site_readings_check.py` compiles the app's voice parser
+and bank-message reader, reads every card on the five landings and compares each draft's amount and direction (or
+"skipped"); it exits 1 on any difference. 76 cards, 0 differences on 20 November. Run it after a change to
+`NLTransactionParser`, `BankMessageParser` or any landing's examples, and before publishing such a change.
+**Bing, 20 November.** Signed in to Bing Webmaster Tools: the sitemap was resubmitted (accepted, "Processing"; last crawl
+18 November, 50 URLs before this publication). AI Performance (citations by Microsoft Copilot and partners), last 3 months:
+**1 citation** (27 October) — the baseline to compare against in December. The remaining Google indexing requests run
+as a T3 scheduled task on 21 November 08:00 Dubai.
