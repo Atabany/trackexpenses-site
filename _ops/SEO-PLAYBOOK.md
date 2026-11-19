@@ -537,3 +537,14 @@ and bank-message reader, reads every card on the five landings and compares each
 18 November, 50 URLs before this publication). AI Performance (citations by Microsoft Copilot and partners), last 3 months:
 **1 citation** (27 October) — the baseline to compare against in December. The remaining Google indexing requests run
 as a T3 scheduled task on 21 November 08:00 Dubai.
+
+**Second publication, 20 November (public `660ab4b`).** A fresh native reader went over each localized landing (Arabic about
+50 lines, Spanish 46, German about 60, Portuguese a full pass) and each language's glossary gained the new terms and the
+refused calques. Facts they caught, now fixed in every language and in English, `faq.html`, the email guide, the SMS
+feature page, the comparison, the fact block and `llms.txt`: **iOS doesn't let anyone copy a notification's text** (paste
+works for an SMS, an email, or transaction text a bank's app lets you copy; otherwise say the purchase), and **a free user's
+Siri answers what is left of the budget, not today's figure** (that is Pro), so free-labelled lines promise only the
+former. Share images now exist in Arabic, German, Spanish and Portuguese (`marketing/og-2026-11/render-langs.py` takes the
+words from each reviewed landing; re-run it when a hero changes). The pause button's spoken name contains its visible word in
+every language. Lighthouse mobile: home 99, ar 98, de 97, es 99, pt 99 for performance; accessibility, best practices and
+SEO 100 on all five. `tools/site_readings_check.py`: 76 cards, 0 differences. IndexNow accepted the 43 pages changed that day.
