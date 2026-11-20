@@ -231,7 +231,7 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
 <details class="fact-block"><summary>{ui['facts_summary']}</summary><p>{esc(ui['fact_block'])}</p></details></main>
 <footer><p>{ui['made_by'].format(prefix=prefix)}</p>{'<p class="small">Google Play and the Google Play logo are trademarks of Google LLC.</p>' if PLAY_ON else ''}<nav aria-label="Footer">{chrome_links(ui['footer'],prefix)}</nav></footer>
 <aside class="mobile-download" aria-label="{ui['mobile'][0]}" hidden><div class="mobile-download-copy"><strong>{ui['mobile'][1]}</strong><span>{ui['mobile'][2]}</span></div>{cta(path,prefix,False,ui['cta_label'])}</aside>
-<script src="{prefix}site.js?v=17" defer></script>{f'<script src="{prefix}home.js?v=5" defer></script>' if path in LANDING else ''}</body></html>'''
+<script src="{prefix}site.js?v=18" defer></script>{f'<script src="{prefix}home.js?v=5" defer></script>' if path in LANDING else ''}</body></html>'''
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text)
  if not noindex:
   PAGES[path]=(title,desc,canonical,body,updated)

@@ -704,4 +704,16 @@ document.querySelectorAll('input[name="sms-ios"]').forEach(input => {
       result.textContent = text;
     });
   }
+  // A post or a bio that links here with ?ref=<tag> (trackexpenses.app/?ref=tiktok) keeps its own App Store campaign tag,
+  // so App Analytics -> Sources -> Campaigns credits that channel rather than this page. Only the tag inside this page's
+  // App Store links changes; nothing is stored or sent.
+  const ref = new URLSearchParams(location.search).get('ref');
+  if (ref && /^[a-z0-9-]{2,32}$/.test(ref)) {
+    document.querySelectorAll('a[href*="apps.apple.com/app/apple-store/"]').forEach((a) => {
+      try {
+        const u = new URL(a.href);
+        if (u.searchParams.has('ct')) { u.searchParams.set('ct', ref); a.href = u.toString(); }
+      } catch (e) { /* leave the link as it is */ }
+    });
+  }
 })();
