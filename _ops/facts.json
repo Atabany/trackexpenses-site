@@ -38,12 +38,17 @@
       "average": 5,
       "count": 1
     },
+    "kz": {
+      "name": "Kazakhstan",
+      "average": 5,
+      "count": 1
+    },
     "sa": {
       "name": "Saudi Arabia",
       "average": 5,
       "count": 1
     }
   },
-  "allRatingCount": 8,
+  "allRatingCount": 9,
   "allRatingAverage": 5.0
 }

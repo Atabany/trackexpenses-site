@@ -40,7 +40,7 @@
 ## Facts
 Expense Tracker: SMS & Voice (TrackExpenses) is made by Mohamed Elatabany for iPhone and iPad with iOS/iPadOS 17 or later, and runs on Mac computers with Apple silicon. The app is in English, Arabic, German, Spanish and Brazilian Portuguese, with a full right-to-left Arabic interface. No app account or bank login is required. Optional Shortcuts automations import supported bank SMS, bank email alerts (through Apple’s Mail app) and Wallet purchases, and a bank SMS or email can be pasted; the app does not read your Messages inbox or your email. Voice entry creates on-device drafts on compatible devices and languages. The free ledger includes unlimited manual transactions, budgets, current-period budget moves and Cover with the total unchanged, days left and spent/left amounts, budget alerts (at 80% when ahead of pace, and when over), bill reminders the morning before a repeating expense is due, historical stats, search with Spent and Income totals across every period, private iCloud sync across iPhone, iPad and Mac, 3 accounts, 2 recurring rules, 10 saved voice entries per calendar month per device and 10 successful automatic bank SMS or email imports per calendar month per device. Touching and holding the app icon offers Say an expense, New expense, Paste bank message and Ask your coach. The money coach reads the last budget month and suggests one limit. Today’s spending, a category, account balances, any named month, charts, files and typed logging are worked out on the device without using a question; open questions go to Anthropic’s Claude through the developer’s relay only after the user agrees, with the conversation so far, a summary of this month and last month and, when the model asks, totals for up to 13 months or up to 20 purchases with their date, shop, category and amount; never notes, receipts, account names or numbers, or balances (10 a month free per device). SMS alerts past the free allowance are kept but locked outside totals; upgrading to Pro adds them all, otherwise the next calendar month’s allowance releases as many as it covers. Nothing is dropped and saved history is never locked; when Pro or a trial ends, entries, accounts and repeating bills keep working. Pro adds unlimited voice entry, SMS and email imports, accounts and recurring rules, money coach challenges and more coach questions, a salary plan, forecasts, overall and per-budget daily guidance with repeating bills accounted for first, a daily budget for chosen categories optionally up to a date, what-if planning, Export & Share (CSV of any range and the full JSON backup; every export is Pro since 1.15.0), CSV import, backup restore, themes and alternate icons. Monthly and annual subscriptions and a one-time lifetime purchase are available. Spending calculations depend on your records and are not financial advice.
 
-App Store rating: 5.0 out of 5 from 8 ratings (United Arab Emirates 4, Canada 1, Egypt 1, India 1, Saudi Arabia 1; the other storefronts checked have none yet), checked 2026-11-20.
+App Store rating: 5.0 out of 5 from 9 ratings (United Arab Emirates 4, Canada 1, Egypt 1, India 1, Kazakhstan 1, Saudi Arabia 1; the other storefronts checked have none yet), checked 2026-11-20.
 
 App Store: [Expense Tracker: SMS & Voice](https://apps.apple.com/app/id6806614497)
 
@@ -230,7 +230,7 @@ https://trackexpenses.app/
 
 
 
-        ★★★★★ 5.0 on the App Store · 8 ratings
+        ★★★★★ 5.0 on the App Store · 9 ratings
        Money slips away in small pieces.  Catch every one.
        The iPhone expense tracker that keeps up for you: bank alerts file themselves, you just say “coffee 15, taxi 40”, and it tells you what you can spend today.
             Free to start No bank, no account
@@ -439,7 +439,7 @@ https://trackexpenses.app/
 
 
 
-    IN THEIR OWN WORDS  People who use it.  5.0 out of 5 on the App Store from 8 ratings in 5 countries, checked 20 November 2026. The written reviews, word for word:
+    IN THEIR OWN WORDS  People who use it.  5.0 out of 5 on the App Store from 9 ratings in 6 countries, checked 20 November 2026. The written reviews, word for word:
      ★★★★★   Everything included  This is the BEST app by far, and I have tried so many apps, it has everything you need to be on track. Wallet transactions, email notifications and SMS, all can be captured using IO-shortcuts, and it offers lifetime subscription, which is exactly what I was looking for. Hope there is a BlackFriday deal for everyone. Keep up the good work!    jrgrodriguez  App Store, Canada · November 2026     ★★★★★   Amazing app, truly next level 🤩  This app is amazing, amazing, AMAZING ❤️  It’s honestly the first time I’ve used an expense tracker that works this well.  The best feature is that I don’t have to manually enter every single expense. The app can automatically detect my bank SMS messages and add my expenses with the correct amounts and categories. How cool is that?  I also love that I can simply copy a bank transaction message and paste it into the app, and it does the rest.  And the voice recording feature is just WOW 😍 I can literally say all my expenses in one recording, and the app adds them for me. I don’t even have to record them one by one.  This is truly a next-generation app. I’ve never seen these features work together so smoothly in an expense tracker.  I 100% recommend everyone to download it and give it a try. You’ll love it ❤️    Iman-Mohamed  App Store, United Arab Emirates · November 2026     ★★★★★   Very clean and full features  The App provides a lot of convenient features that cover all my needs. Keep up the good work and consistent updates.    AAllaithy  App Store, Egypt · November 2026     ★★★★★   The best App  Simple, easy to use, track my expenses with hands free from my bank sms automatically it logged the expenses, also by talking to it or just say what I spend, it’s very smart app.    Meto Omar  App Store, United Arab Emirates · November 2026     ★★★★★   تطبيق ممتاز لمن يبحث عن التحكم بالميزانيه  استخدمت التطبيق لكم يوم ووجدت ان التطبيق فك لي ازمة (اين يذهب الراتب) و (كم احتاج لاخر الشهر) و التحكم بالمشتريات (لو اشتريت هذا الشيء هل سيكفي المبلغ لاخر الشهر؟)  بالفعل تطبيق يستحق ٥ نجوم    Kt220022  App Store, United Arab Emirates · November 2026     ★★★★★   Worth for money  I like it    Anish1501  App Store, India · October 2026
 
 
@@ -2450,7 +2450,7 @@ https://trackexpenses.app/ar/index.html
 
 
 
-        ★★★★★ ‏5.0 في App Store · عدد التقييمات: 8
+        ★★★★★ ‏5.0 في App Store · عدد التقييمات: 9
        المصاريف الصغيرة تأكل الراتب.  لا تفوّت منها شيئًا.
        تطبيق لتتبع المصاريف على iPhone يسجّل عنك: رسائل البنك تدخل دفترك وحدها، وتكفي جملة مثل «قهوة 15، تاكسي 40» لتسجيل العمليتين، ثم يخبرك كم يمكنك أن تصرف اليوم.
             ابدأ مجانًا بلا ربط بالبنك ولا إنشاء حساب
@@ -2659,7 +2659,7 @@ https://trackexpenses.app/ar/index.html
 
 
 
-    بكلماتهم  آراء من يستخدمونه.  ‏5.0 من 5 في App Store · عدد التقييمات: 8 · عدد الدول: 5 · حتى 20 نوفمبر 2026. وهذه المراجعات المكتوبة كما كتبها أصحابها:
+    بكلماتهم  آراء من يستخدمونه.  ‏5.0 من 5 في App Store · عدد التقييمات: 9 · عدد الدول: 6 · حتى 20 نوفمبر 2026. وهذه المراجعات المكتوبة كما كتبها أصحابها:
      ★★★★★   تطبيق ممتاز لمن يبحث عن التحكم بالميزانيه  استخدمت التطبيق لكم يوم ووجدت ان التطبيق فك لي ازمة (اين يذهب الراتب) و (كم احتاج لاخر الشهر) و التحكم بالمشتريات (لو اشتريت هذا الشيء هل سيكفي المبلغ لاخر الشهر؟)  بالفعل تطبيق يستحق ٥ نجوم    Kt220022  App Store في الإمارات · نوفمبر 2026     ★★★★★   Everything included  This is the BEST app by far, and I have tried so many apps, it has everything you need to be on track. Wallet transactions, email notifications and SMS, all can be captured using IO-shortcuts, and it offers lifetime subscription, which is exactly what I was looking for. Hope there is a BlackFriday deal for everyone. Keep up the good work!    jrgrodriguez  App Store في كندا · نوفمبر 2026     ★★★★★   Amazing app, truly next level 🤩  This app is amazing, amazing, AMAZING ❤️  It’s honestly the first time I’ve used an expense tracker that works this well.  The best feature is that I don’t have to manually enter every single expense. The app can automatically detect my bank SMS messages and add my expenses with the correct amounts and categories. How cool is that?  I also love that I can simply copy a bank transaction message and paste it into the app, and it does the rest.  And the voice recording feature is just WOW 😍 I can literally say all my expenses in one recording, and the app adds them for me. I don’t even have to record them one by one.  This is truly a next-generation app. I’ve never seen these features work together so smoothly in an expense tracker.  I 100% recommend everyone to download it and give it a try. You’ll love it ❤️    Iman-Mohamed  App Store في الإمارات · نوفمبر 2026     ★★★★★   Very clean and full features  The App provides a lot of convenient features that cover all my needs. Keep up the good work and consistent updates.    AAllaithy  App Store في مصر · نوفمبر 2026     ★★★★★   The best App  Simple, easy to use, track my expenses with hands free from my bank sms automatically it logged the expenses, also by talking to it or just say what I spend, it’s very smart app.    Meto Omar  App Store في الإمارات · نوفمبر 2026     ★★★★★   Worth for money  I like it    Anish1501  App Store في الهند · أكتوبر 2026
 
 
@@ -2748,7 +2748,7 @@ https://trackexpenses.app/de/index.html
 
 
 
-        ★★★★★ 5,0 im App Store · 8 Bewertungen
+        ★★★★★ 5,0 im App Store · 9 Bewertungen
        Kleine Beträge läppern sich.  Halt jeden fest.
        Das Haushaltsbuch fürs iPhone, das für dich mitschreibt: Sag „Kaffee 5, Taxi 18“, und beides ist eingetragen. Dein Monat beginnt am Zahltag, und dein Tagesbudget zeigt, was heute noch drin ist.
             Kostenlos starten Ohne Bank-Login
@@ -2957,7 +2957,7 @@ https://trackexpenses.app/de/index.html
 
 
 
-    BEWERTUNGEN  Echte Stimmen aus dem App Store.  5,0 von 5 Sternen im App Store bei 8 Bewertungen aus 5 Ländern (Stand: 20. November 2026). Die Rezensionen im Original, Wort für Wort:
+    BEWERTUNGEN  Echte Stimmen aus dem App Store.  5,0 von 5 Sternen im App Store bei 9 Bewertungen aus 6 Ländern (Stand: 20. November 2026). Die Rezensionen im Original, Wort für Wort:
      ★★★★★   Everything included  This is the BEST app by far, and I have tried so many apps, it has everything you need to be on track. Wallet transactions, email notifications and SMS, all can be captured using IO-shortcuts, and it offers lifetime subscription, which is exactly what I was looking for. Hope there is a BlackFriday deal for everyone. Keep up the good work!    jrgrodriguez  App Store, Kanada · November 2026     ★★★★★   Amazing app, truly next level 🤩  This app is amazing, amazing, AMAZING ❤️  It’s honestly the first time I’ve used an expense tracker that works this well.  The best feature is that I don’t have to manually enter every single expense. The app can automatically detect my bank SMS messages and add my expenses with the correct amounts and categories. How cool is that?  I also love that I can simply copy a bank transaction message and paste it into the app, and it does the rest.  And the voice recording feature is just WOW 😍 I can literally say all my expenses in one recording, and the app adds them for me. I don’t even have to record them one by one.  This is truly a next-generation app. I’ve never seen these features work together so smoothly in an expense tracker.  I 100% recommend everyone to download it and give it a try. You’ll love it ❤️    Iman-Mohamed  App Store, Vereinigte Arabische Emirate · November 2026     ★★★★★   Very clean and full features  The App provides a lot of convenient features that cover all my needs. Keep up the good work and consistent updates.    AAllaithy  App Store, Ägypten · November 2026     ★★★★★   The best App  Simple, easy to use, track my expenses with hands free from my bank sms automatically it logged the expenses, also by talking to it or just say what I spend, it’s very smart app.    Meto Omar  App Store, Vereinigte Arabische Emirate · November 2026     ★★★★★   تطبيق ممتاز لمن يبحث عن التحكم بالميزانيه  استخدمت التطبيق لكم يوم ووجدت ان التطبيق فك لي ازمة (اين يذهب الراتب) و (كم احتاج لاخر الشهر) و التحكم بالمشتريات (لو اشتريت هذا الشيء هل سيكفي المبلغ لاخر الشهر؟)  بالفعل تطبيق يستحق ٥ نجوم    Kt220022  App Store, Vereinigte Arabische Emirate · November 2026     ★★★★★   Worth for money  I like it    Anish1501  App Store, Indien · Oktober 2026
 
 
@@ -3246,7 +3246,7 @@ https://trackexpenses.app/es/index.html
 
 
 
-        ★★★★★ 5.0 en el App Store · 8 calificaciones
+        ★★★★★ 5.0 en el App Store · 9 calificaciones
        El dinero se te va en gastos hormiga.  Que no se escape ni uno.
        El control de gastos para iPhone que lleva las cuentas por ti: pega el aviso de tu banco o di “café 45, taxi 120” y te dice cuánto puedes gastar hoy. Si tu banco te avisa por SMS o por correo, esos avisos se registran solos.
             Empieza gratis Sin conectar tu banco ni crear cuenta
@@ -3483,7 +3483,7 @@ https://trackexpenses.app/es/index.html
 
 
 
-    EN SUS PROPIAS PALABRAS  Lo que dice quien la usa.  5.0 de 5 en el App Store, con 8 calificaciones en 5 países (datos del 20 de noviembre de 2026). Estas son las reseñas escritas, palabra por palabra y en su idioma original:
+    EN SUS PROPIAS PALABRAS  Lo que dice quien la usa.  5.0 de 5 en el App Store, con 9 calificaciones en 6 países (datos del 20 de noviembre de 2026). Estas son las reseñas escritas, palabra por palabra y en su idioma original:
      ★★★★★   Everything included  This is the BEST app by far, and I have tried so many apps, it has everything you need to be on track. Wallet transactions, email notifications and SMS, all can be captured using IO-shortcuts, and it offers lifetime subscription, which is exactly what I was looking for. Hope there is a BlackFriday deal for everyone. Keep up the good work!    jrgrodriguez  App Store, Canadá · noviembre de 2026     ★★★★★   Amazing app, truly next level 🤩  This app is amazing, amazing, AMAZING ❤️  It’s honestly the first time I’ve used an expense tracker that works this well.  The best feature is that I don’t have to manually enter every single expense. The app can automatically detect my bank SMS messages and add my expenses with the correct amounts and categories. How cool is that?  I also love that I can simply copy a bank transaction message and paste it into the app, and it does the rest.  And the voice recording feature is just WOW 😍 I can literally say all my expenses in one recording, and the app adds them for me. I don’t even have to record them one by one.  This is truly a next-generation app. I’ve never seen these features work together so smoothly in an expense tracker.  I 100% recommend everyone to download it and give it a try. You’ll love it ❤️    Iman-Mohamed  App Store, Emiratos Árabes Unidos · noviembre de 2026     ★★★★★   Very clean and full features  The App provides a lot of convenient features that cover all my needs. Keep up the good work and consistent updates.    AAllaithy  App Store, Egipto · noviembre de 2026     ★★★★★   The best App  Simple, easy to use, track my expenses with hands free from my bank sms automatically it logged the expenses, also by talking to it or just say what I spend, it’s very smart app.    Meto Omar  App Store, Emiratos Árabes Unidos · noviembre de 2026     ★★★★★   تطبيق ممتاز لمن يبحث عن التحكم بالميزانيه  استخدمت التطبيق لكم يوم ووجدت ان التطبيق فك لي ازمة (اين يذهب الراتب) و (كم احتاج لاخر الشهر) و التحكم بالمشتريات (لو اشتريت هذا الشيء هل سيكفي المبلغ لاخر الشهر؟)  بالفعل تطبيق يستحق ٥ نجوم    Kt220022  App Store, Emiratos Árabes Unidos · noviembre de 2026     ★★★★★   Worth for money  I like it    Anish1501  App Store, India · octubre de 2026
 
 
@@ -3585,7 +3585,7 @@ https://trackexpenses.app/pt/index.html
 
 
 
-        ★★★★★ 5,0 na App Store · 8 avaliações
+        ★★★★★ 5,0 na App Store · 9 avaliações
        O dinheiro vai embora aos pouquinhos.  Aqui, nada escapa.
        O controle de gastos para iPhone que faz as contas por você. Cole o SMS ou o e-mail do banco e o lançamento vem pronto. Diga “café 8, uber 23” e os dois gastos entram de uma vez. E veja quanto ainda dá para gastar hoje.
             Comece grátis Sem login do banco, sem cadastro
@@ -3794,7 +3794,7 @@ https://trackexpenses.app/pt/index.html
 
 
 
-    NAS PALAVRAS DE QUEM USA  Quem usa, conta.  Nota 5,0 de 5 na App Store, com 8 avaliações em 5 países (conferido em 20 de novembro de 2026). Abaixo, as avaliações escritas, sem tirar nem pôr, no idioma original:
+    NAS PALAVRAS DE QUEM USA  Quem usa, conta.  Nota 5,0 de 5 na App Store, com 9 avaliações em 6 países (conferido em 20 de novembro de 2026). Abaixo, as avaliações escritas, sem tirar nem pôr, no idioma original:
      ★★★★★   Everything included  This is the BEST app by far, and I have tried so many apps, it has everything you need to be on track. Wallet transactions, email notifications and SMS, all can be captured using IO-shortcuts, and it offers lifetime subscription, which is exactly what I was looking for. Hope there is a BlackFriday deal for everyone. Keep up the good work!    jrgrodriguez  App Store, Canadá · novembro de 2026     ★★★★★   Amazing app, truly next level 🤩  This app is amazing, amazing, AMAZING ❤️  It’s honestly the first time I’ve used an expense tracker that works this well.  The best feature is that I don’t have to manually enter every single expense. The app can automatically detect my bank SMS messages and add my expenses with the correct amounts and categories. How cool is that?  I also love that I can simply copy a bank transaction message and paste it into the app, and it does the rest.  And the voice recording feature is just WOW 😍 I can literally say all my expenses in one recording, and the app adds them for me. I don’t even have to record them one by one.  This is truly a next-generation app. I’ve never seen these features work together so smoothly in an expense tracker.  I 100% recommend everyone to download it and give it a try. You’ll love it ❤️    Iman-Mohamed  App Store, Emirados Árabes Unidos · novembro de 2026     ★★★★★   Very clean and full features  The App provides a lot of convenient features that cover all my needs. Keep up the good work and consistent updates.    AAllaithy  App Store, Egito · novembro de 2026     ★★★★★   The best App  Simple, easy to use, track my expenses with hands free from my bank sms automatically it logged the expenses, also by talking to it or just say what I spend, it’s very smart app.    Meto Omar  App Store, Emirados Árabes Unidos · novembro de 2026     ★★★★★   تطبيق ممتاز لمن يبحث عن التحكم بالميزانيه  استخدمت التطبيق لكم يوم ووجدت ان التطبيق فك لي ازمة (اين يذهب الراتب) و (كم احتاج لاخر الشهر) و التحكم بالمشتريات (لو اشتريت هذا الشيء هل سيكفي المبلغ لاخر الشهر؟)  بالفعل تطبيق يستحق ٥ نجوم    Kt220022  App Store, Emirados Árabes Unidos · novembro de 2026     ★★★★★   Worth for money  I like it    Anish1501  App Store, Índia · outubro de 2026
 
 
