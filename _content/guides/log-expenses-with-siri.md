@@ -46,6 +46,6 @@ Why does my Quick Log widget say an entry is waiting? The tap was saved while th
 
 Can I choose which category a widget follows? Yes. Touch and hold the Category Budgets widget, choose Edit Widget and pick a category. Accounts and Quick Log work the same way.
 
-Read next: the [Bank SMS expense tracking guide](bank-sms-iphone.html) for automatic imports, and the [widgets and shortcuts feature page](../features/widgets-and-shortcuts.html).
+Read next: [double tap the back of your iPhone to log an expense](double-tap-log-expenses-iphone.html), the [Bank SMS expense tracking guide](bank-sms-iphone.html) for automatic imports, and the [widgets and shortcuts feature page](../features/widgets-and-shortcuts.html).
 
 Source: TrackExpenses app code (App Intents, widgets and controls, November 2026) and Apple's iPhone User Guide for widgets, Control Center and the Action button. Figures are examples, not financial advice.

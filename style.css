@@ -472,3 +472,6 @@
 #worth-reference td:first-child{white-space:normal}
 .tool-grid article{position:relative}.tool-grid h2 a::after{content:"";position:absolute;inset:0;border-radius:20px}
 @media(max-width:640px){.sub-row.pair{grid-template-columns:minmax(0,1fr) auto}.sub-row.pair .sub-remove{grid-column:auto}.sub-row.line-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.sub-row.line-row label:first-child{grid-column:1/-1;grid-row:1;padding-right:104px}.sub-row.line-row .sub-remove{grid-column:2;grid-row:1;justify-self:end;width:92px;padding-inline:8px}.sub-row.line-row label:nth-child(2){grid-column:1;grid-row:2}.sub-row.line-row label:nth-child(3){grid-column:2;grid-row:2}#month-table{font-size:13px}#month-table th,#month-table td{padding-left:6px;padding-right:6px}}
+/* The Double Tap guide's film (2026-11-21): a square loop, centred, never wider than a phone. */
+.dt-film { margin:24px auto; max-width:360px; }
+.dt-film video { display:block; width:100%; height:auto; border-radius:24px; background:#f5f7f3; }

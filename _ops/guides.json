@@ -223,5 +223,14 @@
   "published": "2026-11-20",
   "updated": "2026-11-20",
   "feature": "ai-money-coach"
+ },
+ {
+  "slug": "double-tap-log-expenses-iphone",
+  "title": "Double Tap Your iPhone Back to Log Expenses | TrackExpenses",
+  "description": "Log an expense by tapping the back of your iPhone twice: add the free Log Expense shortcut, turn on Back Tap, type the price and pick the category.",
+  "status": "published",
+  "published": "2026-11-21",
+  "updated": "2026-11-21",
+  "feature": "widgets-and-shortcuts"
  }
 ]

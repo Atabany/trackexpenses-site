@@ -108,111 +108,115 @@
     "updated": "2026-11-20"
   },
   "features/widgets-and-shortcuts.html": {
-    "hash": "412dc28631e254c26d36c10726ef2b08c646277c9505f76268f73783914d5cba",
+    "hash": "05972885cf36813767a26cc794e5e6f2c44e84ab9f45880b6ddbe2f27c31bf04",
     "updated": "2026-11-20"
   },
   "guides/50-30-20-budget.html": {
-    "hash": "5dc5031d072ceeaa8e3194714dd7b81edf635642dcf9174038c8395dc1875dac",
+    "hash": "63cc796dcd880aa775b54c348c11a0c636ca67849782efc7413237a9673625ee",
     "updated": "2026-11-10"
   },
   "guides/apple-pay-expenses.html": {
-    "hash": "145f61c5b099821b91f0ac4436cba32e4a2a0dc46abe798053048f9813759189",
+    "hash": "ba11c2ea2145dda31eab3c26cfa4a07548b61f0b470d7f331b2cbfdf11312f52",
     "updated": "2026-10-05"
   },
   "guides/arabic-bank-sms-expenses.html": {
-    "hash": "8a2a0a811251ba577c96f47bb2142460a5de4c43f2352ee760b4264a0462e981",
+    "hash": "0f4ab18d6e0cb19592df7d22636f390b3a21a4dcc2c7d22e19d8fe022b6cb751",
     "updated": "2026-10-29"
   },
   "guides/bank-email-alerts-iphone.html": {
-    "hash": "fc8a3038d059e14f229e15b68e7075962fd3272a155517e37d42029a7cbc76ac",
+    "hash": "a55718bdfff931ff82756582a65066939c42a41a52e8751a0479a370233288a4",
     "updated": "2026-11-17"
   },
   "guides/bank-sms-iphone.html": {
-    "hash": "6e40adaaf529fe6bc1a994503d384e0291310ef6c93b10b823684701821f6b7e",
+    "hash": "bd1449aab60c453cd61ebb56223843f38123884c5ef9e49046687396ae915b88",
     "updated": "2026-10-26"
   },
   "guides/bill-reminders-iphone.html": {
-    "hash": "68b6d49cac14a8978811c9afa105461567c580213b04e2438ecb6ab6f4205054",
+    "hash": "3f7a4ba7eb735c0b74feb6b241bc5a5de09c3524f39f5a98f6fc8513bbb567db",
     "updated": "2026-11-19"
   },
   "guides/budget-alerts-iphone.html": {
-    "hash": "f1b1c2be28ea11a8caf4c0d1350593be291330d26889e1dc7217d517e3583308",
+    "hash": "6a946a40e20d8dbecea4f3b9a0a6c655e06460edc6028fd14835c956a44997d7",
     "updated": "2026-11-19"
   },
   "guides/budget-pacing-explained.html": {
-    "hash": "849a96ec7ed1f81bbf431976eeb0c7dad3e4a7dd588b0b6db7e0136294e7ab83",
+    "hash": "eae3aac113e618d8fc0c1f0fce8e78301ccb033efe723d0ed7cf5cd06d04f0cf",
     "updated": "2026-11-15"
   },
   "guides/credit-card-payment-vs-expense.html": {
-    "hash": "83e32d75635fead8e8f8416eb080e1228383b43468066c1f15e5f2f1e7df3237",
+    "hash": "3d01ff7d91fe6214f2a8287d942a544f3d612b540d380d98dd41201778805bf7",
     "updated": "2026-10-13"
   },
   "guides/daily-spending-limit.html": {
-    "hash": "1460e1f0f67e32981c186f50aa21eb4dfc0ea9cf9152dfd6dbb096956b683a9c",
+    "hash": "81eb9fb4efc9a06cf2eb81daf07f8edc54a10562566b9c1d72d883576e6ef2fd",
     "updated": "2026-11-19"
   },
   "guides/december-money-reset.html": {
-    "hash": "ded98ea5a584c08ff7d994cc0b7e7f02a2588f3070783b309328bc65e347311d",
+    "hash": "46db449f6f92a06d5bbefb3de678af04c5e13a377b229499377d5b5c717f96fa",
     "updated": "2026-11-20"
   },
+  "guides/double-tap-log-expenses-iphone.html": {
+    "hash": "67e704b83cd6c87e02c8fe0436c6117a05f68713e73e678d7560d4512c719984",
+    "updated": "2026-11-21"
+  },
   "guides/envelope-budgeting-iphone.html": {
-    "hash": "7aa69710e73853141efd71c11dcf3c0616e1fcf31e8ec6f3472aa2a5ab06728f",
+    "hash": "886a99b75b00ace2aea3a4552a22615b58e8201f586671726737c8001e325e5c",
     "updated": "2026-11-19"
   },
   "guides/expense-tracker-without-bank-connection.html": {
-    "hash": "28772035fafcf687c89881898d9ea2962d381c38d1ecd3e7b52397b84016318f",
+    "hash": "1f3d30bea10a009f0764945f69a684cf4f907f97eaf31acf7081f7b71aeaa6c8",
     "updated": "2026-11-19"
   },
   "guides/export-expenses-csv.html": {
-    "hash": "edb8976860f953bd2ef1b82cac0b120240b3995b4721f155fa14e380e578f7f0",
+    "hash": "3bfcfb459a56d80e2b2ab55531327304f50e4871daf80e647c159ea9b2cf10f6",
     "updated": "2026-11-17"
   },
   "guides/index.html": {
-    "hash": "bb02232a354a07ec94ecbe5868614a4c525855fc2581d83293971153aa431435",
+    "hash": "be5577207644ea425313fa39fc7614af09b90da536c71bbb6bd4670ef975ee95",
     "updated": "2026-11-20"
   },
   "guides/log-expenses-with-siri.html": {
-    "hash": "51199c48237313db880403dc4662a22364dd7687d877cb7431ffac29bfd9c638",
+    "hash": "6a26c60e59fd68589a5568793fc3aa0d20479317021434d1d4311c85d32da95e",
     "updated": "2026-11-08"
   },
   "guides/payday-budget.html": {
-    "hash": "c5b02d851aadb536e80e1fbe9cc4d03c3fd07a30a1e512aa3e5299dd27688854",
+    "hash": "3b22af7f79ce9596674b4439dfe685107a968645f9e89244d10aa6a4e569af75",
     "updated": "2026-11-19"
   },
   "guides/sms-automation-not-working.html": {
-    "hash": "7b4e5235c0645f40f7b89f36e0ac63e04648ac73b1bcbcd4988f3f6c7448511b",
+    "hash": "64d763bdbf59f45c6c6aa8dad3b65d68f4453d043a8663503f794593e93e5ffd",
     "updated": "2026-10-26"
   },
   "guides/sms-setup.html": {
-    "hash": "3f7e380f6825e168f075ed2bc05170675ee78baa36eca8ae1cf47d83c2f67686",
+    "hash": "59500b8f9139814862c14a4789d1c9eb124a235791edccbfa934e72ded7ef3a9",
     "updated": "2026-10-25"
   },
   "guides/spending-at-one-shop.html": {
-    "hash": "7a6195fc3bd03971978f1a38b37e8a35a5d04170aa320328d926dd3ff0c0ffc3",
+    "hash": "d0f8b46d6e6d4ccb75d1d942044087d8416d4e8e0338d5b8f6f4dff78ad01095",
     "updated": "2026-11-19"
   },
   "guides/track-cash-expenses.html": {
-    "hash": "3b72917ec1f0c2f7b649b1517f80b2446d0e0bea9358052fb896c0e85a697ba0",
+    "hash": "93b944dea8cfeef43fe054ed8da4d83a4d22b50fb9218716bc59ec364fece328",
     "updated": "2026-10-13"
   },
   "guides/track-expenses-iphone.html": {
-    "hash": "fa3a6c153b2d7aa01b92a90b2e59aa9cb2659a7e81199c3a17c42a8d850d497f",
+    "hash": "ec6df76c12580d8f781b8bf40492d6bc407d44b4dd114ce7fe75fb1d2de7e18c",
     "updated": "2026-11-19"
   },
   "guides/track-subscriptions-recurring-bills.html": {
-    "hash": "0b73dbb943686702c495ee6902da1c6a073613af5962170f82f390fbe89ec81e",
+    "hash": "26e4edfbd54d77456d2a911a63dbee653bae24b7895b003aea39063c177a9742",
     "updated": "2026-11-19"
   },
   "guides/travel-expenses-abroad.html": {
-    "hash": "a403d61b492c3b1ad38a5df53dce6ea252e4e4206419a91ee19098eae5ee180f",
+    "hash": "6de3330a2a146b88a8546ee9cfcee1f35e89f0f2f62f54f456e1105500f7f9ac",
     "updated": "2026-11-19"
   },
   "guides/voice-expenses-iphone.html": {
-    "hash": "2cb32484cef3c9a38046caa9bbd043e09a785bb1427afa599cdcfd51defd9699",
+    "hash": "3fde93d62d0a226f2c88c2a1a8fe8f3ec45c3af2332765251cee56481075fecf",
     "updated": "2026-10-13"
   },
   "guides/zero-based-budget.html": {
-    "hash": "ddfcc435e1c6c599452371ea841606f31ec4b666437300d53adbbfcea46011e4",
+    "hash": "44beb6d5de1a0a2c2455e661ef28b2cefb2bb370a1bf965d4cdcb8dbe001fa1c",
     "updated": "2026-11-19"
   },
   "index.html": {
