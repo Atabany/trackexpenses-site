@@ -1,0 +1,129 @@
+/* The download pages (21 November 2026): trackexpenses.app/download, the link in the social bios. Phone first: on a
+   390 × 664 in-app browser the icon, the headline, the App Store badge and the rating fit the first screen.
+   Loaded after style.css and home.css (the dark hero, the live phone, the proof strip and the reviews come from there).
+   Every animation is transform/opacity only, runs under .motion (site.js: script on, Reduce Motion off) and never blurs. */
+.page-download main.home{display:flow-root}
+/* What only one kind of device sees: the head sets data-platform before the first paint. Without script, neither shows. */
+[data-only]{display:none!important}
+[data-platform=android] .dl-android[data-only]{display:block!important}
+.dl-play{padding:0;background:none;border:0;display:flex;justify-content:center}
+[data-platform=desktop] .dl-qr[data-only]{display:flex!important}
+.dl-hero{text-align:center;padding-top:12px}
+.dl-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);align-items:center}
+.dl-copy{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;min-width:0}
+
+/* Language: a disclosure in the hero's top corner (works without script) */
+.dl-lang{position:absolute;top:12px;inset-inline-end:12px;z-index:20;text-align:start}
+.dl-lang summary{list-style:none;display:flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border-radius:999px;background:#ffffff12;border:1px solid #ffffff26;color:#e6f5ee;font-size:13px;font-weight:650;cursor:pointer;-webkit-user-select:none;user-select:none}
+.dl-lang summary::-webkit-details-marker{display:none}
+.dl-lang summary svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.dl-lang[open] summary{background:#ffffff24}
+.dl-lang-sheet{position:absolute;inset-inline-end:0;top:calc(100% + 6px);display:flex;flex-direction:column;min-width:168px;padding:6px;border-radius:16px;background:#0e241b;border:1px solid #ffffff22;box-shadow:0 24px 48px #000a}
+.dl-lang-sheet a{display:block;padding:11px 12px;border-radius:10px;color:#e6f5ee;text-decoration:none;font-size:15px;line-height:1.3}
+.dl-lang-sheet a:hover{background:#ffffff10}
+.dl-lang-sheet a[aria-current]{background:#ffffff18;font-weight:750}
+.dl-lang-sheet a[aria-current]::after{content:'✓';float:inline-end;color:var(--mint);margin-inline-start:12px}
+
+/* The stage: the expenses drift around the app icon, and it catches them one by one (one every 2.4 s) */
+.dl-stage{--u:min(1px,calc((100vw - 32px) / 358));position:relative;width:calc(358 * var(--u));height:calc(188 * var(--u));margin:46px auto 0;direction:ltr}
+.dl-icon{position:absolute;left:50%;top:50%;width:calc(108 * var(--u));height:calc(108 * var(--u));translate:-50% -50%;z-index:2}
+.dl-icon::before{content:'';position:absolute;inset:-75%;border-radius:50%;background:radial-gradient(circle,#2fd39a5c 0%,#2fd39a1f 36%,transparent 66%);z-index:-1;pointer-events:none}
+.dl-icon img{display:block;width:100%;height:100%;border-radius:23%;box-shadow:0 20px 44px #000c,0 0 0 1px #ffffff26}
+.dl-ring{position:absolute;inset:-5px;border-radius:27%;border:2px solid #6ff3bd;opacity:0;pointer-events:none}
+.dl-tick{position:absolute;top:-9px;right:-9px;width:30px;height:30px;border-radius:50%;background:#2fd39a;display:grid;place-items:center;box-shadow:0 6px 14px #0008,0 0 0 3px #071711;opacity:0}
+.dl-tick svg{width:18px;height:18px;fill:none;stroke:#04241a;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.dl-prop{--home:translate(-50%,-50%) translate(calc(var(--x) * var(--u)),calc(var(--y) * var(--u)));position:absolute;left:50%;top:50%;width:calc(var(--s) * var(--u));display:flex;flex-direction:column;align-items:center;gap:3px;z-index:1;transform:var(--home);pointer-events:none}
+.dl-prop img{display:block;width:100%;height:auto;rotate:var(--r);filter:drop-shadow(0 10px 12px #0009)}
+.dl-prop b{margin-top:-9px;font-size:10px;font-weight:750;line-height:1;padding:4px 7px;border-radius:999px;background:#ffffffee;color:#13241d;box-shadow:0 5px 12px #0007;white-space:nowrap;font-variant-numeric:tabular-nums;rotate:calc(var(--r) * -.6)}
+.motion .dl-prop{animation:dl-catch 14.4s linear infinite;animation-delay:calc(var(--i) * -2.4s)}
+.motion .dl-prop img{animation:dl-bob 5.2s ease-in-out infinite;animation-delay:calc(var(--i) * -.9s)}
+.motion .dl-icon img{animation:dl-gulp 2.4s linear infinite}
+.motion .dl-ring{animation:dl-ring 2.4s linear infinite}
+.motion .dl-tick{animation:dl-tick 2.4s linear infinite}
+/* A prop is caught at 90% of its 14.4 s loop; the six are 2.4 s apart, so a catch lands at 0.96 s + 2.4 s × n,
+   which is 40% of the icon's own 2.4 s loop: the gulp, the ring and the tick start there. */
+@keyframes dl-catch{
+  0%,84%{transform:var(--home) scale(1);opacity:1;animation-timing-function:cubic-bezier(.5,0,.9,.4)}
+  90%{transform:translate(-50%,-50%) translate(0px,0px) scale(.18);opacity:1}
+  90.6%{transform:translate(-50%,-50%) translate(0px,0px) scale(.18);opacity:0}
+  93%{transform:var(--home) scale(.45);opacity:0;animation-timing-function:cubic-bezier(.2,.9,.3,1.25)}
+  100%{transform:var(--home) scale(1);opacity:1}
+}
+@keyframes dl-bob{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes dl-gulp{0%,39%{transform:scale(1)}42%{transform:scale(1.09,.92)}47%{transform:scale(.96,1.04)}53%,100%{transform:scale(1)}}
+@keyframes dl-ring{0%,40%{opacity:0;transform:scale(.94)}43%{opacity:.9;transform:scale(1)}82%,100%{opacity:0;transform:scale(1.5)}}
+@keyframes dl-tick{0%,41%{opacity:0;transform:scale(.3)}46%{opacity:1;transform:scale(1.14)}52%{transform:scale(1)}74%{opacity:1;transform:scale(1)}86%,100%{opacity:0;transform:scale(.85)}}
+
+/* Name, headline, badge, rating, the free line */
+.dl-name{margin:8px 0 0;display:flex;flex-direction:column;align-items:center;line-height:1.3}
+.dl-name b{font-size:17px;color:#fff;font-weight:800;letter-spacing:-.01em}
+.dl-name span{font-size:13px;color:var(--hx-muted)}
+.dl-hero h1{font-size:clamp(30px,8.7vw,60px);margin:14px 0 20px}
+.dl-get{display:flex;flex-direction:column;align-items:center;gap:14px}
+.dl-badge{position:relative;display:block;padding:0;border-radius:14px;-webkit-tap-highlight-color:transparent;transition:transform .15s ease}
+.dl-badge .badge{display:block;width:186px;height:62px}
+.dl-badge::after{content:'';position:absolute;inset:-5px;border-radius:17px;box-shadow:0 0 0 2px #6ff3bd88,0 0 36px #2fd39a66;opacity:.35;pointer-events:none}
+.motion .dl-badge::after{animation:dl-breathe 2.8s ease-in-out infinite}
+@keyframes dl-breathe{0%,100%{opacity:.25;transform:scale(.985)}50%{opacity:1;transform:scale(1.03)}}
+.dl-badge:active{transform:scale(.97)}
+.dl-free{margin:14px 0 0;font-size:13.5px;line-height:1.4;font-weight:700;color:#e3f4ec}
+.dl-free span{font-weight:500;color:#a8c3b6}
+.dl-free span::before{content:'·';margin:0 .45em;color:#6f8f80}
+
+/* Android: honest, with a way to hear first. Desktop: a QR code for the iPhone's camera. */
+.dl-android{width:100%;max-width:380px;margin:0 0 18px;padding:16px 16px 14px;border-radius:20px;background:#ffffff0e;border:1px solid #ffffff22}
+.dl-alt-title{margin:0;font-size:17px;font-weight:800;color:#fff}
+.dl-android p:not(.dl-alt-title){margin:4px 0 12px;font-size:14.5px;line-height:1.45;color:#c4dccf}
+.dl-mail{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 20px;border-radius:999px;background:linear-gradient(180deg,#5cf0b5,#22c98d);color:#04241a;font-weight:800;font-size:15px;line-height:1.25;text-decoration:none;box-shadow:0 10px 24px #1fbf8640}
+.dl-qr{margin-top:22px;display:flex;align-items:center;gap:16px;padding:14px 18px 14px 14px;border-radius:22px;background:#ffffff0c;border:1px solid #ffffff1f;max-width:420px;text-align:start}
+[dir=rtl] .dl-qr{padding:14px 14px 14px 18px}
+.dl-qr-code{position:relative;flex:0 0 auto;display:block;padding:10px;background:#fff;border-radius:16px;box-shadow:0 14px 30px #0006}
+.dl-qr-code img:first-child{display:block;width:132px;height:132px}
+.dl-qr-icon{position:absolute;left:50%;top:50%;width:30px;height:30px;translate:-50% -50%;border-radius:8px;box-shadow:0 0 0 4px #fff}
+.dl-qr-text{display:flex;flex-direction:column;gap:4px;font-size:14px;line-height:1.45;color:#c4dccf}
+.dl-qr-text b{font-size:17px;color:#fff;font-weight:800}
+/* On Android the App Store badge is for an iPhone or iPad they may also have; the floating bar would only repeat it. */
+[data-platform=android] .page-download .mobile-download{display:none!important}
+
+/* The live phone sits under the hero copy on a phone, beside it on a wide screen */
+.page-download .hx-stage{margin-top:34px}
+.page-download .reviews{padding-top:56px}
+
+/* Closing call to action */
+.dl-final{position:relative;overflow:hidden;isolation:isolate;max-width:1120px;margin:64px 16px 0;padding:44px 20px 40px;border-radius:32px;text-align:center;color:#eef7f2;background:radial-gradient(120% 90% at 50% 0%,#17543d 0%,#0b2a1f 55%,#071a13 100%)}
+.dl-final-icon{display:block;width:76px;height:76px;margin:0 auto 16px;border-radius:18px;box-shadow:0 16px 36px #0009,0 0 0 1px #ffffff22}
+.dl-final h2{margin:0 auto 10px;max-width:16ch;font-size:clamp(30px,8vw,48px);line-height:1.06;letter-spacing:-.045em;font-weight:800;color:#fff;text-wrap:balance}
+.dl-final>p{margin:0 auto 22px;color:#b7d1c4;font-size:16px;line-height:1.5;max-width:34ch;text-wrap:balance}
+/* No word left alone on a last line (a lone «وMac.» or "App Store.") */
+.dl-android p,.dl-qr-text span,.dl-free{text-wrap:balance}
+.dl-final .dl-badge{margin:0 auto}
+.dl-trust{list-style:none;margin:20px auto 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;max-width:420px}
+.dl-trust li{display:flex;align-items:center;gap:6px;font-size:13.5px;font-weight:650;color:#dcefe5}
+.dl-trust li::before{content:'✓';color:var(--mint);font-weight:800}
+.dl-final .dl-qr{margin:24px auto 0}
+.page-download .home>.dl-final+*{margin-top:0}
+@media(min-width:1152px){.dl-final{margin-left:auto;margin-right:auto}}
+[dir=rtl] .dl-hero h1,[dir=rtl] .dl-final h2{line-height:1.22}
+[dir=rtl] .dl-name span,[dir=rtl] .dl-android p,[dir=rtl] .dl-qr-text,[dir=rtl] .dl-final>p{line-height:1.6}
+
+@media(min-width:761px){
+  .dl-hero{padding-top:40px}
+  .dl-inner{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;min-height:680px}
+  .dl-stage{--u:.8px;margin-top:0}
+  .dl-hero h1{font-size:clamp(38px,3.9vw,52px);margin:10px 0 20px}
+  .dl-get{flex-direction:row;gap:16px}
+  .dl-free{margin-top:12px}
+  .dl-copy>.dl-qr{margin-top:16px}
+  .dl-qr-code img:first-child{width:116px;height:116px}
+  .page-download .hx-stage{margin-top:0}
+  .dl-final{padding:64px 40px 56px;margin-top:96px}
+  .dl-lang{top:18px;inset-inline-end:24px}
+}
+@media(max-width:360px){
+  .dl-badge .badge{width:168px;height:56px}
+  .dl-prop b{font-size:9px;padding:3px 5px}
+  .dl-stage{margin-top:44px}
+}
+@media(prefers-reduced-motion:reduce){
+  .dl-prop,.dl-prop img,.dl-icon img,.dl-ring,.dl-tick,.dl-badge::after{animation:none!important}
+}

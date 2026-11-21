@@ -182,8 +182,11 @@ PAGES={}
 # Home pages built on the 19 November landing: they load home.css and home.js, and the header sits on the dark hero.
 LANDING={'index.html'}
 MENU_EXTRA={'en':[('compare/best-expense-trackers.html','Compare apps',''),('support.html','Support','')]}
-def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None,extra_schema=None,lang='en',alternates=None,published=None):
+def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None,extra_schema=None,lang='en',alternates=None,published=None,layout=None,head_extra=''):
  ui=CHROME[lang]
+ # layout='download': the bio link's page. No header, breadcrumb trail, closing download section or fact block: its own hero
+ # and closing call to action carry the page (download.css, download.js).
+ dl=layout=='download'
  # A page in a folder that is not released yet is reached only from the app's own links: noindex, no hreflang.
  if path.split('/')[0] in UNRELEASED: noindex=True; alternates=None
  content_hash=hashlib.sha256(json.dumps((title,desc,body),ensure_ascii=False).encode()).hexdigest()
@@ -204,7 +207,7 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
  elif path.startswith('tools/') and path!='tools/index.html': crumbs.append(('Calculators','tools/index.html'))
  if path!=ui['home']: crumbs.append((html.unescape(name),path))
  breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':n,'item':BASE+('' if u=='index.html' else u)} for i,(n,u) in enumerate(crumbs)]}
- breadcrumb_html='' if path==ui['home'] else '<nav class="breadcrumbs" aria-label="'+ui['breadcrumb']+'"><ol>'+''.join(f'<li>{esc(n) if i==len(crumbs)-1 else f"<a href={esc(prefix+u)}>{esc(n)}</a>"}</li>' for i,(n,u) in enumerate(crumbs))+'</ol></nav>'
+ breadcrumb_html='' if path==ui['home'] or dl else '<nav class="breadcrumbs" aria-label="'+ui['breadcrumb']+'"><ol>'+''.join(f'<li>{esc(n) if i==len(crumbs)-1 else f"<a href={esc(prefix+u)}>{esc(n)}</a>"}</li>' for i,(n,u) in enumerate(crumbs))+'</ol></nav>'
  schemas=[schema,breadcrumb]
  if path=='index.html': schemas.append({'@context':'https://schema.org','@type':'WebSite','@id':BASE+'#website','url':BASE,'name':'TrackExpenses','alternateName':'Expense Tracker: SMS & Voice','inLanguage':'en','publisher':{'@id':BASE+'#author'}})
  if path in ['index.html','about.html']: schemas.append({'@context':'https://schema.org','@type':'Person','@id':BASE+'#author','name':'Mohamed Elatabany','url':BASE+'about.html','sameAs':['https://github.com/Atabany',FACTS['artistViewUrl']]})
@@ -217,21 +220,23 @@ def page(path,title,desc,body,kind='WebPage',faq=None,noindex=False,updated=None
   if extra_schema.get('@type')=='VideoObject': schema['mainEntity']={'@id':extra_schema['@id']}
  if faq: schemas.append({'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in faq]})
  ld=json.dumps(schemas,ensure_ascii=False).replace('</','<\\/')
+ header_html='' if dl else f'''<header class="nav"><a class="brand" href="{prefix}{ui['home']}"><img class="brand-icon" src="{prefix}assets/icon-128.webp" width="34" height="34" alt=""><span class="brand-text">TrackExpenses<small>{ui['tagline']}</small></span></a><nav class="nav-links" aria-label="Main">{chrome_links(ui['nav'],prefix)}</nav>{cta(path,prefix,True,ui['cta_label'])}<details class="nav-menu"><summary aria-label="{ui.get('menu','Menu')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary><nav class="nav-sheet" aria-label="{ui.get('menu','Menu')}">{chrome_links(ui['nav']+MENU_EXTRA.get(lang,[]),prefix)}</nav></details></header>'''
+ closing_html='' if dl else f'''<section class="download"><h2>{ui['download_h']}</h2><p>{ui['download_p']}</p>{cta(path,prefix,False,ui['cta_label'])}{play_cta(prefix)}{f'<p class="small">{esc(rating(lang))}</p>' if rating(lang) else ''}</section>
+<details class="fact-block"><summary>{ui['facts_summary']}</summary><p>{esc(ui['fact_block'])}</p></details>'''
  text=f'''<!doctype html>
-<html lang="{HTML_LANG[lang]}"{' dir="rtl"' if lang=='ar' else ''}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="{HTML_LANG[lang]}"{' dir="rtl"' if lang=='ar' else ''}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head_extra}
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><meta name="color-scheme" content="light dark"><meta property="og:site_name" content="TrackExpenses"><meta name="twitter:image:alt" content="{ui['image_alt']}">
 <link rel="canonical" href="{canonical}">{''.join(f'<link rel="alternate" hreflang="{code}" href="{BASE+("" if target=="index.html" else target)}">' for code,target in (alternates or {}).items())}<meta name="apple-itunes-app" content="app-id={APP}">
 <meta property="og:type" content="{'article' if kind=='Article' else 'website'}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE}{og_image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{ui['og_alt']}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}{og_image}">
-{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=18">{f'<link rel="stylesheet" href="{prefix}home.css?v=7">' if path in LANDING else ''}<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">{'<meta name="theme-color" content="#06120e">' if path in LANDING else '<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f9f6"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1814">'}
-<script type="application/ld+json">{ld}</script></head><body{' class="page-landing"' if path in LANDING else ''}>
-<a class="skip" href="#main">{ui['skip']}</a><header class="nav"><a class="brand" href="{prefix}{ui['home']}"><img class="brand-icon" src="{prefix}assets/icon-128.webp" width="34" height="34" alt=""><span class="brand-text">TrackExpenses<small>{ui['tagline']}</small></span></a><nav class="nav-links" aria-label="Main">{chrome_links(ui['nav'],prefix)}</nav>{cta(path,prefix,True,ui['cta_label'])}<details class="nav-menu"><summary aria-label="{ui.get('menu','Menu')}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary><nav class="nav-sheet" aria-label="{ui.get('menu','Menu')}">{chrome_links(ui['nav']+MENU_EXTRA.get(lang,[]),prefix)}</nav></details></header>
+{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">'}<link rel="icon" type="image/png" sizes="96x96" href="{prefix}assets/favicon.png"><link rel="stylesheet" href="{prefix}style.css?v=18">{f'<link rel="stylesheet" href="{prefix}home.css?v=7">' if path in LANDING else ''}{f'<link rel="stylesheet" href="{prefix}download.css?v=1">' if dl else ''}<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">{'<meta name="theme-color" content="#06120e">' if path in LANDING else '<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f9f6"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1814">'}
+<script type="application/ld+json">{ld}</script></head><body{(' class="page-landing page-download"' if dl else ' class="page-landing"') if path in LANDING else ''}>
+<a class="skip" href="#main">{ui['skip']}</a>{header_html}
 <main id="main" class="{'home' if path=='index.html' or path in LANDING else 'article'}">{breadcrumb_html}{body}
-<section class="download"><h2>{ui['download_h']}</h2><p>{ui['download_p']}</p>{cta(path,prefix,False,ui['cta_label'])}{play_cta(prefix)}{f'<p class="small">{esc(rating(lang))}</p>' if rating(lang) else ''}</section>
-<details class="fact-block"><summary>{ui['facts_summary']}</summary><p>{esc(ui['fact_block'])}</p></details></main>
+{closing_html}</main>
 <footer><p>{ui['made_by'].format(prefix=prefix)}</p>{'<p class="small">Google Play and the Google Play logo are trademarks of Google LLC.</p>' if PLAY_ON else ''}<nav aria-label="Footer">{chrome_links(ui['footer'],prefix)}</nav></footer>
 <aside class="mobile-download" aria-label="{ui['mobile'][0]}" hidden><div class="mobile-download-copy"><strong>{ui['mobile'][1]}</strong><span>{ui['mobile'][2]}</span></div>{cta(path,prefix,False,ui['cta_label'])}</aside>
-<script src="{prefix}site.js?v=18" defer></script>{f'<script src="{prefix}home.js?v=5" defer></script>' if path in LANDING else ''}</body></html>'''
+<script src="{prefix}site.js?v=18" defer></script>{f'<script src="{prefix}home.js?v=5" defer></script>' if path in LANDING else ''}{f'<script src="{prefix}download.js?v=1" defer></script>' if dl else ''}</body></html>'''
  target=ROOT/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(text)
  if not noindex:
   PAGES[path]=(title,desc,canonical,body,updated)
@@ -358,7 +363,14 @@ page('terms.html','Terms of Use | TrackExpenses','TrackExpenses terms on the App
 faq_body=(ROOT/'_content/faq.html').read_text()
 page('faq.html','FAQ: Bank Alerts, Privacy, Free and Pro | TrackExpenses','Plain answers about TrackExpenses: bank login, reading messages, which banks work, email alerts, free and Pro limits, coach privacy, languages and devices.',faq_body,faq=re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p>',faq_body,re.S))
 page('whats-new.html','What’s New: TrackExpenses Release Notes','Every TrackExpenses release from 1.10.0 to 1.16.0, newest first: Spanish and Portuguese, budget alerts, bill reminders, email alerts and Export & Share.',(ROOT/'_content/whats-new.html').read_text())
-page('404.html','Page Not Found | TrackExpenses','Find the TrackExpenses homepage, guides or support.','<h1>That page is missing.</h1><p>Try the <a href="index.html">homepage</a>, <a href="guides/index.html">guides</a> or <a href="support.html">support</a>.</p>',noindex=True)
+# The download link is typed by hand from the bios (a TikTok bio link is plain text until 1,000 followers), so a slip of the
+# finger (Download, download/, downlaod, es/download) still lands on the page instead of here.
+TYPED_DOWNLOAD=("<script>(function(){var p=location.pathname.toLowerCase().replace(/\\/+$/,'').replace(/\\.html?$/,''),"
+ "m=p.match(/^(\\/(?:es|pt|de|ar))?\\/(?:download|downloads|dowload|donwload|downlaod|downlod|dwnload|dowmload)$/);"
+ "if(!m)return;var q=new URLSearchParams(location.search);"
+ "try{var h=document.referrer&&new URL(document.referrer).hostname;if(h&&h!==location.hostname&&!q.has('via'))q.set('via',h)}catch(e){}"
+ "var s=q.toString();location.replace((m[1]||'')+'/download.html'+(s?'?'+s:'')+location.hash)})()</script>")
+page('404.html','Page Not Found | TrackExpenses','Find the TrackExpenses homepage, guides or support.','<h1>That page is missing.</h1><p>Try the <a href="index.html">homepage</a>, <a href="guides/index.html">guides</a> or <a href="support.html">support</a>.</p>',noindex=True,head_extra=TYPED_DOWNLOAD)
 # Reviewed comparisons and calculators are separate HTML fragments, still rendered on the server.
 # A calculator is also described as a free WebApplication, and its visible questions as an FAQPage.
 def tool_schema(path,name,desc):
@@ -432,6 +444,92 @@ pt_home=landing_body('pt','pt/index.html',(ROOT/'_content/pt/home.html').read_te
 page('pt/index.html','Controle de gastos com avisos do banco e voz | TrackExpenses','Controle de gastos em português para iPhone: cole o SMS ou o e-mail do banco, anote por voz e comece o mês no dia do pagamento. Sem login do banco.',pt_home,faq=arabic_faq(pt_home),lang='pt',alternates=HOME_ALTERNATES)
 pt_guide=(ROOT/'_content/pt/bank-sms.html').read_text().replace('{{PT_STEPS}}',sms_steps('pt','Atalhos no iOS 27 em português, passo {n}: {t}'))
 page('pt/bank-sms.html','Lance os avisos do banco no iPhone | TrackExpenses','Guia com imagens em português: cole o SMS do banco ou crie no Atalhos uma automação que lança os SMS do banco no TrackExpenses. Palavra do filtro: R$.',pt_guide,'Article',faq=arabic_faq(pt_guide),lang='pt',published='2026-11-17')
+# The download pages (21 November 2026): trackexpenses.app/download is the link in the social bios. Built from the reviewed
+# pieces of each language's landing (hero headline, free line, the live phone, proof strip, reviews) plus a few lines of
+# their own (_ops/download-<lang>.json). Noindex: they exist for the bio link, the home page is what search shows. The
+# English page forwards a visitor whose browser's first language has its own page there (download.js keeps the tag).
+DL_LANGS=['en','es','pt','de','ar']
+CURRENT=' aria-current="page"'
+DL_NAMES={'en':'English','es':'Español','pt':'Português','de':'Deutsch','ar':'العربية'}
+DL_STORE_NAME={'en':'Expense Tracker: SMS &amp; Voice','es':'Control de Gastos por Voz','pt':'Controle de Gastos por Voz','de':'Haushaltsbuch: Budget &amp; Coach','ar':'تتبع المصاريف: ميزانية الراتب'}
+# The app's own reviewed line from the paywall ("No ads  •  No tracking  •  No bank login" in Localizable.xcstrings).
+DL_TRUST={'en':['No ads','No tracking','No bank login'],'es':['Sin anuncios','Sin rastreo','Sin acceso a tu banco'],'pt':['Sem anúncios','Sem rastreamento','Sem login do banco'],'de':['Keine Werbung','Kein Tracking','Kein Bank-Login'],'ar':['بلا إعلانات','بلا تتبّع','دون الدخول إلى البنك']}
+DL_LANGUAGE_LABEL={'en':'Language','es':'Idioma','pt':'Idioma','de':'Sprache','ar':'اللغة'}  # the app's own "Language"
+# The clay props of the onboarding film, caught by the app icon one by one (download.css). Sizes and places are in --u
+# (1px on a 390-point phone); the amounts are US-dollar sized and follow the visitor's money like every demo (site.js).
+DL_PROPS=[('coffee',169,240,-152,-4,40,7,5),('taxi',240,229,150,0,60,-5,18),('groceries',177,240,-104,-56,46,-8,42.18),('delivery',195,240,108,-58,42,6,23.40),('pizza',240,240,-102,54,50,-4,14.90),('fuel',240,240,104,56,44,5,38.50)]
+EMAIL='atabany.apps@gmail.com'
+# The device decides what the hero offers (an Android card, a QR code on a computer). It is set in the head, before the
+# first paint, so nothing appears or moves after the page is drawn (download.css shows the blocks from this attribute).
+DL_PLATFORM=("<script>(function(){var u=navigator.userAgent,a=/Android/i.test(u),"
+ "i=/iPhone|iPad|iPod/i.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1);"
+ "document.documentElement.setAttribute('data-platform',a?'android':i?'ios':/Mobi|Tablet/i.test(u)?'mobile':'desktop')})()</script>")
+DL_FORWARD=("<script>(function(){try{var q=new URLSearchParams(location.search),l=q.get('lang');if(l==='en')return;"
+ "var c=(l||(navigator.languages&&navigator.languages[0])||navigator.language||'').slice(0,2).toLowerCase();"
+ "if(['es','pt','de','ar'].indexOf(c)<0)return;q.delete('lang');"
+ "try{var h=document.referrer&&new URL(document.referrer).hostname;if(h&&h!==location.hostname&&!q.has('via'))q.set('via',h)}catch(e){}"
+ "var s=q.toString();location.replace(c+'/download.html'+(s?'?'+s:'')+location.hash)}catch(e){}})()</script>")
+def _piece(src,pattern,what,lang,group=0):
+ m=re.search(pattern,src,re.S)
+ if not m: sys.exit(f'download page ({lang}): the landing has no {what}')
+ return m.group(group)
+def money_text(v): return f'USD {v:.2f}'
+def download_page(lang):
+ path='download.html' if lang=='en' else f'{lang}/download.html'; prefix='../'*path.count('/')
+ words=json.loads((ROOT/f'_ops/download-{lang}.json').read_text()); ui=CHROME[lang]
+ src=(ROOT/('_content/home.html' if lang=='en' else f'_content/{lang}/home.html')).read_text()
+ h1=_piece(src,r'<h1 id="hx-title">(.*?)</h1>','hero headline',lang,1)
+ free=_piece(src,r'<div class="hx-cta">\{\{APP_STORE_CTA\}\}<p>(.*?)</p></div>','free line',lang,1)
+ stage=_piece(src,r'<figure class="hx-stage">.*?</figure>','live phone',lang)
+ proof=_piece(src,r'<ul class="hx-proof".*?</ul>','proof strip',lang)
+ reviews=_piece(src,r'<section id="reviews".*?</section>','reviews section',lang)
+ badge=prefix+BADGE.get(lang,'assets/app-store.svg')
+ store=esc(campaign(path))
+ def get(extra=''): return f'<a class="store-cta dl-badge{extra}" href="{store}" aria-label="{ui["cta_label"]}"><img class="badge" src="{badge}" width="186" height="62" alt=""></a>'
+ props=''.join(f'<span class="dl-prop" style="--i:{i};--x:{x};--y:{y};--s:{s};--r:{r}deg"><img src="{prefix}assets/home/{name}.webp" width="{w}" height="{h}" alt="" decoding="async"><b class="money" data-v="{v}">{money_text(v)}</b></span>' for i,(name,w,h,x,y,s,r,v) in enumerate(DL_PROPS))
+ tick='<svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></svg>'
+ globe='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9"/></svg>'
+ langs=''.join(f'<a href="{prefix}{"download.html" if c=="en" else c+"/download.html"}" hreflang="{HTML_LANG[c]}" lang="{HTML_LANG[c]}"{CURRENT if c==lang else ""}>{DL_NAMES[c]}</a>' for c in DL_LANGS)
+ mail='mailto:'+EMAIL+'?'+urlencode({'subject':words['android_subject'],'body':words['android_body']},quote_via=__import__('urllib.parse').parse.quote)
+ qr=(f'<div class="dl-qr" data-only="desktop"><span class="dl-qr-code"><img src="{prefix}assets/download-qr.svg" width="132" height="132" alt="{esc(words["qr_alt"])}" loading="lazy">'
+     f'<img class="dl-qr-icon" src="{prefix}assets/icon-128.webp" width="30" height="30" alt="" loading="lazy"></span>'
+     f'<span class="dl-qr-text"><b>{esc(words["qr_title"])}</b><span>{esc(words["qr_text"])}</span></span></div>')
+ # Until the Play listing is live, Android visitors read that it is coming and can ask to hear first; once
+ # google_play.enabled is true, they get Google's badge instead (the footer then carries Google's trademark line).
+ android=(f'<div class="dl-android dl-play" data-only="android">{play_cta(prefix)}</div>' if PLAY_ON else
+  f'<div class="dl-android" data-only="android"><p class="dl-alt-title">{esc(words["android_title"])}</p><p>{esc(words["android_text"])}</p><a class="dl-mail" href="{esc(mail)}">{esc(words["android_button"])}</a></div>')
+ trust='<ul class="dl-trust">'+''.join(f'<li>{esc(t)}</li>' for t in DL_TRUST[lang])+'</ul>'
+ body=f"""<section class="hx dl-hero" aria-labelledby="hx-title">
+ <div class="hx-bg" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i></div>
+ <details class="dl-lang"><summary aria-label="{DL_LANGUAGE_LABEL[lang]}: {DL_NAMES[lang]}">{globe}<span>{DL_NAMES[lang]}</span></summary><nav class="dl-lang-sheet" aria-label="{DL_LANGUAGE_LABEL[lang]}">{langs}</nav></details>
+ <div class="dl-inner">
+  <div class="dl-copy">
+   <div class="dl-stage" aria-hidden="true">{props}<span class="dl-icon"><i class="dl-ring"></i><img src="{prefix}assets/icon-360.webp" width="120" height="120" alt="" fetchpriority="high"><i class="dl-tick">{tick}</i></span></div>
+   <p class="dl-name"><b>TrackExpenses</b><span>{DL_STORE_NAME[lang]}</span></p>
+   <h1 id="hx-title">{h1}</h1>
+   {android}
+   <div class="dl-get">{get()}{{{{RATING_PILL}}}}</div>
+   <p class="dl-free">{free}</p>
+   {qr}
+  </div>
+  {stage}
+ </div>
+</section>
+{proof}
+{reviews}
+<section class="dl-final" aria-labelledby="dl-final-title">
+ <img class="dl-final-icon" src="{prefix}assets/icon-360.webp" width="76" height="76" alt="" loading="lazy">
+ <h2 id="dl-final-title">{ui['download_h']}</h2>
+ <p>{ui['download_p']}</p>
+ {get(' dl-badge-final')}
+ {trust}
+ {qr}
+</section>"""
+ body=landing_body(lang,path,body)
+ page(path,words['title'],words['description'],body,noindex=True,lang=lang,layout='download',head_extra=(DL_FORWARD if lang=='en' else '')+DL_PLATFORM)
+for _code in DL_LANGS: LANDING.add('download.html' if _code=='en' else f'{_code}/download.html')
+for _code in DL_LANGS:
+ if (ROOT/f'_ops/download-{_code}.json').exists(): download_page(_code)
 for video in VIDEOS:
  body,video_schema=watch_page(video,BASE)
  page(video['path'],video['title'],video['description'],body,extra_schema=video_schema)

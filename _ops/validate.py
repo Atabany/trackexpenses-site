@@ -106,7 +106,8 @@ for f,p in parsers.items():
    elif ar.get('ratingCount')!=sum(x['count'] for x in places.values()) or ar.get('ratingCount')!=FACTS['allRatingCount'] or abs(ar.get('ratingValue',0)-sum(x['average']*x['count'] for x in places.values())/FACTS['allRatingCount'])>0.006: fail('rating differs from the storefront figures in facts.json')
  if not any(s.get('@type')=='BreadcrumbList' for s in schemas): fail('missing breadcrumbs')
  if not p.noindex and 'max-image-preview:large' not in raw: fail('missing large image preview permission')
- if rel not in ['index.html','ar/index.html','de/index.html','es/index.html','pt/index.html'] and not any(f'aria-label="{x}"' in raw for x in ['Breadcrumb','مسار الصفحة','Seitenpfad','Ruta de navegación','Caminho da página']): fail('missing visible breadcrumb navigation')
+ # The download pages (the bio link) carry no visible trail, like the home pages; their schema still has one.
+ if rel not in ['index.html','ar/index.html','de/index.html','es/index.html','pt/index.html'] and not rel.endswith('download.html') and not any(f'aria-label="{x}"' in raw for x in ['Breadcrumb','مسار الصفحة','Seitenpfad','Ruta de navegación','Caminho da página']): fail('missing visible breadcrumb navigation')
  if p.title in seen_titles or p.desc in seen_desc: fail('duplicate metadata')
  seen_titles.add(p.title); seen_desc.add(p.desc)
  if len(p.title)>60 or not p.title: fail('title length '+str(len(p.title)))
@@ -186,7 +187,7 @@ def fact_text(raw):
 import html
 for code,(hreflang,names) in NEW.items():
  pages=[f for f in parsers if folder(f.relative_to(ROOT).as_posix())==code]
- if len(pages)!=3: problems.append(f'{code}/: expected index.html, bank-sms.html and bank-email.html, found {len(pages)}')
+ if len(pages)!=4: problems.append(f'{code}/: expected index.html, bank-sms.html, bank-email.html and download.html, found {len(pages)}')
  for f in pages:
   p=parsers[f]; rel=f.relative_to(ROOT).as_posix(); raw=f.read_text(); url=BASE+rel
   if f'<html lang="{hreflang}"' not in raw: problems.append(rel+': html lang is not '+hreflang)
@@ -195,7 +196,7 @@ for code,(hreflang,names) in NEW.items():
    if url in sitemap or url in llms or url in full: problems.append(rel+': unreleased language page listed in the sitemap or llms files')
    if 'hreflang="'+hreflang+'"' in raw or '<link rel="alternate"' in raw: problems.append(rel+': unreleased language page carries hreflang alternates')
   else:
-   if p.noindex: problems.append(rel+': released language page is still noindex')
+   if p.noindex and not rel.endswith('download.html'): problems.append(rel+': released language page is still noindex')
  for f,p in parsers.items():
   rel=f.relative_to(ROOT).as_posix(); raw=f.read_text(); lang=folder(rel) if folder(rel) in ['ar','de','es','pt'] else 'en'
   if code in UNRELEASED and folder(rel)!=code:
@@ -216,5 +217,18 @@ for code,(hreflang,names) in NEW.items():
   if f'href="{code}/index.html"' not in (ROOT/'index.html').read_text(): problems.append('index.html: footer does not link '+code+'/')
   if names['en'] not in llms: problems.append('llms.txt does not name '+names['en'])
  elif names['en'] in llms.split('## All official pages')[0]: problems.append('llms.txt names '+names['en']+' before the language is released')
+for code in ['en','es','pt','de','ar']:
+ rel='download.html' if code=='en' else code+'/download.html'; f=(ROOT/rel).resolve()
+ if f not in parsers: problems.append(rel+': missing download page'); continue
+ p=parsers[f]; raw=f.read_text()
+ if not p.noindex: problems.append(rel+': the download page must be noindex (it exists for the bio link)')
+ if raw.count('class="store-cta dl-badge')!=2: problems.append(rel+': expected the hero badge and the closing badge')
+ if ("location.replace(c+'/download.html'" in raw)!=(code=='en'): problems.append(rel+': only the English download page forwards by language')
+ if 'download-qr.svg' not in raw: problems.append(rel+': missing the QR code')
+ # Android visitors: the email to hear first while Google Play is off, Google's badge once it is on (never both).
+ play=json.loads((ROOT/'_ops/config.json').read_text()).get('google_play') or {}
+ if play.get('enabled'):
+  if play.get('url') not in p.links or 'mailto:atabany.apps@gmail.com?' in raw: problems.append(rel+': google_play.enabled but the Android block is not the Google Play badge')
+ elif 'mailto:atabany.apps@gmail.com?' not in raw: problems.append(rel+': missing the Android email link')
 if problems: print('\n'.join(problems)); sys.exit(1)
 print(f'OK — {len(expected)} indexable pages (unreleased: {", ".join(sorted(UNRELEASED)) or "none"}); links, anchors, metadata, schema, videos, discovery, campaigns and facts verified')

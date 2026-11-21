@@ -1,0 +1,12 @@
+{
+ "title": "Descarga TrackExpenses · Control de gastos para iPhone",
+ "description": "Gratis en el App Store. Los SMS y correos del banco se registran solos, dices varias compras en una frase y sabes cuánto gastar hoy. Sin conectar tu banco.",
+ "qr_title": "¿Estás en la computadora?",
+ "qr_text": "Abre la app Cámara en tu iPhone y apunta al código: te lleva a TrackExpenses en el App Store.",
+ "qr_alt": "Código QR que abre TrackExpenses en el App Store",
+ "android_title": "¿Tienes Android?",
+ "android_text": "Por ahora, TrackExpenses está disponible para iPhone, iPad y Mac. La app para Android ya está en pruebas y viene en camino a Google Play.",
+ "android_button": "Avísame por correo cuando salga",
+ "android_subject": "TrackExpenses para Android",
+ "android_body": "¡Hola! ¿Me avisas cuando TrackExpenses esté en Google Play? Gracias."
+}
