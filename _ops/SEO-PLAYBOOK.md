@@ -528,6 +528,7 @@ both new comparisons, `track-expenses-iphone` and `daily-spending-limit`; the se
 calculators, `features/daily-budget` and `whats-new` wait for the sitemap or a request on another day. Requests are not
 proof of indexing. Ratings re-read the same day (5.0 from 8 in 5 storefronts). Reader and copy gaps the localizers found
 are app issues #46 and #47, kept off every page.
+**21 November 2026:** the waiting Search Console requests went through, all ten and no quota stop: `tools/monthly-budget-calculator.html` (already indexed), `tools/travel-budget-calculator.html`, `features/daily-budget.html`, `features/budget-alerts-and-bill-reminders.html`, `guides/travel-expenses-abroad.html`, `guides/budget-alerts-iphone.html`, `whats-new.html`, `ar/`, `es/` and `pt/` (each read "Indexing requested"; a request, not proof of indexing). Nothing waits.
 
 **Guard for the "see it read" cards (20 November).** `python3 tools/site_readings_check.py` compiles the app's voice parser
 and bank-message reader, reads every card on the five landings and compares each draft's amount and direction (or
