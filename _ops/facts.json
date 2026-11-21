@@ -11,11 +11,11 @@
     "PT",
     "ES"
   ],
-  "averageUserRating": 0,
-  "userRatingCount": 0,
+  "averageUserRating": 5,
+  "userRatingCount": 1,
   "artistName": "Mohamed Elatabany",
   "artistViewUrl": "https://apps.apple.com/us/developer/mohamed-elatabany/id1814429185?uo=4",
-  "checked": "2026-11-20",
+  "checked": "2026-11-21",
   "reviewCountReturned": 0,
   "ratingsByStorefront": {
     "ae": {
@@ -47,8 +47,13 @@
       "name": "Saudi Arabia",
       "average": 5,
       "count": 1
+    },
+    "us": {
+      "name": "United States",
+      "average": 5,
+      "count": 1
     }
   },
-  "allRatingCount": 9,
+  "allRatingCount": 10,
   "allRatingAverage": 5.0
 }
