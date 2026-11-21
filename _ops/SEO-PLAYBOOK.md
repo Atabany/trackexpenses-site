@@ -549,3 +549,32 @@ former. Share images now exist in Arabic, German, Spanish and Portuguese (`marke
 words from each reviewed landing; re-run it when a hero changes). The pause button's spoken name contains its visible word in
 every language. Lighthouse mobile: home 99, ar 98, de 97, es 99, pt 99 for performance; accessibility, best practices and
 SEO 100 on all five. `tools/site_readings_check.py`: 76 cards, 0 differences. IndexNow accepted the 43 pages changed that day.
+
+## 21 November 2026 — the download page (the bio link)
+
+**What and why.** `https://trackexpenses.app/download` (GitHub Pages serves `download.html` for the extensionless path) is
+the link for the TikTok and Instagram bios. A TikTok bio link is plain text below 1,000 followers, so it is **typed**:
+the address stays clean, carries no `?ref=`, and a slip of the finger (`/Download`, `download/`, `downlaod`,
+`es/download/`) is forwarded by `404.html`. Five pages, one per language, **noindex** (they serve the bio; the home page is
+what search shows), each built from that language's reviewed landing pieces plus `_ops/download-<lang>.json`.
+
+**Attribution without a tag in the link.** The badge's App Store campaign token tells channels apart in App Analytics →
+Campaigns: `web-download` (`web-<lang>-download`) for a typed visit, which is the bio; `dl-<app>` when an in-app browser
+names itself in its user agent (TikTok `musical_ly`/`BytedanceWebview`, Instagram, Facebook `FBAN`/`FBAV`, Threads
+`Barcelona`, Snapchat, Pinterest, LinkedIn, Reddit, Telegram, LINE) or a known site sent the visitor (referrer, handed on
+as `?via=` across the language forward, a typo forward and the language menu); `dl-qr` for the desktop QR code; `?ref=`
+always wins (site.js). Nothing is stored or sent: Apple receives the token only on a tap, as with every store link here.
+
+**Built and checked.** The device is decided in the head (`data-platform`) before the first paint: revealing the Android
+card from a deferred script after paint was a 0.10 layout shift on Lighthouse's Android emulation; with the head script
+and CSS it is 0. Lighthouse mobile 99 / 100 / 100 (performance, accessibility, best practices) on the English, Spanish and
+Arabic pages, LCP 1.7 s, blocking 0 ms. Screens at 390 × 664 (an in-app browser's first screen: icon, headline, badge,
+rating and free line all fit, in five languages), 320 × 568, Android and 1280 × 720. The QR code was decoded from the
+rendered page with the icon over it. Independent review (reviewer-opus): nothing high; fixed the medium (the Android card
+must become Google's badge once `google_play.enabled` is true, now checked by validate.py in both states) and the low (the
+referrer was lost after a typo forward or a language switch).
+
+**Rules.** `[data-only]` blocks are shown by CSS from `html[data-platform]`, never by toggling `hidden` late. New lines on
+these pages go through each language's localizer and an on-screen reread; everything else is reused from the landings.
+Read App Analytics → Campaigns a week after the link is in the bios; the Android waitlist emails go to the support inbox.
+
